@@ -10,19 +10,19 @@ import {
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
 
-const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTemperatureModal }) => {
+const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal }) => {
   return (
     <React.Fragment>
-      <MDBModal show={temperatureModal} setShow={setTemperatureModal} tabIndex='-1'>
+      <MDBModal show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Temperature Sensor</MDBModalTitle>
-              <MDBBtn className='btn-close' color='none' onClick={toggleTemperatureModal}></MDBBtn>
+              <MDBModalTitle>Pulse Sensor</MDBModalTitle>
+              <MDBBtn className='btn-close' color='none' onClick={togglePulseModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }}>
               <div>
-                <p>Please follow these steps to measure your body temperature.</p>
+                <p>Please follow these steps to measure your body pulse.</p>
                 <ol>
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                   <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
@@ -34,7 +34,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
               </div>
             </MDBModalBody>
             <MDBModalFooter>
-              <MDBBtn color='danger' onClick={toggleTemperatureModal}>
+              <MDBBtn color='danger' onClick={togglePulseModal}>
                 Close
               </MDBBtn>
               <MDBBtn color='primary'>
@@ -48,4 +48,4 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
   );
 }
 
-export default TemperatureModal
+export default PulseModal
