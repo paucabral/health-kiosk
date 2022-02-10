@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MDBInput, MDBBtn, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
+import TemperatureModal from './sensor_modals/TemperatureModal';
 
 const SensorData = () => {
   const num = -1; // PLACEHOLDER
+
+  const [temperatureModal, setTemperatureModal] = useState(false);
+  const toggleTemperatureModal = () => setTemperatureModal(!temperatureModal);
+
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Vital Signs</MDBCardTitle>
@@ -11,13 +16,14 @@ const SensorData = () => {
         <div>
           <MDBRow className='w-100'>
             <MDBCol>
-              <MDBBtn color={num === -1 ? 'dark' : 'warning'} className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'warning'} className='sensor-btn' onClick={toggleTemperatureModal}>
                 <h4><MDBIcon fas icon="thermometer-quarter" /> NA</h4>
                 <br />
                 <span>° C</span>
                 <br />
                 <b>Temperature</b>
               </MDBBtn>
+              <TemperatureModal temperatureModal={temperatureModal} setTemperatureModal={setTemperatureModal} toggleTemperatureModal={toggleTemperatureModal} />
             </MDBCol>
             <MDBCol>
               <MDBBtn color={num === -1 ? 'dark' : 'danger'} className='sensor-btn'>
