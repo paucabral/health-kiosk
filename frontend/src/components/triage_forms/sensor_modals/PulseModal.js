@@ -13,7 +13,7 @@ import {
 const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal }) => {
   return (
     <React.Fragment>
-      <MDBModal show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
+      <MDBModal staticBackdrop show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
