@@ -40,31 +40,34 @@ const SensorData = () => {
               <PulseModal pulseModal={pulseModal} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
-              <MDBBtn color={num === -1 ? 'dark' : 'primary'} className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'primary'} className='sensor-btn' onClick={togglePulseModal}>
                 <h4><MDBIcon fas icon="tint" /> NA</h4>
                 <br />
                 <span>mmHg</span>
                 <br />
                 <b>Systolic BP</b>
               </MDBBtn>
+              <PulseModal pulseModal={pulseModal} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
-              <MDBBtn color={num === -1 ? 'dark' : 'secondary'} className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'secondary'} className='sensor-btn' onClick={togglePulseModal}>
                 <h4><MDBIcon fas icon="tint" /> NA</h4>
                 <br />
                 <span>mmHg</span>
                 <br />
                 <b>Diastolic BP</b>
               </MDBBtn>
+              <PulseModal pulseModal={pulseModal} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
-              <MDBBtn color={num === -1 ? 'dark' : 'success'} className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'success'} className='sensor-btn' onClick={togglePulseModal}>
                 <h4><MDBIcon fas icon="wind" /> NA</h4>
                 <br />
                 <span>%</span>
                 <br />
                 <b>O2 Saturation</b>
               </MDBBtn>
+              <PulseModal pulseModal={pulseModal} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
           </MDBRow>
         </div>
