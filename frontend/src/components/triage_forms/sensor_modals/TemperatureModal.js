@@ -17,16 +17,24 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Modal title</MDBModalTitle>
+              <MDBModalTitle>Temperature Sensor</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleTemperatureModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody>...</MDBModalBody>
-
+            <MDBModalBody style={{ textAlign: "left" }}>
+              <p>Please follow these steps to measure your body temperature.</p>
+              <ol>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
+                <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
+              </ol>
+            </MDBModalBody>
             <MDBModalFooter>
-              <MDBBtn color='secondary' onClick={toggleTemperatureModal}>
+              <MDBBtn color='danger' onClick={toggleTemperatureModal}>
                 Close
               </MDBBtn>
-              <MDBBtn>Save changes</MDBBtn>
+              <MDBBtn color='primary'>
+                Save
+              </MDBBtn>
             </MDBModalFooter>
           </MDBModalContent>
         </MDBModalDialog>
