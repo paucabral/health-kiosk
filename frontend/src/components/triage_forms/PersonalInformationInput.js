@@ -8,18 +8,18 @@ const PersonalInformationInput = () => {
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
-            <MDBInput id='first_name' label='First Name' />
+            <MDBInput id='first_name' size='lg' label='First Name' />
           </MDBCol>
           <MDBCol>
-            <MDBInput id='last_name' label='Last Name' />
+            <MDBInput id='last_name' size='lg' label='Last Name' />
           </MDBCol>
         </MDBRow>
         <MDBRow className='mb-4'>
           <MDBCol className='col-2'>
-            <MDBInput id='age' label='Age' type='number' />
+            <MDBInput id='age' size='lg' label='Age' type='number' />
           </MDBCol>
           <MDBCol>
-            <MDBInput id='contact' label='Contact No.' />
+            <MDBInput id='contact' size='lg' label='Contact No.' />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
