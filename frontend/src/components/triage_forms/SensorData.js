@@ -2,6 +2,7 @@ import React from 'react';
 import { MDBInput, MDBBtn, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 
 const SensorData = () => {
+  const num = -1; // PLACEHOLDER
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Vital Signs</MDBCardTitle>
@@ -10,7 +11,7 @@ const SensorData = () => {
         <div>
           <MDBRow className='w-100'>
             <MDBCol>
-              <MDBBtn color='warning' className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'warning'} className='sensor-btn'>
                 <h4><MDBIcon fas icon="thermometer-quarter" /> NA</h4>
                 <br />
                 <span>° C</span>
@@ -19,7 +20,7 @@ const SensorData = () => {
               </MDBBtn>
             </MDBCol>
             <MDBCol>
-              <MDBBtn color='danger' className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'danger'} className='sensor-btn'>
                 <h4><MDBIcon fas icon="heartbeat" /> NA</h4>
                 <br />
                 <span>bpm</span>
@@ -28,7 +29,7 @@ const SensorData = () => {
               </MDBBtn>
             </MDBCol>
             <MDBCol>
-              <MDBBtn color='primary' className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'primary'} className='sensor-btn'>
                 <h4><MDBIcon fas icon="tint" /> NA</h4>
                 <br />
                 <span>mmHg</span>
@@ -37,7 +38,7 @@ const SensorData = () => {
               </MDBBtn>
             </MDBCol>
             <MDBCol>
-              <MDBBtn color='secondary' className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'secondary'} className='sensor-btn'>
                 <h4><MDBIcon fas icon="tint" /> NA</h4>
                 <br />
                 <span>mmHg</span>
@@ -46,7 +47,7 @@ const SensorData = () => {
               </MDBBtn>
             </MDBCol>
             <MDBCol>
-              <MDBBtn color='success' className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'success'} className='sensor-btn'>
                 <h4><MDBIcon fas icon="wind" /> NA</h4>
                 <br />
                 <span>%</span>
