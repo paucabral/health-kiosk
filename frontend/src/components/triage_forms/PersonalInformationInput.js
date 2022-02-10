@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBBtn, MDBContainer, MDBInput, MDBCol, MDBRow, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBInput, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBBtn, MDBContainer, MDBCol, MDBRow, MDBIcon } from 'mdb-react-ui-kit';
 
 const PersonalInformationInput = () => {
   return (
@@ -8,10 +8,18 @@ const PersonalInformationInput = () => {
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
-            <MDBInput id='first_name' label='First Name' hint='First Name' />
+            <MDBInput id='first_name' label='First Name' />
           </MDBCol>
           <MDBCol>
             <MDBInput id='last_name' label='Last Name' />
+          </MDBCol>
+        </MDBRow>
+        <MDBRow className='mb-4'>
+          <MDBCol className='col-2'>
+            <MDBInput id='age' label='Age' type='number' />
+          </MDBCol>
+          <MDBCol>
+            <MDBInput id='contact' label='Contact No.' />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
