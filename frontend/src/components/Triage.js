@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardHeader, MDBCardFooter, MDBCol, MDBRow, MDBBtn, MDBContainer, MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
 import PersonalInformationInput from './triage_forms/PersonalInformationInput';
+import './styles.css';
 
 const Triage = () => {
   const [page, setPage] = useState(0);
@@ -10,16 +11,16 @@ const Triage = () => {
   return (
     <React.Fragment>
       <MDBContainer className='align-items-center justify-content-center'>
-        <MDBCard className='p-5'>
+        <MDBCard className='p-5 shadow-3-strong'>
 
           <PersonalInformationInput />
 
           <MDBRow className='mb-4 w-100'>
             <MDBCol>
-              <MDBBtn className='w-50' disabled={page == 0} onClick={() => setPage((currPage) => currPage - 1)}>Prev</MDBBtn>
+              <MDBBtn id='prev' className='w-75' disabled={page == 0} onClick={() => setPage((currPage) => currPage - 1)}>Prev</MDBBtn>
             </MDBCol>
             <MDBCol>
-              <MDBBtn className='w-50' disabled={page == FormTitles.length - 1} onClick={() => setPage((currPage) => currPage + 1)}>Next</MDBBtn>
+              <MDBBtn id='next' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => setPage((currPage) => currPage + 1)}>Next</MDBBtn>
             </MDBCol>
           </MDBRow>
 
