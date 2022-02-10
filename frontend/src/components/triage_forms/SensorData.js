@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { MDBInput, MDBBtn, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import TemperatureModal from './sensor_modals/TemperatureModal';
+import PulseModal from './sensor_modals/PulseModal';
 
 const SensorData = () => {
   const num = -1; // PLACEHOLDER
 
   const [temperatureModal, setTemperatureModal] = useState(false);
   const toggleTemperatureModal = () => setTemperatureModal(!temperatureModal);
+
+  const [pulseModal, setPulseModal] = useState(false);
+  const togglePulseModal = () => setPulseModal(!pulseModal);
 
   return (
     <React.Fragment>
@@ -26,13 +30,14 @@ const SensorData = () => {
               <TemperatureModal temperatureModal={temperatureModal} setTemperatureModal={setTemperatureModal} toggleTemperatureModal={toggleTemperatureModal} />
             </MDBCol>
             <MDBCol>
-              <MDBBtn color={num === -1 ? 'dark' : 'danger'} className='sensor-btn'>
+              <MDBBtn color={num === -1 ? 'dark' : 'danger'} className='sensor-btn' onClick={togglePulseModal}>
                 <h4><MDBIcon fas icon="heartbeat" /> NA</h4>
                 <br />
                 <span>bpm</span>
                 <br />
                 <b>Pulse Rate</b>
               </MDBBtn>
+              <PulseModal pulseModal={pulseModal} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
               <MDBBtn color={num === -1 ? 'dark' : 'primary'} className='sensor-btn'>
