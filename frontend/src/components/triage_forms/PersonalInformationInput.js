@@ -4,7 +4,8 @@ import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon } from 'md
 const PersonalInformationInput = () => {
   return (
     <React.Fragment>
-      <MDBCardTitle style={{ fontWeight: "bold" }}>Please fill up your personal information.</MDBCardTitle>
+      <MDBCardTitle style={{ fontWeight: "bold" }}>Personal Information</MDBCardTitle>
+      <p>Please fill up your personal information.</p>
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
