@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MDBInput, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBBtn, MDBContainer, MDBCol, MDBRow, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon } from 'mdb-react-ui-kit';
 
 const PersonalInformationInput = () => {
   return (
