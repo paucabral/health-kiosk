@@ -13,7 +13,7 @@ import {
 const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTemperatureModal }) => {
   return (
     <React.Fragment>
-      <MDBModal staticBackdrop show={temperatureModal} setShow={setTemperatureModal} tabIndex='-1'>
+      <MDBModal staticBackdrop scrollable show={temperatureModal} setShow={setTemperatureModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
