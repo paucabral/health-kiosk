@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   MDBBtn,
   MDBModal,
@@ -9,8 +9,21 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
+import axios from 'axios'
 
 const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTemperatureModal }) => {
+  const fetchTemperatureData = async () => {
+    try {
+      console.log("Fetching temperature...")
+      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/temperature`);
+      if (response.status == 200) {
+        console.log(response)
+      }
+    } catch (error) {
+      console.log(JSON.stringify(error))
+    }
+  }
+
   return (
     <React.Fragment>
       <MDBModal staticBackdrop scrollable='true' show={temperatureModal} setShow={setTemperatureModal} tabIndex='-1'>
@@ -30,7 +43,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                 </ol>
               </div>
               <div className='d-flex align-items-center justify-content-center'>
-                <MDBBtn>Start Measurement</MDBBtn> {/* BIND THIS LATER */}
+                <MDBBtn onClick={() => { fetchTemperatureData() }}>Start Measurement</MDBBtn> {/* BIND THIS LATER */}
               </div>
             </MDBModalBody>
             <MDBModalFooter>
