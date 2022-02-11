@@ -4,7 +4,7 @@ import React from 'react'
 const Confirmation = ({ formData, setFormData, page, setPage }) => {
   return (
     <React.Fragment>
-      <MDBCardTitle>Confirm Entry</MDBCardTitle>
+      <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
       <MDBCardBody>
         <div className='mb-4'>
           Please ensure all the information are correct before you proceed.
