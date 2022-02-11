@@ -22,13 +22,15 @@ const SensorData = ({ formData, setFormData }) => {
           <MDBRow className='w-100'>
             <MDBCol>
               <MDBBtn color={formData.temperature === "" ? 'dark' : 'warning'} className='sensor-btn' onClick={toggleTemperatureModal}>
-                <h4><MDBIcon fas icon="thermometer-quarter" /> NA</h4>
+                <h4><MDBIcon fas icon="thermometer-quarter" />
+                  {formData.temperature == "" ? <span> NA</span> : <span> {formData.temperature}</span>}
+                </h4>
                 <br />
                 <span>° C</span>
                 <br />
                 <b>Temperature</b>
               </MDBBtn>
-              <TemperatureModal temperatureModal={temperatureModal} setTemperatureModal={setTemperatureModal} toggleTemperatureModal={toggleTemperatureModal} />
+              <TemperatureModal temperatureModal={temperatureModal} formData={formData} setFormData={setFormData} setTemperatureModal={setTemperatureModal} toggleTemperatureModal={toggleTemperatureModal} />
             </MDBCol>
             <MDBCol>
               <MDBBtn color={formData.pulse_rate === "" ? 'dark' : 'danger'} className='sensor-btn' onClick={togglePulseModal}>

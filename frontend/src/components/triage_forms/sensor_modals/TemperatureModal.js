@@ -14,19 +14,20 @@ import {
 } from 'mdb-react-ui-kit';
 import axios from 'axios'
 
-const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTemperatureModal }) => {
+const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTemperatureModal, formData, setFormData }) => {
   const fetchTemperatureData = async () => {
     try {
-      console.log("Fetching temperature...")
-      setMeasure("loading")
+      console.log("Fetching temperature...");
+      setMeasure("loading");
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/temperature`);
       if (response.status == 200) {
-        console.log(response)
-        setMeasure("done")
+        const temperature_data = response.data[0]["temperature"];
+        setFormData({ ...formData, temperature: temperature_data })
+        setMeasure("done");
       }
     } catch (error) {
-      console.log(JSON.stringify(error))
-      setMeasure("error")
+      console.log(JSON.stringify(error));
+      setMeasure("error");
     }
   }
 
@@ -41,7 +42,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
               <MDBModalTitle>Temperature Sensor</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleTemperatureModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody style={{ textAlign: "left" }}>
+            <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
               <div>
                 <p>Please follow these steps to measure your body temperature.</p>
                 <ol>
@@ -79,14 +80,6 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                 }
               </div>
             </MDBModalBody>
-            <MDBModalFooter>
-              <MDBBtn color='danger' onClick={toggleTemperatureModal}>
-                Close
-              </MDBBtn>
-              <MDBBtn color='primary'>
-                Save
-              </MDBBtn>
-            </MDBModalFooter>
           </MDBModalContent>
         </MDBModalDialog>
       </MDBModal>
