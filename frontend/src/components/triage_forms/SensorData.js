@@ -26,7 +26,7 @@ const SensorData = ({ formData, setFormData }) => {
                   {formData.temperature == "" ? <span> NA</span> : <span> {formData.temperature}</span>}
                 </h4>
                 <br />
-                <span>° C</span>
+                <span>°C</span>
                 <br />
                 <b>Temperature</b>
               </MDBBtn>
