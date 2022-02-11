@@ -5,34 +5,34 @@ import SensorData from './triage_forms/SensorData';
 import './styles.css';
 
 const Triage = () => {
+  const [formData, setFormData] = useState(
+    {
+      first_name: "",
+      last_name: "",
+      age: "",
+      contact_no: "",
+      temperature: "",
+      pulse_rate: "",
+      systolic_bp: "",
+      diastolic_bp: "",
+      o2_saturation: ""
+    }
+  )
+
   const [page, setPage] = useState(0);
   const [progress, setProgress] = useState(0);
   const FormTitles = ['Personal Information', 'Sensor Data', 'Next']
   const PageDisplay = () => {
     if (page === 0) {
-      return <PersonalInformationInput />;
+      return <PersonalInformationInput formData={formData} setFormData={setFormData} />;
     }
     else if (page === 1) {
-      return <SensorData />;
+      return <SensorData formData={formData} setFormData={setFormData} />;
     }
     else {
       return <div>Hello World</div>
     }
   }
-
-  const [formData, setFormData] = useState(
-    {
-      first_name: "",
-      last_name: "",
-      age: null,
-      contact_no: "",
-      temperature: null,
-      pulse_rate: null,
-      systolic_bp: null,
-      diastolic_bp: null,
-      o2_saturation: null
-    }
-  )
 
   return (
     <React.Fragment>
