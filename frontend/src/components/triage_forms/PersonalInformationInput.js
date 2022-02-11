@@ -9,10 +9,10 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
-            <MDBInput required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value })} id='first_name' size='md' label='First Name' type='text' icon="user" />
+            <MDBInput required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value.toUpperCase() })} id='first_name' size='md' label='First Name' type='text' icon="user" />
           </MDBCol>
           <MDBCol>
-            <MDBInput required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
+            <MDBInput required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value.toUpperCase() })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
           </MDBCol>
         </MDBRow>
         <MDBRow className='mb-2'>
@@ -20,10 +20,10 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
             <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' icon="calendar-day" />
           </MDBCol>
           <MDBCol className='col-2'>
-            <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value })} id="sex" label="Sex" value={formData.sex}>
+            <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label="Sex" value={formData.sex}>
               <option disabled default value={""}>Sex</option>
-              <option value={"Male"}>Male</option>
-              <option value={"Female"}>Female</option>
+              <option value={"MALE"}>MALE</option>
+              <option value={"FEMALE"}>FEMALE</option>
             </select>
           </MDBCol>
 
