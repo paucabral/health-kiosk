@@ -9,18 +9,18 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
-            <MDBInput value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value })} id='first_name' size='lg' label='First Name' type='text' icon="user" />
+            <MDBInput value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value })} id='first_name' size='md' label='First Name' type='text' icon="user" />
           </MDBCol>
           <MDBCol>
-            <MDBInput value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value })} id='last_name' size='lg' label='Last Name' type='text' icon="user" />
+            <MDBInput value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
           </MDBCol>
         </MDBRow>
         <MDBRow className='mb-4'>
           <MDBCol className='col-2'>
-            <MDBInput value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='lg' label='Age' type='number' icon="calendar-day" />
+            <MDBInput value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' icon="calendar-day" />
           </MDBCol>
           <MDBCol>
-            <MDBInput value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='lg' label='Contact No.' type='tel' icon="phone" />
+            <MDBInput value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='md' label='Contact No.' type='tel' icon="phone" />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
