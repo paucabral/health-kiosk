@@ -44,10 +44,10 @@ const Triage = () => {
       return <React.Fragment>
         <MDBRow className='mb-4 w-100'>
           <MDBCol>
-            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress(progress - 50); }}>Prev</MDBBtn>
+            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); }}>Prev</MDBBtn>
           </MDBCol>
           <MDBCol>
-            <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress(progress + 50); }}>Next</MDBBtn>
+            <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); }}>Next</MDBBtn>
           </MDBCol>
         </MDBRow>
       </React.Fragment>;
@@ -67,7 +67,7 @@ const Triage = () => {
 
         </MDBCard>
         <MDBProgress className='m-3' height='10' className='rounded mt-3'>
-          <MDBProgressBar width={progress} valuemin={0} valuemax={100} />
+          <MDBProgressBar width={page === 0 ? 0 : page === 1 ? 50 : 100} valuemin={0} valuemax={100} />
         </MDBProgress>
       </MDBContainer>
     </React.Fragment>
