@@ -8,7 +8,9 @@ import {
   MDBModalTitle,
   MDBModalBody,
   MDBModalFooter,
-  MDBSpinner
+  MDBSpinner,
+  MDBRow,
+  MDBCol
 } from 'mdb-react-ui-kit';
 import axios from 'axios'
 
@@ -66,7 +68,12 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                       </div>
                       : measure === "done" ?
                         <div>
-                          <h1>Hello World!</h1>
+                          <MDBBtn onClick={() => { fetchTemperatureData() }} className='mx-2'>
+                            Measure Again?
+                          </MDBBtn>
+                          <MDBBtn color='success' onClick={toggleTemperatureModal} className='mx-2'>
+                            Save
+                          </MDBBtn>
                         </div>
                         : <div><h1>Error</h1></div>
                 }
