@@ -20,6 +20,20 @@ const Triage = () => {
     }
   }
 
+  const [formData, setFormData] = useState(
+    {
+      first_name: "",
+      last_name: "",
+      age: null,
+      contact_no: "",
+      temperature: null,
+      pulse_rate: null,
+      systolic_bp: null,
+      diastolic_bp: null,
+      o2_saturation: null
+    }
+  )
+
   return (
     <React.Fragment>
       <MDBContainer className='align-items-center justify-content-center'>
