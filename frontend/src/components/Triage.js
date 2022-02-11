@@ -42,7 +42,7 @@ const Triage = () => {
     }
     else {
       return <React.Fragment>
-        <MDBRow className='mb-4 w-100'>
+        <MDBRow className='mb-5 w-100'>
           <MDBCol>
             <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); }}>Prev</MDBBtn>
           </MDBCol>
@@ -57,7 +57,7 @@ const Triage = () => {
   return (
     <React.Fragment>
       <MDBContainer className='align-items-center justify-content-center'>
-        <MDBCard className='p-5 shadow-3-strong'>
+        <MDBCard className='p-0 shadow-3-strong'>
 
           <MDBCardBody>
             {PageDisplay()}

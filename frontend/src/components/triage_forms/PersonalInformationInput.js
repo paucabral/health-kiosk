@@ -15,7 +15,7 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
             <MDBInput required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
           </MDBCol>
         </MDBRow>
-        <MDBRow className='mb-4'>
+        <MDBRow className='mb-2'>
           <MDBCol className='col-2'>
             <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' icon="calendar-day" />
           </MDBCol>
