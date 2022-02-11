@@ -76,7 +76,13 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                             Save
                           </MDBBtn>
                         </div>
-                        : <div><h1>Error</h1></div>
+                        : <div style={{ textAlign: "center" }}>
+                          <h6>There was an error.</h6>
+                          <i>Please try again. If the issue persists, please reach the technician.</i>
+                          <MDBBtn onClick={() => { fetchTemperatureData() }} className='mx-2'>
+                            Try Again
+                          </MDBBtn>
+                        </div>
                 }
               </div>
             </MDBModalBody>
