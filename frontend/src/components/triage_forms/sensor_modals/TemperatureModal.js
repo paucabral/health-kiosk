@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useReducer } from 'react';
 import {
   MDBBtn,
   MDBModal,
@@ -8,6 +8,7 @@ import {
   MDBModalTitle,
   MDBModalBody,
   MDBModalFooter,
+  MDBSpinner
 } from 'mdb-react-ui-kit';
 import axios from 'axios'
 
@@ -15,14 +16,19 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
   const fetchTemperatureData = async () => {
     try {
       console.log("Fetching temperature...")
+      setMeasure("loading")
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/temperature`);
       if (response.status == 200) {
         console.log(response)
+        setMeasure("done")
       }
     } catch (error) {
       console.log(JSON.stringify(error))
+      setMeasure("error")
     }
   }
+
+  const [measure, setMeasure] = useState("to_measure");
 
   return (
     <React.Fragment>
@@ -43,7 +49,27 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                 </ol>
               </div>
               <div className='d-flex align-items-center justify-content-center'>
-                <MDBBtn onClick={() => { fetchTemperatureData() }}>Start Measurement</MDBBtn> {/* BIND THIS LATER */}
+                {
+                  measure === "to_measure" ?
+                    <MDBBtn onClick={() => { fetchTemperatureData() }}>
+                      Start Measurement
+                    </MDBBtn>
+                    : measure === "loading" ?
+                      <div>
+                        <MDBSpinner className='mx-2' color='warning'>
+                          <span className='visually-hidden'>Loading...</span>
+                        </MDBSpinner>
+                        <br />
+                        <div className='d-flex align-items-center justify-content-center'>
+                          <span>measuring...</span>
+                        </div>
+                      </div>
+                      : measure === "done" ?
+                        <div>
+                          <h1>Hello World!</h1>
+                        </div>
+                        : <div><h1>Error</h1></div>
+                }
               </div>
             </MDBModalBody>
             <MDBModalFooter>
