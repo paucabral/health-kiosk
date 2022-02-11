@@ -36,6 +36,44 @@ const Triage = () => {
     }
   }
 
+  const PageCard = () => {
+    if (page === 0) {
+      return <React.Fragment>
+        <MDBCard className='p-0 shadow-3-strong'>
+
+          <MDBCardBody>
+            {PageDisplay()}
+          </MDBCardBody>
+
+          {PageNav()}
+
+        </MDBCard>
+      </React.Fragment>
+    }
+    else if (page === 1) {
+      return <React.Fragment>
+        <MDBCardBody>
+          {PageDisplay()}
+        </MDBCardBody>
+
+        {PageNav()}
+      </React.Fragment>
+    }
+    else {
+      return <React.Fragment>
+        <MDBCard className='p-0 shadow-3-strong'>
+
+          <MDBCardBody>
+            {PageDisplay()}
+          </MDBCardBody>
+
+          {PageNav()}
+
+        </MDBCard>
+      </React.Fragment>
+    }
+  }
+
   const PageNav = () => {
     if (page === 2) {
       return <React.Fragment></React.Fragment>;
@@ -57,16 +95,8 @@ const Triage = () => {
   return (
     <React.Fragment>
       <MDBContainer className='align-items-center justify-content-center'>
-        <MDBCard className='p-0 shadow-3-strong'>
-
-          <MDBCardBody>
-            {PageDisplay()}
-          </MDBCardBody>
-
-          {PageNav()}
-
-        </MDBCard>
-        <MDBProgress className='m-3' height='10' className='rounded mt-3'>
+        {PageCard()}
+        <MDBProgress height='10' className='rounded mt-3'>
           <MDBProgressBar width={page === 0 ? 0 : page === 1 ? 50 : 100} valuemin={0} valuemax={100} />
         </MDBProgress>
       </MDBContainer>
