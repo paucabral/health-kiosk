@@ -11,6 +11,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
         </div>
         <div className='mb-4' >
           <span><strong>Name:</strong> {formData.first_name} {formData.last_name}</span><br />
+          <span><strong>Sex:</strong> {formData.sex}</span><br />
           <span><strong>Age:</strong> {formData.age}</span><br />
           <span><strong>Contact No:</strong> {formData.contact_no}</span><br />
         </div>

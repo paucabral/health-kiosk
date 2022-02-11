@@ -9,18 +9,26 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
-            <MDBInput value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value })} id='first_name' size='md' label='First Name' type='text' icon="user" />
+            <MDBInput required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value })} id='first_name' size='md' label='First Name' type='text' icon="user" />
           </MDBCol>
           <MDBCol>
-            <MDBInput value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
+            <MDBInput required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
           </MDBCol>
         </MDBRow>
         <MDBRow className='mb-4'>
           <MDBCol className='col-2'>
-            <MDBInput value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' icon="calendar-day" />
+            <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' icon="calendar-day" />
           </MDBCol>
+          <MDBCol className='col-2'>
+            <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value })} id="sex" label="Sex" value={formData.sex}>
+              <option disabled default value={""}>Sex</option>
+              <option value={"Male"}>Male</option>
+              <option value={"Female"}>Female</option>
+            </select>
+          </MDBCol>
+
           <MDBCol>
-            <MDBInput value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='md' label='Contact No.' type='tel' icon="phone" />
+            <MDBInput required value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='md' label='Contact No.' type='tel' icon="phone" />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
