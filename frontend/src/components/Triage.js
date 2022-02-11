@@ -39,7 +39,7 @@ const Triage = () => {
           </MDBRow>
 
         </MDBCard>
-        <MDBProgress className='m-3'>
+        <MDBProgress className='m-3' height='10' className='rounded mt-3'>
           <MDBProgressBar width={progress} valuemin={0} valuemax={100} />
         </MDBProgress>
       </MDBContainer>
