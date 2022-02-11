@@ -25,7 +25,6 @@ const SensorData = ({ formData, setFormData }) => {
                 <h4><MDBIcon fas icon="thermometer-quarter" />
                   {formData.temperature == "" ? <span> NA</span> : <span> {formData.temperature}</span>}
                 </h4>
-                <br />
                 <span>°C</span>
                 <br />
                 <b>Temperature</b>
@@ -37,7 +36,6 @@ const SensorData = ({ formData, setFormData }) => {
                 <h4><MDBIcon fas icon="heartbeat" />
                   {formData.pulse_rate == "" ? <span> NA</span> : <span> {formData.pulse_rate}</span>}
                 </h4>
-                <br />
                 <span>bpm</span>
                 <br />
                 <b>Pulse Rate</b>
@@ -49,7 +47,6 @@ const SensorData = ({ formData, setFormData }) => {
                 <h4><MDBIcon fas icon="tint" />
                   {formData.systolic_bp == "" ? <span> NA</span> : <span> {formData.systolic_bp}</span>}
                 </h4>
-                <br />
                 <span>mmHg</span>
                 <br />
                 <b>Systolic BP</b>
@@ -61,7 +58,6 @@ const SensorData = ({ formData, setFormData }) => {
                 <h4><MDBIcon fas icon="tint" />
                   {formData.diastolic_bp == "" ? <span> NA</span> : <span> {formData.diastolic_bp}</span>}
                 </h4>
-                <br />
                 <span>mmHg</span>
                 <br />
                 <b>Diastolic BP</b>
@@ -73,7 +69,6 @@ const SensorData = ({ formData, setFormData }) => {
                 <h4><MDBIcon fas icon="wind" />
                   {formData.o2_saturation == "" ? <span> NA</span> : <span> {formData.o2_saturation}</span>}
                 </h4>
-                <br />
                 <span>%</span>
                 <br />
                 <b>O2 Saturation</b>
