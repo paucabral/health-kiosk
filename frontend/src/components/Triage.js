@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardHeader, MDBCardFooter, MDBCol, MDBRow, MDBBtn, MDBContainer, MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
 import PersonalInformationInput from './triage_forms/PersonalInformationInput';
 import SensorData from './triage_forms/SensorData';
+import Confirmation from './triage_forms/Confirmation';
 import './styles.css';
 
 const Triage = () => {
@@ -30,7 +31,25 @@ const Triage = () => {
       return <SensorData formData={formData} setFormData={setFormData} />;
     }
     else {
-      return <div>Hello World</div>
+      return <Confirmation formData={formData} setFormData={setFormData} page={page} setPage={setPage} />;
+    }
+  }
+
+  const PageNav = () => {
+    if (page === 2) {
+      return <React.Fragment></React.Fragment>;
+    }
+    else {
+      return <React.Fragment>
+        <MDBRow className='mb-4 w-100'>
+          <MDBCol>
+            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress(progress - 50); }}>Prev</MDBBtn>
+          </MDBCol>
+          <MDBCol>
+            <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress(progress + 50); }}>Next</MDBBtn>
+          </MDBCol>
+        </MDBRow>
+      </React.Fragment>;
     }
   }
 
@@ -43,14 +62,7 @@ const Triage = () => {
             {PageDisplay()}
           </MDBCardBody>
 
-          <MDBRow className='mb-4 w-100'>
-            <MDBCol>
-              <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress(progress - 50); }}>Prev</MDBBtn>
-            </MDBCol>
-            <MDBCol>
-              <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress(progress + 50); }}>Next</MDBBtn>
-            </MDBCol>
-          </MDBRow>
+          {PageNav()}
 
         </MDBCard>
         <MDBProgress className='m-3' height='10' className='rounded mt-3'>
