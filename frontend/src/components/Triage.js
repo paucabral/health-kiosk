@@ -94,7 +94,7 @@ const Triage = () => {
 
   return (
     <React.Fragment>
-      <MDBContainer className='align-items-center justify-content-center' style={{ marginTop: `-2rem` }}>
+      <MDBContainer className='align-items-center justify-content-center' style={page === 2 ? { marginTop: `-2rem` } : {}}>
         {PageCard()}
         <MDBProgress height='10' className='rounded mt-3'>
           <MDBProgressBar width={page === 0 ? 0 : page === 1 ? 50 : 100} valuemin={0} valuemax={100} />
