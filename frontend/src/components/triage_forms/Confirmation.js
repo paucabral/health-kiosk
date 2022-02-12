@@ -2,6 +2,10 @@ import { MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBCardTitle, MDBBtn } from 'mdb-
 import React from 'react'
 
 const Confirmation = ({ formData, setFormData, page, setPage }) => {
+  const checkEntry = () => {
+    return formData.first_name === "" | formData.last_name === "" | formData.age === "" | formData.sex === "" | formData.contact_no === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
+  }
+
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
@@ -28,7 +32,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
           <MDBBtn onClick={() => { setPage(0) }} className='mx-2'>
             Go Back
           </MDBBtn>
-          <MDBBtn color='success'>
+          <MDBBtn color='success' disabled={checkEntry()}>
             Submit
           </MDBBtn>
         </div>
