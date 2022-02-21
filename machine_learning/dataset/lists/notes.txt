@@ -1,0 +1,122 @@
+*Induced Disorders/Condition
+alcohol binge episode
+anorexia
+fall
+feeling hopeless
+feeling suicidal
+homicidal thoughts
+feeling hopeless
+feeling strange
+feeling suicidal
+mood depressed
+moody
+nervousness
+night sweat
+nightmare
+out of breath
+history of - blackout
+impaired cognition
+mental status changes
+sleeplessness
+sleepy
+tired
+unhappy
+worry
+
+*Common Symptoms - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6234945/#:~:text=The%2010%20most%20common%20patient,unspecified%20respiratory%20concerns%2C%20and%20fatigue.
+ache
+barking cough
+cough
+hacking cough
+non-productive cough
+productive cough
+abdominal bloating
+abdominal tenderness
+abnormal sensation
+distended abdomen
+excruciating pain
+gasping for breath
+low back pain
+malaise
+numbness
+numbness of hand
+numbness of hand
+pain
+pain chest
+pain abdominal
+pain back
+pain chest
+pain foot
+pain in lower limb
+pain neck
+painful swallowing
+pleuritic pain
+side pain
+feels hot/feverish
+fatigue
+fatigability
+stuffy nose
+throat sore
+
+*Other Easily Observable Symptoms
+agitation
+anosmia
+aphagia
+arthralgia
+exhaustion
+general discomfort
+general unsteadiness
+giddy mood
+heartburn
+hunger
+heavy feeling
+heavy legs
+mass in breast
+muscle twitch
+overweight
+palpitation
+panic
+paralyse
+redness
+sensory discomfort
+sneeze
+sore to touch
+spasm
+speech slurred
+stiffness
+stinging sensation
+sweat
+sweating increased
+vomiting
+weight gain
+wheelchair bound
+wheezing
+
+*Other Symptoms
+hallucinations auditory
+hallucinations visual
+hallucinations auditory
+hallucinations visual
+verbal auditory hallucinations
+verbal auditory hallucinations
+hematuria
+hoarseness
+hyperacusis
+hypersomnia
+hypersomnolence
+hyperventilation
+hypesthesia
+phonophobia
+photophobia
+rest pain
+rolling of eyes
+room spinning
+seizure
+
+*allergies
+no known drug allergies
+
+*Vital Sign Symptoms
+hypertension - considered to be a reading of 140/90 mm Hg or higher.
+hypotension - also known as low blood pressure, is a blood pressure under 90/60 mm/Hg
+fever - a temporary increase in your body temperature
