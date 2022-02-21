@@ -120,3 +120,16 @@ no known drug allergies
 hypertension - considered to be a reading of 140/90 mm Hg or higher.
 hypotension - also known as low blood pressure, is a blood pressure under 90/60 mm/Hg
 fever - a temporary increase in your body temperature
+
+*general medicine diseases - https://healthinfo.healthengine.com.au/general-medicine
+hypertensive disease
+coronary heart disease
+asthma
+emphysema pulmonary
+gastroesophageal reflux disease
+gastroenteritis
+accident cerebrovascular
+epilepsy
+dementia
+anemia
+diabetes
