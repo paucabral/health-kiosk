@@ -17,8 +17,8 @@ const Facilities = () => {
     libraries: googleMapsLibraries
   })
 
-  if (loadError) return "Error loading maps";
-  if (isLoaded) return "Loading Maps";
+  // if (loadError) return "Error loading maps";
+  // if (isLoaded) return "Loading Maps";
 
   const fetchReverseGeocode = async () => {
     try {
@@ -38,7 +38,7 @@ const Facilities = () => {
 
   useEffect(() => {
     fetchReverseGeocode();
-  }, [])
+  }, []);
 
   return (
     <React.Fragment>
