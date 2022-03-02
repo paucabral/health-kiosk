@@ -11,6 +11,15 @@ const Facilities = () => {
   const [location, setLocation] = useState(default_loc)
   const [reverseGeocode, setReverseGeocode] = useState({})
 
+  const googleMapsLibraries = ["places"]
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries: googleMapsLibraries
+  })
+
+  if (loadError) return "Error loading maps";
+  if (isLoaded) return "Loading Maps";
+
   const fetchReverseGeocode = async () => {
     try {
       console.log("Fetching geocode...");
