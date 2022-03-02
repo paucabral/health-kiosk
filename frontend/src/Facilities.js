@@ -36,8 +36,27 @@ const Facilities = () => {
     }
   }
 
+  const [nearestHospitals, setNearestHospitals] = useState({});
+
+  const fetchNearestHospitals = async () => {
+    // try {
+    //   console.log("Fetching nearest hospitals...");
+    //   const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.lat},${location.long}&type=hospital&rankby=distance&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`
+    //   console.log(url)
+    //   const response = await axios.get(url);
+    //   if (response.status == 200) {
+    //     const nearest_hospitals = response.data["results"];
+    //     setNearestHospitals(nearest_hospitals)
+    //     console.log(nearest_hospitals)
+    //   }
+    // } catch (error) {
+    //   console.log(JSON.stringify(error));
+    // }
+  }
+
   useEffect(() => {
     fetchReverseGeocode();
+    fetchNearestHospitals();
   }, []);
 
   return (
