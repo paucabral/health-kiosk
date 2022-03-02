@@ -3,6 +3,12 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBC
 import axios from 'axios';
 import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 
+const googleMapsLibraries = ["places"]
+const mapContainerStyle = {
+  width: "100%",
+  height: "100%"
+}
+
 const Facilities = () => {
   const default_loc = {
     lat: 14.6507,
@@ -10,12 +16,6 @@ const Facilities = () => {
   }
   const [location, setLocation] = useState(default_loc)
   const [reverseGeocode, setReverseGeocode] = useState({})
-
-  const googleMapsLibraries = ["places"]
-  const mapContainerStyle = {
-    width: "100%",
-    height: "100%"
-  }
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
