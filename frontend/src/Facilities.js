@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText } from 'mdb-react-ui-kit';
 
 const Facilities = () => {
+  const default_loc = {
+    lat: 0,
+    long: 0
+  }
+  const [location, setLocation] = useState(default_loc)
+
   return (
     <React.Fragment>
       <MDBContainer>
@@ -10,8 +16,8 @@ const Facilities = () => {
             <MDBRow>
               <MDBCard>
                 <MDBCardBody className='text-left'>
-                  <MDBCardTitle>Current Location</MDBCardTitle>
-                  <MDBCardSubTitle className='text-muted'>Coordinates</MDBCardSubTitle>
+                  <MDBCardTitle className='text-uppercase'>Current Location</MDBCardTitle>
+                  <MDBCardSubTitle className='text-muted'>Coordinates: {location.lat}° LAT, {location.long}° LONG</MDBCardSubTitle>
                   <MDBCardText>
                     Some quick example text to build on the card title and make up the bulk of the card's content.
                   </MDBCardText>
