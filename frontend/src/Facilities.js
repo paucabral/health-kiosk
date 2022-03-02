@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
 
@@ -13,10 +13,11 @@ const Facilities = () => {
   const fetchReverseGeocode = async () => {
     try {
       console.log("Fetching geocode...");
-      const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${location.lat}&lon=${location.long}&addressdetails=1`
+      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.long}`
+      console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
-        const reverse_geocode_data = response.data;
+        const reverse_geocode_data = response.data["results"][0]["locations"][0];
         setReverseGeocode(reverse_geocode_data)
         console.log(reverse_geocode_data)
       }
@@ -25,7 +26,9 @@ const Facilities = () => {
     }
   }
 
-  fetchReverseGeocode();
+  useEffect(() => {
+    fetchReverseGeocode();
+  }, [])
 
   return (
     <React.Fragment>
