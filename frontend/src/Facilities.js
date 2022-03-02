@@ -103,7 +103,7 @@ const Facilities = () => {
                 isLoaded ? <GoogleMap
                   mapContainerStyle={mapContainerStyle}
                   center={location}
-                  zoom={10}
+                  zoom={13}
                 >
                   { /* Child components, such as markers, info windows, etc. */}
                   <></>
