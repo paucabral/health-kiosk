@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
+import { GoogleMap, useLoadScript, Marker, InfoWindow } from "@react-google-maps/api";
 
 const Facilities = () => {
   const default_loc = {
