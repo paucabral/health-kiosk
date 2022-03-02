@@ -17,7 +17,7 @@ const Facilities = () => {
     height: "100%"
   }
 
-  const { isLoaded } = useJsApiLoader({
+  const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: googleMapsLibraries
@@ -122,7 +122,7 @@ const Facilities = () => {
                   { /* Child components, such as markers, info windows, etc. */}
                   <></>
                 </GoogleMap>
-                  : <></>
+                  : !isLoaded && !loadError ? <></> : <>Failed to load maps.</>
               }
             </MDBCard>
           </MDBCol>
