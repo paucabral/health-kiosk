@@ -24,18 +24,6 @@ const Facilities = () => {
   })
 
   const [map, setMap] = React.useState(null)
-
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map)
-  }, [])
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null)
-  }, [])
-
-
   // if (loadError) return "Error loading maps";
   // if (isLoaded) return "Loading Maps";
 
@@ -116,8 +104,6 @@ const Facilities = () => {
                   mapContainerStyle={mapContainerStyle}
                   center={location}
                   zoom={10}
-                  onLoad={onLoad}
-                  onUnmount={onUnmount}
                 >
                   { /* Child components, such as markers, info windows, etc. */}
                   <></>
