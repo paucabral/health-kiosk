@@ -39,11 +39,11 @@ const Facilities = () => {
               <MDBCard>
                 <MDBCardBody className='text-left'>
                   <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
-                  <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['display_name']}</MDBCardTitle>
+                  <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
                   <MDBCardSubTitle className='text-muted pt-2'>LAT: {location.lat}°</MDBCardSubTitle>
                   <MDBCardSubTitle className='text-muted pb-2'>LONG: {location.long}°</MDBCardSubTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}`
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
