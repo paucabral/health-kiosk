@@ -1,21 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
-import { GoogleMap, useLoadScript, Marker, InfoWindow } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 
 const Facilities = () => {
   const default_loc = {
-    lat: 37.423021,
-    long: -122.083739
+    lat: 14.6507,
+    lng: 121.1029
   }
   const [location, setLocation] = useState(default_loc)
   const [reverseGeocode, setReverseGeocode] = useState({})
 
   const googleMapsLibraries = ["places"]
-  const { isLoaded, loadError } = useLoadScript({
+  const mapContainerStyle = {
+    width: "100%",
+    height: "100%"
+  }
+
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: googleMapsLibraries
   })
+
+  const [map, setMap] = React.useState(null)
+
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds();
+    map.fitBounds(bounds);
+    setMap(map)
+  }, [])
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null)
+  }, [])
+
 
   // if (loadError) return "Error loading maps";
   // if (isLoaded) return "Loading Maps";
@@ -23,7 +42,7 @@ const Facilities = () => {
   const fetchReverseGeocode = async () => {
     try {
       console.log("Fetching geocode...");
-      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.long}`
+      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.lng}`
       console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
@@ -41,7 +60,7 @@ const Facilities = () => {
   const fetchNearestHospitals = async () => {
     // try {
     //   console.log("Fetching nearest hospitals...");
-    //   const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.lat},${location.long}&type=hospital&rankby=distance&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`
+    //   const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.lat},${location.lng}&type=hospital&rankby=distance&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`
     //   console.log(url)
     //   const response = await axios.get(url);
     //   if (response.status == 200) {
@@ -52,6 +71,18 @@ const Facilities = () => {
     // } catch (error) {
     //   console.log(JSON.stringify(error));
     // }
+
+    const searchLocation = new window.google.maps.LatLng(location.lat, location.lng);
+
+    var request = {
+      location: searchLocation,
+      radius: '500',
+      type: ['hospital']
+    };
+
+    const service = new window.google.maps.places.PlacesService(request);
+    const res = service.nearbySearch(request);
+    console.log(res)
   }
 
   useEffect(() => {
@@ -70,7 +101,7 @@ const Facilities = () => {
                   <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                   <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
                   <MDBCardSubTitle className='text-muted pt-2'>LAT: {location.lat}°</MDBCardSubTitle>
-                  <MDBCardSubTitle className='text-muted pb-2'>LONG: {location.long}°</MDBCardSubTitle>
+                  <MDBCardSubTitle className='text-muted pb-2'>LNG: {location.lng}°</MDBCardSubTitle>
                   <MDBCardText>
                     {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                   </MDBCardText>
@@ -80,7 +111,19 @@ const Facilities = () => {
           </MDBCol>
           <MDBCol md='8'>
             <MDBCard style={{ width: '100%', height: '100%' }}>
-
+              {
+                isLoaded ? <GoogleMap
+                  mapContainerStyle={mapContainerStyle}
+                  center={location}
+                  zoom={10}
+                  onLoad={onLoad}
+                  onUnmount={onUnmount}
+                >
+                  { /* Child components, such as markers, info windows, etc. */}
+                  <></>
+                </GoogleMap>
+                  : <></>
+              }
             </MDBCard>
           </MDBCol>
         </MDBRow>
