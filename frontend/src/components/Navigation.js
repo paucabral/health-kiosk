@@ -38,7 +38,7 @@ const Navigation = () => {
 
   return (
     <React.Fragment>
-      <MDBNavbar expand='lg' dark bgColor='info'>
+      <MDBNavbar expand='lg' dark bgColor='info' scrolling fixed="top" >
         <MDBContainer fluid>
           <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
           <MDBNavbarToggler

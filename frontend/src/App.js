@@ -6,9 +6,9 @@ import Facilities from './components/Facilities';
 
 function App() {
   return (
-    <div className="App" style={{ height: "100vh" }}>
+    <div className="App" style={{ height: "95vh", marginRight: '-0.7em' }}>
       <Navigation />
-      <div className='d-flex align-items-center justify-content-center' style={{ height: "90vh" }}>
+      <div className='d-flex align-items-center justify-content-center' style={{ height: "100%" }}>
         {/* <Triage /> */}
         <Facilities />
       </div>

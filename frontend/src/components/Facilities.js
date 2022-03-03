@@ -40,7 +40,7 @@ const Facilities = () => {
 
   const [map, setMap] = React.useState(null)
   // if (loadError) return "Error loading maps";
-  // if (isLoaded) return "Loading Maps";
+  // if (!isLoaded) return "Loading Maps";
 
   const [reverseGeocode, setReverseGeocode] = useState({})
 
@@ -88,9 +88,9 @@ const Facilities = () => {
   };
 
   const findFacilities = async () => {
-    await fetchLocation();
-    await fetchReverseGeocode();
-    await fetchNearestHospitals();
+    fetchLocation();
+    // await fetchReverseGeocode();
+    // await fetchNearestHospitals();
   }
 
   useEffect(() => {
@@ -99,7 +99,7 @@ const Facilities = () => {
 
   return (
     <React.Fragment>
-      <MDBContainer>
+      <div className='mt-5 mx-4' style={{ width: '100vw' }}>
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
@@ -119,7 +119,7 @@ const Facilities = () => {
               nearestHospitals.length != 0 ?
                 <MDBRow style={{ height: '20vh', overflow: 'scroll', marginTop: '0.5em', marginBottom: '0.5em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }} key={item.id}>
+                    <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }} key={item.name}>
                       <img src={item.icon} width={20} />
                       {item.name}<br />
                       {item.rating ? `${item.rating}` : ''} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}<br />
@@ -149,7 +149,7 @@ const Facilities = () => {
             </MDBCard>
           </MDBCol>
         </MDBRow>
-      </MDBContainer >
+      </div >
     </React.Fragment >
   )
 }
