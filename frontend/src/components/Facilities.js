@@ -6,7 +6,7 @@ import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@r
 const googleMapsLibraries = ["places"]
 const mapContainerStyle = {
   width: "100%",
-  height: "100%"
+  height: "85vh"
 }
 
 const Facilities = () => {
@@ -99,7 +99,7 @@ const Facilities = () => {
 
   return (
     <React.Fragment>
-      <div className='mt-5 mx-4' style={{ width: '100vw' }}>
+      <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2em' }}>
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
