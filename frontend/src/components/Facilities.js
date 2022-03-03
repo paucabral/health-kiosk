@@ -89,8 +89,8 @@ const Facilities = () => {
 
   const findFacilities = async () => {
     fetchLocation();
-    // await fetchReverseGeocode();
-    // await fetchNearestHospitals();
+    await fetchReverseGeocode();
+    await fetchNearestHospitals();
   }
 
   useEffect(() => {
@@ -107,26 +107,43 @@ const Facilities = () => {
                 <MDBCardBody className='text-left'>
                   <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                   <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
-                  <MDBCardSubTitle className='text-muted pt-2'>LAT: {location.lat}°</MDBCardSubTitle>
-                  <MDBCardSubTitle className='text-muted pb-2'>LNG: {location.lng}°</MDBCardSubTitle>
-                  <MDBCardText>
-                    {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
+                  <MDBCardText className='text-muted pt-2'>
+                    LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
                   </MDBCardText>
+                  <MDBCardSubTitle>
+                    {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
+                  </MDBCardSubTitle>
                 </MDBCardBody>
               </MDBCard>
             </MDBRow>
             {
               nearestHospitals.length != 0 ?
-                <MDBRow style={{ height: '20vh', overflow: 'scroll', marginTop: '0.5em', marginBottom: '0.5em' }}>
+                <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }} key={item.name}>
-                      <img src={item.icon} width={20} />
-                      {item.name}<br />
-                      {item.rating ? `${item.rating}` : ''} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}<br />
+                    <MDBCard style={{ padding: '2em' }} key={item.name}>
+                      <MDBRow>
+                        <MDBCol className='col-2'>
+                          <img src={item.icon} width={15} />
+                        </MDBCol>
+                        <MDBCol className='text-left'>
+                          <MDBRow className='font-weight-bold'>
+                            {item.name}
+                          </MDBRow>
+                          <MDBRow>
+                            {item.rating ? `${item.rating}` : ''} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}
+                          </MDBRow>
+                          <MDBRow>
+                            {item.vicinity}
+                          </MDBRow>
+                          <MDBRow className='text-muted' style={{ fontSize: '0.8em' }}>
+                            LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
                       {/* {item.business_status}: {item.opening_hours} <br /> */}
                       {/* {item.formatted_phone_number} */}
-                      {item.geometry.location.lat},{item.geometry.location.lng}<br />
-                      {item.vicinity}<br />
+
+
                     </MDBCard>
                   ))}
                 </MDBRow>
