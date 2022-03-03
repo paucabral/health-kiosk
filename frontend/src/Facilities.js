@@ -46,32 +46,20 @@ const Facilities = () => {
   const [nearestHospitals, setNearestHospitals] = useState({});
 
   const fetchNearestHospitals = async () => {
-    // try {
-    //   console.log("Fetching nearest hospitals...");
-    //   const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.lat},${location.lng}&type=hospital&rankby=distance&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`
-    //   console.log(url)
-    //   const response = await axios.get(url);
-    //   if (response.status == 200) {
-    //     const nearest_hospitals = response.data["results"];
-    //     setNearestHospitals(nearest_hospitals)
-    //     console.log(nearest_hospitals)
-    //   }
-    // } catch (error) {
-    //   console.log(JSON.stringify(error));
-    // }
-
-    const searchLocation = new window.google.maps.LatLng(location.lat, location.lng);
-
-    var request = {
-      location: searchLocation,
-      radius: '500',
-      type: ['hospital']
-    };
-
-    const service = new window.google.maps.places.PlacesService(request);
-    const res = service.nearbySearch(request);
-    console.log(res)
-  }
+    try {
+      console.log("Fetching nearest hospitals...");
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/nearby-hospitals?lat=${location.lat}&lng=${location.lng}`
+      console.log(url)
+      const response = await axios.get(url);
+      if (response.status == 200) {
+        const nearest_hospitals = response.data["results"];
+        setNearestHospitals(nearest_hospitals)
+        console.log(nearest_hospitals)
+      }
+    } catch (error) {
+      console.log(JSON.stringify(error));
+    }
+  };
 
   useEffect(() => {
     fetchReverseGeocode();
