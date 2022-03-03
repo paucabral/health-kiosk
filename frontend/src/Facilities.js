@@ -10,12 +10,24 @@ const mapContainerStyle = {
 }
 
 const Facilities = () => {
-  const default_loc = {
-    lat: 14.6507,
-    lng: 121.1029
-  }
-  const [location, setLocation] = useState(default_loc)
+  const [location, setLocation] = useState({})
   const [reverseGeocode, setReverseGeocode] = useState({})
+
+  const fetchLocation = async () => {
+    try {
+      console.log("Fetching location...");
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/location`
+      console.log(url)
+      const response = await axios.get(url);
+      if (response.status == 200) {
+        const location_data = response.data;
+        setLocation(location_data)
+        console.log(location_data)
+      }
+    } catch (error) {
+      console.log(JSON.stringify(error));
+    }
+  }
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
@@ -30,7 +42,7 @@ const Facilities = () => {
   const fetchReverseGeocode = async () => {
     try {
       console.log("Fetching geocode...");
-      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.lng}`
+      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${parseFloat(location["lat"])},${parseFloat(location["lng"])}`
       console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
@@ -48,7 +60,7 @@ const Facilities = () => {
   const fetchNearestHospitals = async () => {
     try {
       console.log("Fetching nearest hospitals...");
-      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/nearby-hospitals?lat=${location.lat}&lng=${location.lng}`
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/nearby-hospitals?lat=${parseFloat(location["lat"])}&lng=${parseFloat(location["lng"])}`
       console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
@@ -62,6 +74,7 @@ const Facilities = () => {
   };
 
   useEffect(() => {
+    fetchLocation();
     fetchReverseGeocode();
     fetchNearestHospitals();
   }, []);
@@ -76,8 +89,8 @@ const Facilities = () => {
                 <MDBCardBody className='text-left'>
                   <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                   <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
-                  <MDBCardSubTitle className='text-muted pt-2'>LAT: {location.lat}°</MDBCardSubTitle>
-                  <MDBCardSubTitle className='text-muted pb-2'>LNG: {location.lng}°</MDBCardSubTitle>
+                  <MDBCardSubTitle className='text-muted pt-2'>LAT: {parseFloat(location["lat"])}°</MDBCardSubTitle>
+                  <MDBCardSubTitle className='text-muted pb-2'>LNG: {parseFloat(location["lng"])}°</MDBCardSubTitle>
                   <MDBCardText>
                     {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                   </MDBCardText>
