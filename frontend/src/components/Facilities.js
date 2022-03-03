@@ -130,7 +130,7 @@ const Facilities = () => {
                             {item.name}
                           </MDBRow>
                           <MDBRow>
-                            {item.rating ? `${item.rating}` : ''} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}
+                            <span style={{ marginLeft: '-1em' }}>{item.rating ? <span className='text-warning'> <MDBIcon fas icon="star" /> {item.rating} stars</span> : ''} {item.user_ratings_total ? `(${item.user_ratings_total} users)` : ''}</span>
                           </MDBRow>
                           <MDBRow>
                             {item.vicinity}
