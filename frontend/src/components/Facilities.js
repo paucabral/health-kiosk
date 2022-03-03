@@ -89,8 +89,8 @@ const Facilities = () => {
 
   const findFacilities = async () => {
     fetchLocation();
-    await fetchReverseGeocode();
-    await fetchNearestHospitals();
+    // await fetchReverseGeocode();
+    // await fetchNearestHospitals();
   }
 
   useEffect(() => {
@@ -159,7 +159,13 @@ const Facilities = () => {
                   zoom={13}
                 >
                   { /* Child components, such as markers, info windows, etc. */}
-                  <></>
+                  <>
+                    <Marker position={location}>
+                      {/* <InfoWindow options={{ maxWidth: 200 }}>
+                        <h6 className='text-uppercase'>current location</h6>
+                      </InfoWindow> */}
+                    </Marker>
+                  </>
                 </GoogleMap>
                   : !isLoaded && !loadError ? <></> : <>Failed to load maps.</>
               }
