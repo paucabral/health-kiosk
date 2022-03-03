@@ -65,7 +65,7 @@ const Facilities = () => {
     }
   }
 
-  const [nearestHospitals, setNearestHospitals] = useState({});
+  const [nearestHospitals, setNearestHospitals] = useState([]);
 
   const fetchNearestHospitals = async () => {
     if (status === "SUCCESS") {
@@ -115,17 +115,22 @@ const Facilities = () => {
                 </MDBCardBody>
               </MDBCard>
             </MDBRow>
-            <MDBRow style={{ height: '20vh', overflow: 'scroll', marginTop: '0.5em', marginBottom: '0.5em' }}>
-              {nearestHospitals?.map((item) => (
-                <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }}>
-                  {item.name}<br />
-                  {item.rating} ({item.user_ratings_total})<br />
-                  {item.business_status}<br />
-                  {item.geometry.location.lat},{item.geometry.location.lng}<br />
-                  {item.vicinity}
-                </MDBCard>
-              ))}
-            </MDBRow>
+            {
+              nearestHospitals.length != 0 ?
+                <MDBRow style={{ height: '20vh', overflow: 'scroll', marginTop: '0.5em', marginBottom: '0.5em' }}>
+                  {nearestHospitals?.map((item) => (
+                    <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }} key={item.id}>
+                      <img src={item.icon} width={20} />
+                      {item.name}<br />
+                      {item.rating} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}<br />
+                      {item.business_status}<br />
+                      {item.geometry.location.lat},{item.geometry.location.lng}<br />
+                      {item.vicinity}
+                    </MDBCard>
+                  ))}
+                </MDBRow>
+                : <MDBRow></MDBRow>
+            }
           </MDBCol>
           <MDBCol md='8'>
             <MDBCard style={{ width: '100%', height: '100%' }}>
