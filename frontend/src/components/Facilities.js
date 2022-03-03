@@ -122,10 +122,11 @@ const Facilities = () => {
                     <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }} key={item.id}>
                       <img src={item.icon} width={20} />
                       {item.name}<br />
-                      {item.rating} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}<br />
-                      {item.business_status}<br />
+                      {item.rating ? `${item.rating}` : ''} {item.user_ratings_total ? `(${item.user_ratings_total})` : ''}<br />
+                      {/* {item.business_status}: {item.opening_hours} <br /> */}
+                      {/* {item.formatted_phone_number} */}
                       {item.geometry.location.lat},{item.geometry.location.lng}<br />
-                      {item.vicinity}
+                      {item.vicinity}<br />
                     </MDBCard>
                   ))}
                 </MDBRow>
