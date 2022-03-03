@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
+import './styles.css';
 
 const googleMapsLibraries = ["places"]
 const mapContainerStyle = {
@@ -89,13 +90,18 @@ const Facilities = () => {
 
   const findFacilities = async () => {
     fetchLocation();
-    // await fetchReverseGeocode();
-    // await fetchNearestHospitals();
+    await fetchReverseGeocode();
+    await fetchNearestHospitals();
   }
 
   useEffect(() => {
     findFacilities();
   }, []);
+
+  const handleCardClick = (e) => {
+    e.target.classList.toggle('card-click');
+    console.log(e.target)
+  }
 
   return (
     <React.Fragment>
@@ -120,7 +126,7 @@ const Facilities = () => {
               nearestHospitals.length != 0 ?
                 <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard style={{ padding: '2em' }} key={item.name}>
+                    <MDBCard style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick}>
                       <MDBRow>
                         <MDBCol className='col-2'>
                           <img src={item.icon} width={15} />
