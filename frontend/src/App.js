@@ -2,7 +2,7 @@ import './App.css';
 import Navigation from './components/Navigation'
 import Triage from './components/Triage';
 import { MDBContainer } from 'mdb-react-ui-kit';
-import Facilities from './Facilities';
+import Facilities from './components/Facilities';
 
 function App() {
   return (

@@ -10,7 +10,9 @@ const mapContainerStyle = {
 }
 
 const Facilities = () => {
-  const [location, setLocation] = useState({})
+  const [status, setStatus] = useState("SUCCESS");
+
+  const [location, setLocation] = useState({});
 
   const fetchLocation = async () => {
     try {
@@ -21,10 +23,12 @@ const Facilities = () => {
       if (response.status == 200) {
         const location_data = response.data;
         setLocation(location_data)
-        console.log(location_data)
+        console.log(location)
+        setStatus("SUCCESS")
       }
     } catch (error) {
       console.log(JSON.stringify(error));
+      setStatus("ERROR")
     }
   }
 
@@ -41,43 +45,56 @@ const Facilities = () => {
   const [reverseGeocode, setReverseGeocode] = useState({})
 
   const fetchReverseGeocode = async () => {
-    try {
-      console.log("Fetching geocode...");
-      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${(location["lat"])},${(location["lng"])}`
-      console.log(url)
-      const response = await axios.get(url);
-      if (response.status == 200) {
-        const reverse_geocode_data = response.data["results"][0]["locations"][0];
-        setReverseGeocode(reverse_geocode_data)
-        console.log(reverse_geocode_data)
+    if (status === "SUCCESS") {
+      try {
+        console.log("Fetching geocode...");
+        console.log(location)
+        const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.lng}`
+        console.log(url)
+        const response = await axios.get(url);
+        if (response.status == 200) {
+          const reverse_geocode_data = response.data["results"][0]["locations"][0];
+          setReverseGeocode(reverse_geocode_data)
+          console.log(reverse_geocode_data)
+          setStatus("SUCCESS")
+        }
+      } catch (error) {
+        console.log(JSON.stringify(error));
+        setStatus("ERROR")
       }
-    } catch (error) {
-      console.log(JSON.stringify(error));
     }
   }
 
   const [nearestHospitals, setNearestHospitals] = useState({});
 
   const fetchNearestHospitals = async () => {
-    try {
-      console.log("Fetching nearest hospitals...");
-      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/nearby-hospitals?lat=${parseFloat(location["lat"])}&lng=${parseFloat(location["lng"])}`
-      console.log(url)
-      const response = await axios.get(url);
-      if (response.status == 200) {
-        const nearest_hospitals = response.data["results"];
-        setNearestHospitals(nearest_hospitals)
-        console.log(nearest_hospitals)
+    if (status === "SUCCESS") {
+      try {
+        console.log("Fetching nearest hospitals...");
+        const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/nearby-hospitals?lat=${location.lat}&lng=${location.lng}`
+        console.log(url)
+        const response = await axios.get(url);
+        if (response.status == 200) {
+          const nearest_hospitals = response.data["results"];
+          setNearestHospitals(nearest_hospitals)
+          console.log(nearest_hospitals)
+          setStatus("SUCCESS")
+        }
+      } catch (error) {
+        console.log(JSON.stringify(error));
+        setStatus("ERROR")
       }
-    } catch (error) {
-      console.log(JSON.stringify(error));
     }
   };
 
+  const findFacilities = async () => {
+    await fetchLocation();
+    await fetchReverseGeocode();
+    await fetchNearestHospitals();
+  }
+
   useEffect(() => {
-    fetchLocation();
-    fetchReverseGeocode();
-    fetchNearestHospitals();
+    findFacilities();
   }, []);
 
   return (
@@ -90,13 +107,24 @@ const Facilities = () => {
                 <MDBCardBody className='text-left'>
                   <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                   <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
-                  <MDBCardSubTitle className='text-muted pt-2'>LAT: {parseFloat(location["lat"])}°</MDBCardSubTitle>
-                  <MDBCardSubTitle className='text-muted pb-2'>LNG: {parseFloat(location["lng"])}°</MDBCardSubTitle>
+                  <MDBCardSubTitle className='text-muted pt-2'>LAT: {location.lat}°</MDBCardSubTitle>
+                  <MDBCardSubTitle className='text-muted pb-2'>LNG: {location.lng}°</MDBCardSubTitle>
                   <MDBCardText>
                     {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
+            </MDBRow>
+            <MDBRow style={{ height: '20vh', overflow: 'scroll', marginTop: '0.5em', marginBottom: '0.5em' }}>
+              {nearestHospitals?.map((item) => (
+                <MDBCard style={{ marginTop: '0.5em', marginBottom: '0.5em' }}>
+                  {item.name}<br />
+                  {item.rating} ({item.user_ratings_total})<br />
+                  {item.business_status}<br />
+                  {item.geometry.location.lat},{item.geometry.location.lng}<br />
+                  {item.vicinity}
+                </MDBCard>
+              ))}
             </MDBRow>
           </MDBCol>
           <MDBCol md='8'>
@@ -115,8 +143,8 @@ const Facilities = () => {
             </MDBCard>
           </MDBCol>
         </MDBRow>
-      </MDBContainer>
-    </React.Fragment>
+      </MDBContainer >
+    </React.Fragment >
   )
 }
 
