@@ -11,7 +11,6 @@ const mapContainerStyle = {
 
 const Facilities = () => {
   const [location, setLocation] = useState({})
-  const [reverseGeocode, setReverseGeocode] = useState({})
 
   const fetchLocation = async () => {
     try {
@@ -39,10 +38,12 @@ const Facilities = () => {
   // if (loadError) return "Error loading maps";
   // if (isLoaded) return "Loading Maps";
 
+  const [reverseGeocode, setReverseGeocode] = useState({})
+
   const fetchReverseGeocode = async () => {
     try {
       console.log("Fetching geocode...");
-      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${parseFloat(location["lat"])},${parseFloat(location["lng"])}`
+      const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${(location["lat"])},${(location["lng"])}`
       console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
