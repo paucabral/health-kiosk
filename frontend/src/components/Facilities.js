@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
@@ -15,6 +15,8 @@ const Facilities = () => {
 
   const [location, setLocation] = useState({});
 
+  const dataLoaded = useRef(false);
+
   const fetchLocation = async () => {
     try {
       console.log("Fetching location...");
@@ -26,6 +28,7 @@ const Facilities = () => {
         setLocation(location_data)
         console.log(location)
         setStatus("SUCCESS")
+        dataLoaded.current = true;
       }
     } catch (error) {
       console.log(JSON.stringify(error));
@@ -89,14 +92,18 @@ const Facilities = () => {
   };
 
   const findFacilities = async () => {
-    fetchLocation();
-    await fetchReverseGeocode();
-    await fetchNearestHospitals();
+    if (Object.keys(location).length != 0) {
+      await fetchReverseGeocode();
+      await fetchNearestHospitals();
+    }
   }
 
   useEffect(() => {
-    findFacilities();
-  }, []);
+    if (location && !dataLoaded.current) {
+      fetchLocation();
+      findFacilities();
+    }
+  }, [location]);
 
   const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
