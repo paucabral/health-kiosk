@@ -120,7 +120,7 @@ const Facilities = () => {
                 {
                   Object.keys(location).length === 0 ?
                     <MDBRow className='m-4'>
-                      <MDBCardTitle className='text-uppercase py-2'>Loading</MDBCardTitle>
+                      <MDBCardTitle className='text-uppercase py-2'>Finding location...</MDBCardTitle>
                       <MDBContainer>
                         <MDBSpinner className='mx-2' color='info'>
                           <span className='visually-hidden'>Loading...</span>
@@ -172,7 +172,15 @@ const Facilities = () => {
                     </MDBCard>
                   ))}
                 </MDBRow>
-                : <MDBRow></MDBRow>
+                :
+                <MDBRow>
+                  <MDBCardTitle className='text-uppercase py-2'>Finding nearest hospitals...</MDBCardTitle>
+                  <MDBContainer>
+                    <MDBSpinner className='mx-2' color='danger'>
+                      <span className='visually-hidden'>Loading...</span>
+                    </MDBSpinner>
+                  </MDBContainer>
+                </MDBRow>
             }
           </MDBCol>
           <MDBCol md='8'>
