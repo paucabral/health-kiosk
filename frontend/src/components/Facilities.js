@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import './styles.css';
@@ -117,16 +117,28 @@ const Facilities = () => {
           <MDBCol md='4'>
             <MDBRow>
               <MDBCard>
-                <MDBCardBody className='text-left'>
-                  <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
-                  <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
-                  <MDBCardText className='text-muted pt-2'>
-                    LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
-                  </MDBCardText>
-                  <MDBCardSubTitle>
-                    {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
-                  </MDBCardSubTitle>
-                </MDBCardBody>
+                {
+                  Object.keys(location).length === 0 ?
+                    <MDBRow className='m-4'>
+                      <MDBCardTitle className='text-uppercase py-2'>Loading</MDBCardTitle>
+                      <MDBContainer>
+                        <MDBSpinner className='mx-2' color='info'>
+                          <span className='visually-hidden'>Loading...</span>
+                        </MDBSpinner>
+                      </MDBContainer>
+                    </MDBRow>
+                    :
+                    <MDBCardBody className='text-left'>
+                      <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
+                      <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
+                      <MDBCardText className='text-muted pt-2'>
+                        LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
+                      </MDBCardText>
+                      <MDBCardSubTitle>
+                        {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
+                      </MDBCardSubTitle>
+                    </MDBCardBody>
+                }
               </MDBCard>
             </MDBRow>
             {
