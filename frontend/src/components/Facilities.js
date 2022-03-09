@@ -107,7 +107,7 @@ const Facilities = () => {
 
   const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
-    console.log(e.target)
+    console.log(e.target.getAttribute('value'))
   }
 
   return (
