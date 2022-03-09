@@ -127,7 +127,7 @@ const Facilities = () => {
   }
   // END DIRECTIONS
 
-  const handleCardClick = (e, response) => {
+  const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
     const value = e.target.getAttribute('value');
     const coordinates = value.split(',');
