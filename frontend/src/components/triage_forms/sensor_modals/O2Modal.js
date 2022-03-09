@@ -14,20 +14,18 @@ import {
 } from 'mdb-react-ui-kit';
 import axios from 'axios'
 
-const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, setFormData }) => {
-  const fetchPulseData = async () => {
+const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) => {
+  const fetchO2Data = async () => {
     try {
-      console.log("Fetching pulse...");
+      console.log("Fetching o2...");
       setMeasure("loading");
-      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/pulse`);
+      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/o2`);
       if (response.status == 200) {
         console.log(response.data[0]);
 
-        const pulse_rate_data = response.data[0]["pulse_rate"];
-        const systolic_bp_data = response.data[0]["systolic_bp"];
-        const diastolic_bp_data = response.data[0]["diastolic_bp"];
+        const o2_saturation_data = response.data[0]["o2_saturation"];
 
-        setFormData({ ...formData, pulse_rate: pulse_rate_data, systolic_bp: systolic_bp_data, diastolic_bp: diastolic_bp_data });
+        setFormData({ ...formData, o2_saturation: o2_saturation_data });
         setMeasure("done");
       }
     } catch (error) {
@@ -40,16 +38,16 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
 
   return (
     <React.Fragment>
-      <MDBModal staticBackdrop scrollable='true' show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
+      <MDBModal staticBackdrop scrollable='true' show={o2Modal} setShow={setO2Modal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Pulse and Blood Pressure Sensor</MDBModalTitle>
-              <MDBBtn className='btn-close' color='none' onClick={togglePulseModal}></MDBBtn>
+              <MDBModalTitle>Oxygen Saturation Sensor</MDBModalTitle>
+              <MDBBtn className='btn-close' color='none' onClick={toggleO2Modal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
               <div>
-                <p>Please follow these steps to measure your pulse and blood pressure.</p>
+                <p>Please follow these steps to measure your oxygen saturation.</p>
                 <ol>
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                   <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
@@ -59,12 +57,12 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
               <div className='d-flex align-items-center justify-content-center'>
                 {
                   measure === "to_measure" ?
-                    <MDBBtn onClick={() => { fetchPulseData() }}>
+                    <MDBBtn onClick={() => { fetchO2Data() }}>
                       Start Measurement
                     </MDBBtn>
                     : measure === "loading" ?
                       <div>
-                        <MDBSpinner className='mx-2' color='danger'>
+                        <MDBSpinner className='mx-2' color='success'>
                           <span className='visually-hidden'>Loading...</span>
                         </MDBSpinner>
                         <br />
@@ -74,17 +72,17 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                       </div>
                       : measure === "done" ?
                         <div>
-                          <MDBBtn onClick={() => { fetchPulseData() }} className='mx-2'>
+                          <MDBBtn onClick={() => { fetchO2Data() }} className='mx-2'>
                             Measure Again?
                           </MDBBtn>
-                          <MDBBtn color='success' onClick={togglePulseModal} className='mx-2'>
+                          <MDBBtn color='success' onClick={toggleO2Modal} className='mx-2'>
                             Save
                           </MDBBtn>
                         </div>
                         : <div style={{ textAlign: "center" }}>
                           <h6>There was an error.</h6>
                           <i>Please try again. If the issue persists, please reach the technician.</i>
-                          <MDBBtn onClick={() => { fetchPulseData() }} className='mx-2'>
+                          <MDBBtn onClick={() => { fetchO2Data() }} className='mx-2'>
                             Try Again
                           </MDBBtn>
                         </div>
@@ -98,4 +96,4 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
   );
 }
 
-export default PulseModal
+export default O2Modal

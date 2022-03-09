@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MDBInput, MDBBtn, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import TemperatureModal from './sensor_modals/TemperatureModal';
 import PulseModal from './sensor_modals/PulseModal';
+import O2Modal from './sensor_modals/O2Modal';
 
 const SensorData = ({ formData, setFormData }) => {
 
@@ -10,6 +11,9 @@ const SensorData = ({ formData, setFormData }) => {
 
   const [pulseModal, setPulseModal] = useState(false);
   const togglePulseModal = () => setPulseModal(!pulseModal);
+
+  const [o2Modal, setO2Modal] = useState(false);
+  const toggleO2Modal = () => setO2Modal(!o2Modal);
 
   console.log(formData)
 
@@ -65,7 +69,7 @@ const SensorData = ({ formData, setFormData }) => {
               <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
-              <MDBBtn color={formData.o2_saturation === "" ? 'dark' : 'success'} className='sensor-btn' onClick={togglePulseModal}>
+              <MDBBtn color={formData.o2_saturation === "" ? 'dark' : 'success'} className='sensor-btn' onClick={toggleO2Modal}>
                 <h4><MDBIcon fas icon="wind" />
                   {formData.o2_saturation == "" ? <span> NA</span> : <span> {formData.o2_saturation}</span>}
                 </h4>
@@ -73,7 +77,7 @@ const SensorData = ({ formData, setFormData }) => {
                 <br />
                 <b>O2 Saturation</b>
               </MDBBtn>
-              <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
+              <O2Modal o2Modal={o2Modal} formData={formData} setFormData={setFormData} setO2Modal={setO2Modal} toggleO2Modal={toggleO2Modal} />
             </MDBCol>
           </MDBRow>
         </div>
