@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner } from 'mdb-react-ui-kit';
 import axios from 'axios';
-import { GoogleMap, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import './styles.css';
 
 const googleMapsLibraries = ["places"]
@@ -105,7 +105,12 @@ const Facilities = () => {
     }
   }, [location]);
 
-  const [targetLocation, setTargetLocation] = useState({})
+  const [targetLocation, setTargetLocation] = useState({});
+
+  const [direction, setDirection] = useState({
+    directions: null,
+    bounds: null
+  });
 
   const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
@@ -122,7 +127,8 @@ const Facilities = () => {
 
   useEffect(() => {
     console.log(targetLocation);
-  }, [targetLocation]);
+    console.log(direction);
+  }, [targetLocation, direction]);
 
   return (
     <React.Fragment>
