@@ -17,7 +17,7 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
         </MDBRow>
         <MDBRow className='mb-2'>
           <MDBCol className='col-2'>
-            <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' icon="calendar-day" />
+            <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' min='0' icon="calendar-day" />
           </MDBCol>
           <MDBCol className='col-2'>
             <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label="Sex" value={formData.sex}>
