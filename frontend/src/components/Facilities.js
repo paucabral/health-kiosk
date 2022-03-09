@@ -228,12 +228,8 @@ const Facilities = () => {
                   center={location}
                   zoom={13}
                 >
-                  { /* Child components, such as markers, info windows, etc. */}
                   <>
                     <Marker position={location}>
-                      {/* <InfoWindow options={{ maxWidth: 200 }}>
-                        <h6 className='text-uppercase'>current location</h6>
-                      </InfoWindow> */}
                     </Marker>
                     <DirectionsService
                       options={{
