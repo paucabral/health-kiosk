@@ -184,11 +184,8 @@ const Facilities = () => {
                   {nearestHospitals?.map((item) => (
                     <MDBCard style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                       <MDBRow>
-                        <MDBCol className='col-2'>
-                          <img src={item.icon} width={15} />
-                        </MDBCol>
                         <MDBCol className='text-left'>
-                          <MDBRow className='font-weight-bold'>
+                          <MDBRow className='font-weight-bold text-uppercase'>
                             {item.name}
                           </MDBRow>
                           <MDBRow>
@@ -204,8 +201,6 @@ const Facilities = () => {
                       </MDBRow>
                       {/* {item.business_status}: {item.opening_hours} <br /> */}
                       {/* {item.formatted_phone_number} */}
-
-
                     </MDBCard>
                   ))}
                 </MDBRow>
@@ -229,8 +224,13 @@ const Facilities = () => {
                   zoom={13}
                 >
                   <>
-                    <Marker position={location}>
-                    </Marker>
+                    {
+                      direction.response ?
+                        <></>
+                        :
+                        <Marker position={location}>
+                        </Marker>
+                    }
                     <DirectionsService
                       options={{
                         destination: targetLocation,
