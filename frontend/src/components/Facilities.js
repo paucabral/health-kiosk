@@ -109,14 +109,31 @@ const Facilities = () => {
 
   // DIRECTIONS
   const [direction, setDirection] = useState({
+    response: null,
     travelMode: 'DRIVING',
     origin: '',
     destination: ''
   });
+
+  const directionsCallback = (response) => {
+    if (response !== null) {
+      if (response.status === 'OK') {
+        console.log(response)
+        setDirection({ ...direction, response: response })
+      } else {
+        console.log('response: ', response)
+      }
+    }
+  }
   // END DIRECTIONS
 
   const handleCardClick = (e) => {
-    e.target.classList.toggle('card-click');
+    e.preventDefault();
+    const active = document.querySelector('.active');
+    if (active) {
+      active.classList.remove('active');
+    }
+    e.target.classList.toggle('active');
     const value = e.target.getAttribute('value');
     const coordinates = value.split(',');
     const target_lat = Number(coordinates[0]);
@@ -126,12 +143,13 @@ const Facilities = () => {
       lng: target_lng
     };
     setTargetLocation(target_location);
-    setDirection({ ...direction, origin: location, destination: targetLocation })
+    setDirection({ ...direction, origin: location, destination: targetLocation });
+    console.log(direction);
   }
 
   useEffect(() => {
-    console.log(targetLocation);
-    console.log(direction);
+    // console.log(targetLocation);
+    // console.log(direction);
   }, [targetLocation, direction]);
 
   return (
@@ -169,13 +187,10 @@ const Facilities = () => {
               nearestHospitals.length != 0 ?
                 <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
-                      <MDBRow>
-                        <MDBCol className='col-2'>
-                          <img src={item.icon} width={15} />
-                        </MDBCol>
+                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                      <MDBRow style={{ pointerEvents: 'none' }}>
                         <MDBCol className='text-left'>
-                          <MDBRow className='font-weight-bold'>
+                          <MDBRow className='font-weight-bold text-uppercase'>
                             {item.name}
                           </MDBRow>
                           <MDBRow>
@@ -191,8 +206,6 @@ const Facilities = () => {
                       </MDBRow>
                       {/* {item.business_status}: {item.opening_hours} <br /> */}
                       {/* {item.formatted_phone_number} */}
-
-
                     </MDBCard>
                   ))}
                 </MDBRow>
@@ -215,13 +228,27 @@ const Facilities = () => {
                   center={location}
                   zoom={13}
                 >
-                  { /* Child components, such as markers, info windows, etc. */}
                   <>
-                    <Marker position={location}>
-                      {/* <InfoWindow options={{ maxWidth: 200 }}>
-                        <h6 className='text-uppercase'>current location</h6>
-                      </InfoWindow> */}
-                    </Marker>
+                    {
+                      direction.response ?
+                        <></>
+                        :
+                        <Marker position={location}>
+                        </Marker>
+                    }
+                    <DirectionsService
+                      options={{
+                        destination: targetLocation,
+                        origin: location,
+                        travelMode: 'DRIVING'
+                      }}
+                      callback={directionsCallback}
+                    />
+                    <DirectionsRenderer options={{
+                      directions: direction.response
+                    }}
+                      callback={handleCardClick}
+                    />
                   </>
                 </GoogleMap>
                   : !isLoaded && !loadError ? <></> : <>Failed to load maps.</>
