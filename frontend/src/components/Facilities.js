@@ -109,13 +109,25 @@ const Facilities = () => {
 
   // DIRECTIONS
   const [direction, setDirection] = useState({
+    response: null,
     travelMode: 'DRIVING',
     origin: '',
     destination: ''
   });
+
+  const directionsCallback = (response) => {
+    if (response !== null) {
+      if (response.status === 'OK') {
+        console.log(response)
+        setDirection(...direction, response = response)
+      } else {
+        console.log('response: ', response)
+      }
+    }
+  }
   // END DIRECTIONS
 
-  const handleCardClick = (e) => {
+  const handleCardClick = (e, response) => {
     e.target.classList.toggle('card-click');
     const value = e.target.getAttribute('value');
     const coordinates = value.split(',');
@@ -126,12 +138,13 @@ const Facilities = () => {
       lng: target_lng
     };
     setTargetLocation(target_location);
-    setDirection({ ...direction, origin: location, destination: targetLocation })
+    setDirection({ ...direction, origin: location, destination: targetLocation });
+    console.log(direction);
   }
 
   useEffect(() => {
-    console.log(targetLocation);
-    console.log(direction);
+    // console.log(targetLocation);
+    // console.log(direction);
   }, [targetLocation, direction]);
 
   return (
@@ -222,6 +235,19 @@ const Facilities = () => {
                         <h6 className='text-uppercase'>current location</h6>
                       </InfoWindow> */}
                     </Marker>
+                    <DirectionsService
+                      options={{
+                        destination: targetLocation,
+                        origin: location,
+                        travelMode: 'DRIVING'
+                      }}
+                      callback={directionsCallback}
+                    />
+                    <DirectionsRenderer options={{
+                      directions: direction.response
+                    }}
+                      callback={directionsCallback}
+                    />
                   </>
                 </GoogleMap>
                   : !isLoaded && !loadError ? <></> : <>Failed to load maps.</>
