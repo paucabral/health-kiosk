@@ -107,10 +107,13 @@ const Facilities = () => {
 
   const [targetLocation, setTargetLocation] = useState({});
 
+  // DIRECTIONS
   const [direction, setDirection] = useState({
-    directions: null,
-    bounds: null
+    travelMode: 'DRIVING',
+    origin: '',
+    destination: ''
   });
+  // END DIRECTIONS
 
   const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
@@ -123,6 +126,7 @@ const Facilities = () => {
       lng: target_lng
     };
     setTargetLocation(target_location);
+    setDirection({ ...direction, origin: location, destination: targetLocation })
   }
 
   useEffect(() => {
