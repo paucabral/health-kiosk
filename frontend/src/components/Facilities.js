@@ -128,7 +128,12 @@ const Facilities = () => {
   // END DIRECTIONS
 
   const handleCardClick = (e) => {
-    e.target.classList.toggle('card-click');
+    e.preventDefault();
+    const active = document.querySelector('.active');
+    if (active) {
+      active.classList.remove('active');
+    }
+    e.target.classList.toggle('active');
     const value = e.target.getAttribute('value');
     const coordinates = value.split(',');
     const target_lat = Number(coordinates[0]);
@@ -182,8 +187,8 @@ const Facilities = () => {
               nearestHospitals.length != 0 ?
                 <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
-                      <MDBRow>
+                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                      <MDBRow style={{ pointerEvents: 'none' }}>
                         <MDBCol className='text-left'>
                           <MDBRow className='font-weight-bold text-uppercase'>
                             {item.name}
