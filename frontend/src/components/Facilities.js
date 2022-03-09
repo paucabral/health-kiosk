@@ -119,7 +119,7 @@ const Facilities = () => {
     if (response !== null) {
       if (response.status === 'OK') {
         console.log(response)
-        setDirection(...direction, response = response)
+        setDirection({ ...direction, response: response })
       } else {
         console.log('response: ', response)
       }
@@ -246,7 +246,7 @@ const Facilities = () => {
                     <DirectionsRenderer options={{
                       directions: direction.response
                     }}
-                      callback={directionsCallback}
+                      callback={handleCardClick}
                     />
                   </>
                 </GoogleMap>
