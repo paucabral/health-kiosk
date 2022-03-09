@@ -145,7 +145,7 @@ const Facilities = () => {
               nearestHospitals.length != 0 ?
                 <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick}>
+                    <MDBCard style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                       <MDBRow>
                         <MDBCol className='col-2'>
                           <img src={item.icon} width={15} />
