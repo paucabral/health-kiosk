@@ -110,7 +110,6 @@ const Facilities = () => {
   const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
     const value = e.target.getAttribute('value');
-    console.log(value);
     const coordinates = value.split(',');
     const target_lat = Number(coordinates[0]);
     const target_lng = Number(coordinates[1]);
@@ -119,8 +118,11 @@ const Facilities = () => {
       lng: target_lng
     };
     setTargetLocation(target_location);
-    console.log(targetLocation);
   }
+
+  useEffect(() => {
+    console.log(targetLocation);
+  }, [targetLocation]);
 
   return (
     <React.Fragment>
