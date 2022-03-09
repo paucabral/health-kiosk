@@ -105,9 +105,21 @@ const Facilities = () => {
     }
   }, [location]);
 
+  const [targetLocation, setTargetLocation] = useState({})
+
   const handleCardClick = (e) => {
     e.target.classList.toggle('card-click');
-    console.log(e.target.getAttribute('value'))
+    const value = e.target.getAttribute('value');
+    console.log(value);
+    const coordinates = value.split(',');
+    const target_lat = Number(coordinates[0]);
+    const target_lng = Number(coordinates[1]);
+    const target_location = {
+      lat: target_lat,
+      lng: target_lng
+    };
+    setTargetLocation(target_location);
+    console.log(targetLocation);
   }
 
   return (
