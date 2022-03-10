@@ -147,6 +147,15 @@ const Facilities = () => {
     console.log(direction);
   }
 
+  const handleBtnClick = (e) => {
+    e.preventDefault();
+    const active = document.querySelector('.btn-success');
+    if (active) {
+      active.classList.remove('btn-success');
+    }
+    e.target.classList.toggle('btn-success');
+  }
+
   useEffect(() => {
     // console.log(targetLocation);
     // console.log(direction);
@@ -182,10 +191,10 @@ const Facilities = () => {
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap' }}>
-                          <MDBBtn><MDBIcon fas icon="walking" onClick={() => { setTravelMode('WALKING') }} /></MDBBtn>&nbsp;
-                          <MDBBtn><MDBIcon fas icon="biking" onClick={() => { setTravelMode('BICYCLING') }} /></MDBBtn>&nbsp;
-                          <MDBBtn><MDBIcon fas icon="car-side" onClick={() => { setTravelMode('DRIVING') }} /></MDBBtn>&nbsp;
-                          <MDBBtn><MDBIcon fas icon="train" onClick={() => { setTravelMode('TRANSIT') }} /></MDBBtn>
+                          <MDBBtn className='btn-success' onClick={(e) => { setTravelMode('WALKING'); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn onClick={(e) => { setTravelMode('BICYCLING'); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn onClick={(e) => { setTravelMode('DRIVING'); handleBtnClick(e); }}><MDBIcon fas icon="car-side" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn onClick={(e) => { setTravelMode('TRANSIT'); handleBtnClick(e); }}><MDBIcon fas icon="train" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
