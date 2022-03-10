@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import './styles.css';
@@ -154,7 +154,7 @@ const Facilities = () => {
 
   return (
     <React.Fragment>
-      <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2em' }}>
+      <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
@@ -172,20 +172,28 @@ const Facilities = () => {
                     :
                     <MDBCardBody className='text-left'>
                       <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
-                      <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
-                      <MDBCardText className='text-muted pt-2'>
+                      <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
+                      <MDBCardText className='text-muted'>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
                       </MDBCardText>
                       <MDBCardSubTitle>
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
+                      <MDBRow style={{ marginTop: '1em' }}>
+                        <MDBCol style={{ display: 'flex', flexFlow: 'wrap' }}>
+                          <MDBBtn><MDBIcon fas icon="walking" /></MDBBtn>&nbsp;
+                          <MDBBtn><MDBIcon fas icon="biking" /></MDBBtn>&nbsp;
+                          <MDBBtn><MDBIcon fas icon="car-side" /></MDBBtn>&nbsp;
+                          <MDBBtn><MDBIcon fas icon="train" /></MDBBtn>
+                        </MDBCol>
+                      </MDBRow>
                     </MDBCardBody>
                 }
               </MDBCard>
             </MDBRow>
             {
               nearestHospitals.length != 0 ?
-                <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
+                <MDBRow style={{ height: '42vh', overflow: 'scroll', marginTop: '1em' }}>
                   {nearestHospitals?.map((item) => (
                     <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                       <MDBRow style={{ pointerEvents: 'none' }}>
