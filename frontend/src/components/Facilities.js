@@ -16,9 +16,7 @@ const options = {
 
 const Facilities = () => {
   const [status, setStatus] = useState("SUCCESS");
-
   const [location, setLocation] = useState({});
-
   const dataLoaded = useRef(false);
 
   const fetchLocation = async () => {
@@ -111,7 +109,6 @@ const Facilities = () => {
 
   const [targetLocation, setTargetLocation] = useState({});
 
-  // DIRECTIONS
   const [direction, setDirection] = useState({
     response: null,
     travelMode: 'DRIVING',
@@ -129,7 +126,6 @@ const Facilities = () => {
       }
     }
   }
-  // END DIRECTIONS
 
   const handleCardClick = (e) => {
     e.preventDefault();
