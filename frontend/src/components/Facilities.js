@@ -11,7 +11,7 @@ const mapContainerStyle = {
   height: "85vh"
 }
 const options = {
-  styles: mapStyles
+  // styles: mapStyles
 }
 
 const Facilities = () => {
