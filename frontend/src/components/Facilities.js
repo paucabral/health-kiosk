@@ -150,7 +150,8 @@ const Facilities = () => {
   useEffect(() => {
     // console.log(targetLocation);
     // console.log(direction);
-  }, [targetLocation, direction]);
+    // console.log(travelMode);
+  }, [targetLocation, direction, travelMode]);
 
   return (
     <React.Fragment>
@@ -181,10 +182,10 @@ const Facilities = () => {
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap' }}>
-                          <MDBBtn><MDBIcon fas icon="walking" /></MDBBtn>&nbsp;
-                          <MDBBtn><MDBIcon fas icon="biking" /></MDBBtn>&nbsp;
-                          <MDBBtn><MDBIcon fas icon="car-side" /></MDBBtn>&nbsp;
-                          <MDBBtn><MDBIcon fas icon="train" /></MDBBtn>
+                          <MDBBtn><MDBIcon fas icon="walking" onClick={() => { setTravelMode('WALKING') }} /></MDBBtn>&nbsp;
+                          <MDBBtn><MDBIcon fas icon="biking" onClick={() => { setTravelMode('BICYCLING') }} /></MDBBtn>&nbsp;
+                          <MDBBtn><MDBIcon fas icon="car-side" onClick={() => { setTravelMode('DRIVING') }} /></MDBBtn>&nbsp;
+                          <MDBBtn><MDBIcon fas icon="train" onClick={() => { setTravelMode('TRANSIT') }} /></MDBBtn>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
