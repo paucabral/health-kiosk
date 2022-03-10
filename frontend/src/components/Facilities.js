@@ -179,16 +179,17 @@ const Facilities = () => {
                       </MDBContainer>
                     </MDBRow>
                     :
-                    <MDBCardBody className='text-left'>
+                    <MDBCardBody className='text-left py-4 px-2'>
                       <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                       <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
-                      <MDBCardText className='text-muted'>
+                      <MDBCardText className='text-muted' style={{ fontSize: '0.75em' }}>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
                       </MDBCardText>
                       <MDBCardSubTitle>
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
+                        <p><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</p>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
                           <MDBBtn className='btn-success travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
                           <MDBBtn className='travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
