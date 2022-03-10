@@ -8,3 +8,8 @@
   background-color: #1E88E5;
   color: white;
 }
+
+.travelMode-btn {
+  flex-grow: 1;
+  flex: 0.25;
+}

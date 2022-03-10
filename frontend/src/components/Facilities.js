@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import './styles.css';
+import mapStyles from './mapStyles';
 
 const googleMapsLibraries = ["places"]
 const mapContainerStyle = {
   width: "100%",
   height: "85vh"
 }
+const options = {
+  // styles: mapStyles
+}
 
 const Facilities = () => {
   const [status, setStatus] = useState("SUCCESS");
-
   const [location, setLocation] = useState({});
-
   const dataLoaded = useRef(false);
 
   const fetchLocation = async () => {
@@ -106,11 +108,9 @@ const Facilities = () => {
   }, [location]);
 
   const [targetLocation, setTargetLocation] = useState({});
-
-  // DIRECTIONS
   const [direction, setDirection] = useState({
     response: null,
-    travelMode: 'DRIVING',
+    travelMode: 'WALKING',
     origin: '',
     destination: ''
   });
@@ -125,15 +125,16 @@ const Facilities = () => {
       }
     }
   }
-  // END DIRECTIONS
 
   const handleCardClick = (e) => {
     e.preventDefault();
-    const active = document.querySelector('.active');
+    const active = document.querySelector('.btn-info');
     if (active) {
-      active.classList.remove('active');
+      active.classList.remove('btn-info');
+      active.classList.add('btn-light');
     }
-    e.target.classList.toggle('active');
+    e.target.classList.remove('btn-light');
+    e.target.classList.toggle('btn-info');
     const value = e.target.getAttribute('value');
     const coordinates = value.split(',');
     const target_lat = Number(coordinates[0]);
@@ -147,14 +148,24 @@ const Facilities = () => {
     console.log(direction);
   }
 
+  const handleBtnClick = (e) => {
+    e.preventDefault();
+    const active = document.querySelector('.btn-success');
+    if (active) {
+      active.classList.remove('btn-success');
+    }
+    e.target.classList.toggle('btn-success');
+  }
+
   useEffect(() => {
     // console.log(targetLocation);
     // console.log(direction);
+    // console.log(travelMode);
   }, [targetLocation, direction]);
 
   return (
     <React.Fragment>
-      <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2em' }}>
+      <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
@@ -170,24 +181,33 @@ const Facilities = () => {
                       </MDBContainer>
                     </MDBRow>
                     :
-                    <MDBCardBody className='text-left'>
-                      <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
-                      <MDBCardTitle className='text-uppercase py-2'>{reverseGeocode['street']}</MDBCardTitle>
-                      <MDBCardText className='text-muted pt-2'>
+                    <MDBCardBody className='text-left py-4 px-2'>
+                      <MDBCardHeader className='px-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
+                      <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
+                      <MDBCardText className='text-muted' style={{ fontSize: '0.75em' }}>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
                       </MDBCardText>
                       <MDBCardSubTitle>
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
+                      <MDBRow style={{ marginTop: '1em' }}>
+                        <p><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</p>
+                        <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
+                          <MDBBtn className='btn-success travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn className='travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn className='travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'DRIVING' }); handleBtnClick(e); }}><MDBIcon fas icon="car-side" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn className='travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'TRANSIT' }); handleBtnClick(e); }}><MDBIcon fas icon="train" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>
+                        </MDBCol>
+                      </MDBRow>
                     </MDBCardBody>
                 }
               </MDBCard>
             </MDBRow>
             {
               nearestHospitals.length != 0 ?
-                <MDBRow style={{ height: '45vh', overflow: 'scroll', marginTop: '1em' }}>
+                <MDBRow style={{ height: '33vh', overflowY: 'scroll', marginTop: '0.5em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '0.5em', marginTop: '0.5em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                       <MDBRow style={{ pointerEvents: 'none' }}>
                         <MDBCol className='text-left'>
                           <MDBRow className='font-weight-bold text-uppercase'>
@@ -199,7 +219,7 @@ const Facilities = () => {
                           <MDBRow>
                             {item.vicinity}
                           </MDBRow>
-                          <MDBRow className='text-muted' style={{ fontSize: '0.8em' }}>
+                          <MDBRow style={{ fontSize: '0.8em' }}>
                             LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
                           </MDBRow>
                         </MDBCol>
@@ -226,6 +246,7 @@ const Facilities = () => {
                 isLoaded ? <GoogleMap
                   mapContainerStyle={mapContainerStyle}
                   center={location}
+                  options={options}
                   zoom={13}
                 >
                   <>
@@ -240,7 +261,7 @@ const Facilities = () => {
                       options={{
                         destination: targetLocation,
                         origin: location,
-                        travelMode: 'DRIVING'
+                        travelMode: direction.travelMode
                       }}
                       callback={directionsCallback}
                     />
