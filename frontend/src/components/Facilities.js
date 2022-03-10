@@ -180,7 +180,7 @@ const Facilities = () => {
                     </MDBRow>
                     :
                     <MDBCardBody className='text-left py-4 px-2'>
-                      <MDBCardHeader className='p-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
+                      <MDBCardHeader className='px-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                       <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
                       <MDBCardText className='text-muted' style={{ fontSize: '0.75em' }}>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
@@ -203,9 +203,9 @@ const Facilities = () => {
             </MDBRow>
             {
               nearestHospitals.length != 0 ?
-                <MDBRow style={{ height: '42vh', overflowY: 'scroll', marginTop: '1em' }}>
+                <MDBRow style={{ height: '33vh', overflowY: 'scroll', marginTop: '0.5em' }}>
                   {nearestHospitals?.map((item) => (
-                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '1em', marginTop: '1em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '0.5em', marginTop: '0.5em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                       <MDBRow style={{ pointerEvents: 'none' }}>
                         <MDBCol className='text-left'>
                           <MDBRow className='font-weight-bold text-uppercase'>
