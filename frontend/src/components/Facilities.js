@@ -108,10 +108,10 @@ const Facilities = () => {
   }, [location]);
 
   const [targetLocation, setTargetLocation] = useState({});
-
+  const [travelMode, setTravelMode] = useState('WALKING');
   const [direction, setDirection] = useState({
     response: null,
-    travelMode: 'DRIVING',
+    travelMode: travelMode,
     origin: '',
     destination: ''
   });
