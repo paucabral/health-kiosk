@@ -128,11 +128,13 @@ const Facilities = () => {
 
   const handleCardClick = (e) => {
     e.preventDefault();
-    const active = document.querySelector('.active');
+    const active = document.querySelector('.btn-info');
     if (active) {
-      active.classList.remove('active');
+      active.classList.remove('btn-info');
+      active.classList.add('btn-light');
     }
-    e.target.classList.toggle('active');
+    e.target.classList.remove('btn-light');
+    e.target.classList.toggle('btn-info');
     const value = e.target.getAttribute('value');
     const coordinates = value.split(',');
     const target_lat = Number(coordinates[0]);
@@ -217,7 +219,7 @@ const Facilities = () => {
                           <MDBRow>
                             {item.vicinity}
                           </MDBRow>
-                          <MDBRow className='text-muted' style={{ fontSize: '0.8em' }}>
+                          <MDBRow style={{ fontSize: '0.8em' }}>
                             LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
                           </MDBRow>
                         </MDBCol>
