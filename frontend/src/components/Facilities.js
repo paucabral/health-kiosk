@@ -3,11 +3,15 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBC
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import './styles.css';
+import mapStyles from './mapStyles';
 
 const googleMapsLibraries = ["places"]
 const mapContainerStyle = {
   width: "100%",
   height: "85vh"
+}
+const options = {
+  styles: mapStyles
 }
 
 const Facilities = () => {
@@ -226,6 +230,7 @@ const Facilities = () => {
                 isLoaded ? <GoogleMap
                   mapContainerStyle={mapContainerStyle}
                   center={location}
+                  options={options}
                   zoom={13}
                 >
                   <>
