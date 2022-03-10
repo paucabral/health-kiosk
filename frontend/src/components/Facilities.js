@@ -108,10 +108,9 @@ const Facilities = () => {
   }, [location]);
 
   const [targetLocation, setTargetLocation] = useState({});
-  const [travelMode, setTravelMode] = useState('WALKING');
   const [direction, setDirection] = useState({
     response: null,
-    travelMode: travelMode,
+    travelMode: 'WALKING',
     origin: '',
     destination: ''
   });
@@ -160,7 +159,7 @@ const Facilities = () => {
     // console.log(targetLocation);
     // console.log(direction);
     // console.log(travelMode);
-  }, [targetLocation, direction, travelMode]);
+  }, [targetLocation, direction]);
 
   return (
     <React.Fragment>
@@ -191,10 +190,10 @@ const Facilities = () => {
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap' }}>
-                          <MDBBtn className='btn-success' onClick={(e) => { setTravelMode('WALKING'); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
-                          <MDBBtn onClick={(e) => { setTravelMode('BICYCLING'); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
-                          <MDBBtn onClick={(e) => { setTravelMode('DRIVING'); handleBtnClick(e); }}><MDBIcon fas icon="car-side" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
-                          <MDBBtn onClick={(e) => { setTravelMode('TRANSIT'); handleBtnClick(e); }}><MDBIcon fas icon="train" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>
+                          <MDBBtn className='btn-success' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn onClick={(e) => { setDirection({ ...direction, travelMode: 'DRIVING' }); handleBtnClick(e); }}><MDBIcon fas icon="car-side" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
+                          <MDBBtn onClick={(e) => { setDirection({ ...direction, travelMode: 'TRANSIT' }); handleBtnClick(e); }}><MDBIcon fas icon="train" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
@@ -259,7 +258,7 @@ const Facilities = () => {
                       options={{
                         destination: targetLocation,
                         origin: location,
-                        travelMode: 'DRIVING'
+                        travelMode: direction.travelMode
                       }}
                       callback={directionsCallback}
                     />
