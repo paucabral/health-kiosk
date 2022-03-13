@@ -29,6 +29,12 @@ float thermtemp;      //Following three variables are for calibration
 float thermmax;   
 float thermmin;
 
+const float alpha = 0.3; //Following variables are for Exponential Moving Average
+double tempAvg = 0.0;
+int i = 0;
+double cur_sample = 0.0;
+double cur_avg = 0.0;
+
 //***********BP variables*****************
 const byte numChars = 38;
 char receivedChars[numChars];
@@ -42,8 +48,6 @@ String rawPR;
 int dataSYS;
 int dataDIA;
 int dataPR;
-
-//String allBP[] = {dataSYS, dataDIA, dataPR};
 
 boolean newData = false;
 
@@ -88,7 +92,7 @@ void setup()
 
                            
   // ******* Assign variables for API ********
-  rest.variable("mlxobj",&mlxobj);
+  rest.variable("tempAvg",&tempAvg);
   rest.variable("spo2", &spo2);
   rest.variable("sys", &dataSYS);
   rest.variable("dia", &dataDIA);
@@ -115,7 +119,7 @@ void loop()
       spo2comp = spo2;
       spo2aux = spo2comp;
       
-      if (spo2 == spo2comp){
+      if (spo2 == spo2comp && spo2 !=0){
         maxNoRead += 1;
         if (maxNoRead == 7){
           Serial.println("Re-init Max");
@@ -127,7 +131,10 @@ void loop()
 //      Serial.print(mlx.readObjectTempC()); 
 //      Serial.print("*C\t");
 //      Serial.println("");
-      mlxobj = mlx.readObjectTempC();
+//      mlxobj = mlx.readObjectTempC();
+        cur_sample = mlx.readObjectTempC();
+        cur_avg = (cur_sample*alpha) + ((tempAvg)*(1-alpha));
+        tempAvg = cur_avg;
   }
 
   //BP
@@ -199,7 +206,7 @@ void bpData() {
       Serial.print("dataPR: ");
       Serial.println(dataPR);
 
-      pox.begin()
+      pox.begin();
       newData = false;
     }
 }
