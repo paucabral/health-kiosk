@@ -93,7 +93,6 @@ void setup()
   rest.variable("sys", &dataSYS);
   rest.variable("dia", &dataDIA);
   rest.variable("pr", &dataPR);
-//  rest.variable("allBP", &allBP);
   
   rest.set_id("1");
   rest.set_name("vital_signs");
@@ -200,10 +199,7 @@ void bpData() {
       Serial.print("dataPR: ");
       Serial.println(dataPR);
 
-//      allBP[0] = dataSYS;
-//      allBP[1] = dataDIA;
-//      allBP[2] = dataPR;
-      
+      pox.begin()
       newData = false;
     }
 }
