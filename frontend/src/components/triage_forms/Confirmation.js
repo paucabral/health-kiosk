@@ -129,12 +129,18 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
           </div>
 
           <MDBContainer>
-            <MDBBtn onClick={() => { setPage(0) }} className='mx-2'>
-              Go Back
-            </MDBBtn>
-            <MDBBtn color='success' disabled={checkEntry()}>
-              Submit
-            </MDBBtn>
+            <MDBRow className='w-100'>
+              <MDBCol>
+                <MDBBtn onClick={() => { setPage(0) }} className='w-75' color='warning'>
+                  Go Back
+                </MDBBtn>
+              </MDBCol>
+              <MDBCol>
+                <MDBBtn color='success' disabled={checkEntry()} className='w-75'>
+                  Submit
+                </MDBBtn>
+              </MDBCol>
+            </MDBRow>
           </MDBContainer>
 
         </MDBCardBody>
