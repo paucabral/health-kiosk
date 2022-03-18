@@ -170,6 +170,7 @@ const Facilities = () => {
           <MDBCol md='4'>
             <MDBRow>
               <MDBCard>
+                <MDBCardHeader className='px-0 text-uppercase text-left'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                 {
                   Object.keys(location).length === 0 ?
                     <MDBRow className='m-4'>
@@ -182,7 +183,6 @@ const Facilities = () => {
                     </MDBRow>
                     :
                     <MDBCardBody className='text-left py-4 px-2'>
-                      <MDBCardHeader className='px-0 text-uppercase'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                       <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
                       <MDBCardText className='text-muted' style={{ fontSize: '0.75em' }}>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
