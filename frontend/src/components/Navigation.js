@@ -52,7 +52,7 @@ const Navigation = () => {
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>
           <MDBCollapse show={showNavColor} navbar>
-            <MDBNavbarNav className='ms-auto mb-2 mb-lg-0'>
+            <MDBNavbarNav right fullWidth={false}>
               <MDBNavbarItem className={isActiveHome ? "active" : null} onClick={() => handleToggle("home")}>
                 <MDBNavbarLink aria-current='page' href='#'>Home</MDBNavbarLink>
               </MDBNavbarItem>
