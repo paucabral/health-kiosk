@@ -10,12 +10,9 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
     <React.Fragment>
       <div style={{ height: '67vh' }}>
         <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
+        <p>Please ensure that all the information are correct before you proceed.</p>
         <MDBCardBody>
-          <MDBContainer className='mb-3'>
-            Please ensure that all the information are correct before you proceed.
-          </MDBContainer>
-
-          <div style={{ overflowY: 'auto', height: '40vh', marginTop: '1em', marginBottom: '1em' }}>
+          <div style={{ overflowY: 'auto', height: '40vh', marginTop: '0em', marginBottom: '1em' }}>
             <div className='container'>
               <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
                 <MDBRow>

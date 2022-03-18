@@ -20,8 +20,8 @@ const SensorData = ({ formData, setFormData }) => {
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Vital Signs</MDBCardTitle>
+      <p>Measure your vital signs by selecting the options below.</p>
       <MDBCardBody>
-        <p>Measure your vital signs by selecting the options below.</p>
         <div>
           <MDBRow className='w-100'>
             <MDBCol>
