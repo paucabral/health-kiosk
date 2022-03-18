@@ -47,6 +47,17 @@ const SensorData = ({ formData, setFormData }) => {
               <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
+              <MDBBtn color={formData.o2_saturation === "" ? 'dark' : 'success'} className='sensor-btn' onClick={toggleO2Modal}>
+                <h4><MDBIcon fas icon="wind" />
+                  {formData.o2_saturation == "" ? <span> NA</span> : <span> {formData.o2_saturation}</span>}
+                </h4>
+                <span>%</span>
+                <br />
+                <b>O2 Saturation</b>
+              </MDBBtn>
+              <O2Modal o2Modal={o2Modal} formData={formData} setFormData={setFormData} setO2Modal={setO2Modal} toggleO2Modal={toggleO2Modal} />
+            </MDBCol>
+            <MDBCol>
               <MDBBtn color={formData.systolic_bp === "" ? 'dark' : 'primary'} className='sensor-btn' onClick={togglePulseModal}>
                 <h4><MDBIcon fas icon="tint" />
                   {formData.systolic_bp == "" ? <span> NA</span> : <span> {formData.systolic_bp}</span>}
@@ -67,17 +78,6 @@ const SensorData = ({ formData, setFormData }) => {
                 <b>Diastolic BP</b>
               </MDBBtn>
               <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
-            </MDBCol>
-            <MDBCol>
-              <MDBBtn color={formData.o2_saturation === "" ? 'dark' : 'success'} className='sensor-btn' onClick={toggleO2Modal}>
-                <h4><MDBIcon fas icon="wind" />
-                  {formData.o2_saturation == "" ? <span> NA</span> : <span> {formData.o2_saturation}</span>}
-                </h4>
-                <span>%</span>
-                <br />
-                <b>O2 Saturation</b>
-              </MDBBtn>
-              <O2Modal o2Modal={o2Modal} formData={formData} setFormData={setFormData} setO2Modal={setO2Modal} toggleO2Modal={toggleO2Modal} />
             </MDBCol>
           </MDBRow>
         </div>
