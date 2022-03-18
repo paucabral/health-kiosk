@@ -42,7 +42,7 @@ const SensorData = ({ formData, setFormData }) => {
                 </h4>
                 <span>%</span>
                 <br />
-                <b>O2 Saturation</b>
+                <b>O<sub>2</sub> Saturation</b>
               </MDBBtn>
               <O2Modal o2Modal={o2Modal} formData={formData} setFormData={setFormData} setO2Modal={setO2Modal} toggleO2Modal={toggleO2Modal} />
             </MDBCol>

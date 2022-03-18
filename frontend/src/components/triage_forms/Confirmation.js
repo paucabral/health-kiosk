@@ -72,7 +72,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
             </MDBCol>
             <MDBCol>
               <MDBRow>
-                <strong><MDBIcon fas icon="wind" /> O2 Saturation:</strong>
+                <strong><MDBIcon fas icon="wind" /> O<sub>2</sub> Saturation:</strong>
               </MDBRow>
               <MDBRow>
                 <span> {formData.o2_saturation} %</span>
