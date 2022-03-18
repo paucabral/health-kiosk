@@ -15,7 +15,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
             Please ensure that all the information are correct before you proceed.
           </MDBContainer>
 
-          <div style={{ overflowX: 'scroll', height: '40vh', marginTop: '1em', marginBottom: '1em' }}>
+          <div style={{ overflowY: 'auto', height: '40vh', marginTop: '1em', marginBottom: '1em' }}>
             <div className='container'>
               <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
                 <MDBRow>
