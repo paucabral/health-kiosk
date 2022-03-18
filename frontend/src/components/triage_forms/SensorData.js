@@ -36,17 +36,6 @@ const SensorData = ({ formData, setFormData }) => {
               <TemperatureModal temperatureModal={temperatureModal} formData={formData} setFormData={setFormData} setTemperatureModal={setTemperatureModal} toggleTemperatureModal={toggleTemperatureModal} />
             </MDBCol>
             <MDBCol>
-              <MDBBtn color={formData.pulse_rate === "" ? 'dark' : 'danger'} className='sensor-btn' onClick={togglePulseModal}>
-                <h4><MDBIcon fas icon="heartbeat" />
-                  {formData.pulse_rate == "" ? <span> NA</span> : <span> {formData.pulse_rate}</span>}
-                </h4>
-                <span>bpm</span>
-                <br />
-                <b>Pulse Rate</b>
-              </MDBBtn>
-              <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
-            </MDBCol>
-            <MDBCol>
               <MDBBtn color={formData.o2_saturation === "" ? 'dark' : 'success'} className='sensor-btn' onClick={toggleO2Modal}>
                 <h4><MDBIcon fas icon="wind" />
                   {formData.o2_saturation == "" ? <span> NA</span> : <span> {formData.o2_saturation}</span>}
@@ -56,6 +45,17 @@ const SensorData = ({ formData, setFormData }) => {
                 <b>O2 Saturation</b>
               </MDBBtn>
               <O2Modal o2Modal={o2Modal} formData={formData} setFormData={setFormData} setO2Modal={setO2Modal} toggleO2Modal={toggleO2Modal} />
+            </MDBCol>
+            <MDBCol>
+              <MDBBtn color={formData.pulse_rate === "" ? 'dark' : 'danger'} className='sensor-btn' onClick={togglePulseModal}>
+                <h4><MDBIcon fas icon="heartbeat" />
+                  {formData.pulse_rate == "" ? <span> NA</span> : <span> {formData.pulse_rate}</span>}
+                </h4>
+                <span>bpm</span>
+                <br />
+                <b>Pulse Rate</b>
+              </MDBBtn>
+              <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
             <MDBCol>
               <MDBBtn color={formData.systolic_bp === "" ? 'dark' : 'primary'} className='sensor-btn' onClick={togglePulseModal}>
