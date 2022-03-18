@@ -22,7 +22,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>NAME:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.first_name && formData.last_name ? <span>{formData.first_name} {formData.last_name}</span> : <i color='gray'>*MISSING</i>}
+                        {formData.first_name && formData.last_name ? <span>{formData.first_name} {formData.last_name}</span> : <i className='text-muted'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -32,7 +32,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>SEX:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.sex ? <span>{formData.sex}</span> : <i color='gray'>*MISSING</i>}
+                        {formData.sex ? <span>{formData.sex}</span> : <i className='text-muted'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -44,7 +44,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>AGE:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.age ? <span>{formData.age}</span> : <i color='gray'>*MISSING</i>}
+                        {formData.age ? <span>{formData.age}</span> : <i className='text-muted'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -54,7 +54,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>CONTACT:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.contact_no ? <span>{formData.contact_no}</span> : <i color='gray'>*MISSING</i>}
+                        {formData.contact_no ? <span>{formData.contact_no}</span> : <i className='text-muted'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
