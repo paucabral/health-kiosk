@@ -10,9 +10,10 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
       <MDBCardBody>
-        <div className='mb-4'>
+        <MDBContainer className='mb-4'>
           Please ensure all the information are correct before you proceed.
-        </div>
+        </MDBContainer>
+
         <MDBContainer>
           <MDBRow className='mb-4' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
             <MDBRow>
@@ -62,30 +63,57 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
           </MDBRow>
           <MDBRow className='mb-4' style={{ textAlign: "center" }}>
             <MDBCol>
-              <span><strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature:</strong> {formData.temperature} °C</span>
+              <MDBRow>
+                <strong><MDBIcon fas icon="thermometer-quarter" /> Temperature:</strong>
+              </MDBRow>
+              <MDBRow>
+                <span>{formData.temperature} °C</span>
+              </MDBRow>
             </MDBCol>
             <MDBCol>
-              <span><strong><MDBIcon fas icon="wind" /> O2 Saturation:</strong> {formData.o2_saturation} %</span>
+              <MDBRow>
+                <strong><MDBIcon fas icon="wind" /> O2 Saturation:</strong>
+              </MDBRow>
+              <MDBRow>
+                <span> {formData.o2_saturation} %</span>
+              </MDBRow>
             </MDBCol>
             <MDBCol>
-              <span><strong><MDBIcon fas icon="heartbeat" /> Pulse Rate:</strong> {formData.pulse_rate} bpm</span>
+              <MDBRow>
+                <strong><MDBIcon fas icon="heartbeat" /> Pulse Rate:</strong>
+              </MDBRow>
+              <MDBRow>
+                <span>{formData.pulse_rate} bpm</span>
+              </MDBRow>
             </MDBCol>
             <MDBCol>
-              <span><strong><MDBIcon fas icon="tint" /> Systolic BP:</strong> {formData.systolic_bp} mmHg</span>
+              <MDBRow>
+                <strong><MDBIcon fas icon="tint" /> Systolic BP:</strong>
+              </MDBRow>
+              <MDBRow>
+                <span>{formData.systolic_bp} mmHg</span>
+              </MDBRow>
             </MDBCol>
             <MDBCol>
-              <span><strong><MDBIcon fas icon="tint" /> Diastolic BP:</strong> {formData.diastolic_bp} mmHg</span>
+              <MDBRow>
+                <strong><MDBIcon fas icon="tint" />Diastolic BP:</strong>
+              </MDBRow>
+              <MDBRow>
+                <span>{formData.diastolic_bp} mmHg</span>
+              </MDBRow>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
-        <div>
+
+        <MDBContainer>
           <MDBBtn onClick={() => { setPage(0) }} className='mx-2'>
             Go Back
           </MDBBtn>
           <MDBBtn color='success' disabled={checkEntry()}>
             Submit
           </MDBBtn>
-        </div>
+        </MDBContainer>
+
       </MDBCardBody>
     </React.Fragment>
   )
