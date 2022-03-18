@@ -8,7 +8,7 @@ import {
   MDBNavbarLink,
   MDBNavbarToggler,
   MDBNavbarBrand,
-  MDBCollapse
+  MDBCollapse,
 } from 'mdb-react-ui-kit';
 import './styles.css';
 
@@ -40,7 +40,7 @@ const Navigation = () => {
     <React.Fragment>
       <MDBNavbar expand='lg' dark bgColor='dark' scrolling fixed="top" >
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>Health Kiosk</MDBNavbarBrand>
+          <MDBNavbarBrand href='#'>HEALTH KIOSK</MDBNavbarBrand>
           <MDBNavbarToggler
             type='button'
             data-target='#navbarColor02'
@@ -54,13 +54,13 @@ const Navigation = () => {
           <MDBCollapse show={showNavColor} navbar>
             <MDBNavbarNav right fullWidth={false}>
               <MDBNavbarItem className={isActiveHome ? "active" : null} onClick={() => handleToggle("home")}>
-                <MDBNavbarLink aria-current='page' href='#'>Home</MDBNavbarLink>
+                <MDBNavbarLink aria-current='page' href='#'><MDBIcon fas icon="home" /> Home</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem className={isActiveFeatures ? "active" : null} onClick={() => handleToggle("features")}>
-                <MDBNavbarLink href='#'>Features</MDBNavbarLink>
+                <MDBNavbarLink href='#'><MDBIcon fas icon="list-alt" /> Features</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem className={isActiveAbout ? "active" : null} onClick={() => handleToggle("about")}>
-                <MDBNavbarLink href='#'>About</MDBNavbarLink>
+                <MDBNavbarLink href='#'><MDBIcon fas icon="info-circle" /> About</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
