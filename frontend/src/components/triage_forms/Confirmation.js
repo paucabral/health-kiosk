@@ -11,7 +11,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
       <div style={{ height: '67vh' }}>
         <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
         <MDBCardBody>
-          <MDBContainer className='mb-2'>
+          <MDBContainer className='mb-3'>
             Please ensure that all the information are correct before you proceed.
           </MDBContainer>
 
