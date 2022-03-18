@@ -22,7 +22,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>NAME:</strong>
                       </MDBCol>
                       <MDBCol>
-                        <span>{formData.first_name} {formData.last_name}</span>
+                        {formData.first_name && formData.last_name ? <span>{formData.first_name} {formData.last_name}</span> : <i color='gray'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -32,7 +32,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>SEX:</strong>
                       </MDBCol>
                       <MDBCol>
-                        <span>{formData.sex}</span>
+                        {formData.sex ? <span>{formData.sex}</span> : <i color='gray'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -44,7 +44,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>AGE:</strong>
                       </MDBCol>
                       <MDBCol>
-                        <span>{formData.age}</span>
+                        {formData.age ? <span>{formData.age}</span> : <i color='gray'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -54,7 +54,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                         <strong>CONTACT:</strong>
                       </MDBCol>
                       <MDBCol>
-                        <span>{formData.contact_no}</span>
+                        {formData.contact_no ? <span>{formData.contact_no}</span> : <i color='gray'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -68,7 +68,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                     </MDBCardHeader>
                     <MDBCardBody className='text-warning'>
                       <MDBCardText>
-                        <span>{formData.temperature} °C</span>
+                        {formData.temperature ? <span>{formData.temperature} °C</span> : <span>NA</span>}
                       </MDBCardText>
                     </MDBCardBody>
                   </MDBCard>
@@ -80,7 +80,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                     </MDBCardHeader>
                     <MDBCardBody className='text-success'>
                       <MDBCardText>
-                        <span> {formData.o2_saturation} %</span>
+                        {formData.o2_saturation ? <span> {formData.o2_saturation} %</span> : <span>NA</span>}
                       </MDBCardText>
                     </MDBCardBody>
                   </MDBCard>
@@ -92,7 +92,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                     </MDBCardHeader>
                     <MDBCardBody className='text-danger'>
                       <MDBCardText>
-                        <span>{formData.pulse_rate} bpm</span>
+                        {formData.pulse_rate ? <span>{formData.pulse_rate} bpm</span> : <span>NA</span>}
                       </MDBCardText>
                     </MDBCardBody>
                   </MDBCard>
@@ -104,7 +104,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                     </MDBCardHeader>
                     <MDBCardBody className='text-primary'>
                       <MDBCardText>
-                        <span>{formData.systolic_bp} mmHg</span>
+                        {formData.systolic_bp ? <span>{formData.systolic_bp} mmHg</span> : <span>NA</span>}
                       </MDBCardText>
                     </MDBCardBody>
                   </MDBCard>
@@ -116,7 +116,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
                     </MDBCardHeader>
                     <MDBCardBody className='text-secondary'>
                       <MDBCardText>
-                        <span>{formData.diastolic_bp} mmHg</span>
+                        {formData.diastolic_bp ? <span>{formData.diastolic_bp} mmHg</span> : <span>NA</span>}
                       </MDBCardText>
                     </MDBCardBody>
                   </MDBCard>
