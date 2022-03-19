@@ -36,6 +36,13 @@ double cur_sample = 0.0;
 double cur_avg = 0.0;
 
 //***********BP variables*****************
+#define buttonD6 D6
+#define buttonD7 D7
+#define buttonD8 D8
+int virtualPower = 0;
+int virtualMemory = 0;
+int mainButtonState = 0;
+
 const byte numChars = 38;
 char receivedChars[numChars];
 char bpChars[numChars];
@@ -44,7 +51,6 @@ char bpCharToken[numChars];
 String rawSYS;
 String rawDIA;
 String rawPR;
-
 int dataSYS;
 int dataDIA;
 int dataPR;
@@ -100,17 +106,39 @@ void setup()
   
   rest.set_id("1");
   rest.set_name("vital_signs");
+  pinMode(buttonD6, INPUT);
+  pinMode(buttonD7, OUTPUT);
+  pinMode(buttonD8, OUTPUT);
 }
 
 void loop()
 {
   pox.update();
+  mainButtonState = digitalRead(buttonD6);
   if (WiFi.status() != WL_CONNECTED){
     Serial.println("Disconnected...");
     ESP.reset();
     Serial.print("Reconnected...");
   }
-  
+ 
+  if (mainButtonState == HIGH){
+    virtualPower = 1;
+  }
+
+  if (virtualPower == 1) {
+    virtualPowerSwitch();
+    virtualPower = 0;
+    virtualMemory = 1;
+  }
+
+  if (virtualMemory == 1){
+      Serial.println("Please Wait");
+      delay(41000);
+      virtualMemorySwitch();
+      virtualMemory = 0;
+      pox.begin();
+  }
+   
   if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
 //      Serial.print("pO2:");
 //      Serial.print(pox.getSpO2());
@@ -209,4 +237,24 @@ void bpData() {
       pox.begin();
       newData = false;
     }
+}
+
+void virtualPowerSwitch() {
+  digitalWrite(buttonD7, HIGH);
+  delay(500);
+  digitalWrite(buttonD7, LOW);
+  delay(500);
+  digitalWrite(buttonD7, HIGH);
+  delay(500);
+}
+
+void virtualMemorySwitch() {
+  for (int i = 0; i < 2; i++){
+    digitalWrite(buttonD8, HIGH);
+    delay(500);
+    digitalWrite(buttonD8, LOW);
+    delay(500);
+    digitalWrite(buttonD8, HIGH);
+    delay(500);
+  }
 }
