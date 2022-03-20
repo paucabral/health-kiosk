@@ -59,6 +59,20 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                     </MDBRow>
                   </MDBCol>
                 </MDBRow>
+                <MDBRow className='mt-3 mb-2'>
+                  <MDBCol size='2'>
+                    <strong>SYMPTOMS:</strong>
+                  </MDBCol>
+                  <MDBCol style={{ textAlign: 'left' }}>
+                    <ul style={{ display: 'inline', listStyleType: 'none' }}>
+                      {formData.symptoms?.map((symptom) => (
+                        <li key={symptom} style={{ display: 'inline', marginLeft: '0.5em', marginRight: '0.5em' }}>
+                          <MDBBtn color='dark' disabled>{symptom}</MDBBtn>
+                        </li>
+                      ))}
+                    </ul>
+                  </MDBCol>
+                </MDBRow>
               </MDBRow>
               <MDBRow className='mb-4' style={{ textAlign: "center" }}>
                 <MDBCol>
