@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 
-const Symptoms = () => {
+const Symptoms = ({ formData, setFormData }) => {
   const [multiSelections, setMultiSelections] = useState([]);
   const options = ['The', 'quick brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+  useEffect(() => {
+    console.log(multiSelections);
+    setFormData({ ...formData, symptoms: multiSelections })
+  }, [multiSelections]);
 
   return (
     <React.Fragment>

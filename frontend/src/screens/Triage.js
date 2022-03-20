@@ -13,6 +13,7 @@ const Triage = () => {
       last_name: "",
       age: "",
       sex: "",
+      symptoms: [],
       contact_no: "",
       temperature: "",
       pulse_rate: "",
