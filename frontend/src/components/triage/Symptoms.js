@@ -5,7 +5,7 @@ import symptoms from '../../data/symptoms-list';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 
 const Symptoms = ({ formData, setFormData }) => {
-  const [multiSelections, setMultiSelections] = useState([]);
+  const [multiSelections, setMultiSelections] = useState(formData.symptoms);
   const options = symptoms;
 
   useEffect(() => {
