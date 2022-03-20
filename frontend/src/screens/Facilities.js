@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
-import './styles.css';
-import mapStyles from './mapStyles';
+import '../styles/styles.css';
+import mapStyles from '../styles/mapStyles';
 
 const googleMapsLibraries = ["places"]
 const mapContainerStyle = {

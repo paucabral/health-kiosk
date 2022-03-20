@@ -1,8 +1,8 @@
 import './App.css';
 import Navigation from './components/Navigation'
-import Triage from './components/Triage';
+import Triage from './screens/Triage';
 import { MDBContainer } from 'mdb-react-ui-kit';
-import Facilities from './components/Facilities';
+import Facilities from './screens/Facilities';
 
 function App() {
   return (

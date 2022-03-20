@@ -10,7 +10,7 @@ import {
   MDBNavbarBrand,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
-import './styles.css';
+import '../styles/styles.css';
 
 const Navigation = () => {
   const [showNavColor, setShowNavColor] = useState(false);

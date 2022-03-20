@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardHeader, MDBCardFooter, MDBCol, MDBRow, MDBBtn, MDBContainer, MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
-import PersonalInformationInput from './triage_forms/PersonalInformationInput';
-import SensorData from './triage_forms/SensorData';
-import Confirmation from './triage_forms/Confirmation';
-import './styles.css';
+import PersonalInformationInput from '../components/triage/PersonalInformationInput';
+import SensorData from '../components/triage/SensorData';
+import Confirmation from '../components/triage/Confirmation';
+import '../styles/styles.css';
 
 const Triage = () => {
   const [formData, setFormData] = useState(
