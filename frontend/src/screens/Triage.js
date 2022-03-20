@@ -3,6 +3,7 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardHeader, MDBCard
 import PersonalInformationInput from '../components/triage/PersonalInformationInput';
 import SensorData from '../components/triage/SensorData';
 import Confirmation from '../components/triage/Confirmation';
+import Symptoms from '../components/triage/Symptoms';
 import '../styles/styles.css';
 
 const Triage = () => {
@@ -23,7 +24,8 @@ const Triage = () => {
 
   const [page, setPage] = useState(0);
   const [progress, setProgress] = useState(0);
-  const FormTitles = ['Personal Information', 'Sensor Data', 'Next']
+  const FormTitles = ['Personal Information', 'Vital Signs', 'Symptoms', 'Next']
+
   const PageDisplay = () => {
     if (page === 0) {
       return <PersonalInformationInput formData={formData} setFormData={setFormData} />;
@@ -31,8 +33,11 @@ const Triage = () => {
     else if (page === 1) {
       return <SensorData formData={formData} setFormData={setFormData} />;
     }
+    else if (page === 2) {
+      return <Symptoms formData={formData} setFormData={setFormData} />;
+    }
     else {
-      return <Confirmation formData={formData} setFormData={setFormData} page={page} setPage={setPage} />;
+      return <Confirmation formData={formData} setFormData={setFormData} setProgress={setProgress} page={page} setPage={setPage} />;
     }
   }
 
@@ -49,17 +54,17 @@ const Triage = () => {
   }
 
   const PageNav = () => {
-    if (page === 2) {
+    if (page === 3) {
       return <React.Fragment></React.Fragment>;
     }
     else {
       return <React.Fragment>
         <MDBRow className='mb-5 w-100' >
           <MDBCol>
-            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); }}>Prev</MDBBtn>
+            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>Prev</MDBBtn>
           </MDBCol>
           <MDBCol>
-            <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); }}>Next</MDBBtn>
+            <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
           </MDBCol>
         </MDBRow>
       </React.Fragment>;
@@ -71,7 +76,7 @@ const Triage = () => {
       <MDBContainer className='align-items-center justify-content-center mt-5'>
         {PageCard()}
         <MDBProgress height='10' className='rounded mt-3'>
-          <MDBProgressBar width={page === 0 ? 0 : page === 1 ? 50 : 100} valuemin={0} valuemax={100} />
+          <MDBProgressBar width={progress} valuemin={0} valuemax={100} />
         </MDBProgress>
       </MDBContainer>
     </React.Fragment>

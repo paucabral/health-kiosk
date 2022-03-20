@@ -1,7 +1,7 @@
 import { MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer } from 'mdb-react-ui-kit'
 import React from 'react'
 
-const Confirmation = ({ formData, setFormData, page, setPage }) => {
+const Confirmation = ({ formData, setPage, setProgress }) => {
   const checkEntry = () => {
     return formData.first_name === "" | formData.last_name === "" | formData.age === "" | formData.sex === "" | formData.contact_no === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
   }
@@ -128,7 +128,7 @@ const Confirmation = ({ formData, setFormData, page, setPage }) => {
           <MDBContainer>
             <MDBRow className='w-100'>
               <MDBCol>
-                <MDBBtn onClick={() => { setPage(0) }} className='w-75' color='warning'>
+                <MDBBtn onClick={() => { setPage(0); setProgress(0); }} className='w-75' color='warning'>
                   Go Back
                 </MDBBtn>
               </MDBCol>
