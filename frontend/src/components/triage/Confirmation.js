@@ -65,7 +65,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   </MDBCol>
                   <MDBCol style={{ textAlign: 'left' }}>
                     {formData.symptoms?.map((symptom) => (
-                      <MDBBtn color='dark' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em' }} disabled>{symptom}</MDBBtn>
+                      <MDBBtn pill color='dark' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
                     ))}
                   </MDBCol>
                 </MDBRow>
