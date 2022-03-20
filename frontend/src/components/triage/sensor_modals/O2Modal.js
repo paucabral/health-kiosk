@@ -38,7 +38,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
 
   return (
     <React.Fragment>
-      <MDBModal staticBackdrop scrollable='true' show={o2Modal} setShow={setO2Modal} tabIndex='-1'>
+      <MDBModal id="o2-modal" staticBackdrop scrollable='true' show={o2Modal} setShow={setO2Modal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
