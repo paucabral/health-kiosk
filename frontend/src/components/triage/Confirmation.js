@@ -1,5 +1,6 @@
 import { MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer } from 'mdb-react-ui-kit'
 import React from 'react'
+import '../../styles/styles.css'
 
 const Confirmation = ({ formData, setPage, setProgress }) => {
   const checkEntry = () => {
@@ -12,7 +13,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
         <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
         <p>Please ensure that all the information are correct before you proceed.</p>
         <MDBCardBody>
-          <div style={{ overflowY: 'auto', height: '40vh', marginTop: '0em', marginBottom: '1em' }}>
+          <div id="confirmation" style={{ overflowY: 'auto', height: '40vh', marginTop: '0em', marginBottom: '1em' }}>
             <div className='container'>
               <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
                 <MDBRow>

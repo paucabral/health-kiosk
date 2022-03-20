@@ -13,3 +13,12 @@
   flex-grow: 1;
   flex: 0.25;
 }
+
+#confirmation::-webkit-scrollbar, #hospital-list::-webkit-scrollbar {
+  display: none;
+}
+
+#confirmation, #hospital-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
