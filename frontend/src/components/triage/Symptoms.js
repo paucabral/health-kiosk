@@ -3,6 +3,7 @@ import { MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, M
 import { Typeahead } from 'react-bootstrap-typeahead';
 import symptoms from '../../data/symptoms-list';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
+import '../../styles/styles.css'
 
 const Symptoms = ({ formData, setFormData }) => {
   const [multiSelections, setMultiSelections] = useState(formData.symptoms);
