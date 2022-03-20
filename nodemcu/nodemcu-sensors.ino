@@ -1,5 +1,5 @@
-//***Practice code for testing multiple I2C devices, and being a server for API***
-//***Next step is to make NodeMCU as server, to communicate with RPi***
+//***New code: Working Sensors and Automated BP (with millis) ***
+//***Communicates with RPi through router (rpi as extender being developed)***
 #include "ESP8266WiFi.h"
 #include <aREST.h>
 #include <Wire.h>
@@ -36,26 +36,29 @@ double cur_sample = 0.0;
 double cur_avg = 0.0;
 
 //***********BP variables*****************
-#define buttonD6 D6
-#define buttonD7 D7
-#define buttonD8 D8
-int virtualPower = 0;
-int virtualMemory = 0;
-int mainButtonState = 0;
+#define buttonD6 D6                     // Physical Extension Switch
+#define buttonD7 D7                     // Virtual Power Switch
+#define buttonD8 D8                     // Virtual Memory Switch
+#define bpREPORTING_PERIOD_MS 62000     // Time to state sys/dia (to check if automation works)
+uint32_t bpStartReport = 0;             // millis comparison
+uint32_t bpCurrentReport = 0;           // ^
+int virtualPower = 0;                   // Instantiate as LOW
+int virtualMemory = 0;                  // ^
+int mainButtonState = 0;                // ^
 
-const byte numChars = 38;
-char receivedChars[numChars];
-char bpChars[numChars];
-char bpCharToken[numChars];
+const byte numChars = 38;               // Total characters that can be received through BP Serial
+char receivedChars[numChars];           // Read BP Serial
+char bpChars[numChars];                 // Used for conversion for input for computation
+char bpCharToken[numChars];             // Pointer
 
-String rawSYS;
+String rawSYS;                          // String variables to convert with strtol
 String rawDIA;
 String rawPR;
-int dataSYS;
+int dataSYS;                            // Stores the converted strtol (in int)
 int dataDIA;
 int dataPR;
 
-boolean newData = false;
+boolean newData = false;                // Check if new data comes from BP Serial
 
 //API Server configuration
 aREST rest = aREST();                   //Create aREST instance
@@ -70,7 +73,7 @@ void setup()
 {
   Serial.begin(115200);
 
-  WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);                   //Connect to WiFi
   while (WiFi.status() != WL_CONNECTED){
     delay(500);
     Serial.print(".");
@@ -109,6 +112,8 @@ void setup()
   pinMode(buttonD6, INPUT);
   pinMode(buttonD7, OUTPUT);
   pinMode(buttonD8, OUTPUT);
+  digitalWrite(buttonD8, HIGH);
+  digitalWrite(buttonD7, HIGH);
 }
 
 void loop()
@@ -126,17 +131,24 @@ void loop()
   }
 
   if (virtualPower == 1) {
+    bpStartReport = millis();
     virtualPowerSwitch();
     virtualPower = 0;
     virtualMemory = 1;
   }
 
   if (virtualMemory == 1){
-      Serial.println("Please Wait");
-      delay(41000);
+    bpCurrentReport = millis();
+    if (bpCurrentReport - bpStartReport > bpREPORTING_PERIOD_MS){
+      Serial.print(bpCurrentReport);
+      Serial.print(" - ");
+      Serial.print(bpStartReport);
+      Serial.print(" = ");
+      Serial.println(bpCurrentReport - bpStartReport);
       virtualMemorySwitch();
+      bpStartReport = bpCurrentReport;
       virtualMemory = 0;
-      pox.begin();
+    }
   }
    
   if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
@@ -239,22 +251,38 @@ void bpData() {
     }
 }
 
+
 void virtualPowerSwitch() {
   digitalWrite(buttonD7, HIGH);
+  Serial.println("BUTTON D7: HIGH");
   delay(500);
   digitalWrite(buttonD7, LOW);
+  Serial.println("BUTTON D7: LOW");
   delay(500);
   digitalWrite(buttonD7, HIGH);
+  Serial.println("BUTTON D7: HIGH");
   delay(500);
 }
 
 void virtualMemorySwitch() {
   for (int i = 0; i < 2; i++){
     digitalWrite(buttonD8, HIGH);
+    Serial.println("BUTTON D8: HIGH");
     delay(500);
     digitalWrite(buttonD8, LOW);
+    Serial.println("BUTTON D8: LOW");
     delay(500);
     digitalWrite(buttonD8, HIGH);
+    Serial.println("BUTTON D8: HIGH");
     delay(500);
   }
+  digitalWrite(buttonD7, HIGH);
+  Serial.println("BUTTON D7: HIGH");
+  delay(500);
+  digitalWrite(buttonD7, LOW);
+  Serial.println("BUTTON D7: LOW");
+  delay(500);
+  digitalWrite(buttonD7, HIGH);
+  Serial.println("BUTTON D7: HIGH");
+  delay(500);
 }
