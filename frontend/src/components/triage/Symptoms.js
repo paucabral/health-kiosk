@@ -17,7 +17,7 @@ const Symptoms = ({ formData, setFormData }) => {
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Symptoms</MDBCardTitle>
       <p>Find and select your symptoms (if you experience any).</p>
-      <form className='form'>
+      <form className='form' style={{ marginBottom: '5em' }}>
         <Typeahead
           id="symptoms-selection"
           multiple
