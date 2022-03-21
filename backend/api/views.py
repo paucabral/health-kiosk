@@ -29,5 +29,5 @@ def apiNearestHospitals(request):
     lng = request.GET.get('lng')
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(lat, lng, config('GOOGLE_MAPS_API_KEY'))
     query_result = requests.get(url)
-    return Response(query_result)
+    return Response(query_result.json())
 
