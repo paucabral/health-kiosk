@@ -22,7 +22,7 @@ const Facilities = () => {
   const fetchLocation = async () => {
     try {
       console.log("Fetching location...");
-      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/location`
+      const url = `${process.env.REACT_APP_SENSORS_ENDPOINT}/location`
       console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
@@ -77,7 +77,7 @@ const Facilities = () => {
     if (status === "SUCCESS") {
       try {
         console.log("Fetching nearest hospitals...");
-        const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/nearby-hospitals?lat=${location.lat}&lng=${location.lng}`
+        const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
         console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
@@ -85,6 +85,10 @@ const Facilities = () => {
           setNearestHospitals(nearest_hospitals)
           console.log(nearest_hospitals)
           setStatus("SUCCESS")
+        }
+        else {
+          const nearest_hospitals = response.data["results"];
+          console.log(JSON.stringify(nearest_hospitals))
         }
       } catch (error) {
         console.log(JSON.stringify(error));
