@@ -40,8 +40,10 @@ double cur_avg = 0.0;
 #define buttonD7 D7                     // Virtual Power Switch
 #define buttonD8 D8                     // Virtual Memory Switch
 #define bpREPORTING_PERIOD_MS 62000     // Time to state sys/dia (to check if automation works)
+#define bpSHUT_PERIOD_MS 10000          // Time to shutdown BP
 uint32_t bpStartReport = 0;             // millis comparison
 uint32_t bpCurrentReport = 0;           // ^
+uint32_t bpToShutReport = 0;            // ^
 int virtualPower = 0;                   // Instantiate as LOW
 int virtualMemory = 0;                  // ^
 int mainButtonState = 0;                // ^
@@ -132,6 +134,7 @@ void loop()
 
   if (virtualPower == 1) {
     bpStartReport = millis();
+    bpToShutReport = millis();
     virtualPowerSwitch();
     virtualPower = 0;
     virtualMemory = 1;
@@ -147,7 +150,12 @@ void loop()
       Serial.println(bpCurrentReport - bpStartReport);
       virtualMemorySwitch();
       bpStartReport = bpCurrentReport;
-      virtualMemory = 0;
+      if (bpCurrentReport - bpToShutReport > bpSHUT_PERIOD_MS){
+        virtualPowerSwitch();
+        bpToShutReport = bpCurrentReport;
+        mlx.begin();
+        virtualMemory = 0;
+      }
     }
   }
    
@@ -276,13 +284,4 @@ void virtualMemorySwitch() {
     Serial.println("BUTTON D8: HIGH");
     delay(500);
   }
-  digitalWrite(buttonD7, HIGH);
-  Serial.println("BUTTON D7: HIGH");
-  delay(500);
-  digitalWrite(buttonD7, LOW);
-  Serial.println("BUTTON D7: LOW");
-  delay(500);
-  digitalWrite(buttonD7, HIGH);
-  Serial.println("BUTTON D7: HIGH");
-  delay(500);
 }
