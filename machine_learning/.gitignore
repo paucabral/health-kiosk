@@ -1,1 +1,5 @@
 venv/*
+.ipynb_checkpoints
+.ipynb_checkpoints/*
+sample-result-total.csv
+sample-result-single.csv
