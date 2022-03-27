@@ -154,6 +154,7 @@ void loop()
         virtualPowerSwitch();
         bpToShutReport = bpCurrentReport;
         mlx.begin();
+        pox.begin();
         virtualMemory = 0;
       }
     }
@@ -255,6 +256,7 @@ void bpData() {
       Serial.println(dataPR);
 
       pox.begin();
+      mlx.begin();
       newData = false;
     }
 }
