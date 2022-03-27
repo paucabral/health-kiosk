@@ -55,29 +55,39 @@ def compute_rawGPS(raw_val, direction):
     print(latlong, signed_coord)
 
 
-
-while 1:
+def computedGPS():
     gpsarr = []
     gpslines=ser.readline()
     strgpslines = str(gpslines).split(',')
     gpsarr.append(strgpslines)
     if len(gpsarr) < 1:
         print("EMPTY")
+
     else:
         if (gpsarr[0][0]) == "b'$GPGLL":
             print("FOUND IT!")
-            latraw_val = float(gpsarr[0][1])
-            latdirection = str(gpsarr[0][2])
-            longraw_val = float(gpsarr[0][3])
-            longdirection = str(gpsarr[0][4])
+            # latraw_val = float(gpsarr[0][1])
+            # latdirection = str(gpsarr[0][2])
+            # longraw_val = float(gpsarr[0][3])
+            # longdirection = str(gpsarr[0][4])
+            latraw_val = float(1437.57826)
+            latdirection = str('N')
+            longraw_val = float(12105.98656)
+            longdirection = str('E')            
             print("RAW_Lat:",latraw_val)
             print("RAW_latdir:",latdirection)
             print("RAW_Long:",longraw_val)
             print("RAW_longdir:",longdirection)
-            compute_rawGPS(latraw_val, latdirection)
-            compute_rawGPS(longraw_val, longdirection)
-
+            lat = compute_rawGPS(latraw_val, latdirection)
+            lng = compute_rawGPS(longraw_val, longdirection)
+            coord_dic = {"lat": lat, "lng": lng}
+            jsonStr = json.dumps(coord_dic)
+    
+    
     gpscnt+=1
     if gpscnt==8:
         gpscnt = 0
     # time.sleep(1.5)
+
+while 1:
+    computedGPS()
