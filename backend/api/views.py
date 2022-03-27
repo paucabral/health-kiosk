@@ -3,10 +3,10 @@ from django.http import JsonResponse
 from rest_framework import serializers
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from decouple import config
 from googleplaces import GooglePlaces, types, lang
 import requests
 import json
+from django.conf import settings
 
 # Create your views here.
 
@@ -28,7 +28,7 @@ def apiOverview(request):
 def apiNearestHospitals(request):
     lat = request.GET.get('lat')
     lng = request.GET.get('lng')
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(lat, lng, config('GOOGLE_MAPS_API_KEY'))
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(lat, lng, settings.GOOGLE_MAPS_API_KEY)
     query_result = requests.get(url)
     return Response(query_result.json())
 
