@@ -7,6 +7,7 @@ from googleplaces import GooglePlaces, types, lang
 import requests
 import json
 from django.conf import settings
+from api.predictions import getPredictions
 
 # Create your views here.
 
@@ -37,4 +38,6 @@ def apiNearestHospitals(request):
 def apiDifferentialDiagnosis(request):
     data = json.loads(request.body)
     symptoms = data['symptoms']
-    return Response(symptoms)
+    result = getPredictions(symptoms)
+    print(result)
+    return Response(result)

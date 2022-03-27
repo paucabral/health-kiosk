@@ -1,8 +1,11 @@
 import pandas as pd
+from django.conf import settings
+
+RECOMMENDATIONS_PATH = "{}/csv/recommendations_df.csv".format(settings.STATIC_DIR)
 
 def getPredictions(symptoms):
+  print(settings.STATIC_DIR)
   # Loading the generated prediction results from the model.
-  RECOMMENDATIONS_PATH = './result/recommendations_df.csv'
   recommendations_df = pd.read_csv(RECOMMENDATIONS_PATH)
 
   # Finding entries where entries from the symptoms list appears.
