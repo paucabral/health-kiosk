@@ -8,8 +8,8 @@
 #include "MAX30100_PulseOximeter.h"
 
 //********MAX30100 variables**********
-#define REPORTING_PERIOD_MS     1000
-PulseOximeter pox;
+#define REPORTING_PERIOD_MS     1000                  //1 sec delay for reading spo2 and temp
+PulseOximeter pox;                                    //Define spo2 sensor as pox
 uint32_t tsLastReport = 0;
 int spo2;
 int spo2comp;
@@ -23,23 +23,26 @@ void onBeatDetected()
 
 //*********MLX90614 variables**************
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
-double mlxobj;
+float mlxobj;
 float mlxobjAvg;
-float thermtemp;      //Following three variables are for calibration
+float thermtemp;                                      //Following three variables are for calibration
 float thermmax;   
 float thermmin;
 
-const float alpha = 0.3; //Following variables are for Exponential Moving Average
-double tempAvg = 0.0;
-int i = 0;
-double cur_sample = 0.0;
-double cur_avg = 0.0;
+const int samples = 5;                                //Following variables are for Moving Average
+float float_samples = 5.00;
+float cur_sample = 0.0;
+float cur_avg = 0.0;
+float readings [samples];
+float tempAvg = 0.0;
+int readIndex = 0;
+float total = 0.00;
 
 //***********BP variables*****************
 #define buttonD6 D6                     // Physical Extension Switch
 #define buttonD7 D7                     // Virtual Power Switch
 #define buttonD8 D8                     // Virtual Memory Switch
-#define bpREPORTING_PERIOD_MS 62000     // Time to state sys/dia (to check if automation works)
+#define bpREPORTING_PERIOD_MS 58000     // Time to state sys/dia (to check if automation works)
 #define bpSHUT_PERIOD_MS 10000          // Time to shutdown BP
 uint32_t bpStartReport = 0;             // millis comparison
 uint32_t bpCurrentReport = 0;           // ^
@@ -98,7 +101,7 @@ void setup()
     }
     mlx.begin();  
 
-    pox.setIRLedCurrent(MAX30100_LED_CURR_7_6MA);
+//    pox.setIRLedCurrent(MAX30100_LED_CURR_7_6MA);
     pox.setOnBeatDetectedCallback(onBeatDetected);
 
                            
@@ -161,9 +164,9 @@ void loop()
   }
    
   if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
-//      Serial.print("pO2:");
-//      Serial.print(pox.getSpO2());
-//      Serial.print("% \t");
+      Serial.print("pO2:");
+      Serial.print(pox.getSpO2());
+      Serial.println("% \t");
       spo2 = pox.getSpO2();
       spo2comp = spo2;
       spo2aux = spo2comp;
@@ -182,15 +185,16 @@ void loop()
 //      Serial.println("");
 //      mlxobj = mlx.readObjectTempC();
         cur_sample = mlx.readObjectTempC();
-        cur_avg = (cur_sample*alpha) + ((tempAvg)*(1-alpha));
-        tempAvg = cur_avg;
+        tempAvg = smooth();
+        Serial.print("raw temp:\t\t"); 
+        Serial.println(cur_sample);
+        Serial.print("avg temp:\t");
+        Serial.println(tempAvg);
   }
 
   //BP
   recvWithEndMarker();
   bpData();
-
-  
 
   WiFiClient client = server.available();
   if (!client){
@@ -202,6 +206,24 @@ void loop()
   rest.handle(client);
 
 }
+
+
+float smooth() {                          // Smoothing function
+  float average = 0.0;                    // Instantiate average
+  total = total - readings[readIndex];    // Subtract last reading to not keep on adding
+  cur_sample = mlx.readObjectTempC();     // Read the sensor
+  readings[readIndex] = cur_sample;       // Append to array
+  total = total + readings[readIndex];    // Add reading to total
+  readIndex += 1;                         // Increment index
+  if (readIndex >= samples) {             // Reset index
+    readIndex = 0;                
+  }
+  // calculate the average:
+  average = total / samples;              // Average temperature
+
+  return average;
+}
+
 
 void recvWithEndMarker() {
     static byte ndx = 0;
