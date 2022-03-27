@@ -19,6 +19,7 @@ def apiOverview(request):
         'Update': 'api/patient/update/<str:pk>/',
         'Delete': 'api/patient/delete/<str:pk>/',
         'Google Places': 'api/nearest-hospitals',
+        'Predict': 'api/differential-diagnosis',
     }
 
     return Response(api_urls)
@@ -31,3 +32,9 @@ def apiNearestHospitals(request):
     query_result = requests.get(url)
     return Response(query_result.json())
 
+
+@api_view(['POST'])
+def apiDifferentialDiagnosis(request):
+    data = json.loads(request.body)
+    symptoms = data['symptoms']
+    return Response(symptoms)
