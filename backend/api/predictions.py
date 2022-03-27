@@ -13,7 +13,7 @@ def getPredictions(symptoms):
       symptoms)].sort_values(by=['symptom'], ascending=False)
 
   # Narrowing the data frame search results to disease and prediction columns and summing the prediction values of same disease names.
-  result_df = recommendations_df[['disease', 'prediction']]
+  result_df = results[['disease', 'prediction']]
   df = result_df.groupby('disease')[
       'prediction'].sum().sort_values(ascending=False)
 
