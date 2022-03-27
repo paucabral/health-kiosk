@@ -1,0 +1,2096 @@
+did,disease,syd,symptom,prediction
+1,hypertensive disease,1.0,pain chest,1.1983461
+1,hypertensive disease,3.0,dizziness,1.0259689
+1,hypertensive disease,2.0,shortness of breath,1.0162743
+1,hypertensive disease,4.0,asthenia,0.9041612
+1,hypertensive disease,5.0,fall,0.84273833
+1,hypertensive disease,6.0,syncope,0.73339075
+1,hypertensive disease,7.0,vertigo,0.64678353
+6,coronary heart disease,1.0,pain chest,0.5860485
+5,coronary arteriosclerosis,1.0,pain chest,0.58590865
+6,coronary heart disease,12.0,angina pectoris,0.48676223
+8,failure heart congestive,16.0,orthopnea,0.47654974
+1,hypertensive disease,9.0,sweating increased,0.4754956
+5,coronary arteriosclerosis,2.0,shortness of breath,0.46442148
+6,coronary heart disease,2.0,shortness of breath,0.44748542
+9,accident cerebrovascular,4.0,asthenia,0.42602232
+8,failure heart congestive,63.0,jugular venous distention,0.41922173
+6,coronary heart disease,43.0,hypokinesia,0.4057197
+2,diabetes,1.0,pain chest,0.40468094
+1,hypertensive disease,8.0,sweat,0.40225878
+2,diabetes,15.0,polydypsia,0.38908523
+5,coronary arteriosclerosis,43.0,hypokinesia,0.37409636
+1,hypertensive disease,10.0,palpitation,0.37281945
+5,coronary arteriosclerosis,12.0,angina pectoris,0.3688602
+2,diabetes,2.0,shortness of breath,0.36232167
+9,accident cerebrovascular,66.0,speech slurred,0.3550982
+6,coronary heart disease,8.0,sweat,0.3454788
+10,asthma,2.0,shortness of breath,0.32689232
+8,failure heart congestive,17.0,rale,0.32410586
+2,diabetes,4.0,asthenia,0.31917188
+10,asthma,46.0,cough,0.3142317
+8,failure heart congestive,2.0,shortness of breath,0.31147468
+6,coronary heart disease,9.0,sweating increased,0.30496845
+5,coronary arteriosclerosis,8.0,sweat,0.29540086
+1,hypertensive disease,11.0,nausea,0.29477924
+5,coronary arteriosclerosis,9.0,sweating increased,0.28989178
+2,diabetes,16.0,orthopnea,0.27905783
+6,coronary heart disease,13.0,pressure chest,0.2746691
+3,depression mental,22.0,feeling suicidal,0.27402836
+4,depressive disorder,22.0,feeling suicidal,0.27167717
+9,accident cerebrovascular,67.0,facial paresis,0.27066046
+3,depression mental,23.0,suicidal,0.26078954
+4,depressive disorder,23.0,suicidal,0.25868985
+10,asthma,45.0,chest tightness,0.24998389
+3,depression mental,25.0,feeling hopeless,0.2427351
+4,depressive disorder,25.0,feeling hopeless,0.24073988
+3,depression mental,24.0,hallucinations auditory,0.23986246
+16,chronic obstructive airway disease,2.0,shortness of breath,0.2392595
+4,depressive disorder,24.0,hallucinations auditory,0.23766437
+3,depression mental,26.0,weepiness,0.23645936
+4,depressive disorder,26.0,weepiness,0.23451899
+9,accident cerebrovascular,68.0,hemiplegia,0.22864188
+7,pneumonia,2.0,shortness of breath,0.22635068
+2,diabetes,9.0,sweating increased,0.22105776
+2,diabetes,17.0,rale,0.2191385
+3,depression mental,27.0,sleeplessness,0.21854469
+4,depressive disorder,27.0,sleeplessness,0.2168927
+5,coronary arteriosclerosis,13.0,pressure chest,0.21429239
+2,diabetes,11.0,nausea,0.21145375
+1,hypertensive disease,12.0,angina pectoris,0.21133247
+2,diabetes,8.0,sweat,0.20673661
+7,pneumonia,48.0,decreased translucency,0.20599967
+10,asthma,56.0,non-productive cough,0.20563698
+7,pneumonia,46.0,cough,0.20175564
+7,pneumonia,47.0,fever,0.20027854
+3,depression mental,28.0,motor retardation,0.19885547
+4,depressive disorder,28.0,motor retardation,0.19709845
+13,infection,47.0,fever,0.19506463
+3,depression mental,29.0,irritable mood,0.19035399
+4,depressive disorder,29.0,irritable mood,0.18890068
+12,hypercholesterolemia,1.0,pain chest,0.18875329
+13,infection,80.0,erythema,0.1881561
+14,infection urinary tract,87.0,dysuria,0.18662113
+8,failure heart congestive,46.0,cough,0.18634778
+14,infection urinary tract,47.0,fever,0.1842975
+6,coronary heart disease,44.0,dyspnea on exertion,0.1827376
+13,infection,48.0,decreased translucency,0.18238665
+7,pneumonia,17.0,rale,0.1791424
+3,depression mental,30.0,blackout,0.17543475
+5,coronary arteriosclerosis,44.0,dyspnea on exertion,0.17475183
+4,depressive disorder,30.0,blackout,0.17411624
+11,myocardial infarction,72.0,st segment elevation,0.17007446
+9,accident cerebrovascular,18.0,unresponsiveness,0.16834505
+14,infection urinary tract,89.0,renal angle tenderness,0.16452515
+14,infection urinary tract,88.0,hematuria,0.16363862
+12,hypercholesterolemia,8.0,sweat,0.1599139
+3,depression mental,31.0,mood depressed,0.15939353
+16,chronic obstructive airway disease,57.0,wheezing,0.1585895
+4,depressive disorder,31.0,mood depressed,0.158003
+7,pneumonia,51.0,yellow sputum,0.15607643
+3,depression mental,32.0,hallucinations visual,0.15128842
+4,depressive disorder,32.0,hallucinations visual,0.15006903
+10,asthma,49.0,productive cough,0.14987558
+11,myocardial infarction,1.0,pain chest,0.14904538
+12,hypercholesterolemia,79.0,nonsmoker,0.14820729
+7,pneumonia,49.0,productive cough,0.14710018
+2,diabetes,18.0,unresponsiveness,0.14432496
+14,infection urinary tract,90.0,lethargy,0.1428917
+14,infection urinary tract,4.0,asthenia,0.14072232
+12,hypercholesterolemia,13.0,pressure chest,0.13601258
+11,myocardial infarction,12.0,angina pectoris,0.12902653
+2,diabetes,7.0,vertigo,0.12814794
+11,myocardial infarction,2.0,shortness of breath,0.12803006
+5,coronary arteriosclerosis,16.0,orthopnea,0.12698157
+3,depression mental,33.0,worry,0.12662601
+7,pneumonia,56.0,non-productive cough,0.12647893
+9,accident cerebrovascular,69.0,seizure,0.12595768
+4,depressive disorder,33.0,worry,0.12573056
+13,infection,82.0,pruritus,0.1253672
+6,coronary heart disease,16.0,orthopnea,0.12509
+13,infection,53.0,chill,0.124861196
+16,chronic obstructive airway disease,59.0,distress respiratory,0.12479167
+12,hypercholesterolemia,78.0,pain,0.124088705
+12,hypercholesterolemia,2.0,shortness of breath,0.12252776
+8,failure heart congestive,64.0,dyspnea,0.11892704
+11,myocardial infarction,73.0,st segment depression,0.118790925
+20,degenerative polyarthritis,126.0,numbness of hand,0.11790272
+42,peripheral vascular disease,2.0,shortness of breath,0.11737876
+20,degenerative polyarthritis,125.0,food intolerance,0.11645761
+3,depression mental,34.0,agitation,0.11633101
+4,depressive disorder,34.0,agitation,0.11601967
+2,diabetes,19.0,mental status changes,0.115123406
+17,dementia,5.0,fall,0.11463308
+83,hypertension pulmonary,2.0,shortness of breath,0.11386566
+18,insufficiency renal,16.0,orthopnea,0.11224731
+11,myocardial infarction,9.0,sweating increased,0.111510165
+1,hypertensive disease,13.0,pressure chest,0.11130756
+17,dementia,47.0,fever,0.11125515
+16,chronic obstructive airway disease,107.0,sputum purulent,0.11117317
+24,primary malignant neoplasm,78.0,pain,0.11102269
+7,pneumonia,53.0,chill,0.110767305
+16,chronic obstructive airway disease,64.0,dyspnea,0.11000082
+12,hypercholesterolemia,6.0,syncope,0.10732553
+3,depression mental,35.0,tremor,0.106845714
+4,depressive disorder,35.0,tremor,0.10606578
+38,cardiomyopathy,1.0,pain chest,0.10571146
+12,hypercholesterolemia,9.0,sweating increased,0.10167423
+20,degenerative polyarthritis,127.0,general discomfort,0.10156873
+11,myocardial infarction,43.0,hypokinesia,0.10007151
+25,acquired immuno-deficiency syndrome,47.0,fever,0.09768522
+13,infection,84.0,abscess bacterial,0.09742063
+12,hypercholesterolemia,70.0,numbness,0.09700361
+7,pneumonia,54.0,rhonchus,0.09618441
+26,HIV,47.0,fever,0.09586001
+16,chronic obstructive airway disease,108.0,hypoxemia,0.09488383
+27,hiv infections,47.0,fever,0.09456248
+15,anemia,96.0,monoclonal,0.094489336
+20,degenerative polyarthritis,4.0,asthenia,0.09430313
+3,depression mental,36.0,intoxication,0.09336429
+11,myocardial infarction,16.0,orthopnea,0.09321419
+13,infection,83.0,diarrhea,0.093035944
+4,depressive disorder,36.0,intoxication,0.092862435
+11,myocardial infarction,8.0,sweat,0.09268345
+24,primary malignant neoplasm,88.0,hematuria,0.09233393
+14,infection urinary tract,91.0,hyponatremia,0.09195013
+14,infection urinary tract,59.0,distress respiratory,0.09081261
+10,asthma,71.0,symptom aggravating factors,0.09061108
+3,depression mental,37.0,verbal auditory hallucinations,0.09057309
+42,peripheral vascular disease,194.0,rest pain,0.090526626
+4,depressive disorder,37.0,verbal auditory hallucinations,0.090068184
+8,failure heart congestive,57.0,wheezing,0.0899606
+20,degenerative polyarthritis,128.0,drowsiness,0.08989075
+38,cardiomyopathy,2.0,shortness of breath,0.08981375
+11,myocardial infarction,13.0,pressure chest,0.08961168
+33,deep vein thrombosis,2.0,shortness of breath,0.088677995
+12,hypercholesterolemia,76.0,chest discomfort,0.0885701
+37,epilepsy,178.0,hypometabolism,0.08731265
+10,asthma,57.0,wheezing,0.086779825
+17,dementia,97.0,ecchymosis,0.08672474
+14,infection urinary tract,92.0,hemodynamically stable,0.086631596
+15,anemia,97.0,ecchymosis,0.085550115
+17,dementia,90.0,lethargy,0.08506635
+24,primary malignant neoplasm,133.0,mass of body structure,0.085002705
+31,systemic infection,47.0,fever,0.08395372
+2,diabetes,14.0,polyuria,0.08360432
+7,pneumonia,57.0,wheezing,0.082964696
+30,septicemia,47.0,fever,0.082664564
+28,cellulitis,80.0,erythema,0.08248655
+17,dementia,17.0,rale,0.082367375
+103,kidney disease,1.0,pain chest,0.08205693
+17,dementia,6.0,syncope,0.08145551
+13,infection,85.0,swelling,0.08101478
+41,hepatitis C,46.0,cough,0.08077093
+32,sepsis (invertebrate),47.0,fever,0.080627285
+28,cellulitis,47.0,fever,0.07997125
+20,degenerative polyarthritis,79.0,nonsmoker,0.07954612
+35,neoplasm,1.0,pain chest,0.07933762
+25,acquired immuno-deficiency syndrome,46.0,cough,0.07869623
+12,hypercholesterolemia,73.0,st segment depression,0.07845511
+44,hyperlipidemia,12.0,angina pectoris,0.07814902
+18,insufficiency renal,17.0,rale,0.07771775
+36,embolism pulmonary,1.0,pain chest,0.07696679
+11,myocardial infarction,17.0,rale,0.07663451
+13,infection,78.0,pain,0.07656183
+33,deep vein thrombosis,78.0,pain,0.07648743
+18,insufficiency renal,2.0,shortness of breath,0.07624599
+21,hypothyroidism,2.0,shortness of breath,0.07619565
+42,peripheral vascular disease,12.0,angina pectoris,0.07613626
+27,hiv infections,46.0,cough,0.07541061
+10,asthma,50.0,pleuritic pain,0.075260684
+36,embolism pulmonary,2.0,shortness of breath,0.07477479
+48,cirrhosis,5.0,fall,0.07460886
+3,depression mental,38.0,energy increased,0.0735709
+18,insufficiency renal,4.0,asthenia,0.07351041
+15,anemia,100.0,pallor,0.07342325
+33,deep vein thrombosis,166.0,pain in lower limb,0.07314969
+4,depressive disorder,38.0,energy increased,0.07311676
+25,acquired immuno-deficiency syndrome,150.0,spontaneous rupture of membranes,0.07310257
+148,decubitus ulcer,47.0,fever,0.07202406
+17,dementia,46.0,cough,0.07202343
+9,accident cerebrovascular,65.0,dysarthria,0.07165815
+5,coronary arteriosclerosis,45.0,chest tightness,0.07092495
+2,diabetes,20.0,vomiting,0.0709241
+74,ulcer peptic,1.0,pain chest,0.070726156
+24,primary malignant neoplasm,141.0,emphysematous change,0.07066111
+24,primary malignant neoplasm,140.0,cushingoid habitus,0.07025494
+30,septicemia,59.0,distress respiratory,0.070001796
+27,hiv infections,150.0,spontaneous rupture of membranes,0.06987496
+15,anemia,98.0,tumor cell invasion,0.06977155
+103,kidney disease,2.0,shortness of breath,0.06947006
+16,chronic obstructive airway disease,109.0,hypercapnia,0.069404714
+21,hypothyroidism,4.0,asthenia,0.06927915
+32,sepsis (invertebrate),59.0,distress respiratory,0.06885743
+6,coronary heart disease,45.0,chest tightness,0.068563886
+26,HIV,150.0,spontaneous rupture of membranes,0.06798269
+52,mitral valve insufficiency,2.0,shortness of breath,0.06721169
+31,systemic infection,59.0,distress respiratory,0.06659899
+31,systemic infection,90.0,lethargy,0.06648321
+21,hypothyroidism,5.0,fall,0.06635624
+7,pneumonia,58.0,haemoptysis,0.06623804
+20,degenerative polyarthritis,78.0,pain,0.06607668
+44,hyperlipidemia,1.0,pain chest,0.06603539
+15,anemia,4.0,asthenia,0.06600022
+7,pneumonia,50.0,pleuritic pain,0.06575632
+30,septicemia,90.0,lethargy,0.065439776
+46,obesity,1.0,pain chest,0.06539576
+9,accident cerebrovascular,70.0,numbness,0.06509772
+28,cellulitis,78.0,pain,0.06508554
+17,dementia,67.0,facial paresis,0.06480228
+19,confusion,66.0,speech slurred,0.064070284
+30,septicemia,118.0,hypotension,0.06392029
+37,epilepsy,179.0,aura,0.063832
+32,sepsis (invertebrate),90.0,lethargy,0.06370582
+7,pneumonia,59.0,distress respiratory,0.0637039
+38,cardiomyopathy,43.0,hypokinesia,0.06323493
+32,sepsis (invertebrate),118.0,hypotension,0.06289916
+15,anemia,2.0,shortness of breath,0.06270234
+26,HIV,53.0,chill,0.062365852
+20,degenerative polyarthritis,56.0,non-productive cough,0.062215056
+37,epilepsy,69.0,seizure,0.0617385
+31,systemic infection,118.0,hypotension,0.061541274
+22,anxiety state,22.0,feeling suicidal,0.061246943
+13,infection,46.0,cough,0.061228484
+17,dementia,18.0,unresponsiveness,0.061086196
+25,acquired immuno-deficiency syndrome,53.0,chill,0.06068061
+60,pancreatitis,11.0,nausea,0.060636133
+15,anemia,102.0,heme positive,0.060569257
+33,deep vein thrombosis,85.0,swelling,0.06025319
+7,pneumonia,55.0,green sputum,0.0602021
+15,anemia,103.0,pain back,0.059992433
+4,depressive disorder,39.0,difficulty,0.05985154
+16,chronic obstructive airway disease,46.0,cough,0.05972156
+3,depression mental,39.0,difficulty,0.05968901
+47,ischemia,1.0,pain chest,0.05965553
+37,epilepsy,128.0,drowsiness,0.05931727
+7,pneumonia,52.0,breath sounds decreased,0.059282545
+49,exanthema,47.0,fever,0.05917558
+33,deep vein thrombosis,80.0,erythema,0.05899185
+22,anxiety state,23.0,suicidal,0.05881795
+27,hiv infections,53.0,chill,0.058719277
+11,myocardial infarction,45.0,chest tightness,0.058696624
+35,neoplasm,88.0,hematuria,0.05867113
+28,cellulitis,1.0,pain chest,0.05857581
+11,myocardial infarction,75.0,presence of q wave,0.058200803
+38,cardiomyopathy,16.0,orthopnea,0.05811902
+53,arthritis,27.0,sleeplessness,0.057855606
+28,cellulitis,85.0,swelling,0.057812
+11,myocardial infarction,6.0,syncope,0.057220615
+24,primary malignant neoplasm,142.0,decreased body weight,0.05707762
+25,acquired immuno-deficiency syndrome,62.0,night sweat,0.05645656
+19,confusion,119.0,enuresis,0.05644019
+38,cardiomyopathy,63.0,jugular venous distention,0.056425188
+30,septicemia,53.0,chill,0.056246012
+31,systemic infection,53.0,chill,0.056071434
+41,hepatitis C,190.0,distended abdomen,0.05601302
+26,HIV,62.0,night sweat,0.055944934
+19,confusion,90.0,lethargy,0.055856798
+25,acquired immuno-deficiency syndrome,22.0,feeling suicidal,0.055722367
+47,ischemia,12.0,angina pectoris,0.05570226
+38,cardiomyopathy,6.0,syncope,0.055610526
+24,primary malignant neoplasm,138.0,lesion,0.05558248
+7,pneumonia,60.0,tachypnea,0.055562247
+12,hypercholesterolemia,33.0,worry,0.05520336
+21,hypothyroidism,66.0,speech slurred,0.05513254
+14,infection urinary tract,93.0,difficulty passing urine,0.05506026
+71,schizophrenia,23.0,suicidal,0.055039495
+44,hyperlipidemia,8.0,sweat,0.0550301
+32,sepsis (invertebrate),53.0,chill,0.054984305
+39,chronic kidney failure,16.0,orthopnea,0.054934993
+53,arthritis,78.0,pain,0.05476194
+7,pneumonia,62.0,night sweat,0.05461321
+22,anxiety state,25.0,feeling hopeless,0.054603696
+17,dementia,111.0,unconscious state,0.05454434
+26,HIV,46.0,cough,0.05421823
+37,epilepsy,68.0,hemiplegia,0.054177634
+41,hepatitis C,192.0,macerated skin,0.054141022
+42,peripheral vascular disease,115.0,hyperkalemia,0.053866833
+11,myocardial infarction,10.0,palpitation,0.05375156
+27,hiv infections,62.0,night sweat,0.053534754
+30,septicemia,60.0,tachypnea,0.05337542
+62,paroxysmal dyspnea,16.0,orthopnea,0.0532008
+22,anxiety state,26.0,weepiness,0.053187404
+42,peripheral vascular disease,18.0,unresponsiveness,0.053160947
+22,anxiety state,24.0,hallucinations auditory,0.05301796
+50,benign prostatic hypertrophy,30.0,blackout,0.052909143
+32,sepsis (invertebrate),60.0,tachypnea,0.05256398
+27,hiv infections,22.0,feeling suicidal,0.052492794
+28,cellulitis,155.0,hypesthesia,0.052094873
+14,infection urinary tract,19.0,mental status changes,0.051865943
+73,overload fluid,16.0,orthopnea,0.051660657
+31,systemic infection,60.0,tachypnea,0.051372662
+50,benign prostatic hypertrophy,16.0,orthopnea,0.051320396
+24,primary malignant neoplasm,117.0,ascites,0.051278345
+19,confusion,4.0,asthenia,0.051141594
+20,degenerative polyarthritis,15.0,polydypsia,0.050889105
+16,chronic obstructive airway disease,110.0,patient non compliance,0.050846774
+17,dementia,114.0,unsteady gait,0.05073898
+28,cellulitis,84.0,abscess bacterial,0.050683767
+20,degenerative polyarthritis,114.0,unsteady gait,0.05062162
+82,hepatitis,47.0,fever,0.050268844
+41,hepatitis C,191.0,ache,0.05004637
+39,chronic kidney failure,63.0,jugular venous distention,0.04986595
+60,pancreatitis,78.0,pain,0.049710475
+34,dehydration,47.0,fever,0.049702115
+22,anxiety state,27.0,sleeplessness,0.049695827
+28,cellulitis,82.0,pruritus,0.049673017
+33,deep vein thrombosis,17.0,rale,0.04959526
+28,cellulitis,154.0,redness,0.049435675
+18,insufficiency renal,116.0,urgency of micturition,0.049354978
+28,cellulitis,53.0,chill,0.04909297
+33,deep vein thrombosis,167.0,cardiomegaly,0.04907063
+44,hyperlipidemia,199.0,photopsia,0.048955318
+71,schizophrenia,24.0,hallucinations auditory,0.048862558
+21,hypothyroidism,6.0,syncope,0.048840787
+18,insufficiency renal,117.0,ascites,0.048810694
+68,stenosis aortic valve,1.0,pain chest,0.048735466
+52,mitral valve insufficiency,43.0,hypokinesia,0.04866231
+54,bronchitis,2.0,shortness of breath,0.048585534
+51,kidney failure acute,118.0,hypotension,0.048477083
+73,overload fluid,2.0,shortness of breath,0.048469808
+18,insufficiency renal,115.0,hyperkalemia,0.048208266
+62,paroxysmal dyspnea,1.0,pain chest,0.048202593
+17,dementia,34.0,agitation,0.048098
+26,HIV,60.0,tachypnea,0.047971778
+37,epilepsy,121.0,muscle twitch,0.047680505
+30,septicemia,150.0,spontaneous rupture of membranes,0.04754577
+62,paroxysmal dyspnea,63.0,jugular venous distention,0.04748955
+41,hepatitis C,22.0,feeling suicidal,0.04748396
+17,dementia,112.0,bedridden,0.0474398
+17,dementia,112.0,bedridden,0.0474398
+17,dementia,78.0,pain,0.04729591
+44,hyperlipidemia,2.0,shortness of breath,0.047295526
+31,systemic infection,150.0,spontaneous rupture of membranes,0.047178827
+30,septicemia,77.0,bradycardia,0.047118843
+13,infection,81.0,hepatosplenomegaly,0.047106788
+73,overload fluid,63.0,jugular venous distention,0.047056966
+46,obesity,78.0,pain,0.047019016
+19,confusion,5.0,fall,0.04686783
+49,exanthema,80.0,erythema,0.04678404
+30,septicemia,164.0,breech presentation,0.04676106
+26,HIV,83.0,diarrhea,0.046711348
+62,paroxysmal dyspnea,2.0,shortness of breath,0.046688583
+38,cardiomyopathy,17.0,rale,0.046579752
+15,anemia,91.0,hyponatremia,0.04650446
+32,sepsis (invertebrate),150.0,spontaneous rupture of membranes,0.046376027
+34,dehydration,11.0,nausea,0.046309166
+48,cirrhosis,98.0,tumor cell invasion,0.046303406
+40,carcinoma,78.0,pain,0.046263367
+32,sepsis (invertebrate),77.0,bradycardia,0.0462589
+15,anemia,3.0,dizziness,0.046204977
+15,anemia,104.0,orthostasis,0.046119403
+32,sepsis (invertebrate),164.0,breech presentation,0.046001323
+25,acquired immuno-deficiency syndrome,83.0,diarrhea,0.045922577
+43,psychotic disorder,22.0,feeling suicidal,0.04589648
+25,acquired immuno-deficiency syndrome,49.0,productive cough,0.045622498
+31,systemic infection,77.0,bradycardia,0.045577556
+10,asthma,59.0,distress respiratory,0.045566313
+31,systemic infection,164.0,breech presentation,0.04498368
+86,thrombocytopaenia,97.0,ecchymosis,0.044840157
+27,hiv infections,49.0,productive cough,0.04479692
+35,neoplasm,98.0,tumor cell invasion,0.044695836
+39,chronic kidney failure,47.0,fever,0.04463628
+25,acquired immuno-deficiency syndrome,60.0,tachypnea,0.044573583
+24,primary malignant neoplasm,143.0,hoarseness,0.044534832
+25,acquired immuno-deficiency syndrome,142.0,decreased body weight,0.044513732
+37,epilepsy,35.0,tremor,0.04445569
+27,hiv infections,83.0,diarrhea,0.04434346
+21,hypothyroidism,128.0,drowsiness,0.044339754
+43,psychotic disorder,23.0,suicidal,0.044069998
+74,ulcer peptic,11.0,nausea,0.044013906
+44,hyperlipidemia,75.0,presence of q wave,0.0439984
+39,chronic kidney failure,2.0,shortness of breath,0.043878328
+15,anemia,53.0,chill,0.043575544
+98,tricuspid valve insufficiency,2.0,shortness of breath,0.043510217
+37,epilepsy,18.0,unresponsiveness,0.04339093
+44,hyperlipidemia,43.0,hypokinesia,0.04338801
+22,anxiety state,29.0,irritable mood,0.043295965
+35,neoplasm,172.0,anosmia,0.04326024
+46,obesity,2.0,shortness of breath,0.043139357
+51,kidney failure acute,4.0,asthenia,0.04305025
+79,sickle cell anemia,1.0,pain chest,0.043019965
+79,sickle cell anemia,292.0,breakthrough pain,0.043006193
+34,dehydration,4.0,asthenia,0.042900182
+44,hyperlipidemia,9.0,sweating increased,0.04284113
+29,gastroesophageal reflux disease,45.0,chest tightness,0.04279023
+27,hiv infections,60.0,tachypnea,0.042706423
+83,hypertension pulmonary,233.0,Stahli's line,0.042611506
+56,osteoporosis,5.0,fall,0.042554215
+4,depressive disorder,40.0,nightmare,0.042545997
+49,exanthema,215.0,macule,0.042462666
+3,depression mental,40.0,nightmare,0.042376004
+27,hiv infections,142.0,decreased body weight,0.042347185
+78,failure kidney,16.0,orthopnea,0.042255506
+11,myocardial infarction,64.0,dyspnea,0.042110607
+47,ischemia,2.0,shortness of breath,0.04193276
+93,hepatitis B,326.0,inappropriate affect,0.04183112
+36,embolism pulmonary,108.0,hypoxemia,0.041758593
+105,glaucoma,5.0,fall,0.04167644
+57,transient ischemic attack,66.0,speech slurred,0.041571707
+34,dehydration,169.0,unwell,0.041426063
+28,cellulitis,156.0,hyperacusis,0.04140909
+30,septicemia,165.0,cyanosis,0.04125918
+47,ischemia,8.0,sweat,0.04113216
+86,thrombocytopaenia,47.0,fever,0.04112471
+42,peripheral vascular disease,64.0,dyspnea,0.041086704
+43,psychotic disorder,25.0,feeling hopeless,0.040918127
+53,arthritis,85.0,swelling,0.04090064
+59,paranoia,22.0,feeling suicidal,0.040824678
+71,schizophrenia,29.0,irritable mood,0.04079835
+35,neoplasm,125.0,food intolerance,0.040640727
+32,sepsis (invertebrate),165.0,cyanosis,0.040565368
+57,transient ischemic attack,4.0,asthenia,0.040554777
+12,hypercholesterolemia,74.0,t wave inverted,0.04051979
+52,mitral valve insufficiency,6.0,syncope,0.04051962
+19,confusion,34.0,agitation,0.040439647
+48,cirrhosis,117.0,ascites,0.040414196
+26,HIV,49.0,productive cough,0.04038226
+68,stenosis aortic valve,6.0,syncope,0.040325258
+39,chronic kidney failure,4.0,asthenia,0.04018893
+18,insufficiency renal,19.0,mental status changes,0.040086213
+33,deep vein thrombosis,118.0,hypotension,0.040077467
+54,bronchitis,46.0,cough,0.039948046
+22,anxiety state,30.0,blackout,0.039945167
+43,psychotic disorder,24.0,hallucinations auditory,0.03986776
+43,psychotic disorder,26.0,weepiness,0.039865002
+41,hepatitis C,24.0,hallucinations auditory,0.03984442
+26,HIV,142.0,decreased body weight,0.03981526
+31,systemic infection,165.0,cyanosis,0.03975428
+39,chronic kidney failure,17.0,rale,0.03964353
+53,arthritis,4.0,asthenia,0.039355632
+48,cirrhosis,82.0,pruritus,0.039293442
+59,paranoia,23.0,suicidal,0.039265923
+66,edema pulmonary,16.0,orthopnea,0.039258003
+83,hypertension pulmonary,44.0,dyspnea on exertion,0.03918896
+40,carcinoma,127.0,general discomfort,0.039152823
+42,peripheral vascular disease,195.0,sinus rhythm,0.03910764
+13,infection,86.0,apyrexial,0.039046574
+36,embolism pulmonary,51.0,yellow sputum,0.03903857
+25,acquired immuno-deficiency syndrome,50.0,pleuritic pain,0.039004438
+86,thrombocytopaenia,308.0,monocytosis,0.038975026
+54,bronchitis,47.0,fever,0.03893524
+38,cardiomyopathy,51.0,yellow sputum,0.03890142
+21,hypothyroidism,91.0,hyponatremia,0.03883899
+51,kidney failure acute,92.0,hemodynamically stable,0.038747977
+73,overload fluid,17.0,rale,0.038688593
+21,hypothyroidism,114.0,unsteady gait,0.03859284
+36,embolism pulmonary,175.0,hematocrit decreased,0.03858698
+62,paroxysmal dyspnea,17.0,rale,0.038472157
+68,stenosis aortic valve,12.0,angina pectoris,0.038289692
+148,decubitus ulcer,211.0,systolic murmur,0.038250763
+53,arthritis,92.0,hemodynamically stable,0.03823581
+60,pancreatitis,83.0,diarrhea,0.03810839
+24,primary malignant neoplasm,144.0,thicken,0.038093437
+75,osteomyelitis,78.0,pain,0.037838113
+19,confusion,3.0,dizziness,0.037805352
+19,confusion,111.0,unconscious state,0.0377685
+17,dementia,54.0,rhonchus,0.0377601
+47,ischemia,13.0,pressure chest,0.037711293
+50,benign prostatic hypertrophy,104.0,orthostasis,0.037512846
+27,hiv infections,50.0,pleuritic pain,0.037413385
+29,gastroesophageal reflux disease,75.0,presence of q wave,0.037330534
+21,hypothyroidism,14.0,polyuria,0.037303243
+29,gastroesophageal reflux disease,159.0,burning sensation,0.037289195
+69,malignant neoplasm of breast,271.0,mass in breast,0.037186872
+85,gout,80.0,erythema,0.03718202
+43,psychotic disorder,27.0,sleeplessness,0.037175335
+70,carcinoma breast,271.0,mass in breast,0.037162453
+93,hepatitis B,51.0,yellow sputum,0.037054468
+53,arthritis,2.0,shortness of breath,0.036934275
+33,deep vein thrombosis,97.0,ecchymosis,0.036886107
+2,diabetes,21.0,labored breathing,0.03684779
+29,gastroesophageal reflux disease,160.0,satiety early,0.036805116
+15,anemia,101.0,fatigue,0.036798075
+74,ulcer peptic,253.0,paraparesis,0.036785513
+70,carcinoma breast,80.0,erythema,0.036730554
+26,HIV,50.0,pleuritic pain,0.036676332
+69,malignant neoplasm of breast,80.0,erythema,0.03661228
+40,carcinoma,133.0,mass of body structure,0.036608703
+19,confusion,120.0,asterixis,0.03659458
+89,colitis,47.0,fever,0.036527194
+38,cardiomyopathy,10.0,palpitation,0.03636635
+21,hypothyroidism,130.0,prostatism,0.03629325
+25,acquired immuno-deficiency syndrome,110.0,patient non compliance,0.036243957
+33,deep vein thrombosis,154.0,redness,0.036151834
+16,chronic obstructive airway disease,45.0,chest tightness,0.036109462
+68,stenosis aortic valve,78.0,pain,0.036050245
+83,hypertension pulmonary,303.0,heavy legs,0.036045227
+22,anxiety state,1.0,pain chest,0.035991542
+79,sickle cell anemia,103.0,pain back,0.03597883
+28,cellulitis,110.0,patient non compliance,0.035922207
+36,embolism pulmonary,57.0,wheezing,0.03570017
+22,anxiety state,31.0,mood depressed,0.035601802
+12,hypercholesterolemia,77.0,bradycardia,0.035571527
+79,sickle cell anemia,78.0,pain,0.03552368
+52,mitral valve insufficiency,212.0,asymptomatic,0.035494827
+59,paranoia,24.0,hallucinations auditory,0.03544785
+71,schizophrenia,274.0,hypersomnolence,0.035405017
+35,neoplasm,78.0,pain,0.035268467
+66,edema pulmonary,63.0,jugular venous distention,0.03525327
+12,hypercholesterolemia,64.0,dyspnea,0.035084028
+19,confusion,91.0,hyponatremia,0.035036184
+41,hepatitis C,53.0,chill,0.034945045
+60,pancreatitis,148.0,pain abdominal,0.034938697
+55,hemiparesis,4.0,asthenia,0.034770973
+60,pancreatitis,20.0,vomiting,0.034694195
+74,ulcer peptic,68.0,hemiplegia,0.03468532
+80,failure heart,2.0,shortness of breath,0.03462153
+39,chronic kidney failure,11.0,nausea,0.034576192
+27,hiv infections,110.0,patient non compliance,0.034553215
+34,dehydration,90.0,lethargy,0.0345063
+36,embolism pulmonary,49.0,productive cough,0.034491323
+48,cirrhosis,190.0,distended abdomen,0.034464654
+49,exanthema,53.0,chill,0.034400765
+37,epilepsy,180.0,myoclonus,0.034389365
+67,lymphatic diseases,47.0,fever,0.03438164
+36,embolism pulmonary,64.0,dyspnea,0.03435345
+79,sickle cell anemia,2.0,shortness of breath,0.034142606
+22,anxiety state,32.0,hallucinations visual,0.03412607
+51,kidney failure acute,184.0,oliguria,0.034103163
+86,thrombocytopaenia,309.0,posterior rhinorrhea,0.034103148
+49,exanthema,82.0,pruritus,0.03404283
+51,kidney failure acute,115.0,hyperkalemia,0.03396057
+51,kidney failure acute,83.0,diarrhea,0.033919908
+19,confusion,69.0,seizure,0.03384275
+38,cardiomyopathy,44.0,dyspnea on exertion,0.033678506
+44,hyperlipidemia,76.0,chest discomfort,0.03365139
+83,hypertension pulmonary,176.0,neck stiffness,0.033527717
+19,confusion,18.0,unresponsiveness,0.03343128
+47,ischemia,128.0,drowsiness,0.03342963
+43,psychotic disorder,28.0,motor retardation,0.0332524
+76,gastritis,11.0,nausea,0.033221543
+15,anemia,78.0,pain,0.03309281
+54,bronchitis,45.0,chest tightness,0.033069246
+87,hypoglycemia,18.0,unresponsiveness,0.032961257
+37,epilepsy,90.0,lethargy,0.0328677
+26,HIV,110.0,patient non compliance,0.032860074
+53,arthritis,6.0,syncope,0.03284224
+41,hepatitis C,117.0,ascites,0.032836147
+39,chronic kidney failure,51.0,yellow sputum,0.032733478
+36,embolism pulmonary,18.0,unresponsiveness,0.0326815
+69,malignant neoplasm of breast,272.0,retropulsion,0.032677848
+70,carcinoma breast,272.0,retropulsion,0.0326589
+65,carcinoma prostate,4.0,asthenia,0.032578
+24,primary malignant neoplasm,139.0,cushingoid facies,0.03253188
+49,exanthema,78.0,pain,0.032525945
+45,bipolar disorder,22.0,feeling suicidal,0.03248476
+18,insufficiency renal,64.0,dyspnea,0.032393064
+43,psychotic disorder,29.0,irritable mood,0.03236692
+75,osteomyelitis,47.0,fever,0.03230382
+40,carcinoma,98.0,tumor cell invasion,0.03212498
+68,stenosis aortic valve,269.0,sciatica,0.032042347
+104,fibroid tumor,2.0,shortness of breath,0.032018397
+15,anemia,54.0,rhonchus,0.031937975
+71,schizophrenia,32.0,hallucinations visual,0.031847987
+40,carcinoma,56.0,non-productive cough,0.031745054
+123,aphasia,67.0,facial paresis,0.031741906
+18,insufficiency renal,83.0,diarrhea,0.031682774
+56,osteoporosis,6.0,syncope,0.03167848
+45,bipolar disorder,23.0,suicidal,0.031507306
+19,confusion,121.0,muscle twitch,0.03149607
+64,malignant neoplasm of prostate,4.0,asthenia,0.031462092
+47,ischemia,9.0,sweating increased,0.03145794
+46,obesity,134.0,has religious belief,0.03129044
+44,hyperlipidemia,10.0,palpitation,0.031186933
+67,lymphatic diseases,78.0,pain,0.031180078
+35,neoplasm,138.0,lesion,0.031101681
+68,stenosis aortic valve,76.0,chest discomfort,0.030984003
+69,malignant neoplasm of breast,187.0,paresthesia,0.030958768
+70,carcinoma breast,187.0,paresthesia,0.030935641
+113,melanoma,47.0,fever,0.030886237
+95,lymphoma,47.0,fever,0.030863626
+75,osteomyelitis,280.0,prostate tender,0.030838728
+76,gastritis,102.0,heme positive,0.030725654
+61,incontinence,4.0,asthenia,0.030633036
+48,cirrhosis,138.0,lesion,0.030543204
+17,dementia,24.0,hallucinations auditory,0.030500242
+82,hepatitis,82.0,pruritus,0.030400958
+80,failure heart,16.0,orthopnea,0.030395415
+48,cirrhosis,92.0,hemodynamically stable,0.030366251
+11,myocardial infarction,76.0,chest discomfort,0.030357258
+55,hemiparesis,66.0,speech slurred,0.03022842
+82,hepatitis,53.0,chill,0.03016646
+21,hypothyroidism,34.0,agitation,0.030157503
+56,osteoporosis,126.0,numbness of hand,0.030028488
+44,hyperlipidemia,3.0,dizziness,0.03001919
+29,gastroesophageal reflux disease,91.0,hyponatremia,0.029949645
+43,psychotic disorder,30.0,blackout,0.029926248
+35,neoplasm,133.0,mass of body structure,0.029917708
+36,embolism pulmonary,176.0,neck stiffness,0.02987066
+70,carcinoma breast,133.0,mass of body structure,0.029792923
+69,malignant neoplasm of breast,133.0,mass of body structure,0.029771168
+31,systemic infection,18.0,unresponsiveness,0.02973282
+93,hepatitis B,60.0,tachypnea,0.029718772
+44,hyperlipidemia,68.0,hemiplegia,0.02965836
+3,depression mental,41.0,unable to concentrate,0.02964991
+15,anemia,99.0,haemorrhage,0.029503934
+50,benign prostatic hypertrophy,59.0,distress respiratory,0.029481623
+65,carcinoma prostate,87.0,dysuria,0.029432751
+4,depressive disorder,41.0,unable to concentrate,0.02941967
+29,gastroesophageal reflux disease,162.0,sensory discomfort,0.029394457
+29,gastroesophageal reflux disease,4.0,asthenia,0.029344782
+85,gout,78.0,pain,0.029309977
+62,paroxysmal dyspnea,46.0,cough,0.029247675
+38,cardiomyopathy,64.0,dyspnea,0.029212862
+78,failure kidney,2.0,shortness of breath,0.029210899
+45,bipolar disorder,25.0,feeling hopeless,0.029176114
+76,gastritis,283.0,disequilibrium,0.02916115
+34,dehydration,19.0,mental status changes,0.02914415
+33,deep vein thrombosis,56.0,non-productive cough,0.029090313
+83,hypertension pulmonary,118.0,hypotension,0.029008582
+30,septicemia,18.0,unresponsiveness,0.028945819
+71,schizophrenia,34.0,agitation,0.028918957
+59,paranoia,29.0,irritable mood,0.02887284
+52,mitral valve insufficiency,64.0,dyspnea,0.028823642
+56,osteoporosis,7.0,vertigo,0.02879755
+22,anxiety state,33.0,worry,0.028767953
+31,systemic infection,17.0,rale,0.028760504
+77,bacteremia,47.0,fever,0.028756281
+22,anxiety state,34.0,agitation,0.028682042
+98,tricuspid valve insufficiency,78.0,pain,0.028632725
+40,carcinoma,187.0,paresthesia,0.028616067
+39,chronic kidney failure,115.0,hyperkalemia,0.028583918
+29,gastroesophageal reflux disease,127.0,general discomfort,0.028580816
+52,mitral valve insufficiency,44.0,dyspnea on exertion,0.028453317
+21,hypothyroidism,122.0,sleepy,0.028451629
+45,bipolar disorder,26.0,weepiness,0.028419612
+29,gastroesophageal reflux disease,1.0,pain chest,0.028382836
+63,hernia,11.0,nausea,0.028320663
+18,insufficiency renal,39.0,difficulty,0.028255915
+57,transient ischemic attack,67.0,facial paresis,0.02813618
+34,dehydration,3.0,dizziness,0.028029742
+68,stenosis aortic valve,2.0,shortness of breath,0.028020555
+32,sepsis (invertebrate),18.0,unresponsiveness,0.02796513
+11,myocardial infarction,77.0,bradycardia,0.027958117
+50,benign prostatic hypertrophy,62.0,night sweat,0.02790747
+45,bipolar disorder,24.0,hallucinations auditory,0.027841596
+29,gastroesophageal reflux disease,11.0,nausea,0.027809089
+82,hepatitis,117.0,ascites,0.02780578
+49,exanthema,138.0,lesion,0.027801907
+102,neuropathy,4.0,asthenia,0.027746106
+60,pancreatitis,251.0,stool color yellow,0.027645627
+98,tricuspid valve insufficiency,47.0,fever,0.027618667
+40,carcinoma,138.0,lesion,0.027521584
+56,osteoporosis,190.0,distended abdomen,0.027449988
+71,schizophrenia,33.0,worry,0.027448457
+78,failure kidney,119.0,enuresis,0.02742736
+51,kidney failure acute,18.0,unresponsiveness,0.027414616
+48,cirrhosis,148.0,pain abdominal,0.02738664
+7,pneumonia,61.0,malaise,0.027359914
+52,mitral valve insufficiency,10.0,palpitation,0.027333608
+82,hepatitis,150.0,spontaneous rupture of membranes,0.027261639
+20,degenerative polyarthritis,129.0,stiffness,0.027102403
+39,chronic kidney failure,45.0,chest tightness,0.027096402
+75,osteomyelitis,85.0,swelling,0.027086647
+63,hernia,257.0,hyperventilation,0.027077205
+35,neoplasm,160.0,satiety early,0.027034413
+66,edema pulmonary,17.0,rale,0.02701785
+40,carcinoma,142.0,decreased body weight,0.026997566
+80,failure heart,63.0,jugular venous distention,0.026939273
+62,paroxysmal dyspnea,9.0,sweating increased,0.026926557
+85,gout,43.0,hypokinesia,0.026852325
+35,neoplasm,142.0,decreased body weight,0.026816519
+18,insufficiency renal,43.0,hypokinesia,0.026767265
+45,bipolar disorder,27.0,sleeplessness,0.026721608
+59,paranoia,30.0,blackout,0.026702054
+43,psychotic disorder,31.0,mood depressed,0.026691778
+57,transient ischemic attack,7.0,vertigo,0.026596675
+42,peripheral vascular disease,21.0,labored breathing,0.026571138
+106,neoplasm metastasis,98.0,tumor cell invasion,0.026521727
+47,ischemia,212.0,asymptomatic,0.026521223
+49,exanthema,154.0,redness,0.02649274
+73,overload fluid,115.0,hyperkalemia,0.026486192
+61,incontinence,179.0,aura,0.026383275
+47,ischemia,76.0,chest discomfort,0.026369914
+22,anxiety state,134.0,has religious belief,0.026310634
+49,exanthema,85.0,swelling,0.026246566
+35,neoplasm,62.0,night sweat,0.026183907
+54,bronchitis,57.0,wheezing,0.02616585
+39,chronic kidney failure,53.0,chill,0.02615551
+65,carcinoma prostate,88.0,hematuria,0.026115786
+61,incontinence,69.0,seizure,0.026110493
+113,melanoma,78.0,pain,0.026008116
+85,gout,85.0,swelling,0.025857935
+66,edema pulmonary,1.0,pain chest,0.025856115
+58,adenocarcinoma,138.0,lesion,0.025854945
+57,transient ischemic attack,6.0,syncope,0.025839321
+83,hypertension pulmonary,52.0,breath sounds decreased,0.025822615
+70,carcinoma breast,138.0,lesion,0.025779406
+69,malignant neoplasm of breast,138.0,lesion,0.025721781
+85,gout,137.0,hot flush,0.02569674
+125,pyelonephritis,47.0,fever,0.02568196
+125,pyelonephritis,47.0,fever,0.02568196
+58,adenocarcinoma,78.0,pain,0.025605403
+86,thrombocytopaenia,82.0,pruritus,0.025599629
+43,psychotic disorder,32.0,hallucinations visual,0.025556918
+87,hypoglycemia,220.0,"hypothermia, natural",0.025374651
+36,embolism pulmonary,59.0,distress respiratory,0.025357733
+73,overload fluid,128.0,drowsiness,0.025308572
+30,septicemia,17.0,rale,0.025163066
+102,neuropathy,78.0,pain,0.025160946
+63,hernia,258.0,excruciating pain,0.02514312
+37,epilepsy,122.0,sleepy,0.02506905
+76,gastritis,78.0,pain,0.025029425
+21,hypothyroidism,101.0,fatigue,0.024979856
+67,lymphatic diseases,85.0,swelling,0.02494134
+19,confusion,122.0,sleepy,0.024750294
+74,ulcer peptic,148.0,pain abdominal,0.024732016
+58,adenocarcinoma,160.0,satiety early,0.024726417
+56,osteoporosis,130.0,prostatism,0.02469807
+66,edema pulmonary,2.0,shortness of breath,0.024623545
+19,confusion,35.0,tremor,0.024546564
+31,systemic infection,99.0,haemorrhage,0.024503138
+21,hypothyroidism,39.0,difficulty,0.024494048
+72,diverticulitis,47.0,fever,0.024462057
+74,ulcer peptic,20.0,vomiting,0.024372187
+39,chronic kidney failure,18.0,unresponsiveness,0.02437136
+84,deglutition disorder,4.0,asthenia,0.024367658
+77,bacteremia,48.0,decreased translucency,0.024353202
+128,pericardial effusion body substance,2.0,shortness of breath,0.02432838
+60,pancreatitis,252.0,rigor - temperature-associated observation,0.024311244
+32,sepsis (invertebrate),17.0,rale,0.024302643
+64,malignant neoplasm of prostate,87.0,dysuria,0.02426833
+17,dementia,113.0,abdominal tenderness,0.024254885
+70,carcinoma breast,85.0,swelling,0.024218824
+30,septicemia,99.0,haemorrhage,0.024182819
+69,malignant neoplasm of breast,85.0,swelling,0.024174904
+61,incontinence,5.0,fall,0.0241545
+41,hepatitis C,120.0,asterixis,0.02414743
+21,hypothyroidism,118.0,hypotension,0.02410865
+18,insufficiency renal,52.0,breath sounds decreased,0.024104811
+114,gastroenteritis,47.0,fever,0.024090195
+22,anxiety state,35.0,tremor,0.024086282
+67,lymphatic diseases,133.0,mass of body structure,0.024047492
+65,carcinoma prostate,17.0,rale,0.023953788
+127,effusion pericardial,2.0,shortness of breath,0.023859657
+75,osteomyelitis,80.0,erythema,0.02381383
+40,carcinoma,11.0,nausea,0.023765411
+59,paranoia,31.0,mood depressed,0.023756213
+94,parkinson disease,5.0,fall,0.023711385
+81,upper respiratory infection,2.0,shortness of breath,0.02368905
+34,dehydration,20.0,vomiting,0.023687378
+42,peripheral vascular disease,170.0,anorexia,0.023662275
+115,malignant neoplasm of lung,2.0,shortness of breath,0.023594812
+62,paroxysmal dyspnea,8.0,sweat,0.023573745
+32,sepsis (invertebrate),99.0,haemorrhage,0.02355628
+88,pneumonia aspiration,48.0,decreased translucency,0.023547968
+103,kidney disease,47.0,fever,0.023515286
+19,confusion,65.0,dysarthria,0.023469627
+74,ulcer peptic,263.0,polymyalgia,0.02344498
+45,bipolar disorder,28.0,motor retardation,0.023384966
+34,dehydration,83.0,diarrhea,0.023344183
+82,hepatitis,59.0,distress respiratory,0.023337938
+72,diverticulitis,87.0,dysuria,0.023332901
+45,bipolar disorder,29.0,irritable mood,0.023324134
+109,ketoacidosis diabetic,11.0,nausea,0.023312772
+18,insufficiency renal,86.0,apyrexial,0.02330294
+88,pneumonia aspiration,47.0,fever,0.023296759
+42,peripheral vascular disease,122.0,sleepy,0.023296509
+22,anxiety state,78.0,pain,0.023262255
+93,hepatitis B,327.0,poor feeding,0.02323951
+136,thrombus,43.0,hypokinesia,0.023221623
+63,hernia,259.0,gag,0.023209035
+35,neoplasm,148.0,pain abdominal,0.023185184
+22,anxiety state,135.0,nervousness,0.023106521
+58,adenocarcinoma,133.0,mass of body structure,0.023062762
+15,anemia,85.0,swelling,0.023058891
+89,colitis,78.0,pain,0.023052411
+136,thrombus,2.0,shortness of breath,0.023034297
+148,decubitus ulcer,300.0,frail,0.023024417
+83,hypertension pulmonary,183.0,left atrial hypertrophy,0.022992227
+74,ulcer peptic,239.0,out of breath,0.022982094
+34,dehydration,6.0,syncope,0.022977535
+34,dehydration,6.0,syncope,0.022977535
+87,hypoglycemia,311.0,lameness,0.022972714
+54,bronchitis,49.0,productive cough,0.022956898
+37,epilepsy,181.0,gurgle,0.022932967
+97,encephalopathy,128.0,drowsiness,0.022820517
+59,paranoia,32.0,hallucinations visual,0.022772355
+29,gastroesophageal reflux disease,10.0,palpitation,0.022750106
+98,tricuspid valve insufficiency,11.0,nausea,0.022735422
+40,carcinoma,143.0,hoarseness,0.022684313
+125,pyelonephritis,88.0,hematuria,0.022557694
+85,gout,154.0,redness,0.022541896
+53,arthritis,221.0,atypia,0.022538401
+54,bronchitis,53.0,chill,0.02249985
+15,anemia,105.0,arthralgia,0.022435673
+21,hypothyroidism,131.0,weight gain,0.022417054
+104,fibroid tumor,47.0,fever,0.022384401
+58,adenocarcinoma,245.0,decreased stool caliber,0.022365348
+29,gastroesophageal reflux disease,163.0,constipation,0.022353582
+66,edema pulmonary,9.0,sweating increased,0.02231481
+78,failure kidney,118.0,hypotension,0.022307932
+58,adenocarcinoma,142.0,decreased body weight,0.022271207
+46,obesity,31.0,mood depressed,0.022220116
+33,deep vein thrombosis,168.0,clonus,0.022151712
+40,carcinoma,83.0,diarrhea,0.022148829
+34,dehydration,162.0,sensory discomfort,0.022107992
+26,HIV,22.0,feeling suicidal,0.021934323
+50,benign prostatic hypertrophy,19.0,mental status changes,0.021860842
+56,osteoporosis,236.0,hirsutism,0.021784723
+64,malignant neoplasm of prostate,17.0,rale,0.021757253
+66,edema pulmonary,8.0,sweat,0.0216649
+43,psychotic disorder,33.0,worry,0.021655075
+64,malignant neoplasm of prostate,88.0,hematuria,0.021624977
+45,bipolar disorder,30.0,blackout,0.021581352
+76,gastritis,148.0,pain abdominal,0.021549758
+87,hypoglycemia,111.0,unconscious state,0.02154918
+117,manic disorder,22.0,feeling suicidal,0.021495814
+117,manic disorder,22.0,feeling suicidal,0.021495814
+35,neoplasm,144.0,thicken,0.021495156
+70,carcinoma breast,159.0,burning sensation,0.021492384
+114,gastroenteritis,11.0,nausea,0.021488138
+89,colitis,53.0,chill,0.021455372
+21,hypothyroidism,40.0,nightmare,0.021451935
+93,hepatitis B,148.0,pain abdominal,0.021394253
+29,gastroesophageal reflux disease,148.0,pain abdominal,0.021371923
+69,malignant neoplasm of breast,159.0,burning sensation,0.021342501
+66,edema pulmonary,116.0,urgency of micturition,0.021305762
+60,pancreatitis,86.0,apyrexial,0.021284165
+43,psychotic disorder,34.0,agitation,0.02125178
+93,hepatitis B,302.0,projectile vomiting,0.021214934
+67,lymphatic diseases,62.0,night sweat,0.021181086
+113,melanoma,253.0,paraparesis,0.021158142
+140,pancytopenia,398.0,hypoproteinemia,0.02115073
+130,pneumothorax,64.0,dyspnea,0.021123609
+71,schizophrenia,37.0,verbal auditory hallucinations,0.021052115
+76,gastritis,20.0,vomiting,0.020974088
+50,benign prostatic hypertrophy,65.0,dysarthria,0.020959163
+67,lymphatic diseases,53.0,chill,0.02094369
+25,acquired immuno-deficiency syndrome,152.0,muscle hypotonia,0.02089115
+39,chronic kidney failure,19.0,mental status changes,0.020873869
+79,sickle cell anemia,148.0,pain abdominal,0.020860855
+51,kidney failure acute,99.0,haemorrhage,0.020793663
+115,malignant neoplasm of lung,4.0,asthenia,0.02076438
+47,ischemia,17.0,rale,0.020719642
+72,diverticulitis,78.0,pain,0.02070858
+70,carcinoma breast,39.0,difficulty,0.020681957
+39,chronic kidney failure,85.0,swelling,0.020674521
+69,malignant neoplasm of breast,39.0,difficulty,0.02067119
+113,melanoma,133.0,mass of body structure,0.020668222
+113,melanoma,271.0,mass in breast,0.020650495
+117,manic disorder,23.0,suicidal,0.020649297
+117,manic disorder,23.0,suicidal,0.020649297
+39,chronic kidney failure,83.0,diarrhea,0.020607132
+77,bacteremia,18.0,unresponsiveness,0.020588
+102,neuropathy,70.0,numbness,0.020558797
+62,paroxysmal dyspnea,10.0,palpitation,0.020484025
+61,incontinence,6.0,syncope,0.020455223
+40,carcinoma,173.0,metastatic lesion,0.020378122
+106,neoplasm metastasis,125.0,food intolerance,0.020320399
+94,parkinson disease,6.0,syncope,0.020299187
+82,hepatitis,148.0,pain abdominal,0.020280935
+26,HIV,152.0,muscle hypotonia,0.020221094
+35,neoplasm,173.0,metastatic lesion,0.020210134
+47,ischemia,195.0,sinus rhythm,0.020189704
+56,osteoporosis,78.0,pain,0.020178374
+22,anxiety state,10.0,palpitation,0.020176435
+91,suicide attempt,23.0,suicidal,0.020125734
+89,colitis,11.0,nausea,0.020108458
+82,hepatitis,60.0,tachypnea,0.02009942
+21,hypothyroidism,19.0,mental status changes,0.02009612
+89,colitis,92.0,hemodynamically stable,0.020087497
+27,hiv infections,152.0,muscle hypotonia,0.020034783
+29,gastroesophageal reflux disease,9.0,sweating increased,0.020034287
+65,carcinoma prostate,98.0,tumor cell invasion,0.02001065
+19,confusion,19.0,mental status changes,0.019939806
+77,bacteremia,284.0,flushing,0.019875206
+63,hernia,4.0,asthenia,0.019802142
+40,carcinoma,144.0,thicken,0.019753883
+15,anemia,95.0,guaiac positive,0.01975236
+58,adenocarcinoma,246.0,hematochezia,0.01972702
+107,malignant tumor of colon,127.0,general discomfort,0.019694297
+87,hypoglycemia,312.0,claudication,0.019690897
+21,hypothyroidism,28.0,motor retardation,0.019688852
+47,ischemia,64.0,dyspnea,0.01959717
+28,cellulitis,157.0,scratch marks,0.019550696
+139,migraine disorders,47.0,fever,0.019467434
+21,hypothyroidism,133.0,mass of body structure,0.019457966
+112,respiratory failure,2.0,shortness of breath,0.019457579
+56,osteoporosis,238.0,bradykinesia,0.01941416
+18,insufficiency renal,118.0,hypotension,0.01939057
+18,insufficiency renal,95.0,guaiac positive,0.019361116
+34,dehydration,118.0,hypotension,0.019346822
+55,hemiparesis,67.0,facial paresis,0.01931629
+106,neoplasm metastasis,78.0,pain,0.019289533
+46,obesity,211.0,systolic murmur,0.019278271
+55,hemiparesis,68.0,hemiplegia,0.01925332
+83,hypertension pulmonary,165.0,cyanosis,0.019251399
+82,hepatitis,20.0,vomiting,0.019174395
+117,manic disorder,25.0,feeling hopeless,0.01916924
+54,bronchitis,64.0,dyspnea,0.01915914
+61,incontinence,253.0,paraparesis,0.019147057
+46,obesity,210.0,overweight,0.019130278
+59,paranoia,34.0,agitation,0.019124815
+34,dehydration,170.0,anorexia,0.019068025
+85,gout,141.0,emphysematous change,0.019040406
+18,insufficiency renal,85.0,swelling,0.018982364
+61,incontinence,35.0,tremor,0.018975984
+46,obesity,97.0,ecchymosis,0.018845158
+102,neuropathy,316.0,awakening early,0.01883949
+66,edema pulmonary,115.0,hyperkalemia,0.018821094
+42,peripheral vascular disease,158.0,sore to touch,0.018800631
+52,mitral valve insufficiency,78.0,pain,0.018794281
+49,exanthema,105.0,arthralgia,0.018778423
+111,tonic-clonic seizures,128.0,drowsiness,0.01877435
+123,aphasia,121.0,muscle twitch,0.018741287
+122,spasm bronchial,2.0,shortness of breath,0.018707154
+40,carcinoma,186.0,unhappy,0.018680682
+36,embolism pulmonary,177.0,cicatrisation,0.018670516
+97,encephalopathy,120.0,asterixis,0.018658303
+21,hypothyroidism,20.0,vomiting,0.018630765
+77,bacteremia,53.0,chill,0.018616464
+117,manic disorder,24.0,hallucinations auditory,0.018604776
+105,glaucoma,91.0,hyponatremia,0.018597594
+105,glaucoma,114.0,unsteady gait,0.018590752
+58,adenocarcinoma,163.0,constipation,0.018569738
+61,incontinence,111.0,unconscious state,0.018568208
+39,chronic kidney failure,20.0,vomiting,0.018561458
+124,obesity morbid,46.0,cough,0.018542284
+91,suicide attempt,24.0,hallucinations auditory,0.018507175
+44,hyperlipidemia,200.0,giddy mood,0.0185066
+53,arthritis,222.0,general unsteadiness,0.01850391
+57,transient ischemic attack,233.0,Stahli's line,0.018452562
+14,infection urinary tract,94.0,consciousness clear,0.018425304
+38,cardiomyopathy,183.0,left atrial hypertrophy,0.018421585
+100,candidiasis,53.0,chill,0.018398821
+70,carcinoma breast,64.0,dyspnea,0.018360756
+29,gastroesophageal reflux disease,8.0,sweat,0.018347524
+54,bronchitis,62.0,night sweat,0.018345661
+104,fibroid tumor,347.0,para 2,0.018342208
+67,lymphatic diseases,142.0,decreased body weight,0.018329116
+78,failure kidney,18.0,unresponsiveness,0.018310746
+68,stenosis aortic valve,270.0,frothy sputum,0.018309915
+69,malignant neoplasm of breast,64.0,dyspnea,0.018306823
+45,bipolar disorder,32.0,hallucinations visual,0.018285308
+78,failure kidney,184.0,oliguria,0.018278318
+91,suicide attempt,26.0,weepiness,0.018248828
+116,carcinoma of lung,2.0,shortness of breath,0.018242085
+36,embolism pulmonary,60.0,tachypnea,0.018230712
+43,psychotic disorder,35.0,tremor,0.018216895
+61,incontinence,18.0,unresponsiveness,0.018153543
+77,bacteremia,190.0,distended abdomen,0.018134845
+54,bronchitis,142.0,decreased body weight,0.018093538
+116,carcinoma of lung,46.0,cough,0.01800261
+84,deglutition disorder,304.0,titubation,0.01788909
+75,osteomyelitis,84.0,abscess bacterial,0.01782995
+39,chronic kidney failure,184.0,oliguria,0.017787183
+129,chronic alcoholic intoxication,22.0,feeling suicidal,0.017771576
+101,oral candidiasis,53.0,chill,0.017758211
+139,migraine disorders,70.0,numbness,0.017732073
+58,adenocarcinoma,148.0,pain abdominal,0.017724402
+125,pyelonephritis,78.0,pain,0.017715275
+36,embolism pulmonary,50.0,pleuritic pain,0.017705731
+67,lymphatic diseases,138.0,lesion,0.017679472
+85,gout,117.0,ascites,0.017669277
+135,dependence,23.0,suicidal,0.017652713
+76,gastritis,142.0,decreased body weight,0.017629402
+67,lymphatic diseases,56.0,non-productive cough,0.017578995
+67,lymphatic diseases,154.0,redness,0.017570676
+94,parkinson disease,67.0,facial paresis,0.017568491
+87,hypoglycemia,14.0,polyuria,0.017563883
+86,thrombocytopaenia,101.0,fatigue,0.017506361
+63,hernia,148.0,pain abdominal,0.017480444
+3,depression mental,42.0,homelessness,0.017468968
+86,thrombocytopaenia,118.0,hypotension,0.017459078
+28,cellulitis,158.0,sore to touch,0.017439995
+105,glaucoma,190.0,distended abdomen,0.01742989
+4,depressive disorder,42.0,homelessness,0.017427387
+90,diverticulosis,102.0,heme positive,0.017366504
+90,diverticulosis,84.0,abscess bacterial,0.017356686
+76,gastritis,99.0,haemorrhage,0.017313695
+41,hepatitis C,110.0,patient non compliance,0.017304715
+90,diverticulosis,318.0,fecaluria,0.017290719
+111,tonic-clonic seizures,98.0,tumor cell invasion,0.017282983
+82,hepatitis,302.0,projectile vomiting,0.01725684
+55,hemiparesis,18.0,unresponsiveness,0.017231837
+75,osteomyelitis,93.0,difficulty passing urine,0.017217118
+79,sickle cell anemia,55.0,green sputum,0.017211953
+113,melanoma,82.0,pruritus,0.017206315
+86,thrombocytopaenia,99.0,haemorrhage,0.017178688
+79,sickle cell anemia,81.0,hepatosplenomegaly,0.017137568
+64,malignant neoplasm of prostate,7.0,vertigo,0.017133811
+115,malignant neoplasm of lung,46.0,cough,0.017127553
+81,upper respiratory infection,46.0,cough,0.017093632
+74,ulcer peptic,135.0,nervousness,0.01705851
+48,cirrhosis,95.0,guaiac positive,0.01702819
+65,carcinoma prostate,7.0,vertigo,0.016985573
+47,ischemia,77.0,bradycardia,0.016983323
+147,affect labile,25.0,feeling hopeless,0.016976327
+81,upper respiratory infection,47.0,fever,0.01697443
+90,diverticulosis,11.0,nausea,0.016973363
+91,suicide attempt,27.0,sleeplessness,0.016942
+64,malignant neoplasm of prostate,98.0,tumor cell invasion,0.016899493
+60,pancreatitis,158.0,sore to touch,0.016896356
+19,confusion,124.0,lightheadedness,0.016877526
+86,thrombocytopaenia,60.0,tachypnea,0.016817432
+108,carcinoma colon,127.0,general discomfort,0.016813986
+129,chronic alcoholic intoxication,23.0,suicidal,0.016813789
+40,carcinoma,163.0,constipation,0.01679666
+97,encephalopathy,179.0,aura,0.016772304
+116,carcinoma of lung,4.0,asthenia,0.01675871
+106,neoplasm metastasis,133.0,mass of body structure,0.016750263
+50,benign prostatic hypertrophy,170.0,anorexia,0.016742375
+71,schizophrenia,110.0,patient non compliance,0.016715005
+38,cardiomyopathy,110.0,patient non compliance,0.016714845
+140,pancytopenia,101.0,fatigue,0.01670545
+45,bipolar disorder,34.0,agitation,0.016677542
+29,gastroesophageal reflux disease,78.0,pain,0.01666997
+75,osteomyelitis,154.0,redness,0.016658923
+97,encephalopathy,18.0,unresponsiveness,0.01665865
+85,gout,110.0,patient non compliance,0.01658715
+55,hemiparesis,128.0,drowsiness,0.016536675
+53,arthritis,190.0,distended abdomen,0.016456896
+92,Pneumocystis carinii pneumonia,51.0,yellow sputum,0.016432779
+141,cholelithiasis,11.0,nausea,0.016423486
+58,adenocarcinoma,247.0,egophony,0.01641449
+79,sickle cell anemia,224.0,snuffle,0.016406287
+67,lymphatic diseases,156.0,hyperacusis,0.016403427
+139,migraine disorders,11.0,nausea,0.01638319
+19,confusion,123.0,headache,0.016359985
+43,psychotic disorder,36.0,intoxication,0.016352214
+78,failure kidney,289.0,slowing of urinary stream,0.016329749
+135,dependence,25.0,feeling hopeless,0.016270002
+105,glaucoma,111.0,unconscious state,0.01624751
+38,cardiomyopathy,101.0,fatigue,0.01624596
+90,diverticulosis,78.0,pain,0.016238164
+116,carcinoma of lung,48.0,decreased translucency,0.016214956
+87,hypoglycemia,265.0,qt interval prolonged,0.016149148
+123,aphasia,228.0,aphagia,0.016136013
+147,affect labile,27.0,sleeplessness,0.016067192
+52,mitral valve insufficiency,183.0,left atrial hypertrophy,0.01599942
+11,myocardial infarction,74.0,t wave inverted,0.015995378
+133,hyperbilirubinemia,60.0,tachypnea,0.01596844
+78,failure kidney,112.0,bedridden,0.015936295
+78,failure kidney,112.0,bedridden,0.015936295
+36,embolism pulmonary,56.0,non-productive cough,0.015925476
+43,psychotic disorder,37.0,verbal auditory hallucinations,0.015909107
+103,kidney disease,115.0,hyperkalemia,0.01590492
+110,tonic-clonic epilepsy,128.0,drowsiness,0.015900685
+22,anxiety state,39.0,difficulty,0.01582976
+90,diverticulosis,83.0,diarrhea,0.015828386
+73,overload fluid,190.0,distended abdomen,0.015803482
+95,lymphoma,138.0,lesion,0.015769977
+47,ischemia,122.0,sleepy,0.015767248
+76,gastritis,36.0,intoxication,0.01574241
+69,malignant neoplasm of breast,273.0,estrogen use,0.015716258
+70,carcinoma breast,273.0,estrogen use,0.015712721
+129,chronic alcoholic intoxication,25.0,feeling hopeless,0.015649697
+45,bipolar disorder,33.0,worry,0.01563225
+77,bacteremia,286.0,urinoma,0.0156162325
+129,chronic alcoholic intoxication,24.0,hallucinations auditory,0.0155383125
+142,biliary calculus,11.0,nausea,0.015526245
+104,fibroid tumor,348.0,abortion,0.015520332
+81,upper respiratory infection,48.0,decreased translucency,0.015515912
+88,pneumonia aspiration,46.0,cough,0.015515736
+74,ulcer peptic,86.0,apyrexial,0.015484468
+72,diverticulitis,116.0,urgency of micturition,0.015451793
+34,dehydration,30.0,blackout,0.015421243
+54,bronchitis,223.0,throat sore,0.015402216
+91,suicide attempt,28.0,motor retardation,0.015353134
+125,pyelonephritis,53.0,chill,0.015351271
+125,pyelonephritis,53.0,chill,0.015351271
+51,kidney failure acute,220.0,"hypothermia, natural",0.015343616
+22,anxiety state,137.0,hot flush,0.015259394
+82,hepatitis,170.0,anorexia,0.015227786
+78,failure kidney,130.0,prostatism,0.0152258165
+55,hemiparesis,233.0,Stahli's line,0.015164394
+140,pancytopenia,140.0,cushingoid habitus,0.015129531
+94,parkinson disease,68.0,hemiplegia,0.015101771
+125,pyelonephritis,11.0,nausea,0.015096327
+88,pneumonia aspiration,68.0,hemiplegia,0.015096021
+95,lymphoma,329.0,welt,0.015092605
+130,pneumothorax,46.0,cough,0.015055836
+66,edema pulmonary,267.0,Heberden's node,0.01503936
+36,embolism pulmonary,86.0,apyrexial,0.015003589
+73,overload fluid,122.0,sleepy,0.014974991
+39,chronic kidney failure,50.0,pleuritic pain,0.014902901
+45,bipolar disorder,134.0,has religious belief,0.014893669
+96,hyperglycemia,140.0,cushingoid habitus,0.014885573
+84,deglutition disorder,187.0,paresthesia,0.014865691
+109,ketoacidosis diabetic,14.0,polyuria,0.014834983
+80,failure heart,293.0,pansystolic murmur,0.0148260705
+52,mitral valve insufficiency,144.0,thicken,0.014821728
+109,ketoacidosis diabetic,83.0,diarrhea,0.014812637
+72,diverticulitis,84.0,abscess bacterial,0.014763098
+97,encephalopathy,334.0,uncoordination,0.014757423
+118,personality disorder,25.0,feeling hopeless,0.01474596
+140,pancytopenia,99.0,haemorrhage,0.014732631
+21,hypothyroidism,70.0,numbness,0.014727618
+123,aphasia,168.0,clonus,0.014718216
+92,Pneumocystis carinii pneumonia,49.0,productive cough,0.014716759
+91,suicide attempt,29.0,irritable mood,0.014691504
+66,edema pulmonary,57.0,wheezing,0.014637429
+106,neoplasm metastasis,148.0,pain abdominal,0.01459411
+84,deglutition disorder,138.0,lesion,0.014554857
+38,cardiomyopathy,131.0,weight gain,0.014552605
+49,exanthema,86.0,apyrexial,0.014471058
+107,malignant tumor of colon,130.0,prostatism,0.014429762
+63,hernia,68.0,hemiplegia,0.014400503
+141,cholelithiasis,78.0,pain,0.014400443
+97,encephalopathy,122.0,sleepy,0.014385931
+118,personality disorder,24.0,hallucinations auditory,0.014375921
+118,personality disorder,26.0,weepiness,0.014371563
+105,glaucoma,34.0,agitation,0.014330582
+56,osteoporosis,239.0,out of breath,0.014329613
+46,obesity,101.0,fatigue,0.014314691
+76,gastritis,3.0,dizziness,0.014313754
+77,bacteremia,83.0,diarrhea,0.01428977
+88,pneumonia aspiration,18.0,unresponsiveness,0.014283238
+107,malignant tumor of colon,138.0,lesion,0.014273461
+59,paranoia,37.0,verbal auditory hallucinations,0.014271516
+25,acquired immuno-deficiency syndrome,153.0,hypotonic,0.014271193
+96,hyperglycemia,57.0,wheezing,0.014226076
+54,bronchitis,81.0,hepatosplenomegaly,0.014215721
+73,overload fluid,85.0,swelling,0.014189541
+74,ulcer peptic,181.0,gurgle,0.014185274
+26,HIV,153.0,hypotonic,0.014181681
+22,anxiety state,110.0,patient non compliance,0.014176908
+125,pyelonephritis,116.0,urgency of micturition,0.014163386
+89,colitis,316.0,awakening early,0.014134346
+35,neoplasm,123.0,headache,0.0141273
+100,candidiasis,83.0,diarrhea,0.014109643
+104,fibroid tumor,349.0,intermenstrual heavy bleeding,0.014109394
+129,chronic alcoholic intoxication,27.0,sleeplessness,0.014107995
+63,hernia,99.0,haemorrhage,0.014105286
+142,biliary calculus,78.0,pain,0.014058254
+113,melanoma,83.0,diarrhea,0.014022507
+114,gastroenteritis,133.0,mass of body structure,0.01401322
+52,mitral valve insufficiency,167.0,cardiomegaly,0.014012203
+62,paroxysmal dyspnea,44.0,dyspnea on exertion,0.0139966775
+102,neuropathy,315.0,nausea and vomiting,0.013970884
+66,edema pulmonary,118.0,hypotension,0.013926959
+62,paroxysmal dyspnea,64.0,dyspnea,0.013918556
+100,candidiasis,62.0,night sweat,0.013909031
+105,glaucoma,187.0,paresthesia,0.013859658
+110,tonic-clonic epilepsy,98.0,tumor cell invasion,0.01385474
+66,edema pulmonary,64.0,dyspnea,0.0138520785
+52,mitral valve insufficiency,20.0,vomiting,0.013848473
+112,respiratory failure,49.0,productive cough,0.013848157
+65,carcinoma prostate,262.0,dysesthesia,0.013809152
+115,malignant neoplasm of lung,48.0,decreased translucency,0.013805197
+65,carcinoma prostate,83.0,diarrhea,0.013771843
+92,Pneumocystis carinii pneumonia,53.0,chill,0.013767006
+111,tonic-clonic seizures,121.0,muscle twitch,0.013748157
+89,colitis,20.0,vomiting,0.013735834
+128,pericardial effusion body substance,118.0,hypotension,0.013715892
+147,affect labile,119.0,enuresis,0.013714545
+35,neoplasm,174.0,hemianopsia homonymous,0.013712326
+27,hiv infections,153.0,hypotonic,0.013711999
+112,respiratory failure,115.0,hyperkalemia,0.013693698
+133,hyperbilirubinemia,164.0,breech presentation,0.013689039
+54,bronchitis,21.0,labored breathing,0.013685455
+105,glaucoma,138.0,lesion,0.013661107
+101,oral candidiasis,83.0,diarrhea,0.0136287175
+78,failure kidney,99.0,haemorrhage,0.013596164
+122,spasm bronchial,47.0,fever,0.013590453
+72,diverticulitis,149.0,dullness,0.01357435
+95,lymphoma,142.0,decreased body weight,0.013572004
+91,suicide attempt,30.0,blackout,0.01356858
+123,aphasia,247.0,egophony,0.013561968
+102,neuropathy,331.0,hydropneumothorax,0.013553513
+128,pericardial effusion body substance,78.0,pain,0.013529833
+133,hyperbilirubinemia,77.0,bradycardia,0.013495445
+118,personality disorder,27.0,sleeplessness,0.013481011
+89,colitis,148.0,pain abdominal,0.013475014
+54,bronchitis,58.0,haemoptysis,0.013441472
+54,bronchitis,226.0,stridor,0.013417695
+98,tricuspid valve insufficiency,20.0,vomiting,0.013397759
+132,neutropenia,59.0,distress respiratory,0.0133361835
+93,hepatitis B,113.0,abdominal tenderness,0.013335809
+106,neoplasm metastasis,144.0,thicken,0.013322125
+113,melanoma,20.0,vomiting,0.01330653
+101,oral candidiasis,62.0,night sweat,0.013298955
+108,carcinoma colon,138.0,lesion,0.013261723
+108,carcinoma colon,130.0,prostatism,0.013178955
+143,tachycardia sinus,13.0,pressure chest,0.013177467
+91,suicide attempt,46.0,cough,0.0131181255
+49,exanthema,123.0,headache,0.013115986
+40,carcinoma,158.0,sore to touch,0.013106229
+45,bipolar disorder,35.0,tremor,0.013056006
+127,effusion pericardial,118.0,hypotension,0.013042517
+73,overload fluid,131.0,weight gain,0.013016671
+63,hernia,78.0,pain,0.013009861
+145,adhesion,78.0,pain,0.013002809
+140,pancytopenia,251.0,stool color yellow,0.012995295
+57,transient ischemic attack,176.0,neck stiffness,0.012945576
+57,transient ischemic attack,65.0,dysarthria,0.012935403
+78,failure kidney,101.0,fatigue,0.012915209
+48,cirrhosis,158.0,sore to touch,0.012906587
+96,hyperglycemia,31.0,mood depressed,0.012906495
+132,neutropenia,46.0,cough,0.012880737
+72,diverticulitis,276.0,red blotches,0.012820219
+128,pericardial effusion body substance,64.0,dyspnea,0.012817259
+22,anxiety state,136.0,formication,0.01280994
+73,overload fluid,118.0,hypotension,0.012789375
+105,glaucoma,159.0,burning sensation,0.012780815
+132,neutropenia,53.0,chill,0.01278025
+84,deglutition disorder,226.0,stridor,0.012777921
+43,psychotic disorder,38.0,energy increased,0.012775916
+112,respiratory failure,68.0,hemiplegia,0.012765526
+130,pneumothorax,109.0,hypercapnia,0.012759121
+49,exanthema,216.0,photophobia,0.012749837
+89,colitis,315.0,nausea and vomiting,0.012740356
+128,pericardial effusion body substance,107.0,sputum purulent,0.012730794
+89,colitis,144.0,thicken,0.012723237
+66,edema pulmonary,60.0,tachypnea,0.012706885
+109,ketoacidosis diabetic,148.0,pain abdominal,0.012701463
+61,incontinence,254.0,moody,0.012700255
+139,migraine disorders,363.0,ambidexterity,0.012680275
+121,hemorrhoids,3.0,dizziness,0.012677741
+114,gastroenteritis,365.0,breath-holding spell,0.01266841
+55,hemiparesis,229.0,focal seizures,0.012660836
+79,sickle cell anemia,86.0,apyrexial,0.012652486
+89,colitis,55.0,green sputum,0.012640364
+96,hyperglycemia,142.0,decreased body weight,0.012620529
+94,parkinson disease,88.0,hematuria,0.012617746
+52,mitral valve insufficiency,101.0,fatigue,0.012577293
+126,endocarditis,2.0,shortness of breath,0.01255251
+52,mitral valve insufficiency,76.0,chest discomfort,0.012519936
+96,hyperglycemia,82.0,pruritus,0.012501263
+55,hemiparesis,69.0,seizure,0.012500692
+94,parkinson disease,128.0,drowsiness,0.012485751
+127,effusion pericardial,64.0,dyspnea,0.012485605
+81,upper respiratory infection,57.0,wheezing,0.012466642
+31,systemic infection,86.0,apyrexial,0.012463245
+61,incontinence,240.0,urge incontinence,0.012456113
+84,deglutition disorder,142.0,decreased body weight,0.012421202
+138,hernia hiatal,11.0,nausea,0.01241504
+112,respiratory failure,43.0,hypokinesia,0.012412799
+131,delirium,47.0,fever,0.012404854
+77,bacteremia,50.0,pleuritic pain,0.012391385
+72,diverticulitis,83.0,diarrhea,0.012344184
+127,effusion pericardial,107.0,sputum purulent,0.012343705
+111,tonic-clonic seizures,18.0,unresponsiveness,0.012335508
+77,bacteremia,285.0,indifferent mood,0.012333272
+65,carcinoma prostate,104.0,orthostasis,0.012271479
+58,adenocarcinoma,177.0,cicatrisation,0.012270134
+80,failure heart,64.0,dyspnea,0.012265163
+95,lymphoma,15.0,polydypsia,0.01226433
+129,chronic alcoholic intoxication,29.0,irritable mood,0.012252896
+45,bipolar disorder,36.0,intoxication,0.012201308
+92,Pneumocystis carinii pneumonia,150.0,spontaneous rupture of membranes,0.012183479
+39,chronic kidney failure,86.0,apyrexial,0.012162077
+126,endocarditis,16.0,orthopnea,0.012160048
+106,neoplasm metastasis,173.0,metastatic lesion,0.012154449
+107,malignant tumor of colon,83.0,diarrhea,0.012140583
+65,carcinoma prostate,92.0,hemodynamically stable,0.012130835
+100,candidiasis,142.0,decreased body weight,0.012110494
+98,tricuspid valve insufficiency,148.0,pain abdominal,0.0121071655
+111,tonic-clonic seizures,35.0,tremor,0.012080647
+63,hernia,125.0,food intolerance,0.012055997
+133,hyperbilirubinemia,165.0,cyanosis,0.012044206
+87,hypoglycemia,59.0,distress respiratory,0.012038454
+137,cholecystitis,11.0,nausea,0.012038115
+64,malignant neoplasm of prostate,262.0,dysesthesia,0.012015782
+132,neutropenia,96.0,monoclonal,0.012005173
+109,ketoacidosis diabetic,20.0,vomiting,0.011986215
+117,manic disorder,32.0,hallucinations visual,0.011983351
+96,hyperglycemia,117.0,ascites,0.011981239
+127,effusion pericardial,78.0,pain,0.01196016
+90,diverticulosis,302.0,projectile vomiting,0.01194508
+88,pneumonia aspiration,19.0,mental status changes,0.0119415205
+139,migraine disorders,20.0,vomiting,0.0119340625
+97,encephalopathy,99.0,haemorrhage,0.011933552
+124,obesity morbid,12.0,angina pectoris,0.011930102
+84,deglutition disorder,65.0,dysarthria,0.011926909
+65,carcinoma prostate,264.0,passed stones,0.011926087
+57,transient ischemic attack,39.0,difficulty,0.011896479
+125,pyelonephritis,83.0,diarrhea,0.011838944
+108,carcinoma colon,83.0,diarrhea,0.011835458
+45,bipolar disorder,37.0,verbal auditory hallucinations,0.011832692
+110,tonic-clonic epilepsy,121.0,muscle twitch,0.011762937
+78,failure kidney,290.0,extreme exhaustion,0.011759319
+94,parkinson disease,18.0,unresponsiveness,0.011757255
+64,malignant neoplasm of prostate,83.0,diarrhea,0.011753483
+115,malignant neoplasm of lung,17.0,rale,0.011722941
+114,gastroenteritis,91.0,hyponatremia,0.01171956
+101,oral candidiasis,142.0,decreased body weight,0.011713589
+116,carcinoma of lung,17.0,rale,0.011704722
+141,cholelithiasis,117.0,ascites,0.011702772
+72,diverticulitis,195.0,sinus rhythm,0.011699025
+29,gastroesophageal reflux disease,147.0,heartburn,0.011697184
+118,personality disorder,29.0,irritable mood,0.011688674
+77,bacteremia,130.0,prostatism,0.011667571
+63,hernia,133.0,mass of body structure,0.0116405925
+54,bronchitis,224.0,snuffle,0.0116369855
+15,anemia,106.0,transaminitis,0.011612276
+66,edema pulmonary,195.0,sinus rhythm,0.011567762
+114,gastroenteritis,142.0,decreased body weight,0.011567545
+114,gastroenteritis,142.0,decreased body weight,0.011567545
+96,hyperglycemia,69.0,seizure,0.011553947
+99,Alzheimer's disease,46.0,cough,0.011528486
+124,obesity morbid,89.0,renal angle tenderness,0.011500294
+68,stenosis aortic valve,211.0,systolic murmur,0.011498752
+128,pericardial effusion body substance,67.0,facial paresis,0.011485975
+128,pericardial effusion body substance,92.0,hemodynamically stable,0.011471299
+112,respiratory failure,18.0,unresponsiveness,0.011456395
+59,paranoia,38.0,energy increased,0.011429253
+107,malignant tumor of colon,77.0,bradycardia,0.011403513
+102,neuropathy,332.0,superimposition,0.01139234
+143,tachycardia sinus,9.0,sweating increased,0.011386623
+23,malignant neoplasms,78.0,pain,0.01138581
+34,dehydration,124.0,lightheadedness,0.011382541
+30,septicemia,86.0,apyrexial,0.011376787
+77,bacteremia,287.0,hypoalbuminemia,0.011357259
+88,pneumonia aspiration,69.0,seizure,0.011334115
+143,tachycardia sinus,8.0,sweat,0.011289086
+121,hemorrhoids,57.0,wheezing,0.011288384
+76,gastritis,95.0,guaiac positive,0.0112743415
+94,parkinson disease,34.0,agitation,0.011264259
+116,carcinoma of lung,29.0,irritable mood,0.011254119
+97,encephalopathy,260.0,posturing,0.011248529
+131,delirium,128.0,drowsiness,0.011245681
+108,carcinoma colon,77.0,bradycardia,0.011241458
+61,incontinence,186.0,unhappy,0.011181575
+77,bacteremia,288.0,pustule,0.011180525
+132,neutropenia,62.0,night sweat,0.011167635
+100,candidiasis,56.0,non-productive cough,0.011166783
+22,anxiety state,40.0,nightmare,0.0111526605
+65,carcinoma prostate,263.0,polymyalgia,0.011144906
+142,biliary calculus,117.0,ascites,0.011125017
+81,upper respiratory infection,56.0,non-productive cough,0.011124672
+23,malignant neoplasms,48.0,decreased translucency,0.011100462
+136,thrombus,82.0,pruritus,0.011078878
+145,adhesion,2.0,shortness of breath,0.011076372
+127,effusion pericardial,67.0,facial paresis,0.011060689
+130,pneumothorax,130.0,prostatism,0.011051312
+72,diverticulitis,96.0,monoclonal,0.011041944
+72,diverticulitis,20.0,vomiting,0.011028525
+32,sepsis (invertebrate),86.0,apyrexial,0.011024918
+67,lymphatic diseases,101.0,fatigue,0.011019433
+67,lymphatic diseases,247.0,egophony,0.010991021
+74,ulcer peptic,279.0,hunger,0.010979081
+63,hernia,86.0,apyrexial,0.010970605
+79,sickle cell anemia,123.0,headache,0.01096193
+101,oral candidiasis,56.0,non-productive cough,0.010950217
+143,tachycardia sinus,2.0,shortness of breath,0.010949328
+84,deglutition disorder,143.0,hoarseness,0.01094889
+88,pneumonia aspiration,83.0,diarrhea,0.010930348
+107,malignant tumor of colon,163.0,constipation,0.010881217
+55,hemiparesis,65.0,dysarthria,0.010871455
+112,respiratory failure,64.0,dyspnea,0.010860512
+134,influenza,87.0,dysuria,0.010859017
+130,pneumothorax,34.0,agitation,0.010851056
+108,carcinoma colon,15.0,polydypsia,0.010840889
+109,ketoacidosis diabetic,69.0,seizure,0.010816643
+64,malignant neoplasm of prostate,104.0,orthostasis,0.0108017735
+95,lymphoma,101.0,fatigue,0.010797974
+134,influenza,47.0,fever,0.010778541
+90,diverticulosis,99.0,haemorrhage,0.010757135
+95,lymphoma,331.0,hydropneumothorax,0.010744581
+63,hernia,260.0,posturing,0.01074415
+100,candidiasis,110.0,patient non compliance,0.0107437745
+55,hemiparesis,228.0,aphagia,0.010720033
+110,tonic-clonic epilepsy,35.0,tremor,0.010693953
+121,hemorrhoids,91.0,hyponatremia,0.010685618
+39,chronic kidney failure,95.0,guaiac positive,0.010685399
+49,exanthema,157.0,scratch marks,0.010676833
+147,affect labile,32.0,hallucinations visual,0.010650147
+77,bacteremia,20.0,vomiting,0.010646379
+104,fibroid tumor,99.0,haemorrhage,0.010646311
+55,hemiparesis,122.0,sleepy,0.010640225
+107,malignant tumor of colon,15.0,polydypsia,0.010616719
+100,candidiasis,223.0,throat sore,0.010613182
+112,respiratory failure,154.0,redness,0.010593036
+99,Alzheimer's disease,47.0,fever,0.010589344
+75,osteomyelitis,158.0,sore to touch,0.010576924
+92,Pneumocystis carinii pneumonia,83.0,diarrhea,0.010541083
+127,effusion pericardial,92.0,hemodynamically stable,0.010527274
+65,carcinoma prostate,142.0,decreased body weight,0.01050859
+97,encephalopathy,144.0,thicken,0.010500952
+56,osteoporosis,240.0,urge incontinence,0.010499849
+119,primary carcinoma of the liver cells,98.0,tumor cell invasion,0.010499336
+65,carcinoma prostate,54.0,rhonchus,0.010494466
+110,tonic-clonic epilepsy,18.0,unresponsiveness,0.010486073
+23,malignant neoplasms,88.0,hematuria,0.010482224
+62,paroxysmal dyspnea,131.0,weight gain,0.010466525
+101,oral candidiasis,110.0,patient non compliance,0.010436186
+88,pneumonia aspiration,78.0,pain,0.010421724
+80,failure heart,43.0,hypokinesia,0.010403839
+64,malignant neoplasm of prostate,264.0,passed stones,0.010377266
+64,malignant neoplasm of prostate,92.0,hemodynamically stable,0.010372364
+131,delirium,23.0,suicidal,0.010358865
+43,psychotic disorder,110.0,patient non compliance,0.010344568
+135,dependence,90.0,lethargy,0.010341941
+136,thrombus,92.0,hemodynamically stable,0.01033173
+112,respiratory failure,138.0,lesion,0.010316419
+101,oral candidiasis,223.0,throat sore,0.010293376
+131,delirium,22.0,feeling suicidal,0.010291706
+96,hyperglycemia,288.0,pustule,0.010283359
+133,hyperbilirubinemia,140.0,cushingoid habitus,0.01026141
+65,carcinoma prostate,50.0,pleuritic pain,0.010238852
+144,ileus,11.0,nausea,0.010237656
+111,tonic-clonic seizures,236.0,hirsutism,0.010224225
+66,edema pulmonary,110.0,patient non compliance,0.010196906
+108,carcinoma colon,163.0,constipation,0.010137594
+56,osteoporosis,86.0,apyrexial,0.0101073645
+88,pneumonia aspiration,148.0,pain abdominal,0.010093126
+95,lymphoma,330.0,tinnitus,0.010061735
+73,overload fluid,278.0,hypokalemia,0.0100592
+72,diverticulitis,148.0,pain abdominal,0.010036627
+63,hernia,144.0,thicken,0.0100354515
+56,osteoporosis,124.0,lightheadedness,0.010030095
+135,dependence,34.0,agitation,0.010012555
+57,transient ischemic attack,205.0,extrapyramidal sign,0.009997832
+47,ischemia,170.0,anorexia,0.009995663
+125,pyelonephritis,20.0,vomiting,0.009973497
+64,malignant neoplasm of prostate,263.0,polymyalgia,0.009940498
+124,obesity morbid,57.0,wheezing,0.009932695
+139,migraine disorders,3.0,dizziness,0.009930921
+109,ketoacidosis diabetic,358.0,milky,0.009925265
+128,pericardial effusion body substance,184.0,oliguria,0.009904872
+115,malignant neoplasm of lung,191.0,ache,0.009900298
+46,obesity,185.0,catatonia,0.009885296
+111,tonic-clonic seizures,180.0,myoclonus,0.009856998
+91,suicide attempt,33.0,worry,0.009850434
+45,bipolar disorder,39.0,difficulty,0.009844091
+135,dependence,69.0,seizure,0.009830418
+80,failure heart,44.0,dyspnea on exertion,0.009819485
+92,Pneumocystis carinii pneumonia,44.0,dyspnea on exertion,0.009813776
+95,lymphoma,93.0,difficulty passing urine,0.0098131485
+70,carcinoma breast,136.0,formication,0.00980946
+69,malignant neoplasm of breast,136.0,formication,0.009780514
+94,parkinson disease,33.0,worry,0.009769288
+55,hemiparesis,168.0,clonus,0.009766179
+68,stenosis aortic valve,44.0,dyspnea on exertion,0.00975743
+122,spasm bronchial,68.0,hemiplegia,0.009747843
+141,cholelithiasis,140.0,cushingoid habitus,0.009737387
+114,gastroenteritis,148.0,pain abdominal,0.009679711
+65,carcinoma prostate,52.0,breath sounds decreased,0.0096780155
+71,schizophrenia,275.0,underweight,0.009655914
+71,schizophrenia,275.0,underweight,0.009655914
+116,carcinoma of lung,34.0,agitation,0.009654476
+90,diverticulosis,163.0,constipation,0.009643411
+43,psychotic disorder,185.0,catatonia,0.00963575
+142,biliary calculus,10.0,palpitation,0.009626433
+125,pyelonephritis,148.0,pain abdominal,0.009620811
+141,cholelithiasis,10.0,palpitation,0.009619253
+118,personality disorder,31.0,mood depressed,0.009582026
+141,cholelithiasis,83.0,diarrhea,0.009555734
+81,upper respiratory infection,49.0,productive cough,0.009525654
+94,parkinson disease,104.0,orthostasis,0.009505284
+116,carcinoma of lung,191.0,ache,0.0095003685
+142,biliary calculus,140.0,cushingoid habitus,0.009493432
+45,bipolar disorder,38.0,energy increased,0.0094743185
+126,endocarditis,46.0,cough,0.00946023
+121,hemorrhoids,83.0,diarrhea,0.009425584
+95,lymphoma,58.0,haemoptysis,0.009408923
+131,delirium,18.0,unresponsiveness,0.009408376
+112,respiratory failure,195.0,sinus rhythm,0.009407176
+128,pericardial effusion body substance,167.0,cardiomegaly,0.009399341
+132,neutropenia,138.0,lesion,0.009380312
+40,carcinoma,189.0,lung nodule,0.009374465
+141,cholelithiasis,20.0,vomiting,0.009365013
+122,spasm bronchial,78.0,pain,0.009333763
+89,colitis,240.0,urge incontinence,0.009330728
+127,effusion pericardial,184.0,oliguria,0.009293884
+140,pancytopenia,139.0,cushingoid facies,0.009293214
+64,malignant neoplasm of prostate,54.0,rhonchus,0.009293195
+64,malignant neoplasm of prostate,142.0,decreased body weight,0.009285638
+92,Pneumocystis carinii pneumonia,176.0,neck stiffness,0.009242164
+58,adenocarcinoma,232.0,fremitus,0.00923893
+97,encephalopathy,43.0,hypokinesia,0.009206792
+141,cholelithiasis,148.0,pain abdominal,0.009202907
+131,delirium,114.0,unsteady gait,0.009181378
+65,carcinoma prostate,133.0,mass of body structure,0.009179835
+66,edema pulmonary,76.0,chest discomfort,0.009153668
+111,tonic-clonic seizures,122.0,sleepy,0.009152108
+111,tonic-clonic seizures,360.0,lip smacking,0.009134735
+91,suicide attempt,128.0,drowsiness,0.009103564
+109,ketoacidosis diabetic,179.0,aura,0.009102387
+130,pneumothorax,58.0,haemoptysis,0.0090893805
+142,biliary calculus,83.0,diarrhea,0.009083298
+97,encephalopathy,335.0,absences finding,0.009077423
+98,tricuspid valve insufficiency,77.0,bradycardia,0.009063887
+108,carcinoma colon,11.0,nausea,0.009063365
+95,lymphoma,332.0,superimposition,0.009058833
+92,Pneumocystis carinii pneumonia,56.0,non-productive cough,0.009049596
+77,bacteremia,100.0,pallor,0.009034757
+107,malignant tumor of colon,11.0,nausea,0.009020236
+23,malignant neoplasms,133.0,mass of body structure,0.009016167
+23,malignant neoplasms,133.0,mass of body structure,0.009016167
+64,malignant neoplasm of prostate,50.0,pleuritic pain,0.009014835
+112,respiratory failure,60.0,tachypnea,0.008993075
+91,suicide attempt,34.0,agitation,0.00896761
+81,upper respiratory infection,64.0,dyspnea,0.008954629
+84,deglutition disorder,305.0,dysdiadochokinesia,0.008944545
+136,thrombus,67.0,facial paresis,0.008892911
+105,glaucoma,133.0,mass of body structure,0.00888238
+81,upper respiratory infection,92.0,hemodynamically stable,0.008873175
+142,biliary calculus,20.0,vomiting,0.008846084
+137,cholecystitis,78.0,pain,0.008830195
+88,pneumonia aspiration,168.0,clonus,0.008789036
+111,tonic-clonic seizures,142.0,decreased body weight,0.008785671
+132,neutropenia,184.0,oliguria,0.008779252
+119,primary carcinoma of the liver cells,2.0,shortness of breath,0.008777211
+87,hypoglycemia,118.0,hypotension,0.008775071
+76,gastritis,158.0,sore to touch,0.008765081
+81,upper respiratory infection,62.0,night sweat,0.008686785
+142,biliary calculus,148.0,pain abdominal,0.0086629
+92,Pneumocystis carinii pneumonia,142.0,decreased body weight,0.008642593
+43,psychotic disorder,198.0,terrify,0.008642013
+103,kidney disease,188.0,gravida 0,0.008625092
+64,malignant neoplasm of prostate,52.0,breath sounds decreased,0.008616948
+121,hemorrhoids,126.0,numbness of hand,0.008592434
+82,hepatitis,106.0,transaminitis,0.008591171
+137,cholecystitis,117.0,ascites,0.008563546
+116,carcinoma of lung,138.0,lesion,0.008556491
+90,diverticulosis,170.0,anorexia,0.008549115
+94,parkinson disease,35.0,tremor,0.008548826
+54,bronchitis,225.0,hacking cough,0.008543225
+110,tonic-clonic epilepsy,180.0,myoclonus,0.008536195
+131,delirium,91.0,hyponatremia,0.008520053
+110,tonic-clonic epilepsy,236.0,hirsutism,0.00851165
+107,malignant tumor of colon,148.0,pain abdominal,0.008500983
+91,suicide attempt,35.0,tremor,0.008484253
+72,diverticulitis,144.0,thicken,0.008477493
+64,malignant neoplasm of prostate,133.0,mass of body structure,0.008475967
+99,Alzheimer's disease,67.0,facial paresis,0.008468647
+146,delusion,23.0,suicidal,0.008465301
+19,confusion,94.0,consciousness clear,0.008458602
+127,effusion pericardial,167.0,cardiomegaly,0.0084527815
+97,encephalopathy,336.0,tonic seizures,0.008436397
+85,gout,158.0,sore to touch,0.008399266
+130,pneumothorax,385.0,cardiovascular finding,0.008385055
+107,malignant tumor of colon,20.0,vomiting,0.008382352
+135,dependence,121.0,muscle twitch,0.00837743
+108,carcinoma colon,148.0,pain abdominal,0.008352039
+45,bipolar disorder,201.0,disturbed family,0.008335517
+23,malignant neoplasms,125.0,food intolerance,0.00833152
+126,endocarditis,43.0,hypokinesia,0.008330617
+144,ileus,84.0,abscess bacterial,0.008328072
+122,spasm bronchial,45.0,chest tightness,0.00831115
+133,hyperbilirubinemia,46.0,cough,0.008307135
+65,carcinoma prostate,265.0,qt interval prolonged,0.00828621
+61,incontinence,129.0,stiffness,0.0082855895
+43,psychotic disorder,40.0,nightmare,0.008285128
+43,psychotic disorder,196.0,withdraw,0.008284582
+124,obesity morbid,220.0,"hypothermia, natural",0.008280083
+121,hemorrhoids,159.0,burning sensation,0.008253991
+124,obesity morbid,108.0,hypoxemia,0.008220985
+108,carcinoma colon,20.0,vomiting,0.008164558
+121,hemorrhoids,46.0,cough,0.008163543
+119,primary carcinoma of the liver cells,133.0,mass of body structure,0.008151531
+120,emphysema pulmonary,17.0,rale,0.008150237
+104,fibroid tumor,152.0,muscle hypotonia,0.00812872
+57,transient ischemic attack,124.0,lightheadedness,0.008125444
+131,delirium,24.0,hallucinations auditory,0.008116731
+121,hemorrhoids,78.0,pain,0.00811169
+111,tonic-clonic seizures,254.0,moody,0.008097574
+49,exanthema,217.0,painful swallowing,0.008077509
+99,Alzheimer's disease,34.0,agitation,0.008047327
+78,failure kidney,291.0,no status change,0.008030849
+135,dependence,17.0,rale,0.008021581
+129,chronic alcoholic intoxication,69.0,seizure,0.00797042
+96,hyperglycemia,273.0,estrogen use,0.007968957
+72,diverticulitis,170.0,anorexia,0.007953692
+99,Alzheimer's disease,115.0,hyperkalemia,0.007918457
+46,obesity,208.0,snore,0.007906288
+140,pancytopenia,346.0,fatigability,0.0078838
+118,personality disorder,33.0,worry,0.007882885
+138,hernia hiatal,91.0,hyponatremia,0.007877557
+118,personality disorder,119.0,enuresis,0.00786628
+110,tonic-clonic epilepsy,360.0,lip smacking,0.00785612
+80,failure heart,101.0,fatigue,0.007840351
+146,delusion,25.0,feeling hopeless,0.0077851163
+120,emphysema pulmonary,134.0,has religious belief,0.0077842604
+40,carcinoma,147.0,heartburn,0.007771378
+59,paranoia,198.0,terrify,0.007748112
+63,hernia,261.0,pulse absent,0.007736345
+39,chronic kidney failure,185.0,catatonia,0.007728279
+118,personality disorder,34.0,agitation,0.007713483
+48,cirrhosis,213.0,splenomegaly,0.007696733
+106,neoplasm metastasis,189.0,lung nodule,0.00768508
+121,hemorrhoids,245.0,decreased stool caliber,0.007676712
+136,thrombus,20.0,vomiting,0.007670527
+124,obesity morbid,64.0,dyspnea,0.0076533146
+64,malignant neoplasm of prostate,265.0,qt interval prolonged,0.007651643
+144,ileus,83.0,diarrhea,0.00763415
+57,transient ischemic attack,123.0,headache,0.007609248
+102,neuropathy,289.0,slowing of urinary stream,0.007593577
+75,osteomyelitis,86.0,apyrexial,0.0075876135
+146,delusion,26.0,weepiness,0.0075863167
+122,spasm bronchial,49.0,productive cough,0.00758316
+138,hernia hiatal,44.0,dyspnea on exertion,0.0075451364
+144,ileus,133.0,mass of body structure,0.0075166053
+45,bipolar disorder,202.0,hypersomnia,0.0075070546
+135,dependence,35.0,tremor,0.007483872
+110,tonic-clonic epilepsy,142.0,decreased body weight,0.0074703586
+117,manic disorder,37.0,verbal auditory hallucinations,0.007463754
+147,affect labile,110.0,patient non compliance,0.007463033
+124,obesity morbid,175.0,hematocrit decreased,0.0074608796
+145,adhesion,20.0,vomiting,0.0074539147
+119,primary carcinoma of the liver cells,46.0,cough,0.0074517587
+23,malignant neoplasms,141.0,emphysematous change,0.0074477945
+122,spasm bronchial,108.0,hypoxemia,0.0074474206
+95,lymphoma,266.0,ataxia,0.0074318517
+23,malignant neoplasms,140.0,cushingoid habitus,0.0074305246
+115,malignant neoplasm of lung,29.0,irritable mood,0.007422199
+111,tonic-clonic seizures,361.0,phonophobia,0.007421972
+122,spasm bronchial,64.0,dyspnea,0.0074142474
+123,aphasia,235.0,paralyse,0.007413854
+65,carcinoma prostate,95.0,guaiac positive,0.007384293
+94,parkinson disease,133.0,mass of body structure,0.007375466
+110,tonic-clonic epilepsy,122.0,sleepy,0.0073643574
+57,transient ischemic attack,70.0,numbness,0.0073477714
+124,obesity morbid,239.0,out of breath,0.0073398286
+146,delusion,27.0,sleeplessness,0.0073316433
+130,pneumothorax,386.0,cardiovascular event,0.0073233373
+90,diverticulosis,124.0,lightheadedness,0.007312307
+37,epilepsy,182.0,wheelchair bound,0.007310123
+58,adenocarcinoma,248.0,scar tissue,0.007301174
+84,deglutition disorder,266.0,ataxia,0.0072663636
+115,malignant neoplasm of lung,34.0,agitation,0.0072568553
+45,bipolar disorder,185.0,catatonia,0.007253092
+135,dependence,130.0,prostatism,0.0072332458
+106,neoplasm metastasis,221.0,atypia,0.0072331517
+77,bacteremia,113.0,abdominal tenderness,0.007204133
+119,primary carcinoma of the liver cells,138.0,lesion,0.007200625
+107,malignant tumor of colon,355.0,dizzy spells,0.0071914857
+94,parkinson disease,39.0,difficulty,0.0071818572
+90,diverticulosis,25.0,feeling hopeless,0.007167706
+109,ketoacidosis diabetic,113.0,abdominal tenderness,0.0071670045
+146,delusion,24.0,hallucinations auditory,0.007147606
+145,adhesion,164.0,breech presentation,0.0071274894
+96,hyperglycemia,139.0,cushingoid facies,0.0071084984
+145,adhesion,142.0,decreased body weight,0.007100758
+126,endocarditis,118.0,hypotension,0.0070895795
+135,dependence,36.0,intoxication,0.00707822
+121,hemorrhoids,99.0,haemorrhage,0.0070613874
+137,cholecystitis,83.0,diarrhea,0.0070425738
+81,upper respiratory infection,141.0,emphysematous change,0.007007383
+111,tonic-clonic seizures,363.0,ambidexterity,0.0069881575
+138,hernia hiatal,126.0,numbness of hand,0.006987864
+129,chronic alcoholic intoxication,35.0,tremor,0.006984487
+120,emphysema pulmonary,44.0,dyspnea on exertion,0.0069613103
+98,tricuspid valve insufficiency,177.0,cicatrisation,0.0069608884
+90,diverticulosis,319.0,pneumatouria,0.0069162864
+120,emphysema pulmonary,62.0,night sweat,0.006912588
+99,Alzheimer's disease,121.0,muscle twitch,0.006908195
+138,hernia hiatal,127.0,general discomfort,0.006885597
+110,tonic-clonic epilepsy,254.0,moody,0.0068766167
+109,ketoacidosis diabetic,181.0,gurgle,0.006868046
+81,upper respiratory infection,54.0,rhonchus,0.0068662134
+116,carcinoma of lung,62.0,night sweat,0.006858412
+111,tonic-clonic seizures,362.0,rolling of eyes,0.006851051
+88,pneumonia aspiration,290.0,extreme exhaustion,0.0068247393
+40,carcinoma,188.0,gravida 0,0.006815504
+72,diverticulitis,114.0,unsteady gait,0.0067942077
+96,hyperglycemia,158.0,sore to touch,0.006794119
+115,malignant neoplasm of lung,138.0,lesion,0.006787449
+138,hernia hiatal,120.0,asterixis,0.006768501
+138,hernia hiatal,148.0,pain abdominal,0.0067609656
+81,upper respiratory infection,50.0,pleuritic pain,0.006754778
+147,affect labile,130.0,prostatism,0.006741923
+81,upper respiratory infection,223.0,throat sore,0.0067292796
+45,bipolar disorder,205.0,extrapyramidal sign,0.006726667
+43,psychotic disorder,197.0,behavior hyperactive,0.0066755367
+100,candidiasis,113.0,abdominal tenderness,0.0066635474
+134,influenza,2.0,shortness of breath,0.006661835
+65,carcinoma prostate,240.0,urge incontinence,0.0066596977
+50,benign prostatic hypertrophy,218.0,cachexia,0.0066578826
+93,hepatitis B,182.0,wheelchair bound,0.0066391286
+104,fibroid tumor,153.0,hypotonic,0.00663042
+109,ketoacidosis diabetic,135.0,nervousness,0.006623223
+108,carcinoma colon,355.0,dizzy spells,0.0066207815
+136,thrombus,392.0,hypertonicity,0.006607878
+90,diverticulosis,22.0,feeling suicidal,0.0065884315
+147,affect labile,112.0,bedridden,0.0065873843
+147,affect labile,112.0,bedridden,0.0065873843
+138,hernia hiatal,20.0,vomiting,0.0065644146
+23,malignant neoplasms,53.0,chill,0.006520049
+120,emphysema pulmonary,64.0,dyspnea,0.0065195556
+131,delirium,122.0,sleepy,0.0065106302
+64,malignant neoplasm of prostate,95.0,guaiac positive,0.006470627
+51,kidney failure acute,219.0,hypocalcemia result,0.006459044
+123,aphasia,377.0,low back pain,0.006454405
+121,hemorrhoids,168.0,clonus,0.0064357445
+101,oral candidiasis,113.0,abdominal tenderness,0.006425567
+137,cholecystitis,195.0,sinus rhythm,0.0064246478
+128,pericardial effusion body substance,30.0,blackout,0.006416838
+55,hemiparesis,231.0,stupor,0.006398434
+110,tonic-clonic epilepsy,361.0,phonophobia,0.0063830977
+146,delusion,29.0,irritable mood,0.0063748998
+146,delusion,29.0,irritable mood,0.0063748998
+81,upper respiratory infection,263.0,polymyalgia,0.0063516833
+23,malignant neoplasms,117.0,ascites,0.006351373
+100,candidiasis,216.0,photophobia,0.0063486323
+107,malignant tumor of colon,356.0,shooting pain,0.0063419705
+119,primary carcinoma of the liver cells,142.0,decreased body weight,0.0063403877
+126,endocarditis,84.0,abscess bacterial,0.0063400404
+23,malignant neoplasms,142.0,decreased body weight,0.0063352236
+23,malignant neoplasms,138.0,lesion,0.006315634
+23,malignant neoplasms,138.0,lesion,0.006315634
+119,primary carcinoma of the liver cells,148.0,pain abdominal,0.0063001458
+100,candidiasis,123.0,headache,0.0062989495
+65,carcinoma prostate,266.0,ataxia,0.0062936125
+115,malignant neoplasm of lung,62.0,night sweat,0.0062567317
+72,diverticulitis,158.0,sore to touch,0.006255702
+114,gastroenteritis,158.0,sore to touch,0.0062541896
+124,obesity morbid,21.0,labored breathing,0.006252991
+65,carcinoma prostate,174.0,hemianopsia homonymous,0.006241921
+137,cholecystitis,148.0,pain abdominal,0.00623893
+134,influenza,53.0,chill,0.006234524
+107,malignant tumor of colon,282.0,urinary hesitation,0.006220956
+120,emphysema pulmonary,284.0,flushing,0.006215981
+94,parkinson disease,122.0,sleepy,0.0061822245
+75,osteomyelitis,281.0,pain foot,0.006167745
+118,personality disorder,135.0,nervousness,0.00616189
+101,oral candidiasis,216.0,photophobia,0.0061581056
+72,diverticulitis,113.0,abdominal tenderness,0.00615454
+91,suicide attempt,47.0,fever,0.0061303703
+101,oral candidiasis,123.0,headache,0.006128579
+72,diverticulitis,163.0,constipation,0.006049445
+99,Alzheimer's disease,35.0,tremor,0.0060285167
+117,manic disorder,38.0,energy increased,0.0060238643
+57,transient ischemic attack,242.0,room spinning,0.006022098
+144,ileus,148.0,pain abdominal,0.006020434
+141,cholelithiasis,144.0,thicken,0.006015036
+110,tonic-clonic epilepsy,363.0,ambidexterity,0.006004921
+136,thrombus,251.0,stool color yellow,0.005998758
+119,primary carcinoma of the liver cells,175.0,hematocrit decreased,0.0059795575
+94,parkinson disease,62.0,night sweat,0.005963985
+64,malignant neoplasm of prostate,240.0,urge incontinence,0.005961761
+23,malignant neoplasms,149.0,dullness,0.005952519
+81,upper respiratory infection,21.0,labored breathing,0.005948344
+88,pneumonia aspiration,181.0,gurgle,0.0059479047
+133,hyperbilirubinemia,139.0,cushingoid facies,0.005935815
+142,biliary calculus,144.0,thicken,0.0059337346
+146,delusion,30.0,blackout,0.0059295096
+136,thrombus,170.0,anorexia,0.0059235506
+110,tonic-clonic epilepsy,362.0,rolling of eyes,0.0058920896
+126,endocarditis,62.0,night sweat,0.0058829375
+84,deglutition disorder,256.0,spasm,0.0058780303
+45,bipolar disorder,203.0,hyperhidrosis disorder,0.005871941
+116,carcinoma of lung,58.0,haemoptysis,0.0058487235
+55,hemiparesis,232.0,fremitus,0.0058434634
+122,spasm bronchial,60.0,tachypnea,0.0058294563
+80,failure heart,118.0,hypotension,0.005804606
+108,carcinoma colon,356.0,shooting pain,0.005800862
+93,hepatitis B,328.0,moan,0.00579804
+48,cirrhosis,214.0,bleeding of vagina,0.0057678176
+116,carcinoma of lung,173.0,metastatic lesion,0.005765905
+108,carcinoma colon,282.0,urinary hesitation,0.0057289493
+121,hemorrhoids,375.0,bowel sounds decreased,0.005727849
+23,malignant neoplasms,59.0,distress respiratory,0.005699112
+81,upper respiratory infection,247.0,egophony,0.005668151
+117,manic disorder,39.0,difficulty,0.0056390907
+130,pneumothorax,387.0,soft tissue swelling,0.0056370357
+23,malignant neoplasms,118.0,hypotension,0.005606699
+124,obesity morbid,186.0,unhappy,0.0055831014
+131,delirium,33.0,worry,0.0055814125
+80,failure heart,294.0,systolic ejection murmur,0.0055805775
+61,incontinence,256.0,spasm,0.005576682
+67,lymphatic diseases,232.0,fremitus,0.005566938
+23,malignant neoplasms,62.0,night sweat,0.005554808
+122,spasm bronchial,20.0,vomiting,0.0055197626
+132,neutropenia,224.0,snuffle,0.005516655
+127,effusion pericardial,30.0,blackout,0.005509418
+114,gastroenteritis,366.0,scleral icterus,0.0055083674
+88,pneumonia aspiration,231.0,stupor,0.005479356
+63,hernia,158.0,sore to touch,0.00545559
+109,ketoacidosis diabetic,359.0,regurgitates after swallowing,0.005413781
+91,suicide attempt,18.0,unresponsiveness,0.005410089
+126,endocarditis,142.0,decreased body weight,0.0054036784
+126,endocarditis,142.0,decreased body weight,0.0054036784
+141,cholelithiasis,86.0,apyrexial,0.005386302
+121,hemorrhoids,315.0,nausea and vomiting,0.0053776796
+115,malignant neoplasm of lung,58.0,haemoptysis,0.0053608194
+119,primary carcinoma of the liver cells,99.0,haemorrhage,0.0053570555
+64,malignant neoplasm of prostate,174.0,hemianopsia homonymous,0.0053356756
+111,tonic-clonic seizures,335.0,absences finding,0.0053306185
+39,chronic kidney failure,61.0,malaise,0.0053242166
+136,thrombus,287.0,hypoalbuminemia,0.005315968
+141,cholelithiasis,139.0,cushingoid facies,0.0053067612
+91,suicide attempt,111.0,unconscious state,0.0053055435
+131,delirium,83.0,diarrhea,0.00529517
+64,malignant neoplasm of prostate,266.0,ataxia,0.005292541
+146,delusion,34.0,agitation,0.0052884193
+146,delusion,34.0,agitation,0.0052884193
+45,bipolar disorder,204.0,mydriasis,0.0052847466
+72,diverticulitis,86.0,apyrexial,0.0052798027
+81,upper respiratory infection,285.0,indifferent mood,0.005275099
+122,spasm bronchial,223.0,throat sore,0.005261551
+140,pancytopenia,277.0,colic abdominal,0.005216812
+84,deglutition disorder,129.0,stiffness,0.0052036294
+147,affect labile,290.0,extreme exhaustion,0.0051815966
+81,upper respiratory infection,71.0,symptom aggravating factors,0.005154618
+75,osteomyelitis,282.0,urinary hesitation,0.0051362836
+142,biliary calculus,139.0,cushingoid facies,0.0051308786
+142,biliary calculus,86.0,apyrexial,0.0051235287
+98,tricuspid valve insufficiency,314.0,mediastinal shift,0.0051157773
+145,adhesion,114.0,unsteady gait,0.0050794617
+99,Alzheimer's disease,54.0,rhonchus,0.005077225
+23,malignant neoplasms,143.0,hoarseness,0.0050591263
+122,spasm bronchial,54.0,rhonchus,0.0050350074
+92,Pneumocystis carinii pneumonia,278.0,hypokalemia,0.0050343946
+84,deglutition disorder,306.0,achalasia,0.0050301324
+100,candidiasis,106.0,transaminitis,0.005021697
+55,hemiparesis,235.0,paralyse,0.0050086635
+135,dependence,303.0,heavy legs,0.0049720868
+81,upper respiratory infection,224.0,snuffle,0.00496851
+122,spasm bronchial,162.0,sensory discomfort,0.0049627954
+119,primary carcinoma of the liver cells,144.0,thicken,0.004938725
+59,paranoia,177.0,cicatrisation,0.004907062
+112,respiratory failure,222.0,general unsteadiness,0.004906308
+45,bipolar disorder,197.0,behavior hyperactive,0.0049016546
+144,ileus,144.0,thicken,0.0048866607
+67,lymphatic diseases,213.0,splenomegaly,0.004878266
+126,endocarditis,50.0,pleuritic pain,0.0048754103
+94,parkinson disease,196.0,withdraw,0.0048555867
+101,oral candidiasis,106.0,transaminitis,0.0048457617
+112,respiratory failure,208.0,snore,0.0048424085
+68,stenosis aortic valve,77.0,bradycardia,0.0048206476
+23,malignant neoplasms,148.0,pain abdominal,0.004813252
+128,pericardial effusion body substance,36.0,intoxication,0.00481142
+92,Pneumocystis carinii pneumonia,123.0,headache,0.0048083216
+65,carcinoma prostate,227.0,paresis,0.0048023826
+102,neuropathy,346.0,fatigability,0.004799912
+134,influenza,30.0,blackout,0.004793834
+133,hyperbilirubinemia,389.0,para 1,0.0047838343
+22,anxiety state,94.0,consciousness clear,0.004783584
+87,hypoglycemia,313.0,clammy skin,0.004764427
+91,suicide attempt,101.0,fatigue,0.004727451
+111,tonic-clonic seizures,123.0,headache,0.004717679
+143,tachycardia sinus,104.0,orthostasis,0.0047158105
+129,chronic alcoholic intoxication,2.0,shortness of breath,0.004712247
+117,manic disorder,202.0,hypersomnia,0.004702813
+121,hemorrhoids,95.0,guaiac positive,0.0046874085
+55,hemiparesis,227.0,paresis,0.0046301116
+91,suicide attempt,39.0,difficulty,0.0046234415
+141,cholelithiasis,158.0,sore to touch,0.0046144496
+134,influenza,59.0,distress respiratory,0.004608316
+81,upper respiratory infection,300.0,frail,0.004570494
+143,tachycardia sinus,20.0,vomiting,0.004559049
+120,emphysema pulmonary,105.0,arthralgia,0.0045158663
+109,ketoacidosis diabetic,241.0,vision blurred,0.004511484
+142,biliary calculus,158.0,sore to touch,0.0045003933
+97,encephalopathy,337.0,debilitation,0.00449543
+92,Pneumocystis carinii pneumonia,323.0,dyspareunia,0.0044909404
+109,ketoacidosis diabetic,282.0,urinary hesitation,0.004486997
+119,primary carcinoma of the liver cells,220.0,"hypothermia, natural",0.0044785314
+97,encephalopathy,94.0,consciousness clear,0.004467444
+99,Alzheimer's disease,112.0,bedridden,0.0044373185
+99,Alzheimer's disease,112.0,bedridden,0.0044373185
+115,malignant neoplasm of lung,173.0,metastatic lesion,0.00443108
+136,thrombus,158.0,sore to touch,0.004420559
+71,schizophrenia,42.0,homelessness,0.0044162576
+91,suicide attempt,136.0,formication,0.0044055497
+143,tachycardia sinus,148.0,pain abdominal,0.0043658046
+118,personality disorder,117.0,ascites,0.0043635797
+126,endocarditis,144.0,thicken,0.0043625263
+146,delusion,33.0,worry,0.0043578274
+23,malignant neoplasms,144.0,thicken,0.004339139
+23,malignant neoplasms,144.0,thicken,0.004339139
+104,fibroid tumor,147.0,heartburn,0.0043284446
+144,ileus,163.0,constipation,0.00432553
+120,emphysema pulmonary,163.0,constipation,0.004324753
+107,malignant tumor of colon,294.0,systolic ejection murmur,0.0043052174
+132,neutropenia,86.0,apyrexial,0.004285134
+137,cholecystitis,265.0,qt interval prolonged,0.004262998
+95,lymphoma,106.0,transaminitis,0.004255469
+110,tonic-clonic epilepsy,335.0,absences finding,0.004245653
+113,melanoma,188.0,gravida 0,0.0042389017
+145,adhesion,403.0,large-for-dates fetus,0.004237311
+127,effusion pericardial,36.0,intoxication,0.0042342176
+145,adhesion,22.0,feeling suicidal,0.004233647
+104,fibroid tumor,351.0,primigravida,0.004232818
+100,candidiasis,324.0,poor dentition,0.0042158426
+64,malignant neoplasm of prostate,227.0,paresis,0.004171278
+100,candidiasis,217.0,painful swallowing,0.004169211
+88,pneumonia aspiration,106.0,transaminitis,0.0041550687
+129,chronic alcoholic intoxication,111.0,unconscious state,0.0041540056
+143,tachycardia sinus,183.0,left atrial hypertrophy,0.0041011367
+101,oral candidiasis,324.0,poor dentition,0.004082994
+116,carcinoma of lung,181.0,gurgle,0.0040766797
+59,paranoia,250.0,decompensation,0.004055493
+94,parkinson disease,129.0,stiffness,0.004040733
+101,oral candidiasis,217.0,painful swallowing,0.004036084
+139,migraine disorders,213.0,splenomegaly,0.0040282737
+108,carcinoma colon,294.0,systolic ejection murmur,0.0040271645
+137,cholecystitis,163.0,constipation,0.0040216027
+120,emphysema pulmonary,109.0,hypercapnia,0.0040098256
+126,endocarditis,173.0,metastatic lesion,0.003990268
+126,endocarditis,52.0,breath sounds decreased,0.003985981
+84,deglutition disorder,217.0,painful swallowing,0.003963072
+118,personality disorder,315.0,nausea and vomiting,0.003955197
+81,upper respiratory infection,86.0,apyrexial,0.0039134943
+55,hemiparesis,234.0,stinging sensation,0.0038956425
+90,diverticulosis,301.0,cystic lesion,0.0038797238
+119,primary carcinoma of the liver cells,285.0,indifferent mood,0.003861577
+145,adhesion,389.0,para 1,0.0038521003
+92,Pneumocystis carinii pneumonia,106.0,transaminitis,0.0038465143
+110,tonic-clonic epilepsy,123.0,headache,0.0038411033
+121,hemorrhoids,279.0,hunger,0.0038397787
+138,hernia hiatal,95.0,guaiac positive,0.0038232277
+92,Pneumocystis carinii pneumonia,225.0,hacking cough,0.003771622
+34,dehydration,171.0,history of - blackout,0.0037660056
+120,emphysema pulmonary,71.0,symptom aggravating factors,0.0037633963
+134,influenza,334.0,uncoordination,0.0037629916
+57,transient ischemic attack,241.0,vision blurred,0.0037614158
+111,tonic-clonic seizures,256.0,spasm,0.00375877
+131,delirium,196.0,withdraw,0.003673183
+134,influenza,223.0,throat sore,0.0036570863
+144,ileus,113.0,abdominal tenderness,0.003652383
+115,malignant neoplasm of lung,337.0,debilitation,0.003652185
+91,suicide attempt,196.0,withdraw,0.0036281103
+99,Alzheimer's disease,40.0,nightmare,0.0036073078
+23,malignant neoplasms,139.0,cushingoid facies,0.0035666698
+116,carcinoma of lung,189.0,lung nodule,0.003548184
+99,Alzheimer's disease,300.0,frail,0.003545519
+125,pyelonephritis,322.0,myalgia,0.003535191
+132,neutropenia,106.0,transaminitis,0.003528099
+116,carcinoma of lung,337.0,debilitation,0.0035231682
+91,suicide attempt,320.0,todd paralysis,0.0035003808
+114,gastroenteritis,322.0,myalgia,0.0034965822
+72,diverticulitis,277.0,colic abdominal,0.0034934315
+118,personality disorder,82.0,pruritus,0.0034640785
+114,gastroenteritis,367.0,retch,0.003455021
+59,paranoia,248.0,scar tissue,0.003431619
+138,hernia hiatal,216.0,photophobia,0.003427987
+144,ileus,86.0,apyrexial,0.0034263926
+43,psychotic disorder,94.0,consciousness clear,0.0034097244
+134,influenza,50.0,pleuritic pain,0.0033995819
+138,hernia hiatal,123.0,headache,0.0033839126
+133,hyperbilirubinemia,322.0,myalgia,0.003355221
+67,lymphatic diseases,268.0,hepatomegaly,0.0033398601
+134,influenza,55.0,green sputum,0.0033345832
+122,spasm bronchial,86.0,apyrexial,0.0032931198
+137,cholecystitis,385.0,cardiovascular finding,0.0032830802
+126,endocarditis,86.0,apyrexial,0.0032506478
+138,hernia hiatal,346.0,fatigability,0.0032470287
+92,Pneumocystis carinii pneumonia,324.0,poor dentition,0.003237599
+138,hernia hiatal,158.0,sore to touch,0.0032317508
+123,aphasia,378.0,charleyhorse,0.0032272025
+115,malignant neoplasm of lung,189.0,lung nodule,0.003225186
+43,psychotic disorder,42.0,homelessness,0.0032065017
+145,adhesion,394.0,flatulence,0.003195875
+91,suicide attempt,162.0,sensory discomfort,0.00318405
+115,malignant neoplasm of lung,181.0,gurgle,0.003182393
+92,Pneumocystis carinii pneumonia,322.0,myalgia,0.0031500375
+81,upper respiratory infection,296.0,barking cough,0.0031203397
+110,tonic-clonic epilepsy,256.0,spasm,0.0031120991
+144,ileus,158.0,sore to touch,0.003045935
+145,adhesion,189.0,lung nodule,0.0029771486
+134,influenza,224.0,snuffle,0.002967769
+118,personality disorder,40.0,nightmare,0.0029511163
+134,influenza,290.0,extreme exhaustion,0.0029159407
+119,primary carcinoma of the liver cells,231.0,stupor,0.0028913703
+59,paranoia,42.0,homelessness,0.0028884683
+145,adhesion,32.0,hallucinations visual,0.0028705215
+137,cholecystitis,386.0,cardiovascular event,0.0028660032
+117,manic disorder,369.0,elation,0.0028630774
+143,tachycardia sinus,385.0,cardiovascular finding,0.002843171
+112,respiratory failure,364.0,bruit,0.0028419127
+59,paranoia,206.0,loose associations,0.002838274
+144,ileus,400.0,abdomen acute,0.002823281
+59,paranoia,249.0,neologism,0.002790686
+119,primary carcinoma of the liver cells,227.0,paresis,0.002778761
+81,upper respiratory infection,295.0,stuffy nose,0.0027624604
+121,hemorrhoids,306.0,achalasia,0.0027262468
+120,emphysema pulmonary,372.0,behavior showing increased motor activity,0.0027210407
+91,suicide attempt,321.0,alcoholic withdrawal symptoms,0.002676762
+144,ileus,401.0,air fluid level,0.0026216176
+122,spasm bronchial,376.0,no known drug allergies,0.0025971583
+146,delusion,201.0,disturbed family,0.0025546513
+129,chronic alcoholic intoxication,383.0,hoard,0.0025463419
+144,ileus,394.0,flatulence,0.002540913
+112,respiratory failure,94.0,consciousness clear,0.0025118496
+45,bipolar disorder,42.0,homelessness,0.0024963955
+143,tachycardia sinus,386.0,cardiovascular event,0.0024799246
+118,personality disorder,371.0,transsexual,0.0024763227
+45,bipolar disorder,206.0,loose associations,0.002472704
+132,neutropenia,213.0,splenomegaly,0.0024377082
+118,personality disorder,290.0,extreme exhaustion,0.0024283545
+144,ileus,402.0,catching breath,0.0024199549
+137,cholecystitis,394.0,flatulence,0.0024054
+137,cholecystitis,393.0,Murphy's sign,0.002402001
+122,spasm bronchial,232.0,fremitus,0.0023941763
+88,pneumonia aspiration,314.0,mediastinal shift,0.0023846808
+135,dependence,295.0,stuffy nose,0.0023806987
+119,primary carcinoma of the liver cells,213.0,splenomegaly,0.0023802482
+91,suicide attempt,41.0,unable to concentrate,0.002377119
+146,delusion,200.0,giddy mood,0.002366197
+143,tachycardia sinus,74.0,t wave inverted,0.0023563101
+134,influenza,123.0,headache,0.0023441073
+134,influenza,360.0,lip smacking,0.002311395
+134,influenza,71.0,symptom aggravating factors,0.0023025896
+120,emphysema pulmonary,242.0,room spinning,0.0022868614
+138,hernia hiatal,322.0,myalgia,0.002262712
+100,candidiasis,343.0,adverse reaction,0.0022335956
+94,parkinson disease,306.0,achalasia,0.002213627
+134,influenza,208.0,snore,0.0021863896
+103,kidney disease,214.0,bleeding of vagina,0.002181961
+101,oral candidiasis,343.0,adverse reaction,0.0021618912
+146,delusion,185.0,catatonia,0.00215168
+117,manic disorder,250.0,decompensation,0.0021304335
+122,spasm bronchial,248.0,scar tissue,0.0021235028
+92,Pneumocystis carinii pneumonia,218.0,cachexia,0.002106456
+137,cholecystitis,277.0,colic abdominal,0.0020817341
+120,emphysema pulmonary,248.0,scar tissue,0.0020678793
+118,personality disorder,157.0,scratch marks,0.0020096737
+144,ileus,188.0,gravida 0,0.0019692632
+132,neutropenia,219.0,hypocalcemia result,0.0019677007
+119,primary carcinoma of the liver cells,242.0,room spinning,0.0019650084
+120,emphysema pulmonary,313.0,clammy skin,0.0019436007
+120,emphysema pulmonary,217.0,painful swallowing,0.0019424134
+23,malignant neoplasms,147.0,heartburn,0.001874563
+98,tricuspid valve insufficiency,338.0,impaired cognition,0.0018521943
+99,Alzheimer's disease,341.0,tremor resting,0.001850382
+146,delusion,198.0,terrify,0.0018411807
+120,emphysema pulmonary,322.0,myalgia,0.0018407184
+126,endocarditis,381.0,flare,0.0018385149
+107,malignant tumor of colon,357.0,hyperemesis,0.0017978714
+126,endocarditis,322.0,myalgia,0.0017854074
+143,tachycardia sinus,248.0,scar tissue,0.0017111772
+119,primary carcinoma of the liver cells,218.0,cachexia,0.0016629084
+108,carcinoma colon,357.0,hyperemesis,0.0016551954
+81,upper respiratory infection,297.0,rapid shallow breathing,0.0016519445
+137,cholecystitis,328.0,moan,0.0016315682
+134,influenza,366.0,scleral icterus,0.0015811336
+81,upper respiratory infection,301.0,cystic lesion,0.0015763529
+135,dependence,42.0,homelessness,0.0015527545
+99,Alzheimer's disease,94.0,consciousness clear,0.0015481755
+145,adhesion,404.0,immobile,0.0015408401
+134,influenza,337.0,debilitation,0.0015078714
+100,candidiasis,344.0,adverse effect,0.0014890637
+57,transient ischemic attack,244.0,clumsiness,0.0014592318
+120,emphysema pulmonary,328.0,moan,0.001447558
+101,oral candidiasis,344.0,adverse effect,0.0014412607
+99,Alzheimer's disease,182.0,wheelchair bound,0.0014138411
+104,fibroid tumor,353.0,proteinemia,0.0014109393
+120,emphysema pulmonary,218.0,cachexia,0.0013913297
+119,primary carcinoma of the liver cells,268.0,hepatomegaly,0.0013070703
+81,upper respiratory infection,298.0,noisy respiration,0.0012848458
+84,deglutition disorder,307.0,side pain,0.001277792
+129,chronic alcoholic intoxication,52.0,breath sounds decreased,0.0012575688
+134,influenza,61.0,malaise,0.0012403121
+129,chronic alcoholic intoxication,249.0,neologism,0.001189694
+118,personality disorder,42.0,homelessness,0.0011756994
+129,chronic alcoholic intoxication,42.0,homelessness,0.0011078352
+81,upper respiratory infection,299.0,nasal discharge present,0.0011012963
+137,cholecystitis,342.0,groggy,0.0010192312
+92,Pneumocystis carinii pneumonia,325.0,floppy,0.0009979868
+146,delusion,250.0,decompensation,0.0009910401
+132,neutropenia,388.0,rhd positive,0.0009838503
+99,Alzheimer's disease,342.0,groggy,0.0009675424
+23,malignant neoplasms,145.0,pulsus paradoxus,0.0009428316
+117,manic disorder,370.0,verbally abusive behavior,0.0008502818
+146,delusion,206.0,loose associations,0.0007840362
+100,candidiasis,345.0,abdominal bloating,0.0007415635
+101,oral candidiasis,345.0,abdominal bloating,0.0007180328
+146,delusion,249.0,neologism,0.0006649147
+126,endocarditis,145.0,pulsus paradoxus,0.00065732154
+137,cholecystitis,395.0,gasping for breath,0.00064053363
+131,delirium,370.0,verbally abusive behavior,0.0006005474
+124,obesity morbid,380.0,feels hot/feverish,0.0005204736
+134,influenza,391.0,sneeze,0.0004453003
+146,delusion,370.0,verbally abusive behavior,0.00042440073
+120,emphysema pulmonary,374.0,choke,0.0003887201
+146,delusion,338.0,impaired cognition,0.0003664266
+118,personality disorder,307.0,side pain,0.00034591087
+137,cholecystitis,396.0,feces in rectum,0.00032026682
+104,fibroid tumor,352.0,abnormally hard consistency,0.00028011127
+137,cholecystitis,352.0,abnormally hard consistency,0.00016013341
+80,failure heart,12.0,angina pectoris,6.95255e-05
