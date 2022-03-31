@@ -1,4 +1,5 @@
 from traceback import print_tb
+from urllib import response
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -14,13 +15,12 @@ from api.predictions import getPredictions
 @api_view(['GET'])
 def apiOverview(request):
     api_urls = {
+        'Add and Predict': 'api/differential-diagnosis/',
         'Lists': 'api/patient/list/',
         'Detailed View': 'api/patient/details/<str:pk>/',
-        'Add': 'api/patient/add/',
         'Update': 'api/patient/update/<str:pk>/',
         'Delete': 'api/patient/delete/<str:pk>/',
-        'Google Places': 'api/nearest-hospitals',
-        'Predict': 'api/differential-diagnosis',
+        'Google Places': 'api/nearest-hospitals/',
     }
 
     return Response(api_urls)
@@ -65,4 +65,11 @@ def apiPatientUpdate(request, pk):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
+
+@api_view(['DELETE'])
+def apiPatientDelete(request, pk):
+    patient = Patient.objects.get(id=pk)
+    if patient.delete():
+        response = {"response": "Record ID #{} successfully deleted".format(pk)}
+        return Response(response)
 

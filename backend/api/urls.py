@@ -9,4 +9,5 @@ urlpatterns = [
   path('api/patient/list/', views.apiPatientList, name="patient-list"),
   path('api/patient/detail/<pk>/', views.apiPatientDetail, name="patient-detail"),
   path('api/patient/update/<pk>/', views.apiPatientUpdate, name="patient-update"),
+  path('api/patient/delete/<pk>/', views.apiPatientDelete, name="patient-delete"),
 ]
