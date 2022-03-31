@@ -1,3 +1,4 @@
+from traceback import print_tb
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -34,14 +35,26 @@ def apiNearestHospitals(request):
 
 @api_view(['POST'])
 def apiDifferentialDiagnosis(request):
-    data = json.loads(request.body)
-    symptoms = data['symptoms']
-    result = getPredictions(symptoms)
-    print(result)
-    return Response(result)
+    serializer = PatientSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        data = serializer.validated_data
+        symptoms = data['symptoms']
+        response = data
+        if symptoms:
+            result = getPredictions(symptoms)
+            response['predictions'] = result
+        return Response(response)
 
 @api_view(['GET'])
 def apiPatientList(request):
     patients = Patient.objects.all()
     serializer = PatientSerializer(patients, many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def apiPatientDetail(request, pk):
+    patient = Patient.objects.get(id=pk)
+    serializer = PatientSerializer(patient, many=False)
+    return Response(serializer.data)
+
