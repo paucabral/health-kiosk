@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from django.http import JsonResponse
-from rest_framework import serializers
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from googleplaces import GooglePlaces, types, lang
+from .serializers import *
+from .models import *
 import requests
 import json
 from django.conf import settings
@@ -15,8 +14,8 @@ from api.predictions import getPredictions
 def apiOverview(request):
     api_urls = {
         'Lists': 'api/patient/list/',
-        'Detail View': 'api/patient/detail/<str:pk>/',
-        'Create': 'api/patient/create/',
+        'Detailed View': 'api/patient/details/<str:pk>/',
+        'Add': 'api/patient/add/',
         'Update': 'api/patient/update/<str:pk>/',
         'Delete': 'api/patient/delete/<str:pk>/',
         'Google Places': 'api/nearest-hospitals',
@@ -33,7 +32,6 @@ def apiNearestHospitals(request):
     query_result = requests.get(url)
     return Response(query_result.json())
 
-
 @api_view(['POST'])
 def apiDifferentialDiagnosis(request):
     data = json.loads(request.body)
@@ -41,3 +39,9 @@ def apiDifferentialDiagnosis(request):
     result = getPredictions(symptoms)
     print(result)
     return Response(result)
+
+@api_view(['GET'])
+def apiPatientList(request):
+    patients = Patient.objects.all()
+    serializer = PatientSerializer(patients, many=True)
+    return Response(serializer.data)
