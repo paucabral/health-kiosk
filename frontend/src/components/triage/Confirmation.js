@@ -1,10 +1,28 @@
-import { MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer } from 'mdb-react-ui-kit'
-import React from 'react'
-import '../../styles/styles.css'
+import { MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
+import React from 'react';
+import axios from 'axios';
+import '../../styles/styles.css';
 
 const Confirmation = ({ formData, setPage, setProgress }) => {
   const checkEntry = () => {
     return formData.first_name === "" | formData.last_name === "" | formData.age === "" | formData.sex === "" | formData.contact_no === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
+  }
+
+  const submitForm = async () => {
+    try {
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/differential-diagnosis/`
+      const json = JSON.stringify(formData)
+      const response = await axios.post(url, json, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.status == 200) {
+        console.log(response.data);
+      }
+    } catch (error) {
+      console.log(JSON.stringify(error));
+    }
   }
 
   return (
@@ -144,7 +162,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                 </MDBBtn>
               </MDBCol>
               <MDBCol>
-                <MDBBtn color='success' disabled={checkEntry()} className='w-75'>
+                <MDBBtn color='success' disabled={checkEntry()} className='w-75' onClick={submitForm()}>
                   Submit
                 </MDBBtn>
               </MDBCol>
