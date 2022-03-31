@@ -6,4 +6,4 @@ from .models import *
 class PatientSerializer(serializers.ModelSerializer):
   class Meta:
     model = Patient
-    fields - '__all__'
+    fields = '__all__'

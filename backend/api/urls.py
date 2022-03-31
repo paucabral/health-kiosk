@@ -6,5 +6,5 @@ urlpatterns = [
   path('', views.apiOverview, name="api-overview"),
   path('api/nearest-hospitals', views.apiNearestHospitals, name="nearest-hospitals"),
   path('api/differential-diagnosis', views.apiDifferentialDiagnosis, name="differential-diagnosis"),
-  path('api/patient/list/', views.views.apiPatientList, name="patient-list")
+  path('api/patient/list/', views.apiPatientList, name="patient-list")
 ]
