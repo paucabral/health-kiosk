@@ -198,9 +198,9 @@ const Facilities = () => {
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
-                        <p>
-                          <span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode} <br />
-                          <span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>DISTANCE:</span> {direction.distance} <br />
+                        <p style={{ lineHeight: '1' }}>
+                          <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</span> <br />
+                          <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>DISTANCE:</span> {direction.distance}</span> <br />
                         </p>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
                           <MDBBtn className='btn-success travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
