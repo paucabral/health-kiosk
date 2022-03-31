@@ -115,6 +115,7 @@ const Facilities = () => {
   const [direction, setDirection] = useState({
     response: null,
     travelMode: 'WALKING',
+    distance: '',
     origin: '',
     destination: ''
   });
@@ -122,8 +123,10 @@ const Facilities = () => {
   const directionsCallback = (response) => {
     if (response !== null) {
       if (response.status === 'OK') {
-        console.log(response)
-        setDirection({ ...direction, response: response })
+        console.log(`Distance: ${response[0]}`);
+        const distance = response['routes'][0]['legs'][0]['distance']['text'];
+        console.log(distance)
+        setDirection({ ...direction, distance: distance, response: response })
       } else {
         console.log('response: ', response)
       }
@@ -195,7 +198,10 @@ const Facilities = () => {
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
-                        <p><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</p>
+                        <p>
+                          <span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode} <br />
+                          <span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>DISTANCE:</span> {direction.distance} <br />
+                        </p>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
                           <MDBBtn className='btn-success travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
                           <MDBBtn className='travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
