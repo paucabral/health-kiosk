@@ -58,3 +58,11 @@ def apiPatientDetail(request, pk):
     serializer = PatientSerializer(patient, many=False)
     return Response(serializer.data)
 
+@api_view(['POST'])
+def apiPatientUpdate(request, pk):
+    patient = Patient.objects.get(id=pk)
+    serializer = PatientSerializer(instance=patient, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
