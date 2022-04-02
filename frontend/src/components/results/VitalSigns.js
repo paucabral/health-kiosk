@@ -17,7 +17,10 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                 </MDBCardHeader>
                 <MDBCardBody className='text-warning pt-2 pb-2'>
                   <MDBCardText>
-                    <strong>{temperature ? <span>{temperature} °C</span> : <span>NA</span>}</strong>
+                    <MDBRow>
+                      <MDBCol><strong>{temperature ? <span>{temperature} °C</span> : <span>NA</span>}</strong></MDBCol>
+                      <MDBCol>STATUS</MDBCol>
+                    </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -31,7 +34,10 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                 </MDBCardHeader>
                 <MDBCardBody className='text-danger pt-2 pb-2'>
                   <MDBCardText>
-                    <strong>{pulse_rate ? <span>{pulse_rate} bpm</span> : <span>NA</span>}</strong>
+                    <MDBRow>
+                      <MDBCol><strong>{pulse_rate ? <span>{pulse_rate} bpm</span> : <span>NA</span>}</strong></MDBCol>
+                      <MDBCol>STATUS</MDBCol>
+                    </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -45,7 +51,10 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                 </MDBCardHeader>
                 <MDBCardBody className='text-primary pt-2 pb-2'>
                   <MDBCardText>
-                    <strong>{systolic_bp ? <span>{systolic_bp} mmHg</span> : <span>NA</span>}</strong>
+                    <MDBRow>
+                      <MDBCol><strong>{systolic_bp ? <span>{systolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
+                      <MDBCol>STATUS</MDBCol>
+                    </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -59,7 +68,10 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                 </MDBCardHeader>
                 <MDBCardBody className='text-secondary pt-2 pb-2'>
                   <MDBCardText>
-                    <strong>{diastolic_bp ? <span>{diastolic_bp} mmHg</span> : <span>NA</span>}</strong>
+                    <MDBRow>
+                      <MDBCol><strong>{diastolic_bp ? <span>{diastolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
+                      <MDBCol>STATUS</MDBCol>
+                    </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -73,7 +85,10 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                 </MDBCardHeader>
                 <MDBCardBody className='text-success pt-2 pb-2'>
                   <MDBCardText>
-                    <strong>{o2_saturation ? <span> {o2_saturation} %</span> : <span>NA</span>}</strong>
+                    <MDBRow>
+                      <MDBCol><strong>{o2_saturation ? <span> {o2_saturation} %</span> : <span>NA</span>}</strong></MDBCol>
+                      <MDBCol>STATUS</MDBCol>
+                    </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
