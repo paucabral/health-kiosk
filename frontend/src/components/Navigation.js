@@ -54,7 +54,7 @@ const Navigation = () => {
           <MDBCollapse show={showNavColor} navbar>
             <MDBNavbarNav right fullWidth={false}>
               <MDBNavbarItem className={isActiveHome ? "active" : null} onClick={() => handleToggle("home")}>
-                <MDBNavbarLink aria-current='page' href='#'><MDBIcon fas icon="home" /> Home</MDBNavbarLink>
+                <MDBNavbarLink aria-current='page' href='/'><MDBIcon fas icon="home" /> Home</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem className={isActiveFeatures ? "active" : null} onClick={() => handleToggle("features")}>
                 <MDBNavbarLink href='#'><MDBIcon fas icon="list-alt" /> Features</MDBNavbarLink>
