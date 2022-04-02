@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardHeader, MDBCardFooter, MDBCol, MDBRow, MDBBtn, MDBContainer, MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
+import { MDBCard, MDBCardBody, MDBCol, MDBRow, MDBBtn, MDBContainer, MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
 import PersonalInformationInput from '../components/triage/PersonalInformationInput';
 import SensorData from '../components/triage/SensorData';
 import Confirmation from '../components/triage/Confirmation';
@@ -62,10 +62,10 @@ const Triage = () => {
       return <React.Fragment>
         <MDBRow className='mb-5 w-100' >
           <MDBCol>
-            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page == 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>Prev</MDBBtn>
+            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page === 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>Prev</MDBBtn>
           </MDBCol>
           <MDBCol>
-            <MDBBtn id='next' color='primary' className='w-75' disabled={page == FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
+            <MDBBtn id='next' color='primary' className='w-75' disabled={page === FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
           </MDBCol>
         </MDBRow>
       </React.Fragment>;
