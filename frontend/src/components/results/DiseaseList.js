@@ -37,7 +37,7 @@ const DiseaseList = ({ diseases }) => {
                         <MDBRow className='diseaseBox' style={{ justifyContent: 'center' }}>
                           <MDBRow>
                             <MDBCol>{disease[0]}</MDBCol>
-                            <MDBCol>{disease[1]}</MDBCol>
+                            {/* <MDBCol>weight: {disease[1]}</MDBCol> */}
                           </MDBRow>
                           <MDBRow>
                             <MDBCol>
