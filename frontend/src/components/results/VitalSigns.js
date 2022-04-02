@@ -12,12 +12,12 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
           <MDBRow>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='warning' background='white'>
-                <MDBCardHeader className='text-white' background='warning'>
+                <MDBCardHeader className='text-white pt-2 pb-2' background='warning'>
                   <strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature</strong>
                 </MDBCardHeader>
-                <MDBCardBody className='text-warning'>
+                <MDBCardBody className='text-warning pt-2 pb-2'>
                   <MDBCardText>
-                    {temperature ? <span>{temperature} °C</span> : <span>NA</span>}
+                    <strong>{temperature ? <span>{temperature} °C</span> : <span>NA</span>}</strong>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -26,12 +26,12 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
           <MDBRow>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='danger' background='white'>
-                <MDBCardHeader className='text-white' background='danger'>
+                <MDBCardHeader className='text-white pt-2 pb-2' background='danger'>
                   <strong><MDBIcon fas icon="heartbeat" /> Pulse Rate</strong>
                 </MDBCardHeader>
-                <MDBCardBody className='text-danger'>
+                <MDBCardBody className='text-danger pt-2 pb-2'>
                   <MDBCardText>
-                    {pulse_rate ? <span>{pulse_rate} bpm</span> : <span>NA</span>}
+                    <strong>{pulse_rate ? <span>{pulse_rate} bpm</span> : <span>NA</span>}</strong>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -40,12 +40,12 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
           <MDBRow>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='primary' background='white'>
-                <MDBCardHeader className='text-white' background='primary'>
+                <MDBCardHeader className='text-white pt-2 pb-2' background='primary'>
                   <strong><MDBIcon fas icon="tint" /> Systolic Blood Pressure</strong>
                 </MDBCardHeader>
-                <MDBCardBody className='text-primary'>
+                <MDBCardBody className='text-primary pt-2 pb-2'>
                   <MDBCardText>
-                    {systolic_bp ? <span>{systolic_bp} mmHg</span> : <span>NA</span>}
+                    <strong>{systolic_bp ? <span>{systolic_bp} mmHg</span> : <span>NA</span>}</strong>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -54,12 +54,12 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
           <MDBRow>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='secondary' background='white'>
-                <MDBCardHeader className='text-white' background='secondary'>
+                <MDBCardHeader className='text-white pt-2 pb-2' background='secondary'>
                   <strong><MDBIcon fas icon="tint" /> Diastolic Blood Pressure</strong>
                 </MDBCardHeader>
-                <MDBCardBody className='text-secondary'>
+                <MDBCardBody className='text-secondary pt-2 pb-2'>
                   <MDBCardText>
-                    {diastolic_bp ? <span>{diastolic_bp} mmHg</span> : <span>NA</span>}
+                    <strong>{diastolic_bp ? <span>{diastolic_bp} mmHg</span> : <span>NA</span>}</strong>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -68,12 +68,12 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
           <MDBRow>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='success' background='white'>
-                <MDBCardHeader className='text-white' background='success'>
+                <MDBCardHeader className='text-white pt-2 pb-2' background='success'>
                   <strong><MDBIcon fas icon="wind" /> Oxygen Saturation</strong>
                 </MDBCardHeader>
-                <MDBCardBody className='text-success'>
+                <MDBCardBody className='text-success pt-2 pb-2'>
                   <MDBCardText>
-                    {o2_saturation ? <span> {o2_saturation} %</span> : <span>NA</span>}
+                    <strong>{o2_saturation ? <span> {o2_saturation} %</span> : <span>NA</span>}</strong>
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
