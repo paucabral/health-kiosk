@@ -22,7 +22,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
       });
       if (response.status == 200) {
         console.log(response.data);
-        navigate('/results', { state: formData })
+        navigate('/results', { state: response.data })
       }
     } catch (error) {
       console.log(JSON.stringify(error));
@@ -166,7 +166,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                 </MDBBtn>
               </MDBCol>
               <MDBCol>
-                <MDBBtn color='success' disabled={checkEntry()} className='w-75' onClick={submitForm()}>
+                <MDBBtn color='success' disabled={checkEntry()} className='w-75' onClick={submitForm}>
                   Submit
                 </MDBBtn>
               </MDBCol>

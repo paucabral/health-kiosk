@@ -6,7 +6,7 @@ import VitalSigns from '../components/results/VitalSigns';
 
 const Results = () => {
   const location = useLocation();
-
+  console.log(location.state)
   return (
     <React.Fragment>
       <MDBContainer className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -86,7 +86,7 @@ const Results = () => {
           </MDBCol>
           <MDBCol>
             <MDBCol className='px-0'>
-              <DiseaseList symptoms={[]} />
+              <DiseaseList diseases={location.state.predictions} />
             </MDBCol>
           </MDBCol>
         </MDBRow>
