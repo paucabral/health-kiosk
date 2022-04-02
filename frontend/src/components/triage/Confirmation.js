@@ -1,9 +1,12 @@
 import { MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../styles/styles.css';
 
 const Confirmation = ({ formData, setPage, setProgress }) => {
+  const navigate = useNavigate();
+
   const checkEntry = () => {
     return formData.first_name === "" | formData.last_name === "" | formData.age === "" | formData.sex === "" | formData.contact_no === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
   }
@@ -19,6 +22,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
       });
       if (response.status == 200) {
         console.log(response.data);
+        navigate('/results', { state: formData })
       }
     } catch (error) {
       console.log(JSON.stringify(error));
