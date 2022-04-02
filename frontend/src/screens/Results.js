@@ -1,4 +1,4 @@
-import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBBtn } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
@@ -58,21 +58,23 @@ const Results = () => {
               </MDBRow>
             </MDBCol>
           </MDBRow>
-          {
-            location.state.symptoms.length != 0 ?
-              <MDBRow className='mt-3 mb-2'>
-                <MDBCol size='2'>
-                  <strong>SYMPTOMS:</strong>
-                </MDBCol>
-                <MDBCol style={{ textAlign: 'left' }}>
-                  {location.state.symptoms?.map((symptom) => (
-                    <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
-                  ))}
-                </MDBCol>
-              </MDBRow>
-              :
-              <></>
-          }
+          <MDBRow className='mt-3 mb-2'>
+            <MDBCol size='2'>
+              <strong>SYMPTOMS:</strong>
+            </MDBCol>
+            <MDBCol id="confirmation" style={{ textAlign: 'left', overflowX: 'auto', width: '10vw', whiteSpace: 'nowrap' }}>
+              {
+                location.state.symptoms.length != 0 ?
+                  <div>
+                    {location.state.symptoms?.map((symptom) => (
+                      <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
+                    ))}
+                  </div>
+                  :
+                  <MDBCardText className='text-muted'><i>NO SYMPTOMS SELECTED </i></MDBCardText>
+              }
+            </MDBCol>
+          </MDBRow>
         </MDBRow>
         <MDBRow>
           <MDBCol className='px-0'>

@@ -25,7 +25,7 @@ const DiseaseList = ({ diseases }) => {
           <MDBCardHeader className='text-white' background='info'>
             <strong>Differential Diagnosis</strong>
           </MDBCardHeader>
-          <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '50vh' }}>
+          <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '47vh' }}>
             <MDBCardBody>
               <MDBCardText style={{ justifyContent: 'center' }}>
                 {
