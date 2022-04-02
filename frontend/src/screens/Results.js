@@ -1,6 +1,7 @@
 import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBBtn } from 'mdb-react-ui-kit';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import DiseaseList from '../components/results/DiseaseList';
 import VitalSigns from '../components/results/VitalSigns';
 
 const Results = () => {
@@ -84,7 +85,9 @@ const Results = () => {
             />
           </MDBCol>
           <MDBCol>
-            Hello World
+            <MDBCol className='px-0'>
+              <DiseaseList symptoms={[]} />
+            </MDBCol>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
