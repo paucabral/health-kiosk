@@ -20,23 +20,23 @@ const DiseaseList = ({ diseases }) => {
 
   return (
     <React.Fragment>
-      <MDBContainer>
+      <MDBContainer className='p-0' style={{ justifyContent: 'center' }}>
         <MDBCard shadow='0' border='info' background='white'>
           <MDBCardHeader className='text-white' background='info'>
             <strong>Differential Diagnosis</strong>
           </MDBCardHeader>
           <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '47vh' }}>
-            <MDBCardBody>
-              <MDBCardText style={{ justifyContent: 'center' }}>
+            <MDBCardBody className='pt-2 pb-2'>
+              <MDBContainer style={{ justifyContent: 'center' }}>
                 {
                   diseases_list ?
-                    <MDBRow style={{ justifyContent: 'center' }} >
-                      {diseases_list?.map((disease) => <MDBRow>{disease}</MDBRow>
+                    <MDBRow style={{ justifyContent: 'center' }}>
+                      {diseases_list?.map((disease) => <MDBRow className='diseaseBox' style={{ justifyContent: 'center' }}>{disease}</MDBRow>
                       )}
                     </MDBRow>
                     : <MDBCardText className='text-muted'>Not Available</MDBCardText>
                 }
-              </MDBCardText>
+              </MDBContainer>
             </MDBCardBody>
           </MDBRow>
         </MDBCard>
