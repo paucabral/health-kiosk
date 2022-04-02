@@ -73,15 +73,20 @@ const Results = () => {
               <></>
           }
         </MDBRow>
-
-        {location.state.first_name} {location.state.last_name}
-        <VitalSigns
-          temperature={location.state.temperature}
-          pulse_rate={location.state.pulse_rate}
-          systolic_bp={location.state.systolic_bp}
-          diastolic_bp={location.state.diastolic_bp}
-          o2_saturation={location.state.o2_saturation}
-        />
+        <MDBRow>
+          <MDBCol>
+            <VitalSigns
+              temperature={location.state.temperature}
+              pulse_rate={location.state.pulse_rate}
+              systolic_bp={location.state.systolic_bp}
+              diastolic_bp={location.state.diastolic_bp}
+              o2_saturation={location.state.o2_saturation}
+            />
+          </MDBCol>
+          <MDBCol>
+            Hello World
+          </MDBCol>
+        </MDBRow>
       </MDBContainer>
     </React.Fragment>
   )
