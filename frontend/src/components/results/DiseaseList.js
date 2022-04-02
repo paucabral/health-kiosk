@@ -1,12 +1,14 @@
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBCardText } from 'mdb-react-ui-kit'
-import React from 'react'
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import React from 'react';
+import diseaseSymptomsList from '../../data/disease-symptoms-list';
 
 const DiseaseList = ({ diseases }) => {
+
   const renderDisease = () => {
     if (diseases) {
       let disease_list = [];
       for (const [key, value] of Object.entries(diseases)) {
-        const content = <MDBRow><MDBCol>{key}</MDBCol><MDBCol>{value}</MDBCol></MDBRow>
+        const content = [key, value]
         disease_list.push(content)
       }
       return disease_list;
@@ -31,12 +33,34 @@ const DiseaseList = ({ diseases }) => {
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
-                      {diseases_list?.map((disease) => <MDBRow className='diseaseBox' style={{ justifyContent: 'center' }}>{disease}</MDBRow>
+                      {diseases_list?.map((disease) =>
+                        <MDBRow className='diseaseBox' style={{ justifyContent: 'center' }}>
+                          <MDBRow>
+                            <MDBCol>{disease[0]}</MDBCol>
+                            <MDBCol>{disease[1]}</MDBCol>
+                          </MDBRow>
+                          <MDBRow>
+                            <MDBCol>
+                              {diseaseSymptomsList?.map((instance) => {
+                                return (
+                                  instance["disease"] == disease[0] ?
+                                    <MDBContainer>
+                                      {instance['symptoms']?.map((symptom) => (
+                                        <MDBBtn pill color='dark' className='shadow-0 px-2 py-1' key={symptom} style={{ display: 'inline', margin: '0.2em', borderRadius: '20px', fontSize: '0.65em' }} disabled>{symptom}</MDBBtn>
+                                      ))}
+                                    </MDBContainer>
+                                    : <></>
+                                )
+                              })}
+                            </MDBCol>
+                          </MDBRow>
+                        </MDBRow>
                       )}
                     </MDBRow>
                     : <MDBCardText className='text-muted'>Not Available</MDBCardText>
                 }
               </MDBContainer>
+
             </MDBCardBody>
           </MDBRow>
         </MDBCard>
