@@ -74,7 +74,7 @@ const Results = () => {
           }
         </MDBRow>
         <MDBRow>
-          <MDBCol>
+          <MDBCol className='px-0'>
             <VitalSigns
               temperature={location.state.temperature}
               pulse_rate={location.state.pulse_rate}
