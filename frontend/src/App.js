@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Triage from './screens/Triage';
 import Facilities from './screens/Facilities';
+import Results from './screens/Results';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Triage />} />
-            <Route exact path="/check" element={<Triage />} />
+            <Route path="/check" element={<Triage />} />
+            <Route path="/results" element={<Results />} />
             <Route path="/nearest-facilities" element={<Facilities />} />
           </Routes>
         </BrowserRouter>
