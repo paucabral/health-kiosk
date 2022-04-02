@@ -2,7 +2,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBC
 import React from 'react';
 import diseaseSymptomsList from '../../data/disease-symptoms-list';
 
-const DiseaseList = ({ diseases }) => {
+const DiseaseList = ({ diseases, symptoms }) => {
 
   const renderDisease = () => {
     if (diseases) {
@@ -46,7 +46,7 @@ const DiseaseList = ({ diseases }) => {
                                   instance["disease"] == disease[0] ?
                                     <MDBContainer>
                                       {instance['symptoms']?.map((symptom) => (
-                                        <MDBBtn pill color='dark' className='shadow-0 px-2 py-1' key={symptom} style={{ display: 'inline', margin: '0.2em', borderRadius: '20px', fontSize: '0.65em' }} disabled>{symptom}</MDBBtn>
+                                        <MDBBtn pill color={`${symptoms.includes(symptom) ? 'info' : 'dark'}`} className='shadow-0 px-2 py-1' key={symptom} style={{ display: 'inline', margin: '0.2em', borderRadius: '20px', fontSize: '0.65em' }} disabled>{symptom}</MDBBtn>
                                       ))}
                                     </MDBContainer>
                                     : <></>

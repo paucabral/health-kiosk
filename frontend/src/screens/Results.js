@@ -88,7 +88,7 @@ const Results = () => {
           </MDBCol>
           <MDBCol>
             <MDBCol className='px-0'>
-              <DiseaseList diseases={location.state.predictions} />
+              <DiseaseList diseases={location.state.predictions} symptoms={location.state.symptoms} />
             </MDBCol>
           </MDBCol>
         </MDBRow>
