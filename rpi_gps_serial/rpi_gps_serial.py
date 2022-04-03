@@ -63,7 +63,6 @@ def computedGPS():
     longraw_val = 0.0
     longdirection = ""
     gpsarr = []
-    print("GPSCNT >>>>>>> gpscnt")
     gpslines=ser.readline()
     strgpslines = str(gpslines).split(',')
     gpsarr.append(strgpslines)
@@ -73,23 +72,28 @@ def computedGPS():
     else:
         if (gpsarr[0][0]) == "b'$GPGLL":
             print("FOUND IT!")
-            latraw_val = float(gpsarr[0][1])
-            latdirection = str(gpsarr[0][2])
-            longraw_val = float(gpsarr[0][3])
-            longdirection = str(gpsarr[0][4])
-            # latraw_val = float(1437.57826)
-            # latdirection = str('N')
-            # longraw_val = float(12105.98656)
-            # longdirection = str('E')            
-            # print("RAW_Lat:",latraw_val)
-            # print("RAW_latdir:",latdirection)
-            # print("RAW_Long:",longraw_val)
-            # print("RAW_longdir:",longdirection)
-            lat = compute_rawGPS(latraw_val, latdirection)
-            lng = compute_rawGPS(longraw_val, longdirection)
-            coord_dic = {"lat": lat, "lng": lng}
-            jsonStr = json.dumps(coord_dic)
-            print(jsonStr)
+            latraw_check = str(gpsarr[0][1]) # Checked initially, the firstmost value of needed
+            if (latraw_check != ''):
+                latraw_val = float(gpsarr[0][1])
+                latdirection = str(gpsarr[0][2])
+                longraw_val = float(gpsarr[0][3])
+                longdirection = str(gpsarr[0][4])
+                # latraw_val = float(1437.57826)
+                # latdirection = str('N')
+                # longraw_val = float(12105.98656)
+                # longdirection = str('E')            
+                # print("RAW_Lat:",latraw_val)
+                # print("RAW_latdir:",latdirection)
+                # print("RAW_Long:",longraw_val)
+                # print("RAW_longdir:",longdirection)
+                lat = compute_rawGPS(latraw_val, latdirection)
+                lng = compute_rawGPS(longraw_val, longdirection)
+                coord_dic = {"lat": lat, "lng": lng}
+                jsonStr = json.dumps(coord_dic)
+                print(jsonStr)
+            else:
+                print("GPS Not locked in yet")
+                
     
     
     gpscnt+=1
