@@ -29,18 +29,18 @@ const DiseaseList = ({ diseases, symptoms }) => {
           </MDBCardHeader>
           <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '46vh' }}>
             <MDBCardBody className='pt-2 pb-2'>
-              <MDBContainer style={{ justifyContent: 'center' }}>
+              <MDBContainer id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '43vh' }}>
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
                       {diseases_list?.map((disease) =>
-                        <MDBRow className='diseaseBox' style={{ justifyContent: 'center' }}>
-                          <MDBRow>
-                            <MDBCol>{disease[0]}</MDBCol>
+                        <MDBCard className='diseaseBox my-2 p-4 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', }}>
+                          <MDBCardHeader>
+                            <strong className='text-uppercase'>{disease[0]}</strong>
                             {/* <MDBCol>weight: {disease[1]}</MDBCol> */}
-                          </MDBRow>
-                          <MDBRow>
-                            <MDBCol>
+                          </MDBCardHeader>
+                          <MDBCardBody>
+                            <MDBRow>
                               {diseaseSymptomsList?.map((instance) => {
                                 return (
                                   instance["disease"] == disease[0] ?
@@ -52,9 +52,9 @@ const DiseaseList = ({ diseases, symptoms }) => {
                                     : <></>
                                 )
                               })}
-                            </MDBCol>
-                          </MDBRow>
-                        </MDBRow>
+                            </MDBRow>
+                          </MDBCardBody>
+                        </MDBCard>
                       )}
                     </MDBRow>
                     : <MDBCardText className='text-muted'>Not Available</MDBCardText>
