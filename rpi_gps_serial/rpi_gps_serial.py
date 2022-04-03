@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import time
 import serial
+import json
 
 ser = serial.Serial(
     port='/dev/ttyS0',
@@ -11,14 +12,6 @@ ser = serial.Serial(
     timeout=1
 )
 
-gpscnt = 0
-strgpsarr = []
-latGPRMC = []
-longGPRMC = []
-latraw_val = 0.0
-latdirection = ""
-longraw_val = 0.0
-longdirection = ""
 
 def compute_rawGPS(raw_val, direction):
     #Separate lat and long. Note: 2 digits to left of decimal point is min, rest is degree
@@ -38,9 +31,11 @@ def compute_rawGPS(raw_val, direction):
 
     #To take coordinate minute, refer to formula above
     # coord_min = ("{:.4f}".format(full_minutes/60))
-    coord_min = full_minutes/60
+    coord_min = full_minutes/60.0
 
-    coordinate_val = float(str(deg+coord_min)[:8])
+    # coordinate_val = float(str(deg+coord_min)[:8]) // to shorten decimal places (string)
+    coordinate_val = float(str(deg+coord_min)[:10])
+
     if direction == "N" or direction == "E":
         signed_coord = coordinate_val
 
@@ -52,11 +47,23 @@ def compute_rawGPS(raw_val, direction):
 
     else:
         latlong = "Lat: "
-    print(latlong, signed_coord)
+    print(signed_coord)
+    return signed_coord
+
+
 
 
 def computedGPS():
+    gpscnt = 0
+    strgpsarr = []
+    latGPRMC = []
+    longGPRMC = []
+    latraw_val = 0.0
+    latdirection = ""
+    longraw_val = 0.0
+    longdirection = ""
     gpsarr = []
+    print("GPSCNT >>>>>>> gpscnt")
     gpslines=ser.readline()
     strgpslines = str(gpslines).split(',')
     gpsarr.append(strgpslines)
@@ -66,22 +73,23 @@ def computedGPS():
     else:
         if (gpsarr[0][0]) == "b'$GPGLL":
             print("FOUND IT!")
-            # latraw_val = float(gpsarr[0][1])
-            # latdirection = str(gpsarr[0][2])
-            # longraw_val = float(gpsarr[0][3])
-            # longdirection = str(gpsarr[0][4])
-            latraw_val = float(1437.57826)
-            latdirection = str('N')
-            longraw_val = float(12105.98656)
-            longdirection = str('E')            
-            print("RAW_Lat:",latraw_val)
-            print("RAW_latdir:",latdirection)
-            print("RAW_Long:",longraw_val)
-            print("RAW_longdir:",longdirection)
+            latraw_val = float(gpsarr[0][1])
+            latdirection = str(gpsarr[0][2])
+            longraw_val = float(gpsarr[0][3])
+            longdirection = str(gpsarr[0][4])
+            # latraw_val = float(1437.57826)
+            # latdirection = str('N')
+            # longraw_val = float(12105.98656)
+            # longdirection = str('E')            
+            # print("RAW_Lat:",latraw_val)
+            # print("RAW_latdir:",latdirection)
+            # print("RAW_Long:",longraw_val)
+            # print("RAW_longdir:",longdirection)
             lat = compute_rawGPS(latraw_val, latdirection)
             lng = compute_rawGPS(longraw_val, longdirection)
             coord_dic = {"lat": lat, "lng": lng}
             jsonStr = json.dumps(coord_dic)
+            print(jsonStr)
     
     
     gpscnt+=1
