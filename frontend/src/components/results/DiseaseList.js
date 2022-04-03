@@ -1,4 +1,4 @@
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBCardText, MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import React from 'react';
 import diseaseSymptomsList from '../../data/disease-symptoms-list';
 
@@ -34,9 +34,16 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
                       {diseases_list?.map((disease) =>
-                        <MDBCard className='diseaseBox my-2 p-4 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', }}>
+                        <MDBCard className='diseaseBox my-2 p-4 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', textAlign: 'left' }}>
                           <MDBCardHeader>
-                            <strong className='text-uppercase'>{disease[0]}</strong>
+                            <MDBRow>
+                              <MDBCol size='10'>
+                                <strong className='text-uppercase'>{disease[0]}</strong>
+                              </MDBCol>
+                              <MDBCol size='2' style={{ justifyContent: 'flex-end', textAlign: 'right !important' }}>
+                                <MDBIcon fas icon="info-circle" />
+                              </MDBCol>
+                            </MDBRow>
                             {/* <MDBCol>weight: {disease[1]}</MDBCol> */}
                           </MDBCardHeader>
                           <MDBCardBody>

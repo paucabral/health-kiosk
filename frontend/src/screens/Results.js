@@ -67,7 +67,7 @@ const Results = () => {
                 location.state.symptoms.length != 0 ?
                   <MDBContainer>
                     {location.state.symptoms?.map((symptom) => (
-                      <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
+                      <MDBBtn pill color='dark' className='shadow-0 px-3 py-1' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
                     ))}
                   </MDBContainer>
                   :
