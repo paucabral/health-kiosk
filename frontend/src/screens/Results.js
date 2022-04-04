@@ -1,4 +1,4 @@
-import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBCardText, MDBBtn, MDBCard } from 'mdb-react-ui-kit';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
@@ -15,48 +15,52 @@ const Results = () => {
         </MDBRow>
         <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
           <MDBRow>
-            <MDBCol>
+            <MDBCard className='px-5 py-2'>
               <MDBRow>
-                <MDBCol size='3'>
-                  <strong>NAME:</strong>
+                <MDBCol>
+                  <MDBRow>
+                    <MDBCol size='3'>
+                      <strong>NAME:</strong>
+                    </MDBCol>
+                    <MDBCol>
+                      {location.state.first_name && location.state.last_name ? <span>{location.state.first_name} {location.state.last_name}</span> : <i className='text-muted'>*MISSING</i>}
+                    </MDBCol>
+                  </MDBRow>
                 </MDBCol>
                 <MDBCol>
-                  {location.state.first_name && location.state.last_name ? <span>{location.state.first_name} {location.state.last_name}</span> : <i className='text-muted'>*MISSING</i>}
+                  <MDBRow>
+                    <MDBCol size='3'>
+                      <strong>SEX:</strong>
+                    </MDBCol>
+                    <MDBCol>
+                      {location.state.sex ? <span>{location.state.sex}</span> : <i className='text-muted'>*MISSING</i>}
+                    </MDBCol>
+                  </MDBRow>
                 </MDBCol>
               </MDBRow>
-            </MDBCol>
-            <MDBCol>
               <MDBRow>
-                <MDBCol size='3'>
-                  <strong>SEX:</strong>
+                <MDBCol>
+                  <MDBRow>
+                    <MDBCol size='3'>
+                      <strong>AGE:</strong>
+                    </MDBCol>
+                    <MDBCol>
+                      {location.state.age ? <span>{location.state.age}</span> : <i className='text-muted'>*MISSING</i>}
+                    </MDBCol>
+                  </MDBRow>
                 </MDBCol>
                 <MDBCol>
-                  {location.state.sex ? <span>{location.state.sex}</span> : <i className='text-muted'>*MISSING</i>}
+                  <MDBRow>
+                    <MDBCol size='3'>
+                      <strong>CONTACT:</strong>
+                    </MDBCol>
+                    <MDBCol>
+                      {location.state.contact_no ? <span>{location.state.contact_no}</span> : <i className='text-muted'>*MISSING</i>}
+                    </MDBCol>
+                  </MDBRow>
                 </MDBCol>
               </MDBRow>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow>
-            <MDBCol>
-              <MDBRow>
-                <MDBCol size='3'>
-                  <strong>AGE:</strong>
-                </MDBCol>
-                <MDBCol>
-                  {location.state.age ? <span>{location.state.age}</span> : <i className='text-muted'>*MISSING</i>}
-                </MDBCol>
-              </MDBRow>
-            </MDBCol>
-            <MDBCol>
-              <MDBRow>
-                <MDBCol size='3'>
-                  <strong>CONTACT:</strong>
-                </MDBCol>
-                <MDBCol>
-                  {location.state.contact_no ? <span>{location.state.contact_no}</span> : <i className='text-muted'>*MISSING</i>}
-                </MDBCol>
-              </MDBRow>
-            </MDBCol>
+            </MDBCard>
           </MDBRow>
           <MDBRow className='mt-3 mb-2'>
             <MDBCol size='2'>
