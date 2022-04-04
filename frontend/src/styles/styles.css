@@ -64,7 +64,8 @@
 }
 
 #temperature-modal,
-#o2-modal {
+#o2-modal,
+#disease-modal {
   background-color: rgba(0, 0, 0, .75) !important;
   transform: scale(1);
 }
