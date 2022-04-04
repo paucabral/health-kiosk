@@ -54,10 +54,10 @@ const DiseaseList = ({ diseases, symptoms }) => {
                         <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', textAlign: 'left' }}>
                           <MDBCardHeader>
                             <MDBRow>
-                              <MDBCol size='10'>
+                              <MDBCol size='11'>
                                 <strong className='text-uppercase'>{disease[0]}</strong>
                               </MDBCol>
-                              <MDBCol size='2' style={{ justifyContent: 'flex-end', textAlign: 'right !important' }}>
+                              <MDBCol size='1' style={{ justifyContent: 'flex-end', textAlign: 'right !important' }}>
                                 <MDBIcon fas icon="info-circle" />
                               </MDBCol>
                             </MDBRow>
