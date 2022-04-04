@@ -30,7 +30,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
           <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '53vh' }}>
             <MDBCardBody className='pt-2 pb-2'>
               <MDBRow className='mt-1 mb-1 pr-3 pb-3'>
-                <MDBCol size='3' className='p-0'>
+                <MDBCol size='3' className='pr-0 pt-0 pl-2 pb-0'>
                   <strong>SYMPTOMS:</strong>
                 </MDBCol>
                 <MDBCol id="differential" className='p-0' style={{ textAlign: 'left', overflowX: 'auto', width: '10vw', whiteSpace: 'nowrap' }}>
@@ -46,13 +46,13 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   }
                 </MDBCol>
               </MDBRow>
-              <MDBContainer id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '43vh' }}>
+              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '43vh' }}>
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
                       {diseases_list?.map((disease) =>
-                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', textAlign: 'left' }}>
-                          <MDBCardHeader>
+                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px' }}>
+                          <MDBCardHeader className='pl-3' style={{ textAlign: 'left' }}>
                             <MDBRow>
                               <MDBCol size='11'>
                                 <strong className='text-uppercase'>{disease[0]}</strong>
@@ -63,7 +63,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                             </MDBRow>
                             {/* <MDBCol>weight: {disease[1]}</MDBCol> */}
                           </MDBCardHeader>
-                          <MDBCardBody>
+                          <MDBCardBody style={{ textAlign: 'center' }}>
                             <MDBRow>
                               {diseaseSymptomsList?.map((instance) => {
                                 return (
