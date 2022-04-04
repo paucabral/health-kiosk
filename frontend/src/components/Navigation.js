@@ -15,23 +15,15 @@ import '../styles/styles.css';
 const Navigation = () => {
   const [showNavColor, setShowNavColor] = useState(false);
   const [isActiveHome, setActiveHome] = useState(true);
-  const [isActiveFeatures, setActiveFeatures] = useState(false);
   const [isActiveAbout, setActiveAbout] = useState(false);
 
   const handleToggle = (item) => {
     if (item === "home") {
       setActiveHome(true);
-      setActiveFeatures(false);
-      setActiveAbout(false);
-    }
-    else if (item === "features") {
-      setActiveHome(false);
-      setActiveFeatures(true);
       setActiveAbout(false);
     }
     else {
       setActiveHome(false);
-      setActiveFeatures(false);
       setActiveAbout(true);
     }
   };
@@ -55,9 +47,6 @@ const Navigation = () => {
             <MDBNavbarNav right fullWidth={false}>
               <MDBNavbarItem className={isActiveHome ? "active" : null} onClick={() => handleToggle("home")}>
                 <MDBNavbarLink aria-current='page' href='/'><MDBIcon fas icon="home" /> Home</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem className={isActiveFeatures ? "active" : null} onClick={() => handleToggle("features")}>
-                <MDBNavbarLink href='#'><MDBIcon fas icon="list-alt" /> Features</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem className={isActiveAbout ? "active" : null} onClick={() => handleToggle("about")}>
                 <MDBNavbarLink href='#'><MDBIcon fas icon="info-circle" /> About</MDBNavbarLink>
