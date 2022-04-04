@@ -191,12 +191,12 @@ const Facilities = () => {
                       </MDBContainer>
                     </MDBRow>
                     :
-                    <MDBCardBody className='text-left py-4 px-3'>
+                    <MDBCardBody className='text-left py-3 px-3'>
                       <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
                       <MDBCardText className='text-muted' style={{ fontSize: '0.75em' }}>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
                       </MDBCardText>
-                      <MDBCardSubTitle>
+                      <MDBCardSubTitle style={{ fontSize: '0.9em' }}>
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
                       <MDBRow>
@@ -225,7 +225,7 @@ const Facilities = () => {
                       <MDBRow className='px-1 py-0'>
                         <strong style={{ textAlign: 'left', fontSize: '0.75em' }}>NEARBY FACILITIES:</strong>
                       </MDBRow>
-                      <MDBRow id='hospital-list' className='px-1 m-0' style={{ height: '35vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '0.85em' }}>
+                      <MDBRow id='hospital-list' className='px-1 m-0' style={{ height: '37vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '0.85em' }}>
                         {nearestHospitals?.map((item) => (
                           <MDBCard className='btn-light' style={{ paddingLeft: '1.8em', paddingRight: '1.8em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                             <MDBRow style={{ pointerEvents: 'none' }}>
