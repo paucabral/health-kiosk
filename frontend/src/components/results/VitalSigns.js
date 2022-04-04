@@ -4,12 +4,12 @@ import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCard, MDBCardHeader, MDBCardB
 const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_saturation }) => {
   return (
     <React.Fragment>
-      <MDBContainer>
+      <MDBContainer className='p-0'>
         <MDBRow>
           <strong>Vital Signs</strong>
         </MDBRow>
         <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '57vh', paddingBottom: '0' }}>
-          <MDBRow>
+          <MDBRow className='p-0 m-0'>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='warning' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='warning'>
@@ -26,7 +26,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
               </MDBCard>
             </MDBContainer>
           </MDBRow>
-          <MDBRow>
+          <MDBRow className='p-0 m-0'>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='danger' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='danger'>
@@ -43,7 +43,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
               </MDBCard>
             </MDBContainer>
           </MDBRow>
-          <MDBRow>
+          <MDBRow className='p-0 m-0'>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='primary' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='primary'>
@@ -60,7 +60,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
               </MDBCard>
             </MDBContainer>
           </MDBRow>
-          <MDBRow>
+          <MDBRow className='p-0 m-0'>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='secondary' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='secondary'>
@@ -77,7 +77,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
               </MDBCard>
             </MDBContainer>
           </MDBRow>
-          <MDBRow>
+          <MDBRow className='p-0 m-0'>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='success' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='success'>

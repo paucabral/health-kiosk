@@ -64,7 +64,7 @@ const Results = () => {
           </MDBRow>
         </MDBRow>
         <MDBRow>
-          <MDBCol className='px-0'>
+          <MDBCol className='pl-2 ml-1'>
             <VitalSigns
               temperature={location.state.temperature}
               pulse_rate={location.state.pulse_rate}
@@ -73,7 +73,10 @@ const Results = () => {
               o2_saturation={location.state.o2_saturation}
             />
           </MDBCol>
-          <MDBCol>
+          <MDBCol size='1' className='p-0 m-0'>
+            {/* Empty column for spacing */}
+          </MDBCol>
+          <MDBCol className='pr-2 mr-1'>
             <MDBCol className='px-0'>
               <DiseaseList diseases={location.state.predictions} symptoms={location.state.symptoms} />
             </MDBCol>
