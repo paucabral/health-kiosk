@@ -13,14 +13,14 @@ import {
   MDBCol
 } from 'mdb-react-ui-kit';
 
-const DiseaseInfo = ({ diseaseModal, setDiseaseModal, toggleDiseaseModal }) => {
+const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal }) => {
   return (
     <React.Fragment>
       <MDBModal id="disease-modal" staticBackdrop scrollable='true' show={diseaseModal} setShow={setDiseaseModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent style={{ height: '80vh' }}>
             <MDBModalHeader>
-              <MDBModalTitle>Lorem Ipsum</MDBModalTitle>
+              <MDBModalTitle>{entry}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDiseaseModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody className='my-2' style={{ textAlign: "left", overflowY: 'auto', height: '100vh' }}>

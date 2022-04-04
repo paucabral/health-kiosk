@@ -21,7 +21,16 @@ const DiseaseList = ({ diseases, symptoms }) => {
   const diseases_list = renderDisease();
 
   const [diseaseModal, setDiseaseModal] = useState(false);
-  const toggleDiseaseModal = () => setDiseaseModal(!diseaseModal);
+  const [diseaseEntry, setDiseaseEntry] = useState(null);
+  const toggleDiseaseModal = (disease_entry) => {
+    if (diseaseModal === true) {
+      setDiseaseEntry(null);
+    }
+    else {
+      setDiseaseEntry(disease_entry);
+    }
+    setDiseaseModal(!diseaseModal);
+  }
 
   return (
     <React.Fragment>
@@ -41,7 +50,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                     symptoms.length != 0 ?
                       <MDBContainer className='p-0'>
                         {symptoms?.map((symptom) => (
-                          <MDBBtn pill color='dark' className='shadow-0 px-3 py-1' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
+                          <MDBBtn pill color='dark' className='shadow-0 px-3 py-1' style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
                         ))}
                       </MDBContainer>
                       :
@@ -54,7 +63,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
                       {diseases_list?.map((disease) =>
-                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px' }} onClick={toggleDiseaseModal}>
+                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px' }} onClick={() => toggleDiseaseModal((disease[0]))}>
                           <MDBCardHeader className='pl-3' style={{ textAlign: 'left' }}>
                             <MDBRow>
                               <MDBCol size='11'>
@@ -83,12 +92,11 @@ const DiseaseList = ({ diseases, symptoms }) => {
                           </MDBCardBody>
                         </MDBCard>
                       )}
-                      <DiseaseInfo diseaseModal={diseaseModal} setDiseaseModal={setDiseaseModal} toggleDiseaseModal={toggleDiseaseModal} />
                     </MDBRow>
                     : <MDBCardText className='text-muted'>Not Available</MDBCardText>
                 }
               </MDBContainer>
-
+              <DiseaseInfo entry={diseaseEntry} diseaseModal={diseaseModal} setDiseaseModal={setDiseaseModal} toggleDiseaseModal={toggleDiseaseModal} />
             </MDBCardBody>
           </MDBRow>
         </MDBCard>
