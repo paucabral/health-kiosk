@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Triage from './screens/Triage';
 import Facilities from './screens/Facilities';
 import Results from './screens/Results';
+import Disclaimer from './screens/Disclaimer';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className='d-flex align-items-center justify-content-center' style={{ height: "100%" }}>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Triage />} />
+            <Route exact path="/" element={<Disclaimer />} />
             <Route path="/check" element={<Triage />} />
             <Route path="/results" element={<Results />} />
             <Route path="/nearest-facilities" element={<Facilities />} />
