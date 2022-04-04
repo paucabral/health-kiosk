@@ -179,7 +179,7 @@ const Facilities = () => {
           <MDBCol md='4'>
             <MDBRow>
               <MDBCard className='px-0 pt-0 pb-3'>
-                <MDBCardHeader className='px-3 text-uppercase text-left'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
+                <MDBCardHeader className='px-3 text-uppercase text-left' style={{ fontWeight: 'bold' }}><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                 {
                   Object.keys(location).length === 0 ?
                     <MDBRow className='m-4'>
