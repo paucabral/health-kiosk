@@ -79,6 +79,7 @@
   display: flex;
   justify-content: center;
   bottom: -12.5%;
+  transition: ease 0.5s;
 }
 
 #hospital-btn:hover {
