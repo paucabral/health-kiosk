@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   MDBBtn,
   MDBModal,
@@ -15,6 +16,12 @@ import {
 } from 'mdb-react-ui-kit';
 
 const TermsAndConditions = ({ disclaimerModal, setDisclaimerModal, toggleDisclaimerModal }) => {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/check`;
+    navigate(path);
+  }
+
   return (
     <React.Fragment>
       <MDBModal id="" staticBackdrop scrollable='true' show={disclaimerModal} setShow={setDisclaimerModal} tabIndex='-1'>
@@ -35,7 +42,7 @@ const TermsAndConditions = ({ disclaimerModal, setDisclaimerModal, toggleDisclai
             </MDBModalBody>
             <MDBModalFooter>
               <MDBCol className='p-0 m-0' style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <MDBBtn>I AGREE</MDBBtn>
+                <MDBBtn onClick={routeChange}>I AGREE</MDBBtn>
               </MDBCol>
               <MDBCol className='p-0 m-0' style={{ display: 'flex', justifyContent: 'flex-end', fontSize: '0.85em', fontWeight: 'bold' }}>
                 <MDBTabsLink style={{ textDecoration: 'underline' }} onClick={toggleDisclaimerModal}>CANCEL</MDBTabsLink>
