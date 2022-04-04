@@ -263,7 +263,7 @@ const Facilities = () => {
               </MDBCard>
             </MDBRow>
           </MDBCol>
-          <MDBCol md='8'>
+          <MDBCol md='8' className='p-0'>
             <MDBCard style={{ width: '100%', height: '100%' }}>
               {
                 isLoaded ? <GoogleMap
