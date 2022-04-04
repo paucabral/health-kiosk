@@ -51,7 +51,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
                       {diseases_list?.map((disease) =>
-                        <MDBCard className='diseaseBox my-2 p-4 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', textAlign: 'left' }}>
+                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px', textAlign: 'left' }}>
                           <MDBCardHeader>
                             <MDBRow>
                               <MDBCol size='10'>
