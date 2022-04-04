@@ -178,8 +178,8 @@ const Facilities = () => {
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
-              <MDBCard>
-                <MDBCardHeader className='px-0 text-uppercase text-left'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
+              <MDBCard className='p-0'>
+                <MDBCardHeader className='px-3 text-uppercase text-left'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                 {
                   Object.keys(location).length === 0 ?
                     <MDBRow className='m-4'>
@@ -191,7 +191,7 @@ const Facilities = () => {
                       </MDBContainer>
                     </MDBRow>
                     :
-                    <MDBCardBody className='text-left py-4 px-2'>
+                    <MDBCardBody className='text-left py-4 px-3'>
                       <MDBCardTitle className='text-uppercase'>{reverseGeocode['street']}</MDBCardTitle>
                       <MDBCardText className='text-muted' style={{ fontSize: '0.75em' }}>
                         LAT: {location.lat}°&nbsp;&nbsp;&nbsp;LNG: {location.lng}°
@@ -199,9 +199,9 @@ const Facilities = () => {
                       <MDBCardSubTitle>
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
-                      <MDBRow style={{ marginTop: '1em' }}>
+                      <MDBRow>
                         <div style={{ lineHeight: '1' }}>
-                          <MDBRow>
+                          <MDBRow className='my-1'>
                             <MDBCol size='7'>
                               <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</span> <br />
                             </MDBCol>
