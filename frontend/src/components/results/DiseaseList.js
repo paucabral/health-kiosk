@@ -46,7 +46,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   }
                 </MDBCol>
               </MDBRow>
-              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '43vh' }}>
+              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '40vh' }}>
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
