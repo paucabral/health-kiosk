@@ -1,12 +1,20 @@
 import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon, MDBBtn, MDBCard } from 'mdb-react-ui-kit';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
 import VitalSigns from '../components/results/VitalSigns';
 
 const Results = () => {
   const location = useLocation();
-  console.log(location.state)
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/nearest-facilities`;
+    setTimeout(function () {
+      navigate(path);
+    }, 750)
+  }
+
   return (
     <React.Fragment>
       <MDBContainer className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -84,7 +92,7 @@ const Results = () => {
         </MDBRow>
       </MDBContainer>
       <div id="hospital-btn">
-        <MDBBtn className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }}>
+        <MDBBtn className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }} onClick={routeChange}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="hospital" />
