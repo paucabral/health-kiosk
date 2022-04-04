@@ -72,3 +72,15 @@
   background-color: rgba(0, 0, 0, .25) !important;
   transform: scale(1);
 }
+
+#hospital-btn {
+  z-index: 2000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: -12.5%;
+}
+
+#hospital-btn:hover {
+  bottom: -8%;
+}

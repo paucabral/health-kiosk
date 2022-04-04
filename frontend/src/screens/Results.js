@@ -1,4 +1,4 @@
-import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBCardText, MDBBtn, MDBCard } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon, MDBBtn, MDBCard } from 'mdb-react-ui-kit';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
@@ -83,6 +83,28 @@ const Results = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <div id="hospital-btn">
+        <MDBBtn className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }}>
+          <div>
+            <MDBRow>
+              <MDBIcon size='2x' fas icon="hospital" />
+            </MDBRow>
+            <MDBRow className='m-2'>
+              <span style={{ fontSize: '0.75em' }}>Find Nearby Facilities</span>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+          </div>
+        </MDBBtn>
+      </div>
     </React.Fragment>
   )
 }
