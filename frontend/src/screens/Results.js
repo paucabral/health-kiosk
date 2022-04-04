@@ -62,23 +62,6 @@ const Results = () => {
               </MDBRow>
             </MDBCard>
           </MDBRow>
-          <MDBRow className='mt-3 mb-2'>
-            <MDBCol size='2'>
-              <strong>SYMPTOMS:</strong>
-            </MDBCol>
-            <MDBCol id="confirmation" style={{ textAlign: 'left', overflowX: 'auto', width: '10vw', whiteSpace: 'nowrap' }}>
-              {
-                location.state.symptoms.length != 0 ?
-                  <MDBContainer>
-                    {location.state.symptoms?.map((symptom) => (
-                      <MDBBtn pill color='dark' className='shadow-0 px-3 py-1' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
-                    ))}
-                  </MDBContainer>
-                  :
-                  <MDBCardText className='text-muted'><i>NO SYMPTOMS SELECTED </i></MDBCardText>
-              }
-            </MDBCol>
-          </MDBRow>
         </MDBRow>
         <MDBRow>
           <MDBCol className='px-0'>

@@ -8,7 +8,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
         <MDBRow>
           <strong>Vital Signs</strong>
         </MDBRow>
-        <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '50vh', }}>
+        <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '57vh', paddingBottom: '0' }}>
           <MDBRow>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='warning' background='white'>
