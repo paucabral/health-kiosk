@@ -63,7 +63,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                             </MDBRow>
                             {/* <MDBCol>weight: {disease[1]}</MDBCol> */}
                           </MDBCardHeader>
-                          <MDBCardBody style={{ textAlign: 'center' }}>
+                          <MDBCardBody className='p-3' style={{ textAlign: 'center' }}>
                             <MDBRow>
                               {diseaseSymptomsList?.map((instance) => {
                                 return (
