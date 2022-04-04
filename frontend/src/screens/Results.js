@@ -1,9 +1,8 @@
 import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon, MDBBtn, MDBCard } from 'mdb-react-ui-kit';
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
 import VitalSigns from '../components/results/VitalSigns';
-import DiseaseInfo from '../components/results/results_modal/DiseaseInfo';
 
 const Results = () => {
   const location = useLocation();
@@ -15,9 +14,6 @@ const Results = () => {
       navigate(path);
     }, 750)
   }
-
-  const [diseaseModal, setDiseaseModal] = useState(false);
-  const toggleDiseaseModal = () => setDiseaseModal(!diseaseModal);
 
   return (
     <React.Fragment>

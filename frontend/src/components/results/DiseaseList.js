@@ -1,9 +1,9 @@
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBCardText, MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
-import React from 'react';
+import React, { useState } from 'react';
 import diseaseSymptomsList from '../../data/disease-symptoms-list';
+import DiseaseInfo from './results_modal/DiseaseInfo';
 
 const DiseaseList = ({ diseases, symptoms }) => {
-
   const renderDisease = () => {
     if (diseases) {
       let disease_list = [];
@@ -19,6 +19,9 @@ const DiseaseList = ({ diseases, symptoms }) => {
   }
 
   const diseases_list = renderDisease();
+
+  const [diseaseModal, setDiseaseModal] = useState(false);
+  const toggleDiseaseModal = () => setDiseaseModal(!diseaseModal);
 
   return (
     <React.Fragment>
@@ -51,7 +54,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
                       {diseases_list?.map((disease) =>
-                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px' }}>
+                        <MDBCard className='diseaseBox my-2 p-0 btn-light' style={{ justifyContent: 'center', borderRadius: '10px' }} onClick={toggleDiseaseModal}>
                           <MDBCardHeader className='pl-3' style={{ textAlign: 'left' }}>
                             <MDBRow>
                               <MDBCol size='11'>
@@ -80,6 +83,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                           </MDBCardBody>
                         </MDBCard>
                       )}
+                      <DiseaseInfo diseaseModal={diseaseModal} setDiseaseModal={setDiseaseModal} toggleDiseaseModal={toggleDiseaseModal} />
                     </MDBRow>
                     : <MDBCardText className='text-muted'>Not Available</MDBCardText>
                 }
