@@ -200,10 +200,16 @@ const Facilities = () => {
                         {reverseGeocode['street']} {reverseGeocode['adminArea6']} {reverseGeocode['adminArea5']} {reverseGeocode['adminArea4']} {reverseGeocode['adminArea3']} {reverseGeocode['adminArea1']} {reverseGeocode['postalCode']}
                       </MDBCardSubTitle>
                       <MDBRow style={{ marginTop: '1em' }}>
-                        <p style={{ lineHeight: '1' }}>
-                          <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</span> <br />
-                          <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>DISTANCE:</span> {direction.distance}</span> <br />
-                        </p>
+                        <div style={{ lineHeight: '1' }}>
+                          <MDBRow>
+                            <MDBCol size='7'>
+                              <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</span> <br />
+                            </MDBCol>
+                            <MDBCol>
+                              <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>DISTANCE:</span> {direction.distance}</span> <br />
+                            </MDBCol>
+                          </MDBRow>
+                        </div>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
                           <MDBBtn className='btn-success travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
                           <MDBBtn className='btn-primary travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
