@@ -61,6 +61,7 @@ while 1:
     gpslines=ser.readline()
     strgpslines = str(gpslines).split(',')
     gpsarr.append(strgpslines)
+    print(gpsarr)
     if len(gpsarr) < 1:
         print("EMPTY")
     else:
@@ -68,7 +69,7 @@ while 1:
             print("FOUND IT!")
             latraw_val = float(gpsarr[0][1])
             latdirection = str(gpsarr[0][2])
-            longraw_val = float(gpsarr[0][3])
+            longraw_vcal = float(gpsarr[0][3])
             longdirection = str(gpsarr[0][4])
             print("RAW_Lat:",latraw_val)
             print("RAW_latdir:",latdirection)
