@@ -14,13 +14,11 @@
   flex: 0.25;
 }
 
-#confirmation::-webkit-scrollbar,
-#hospital-list::-webkit-scrollbar {
+#confirmation::-webkit-scrollbar {
   display: none;
 }
 
-#confirmation,
-#hospital-list {
+#confirmation {
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -33,32 +31,35 @@
   border-radius: 10px;
 }
 
-#differential::-webkit-scrollbar {
+#differential::-webkit-scrollbar,
+#hospital-list::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   border-radius: 10px;
   background-color: #888;
 }
 
-#differential::-webkit-scrollbar-thumb {
+#differential::-webkit-scrollbar-thumb,
+#hospital-list::-webkit-scrollbar-thumb {
   background: #1E88E5;
   border-radius: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: none;
+  background-color: #888;
+  border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #1E88E5;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #1E88E5;
   border-radius: 10px;
 }
 

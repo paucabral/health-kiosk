@@ -178,7 +178,7 @@ const Facilities = () => {
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
-              <MDBCard className='p-0'>
+              <MDBCard className='px-0 pt-0 pb-3'>
                 <MDBCardHeader className='px-3 text-uppercase text-left'><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
                 {
                   Object.keys(location).length === 0 ?
@@ -219,44 +219,49 @@ const Facilities = () => {
                       </MDBRow>
                     </MDBCardBody>
                 }
+                {
+                  nearestHospitals.length != 0 ?
+                    <MDBRow className='px-2 m-1'>
+                      <MDBRow className='px-1 py-0'>
+                        <strong style={{ textAlign: 'left', fontSize: '0.75em' }}>NEARBY FACILITIES:</strong>
+                      </MDBRow>
+                      <MDBRow id='hospital-list' className='px-1 m-0' style={{ height: '35vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '0.85em' }}>
+                        {nearestHospitals?.map((item) => (
+                          <MDBCard className='btn-light' style={{ paddingLeft: '1.8em', paddingRight: '1.8em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                            <MDBRow style={{ pointerEvents: 'none' }}>
+                              <MDBCol className='text-left'>
+                                <MDBRow className='font-weight-bold text-uppercase'>
+                                  {item.name}
+                                </MDBRow>
+                                <MDBRow>
+                                  <span style={{ marginLeft: '-1em' }}>{item.rating ? <span className='text-warning'> <MDBIcon fas icon="star" /> {item.rating} stars</span> : ''} {item.user_ratings_total ? `(${item.user_ratings_total} users)` : ''}</span>
+                                </MDBRow>
+                                <MDBRow>
+                                  {item.vicinity}
+                                </MDBRow>
+                                <MDBRow style={{ fontSize: '0.8em' }}>
+                                  LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
+                                </MDBRow>
+                              </MDBCol>
+                            </MDBRow>
+                            {/* {item.business_status}: {item.opening_hours} <br /> */}
+                            {/* {item.formatted_phone_number} */}
+                          </MDBCard>
+                        ))}
+                      </MDBRow>
+                    </MDBRow>
+                    :
+                    <MDBRow>
+                      <MDBCardTitle className='text-uppercase py-2'>Finding nearest hospitals...</MDBCardTitle>
+                      <MDBContainer>
+                        <MDBSpinner className='mx-2' color='danger'>
+                          <span className='visually-hidden'>Loading...</span>
+                        </MDBSpinner>
+                      </MDBContainer>
+                    </MDBRow>
+                }
               </MDBCard>
             </MDBRow>
-            {
-              nearestHospitals.length != 0 ?
-                <MDBRow id='hospital-list' style={{ height: '33vh', overflowY: 'scroll', marginTop: '0.5em' }}>
-                  {nearestHospitals?.map((item) => (
-                    <MDBCard className='btn-light' style={{ padding: '2em', marginBottom: '0.5em', marginTop: '0.5em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
-                      <MDBRow style={{ pointerEvents: 'none' }}>
-                        <MDBCol className='text-left'>
-                          <MDBRow className='font-weight-bold text-uppercase'>
-                            {item.name}
-                          </MDBRow>
-                          <MDBRow>
-                            <span style={{ marginLeft: '-1em' }}>{item.rating ? <span className='text-warning'> <MDBIcon fas icon="star" /> {item.rating} stars</span> : ''} {item.user_ratings_total ? `(${item.user_ratings_total} users)` : ''}</span>
-                          </MDBRow>
-                          <MDBRow>
-                            {item.vicinity}
-                          </MDBRow>
-                          <MDBRow style={{ fontSize: '0.8em' }}>
-                            LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
-                          </MDBRow>
-                        </MDBCol>
-                      </MDBRow>
-                      {/* {item.business_status}: {item.opening_hours} <br /> */}
-                      {/* {item.formatted_phone_number} */}
-                    </MDBCard>
-                  ))}
-                </MDBRow>
-                :
-                <MDBRow>
-                  <MDBCardTitle className='text-uppercase py-2'>Finding nearest hospitals...</MDBCardTitle>
-                  <MDBContainer>
-                    <MDBSpinner className='mx-2' color='danger'>
-                      <span className='visually-hidden'>Loading...</span>
-                    </MDBSpinner>
-                  </MDBContainer>
-                </MDBRow>
-            }
           </MDBCol>
           <MDBCol md='8'>
             <MDBCard style={{ width: '100%', height: '100%' }}>
