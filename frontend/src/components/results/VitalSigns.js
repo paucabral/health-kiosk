@@ -6,7 +6,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
     <React.Fragment>
       <MDBContainer className='p-0'>
         <MDBRow>
-          <strong>Vital Signs</strong>
+          <strong>VITAL SIGNS</strong>
         </MDBRow>
         <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '57vh', paddingBottom: '0' }}>
           <MDBRow className='p-0 m-0'>
