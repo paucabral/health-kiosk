@@ -5,6 +5,7 @@ import Triage from './screens/Triage';
 import Facilities from './screens/Facilities';
 import Results from './screens/Results';
 import Disclaimer from './screens/Disclaimer';
+import About from './screens/About';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/check" element={<Triage />} />
             <Route path="/results" element={<Results />} />
             <Route path="/nearest-facilities" element={<Facilities />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </BrowserRouter>
       </div>

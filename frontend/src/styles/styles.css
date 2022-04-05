@@ -88,3 +88,11 @@
 #hospital-btn:hover {
   bottom: -8%;
 }
+
+nav-items:hover {
+  color: white;
+}
+
+nav-items::selection {
+  color: white;
+}

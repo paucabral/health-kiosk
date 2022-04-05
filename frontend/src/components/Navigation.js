@@ -45,11 +45,11 @@ const Navigation = () => {
           </MDBNavbarToggler>
           <MDBCollapse show={showNavColor} navbar>
             <MDBNavbarNav right fullWidth={false}>
-              <MDBNavbarItem className={isActiveHome ? "active" : null} onClick={() => handleToggle("home")}>
-                <MDBNavbarLink aria-current='page' href='/'><MDBIcon fas icon="home" /> Home</MDBNavbarLink>
+              <MDBNavbarItem onClick={() => handleToggle("home")}>
+                <MDBNavbarLink className='nav-items' aria-current='page' href='/'><MDBIcon fas icon="home" /> Home</MDBNavbarLink>
               </MDBNavbarItem>
-              <MDBNavbarItem className={isActiveAbout ? "active" : null} onClick={() => handleToggle("about")}>
-                <MDBNavbarLink href='#'><MDBIcon fas icon="info-circle" /> About</MDBNavbarLink>
+              <MDBNavbarItem onClick={() => handleToggle("about")}>
+                <MDBNavbarLink className='nav-items' href='/about'><MDBIcon fas icon="info-circle" /> About</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
