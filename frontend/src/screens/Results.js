@@ -8,11 +8,10 @@ const Results = () => {
   const location = useLocation();
 
   let navigate = useNavigate();
-  const routeChange = () => {
-    // let path = `/nearest-facilities`;
-    // setTimeout(function () {
-    //   navigate(path);
-    // }, 750)
+  const routeChange = (path) => {
+    setTimeout(function () {
+      navigate(path);
+    }, 750)
     console.log('clicked')
   }
 
@@ -93,7 +92,7 @@ const Results = () => {
         </MDBRow>
       </MDBContainer>
       <div id="arrow-btn">
-        <MDBBtn color='dark' className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }} onClick={routeChange}>
+        <MDBBtn color='dark' className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="sort-up" />
@@ -115,7 +114,7 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="hospital-btn" className='icons-btn'>
-        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={""}>
+        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => routeChange('/nearest-facilities')}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="hospital" />
