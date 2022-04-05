@@ -1,7 +1,8 @@
 import { MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon, MDBBtn, MDBCard } from 'mdb-react-ui-kit';
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
+import SMSStatus from '../components/results/results_modal/SMSStatus';
 import VitalSigns from '../components/results/VitalSigns';
 
 const Results = () => {
@@ -13,6 +14,11 @@ const Results = () => {
       navigate(path);
     }, 750)
     console.log('clicked')
+  }
+
+  const [smsModal, setSmsModal] = useState(false);
+  const toggleSmsModal = () => {
+    setSmsModal(!smsModal)
   }
 
   return (
@@ -126,7 +132,7 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="text-btn" className='icons-btn'>
-        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={""}>
+        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={toggleSmsModal}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="comment" />
@@ -137,6 +143,7 @@ const Results = () => {
           </div>
         </MDBBtn>
       </div>
+      <SMSStatus contact_no={location.state.contact_no} message={"hello world"} smsModal={smsModal} setSmsModal={setSmsModal} toggleSmsModal={toggleSmsModal} />
     </React.Fragment>
   )
 }
