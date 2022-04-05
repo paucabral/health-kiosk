@@ -23,7 +23,7 @@ const SensorData = ({ formData, setFormData }) => {
       <p>Measure your vital signs by selecting the options below.<br />
         <span className="text-muted" style={{ fontSize: '0.75em', width: '5em' }}><i>NOTE: Temperature and Oxygen Saturation have their individual sensors, while the Pulse Rate and Systolic &amp; Diastolic Blood Pressure share the same sensor.</i></span>
       </p>
-      <MDBCardBody>
+      <MDBCardBody className='py-0'>
         <div>
           <MDBRow className='w-100'>
             <MDBCol style={{ paddingTop: '1em', paddingBottom: '1em' }}>
