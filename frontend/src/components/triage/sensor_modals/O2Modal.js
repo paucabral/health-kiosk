@@ -46,7 +46,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
               <MDBModalTitle>Oxygen Saturation Sensor</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleO2Modal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
+            <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 <p>Please follow these steps to measure your oxygen saturation.</p>
                 <ol>

@@ -43,7 +43,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
               <MDBModalTitle>Temperature Sensor</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleTemperatureModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
+            <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 <p>Please follow these steps to measure your body temperature.</p>
                 <ol>
