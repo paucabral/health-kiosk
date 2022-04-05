@@ -4,7 +4,8 @@ import serial
 import json
 
 ser = serial.Serial(
-    port='/dev/ttyS0',
+    # port='/dev/ttyS0',
+    port='/dev/ttyAMA1',
     baudrate = 9600,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -71,7 +72,7 @@ def computedGPS():
 
     else:
         if (gpsarr[0][0]) == "b'$GPGLL":
-            print("FOUND IT!")
+            print("FOUND GPGLL!")
             latraw_check = str(gpsarr[0][1]) # Checked initially, the firstmost value of needed
             if (latraw_check != ''):
                 latraw_val = float(gpsarr[0][1])
