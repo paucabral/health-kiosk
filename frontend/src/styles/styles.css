@@ -76,7 +76,7 @@
   transform: scale(1);
 }
 
-#hospital-btn {
+#arrow-btn {
   z-index: 2000;
   position: fixed;
   display: flex;
@@ -85,7 +85,27 @@
   transition: ease 0.5s;
 }
 
-#hospital-btn:hover {
+#hospital-btn {
+  z-index: 1200;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 7.5%;
+  left: 38%;
+  transition: ease 0.5s;
+}
+
+#text-btn {
+  z-index: 1200;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 7.5%;
+  right: 38%;
+  transition: ease 0.5s;
+}
+
+#arrow-btn:hover {
   bottom: -8%;
 }
 

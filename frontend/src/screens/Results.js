@@ -9,10 +9,11 @@ const Results = () => {
 
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = `/nearest-facilities`;
-    setTimeout(function () {
-      navigate(path);
-    }, 750)
+    // let path = `/nearest-facilities`;
+    // setTimeout(function () {
+    //   navigate(path);
+    // }, 750)
+    console.log('clicked')
   }
 
   return (
@@ -91,8 +92,30 @@ const Results = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <div id="arrow-btn">
+        <MDBBtn color='dark' className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }} onClick={routeChange}>
+          <div>
+            <MDBRow>
+              <MDBIcon size='2x' fas icon="sort-up" />
+            </MDBRow>
+            <MDBRow className='m-2'>
+              <span style={{ fontSize: '0.75em' }}>SELECT</span>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+            <MDBRow className='m-2'>
+            </MDBRow>
+          </div>
+        </MDBBtn>
+      </div>
       <div id="hospital-btn">
-        <MDBBtn className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }} onClick={routeChange}>
+        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={routeChange}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="hospital" />
@@ -100,15 +123,17 @@ const Results = () => {
             <MDBRow className='m-2'>
               <span style={{ fontSize: '0.75em' }}>Find Nearby Facilities</span>
             </MDBRow>
-            <MDBRow className='m-2'>
+          </div>
+        </MDBBtn>
+      </div>
+      <div id="text-btn">
+        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={routeChange}>
+          <div>
+            <MDBRow>
+              <MDBIcon size='2x' fas icon="comment" />
             </MDBRow>
             <MDBRow className='m-2'>
-            </MDBRow>
-            <MDBRow className='m-2'>
-            </MDBRow>
-            <MDBRow className='m-2'>
-            </MDBRow>
-            <MDBRow className='m-2'>
+              <span style={{ fontSize: '0.75em' }}>Send Results via SMS</span>
             </MDBRow>
           </div>
         </MDBBtn>
