@@ -141,6 +141,7 @@ const Results = () => {
         </MDBBtn>
       </div>
       <SMSStatus contact_no={location.state.contact_no} message={"hello world"} smsModal={smsModal} setSmsModal={setSmsModal} toggleSmsModal={toggleSmsModal} />
+      <div id="overlay"></div>
     </React.Fragment>
   )
 }
