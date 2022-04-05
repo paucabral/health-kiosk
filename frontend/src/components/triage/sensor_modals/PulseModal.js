@@ -7,6 +7,7 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBContainer,
   MDBModalFooter,
   MDBSpinner,
   MDBRow,
@@ -63,15 +64,11 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                       Start Measurement
                     </MDBBtn>
                     : measure === "loading" ?
-                      <div>
+                      <MDBContainer style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBSpinner className='mx-2' color='danger'>
                           <span className='visually-hidden'>Loading...</span>
                         </MDBSpinner>
-                        <br />
-                        <div className='d-flex align-items-center justify-content-center'>
-                          <span>measuring...</span>
-                        </div>
-                      </div>
+                      </MDBContainer>
                       : measure === "done" ?
                         <div>
                           <MDBBtn onClick={() => { fetchPulseData() }} className='mx-2'>

@@ -7,6 +7,7 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBContainer,
   MDBModalFooter,
   MDBSpinner,
   MDBRow,
@@ -61,15 +62,11 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                       Start Measurement
                     </MDBBtn>
                     : measure === "loading" ?
-                      <div>
+                      <MDBContainer style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBSpinner className='mx-2' color='success'>
                           <span className='visually-hidden'>Loading...</span>
                         </MDBSpinner>
-                        <br />
-                        <div className='d-flex align-items-center justify-content-center'>
-                          <span>measuring...</span>
-                        </div>
-                      </div>
+                      </MDBContainer>
                       : measure === "done" ?
                         <div>
                           <MDBBtn onClick={() => { fetchO2Data() }} className='mx-2'>

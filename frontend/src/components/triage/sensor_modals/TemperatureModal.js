@@ -10,7 +10,8 @@ import {
   MDBModalFooter,
   MDBSpinner,
   MDBRow,
-  MDBCol
+  MDBCol,
+  MDBContainer
 } from 'mdb-react-ui-kit';
 import axios from 'axios'
 
@@ -58,15 +59,11 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                       Start Measurement
                     </MDBBtn>
                     : measure === "loading" ?
-                      <div>
+                      <MDBContainer style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBSpinner className='mx-2' color='warning'>
                           <span className='visually-hidden'>Loading...</span>
                         </MDBSpinner>
-                        <br />
-                        <div className='d-flex align-items-center justify-content-center'>
-                          <span>measuring...</span>
-                        </div>
-                      </div>
+                      </MDBContainer>
                       : measure === "done" ?
                         <div>
                           <MDBBtn onClick={() => { fetchTemperatureData() }} className='mx-2'>
