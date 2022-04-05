@@ -41,7 +41,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
 
   return (
     <React.Fragment>
-      <MDBModal staticBackdrop scrollable='true' show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
+      <MDBModal staticBackdrop show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
@@ -49,7 +49,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
               <MDBBtn className='btn-close' color='none' onClick={togglePulseModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
-              <div>
+              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 <p>Please follow these steps to measure your pulse and blood pressure.</p>
                 <ol>
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -71,10 +71,10 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                       </MDBContainer>
                       : measure === "done" ?
                         <div>
-                          <MDBBtn onClick={() => { fetchPulseData() }} className='mx-2'>
+                          <MDBBtn color='primary' style={{ width: '15em' }} onClick={() => { fetchPulseData() }} className='mx-2'>
                             Measure Again?
                           </MDBBtn>
-                          <MDBBtn color='success' onClick={togglePulseModal} className='mx-2'>
+                          <MDBBtn color='danger' style={{ width: '15em' }} onClick={togglePulseModal} className='mx-2'>
                             Save
                           </MDBBtn>
                         </div>

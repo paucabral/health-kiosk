@@ -39,7 +39,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
 
   return (
     <React.Fragment>
-      <MDBModal id="o2-modal" staticBackdrop scrollable='true' show={o2Modal} setShow={setO2Modal} tabIndex='-1'>
+      <MDBModal id="o2-modal" staticBackdrop show={o2Modal} setShow={setO2Modal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
@@ -47,7 +47,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
               <MDBBtn className='btn-close' color='none' onClick={toggleO2Modal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
-              <div>
+              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 <p>Please follow these steps to measure your oxygen saturation.</p>
                 <ol>
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -69,10 +69,10 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                       </MDBContainer>
                       : measure === "done" ?
                         <div>
-                          <MDBBtn onClick={() => { fetchO2Data() }} className='mx-2'>
+                          <MDBBtn color='primary' style={{ width: '15em' }} onClick={() => { fetchO2Data() }} className='mx-2'>
                             Measure Again?
                           </MDBBtn>
-                          <MDBBtn color='success' onClick={toggleO2Modal} className='mx-2'>
+                          <MDBBtn color='success' style={{ width: '15em' }} onClick={toggleO2Modal} className='mx-2'>
                             Save
                           </MDBBtn>
                         </div>

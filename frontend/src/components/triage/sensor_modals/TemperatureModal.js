@@ -36,7 +36,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
 
   return (
     <React.Fragment>
-      <MDBModal id="temperature-modal" staticBackdrop scrollable='true' show={temperatureModal} setShow={setTemperatureModal} tabIndex='-1'>
+      <MDBModal id="temperature-modal" staticBackdrop show={temperatureModal} setShow={setTemperatureModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
@@ -44,7 +44,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
               <MDBBtn className='btn-close' color='none' onClick={toggleTemperatureModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-4">
-              <div>
+              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 <p>Please follow these steps to measure your body temperature.</p>
                 <ol>
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -66,10 +66,10 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                       </MDBContainer>
                       : measure === "done" ?
                         <div>
-                          <MDBBtn onClick={() => { fetchTemperatureData() }} className='mx-2'>
+                          <MDBBtn color='primary' style={{ width: '15em' }} onClick={() => { fetchTemperatureData() }} className='mx-2'>
                             Measure Again?
                           </MDBBtn>
-                          <MDBBtn color='success' onClick={toggleTemperatureModal} className='mx-2'>
+                          <MDBBtn color='warning' style={{ width: '15em' }} onClick={toggleTemperatureModal} className='mx-2'>
                             Save
                           </MDBBtn>
                         </div>
