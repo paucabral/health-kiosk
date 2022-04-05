@@ -90,8 +90,8 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: 7.5%;
-  left: 38%;
+  bottom: -17%;
+  left: 45%;
   transition: ease 0.5s;
 }
 
@@ -100,13 +100,23 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: 7.5%;
-  right: 38%;
+  bottom: -17%;
+  right: 45%;
   transition: ease 0.5s;
 }
 
 #arrow-btn:hover {
   bottom: -8%;
+}
+
+#arrow-btn:hover+#hospital-btn {
+  bottom: 7.5%;
+  left: 38%;
+}
+
+#arrow-btn:hover~#text-btn {
+  bottom: 7.5%;
+  right: 38%;
 }
 
 nav-items:hover {

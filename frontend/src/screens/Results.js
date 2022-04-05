@@ -114,8 +114,8 @@ const Results = () => {
           </div>
         </MDBBtn>
       </div>
-      <div id="hospital-btn">
-        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={routeChange}>
+      <div id="hospital-btn" className='icons-btn'>
+        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={""}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="hospital" />
@@ -126,8 +126,8 @@ const Results = () => {
           </div>
         </MDBBtn>
       </div>
-      <div id="text-btn">
-        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={routeChange}>
+      <div id="text-btn" className='icons-btn'>
+        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={""}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="comment" />
