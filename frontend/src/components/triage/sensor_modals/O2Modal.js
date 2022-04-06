@@ -24,7 +24,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
       if (response.status == 200) {
         console.log(response.data[0]);
 
-        const o2_saturation_data = response.data[0]["spo2"];
+        const o2_saturation_data = response.data["spo2"];
 
         setFormData({ ...formData, o2_saturation: o2_saturation_data });
         setMeasure("done");
