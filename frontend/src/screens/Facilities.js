@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
@@ -172,6 +173,8 @@ const Facilities = () => {
     // console.log(travelMode);
   }, [targetLocation, direction]);
 
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -179,7 +182,12 @@ const Facilities = () => {
           <MDBCol md='4'>
             <MDBRow>
               <MDBCard className='px-0 pt-0 pb-3'>
-                <MDBCardHeader className='px-3 text-uppercase text-left' style={{ fontWeight: 'bold' }}><MDBIcon fas icon="map-marker-alt" /> Current Location</MDBCardHeader>
+                <MDBCardHeader className='px-3 text-uppercase text-left' style={{ fontWeight: 'bold' }}>
+                  <MDBBtn onClick={() => navigate(-1)}>
+                    Back
+                  </MDBBtn>
+                  <MDBIcon fas icon="map-marker-alt" /> Current Location
+                </MDBCardHeader>
                 {
                   Object.keys(location).length === 0 ?
                     <MDBRow className='m-4'>

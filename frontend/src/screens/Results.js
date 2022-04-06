@@ -125,7 +125,7 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="hospital-btn" className='icons-btn'>
-        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => routeChange('/nearest-facilities')}>
+        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => navigate('/nearest-facilities')}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="hospital" />
