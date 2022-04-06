@@ -93,6 +93,13 @@ const About = () => {
                 </MDBCard>
               </MDBCol>
             </MDBRow>
+            <MDBRow className='mt-5'>
+              <MDBContainer>
+                <MDBBtn color='info' >
+                  <MDBIcon fas icon="arrow-down" />
+                </MDBBtn>
+              </MDBContainer>
+            </MDBRow>
           </MDBContainer>
         </MDBRow>
         <MDBRow id="developers" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
