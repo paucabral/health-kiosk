@@ -95,7 +95,7 @@ const About = () => {
                 </MDBCard>
               </MDBCol>
             </MDBRow>
-            <MDBRow style={{ marginTop: '6em' }}>
+            <MDBRow style={{ marginTop: '3em' }}>
               <MDBContainer>
                 <a href='#developers'>
                   <MDBBtn color='dark' style={{ borderRadius: '50%', width: '60px', height: '60px' }}>
