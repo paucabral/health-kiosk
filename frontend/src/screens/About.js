@@ -13,7 +13,7 @@ const About = () => {
           <MDBContainer>
             <MDBContainer className='mb-2'>
               <span style={{ fontSize: '0.75em' }}>BROUGHT TO YOU BY</span>
-              <h2 style={{ fontSize: '1.25em' }}>HIGH GROUNDS</h2>
+              <h2 style={{ fontSize: '1.25em', color: 'rgb(10, 165, 165)' }}>HIGH GROUNDS</h2>
             </MDBContainer>
             <MDBContainer className='mb-4'>
               <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '3em' }}>Health Kiosk</h1>
