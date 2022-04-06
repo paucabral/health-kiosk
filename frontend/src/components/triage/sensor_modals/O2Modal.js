@@ -20,11 +20,11 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
     try {
       console.log("Fetching o2...");
       setMeasure("loading");
-      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/o2`);
+      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}`);
       if (response.status == 200) {
         console.log(response.data[0]);
 
-        const o2_saturation_data = response.data[0]["o2_saturation"];
+        const o2_saturation_data = response.data[0]["spo2"];
 
         setFormData({ ...formData, o2_saturation: o2_saturation_data });
         setMeasure("done");

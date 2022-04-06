@@ -20,9 +20,9 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
     try {
       console.log("Fetching temperature...");
       setMeasure("loading");
-      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/temperature`);
+      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}`);
       if (response.status == 200) {
-        const temperature_data = response.data[0]["temperature"];
+        const temperature_data = response.data[0]["tempAvg"];
         setFormData({ ...formData, temperature: temperature_data })
         setMeasure("done");
       }

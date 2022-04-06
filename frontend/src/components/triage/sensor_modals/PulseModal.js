@@ -20,13 +20,13 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
     try {
       console.log("Fetching pulse...");
       setMeasure("loading");
-      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/pulse`);
+      const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}`);
       if (response.status == 200) {
         console.log(response.data[0]);
 
-        const pulse_rate_data = response.data[0]["pulse_rate"];
-        const systolic_bp_data = response.data[0]["systolic_bp"];
-        const diastolic_bp_data = response.data[0]["diastolic_bp"];
+        const pulse_rate_data = response.data[0]["pr"];
+        const systolic_bp_data = response.data[0]["sys"];
+        const diastolic_bp_data = response.data[0]["dia"];
 
         setFormData({ ...formData, pulse_rate: pulse_rate_data, systolic_bp: systolic_bp_data, diastolic_bp: diastolic_bp_data });
         setMeasure("done");
