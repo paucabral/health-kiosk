@@ -24,9 +24,9 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
       if (response.status == 200) {
         console.log(response.data[0]);
 
-        const pulse_rate_data = response.data[0]["pr"];
-        const systolic_bp_data = response.data[0]["sys"];
-        const diastolic_bp_data = response.data[0]["dia"];
+        const pulse_rate_data = response.data["pr"];
+        const systolic_bp_data = response.data["sys"];
+        const diastolic_bp_data = response.data["dia"];
 
         setFormData({ ...formData, pulse_rate: pulse_rate_data, systolic_bp: systolic_bp_data, diastolic_bp: diastolic_bp_data });
         setMeasure("done");
