@@ -172,7 +172,7 @@ const About = () => {
             </MDBRow>
             <MDBRow>
               <MDBContainer className='mt-5'>
-                <h4>THE <span style={{ fontWeight: '1000', color: 'rgb(10, 165, 165)' }}>HIGH GROUNDS</span> TEAM</h4>
+                <h4 style={{ fontSize: '1.25em' }}>THE <span style={{ fontWeight: '1000', color: 'rgb(10, 165, 165)' }}>HIGH GROUNDS</span> TEAM</h4>
               </MDBContainer>
             </MDBRow>
           </MDBContainer>
