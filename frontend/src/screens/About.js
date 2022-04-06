@@ -1,4 +1,4 @@
-import { MDBBtn, MDBCard, MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
+import { MDBBtn, MDBCard, MDBCardTitle, MDBCol, MDBContainer, MDBIcon, MDBRow } from 'mdb-react-ui-kit'
 import React from 'react'
 
 const About = () => {
@@ -26,42 +26,62 @@ const About = () => {
           <MDBContainer>
             <MDBRow>
               <MDBCol>
-                <MDBCard>
+                <MDBCard className='p-2' shadow='0' border='danger' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
-
+                    <MDBContainer>
+                      <MDBIcon color='danger' size='2x' fas icon="heartbeat" />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      Vital Signs
+                    </MDBCardTitle>
                   </MDBRow>
                   <MDBRow>
-                    <p>Multiple sensors for measuring vital signs.</p>
-                  </MDBRow>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol>
-                <MDBCard>
-                  <MDBRow>
-
-                  </MDBRow>
-                  <MDBRow>
-                    <p>Performs differential diagnosis based on user-selected symptoms.</p>
+                    <p style={{ fontSize: '0.8em' }}>Multiple sensors for measuring vital signs.</p>
                   </MDBRow>
                 </MDBCard>
               </MDBCol>
               <MDBCol>
-                <MDBCard>
+                <MDBCard className='p-2' shadow='0' border='success' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
-
+                    <MDBContainer>
+                      <MDBIcon color='success' size='2x' fas icon="comment-medical" />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      Differential Diagnosis
+                    </MDBCardTitle>
                   </MDBRow>
                   <MDBRow>
-                    <p>Shows disease information such as overview and precautions to take.</p>
+                    <p style={{ fontSize: '0.8em' }}>Performs differential diagnosis based on selected symptoms.</p>
                   </MDBRow>
                 </MDBCard>
               </MDBCol>
               <MDBCol>
-                <MDBCard>
+                <MDBCard className='p-2' shadow='0' border='primary' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
-
+                    <MDBContainer>
+                      <MDBIcon color='primary' size='2x' fas icon="info-circle" />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      Disease Information
+                    </MDBCardTitle>
                   </MDBRow>
                   <MDBRow>
-                    <p>Locates the nearest hospital where the kiosk is deployed.</p>
+                    <p style={{ fontSize: '0.8em' }}>Shows disease information including the precautions to take.</p>
+                  </MDBRow>
+                </MDBCard>
+              </MDBCol>
+              <MDBCol>
+                <MDBCard className='p-2' shadow='0' border='warning' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                  <MDBRow>
+                    <MDBContainer>
+                      <MDBIcon color='warning' size='2x' fas icon="hospital" />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      Nearby Facilities
+                    </MDBCardTitle>
+                  </MDBRow>
+                  <MDBRow>
+                    <p style={{ fontSize: '0.8em' }}>Locates the nearest facilities where the kiosk is deployed.</p>
                   </MDBRow>
                 </MDBCard>
               </MDBCol>
