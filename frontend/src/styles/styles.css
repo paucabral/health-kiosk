@@ -1,0 +1,153 @@
+.sensor-btn {
+  height: 12em;
+  width: 12em;
+  border-radius: 50% !important;
+}
+
+.card-click {
+  background-color: #1E88E5;
+  color: white;
+}
+
+.travelMode-btn {
+  flex-grow: 1;
+  flex: 0.25;
+}
+
+#confirmation::-webkit-scrollbar {
+  display: none;
+}
+
+#confirmation {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+}
+
+#differential::-webkit-scrollbar,
+#hospital-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #888;
+}
+
+#differential::-webkit-scrollbar-thumb,
+#hospital-list::-webkit-scrollbar-thumb {
+  background: #1E88E5;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1E88E5;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1E88E5;
+  border-radius: 10px;
+}
+
+#temperature-modal,
+#o2-modal,
+#disease-modal {
+  z-index: 20000;
+  background-color: rgba(0, 0, 0, .75) !important;
+  transform: scale(1);
+}
+
+.fade.show {
+  background-color: rgba(0, 0, 0, .25) !important;
+  transform: scale(1);
+}
+
+#arrow-btn {
+  z-index: 2000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: -12.5%;
+  transition: ease 0.5s;
+}
+
+#hospital-btn {
+  z-index: 1200;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: -17%;
+  left: 45%;
+  transition: ease 0.5s;
+}
+
+#text-btn {
+  z-index: 1200;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: -17%;
+  right: 45%;
+  transition: ease 0.5s;
+}
+
+#arrow-btn:hover {
+  bottom: -8%;
+}
+
+#arrow-btn:hover+#hospital-btn {
+  bottom: 7.5%;
+  left: 38%;
+}
+
+#arrow-btn:hover~#text-btn {
+  bottom: 7.5%;
+  right: 38%;
+}
+
+#arrow-btn:hover~#overlay {
+  display: block;
+}
+
+nav-items:hover {
+  color: white;
+}
+
+nav-items::selection {
+  color: white;
+}
+
+#overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
