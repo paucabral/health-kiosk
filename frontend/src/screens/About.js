@@ -1,5 +1,9 @@
-import { MDBBtn, MDBCard, MDBCardTitle, MDBCol, MDBContainer, MDBIcon, MDBRow } from 'mdb-react-ui-kit'
-import React from 'react'
+import { MDBBtn, MDBCard, MDBCardTitle, MDBCol, MDBContainer, MDBIcon, MDBRow } from 'mdb-react-ui-kit';
+import React from 'react';
+import cabral from '../assets/image/cabral.jpg';
+import lopez from '../assets/image/lopez.png';
+import lucana from '../assets/image/lucana.png';
+import matienzo from '../assets/image/matienzo.png';
 
 const About = () => {
   return (
@@ -24,6 +28,9 @@ const About = () => {
         </MDBRow>
         <MDBRow id="features" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
+            <MDBRow className='m-3'>
+              <h2 style={{ fontSize: '1.5em' }}>FEATURES</h2>
+            </MDBRow>
             <MDBRow>
               <MDBCol>
                 <MDBCard className='p-2' shadow='0' border='danger' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
@@ -89,7 +96,81 @@ const About = () => {
           </MDBContainer>
         </MDBRow>
         <MDBRow id="developers" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
-
+          <MDBContainer>
+            <MDBRow className='m-3'>
+              <h2 style={{ fontSize: '1.5em' }}>DEVELOPERS</h2>
+            </MDBRow>
+            <MDBRow>
+              <MDBCol>
+                <MDBRow className='p-2' shadow='0' border='danger' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                  <MDBRow>
+                    <MDBContainer className='my-2'>
+                      <img src={cabral} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      JOSE PAULO C. CABRAL
+                    </MDBCardTitle>
+                  </MDBRow>
+                  <MDBRow>
+                    <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
+                    <span style={{ fontSize: '0.85em' }}>Systems Administration</span>
+                    <span className='text-info' style={{ fontSize: '0.75em' }}>qjpccabral@tip.edu.ph</span>
+                  </MDBRow>
+                </MDBRow>
+              </MDBCol>
+              <MDBCol>
+                <MDBRow className='p-2' shadow='0' border='success' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                  <MDBRow>
+                    <MDBContainer className='my-2'>
+                      <img src={lopez} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      JOSHUA ALBERT T. LOPEZ
+                    </MDBCardTitle>
+                  </MDBRow>
+                  <MDBRow>
+                    <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
+                    <span style={{ fontSize: '0.85em' }}>Intelligent Systems</span>
+                    <span className='text-info' style={{ fontSize: '0.75em' }}>qjatlopez@tip.edu.ph</span>
+                  </MDBRow>
+                </MDBRow>
+              </MDBCol>
+              <MDBCol>
+                <MDBRow className='p-2' shadow='0' border='primary' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                  <MDBRow>
+                    <MDBContainer className='my-2'>
+                      <img src={lucana} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      REINHOLD E. LUCANA
+                    </MDBCardTitle>
+                  </MDBRow>
+                  <MDBRow>
+                    <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
+                    <span style={{ fontSize: '0.85em' }}>Systems Administration</span>
+                    <span className='text-info' style={{ fontSize: '0.75em' }}>qrelucana@tip.edu.ph</span>
+                  </MDBRow>
+                </MDBRow>
+              </MDBCol>
+              <MDBCol>
+                <MDBRow className='p-2' shadow='0' border='warning' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                  <MDBRow>
+                    <MDBContainer className='my-2'>
+                      <img src={matienzo} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
+                    </MDBContainer>
+                    <MDBCardTitle>
+                      JOHN EDWARD SAM T. MATIENZO
+                    </MDBCardTitle>
+                  </MDBRow>
+                  <MDBRow>
+                    <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
+                    <span style={{ fontSize: '0.85em' }}>Systems Administration</span>
+                    <span className='text-info' style={{ fontSize: '0.75em' }}>qjestmatienzo@tip.edu.ph</span>
+                  </MDBRow>
+                </MDBRow>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
         </MDBRow>
       </MDBContainer>
     </React.Fragment>
