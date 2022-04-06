@@ -1,4 +1,4 @@
-import { MDBBtn, MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
+import { MDBBtn, MDBCard, MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
 import React from 'react'
 
 const About = () => {
@@ -26,16 +26,44 @@ const About = () => {
           <MDBContainer>
             <MDBRow>
               <MDBCol>
-                <p>The kiosk has multiple sensors that allows the user to measure his/her vital signs; namely, these are body temperature, pulse rate, oxygen saturation, and blood pressure.</p>
+                <MDBCard>
+                  <MDBRow>
+
+                  </MDBRow>
+                  <MDBRow>
+                    <p>Multiple sensors for measuring vital signs.</p>
+                  </MDBRow>
+                </MDBCard>
               </MDBCol>
               <MDBCol>
-                <p>With the use of machine learning, differential diagnosis can be performed based on the symptoms selected by the user. The likeliness of a disease, based on the algorithm's prediction will be presented to the user.</p>
+                <MDBCard>
+                  <MDBRow>
+
+                  </MDBRow>
+                  <MDBRow>
+                    <p>Performs differential diagnosis based on user-selected symptoms.</p>
+                  </MDBRow>
+                </MDBCard>
               </MDBCol>
               <MDBCol>
-                <p>Each classified disease after the differential diagnosis, contains recommendations and necessary precautions to take.</p>
+                <MDBCard>
+                  <MDBRow>
+
+                  </MDBRow>
+                  <MDBRow>
+                    <p>Shows disease information such as overview and precautions to take.</p>
+                  </MDBRow>
+                </MDBCard>
               </MDBCol>
               <MDBCol>
-                <p>Along with the recommendations and precautions, the nearest health facilities for each of the differentials will also be presented to the user.</p>
+                <MDBCard>
+                  <MDBRow>
+
+                  </MDBRow>
+                  <MDBRow>
+                    <p>Locates the nearest hospital where the kiosk is deployed.</p>
+                  </MDBRow>
+                </MDBCard>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
