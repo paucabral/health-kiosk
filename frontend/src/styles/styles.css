@@ -105,22 +105,26 @@
   transition: ease 0.5s;
 }
 
-#arrow-btn:hover {
+#arrow-toggler:checked~#arrow-btn {
   bottom: -8%;
 }
 
-#arrow-btn:hover+#hospital-btn {
-  bottom: 7.5%;
-  left: 38%;
+#arrow-toggler:checked~#overlay {
+  display: block;
 }
 
-#arrow-btn:hover~#text-btn {
+#arrow-toggler:checked+#arrow-btn {
+  bottom: -8%;
+}
+
+#arrow-toggler:checked~#text-btn {
   bottom: 7.5%;
   right: 38%;
 }
 
-#arrow-btn:hover~#overlay {
-  display: block;
+#arrow-toggler:checked~#hospital-btn {
+  bottom: 7.5%;
+  left: 38%;
 }
 
 nav-items:hover {

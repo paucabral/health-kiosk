@@ -8,7 +8,7 @@ import matienzo from '../assets/image/matienzo.png';
 const About = () => {
   return (
     <React.Fragment>
-      <MDBContainer id="confirmation" style={{ height: '100vh', overflowY: 'auto' }}>
+      <MDBContainer id="confirmation" style={{ height: '100vh', overflowY: 'auto', scrollBehavior: 'smooth' }}>
         <MDBRow id="banner" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBContainer className='mb-2'>
@@ -22,7 +22,9 @@ const About = () => {
               <p style={{ fontSize: '1.25em' }}>A self-service health kiosk that performs differential diagnosis and provide recommendations for the user, as well as locate the nearby health facilities.</p>
             </MDBContainer>
             <MDBContainer className='my-3'>
-              <MDBBtn color='info'>Learn More</MDBBtn>
+              <a href='#features'>
+                <MDBBtn color='info'>Learn More</MDBBtn>
+              </a>
             </MDBContainer>
           </MDBContainer>
         </MDBRow>
@@ -93,11 +95,13 @@ const About = () => {
                 </MDBCard>
               </MDBCol>
             </MDBRow>
-            <MDBRow className='mt-5'>
+            <MDBRow style={{ marginTop: '3em' }}>
               <MDBContainer>
-                <MDBBtn color='info' >
-                  <MDBIcon fas icon="arrow-down" />
-                </MDBBtn>
+                <a href='#developers'>
+                  <MDBBtn color='dark' style={{ borderRadius: '50%', width: '60px', height: '60px' }}>
+                    <MDBIcon fas icon="arrow-down" />
+                  </MDBBtn>
+                </a>
               </MDBContainer>
             </MDBRow>
           </MDBContainer>
