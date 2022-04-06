@@ -21,9 +21,11 @@ const Results = () => {
     setSmsModal(!smsModal)
   }
 
+  const [checked, setChecked] = useState(false);
   const handleFeature = () => {
     let checkbox = document.getElementById('arrow-toggler');
-    checkbox.checked = !checkbox.checked
+    checkbox.checked = !checkbox.checked;
+    setChecked(checkbox.checked);
   }
 
   return (
@@ -104,7 +106,7 @@ const Results = () => {
         <MDBBtn color='dark' onClick={handleFeature} className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }}>
           <div>
             <MDBRow>
-              <MDBIcon size='2x' fas icon="sort-up" />
+              <MDBIcon size='2x' fas icon={checked ? "sort-down" : "sort-up"} />
             </MDBRow>
             <MDBRow className='m-2'>
               <span style={{ fontSize: '0.75em' }}>SELECT</span>
