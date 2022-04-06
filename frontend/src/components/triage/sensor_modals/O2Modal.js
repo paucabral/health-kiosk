@@ -58,7 +58,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
               <div className='d-flex align-items-center justify-content-center'>
                 {
                   measure === "to_measure" ?
-                    <MDBBtn onClick={() => { fetchO2Data() }}>
+                    <MDBBtn color='success' onClick={() => { fetchO2Data() }}>
                       Start Measurement
                     </MDBBtn>
                     : measure === "loading" ?
@@ -77,11 +77,17 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                           </MDBBtn>
                         </div>
                         : <div style={{ textAlign: "center" }}>
-                          <h6>There was an error.</h6>
-                          <i>Please try again. If the issue persists, please reach the technician.</i>
-                          <MDBBtn onClick={() => { fetchO2Data() }} className='mx-2'>
-                            Try Again
-                          </MDBBtn>
+                          <MDBRow>
+                            <h6>There was an error.</h6>
+                            <i>Please try again. If the issue persists, please reach the technician.</i>
+                          </MDBRow>
+                          <MDBRow className='mt-3'>
+                            <MDBContainer>
+                              <MDBBtn color='success' onClick={() => { fetchO2Data() }} className='mx-2'>
+                                Try Again
+                              </MDBBtn>
+                            </MDBContainer>
+                          </MDBRow>
                         </div>
                 }
               </div>
