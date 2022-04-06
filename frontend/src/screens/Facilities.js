@@ -183,10 +183,16 @@ const Facilities = () => {
             <MDBRow>
               <MDBCard className='px-0 pt-0 pb-3'>
                 <MDBCardHeader className='px-3 text-uppercase text-left' style={{ fontWeight: 'bold' }}>
-                  <MDBBtn onClick={() => navigate(-1)}>
-                    Back
-                  </MDBBtn>
-                  <MDBIcon fas icon="map-marker-alt" /> Current Location
+                  <MDBRow>
+                    <MDBCol>
+                      <MDBIcon fas icon="map-marker-alt" /> Current Location
+                    </MDBCol>
+                    <MDBCol size='4' className='mx-0'>
+                      <MDBBtn color='dark' className='py-1 px-3' onClick={() => navigate(-1)}>
+                        <span style={{ fontSize: '0.6em' }}><MDBIcon fas icon="arrow-left" /> Go Back</span>
+                      </MDBBtn>
+                    </MDBCol>
+                  </MDBRow>
                 </MDBCardHeader>
                 {
                   Object.keys(location).length === 0 ?
