@@ -21,6 +21,11 @@ const Results = () => {
     setSmsModal(!smsModal)
   }
 
+  const handleFeature = () => {
+    let checkbox = document.getElementById('arrow-toggler');
+    checkbox.checked = !checkbox.checked
+  }
+
   return (
     <React.Fragment>
       <MDBContainer className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -94,8 +99,9 @@ const Results = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <input id="arrow-toggler" type="checkbox" style={{ display: 'none' }} />
       <div id="arrow-btn">
-        <MDBBtn color='dark' className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }}>
+        <MDBBtn color='dark' onClick={handleFeature} className='px-0' rounded style={{ height: '115px', width: '115px', lineHeight: '1' }}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="sort-up" />
@@ -129,7 +135,7 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="text-btn" className='icons-btn'>
-        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={toggleSmsModal}>
+        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => { toggleSmsModal(); handleFeature(); }}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="comment" />
