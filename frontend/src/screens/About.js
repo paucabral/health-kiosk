@@ -13,7 +13,7 @@ const About = () => {
           <MDBContainer>
             <MDBContainer className='mb-2'>
               <span style={{ fontSize: '0.75em' }}>BROUGHT TO YOU BY</span>
-              <h2 style={{ fontSize: '1.25em' }}>HIGH GROUNDS</h2>
+              <h2 style={{ fontSize: '1.25em', color: 'rgb(10, 165, 165)' }}>HIGH GROUNDS</h2>
             </MDBContainer>
             <MDBContainer className='mb-4'>
               <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '3em' }}>Health Kiosk</h1>
@@ -29,7 +29,7 @@ const About = () => {
         <MDBRow id="features" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBRow className='m-3'>
-              <h2 style={{ fontSize: '1.5em' }}>FEATURES</h2>
+              <h2 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>FEATURES</h2>
             </MDBRow>
             <MDBRow>
               <MDBCol>
@@ -93,16 +93,23 @@ const About = () => {
                 </MDBCard>
               </MDBCol>
             </MDBRow>
+            <MDBRow className='mt-5'>
+              <MDBContainer>
+                <MDBBtn color='info' >
+                  <MDBIcon fas icon="arrow-down" />
+                </MDBBtn>
+              </MDBContainer>
+            </MDBRow>
           </MDBContainer>
         </MDBRow>
         <MDBRow id="developers" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBRow className='m-3'>
-              <h2 style={{ fontSize: '1.5em' }}>DEVELOPERS</h2>
+              <h2 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>DEVELOPERS</h2>
             </MDBRow>
             <MDBRow>
               <MDBCol>
-                <MDBRow className='p-2' shadow='0' border='danger' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                <MDBRow className='p-2' shadow='0' border='danger' style={{ justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
                     <MDBContainer className='my-2'>
                       <img src={cabral} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
@@ -114,12 +121,12 @@ const About = () => {
                   <MDBRow>
                     <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
                     <span style={{ fontSize: '0.85em' }}>Systems Administration</span>
-                    <span className='text-info' style={{ fontSize: '0.75em' }}>qjpccabral@tip.edu.ph</span>
+                    <span style={{ fontSize: '0.75em', color: 'rgb(10, 165, 165)' }}>qjpccabral@tip.edu.ph</span>
                   </MDBRow>
                 </MDBRow>
               </MDBCol>
               <MDBCol>
-                <MDBRow className='p-2' shadow='0' border='success' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                <MDBRow className='p-2' shadow='0' border='success' style={{ justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
                     <MDBContainer className='my-2'>
                       <img src={lopez} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
@@ -131,12 +138,12 @@ const About = () => {
                   <MDBRow>
                     <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
                     <span style={{ fontSize: '0.85em' }}>Intelligent Systems</span>
-                    <span className='text-info' style={{ fontSize: '0.75em' }}>qjatlopez@tip.edu.ph</span>
+                    <span style={{ fontSize: '0.75em', color: 'rgb(10, 165, 165)' }}>qjatlopez@tip.edu.ph</span>
                   </MDBRow>
                 </MDBRow>
               </MDBCol>
               <MDBCol>
-                <MDBRow className='p-2' shadow='0' border='primary' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                <MDBRow className='p-2' shadow='0' border='primary' style={{ justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
                     <MDBContainer className='my-2'>
                       <img src={lucana} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
@@ -148,12 +155,12 @@ const About = () => {
                   <MDBRow>
                     <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
                     <span style={{ fontSize: '0.85em' }}>Systems Administration</span>
-                    <span className='text-info' style={{ fontSize: '0.75em' }}>qrelucana@tip.edu.ph</span>
+                    <span style={{ fontSize: '0.75em', color: 'rgb(10, 165, 165)' }}>qrelucana@tip.edu.ph</span>
                   </MDBRow>
                 </MDBRow>
               </MDBCol>
               <MDBCol>
-                <MDBRow className='p-2' shadow='0' border='warning' style={{ height: '12em', justifyContent: 'center', alignItems: 'center' }}>
+                <MDBRow className='p-2' shadow='0' border='warning' style={{ justifyContent: 'center', alignItems: 'center' }}>
                   <MDBRow>
                     <MDBContainer className='my-2'>
                       <img src={matienzo} style={{ height: '110px', width: '110px', borderRadius: '50%' }} />
@@ -165,14 +172,14 @@ const About = () => {
                   <MDBRow>
                     <span style={{ fontSize: '0.85em', fontWeight: 'bold' }}>BS Computer Engineering</span>
                     <span style={{ fontSize: '0.85em' }}>Systems Administration</span>
-                    <span className='text-info' style={{ fontSize: '0.75em' }}>qjestmatienzo@tip.edu.ph</span>
+                    <span style={{ fontSize: '0.75em', color: 'rgb(10, 165, 165)' }}>qjestmatienzo@tip.edu.ph</span>
                   </MDBRow>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
-            <MDBRow className='p-2'>
-              <MDBContainer>
-                <h4>THE HIGH GROUNDS TEAM</h4>
+            <MDBRow>
+              <MDBContainer className='mt-5'>
+                <h4 style={{ fontSize: '1.25em' }}>THE <span style={{ fontWeight: '1000', color: 'rgb(10, 165, 165)' }}>HIGH GROUNDS</span> TEAM</h4>
               </MDBContainer>
             </MDBRow>
           </MDBContainer>
