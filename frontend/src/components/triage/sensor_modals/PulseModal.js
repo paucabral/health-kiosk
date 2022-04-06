@@ -60,7 +60,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
               <div className='d-flex align-items-center justify-content-center'>
                 {
                   measure === "to_measure" ?
-                    <MDBBtn onClick={() => { fetchPulseData() }}>
+                    <MDBBtn color='danger' onClick={() => { fetchPulseData() }}>
                       Start Measurement
                     </MDBBtn>
                     : measure === "loading" ?
@@ -79,11 +79,17 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                           </MDBBtn>
                         </div>
                         : <div style={{ textAlign: "center" }}>
-                          <h6>There was an error.</h6>
-                          <i>Please try again. If the issue persists, please reach the technician.</i>
-                          <MDBBtn onClick={() => { fetchPulseData() }} className='mx-2'>
-                            Try Again
-                          </MDBBtn>
+                          <MDBRow>
+                            <h6>There was an error.</h6>
+                            <i>Please try again. If the issue persists, please reach the technician.</i>
+                          </MDBRow>
+                          <MDBRow className='mt-3'>
+                            <MDBContainer>
+                              <MDBBtn color='danger' onClick={() => { fetchPulseData() }} className='mx-2'>
+                                Try Again
+                              </MDBBtn>
+                            </MDBContainer>
+                          </MDBRow>
                         </div>
                 }
               </div>
