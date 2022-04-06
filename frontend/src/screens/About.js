@@ -170,6 +170,11 @@ const About = () => {
                 </MDBRow>
               </MDBCol>
             </MDBRow>
+            <MDBRow className='p-2'>
+              <MDBContainer>
+                <h4>THE HIGH GROUNDS TEAM</h4>
+              </MDBContainer>
+            </MDBRow>
           </MDBContainer>
         </MDBRow>
       </MDBContainer>
