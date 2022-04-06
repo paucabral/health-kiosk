@@ -8,7 +8,7 @@ import matienzo from '../assets/image/matienzo.png';
 const About = () => {
   return (
     <React.Fragment>
-      <MDBContainer id="confirmation" style={{ height: '100vh', overflowY: 'auto' }}>
+      <MDBContainer id="confirmation" style={{ height: '100vh', overflowY: 'auto', scrollBehavior: 'smooth' }}>
         <MDBRow id="banner" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBContainer className='mb-2'>
