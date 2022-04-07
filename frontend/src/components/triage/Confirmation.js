@@ -1,5 +1,15 @@
-import { MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
-import React from 'react';
+import {
+  MDBCard, MDBCardHeader, MDBCardTitle, MDBCardText, MDBCardBody, MDBIcon, MDBCol, MDBRow, MDBBtn, MDBContainer,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter,
+  MDBSpinner,
+} from 'mdb-react-ui-kit';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../styles/styles.css';
@@ -7,11 +17,17 @@ import '../../styles/styles.css';
 const Confirmation = ({ formData, setPage, setProgress }) => {
   const navigate = useNavigate();
 
+  const [loadingModal, setLoadingModal] = useState(false);
+  const toggleLoadingModal = () => {
+    setLoadingModal(!loadingModal);
+  }
+
   const checkEntry = () => {
     return formData.first_name === "" | formData.last_name === "" | formData.age === "" | formData.sex === "" | formData.contact_no === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
   }
 
   const submitForm = async () => {
+    toggleLoadingModal();
     try {
       const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/differential-diagnosis/`
       const json = JSON.stringify(formData)
@@ -179,11 +195,34 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-
         </MDBCardBody>
       </div>
+      <LoadingModal loadingModal={loadingModal} setLoadingModal={setLoadingModal} />
     </React.Fragment>
   )
 }
 
 export default Confirmation
+
+const LoadingModal = ({ loadingModal, setLoadingModal }) => {
+  return <React.Fragment>
+    <MDBModal id="temperature-modal" staticBackdrop show={loadingModal} setShow={setLoadingModal} tabIndex='-1'>
+      <MDBModalDialog centered size='md'>
+        <MDBModalContent>
+          <MDBModalHeader>
+            <MDBContainer>
+              <MDBModalTitle style={{ textAlign: 'center' }}>Loading...</MDBModalTitle>
+            </MDBContainer>
+          </MDBModalHeader>
+          <MDBModalBody style={{ textAlign: "center" }} className="mb-2">
+            <MDBContainer>
+              <MDBSpinner className='mx-2' size='3x' color='info'>
+                <span className='visually-hidden'>Loading...</span>
+              </MDBSpinner>
+            </MDBContainer>
+          </MDBModalBody>
+        </MDBModalContent>
+      </MDBModalDialog>
+    </MDBModal>
+  </React.Fragment>
+}
