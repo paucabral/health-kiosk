@@ -207,15 +207,19 @@ export default Confirmation
 const LoadingModal = ({ loadingModal, setLoadingModal }) => {
   return <React.Fragment>
     <MDBModal id="temperature-modal" staticBackdrop show={loadingModal} setShow={setLoadingModal} tabIndex='-1'>
-      <MDBModalDialog centered size='xl'>
+      <MDBModalDialog centered size='md'>
         <MDBModalContent>
           <MDBModalHeader>
-            <MDBModalTitle>Gathering Results...</MDBModalTitle>
+            <MDBContainer>
+              <MDBModalTitle style={{ textAlign: 'center' }}>Loading...</MDBModalTitle>
+            </MDBContainer>
           </MDBModalHeader>
-          <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
-            <MDBSpinner className='mx-2' size='3x' color='info'>
-              <span className='visually-hidden'>Loading...</span>
-            </MDBSpinner>
+          <MDBModalBody style={{ textAlign: "center" }} className="mb-2">
+            <MDBContainer>
+              <MDBSpinner className='mx-2' size='3x' color='info'>
+                <span className='visually-hidden'>Loading...</span>
+              </MDBSpinner>
+            </MDBContainer>
           </MDBModalBody>
         </MDBModalContent>
       </MDBModalDialog>
