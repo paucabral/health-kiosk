@@ -9,12 +9,6 @@ const Results = () => {
   const location = useLocation();
 
   let navigate = useNavigate();
-  const routeChange = (path) => {
-    setTimeout(function () {
-      navigate(path);
-    }, 750)
-    console.log('clicked')
-  }
 
   const [smsModal, setSmsModal] = useState(false);
   const toggleSmsModal = () => {
