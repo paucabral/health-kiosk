@@ -21,7 +21,7 @@ const About = () => {
             <MDBContainer style={{ width: '65vw' }}>
               <p style={{ fontSize: '1.25em' }}>A self-service health kiosk that performs differential diagnosis and provide recommendations for the user, as well as locate the nearby health facilities.</p>
             </MDBContainer>
-            <MDBContainer className='my-3'>
+            <MDBContainer className='mt-3 mb-0'>
               <a href='#features'>
                 <MDBBtn color='info'>Learn More</MDBBtn>
               </a>
@@ -30,7 +30,7 @@ const About = () => {
         </MDBRow>
         <MDBRow id="features" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
-            <MDBRow className='m-3'>
+            <MDBRow className='mt-5 mb-3'>
               <h2 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>FEATURES</h2>
             </MDBRow>
             <MDBRow>
@@ -108,7 +108,7 @@ const About = () => {
         </MDBRow>
         <MDBRow id="developers" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
-            <MDBRow className='m-3'>
+            <MDBRow className='mt-5 mb-3'>
               <h2 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>DEVELOPERS</h2>
             </MDBRow>
             <MDBRow>
