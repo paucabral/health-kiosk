@@ -18,7 +18,7 @@ int maxNoRead = 0;
 
 void onBeatDetected()
 {
-    Serial.println("Beat!");
+    Serial.println(F("Beat!"));
 }
 
 //*********MLX90614 variables**************
@@ -83,21 +83,25 @@ void setup()
     delay(500);
     Serial.print(".");
   }
-  Serial.println("");
-  Serial.println("WiFi connected");
+  Serial.println(F(""));
+  Serial.println(F("WiFi connected"));
   server.begin();
-  Serial.println("Server started");
+  Serial.println(F("Server started"));
   Serial.println(WiFi.localIP());
   WiFi.setAutoReconnect(true);
   WiFi.persistent(true);
 
+  pinMode(buttonD6, INPUT);
+  pinMode(buttonD7, OUTPUT);
+  pinMode(buttonD8, OUTPUT);
+
   //******* Start and configuration of MAX30102 *******
-    Serial.print("Initializing pulse oximeter..");
+    Serial.print(F("Initializing pulse oximeter..."));
     if (!pox.begin()) {
-        Serial.println("FAILED");
+        Serial.println(F("FAILED"));
         for(;;);
     } else {
-        Serial.println("SUCCESS");
+        Serial.println(F("SUCCESS"));
     }
     mlx.begin();  
 
@@ -114,11 +118,10 @@ void setup()
   
   rest.set_id("1");
   rest.set_name("vital_signs");
-  pinMode(buttonD6, INPUT);
-  pinMode(buttonD7, OUTPUT);
-  pinMode(buttonD8, OUTPUT);
+
   digitalWrite(buttonD8, HIGH);
   digitalWrite(buttonD7, HIGH);
+
 }
 
 void loop()
@@ -146,38 +149,42 @@ void loop()
   if (virtualMemory == 1){
     bpCurrentReport = millis();
     if (bpCurrentReport - bpStartReport > bpREPORTING_PERIOD_MS){
-      Serial.print(bpCurrentReport);
-      Serial.print(" - ");
-      Serial.print(bpStartReport);
-      Serial.print(" = ");
-      Serial.println(bpCurrentReport - bpStartReport);
+//      Serial.print(bpCurrentReport);
+//      Serial.print(" - ");
+//      Serial.print(bpStartReport);
+//      Serial.print(" = ");
+//      Serial.println(bpCurrentReport - bpStartReport);
       virtualMemorySwitch();
       bpStartReport = bpCurrentReport;
       if (bpCurrentReport - bpToShutReport > bpSHUT_PERIOD_MS){
         virtualPowerSwitch();
         bpToShutReport = bpCurrentReport;
-        mlx.begin();
-        pox.begin();
+//        mlx.begin();
+//        pox.begin();
         virtualMemory = 0;
       }
     }
   }
    
   if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
-      Serial.print("pO2:");
-      Serial.print(pox.getSpO2());
-      Serial.println("% \t");
+//      Serial.print("pO2:");
+      Serial.println(pox.getSpO2());
+//      Serial.println("% \t");
       spo2 = pox.getSpO2();
       spo2comp = spo2;
       spo2aux = spo2comp;
       
-      if (spo2 == spo2comp && spo2 !=0){
+      if (spo2 == spo2comp && spo2 == 0){
         maxNoRead += 1;
+        Serial.print(F("\t\t Value: "));
+        Serial.print(maxNoRead);
         if (maxNoRead == 7){
           Serial.println("Re-init Max");
           pox.begin();
+          maxNoRead = 0;
         }
       }
+
       tsLastReport = millis();
 //      Serial.print("\tObject = "); 
 //      Serial.print(mlx.readObjectTempC()); 
@@ -186,10 +193,11 @@ void loop()
 //      mlxobj = mlx.readObjectTempC();
         cur_sample = mlx.readObjectTempC();
         tempAvg = smooth();
-        Serial.print("raw temp:\t\t"); 
-        Serial.println(cur_sample);
-        Serial.print("avg temp:\t");
-        Serial.println(tempAvg);
+
+//        Serial.print(F("raw temp:\t\t")); 
+//        Serial.println(cur_sample);
+//        Serial.print(F("avg temp:\t"));
+//        Serial.println(tempAvg);
   }
 
   //BP
@@ -213,7 +221,7 @@ float smooth() {                          // Smoothing function
   total = total - readings[readIndex];    // Subtract last reading to not keep on adding
   cur_sample = mlx.readObjectTempC();     // Read the sensor
   readings[readIndex] = cur_sample;       // Append to array
-  total = total + readings[readIndex];    // Add reading to total
+  total += readings[readIndex];           // Add reading to total
   readIndex += 1;                         // Increment index
   if (readIndex >= samples) {             // Reset index
     readIndex = 0;                
@@ -258,7 +266,7 @@ void bpData() {
     if (newData == true) {
       
       strcpy(bpCharToken, bpChars);
-      Serial.println(bpCharToken);
+//      Serial.println(bpCharToken);
       char* piece = strtok(bpCharToken," ");
 
       rawSYS = piece;
@@ -270,12 +278,12 @@ void bpData() {
       dataDIA = strtol(rawDIA.c_str(), NULL, 16);
       dataPR= strtol(rawPR.c_str(), NULL, 16);
 
-      Serial.print("dataSYS: ");
-      Serial.println(dataSYS);
-      Serial.print("dataDIA: ");
-      Serial.println(dataDIA);    
-      Serial.print("dataPR: ");
-      Serial.println(dataPR);
+//      Serial.print("dataSYS: ");
+//      Serial.println(dataSYS);
+//      Serial.print("dataDIA: ");
+//      Serial.println(dataDIA);    
+//      Serial.print("dataPR: ");
+//      Serial.println(dataPR);
 
       pox.begin();
       mlx.begin();
