@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import time
 import serial
+import numpy as np
 
 ser = serial.Serial(
     # port='/dev/ttyS0',
@@ -16,6 +17,17 @@ ser = serial.Serial(
 lng_save = 0.0
 lat_save = 0.0
 
+lat_sma_gps = []
+got_lat_val = 0.0
+lng_sma_gps = []
+got_lat_val = 0.0
+
+
+def movave(values, window):
+    weights = np.repeat(1.0, window)/window
+    sma = np.convolve(values, weights, 'valid')
+    return sma
+
 def compute_rawGPS(raw_val, direction):
     #Separate lat and long. Note: 2 digits to left of decimal point is min, rest is degree
     str_int = str(int((raw_val//1)))    #Converted to string, to separate degree and minutes
@@ -28,6 +40,7 @@ def compute_rawGPS(raw_val, direction):
     full_minutes = min+flt_val                      #Combined
     
     coord_min = full_minutes/60.0                   #Take coordinate minute
+
     coordinate_val = float(str(deg+coord_min)[:10]) #To shorten decimal places (string)
 
     if direction == "N" or direction == "E":        #Condition to determine whether coord is + or -
@@ -44,6 +57,8 @@ def compute_rawGPS(raw_val, direction):
     return signed_coord
 
 def computedGPS():
+    ave_lat = 0.0
+    ave_lng = 0.0
     gpscnt = 0                  # variable for iteration
     strgpsarr = []              # array to hold all streams in string (for split function)
 
@@ -77,18 +92,36 @@ def computedGPS():
                 lat = compute_rawGPS(latraw_val, latdirection)      # subject to computation
                 lng = compute_rawGPS(longraw_val, longdirection)      
 
-                lat_save = lat                                      # save values in case 
-                lng_save = lng
+                # DSP for lat and long
+                index_length = 5
+                if (len(lat_sma_gps) < index_length):                  # DSP for Lat
+                    lat_sma_gps.append(lat)
+                else:
+                    got_lat_val = movave(lat_sma_gps, index_length)
+                    lat_sma_gps.pop(0)
+                    lat_sma_gps.append(lat)
+                    # print("COMPUTED LAT: ",got_lat_val[0])
+                    ave_lat = float("{:.10f}".format(got_lat_val[0]))
 
-                coord_pairs = [{"lat": lat}, {"lng": lng}]          # save as is
+                if (len(lng_sma_gps) < index_length):                   # DSP for Lng
+                    lng_sma_gps.append(lng)
+                else:
+                    got_lng_val = movave(lng_sma_gps, index_length)
+                    lng_sma_gps.pop(0)
+                    lng_sma_gps.append(lng)
+                    # print("COMPUTED lng: ",got_lng_val[0])    
+                    ave_lng = float("{:.10f}".format(got_lng_val[0]))
+
+                lat_save = ave_lat                                      # save values in case 
+                lng_save = ave_lng
+                coord_pairs = [{"lat": ave_lat}, {"lng": ave_lng}]          # save as is
 
                 # print(coord_pairs)
             else:
                 coord_pairs = [{"lat": lat_save}, {"lng": lng_save}] 
                 # print("Position untracked yet! But saved was: ", coord_pairs)
             
-            print("Got",coord_pairs)
-            print("Saved",lat_save,lng_save)
+            print(coord_pairs)
             return coord_pairs
 
     gpscnt+=1
