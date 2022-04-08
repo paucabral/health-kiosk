@@ -176,14 +176,14 @@ void loop()
       
       if (spo2 == spo2comp && spo2 == 0){
         maxNoRead += 1;
-        Serial.print(F("\t\t Value: "));
-        Serial.print(maxNoRead);
         if (maxNoRead == 7){
-          Serial.println("Re-init Max");
           pox.begin();
           maxNoRead = 0;
         }
       }
+
+        Serial.print(F("Monitored: "));
+        Serial.println(ESP.getFreeHeap(),DEC);
 
       tsLastReport = millis();
 //      Serial.print("\tObject = "); 
