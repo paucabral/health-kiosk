@@ -168,7 +168,7 @@ void loop()
    
   if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
 //      Serial.print("pO2:");
-      Serial.println(pox.getSpO2());
+//      Serial.println(pox.getSpO2());
 //      Serial.println("% \t");
       spo2 = pox.getSpO2();
       spo2comp = spo2;
