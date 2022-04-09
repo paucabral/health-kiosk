@@ -8,7 +8,7 @@ import matienzo from '../assets/image/matienzo.png';
 const About = () => {
   return (
     <React.Fragment>
-      <MDBContainer id="confirmation" style={{ height: '100vh', overflowY: 'auto', scrollBehavior: 'smooth' }}>
+      <MDBCol className='p-0' id="confirmation" style={{ height: '100vh', width: '100vw', overflowY: 'auto', scrollBehavior: 'smooth' }}>
         <MDBRow id="banner" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBContainer className='mb-2'>
@@ -28,7 +28,7 @@ const About = () => {
             </MDBContainer>
           </MDBContainer>
         </MDBRow>
-        <MDBRow id="features" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+        <MDBRow className='px-3' id="features" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBRow className='mt-5 mb-3'>
               <h2 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>FEATURES</h2>
@@ -106,7 +106,7 @@ const About = () => {
             </MDBRow>
           </MDBContainer>
         </MDBRow>
-        <MDBRow id="developers" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+        <MDBRow className='px-3' id="developers" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
           <MDBContainer>
             <MDBRow className='mt-5 mb-3'>
               <h2 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>DEVELOPERS</h2>
@@ -188,7 +188,7 @@ const About = () => {
             </MDBRow>
           </MDBContainer>
         </MDBRow>
-      </MDBContainer>
+      </MDBCol>
     </React.Fragment>
   )
 }
