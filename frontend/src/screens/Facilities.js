@@ -177,7 +177,7 @@ const Facilities = () => {
 
   return (
     <React.Fragment>
-      <div className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
+      <div className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
