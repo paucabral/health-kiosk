@@ -9,7 +9,7 @@ import About from './screens/About';
 
 function App() {
   return (
-    <div className="App" style={{ height: "95vh", width: "100vw" }}>
+    <div className="App" style={{ height: "100vh", width: "100vw" }}>
       <Navigation />
       <div className='d-flex align-items-center justify-content-center' style={{ height: "100%" }}>
         <BrowserRouter>
