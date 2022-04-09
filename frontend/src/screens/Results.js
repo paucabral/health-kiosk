@@ -24,7 +24,7 @@ const Results = () => {
 
   return (
     <React.Fragment>
-      <MDBContainer className='mt-5 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
+      <MDBContainer className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
         <MDBRow className='mb-2' style={{ textAlign: "center", display: 'flex', justifyContent: "center" }}>
           <MDBCardTitle style={{ fontWeight: "bold" }}>Patient Assessment</MDBCardTitle>
         </MDBRow>
