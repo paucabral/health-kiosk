@@ -23,16 +23,12 @@ void onBeatDetected()
 
 //*********MLX90614 variables**************
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
-float mlxobj;
-float mlxobjAvg;
-float thermtemp;                                      //Following three variables are for calibration
-float thermmax;   
-float thermmin;
+//float thermtemp;                                      //Following three variables are for calibration, do keep as comment
+//float thermmax;   
+//float thermmin;
 
 const int samples = 5;                                //Following variables are for Moving Average
-float float_samples = 5.00;
 float cur_sample = 0.0;
-float cur_avg = 0.0;
 float readings [samples];
 float tempAvg = 0.0;
 int readIndex = 0;
@@ -42,7 +38,7 @@ float total = 0.00;
 #define buttonD6 D6                     // Physical Extension Switch
 #define buttonD7 D7                     // Virtual Power Switch
 #define buttonD8 D8                     // Virtual Memory Switch
-#define bpREPORTING_PERIOD_MS 58000     // Time to state sys/dia (to check if automation works)
+#define bpREPORTING_PERIOD_MS 51000     // Time to state sys/dia (to check if automation works)
 #define bpSHUT_PERIOD_MS 10000          // Time to shutdown BP
 uint32_t bpStartReport = 0;             // millis comparison
 uint32_t bpCurrentReport = 0;           // ^
@@ -119,7 +115,6 @@ void setup()
   rest.set_id("1");
   rest.set_name("vital_signs");
 
-  digitalWrite(buttonD8, HIGH);
   digitalWrite(buttonD7, HIGH);
 
 }
@@ -191,7 +186,7 @@ void loop()
 //      Serial.print("*C\t");
 //      Serial.println("");
 //      mlxobj = mlx.readObjectTempC();
-        cur_sample = mlx.readObjectTempC();
+//        cur_sample = mlx.readObjectTempC();
         tempAvg = smooth();
 //
 //        Serial.print(F("raw temp:\t\t")); 
