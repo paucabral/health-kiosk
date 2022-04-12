@@ -193,7 +193,7 @@ void loop()
 //      mlxobj = mlx.readObjectTempC();
         cur_sample = mlx.readObjectTempC();
         tempAvg = smooth();
-
+//
 //        Serial.print(F("raw temp:\t\t")); 
 //        Serial.println(cur_sample);
 //        Serial.print(F("avg temp:\t"));
@@ -220,7 +220,13 @@ float smooth() {                          // Smoothing function
   float average = 0.0;                    // Instantiate average
   total = total - readings[readIndex];    // Subtract last reading to not keep on adding
   cur_sample = mlx.readObjectTempC();     // Read the sensor
+  if(isnan(cur_sample)){
+  Serial.print(F("CUR SAMPLE is NAN"));
+  readings[readIndex] = readings[readIndex-1]+1;
+  }
+  else{
   readings[readIndex] = cur_sample;       // Append to array
+  }
   total += readings[readIndex];           // Add reading to total
   readIndex += 1;                         // Increment index
   if (readIndex >= samples) {             // Reset index
