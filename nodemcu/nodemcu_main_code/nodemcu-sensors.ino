@@ -115,8 +115,8 @@ void setup()
   rest.set_id("1");
   rest.set_name("vital_signs");
 
+  digitalWrite(buttonD8, HIGH);
   digitalWrite(buttonD7, HIGH);
-
 }
 
 void loop()
