@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
 from .forms import CreateUserForm, ProfileForm, CreateSuperUserForm
+from api.models import *
 from .models import *
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
@@ -187,4 +188,6 @@ class AdministratorDashboard(View):
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())
     def get(self, request, *args, **kwargs):
-        return render(request, template_name='management/dashboard.html')
+        patients = Patient.objects.all()
+
+        return render(request, template_name='management/dashboard.html', context={'patients': patients})
