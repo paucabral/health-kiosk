@@ -58,7 +58,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                 <MDBRow>
                   <MDBCol>
                     <MDBRow>
-                      <MDBCol size='3'>
+                      <MDBCol size='4'>
                         <strong>NAME:</strong>
                       </MDBCol>
                       <MDBCol>
@@ -68,7 +68,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   </MDBCol>
                   <MDBCol>
                     <MDBRow>
-                      <MDBCol size='3'>
+                      <MDBCol size='4'>
                         <strong>SEX:</strong>
                       </MDBCol>
                       <MDBCol>
@@ -80,8 +80,8 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                 <MDBRow>
                   <MDBCol>
                     <MDBRow>
-                      <MDBCol size='3'>
-                        <strong>BIRTH:</strong>
+                      <MDBCol size='4'>
+                        <strong>BIRTHDAY:</strong>
                       </MDBCol>
                       <MDBCol>
                         {formData.birth_date ? <span>{moment(formData.birth_date).format('MMMM DD, YYYY')}</span> : <i className='text-muted'>*MISSING</i>}
@@ -90,7 +90,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   </MDBCol>
                   <MDBCol>
                     <MDBRow>
-                      <MDBCol size='3'>
+                      <MDBCol size='4'>
                         <strong>CONTACT:</strong>
                       </MDBCol>
                       <MDBCol>

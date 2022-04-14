@@ -58,7 +58,7 @@ const Results = () => {
                 <MDBCol>
                   <MDBRow>
                     <MDBCol size='3'>
-                      <strong>BIRTH:</strong>
+                      <strong>BIRTHDAY:</strong>
                     </MDBCol>
                     <MDBCol>
                       {location.state.birth_date ? <span>{moment(location.state.birth_date).format('MMMM DD, YYYY')}</span> : <i className='text-muted'>*MISSING</i>}
