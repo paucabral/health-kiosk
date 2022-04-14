@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
 import SMSStatus from '../components/results/results_modal/SMSStatus';
 import VitalSigns from '../components/results/VitalSigns';
+import moment from 'moment';
 
 const Results = () => {
   const location = useLocation();
@@ -57,10 +58,10 @@ const Results = () => {
                 <MDBCol>
                   <MDBRow>
                     <MDBCol size='3'>
-                      <strong>AGE:</strong>
+                      <strong>BIRTH:</strong>
                     </MDBCol>
                     <MDBCol>
-                      {location.state.age ? <span>{location.state.age}</span> : <i className='text-muted'>*MISSING</i>}
+                      {location.state.birth_date ? <span>{moment(location.state.birth_date).format('MMMM DD, YYYY')}</span> : <i className='text-muted'>*MISSING</i>}
                     </MDBCol>
                   </MDBRow>
                 </MDBCol>

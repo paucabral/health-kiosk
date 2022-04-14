@@ -1,3 +1,15 @@
+.MuiFormLabel-root {
+  background-color: white !important;
+}
+
+.MuiInputBase-root {
+  height: 40px !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  margin-top: 5px !important;
+}
+
 .sensor-btn {
   height: 12em;
   width: 12em;
