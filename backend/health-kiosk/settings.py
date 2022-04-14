@@ -169,6 +169,10 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
+# ENDPOINTS
+KIOSK_ENDPOINT = config('KIOSK_ENDPOINT')
+SENSORS_ENDPOINT = config('SENSORS_ENDPOINT')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

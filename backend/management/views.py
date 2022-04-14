@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
@@ -11,6 +12,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.hashers import make_password
 from .decorators import *
+from django.conf import settings
+import urllib.request
 
 # Create your views here.
 
@@ -190,7 +193,13 @@ class AdministratorDashboard(View):
     def get(self, request, *args, **kwargs):
         patients = Patient.objects.all()
 
-        return render(request, template_name='management/dashboard.html', context={'patients': patients})
+        kiosk_status = "ONLINE" if urllib.request.urlopen(
+            settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+
+        sensors_status = "ONLINE" if urllib.request.urlopen(
+            settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+
+        return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sensors_status': sensors_status})
 
 
 @login_required(login_url='/')
