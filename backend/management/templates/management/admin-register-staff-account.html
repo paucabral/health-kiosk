@@ -7,8 +7,7 @@ HEALTH KIOSK | Staff Accounts
 
 {% block content %}
 <main class="container-fluid">
-  <h2 class="text-center my-2" style="font-weight: bold;">STAFF LIST</h2>
-  <hr class="my-4">
+  <h2 class="text-center my-2" style="font-weight: bold;">ADMINISTRATORS LIST</h2>
   <!-- messages -->
   {% for message in messages %}
   {% if form.errors %}
@@ -44,9 +43,9 @@ HEALTH KIOSK | Staff Accounts
     <div style="margin: 0 !important">
       <div class="row">
         <div class="col">
-          <div class="card card-signin my-2" style="width: 100%;">
+          <div class="card card-signin my-2" style="width: 100%; border-radius: 10px;">
             <div class="card-body">
-              <h3 class="text-center">CREATE A NEW STAFF ACCOUNT</h3>
+              <h4 class="text-center">ADD A NEW ADMINISTRATOR ACCOUNT</h4>
               <br>
               <!-- This form is assigned with a method of post request since it is meant to send a data/payload to the backend  -->
               <form class="form-signin" method="POST">
@@ -123,9 +122,11 @@ HEALTH KIOSK | Staff Accounts
                   </script>
                 </div>
 
-                <button name="Create User" class="btn text-uppercase text-white" type="submit" style="width: 100%;">
-                  REGISTER STAFF ACCOUNT
-                </button>
+                <div style="display: flex; justify-content: center;">
+                  <button name="Create User" class="btn text-uppercase text-white" type="submit">
+                    REGISTER STAFF ACCOUNT
+                  </button>
+                </div>
               </form>
             </div>
           </div>
