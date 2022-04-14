@@ -164,7 +164,7 @@ const Facilities = () => {
       active.classList.add('btn-primary');
     }
     e.target.classList.remove('btn-primary');
-    e.target.classList.add('btn-success');
+    e.target.classList.toggle('btn-success');
   }
 
   useEffect(() => {
@@ -225,10 +225,10 @@ const Facilities = () => {
                           </MDBRow>
                         </div>
                         <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
-                          <MDBBtn className='btn-success travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
-                          <MDBBtn className='btn-primary travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
-                          <MDBBtn className='btn-primary travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'DRIVING' }); handleBtnClick(e); }}><MDBIcon fas icon="car-side" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>&nbsp;
-                          <MDBBtn className='btn-primary travelMode-btn' onClick={(e) => { setDirection({ ...direction, travelMode: 'TRANSIT' }); handleBtnClick(e); }}><MDBIcon fas icon="train" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBBtn>
+                          <MDBCard className='btn-success travelMode-btn p-2 text-center' style={{ borderRadius: '5px' }} onClick={(e) => { setDirection({ ...direction, travelMode: 'WALKING' }); handleBtnClick(e); }}><MDBIcon flat fas icon="walking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBCard>&nbsp;
+                          <MDBCard className='btn-primary travelMode-btn p-2 text-center' style={{ borderRadius: '5px' }} onClick={(e) => { setDirection({ ...direction, travelMode: 'BICYCLING' }); handleBtnClick(e); }}><MDBIcon fas icon="biking" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBCard>&nbsp;
+                          <MDBCard className='btn-primary travelMode-btn p-2 text-center' style={{ borderRadius: '5px' }} onClick={(e) => { setDirection({ ...direction, travelMode: 'DRIVING' }); handleBtnClick(e); }}><MDBIcon fas icon="car-side" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBCard>&nbsp;
+                          <MDBCard className='btn-primary travelMode-btn p-2 text-center' style={{ borderRadius: '5px' }} onClick={(e) => { setDirection({ ...direction, travelMode: 'TRANSIT' }); handleBtnClick(e); }}><MDBIcon fas icon="train" onClick={(e) => e.preventDefault()} style={{ pointerEvents: 'none' }} /></MDBCard>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
