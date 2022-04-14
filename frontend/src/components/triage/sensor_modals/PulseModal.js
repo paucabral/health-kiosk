@@ -50,12 +50,28 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
-                <p>Please follow these steps to measure your pulse and blood pressure.</p>
-                <ol>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
-                  <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
-                </ol>
+                {
+                  measure === "to_measure" || measure === "loading" ?
+                    <div>
+                      <p>Please follow these steps to measure your pulse and blood pressure.</p>
+                      <ol>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
+                        <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
+                      </ol>
+                    </div>
+                    : measure === "done" ?
+                      <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        {formData.systolic_bp} mmHg
+                        <br />
+                        {formData.diastolic_bp} mmHg
+                        <br />
+                        {formData.pulse_rate} bpm
+                      </div>
+                      : <div style={{ textAlign: "center" }}>
+                        <></>
+                      </div>
+                }
               </div>
               <div className='d-flex align-items-center justify-content-center'>
                 {
