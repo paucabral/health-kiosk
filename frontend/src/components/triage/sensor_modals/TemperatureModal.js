@@ -7,6 +7,11 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBIcon,
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardText,
   MDBModalFooter,
   MDBSpinner,
   MDBRow,
@@ -57,7 +62,16 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                     </div>
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        {formData.temperature} °C
+                        <MDBCard shadow='0' border='warning' background='white'>
+                          <MDBCardHeader className='text-warning'>
+                            <strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature</strong>
+                          </MDBCardHeader>
+                          <MDBCardBody className='text-warning text-center'>
+                            <MDBCardText>
+                              <h1>{formData.temperature ? <span>{formData.temperature}°C</span> : <span>NA</span>}</h1>
+                            </MDBCardText>
+                          </MDBCardBody>
+                        </MDBCard>
                       </div>
                       : <div style={{ textAlign: "center" }}>
                         <></>

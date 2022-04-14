@@ -7,6 +7,11 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBIcon,
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardText,
   MDBContainer,
   MDBModalFooter,
   MDBSpinner,
@@ -60,7 +65,16 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                     </div>
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        {formData.o2_saturation} %
+                        <MDBCard shadow='0' border='success' background='white'>
+                          <MDBCardHeader className='text-success'>
+                            <strong><MDBIcon fas icon="wind" /> O<sub>2</sub> Saturation</strong>
+                          </MDBCardHeader>
+                          <MDBCardBody className='text-success text-center'>
+                            <MDBCardText>
+                              <h1>{formData.temperature ? <span>{formData.o2_saturation} %</span> : <span>NA</span>}</h1>
+                            </MDBCardText>
+                          </MDBCardBody>
+                        </MDBCard>
                       </div>
                       : <div style={{ textAlign: "center" }}>
                         <></>
