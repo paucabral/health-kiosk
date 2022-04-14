@@ -22,7 +22,7 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
           <MDBCol className='col-2'>
             {/* <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' min='0' icon="calendar-day" /> */}
             <MuiPickersUtilsProvider utils={MomentUtils}>
-              <DatePicker required format="MM/DD/YYYY" label="Date of birth" value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} />
+              <DatePicker minDate={moment().subtract(500, "years")} maxDate={moment().subtract(18, "years")} required format="MM/DD/YYYY" label="Date of birth" value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} />
             </MuiPickersUtilsProvider>
           </MDBCol>
           <MDBCol className='col-2'>
