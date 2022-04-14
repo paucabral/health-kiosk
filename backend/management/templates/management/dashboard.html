@@ -62,6 +62,9 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           <th>
             VITAL SIGNS
           </th>
+          <th>
+            DATE ADDED
+          </th>
           <th></th>
         </thead>
 
@@ -84,7 +87,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
               </li>
               {% endfor %}
             </ul>
-
           </td>
           <td style="font-size: 0.75em;">
             <ul class="list-group">
@@ -109,6 +111,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
               </li>
             </ul>
           </td>
+          <td>{{ patient.date_added }}</td>
           <td>
             <form
               onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
