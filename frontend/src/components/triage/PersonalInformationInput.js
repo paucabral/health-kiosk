@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow } from 'mdb-react-ui-kit';
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import MomentUtils from '@date-io/moment';
 import moment from 'moment';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles'
+
+const defaultMaterialTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#1266F1',
+    },
+  }
+});
 
 const PersonalInformationInput = ({ formData, setFormData }) => {
   return (
@@ -20,9 +29,10 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
         </MDBRow>
         <MDBRow className='mb-2'>
           <MDBCol className='col-2'>
-            {/* <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' min='0' icon="calendar-day" /> */}
             <MuiPickersUtilsProvider utils={MomentUtils}>
-              <DatePicker minDate={moment().subtract(500, "years")} maxDate={moment().subtract(18, "years")} required format="MM/DD/YYYY" label="Date of birth" value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} />
+              <ThemeProvider theme={defaultMaterialTheme}>
+                <DatePicker size='small' variant='dialog' inputVariant="outlined" minDate={moment().subtract(500, "years")} maxDate={moment().subtract(18, "years")} required format="MM/DD/YYYY" label="Birthday" value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} />
+              </ThemeProvider>
             </MuiPickersUtilsProvider>
           </MDBCol>
           <MDBCol className='col-2'>
@@ -32,7 +42,6 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
               <option value={"FEMALE"}>FEMALE</option>
             </select>
           </MDBCol>
-
           <MDBCol>
             <MDBInput required value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='md' label='Contact No.' type='tel' icon="phone" />
           </MDBCol>
