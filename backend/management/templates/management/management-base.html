@@ -1,0 +1,351 @@
+{% load static %}
+<!-- Initiate loading of static files -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+  <!-- Import the created CSS file -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap2.min.css' %}" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap2.min.css' %}" />
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+  <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static 'js/dataTables.buttons.min.js' %}"></script>
+  <script src="{% static 'js/jszip.min.js' %}"></script>
+  <script src="{% static 'js/pdfmake.min.js' %}"></script>
+  <script src="{% static 'js/vfs_fonts.js' %}"></script>
+  <script src="{% static 'js/buttons.html5.min.js' %}"></script>
+  <script src="{% static 'js/buttons.print.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+
+  <!-- sidebar css -->
+  <style>
+    #sidebar-wrapper {
+      z-index: 1;
+      position: fixed;
+      width: 275px;
+      height: 100%;
+      overflow-y: hidden;
+      background: #2C3E50;
+      opacity: 0.9;
+      transition: all 0.3s;
+    }
+
+    #sidebar-wrapper ul,
+    #sidebar-wrapper ul li,
+    #sidebar-wrapper h1,
+    #sidebar-wrapper h2,
+    #sidebar-wrapper h3,
+    #sidebar-wrapper h4,
+    #sidebar-wrapper h5,
+    #sidebar-wrapper h6 {
+      opacity: 1;
+      transition: all 1s;
+    }
+
+    #page-content-wrapper {
+      width: 100%;
+      padding: 15px;
+      padding-right: 0;
+      padding-left: 265px;
+    }
+
+    #wrapper.menuDisplayed #sidebar-wrapper {
+      width: 0;
+    }
+
+    #wrapper.menuDisplayed #sidebar-wrapper ul,
+    #wrapper.menuDisplayed #sidebar-wrapper ul li,
+    #wrapper.menuDisplayed #sidebar-wrapper h1,
+    #wrapper.menuDisplayed #sidebar-wrapper h2,
+    #wrapper.menuDisplayed #sidebar-wrapper h3,
+    #wrapper.menuDisplayed #sidebar-wrapper h4,
+    #wrapper.menuDisplayed #sidebar-wrapper h5,
+    #wrapper.menuDisplayed #sidebar-wrapper h6,
+    #wrapper.menuDisplayed #sidebar-wrapper img {
+      opacity: 0;
+      transition: all 0.1s;
+    }
+
+    #wrapper.menuDisplayed #page-content-wrapper {
+      padding-left: 15px;
+    }
+
+    .sidebar-nav {
+      padding: 0;
+      list-style: none;
+      transition: all 0.3s;
+    }
+
+    .sidebar-nav li {
+      text-indent: 20px;
+      line-height: 40px;
+    }
+
+    .sidebar-nav li a {
+      display: block;
+      text-decoration: none;
+      color: #ddd;
+      transition: all 0.3s;
+    }
+
+    .sidebar-nav li a:hover {
+      background: #16a085;
+      transition: all 0.3s;
+    }
+
+    .sidebar-nav a:hover,
+    .dropdown-btn:hover {
+      color: #f1f1f1;
+      transition: all 0.3s;
+    }
+
+    .dropdown-container {
+      display: none;
+      transition: all 0.3s linear;
+    }
+
+    .active {
+      background-color: #16a085;
+      color: #f1f1f1;
+      transition: all 0.3s;
+    }
+
+    #navigation-dropdown {
+      transition: all 0.3s linear;
+    }
+
+    main {
+      min-height: 100vh;
+    }
+
+    @media screen and (max-width: 600px) {
+      #sidebar-wrapper {
+        z-index: 1;
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        overflow-y: hidden;
+        background: #2C3E50;
+        opacity: 0.9;
+        transition: all 0.3s;
+      }
+
+      #wrapper.menuDisplayed #sidebar-wrapper {
+        width: 100%;
+
+      }
+
+      #wrapper.menuDisplayed #sidebar-wrapper ul,
+      #wrapper.menuDisplayed #sidebar-wrapper ul li,
+      #wrapper.menuDisplayed #sidebar-wrapper h1,
+      #wrapper.menuDisplayed #sidebar-wrapper h2,
+      #wrapper.menuDisplayed #sidebar-wrapper h3,
+      #wrapper.menuDisplayed #sidebar-wrapper h4,
+      #wrapper.menuDisplayed #sidebar-wrapper h5,
+      #wrapper.menuDisplayed #sidebar-wrapper h6,
+      #wrapper.menuDisplayed #sidebar-wrapper img {
+        opacity: 1;
+        transition: all 0.1s;
+        /* text-align: center; */
+      }
+
+      #sidebar-wrapper ul,
+      #sidebar-wrapper ul li,
+      #sidebar-wrapper h1,
+      #sidebar-wrapper h2,
+      #sidebar-wrapper h3,
+      #sidebar-wrapper h4,
+      #sidebar-wrapper h5,
+      #sidebar-wrapper h6,
+      #sidebar-wrapper img {
+        opacity: 0;
+        transition: all 0.1s;
+        /* text-align: center; */
+      }
+
+      #page-content-wrapper {
+        width: 100%;
+        padding: 15px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  </style>
+  <!-- end sidebar css -->
+</head>
+
+<body style="background-color: #eaf0f0;">
+  <div class="sticky-top card"
+    style="position: fixed; z-index: 2 !important; padding: 0.1em; top: 50%; display: flex; align-items: center; background: none; border-width: 0.2em;">
+    <a id="menu-toggler" style="padding: 0.1em; font-size: 1.5em; color:rgb(162, 177, 190)"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <header class="navigationHeader sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
+      <div class="container-fluid">
+        <a class="navbar-brand navBrand" href="/"><span class="brand">HEALTH KIOSK</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse align-items-center" id="navbarTogglerDemo02">
+          <ul class="nav navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link menuItem" href="/">
+                <i class="fa fa-home fa-3" aria-hidden="true"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <form
+                onsubmit="return confirm('WARNING: This will redirect you to the full Django Administrator Panel. This will grant you direct access to the database and its content. Would you like to proceed?')"
+                methd="GET" action="/admin">
+                <button type="submit" class="btn nav-link menuItem">
+                  <i class="fa fa-user fa-3" aria-hidden="true"></i>
+                  Full Admin Panel
+                </button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menuItem" href="/logout">
+                <i class="fas fa-power-off"></i>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="wrapper">
+
+    <!-- sidebar -->
+    <div id="sidebar-wrapper">
+      <br>
+      <center>
+        <a href="/management/admin-profile">
+          <img class="profile-img my-auto" alt="{{ request.user.username }}"
+            src="{% if request.user.profile.profile_pic %}{{ request.user.profile.profile_pic.url }}{% else %}{% static 'img/default-profile-icon.jpg' %}{% endif %}" />
+        </a>
+        <br>
+        <br>
+        <a href="/management/admin-profile" style="text-decoration: none;">
+          <h4 style="color: #ddd; text-transform: uppercase;">{{ request.user.first_name }} {{ request.user.last_name }}
+          </h4>
+          <h6 style="color: #ddd">{{ request.user.username }}</h6><br>
+        </a>
+
+      </center>
+      <hr class="my-3">
+
+      <ul class="sidebar-nav">
+        <li class="nav-item">
+          <a href="/management/dashboard"><i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="/management/staff"><i class="far fa-id-badge"></i>&nbsp;&nbsp;Staff Accounts</a>
+        </li>
+      </ul>
+    </div>
+    <!-- end sidebar -->
+
+    <!-- page content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+
+            {% block content %}
+
+            {% endblock %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end page content -->
+
+  </div>
+
+  <footer class="page-footer p-2 bg-dark" style="z-index: 0; bottom: 0;">
+    <div class="footer-copyright py-2 text-center text-white" style="font-size: 14px;">© 2022 HEALTH KIOSK Developed by
+      the
+      HIGH GROUNDS team | Jose Paulo C. Cabral | Joshua Albert T. Lopez | Reinhold E. Lucana | John Edward Sam T.
+      Matienzo |
+      All rights reserved.
+    </div>
+  </footer>
+</body>
+
+<!-- menu script -->
+<script>
+  $("#menu-toggle").click(function (e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("menuDisplayed");
+  });
+</script>
+
+<script>
+  $("#menu-toggler").click(function (e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("menuDisplayed");
+  });
+</script>
+<!-- end menu script -->
+
+<!-- dropdown script -->
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>
+
+<script>
+  function dropIt() {
+    toggleClass(document.getElementById('navigation-dropdown'), "hide");
+  }
+</script>
+<!-- end dropdown script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

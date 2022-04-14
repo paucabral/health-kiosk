@@ -22,5 +22,8 @@ class Patient(models.Model):
     o2_saturation = models.FloatField(null=True)
     date_added = models.DateTimeField(auto_now_add=True, null=True)
 
+    class Meta:
+        ordering = ['-date_added']
+
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
