@@ -75,7 +75,12 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             <ul class="list-group">
               {% for symptom in patient.symptoms %}
               <li class="list-group-item">
+                {% if forloop.last %}
+                {{ symptom }}
+                {% else %}
                 {{ symptom }}<span style="display: none;"> | </span>
+                {% endif %}
+
               </li>
               {% endfor %}
             </ul>
@@ -86,15 +91,19 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
               <li class="list-group-item">
                 <b>Temperature:</b> {{ patient.temperature }} °C
               </li>
+              <span style="display: none;"> | </span>
               <li class="list-group-item">
                 <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
               </li>
+              <span style="display: none;"> | </span>
               <li class="list-group-item">
                 <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
               </li>
+              <span style="display: none;"> | </span>
               <li class="list-group-item">
                 <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
               </li>
+              <span style="display: none;"> | </span>
               <li class="list-group-item">
                 <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
               </li>
