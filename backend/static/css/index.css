@@ -1,0 +1,327 @@
+body {
+  background-color: #ecf0f1;
+  font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.brand {
+  font-weight: 1000;
+}
+
+.navigationHeader {
+  font-weight: 500;
+}
+
+.navBrand {
+  font-size: 1.5rem;
+}
+
+.menuItem {
+  font-size: 1rem;
+  color: rgb(198, 223, 226) !important;
+}
+
+.menuItem:hover {
+  color: white !important;
+}
+
+.profile-img {
+  width: 5rem !important;
+  height: 5rem !important;
+  min-width: 5rem !important;
+  min-height: 5rem !important;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.nav-profile-img {
+  width: 2rem !important;
+  height: 2rem !important;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+}
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+
+.card-signin {
+  border: 0;
+  border-radius: 0rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+  background-color: #2f98d4;
+  color: white;
+}
+
+.form-signin .btn:hover {
+  background-color: #2473a0;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.dt-buttons {
+  padding: 0.2em !important;
+  margin-left: 1em !important;
+  margin-right: 1em !important;
+}
+
+.dt-button,
+.buttons-html5 {
+  border-radius: 1em !important;
+  text-transform: uppercase !important;
+  color: white !important;
+  background-color: black !important;
+  border-width: 0 !important;
+  font-weight: bold !important;
+  font-size: 0.75rem !important;
+  min-width: 5em !important;
+}
+
+.dt-buttons :hover,
+.dt-button :hover,
+.buttons-html5 :hover {
+  filter: brightness(150%) !important;
+}
+
+.btn-interact {
+  text-transform: uppercase;
+  font-weight: bold !important;
+  font-size: 0.8em !important;
+  min-width: 8em;
+}
+
+.buttons-csv {
+  background: none #1abcb4 !important;
+}
+
+.buttons-excel {
+  background: none #27ae60 !important;
+}
+
+.buttons-pdf {
+  background: none #e74c3c !important;
+}
+
+.buttons-print {
+  background: none #2d3131 !important;
+}
+
+.dataTables_scroll {
+  margin-top: 1em !important;
+}
+
+.dataTables_scrollHead {
+  background-color: #2c3e50 !important;
+  color: white !important;
+  border-top-left-radius: 0.5em !important;
+  border-top-right-radius: 0.5em !important;
+  border: none !important;
+}
+
+.dataTables_scrollBody {
+  border-bottom-left-radius: 0.5em !important;
+  border-bottom-right-radius: 0.5em !important;
+  border: none !important;
+}
+
+.paginate_button {
+  background: none !important;
+  border: none !important;
+  color: rgb(168, 247, 250) !important;
+  font-weight: bold !important;
+  border-radius: 20em !important;
+  font-size: 0.7em;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-transform: uppercase !important;
+}
+
+.paginate_button:hover {
+  color: white !important;
+  background-color: black !important;
+}
+
+.dataTables_scrollBody tr:nth-child(even) {
+  background: rgb(231, 231, 231);
+}
+
+.dataTables_scrollBody tr:nth-child(odd) {
+  background: rgb(252, 250, 250);
+}
+
+.current {
+  color: white !important;
+  background-color: black !important;
+}
+
+.dataTables_length {
+  text-transform: uppercase;
+}
+
+.dataTables_filter {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dataTables_info {
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.dataTables_paginate a,
+.dataTables_paginate .current {
+  color: white !important;
+}
+
+.card-item-event {
+  border-radius: 1rem !important;
+}
+
+.card-body {
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
+
+.card-header-conference {
+  background-color: #2980b9 !important;
+}
+
+.card-header-seminar {
+  background-color: #c0392b !important;
+}
+
+.card-header-workshop {
+  background-color: #8e44ad !important;
+}
+
+.btn-details {
+  background-color: black !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-radius: 20px !important;
+}
+
+.announcement-banner {
+  max-height: 25.5em !important;
+  width: 100% !important;
+  min-width: 5rem !important;
+  min-height: 5rem !important;
+  object-fit: cover;
+  align-self: center;
+}
+
+/* Fallback for Edge
+            -------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+            -------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}

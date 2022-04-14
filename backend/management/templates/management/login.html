@@ -1,0 +1,62 @@
+{% extends 'management/base.html' %}
+{% load static %}
+
+{% block title %}
+EVEREST | Login
+{% endblock %}
+
+{% block content %}
+<div>
+  <div class="container">
+
+    <div class="mt-5" style="text-align: center;">
+      <p>BROUGHT TO YOU BY <b>HIGH GROUNDS</b></p>
+      <h1 class="brand">HEALTH KIOSK</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h3 class="text-center">Sign In</h3>
+            <br />
+            <form class="form-signin" method="POST">
+              {% csrf_token %}
+              <div class="form-label-group">
+                <input type="text" id="username" class="form-control" name="username" placeholder="Username" required
+                  autofocus />
+                <label for="username">Username</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" minlength="8" id="password" class="form-control" name="password"
+                  placeholder="Password" required />
+                <label for="password">Password</label>
+              </div>
+              <br />
+              <button class="btn text-uppercase" type="submit" style="width: 100%;">
+                Sign in
+              </button>
+              <hr class="my-4" />
+
+              {% for message in messages %}
+              <div class="alert alert-danger">
+                <b class="text-center">{{ message }}</b>
+              </div>
+              {% endfor %}
+
+              <p class="text-center">
+                <a href="{% url 'reset_password' %}" style="text-decoration: none;">Forgot your password?</a>
+              </p>
+
+              <p class="text-center">
+                This interface is strictly for administrators only.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

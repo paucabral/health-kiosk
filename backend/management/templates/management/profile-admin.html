@@ -1,0 +1,181 @@
+{% extends 'management/management-base.html' %}
+{% load static %}
+
+{% block title %}
+EVEREST | {{ request.user.username }}'s Profile
+{% endblock %}
+
+{% block content %}
+<style>
+  .nounderline {
+    color: rgb(105, 199, 236);
+    text-decoration: none;
+  }
+
+  .nounderline:hover {
+    color: rgb(117, 235, 235);
+    text-decoration: underline;
+  }
+
+  .signin {
+    display: block;
+  }
+
+  .updateprofile {
+    background-color: rgb(46, 118, 136) !important;
+  }
+
+  .updateprofile:hover {
+    background-color: rgb(60, 135, 206) !important;
+  }
+
+  @media (max-width:480px) {
+    .signin {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>
+
+<main>
+  {% for message in messages %}
+  {% if form.errors %}
+  {% for field in form %}
+  {% for error in field.errors %}
+  <div class="alert alert-danger alert-dismissible"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    <strong>{{ error|escape }}</strong>
+    <button type="button" class="close btn btn-interact text-white" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </div>
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+  <p class="alert alert-danger alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{ message }}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% else %}
+  <p class="alert alert-success alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #27AE60; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{message}}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% endif %}
+  {% endfor %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="card card-signin my-3">
+          <div class="card-body">
+            <h3 class="text-center">{{ request.user.first_name }} {{ request.user.last_name }}</h3>
+            <div class="text-muted text-center" style="text-align: center;">{{ user.username }}</div>
+            <br>
+
+            <div class="form-signin">
+              <div class="form-label-group">
+                <div class="row">
+                  <img class="profile-pic"
+                    src="{% if request.user.profile.profile_pic %}{{ request.user.profile.profile_pic.url }}{% else %}{% static 'img/default-profile-icon.jpg' %}{% endif %}" />
+                </div>
+              </div>
+              <a class="btn text-uppercase text-white" href="/"
+                style="width: 100%; font-weight: bold; border-radius: 0.5em;"><i class="fa fa-home fa-3"
+                  aria-hidden="true"></i> Go Back to Home</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="card card-signin my-3">
+          <div class="card-body">
+            <h3 class="text-center">Profile Information</h3>
+            <div>
+              <p class="text-muted" style="text-align: center;">Account was created on: <span
+                  style="text-transform: uppercase;">{{ request.user.date_joined }}</span>
+              </p>
+            </div>
+            <hr>
+            <br>
+
+            <form class="form-signin" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-label-group">
+                <div class="row">
+                  <div class="col form-label-group">
+                    <input type="text" name="first_name" value="{{ request.user.first_name }}" maxlength="200"
+                      class="form-control" placeholder="First Name" required="" id="id_first_name">
+                    <label for="id_first_name">First Name</label>
+                  </div>
+                  <div class="col form-label-group">
+                    <input type="text" name="last_name" value="{{ request.user.last_name }}" maxlength="200"
+                      class="form-control" placeholder="Last Name" required="" id="id_last_name">
+                    <label for="id_last_name">Last Name</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-label-group">
+                    {{ form.affiliation }}
+                    <label for="id_affiliation">Affiliation</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-label-group">
+                    <input type="text" name="email" value="{{ request.user.email }}" maxlength="200"
+                      class="form-control" placeholder="Email" required="" id="id_email">
+                    <label for="id_email">Email</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-label-group">
+                    <input type="text" name="username" value="{{ request.user.username }}" maxlength="200"
+                      class="form-control" placeholder="username" required="" id="id_username">
+                    <label for="id_username">Username</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-label-group">
+                    <hr>
+                    <br>
+                    {% for i in form.profile_pic %}
+                    <div class="mb-2">
+                      {{ i }}
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+
+                <hr class="my-3">
+
+                <button type="submit" class="btn text-white text-uppercase updateprofile my-3" style="width: 100%;">SAVE
+                  PROFILE</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <script>
+    const profile_pic = document.querySelector('input[name="profile_pic"');
+    profile_pic.classList.add('form-control-file');
+  </script>
+  {% endblock %}

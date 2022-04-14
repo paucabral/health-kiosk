@@ -1,0 +1,230 @@
+{% extends 'management/management-base.html' %}
+{% load static %}
+
+{% block title %}
+EVEREST | Staff Accounts
+{% endblock %}
+
+{% block content %}
+<main class="container-fluid">
+  <h2 class="text-center my-2" style="font-weight: bold;">STAFF LIST</h2>
+  <hr class="my-4">
+  <!-- messages -->
+  {% for message in messages %}
+  {% if form.errors %}
+  {% for field in form %}
+  {% for error in field.errors %}
+  <div class="alert alert-danger alert-dismissible"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    <strong>{{ error|escape }}</strong>
+    <button type="button" class="close btn btn-interact text-white" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </div>
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+  <p class="alert alert-danger alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{ message }}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% else %}
+  <p class="alert alert-success alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #27AE60; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{message}}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% endif %}
+  {% endfor %}
+  <!-- end messages -->
+  <div>
+    <div style="margin: 0 !important">
+      <div class="row">
+        <div class="col">
+          <div class="card card-signin my-2" style="width: 100%;">
+            <div class="card-body">
+              <h3 class="text-center">CREATE A NEW STAFF ACCOUNT</h3>
+              <br>
+              <!-- This form is assigned with a method of post request since it is meant to send a data/payload to the backend  -->
+              <form class="form-signin" method="POST">
+                {% csrf_token %}
+                <!-- Declaring a CSRF Token is required for post requests in Django forms -->
+
+                <div class="form-label-group">
+                  <div class="row">
+                    <div class="col form-label-group">
+                      {{ form.first_name }}
+                      <label for="id_first_name">First Name</label>
+                    </div>
+                    <div class="col form-label-group">
+                      {{ form.last_name }}
+                      <label for="id_last_name">Last Name</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-label-group">
+                      {{ form.email }}
+                      <label for="id_email">Email</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-label-group">
+                      {{ form.username }}
+                      <label for="id_username">Username</label>
+                    </div>
+                  </div>
+
+                  <div class="row" style="display: none;">
+                    <div class="form-label-group">
+                      {{ form.password1 }}
+                    </div>
+                  </div>
+
+                  <div class="row" style="display: none;">
+                    <div class="form-label-group">
+                      {{ form.password2 }}
+                    </div>
+                  </div>
+
+                  <div class="row" style="display: none;">
+                    <div class="form-label-group">
+                      {{ form.is_superuser }}
+                    </div>
+                  </div>
+
+                  <div class="row" style="display: none;">
+                    <div class="form-label-group">
+                      {{ form.is_staff }}
+                    </div>
+                  </div>
+
+                  <script>
+                    var password = document.getElementById("id_password1"),
+                      confirm_password =
+                        document.getElementById("id_password2");
+
+                    function validatePassword() {
+                      if (password.value != confirm_password.value) {
+                        confirm_password.setCustomValidity(
+                          "Passwords do not match."
+                        );
+                      } else {
+                        confirm_password.setCustomValidity("");
+                      }
+                    }
+
+                    password.onchange = validatePassword;
+                    confirm_password.onkeyup = validatePassword;
+                  </script>
+                </div>
+
+                <button name="Create User" class="btn text-uppercase text-white" type="submit" style="width: 100%;">
+                  REGISTER STAFF ACCOUNT
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div>
+    <table id="qlist" style="width: 100%;">
+      <thead>
+        <th>
+
+        </th>
+        <th>
+          FIRST NAME
+        </th>
+        <th>
+          LAST NAME
+        </th>
+        <th>
+          USERNAME
+        </th>
+        <th>
+          EMAIL
+        </th>
+        <th></th>
+      </thead>
+
+      {% for staff in staffs %}
+      <tr>
+        <td>
+          <img class="profile-img my-auto" alt="{{ staff.username }}"
+            src="{% if staff.profile.profile_pic %}{{ staff.profile.profile_pic.url }}{% else %}{% static 'img/default-profile-icon.jpg' %}{% endif %}" />
+        </td>
+        <td>{{ staff.first_name }}</td>
+        <td>{{ staff.last_name }}</td>
+        <td>{{ staff.username }}</td>
+        <td>{{ staff.email }}</td>
+        <td>
+          <form
+            onsubmit="return confirm('WARNING: All account information including login credentials will be deleted in the process. Are you sure you want to delete the user: {{ staff.username }}?');"
+            method="POST" action="{% url 'delete-staff' staff.id  %}">{% csrf_token %}
+            <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden" name="q_id" />
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+
+    </table>
+  </div>
+</main>
+
+<script>
+  $(document).ready(function () {
+    $('#qlist').DataTable({
+      dom: 'Bfrltip',
+      buttons: [
+        {
+          extend: 'csv',
+          text: 'CSV',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 1))'
+          }
+        },
+        {
+          extend: 'excel',
+          text: 'Excel',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 1))'
+          }
+        },
+        {
+          extend: 'pdf',
+          text: 'PDF',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 1))'
+          }
+        },
+        {
+          extend: 'print',
+          text: 'Print',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 1))'
+          }
+        },
+      ],
+      "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
+      "pagingType": "full_numbers",
+      "pageLength": 10,
+      "scrollX": true
+    });
+  });
+</script>
+{% endblock %}
