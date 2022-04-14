@@ -75,7 +75,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             <ul class="list-group">
               {% for symptom in patient.symptoms %}
               <li class="list-group-item">
-                {{ symptom }}
+                {{ symptom }}<span style="display: none;"> | </span>
               </li>
               {% endfor %}
             </ul>
