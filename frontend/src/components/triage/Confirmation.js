@@ -84,7 +84,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                         <strong>BIRTH:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.birth_date ? <span>{moment(formData.birth_date).format('MM/DD/YYYY')}</span> : <i className='text-muted'>*MISSING</i>}
+                        {formData.birth_date ? <span>{moment(formData.birth_date).format('MMMM DD, YYYY')}</span> : <i className='text-muted'>*MISSING</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
