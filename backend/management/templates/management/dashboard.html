@@ -112,7 +112,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           <td>
             <form
               onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
-              method="POST" action="{% url 'delete-staff' patient.id  %}">{% csrf_token %}
+              method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
               <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
                 name="q_id" />
             </form>

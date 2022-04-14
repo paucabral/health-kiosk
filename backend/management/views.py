@@ -191,3 +191,18 @@ class AdministratorDashboard(View):
         patients = Patient.objects.all()
 
         return render(request, template_name='management/dashboard.html', context={'patients': patients})
+
+
+@login_required(login_url='/')
+@admin_only()
+def deletePatientRecord(request, patient_id):
+    if request.method == "POST":
+        patient_record = Patient.objects.filter(id=patient_id)
+        patient_record.delete()
+
+        messages.add_message(request,
+                             messages.SUCCESS,
+                             'Patient Record ID: #{} was deleted successfully.'.format(patient_id))
+        return redirect('/management/dashboard')
+
+    return redirect('/management/dashboard')

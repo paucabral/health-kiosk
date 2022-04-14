@@ -22,4 +22,6 @@ urlpatterns = [
          views.deleteStaff, name='delete-staff'),
     path('management/admin-profile/',
          views.AccountProfileAdmin.as_view(), name='admin-profile'),
+    path('patient/records/delete/<int:patient_id>',
+         views.deletePatientRecord, name='delete-patient-record'),
 ]
