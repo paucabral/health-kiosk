@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow } from 'mdb-react-ui-kit';
+import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
+import MomentUtils from '@date-io/moment';
+import moment from 'moment';
 
 const PersonalInformationInput = ({ formData, setFormData }) => {
   return (
@@ -17,7 +20,10 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
         </MDBRow>
         <MDBRow className='mb-2'>
           <MDBCol className='col-2'>
-            <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' min='0' icon="calendar-day" />
+            {/* <MDBInput required value={formData.age} onChange={(event) => setFormData({ ...formData, age: event.target.value })} id='age' size='md' label='Age' type='number' min='0' icon="calendar-day" /> */}
+            <MuiPickersUtilsProvider utils={MomentUtils}>
+              <DatePicker required format="MM/DD/YYYY" label="Date of birth" value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} />
+            </MuiPickersUtilsProvider>
           </MDBCol>
           <MDBCol className='col-2'>
             <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label="Sex" value={formData.sex}>
