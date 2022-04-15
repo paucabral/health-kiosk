@@ -40,7 +40,7 @@ def apiNearestHospitals(request):
 
 @api_view(['GET'])
 def apiGpsCoordinates(request):
-    coordinates = computedGPS[0]
+    coordinates = computedGPS()[0]
     return Response(coordinates)
 
 
