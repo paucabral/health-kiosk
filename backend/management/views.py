@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
@@ -11,6 +12,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.hashers import make_password
 from .decorators import *
+from django.conf import settings
+import urllib.request
 
 # Create your views here.
 
@@ -161,12 +164,12 @@ class AdminRegisterSuperuser(View):
             messages.add_message(request,
                                  messages.SUCCESS,
                                  'The administrator account was registered successfully.')
-            return redirect("/administrator/staff")
+            return redirect("/management/staff")
         else:
             messages.add_message(request,
                                  messages.ERROR,
                                  'There was an error in creating the account.')
-        return redirect("/administrator/staff")
+        return redirect("/management/staff")
 
 
 @login_required(login_url='/')
@@ -178,10 +181,10 @@ def deleteStaff(request, staff_id):
 
         messages.add_message(request,
                              messages.SUCCESS,
-                             'The administrator account was deleted successfully.')
-        return redirect('/administrator/staff')
+                             'The management account was deleted successfully.')
+        return redirect('/management/staff')
 
-    return redirect('/administrator/staff')
+    return redirect('/management/staff')
 
 
 class AdministratorDashboard(View):
@@ -190,7 +193,23 @@ class AdministratorDashboard(View):
     def get(self, request, *args, **kwargs):
         patients = Patient.objects.all()
 
-        return render(request, template_name='management/dashboard.html', context={'patients': patients})
+        kiosk_status = "ONLINE" if urllib.request.urlopen(
+            settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+
+        sensors_status = "ONLINE" if urllib.request.urlopen(
+            settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+
+        sms_status = "OFFLINE"  # TODO
+
+        gps_status = "OFFLINE"  # TODO
+
+        gmaps_status = "ONLINE" if urllib.request.urlopen(
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=14.6492,121.116&type=hospital&rankby=distance&key={}".format(settings.GOOGLE_MAPS_API_KEY)).getcode() == 200 else "OFFLINE"
+
+        mapquest_status = "ONLINE" if urllib.request.urlopen(
+            "http://www.mapquestapi.com/geocoding/v1/reverse?key={}&location=14.6492,121.116".format(settings.MAPQUEST_API_KEY)).getcode() == 200 else "OFFLINE"
+
+        return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
 
 @login_required(login_url='/')

@@ -7,6 +7,11 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBIcon,
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardText,
   MDBModalFooter,
   MDBSpinner,
   MDBRow,
@@ -45,12 +50,33 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
-                <p>Please follow these steps to measure your body temperature.</p>
-                <ol>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
-                  <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
-                </ol>
+                {
+                  measure === "to_measure" || measure === "loading" ?
+                    <div>
+                      <p>Please follow these steps to measure your body temperature.</p>
+                      <ol>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
+                        <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
+                      </ol>
+                    </div>
+                    : measure === "done" ?
+                      <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <MDBCard shadow='0' border='warning' background='white'>
+                          <MDBCardHeader className='text-warning'>
+                            <strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature</strong>
+                          </MDBCardHeader>
+                          <MDBCardBody className='text-warning text-center'>
+                            <MDBCardText>
+                              <h1>{formData.temperature ? <span>{formData.temperature}°C</span> : <span>NA</span>}</h1>
+                            </MDBCardText>
+                          </MDBCardBody>
+                        </MDBCard>
+                      </div>
+                      : <div style={{ textAlign: "center" }}>
+                        <></>
+                      </div>
+                }
               </div>
               <div className='d-flex align-items-center justify-content-center'>
                 {

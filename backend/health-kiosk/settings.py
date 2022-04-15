@@ -161,6 +161,9 @@ MEDIA_URL = '/media/'
 # Google Maps API
 GOOGLE_MAPS_API_KEY = config('GOOGLE_MAPS_API_KEY')
 
+# MapQuest API
+MAPQUEST_API_KEY = config('MAPQUEST_API_KEY')
+
 # SMTP Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST')
@@ -168,6 +171,10 @@ EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+# ENDPOINTS
+KIOSK_ENDPOINT = config('KIOSK_ENDPOINT')
+SENSORS_ENDPOINT = config('SENSORS_ENDPOINT')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

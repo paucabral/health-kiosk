@@ -20,8 +20,8 @@ const SensorData = ({ formData, setFormData }) => {
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Vital Signs</MDBCardTitle>
-      <p>Measure your vital signs by selecting the options below.<br />
-        <span className="text-muted" style={{ fontSize: '0.75em', width: '5em' }}><i>NOTE: Temperature and Oxygen Saturation have their individual sensors, while the Pulse Rate and Systolic &amp; Diastolic Blood Pressure share the same sensor.</i></span>
+      <p>
+        Measure your vital signs by selecting the options below.
       </p>
       <MDBCardBody className='py-0'>
         <div>
@@ -84,6 +84,9 @@ const SensorData = ({ formData, setFormData }) => {
           </MDBRow>
         </div>
       </MDBCardBody>
+      <div className='mt-2'>
+        <span className="text-muted" style={{ fontSize: '0.75em', width: '5em' }}><p>NOTE: Temperature and Oxygen Saturation have their own individual sensors, while the Pulse Rate and Systolic &amp; Diastolic Blood Pressure share the same sensor.</p></span>
+      </div>
     </React.Fragment>
   )
 }

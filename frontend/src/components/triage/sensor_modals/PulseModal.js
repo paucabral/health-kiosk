@@ -7,6 +7,11 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBIcon,
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardText,
   MDBContainer,
   MDBModalFooter,
   MDBSpinner,
@@ -50,12 +55,55 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
-                <p>Please follow these steps to measure your pulse and blood pressure.</p>
-                <ol>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
-                  <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
-                </ol>
+                {
+                  measure === "to_measure" || measure === "loading" ?
+                    <div>
+                      <p>Please follow these steps to measure your pulse and blood pressure.</p>
+                      <ol>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
+                        <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
+                      </ol>
+                    </div>
+                    : measure === "done" ?
+                      <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                        <MDBCard className='mx-3' shadow='0' border='danger' background='white'>
+                          <MDBCardHeader className='text-danger'>
+                            <strong><MDBIcon fas icon="heartbeat" /> Pulse Rate</strong>
+                          </MDBCardHeader>
+                          <MDBCardBody className='text-danger'>
+                            <MDBCardText>
+                              <h1>{formData.temperature ? <span>{formData.pulse_rate} bpm</span> : <span>NA</span>}</h1>
+                            </MDBCardText>
+                          </MDBCardBody>
+                        </MDBCard>
+
+                        <MDBCard className='mx-3' shadow='0' border='primary' background='white'>
+                          <MDBCardHeader className='text-primary'>
+                            <strong><MDBIcon fas icon="tint" /> Systolic BP</strong>
+                          </MDBCardHeader>
+                          <MDBCardBody className='text-primary'>
+                            <MDBCardText>
+                              <h1>{formData.temperature ? <span>{formData.systolic_bp} mmHg</span> : <span>NA</span>}</h1>
+                            </MDBCardText>
+                          </MDBCardBody>
+                        </MDBCard>
+
+                        <MDBCard className='mx-3' shadow='0' border='secondary' background='white'>
+                          <MDBCardHeader className='text-secondary'>
+                            <strong><MDBIcon fas icon="tint" /> Diastolic BP</strong>
+                          </MDBCardHeader>
+                          <MDBCardBody className='text-secondary'>
+                            <MDBCardText>
+                              <h1>{formData.temperature ? <span>{formData.diastolic_bp} mmHg</span> : <span>NA</span>}</h1>
+                            </MDBCardText>
+                          </MDBCardBody>
+                        </MDBCard>
+                      </div>
+                      : <div style={{ textAlign: "center" }}>
+                        <></>
+                      </div>
+                }
               </div>
               <div className='d-flex align-items-center justify-content-center'>
                 {

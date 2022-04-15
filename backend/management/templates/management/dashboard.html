@@ -39,6 +39,84 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   {% endif %}
   {% endfor %}
   <!-- end Popup -->
+
+  <!-- transactions cards -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col container-fluid">
+        <div
+          class="card text-white {%if kiosk_status == 'ONLINE' %} bg-success {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          <div class="card-header">
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Kiosk</h6>
+          </div>
+          <div class="card-body d-flex">
+            <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+            <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
+              <span style="font-size: 0.6em;">{{ kiosk_status }}</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col container-fluid">
+        <div
+          class="card text-white {%if sensors_status == 'ONLINE' %} bg-primary {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          <div class="card-header">
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Sensors</h6>
+          </div>
+          <div class="card-body d-flex">
+            <i class="fas fa-cloud-download-alt fa-3x"></i>
+            <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
+              <span style="font-size: 0.6em;">{{ sensors_status }}</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col container-fluid">
+        <div
+          class="card text-white {%if sms_status == 'ONLINE' %} bg-danger {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          <div class="card-header">
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">SMS</h6>
+          </div>
+          <div class="card-body d-flex">
+            <i class="fas fa-sms fa-3x"></i>
+            <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
+              <span style="font-size: 0.6em;">{{ sms_status }}</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col container-fluid">
+        <div
+          class="card text-white {%if gps_status == 'ONLINE' and gmaps_status == 'ONLINE' and mapquest_status == 'ONLINE' %} bg-warning {% else %} bg-dark {% endif %} mb-3 shadow-sm rounded">
+          <div class="card-header">
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">LOCATION</h6>
+          </div>
+          <div class="card-body">
+            <span class="card-title" style="font-weight: bold;">
+              <span style="font-size: 0.7em;"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;GPS COORDINATES:
+                {{ gps_status }}</span>
+            </span>
+            <br />
+            <span class="card-title" style="font-weight: bold;">
+              <span style="font-size: 0.7em;"><i class="fab fa-google"></i>&nbsp;&nbsp;GOOGLE MAPS API:
+                {{ gmaps_status }}</span>
+            </span>
+            <br />
+            <span class="card-title" style="font-weight: bold;">
+              <span style="font-size: 0.7em;"><i class="fas fa-map"></i>&nbsp;&nbsp;MAPQUEST API:
+                {{ mapquest_status }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end transactions cards -->
+
+  <!-- records table -->
   <div class="container-fluid my-2">
     <h3 class="text-center my-3" style="font-weight: bold;">PATIENT RECORDS</h3>
     <div>
@@ -91,23 +169,23 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           <td style="font-size: 0.75em;">
             <ul class="list-group">
               <li class="list-group-item">
-                <b>Temperature:</b> {{ patient.temperature }} °C
+                <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
               </li>
               <span style="display: none;"> | </span>
               <li class="list-group-item">
-                <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
+                <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
               </li>
               <span style="display: none;"> | </span>
               <li class="list-group-item">
-                <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
+                <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
               </li>
               <span style="display: none;"> | </span>
               <li class="list-group-item">
-                <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
+                <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
               </li>
               <span style="display: none;"> | </span>
               <li class="list-group-item">
-                <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
+                <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
               </li>
             </ul>
           </td>
@@ -122,12 +200,10 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           </td>
         </tr>
         {% endfor %}
-
       </table>
     </div>
   </div>
-
-
+  <!-- end records table -->
 </main>
 
 <script>
