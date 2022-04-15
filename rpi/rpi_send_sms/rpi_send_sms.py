@@ -16,10 +16,19 @@ contact = ''
 
 #Vitals
 body_temperature = ''
+body_temperature_stat = ''
+
 pulse_rate = ''
+pulse_rate_stat = ''
+
 systolic_bp = ''
+systolic_bp_stat = ''
+
 diastolic_bp = ''
-oxygen_sat = ''
+diastolic_bp_stat = ''
+
+oxygen_saturation = ''
+oxygen_saturation_stat = ''
 
 #Diff Diag
 
