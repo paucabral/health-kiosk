@@ -123,12 +123,12 @@ def computedGPS():
 
                         # lat_save = ave_lat                                      # save values in case
                         # lng_save = ave_lng
-                    coord_pairs = [{"lat": ave_lat}, {
-                        "lng": ave_lng}]          # save as is
+                    coord_pairs = {"lat": ave_lat,
+                                   "lng": ave_lng}          # save as is
 
                     # print(coord_pairs)
                 else:
-                    coord_pairs = [{"lat": lat_save}, {"lng": lng_save}]
+                    coord_pairs = {"lat": lat_save, "lng": lng_save}
                     print("Position untracked yet! But saved was: ", coord_pairs)
 
                 print(coord_pairs)
