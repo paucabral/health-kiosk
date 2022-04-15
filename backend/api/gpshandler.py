@@ -61,15 +61,11 @@ def compute_rawGPS(raw_val, direction):
 
 
 def computedGPS():
-    for i in range(5):
+    final_return = {}
+    for i in range(10):
         ave_lat = 0.0
         ave_lng = 0.0
         gpscnt = 0                  # variable for iteration
-        # array to hold all streams in string (for split function)
-        strgpsarr = []
-
-        latGPRMC = []               # arrays for lat and long unused
-        longGPRMC = []
 
         latraw_val = 0.0            # initialize coord values and directions
         latdirection = ""
@@ -77,12 +73,14 @@ def computedGPS():
         longdirection = ""
 
         gpsarr = []                  # array to hold streams in b format
-        gpslines = ser.readline()      # read from the port
-        strgpslines = str(gpslines).split(',')  # split by ,
-        gpsarr.append(strgpslines)
+        # gpslines = ser.readline()      # read from the port
+        # strgpslines = str(gpslines).split(',')  # split by ,
+        # gpsarr.append(strgpslines)
 
-        if len(gpsarr) < 1:          # initial check if something is read
-            print("EMPTY")
+        while len(gpsarr) < 1:          # initial check if something is read
+            gpslines = ser.readline()      # read from the port
+            strgpslines = str(gpslines).split(',')  # split by ,
+            gpsarr.append(strgpslines)
 
         else:                        # else proceed to check GPGLL
             if (gpsarr[0][0]) == "b'$GPGLL":
@@ -132,12 +130,13 @@ def computedGPS():
                     print("Position untracked yet! But saved was: ", coord_pairs)
 
                 print(coord_pairs)
-                return coord_pairs
+                final_return = coord_pairs
 
         gpscnt += 1
         if gpscnt == 8:
             gpscnt = 0
         # time.sleep(1.5)
+    return final_return
 
 # while 1:
 #     computedGPS()
