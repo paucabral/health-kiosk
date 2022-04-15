@@ -9,7 +9,7 @@ port = serial.Serial("/dev/ttyS0", baudrate=9600, timeout=1)
 # '\r\n' indicates the Enter key
 
 #Vars
-main_no = '09709467719'
+main_no = '09454776783'
 contact_no = main_no.replace("0","+63",1)
 body_temp = str(35.58)
 pulse_rate = str(88)
