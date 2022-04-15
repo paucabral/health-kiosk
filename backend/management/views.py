@@ -164,12 +164,12 @@ class AdminRegisterSuperuser(View):
             messages.add_message(request,
                                  messages.SUCCESS,
                                  'The administrator account was registered successfully.')
-            return redirect("/administrator/staff")
+            return redirect("/management/staff")
         else:
             messages.add_message(request,
                                  messages.ERROR,
                                  'There was an error in creating the account.')
-        return redirect("/administrator/staff")
+        return redirect("/management/staff")
 
 
 @login_required(login_url='/')
@@ -181,10 +181,10 @@ def deleteStaff(request, staff_id):
 
         messages.add_message(request,
                              messages.SUCCESS,
-                             'The administrator account was deleted successfully.')
-        return redirect('/administrator/staff')
+                             'The management account was deleted successfully.')
+        return redirect('/management/staff')
 
-    return redirect('/administrator/staff')
+    return redirect('/management/staff')
 
 
 class AdministratorDashboard(View):
