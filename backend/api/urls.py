@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.apiOverview, name="api-overview"),
     path('nearest-hospitals/', views.apiNearestHospitals, name="nearest-hospitals"),
+    path('/location/', views.apiGpsCoordinates, name="gps-coordinates"),
     path('differential-diagnosis/', views.apiDifferentialDiagnosis,
          name="differential-diagnosis"),
     path('patient/list/', views.apiPatientList, name="patient-list"),

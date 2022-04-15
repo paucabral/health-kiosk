@@ -9,8 +9,10 @@ import requests
 import json
 from django.conf import settings
 from api.predictions import getPredictions
+from api.gpshandler import computedGPS
 
 # Create your views here.
+
 
 @api_view(['GET'])
 def apiOverview(request):
@@ -25,13 +27,22 @@ def apiOverview(request):
 
     return Response(api_urls)
 
+
 @api_view(['GET'])
 def apiNearestHospitals(request):
     lat = request.GET.get('lat')
     lng = request.GET.get('lng')
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(lat, lng, settings.GOOGLE_MAPS_API_KEY)
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
+        lat, lng, settings.GOOGLE_MAPS_API_KEY)
     query_result = requests.get(url)
     return Response(query_result.json())
+
+
+@api_view(['GET'])
+def apiGpsCoordinates(request):
+    coordinates = computedGPS[0]
+    return Response(coordinates)
+
 
 @api_view(['POST'])
 def apiDifferentialDiagnosis(request):
@@ -46,17 +57,20 @@ def apiDifferentialDiagnosis(request):
             response['predictions'] = result
         return Response(response)
 
+
 @api_view(['GET'])
 def apiPatientList(request):
     patients = Patient.objects.all()
     serializer = PatientSerializer(patients, many=True)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def apiPatientDetail(request, pk):
     patient = Patient.objects.get(id=pk)
     serializer = PatientSerializer(patient, many=False)
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 def apiPatientUpdate(request, pk):
@@ -66,10 +80,11 @@ def apiPatientUpdate(request, pk):
         serializer.save()
     return Response(serializer.data)
 
+
 @api_view(['DELETE'])
 def apiPatientDelete(request, pk):
     patient = Patient.objects.get(id=pk)
     if patient.delete():
-        response = {"response": "Record ID #{} successfully deleted".format(pk)}
+        response = {
+            "response": "Record ID #{} successfully deleted".format(pk)}
         return Response(response)
-

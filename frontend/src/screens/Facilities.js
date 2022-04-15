@@ -23,7 +23,7 @@ const Facilities = () => {
   const fetchLocation = async () => {
     try {
       console.log("Fetching location...");
-      const url = `${process.env.REACT_APP_SENSORS_ENDPOINT}/location`
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/location`
       console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
