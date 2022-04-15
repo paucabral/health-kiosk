@@ -161,6 +161,9 @@ MEDIA_URL = '/media/'
 # Google Maps API
 GOOGLE_MAPS_API_KEY = config('GOOGLE_MAPS_API_KEY')
 
+# MapQuest API
+MAPQUEST_API_KEY = config('MAPQUEST_API_KEY')
+
 # SMTP Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST')

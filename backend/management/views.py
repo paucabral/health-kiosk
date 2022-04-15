@@ -199,7 +199,17 @@ class AdministratorDashboard(View):
         sensors_status = "ONLINE" if urllib.request.urlopen(
             settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
 
-        return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sensors_status': sensors_status})
+        sms_status = "OFFLINE"  # TODO
+
+        gps_status = "OFFLINE"  # TODO
+
+        gmaps_status = "ONLINE" if urllib.request.urlopen(
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=14.6492,121.116&type=hospital&rankby=distance&key={}".format(settings.GOOGLE_MAPS_API_KEY)).getcode() == 200 else "OFFLINE"
+
+        mapquest_status = "ONLINE" if urllib.request.urlopen(
+            "http://www.mapquestapi.com/geocoding/v1/reverse?key={}&location=14.6492,121.116".format(settings.MAPQUEST_API_KEY)).getcode() == 200 else "OFFLINE"
+
+        return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
 
 @login_required(login_url='/')
