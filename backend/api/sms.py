@@ -1,13 +1,9 @@
-# SMS module
-# Transmitting AT Commands to the Modem
-# '\r\n' indicates the Enter key
-# from email import message
-# import serial
+import serial
 import os
 import time
 
 # Enable Serial Communication
-# port = serial.Serial("/dev/ttyS0", baudrate=9600, timeout=1)
+port = serial.Serial("/dev/ttyS0", baudrate=9600, timeout=1)
 
 
 def sendSms(resultForm):
@@ -51,34 +47,34 @@ def sendSms(resultForm):
 
     print(msg)
 
-    # port.write('AT'.encode())         # Enter AT Mode
-    # port.write('\r\n'.encode())
-    # time.sleep(1)
+    port.write('AT'.encode())         # Enter AT Mode
+    port.write('\r\n'.encode())
+    time.sleep(1)
 
-    # port.write('AT'.encode())         # Double this to confirm start
-    # port.write('\r\n'.encode())
-    # time.sleep(1)
+    port.write('AT'.encode())         # Double this to confirm start
+    port.write('\r\n'.encode())
+    time.sleep(1)
 
-    # port.write('ATE0'.encode())       # Disable the Echo
-    # port.write('\r\n'.encode())
-    # time.sleep(1)
+    port.write('ATE0'.encode())       # Disable the Echo
+    port.write('\r\n'.encode())
+    time.sleep(1)
 
-    # port.write('AT+CMGF=1'.encode())  # Select Message format as Text mode
-    # port.write('\r\n'.encode())
-    # time.sleep(1)
+    port.write('AT+CMGF=1'.encode())  # Select Message format as Text mode
+    port.write('\r\n'.encode())
+    time.sleep(1)
 
-    # # Send a message to Number
-    # port.write('AT+CMGS="{}"'.format(contact_no).encode())
-    # port.write('\r\n'.encode())
-    # time.sleep(1)
+    # Send a message to Number
+    port.write('AT+CMGS="{}"'.format(contact_no).encode())
+    port.write('\r\n'.encode())
+    time.sleep(1)
 
-    # port.write(msg.encode())
+    port.write(msg.encode())
 
-    # port.write('\r\n'.encode())
-    # print("NUMBER:", contact_no)
-    # port.write("\x1A".encode())  # Enable to send SMS
-    # for i in range(10):
-    #     rcv = port.read(10)
-    #     print(rcv)
+    port.write('\r\n'.encode())
+    print("NUMBER:", contact_no)
+    port.write("\x1A".encode())  # Enable to send SMS
+    for i in range(10):
+        rcv = port.read(10)
+        print(rcv)
 
     return 200
