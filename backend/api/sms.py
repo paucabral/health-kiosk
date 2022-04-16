@@ -19,6 +19,10 @@ def sendSms(resultForm):
     diastolic_bp = resultForm['diastolic_bp']
     o2_saturation = resultForm['o2_saturation']
 
+    contact_no = contact_no.replace('0', '+63', 1)
+    contact_no = contact_no.replace('-', '')
+    contact_no = contact_no.replace(' ', '')
+
     # Message content
     msg = '''
     HIGH GROUNDS HEALTH KIOSK PATIENT ASSESSMENT
