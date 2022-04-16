@@ -41,7 +41,6 @@ def sendSms(resultForm):
 
     '''.format(name, sex, birth_date, contact_no, temperature['value'], temperature['status'], pulse_rate['value'], pulse_rate['status'], systolic_bp['value'], systolic_bp['status'], diastolic_bp['value'], diastolic_bp['status'], o2_saturation['value'], o2_saturation['status'])
 
-    print("Differentials: ", differentials)
     if (differentials != None):
         heading = '''
 
