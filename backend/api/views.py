@@ -44,6 +44,13 @@ def apiGpsCoordinates(request):
     return Response(coordinates)
 
 
+@api_view(['GET'])
+def apiSms(request):
+    data = dict(request.data)
+    print(data)
+    return Response(data, 200)
+
+
 @api_view(['POST'])
 def apiDifferentialDiagnosis(request):
     serializer = PatientSerializer(data=request.data)
