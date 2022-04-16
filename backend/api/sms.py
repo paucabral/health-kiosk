@@ -50,14 +50,19 @@ def sendSms(resultForm):
     '''.format(name, sex, birth_date, contact_no, temperature['value'], temperature['status'], pulse_rate['value'], pulse_rate['status'], systolic_bp['value'], systolic_bp['status'], diastolic_bp['value'], diastolic_bp['status'], o2_saturation['value'], o2_saturation['status'])
 
     if (differentials != None):
-        msg += '''
+        heading = '''
 
         Differential Diagnosis:
 
         '''
 
+        msg.join(heading)
+
+        diff = ""
         for differential in differentials:
-            msg += '- {}'.format(differential)
+            diff.join('- {}\n'.format(differential))
+
+        msg.join(diff)
 
     print(msg)
 
