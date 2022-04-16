@@ -48,7 +48,7 @@ def apiGpsCoordinates(request):
     return Response(coordinates)
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 def apiSms(request):
     data = dict(request.data)
     print(data)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   MDBBtn,
   MDBModal,
@@ -22,7 +22,7 @@ const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal 
   const sendSms = async () => {
     setSmsStatus("SENDING")
     try {
-      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/sms`
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/sms/`
       const json = JSON.stringify(message)
       const response = await axios.post(url, json, {
         headers: {
@@ -39,7 +39,11 @@ const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal 
     }
   }
 
-  sendSms();
+  useEffect(() => {
+    if (smsModal === true) {
+      sendSms()
+    }
+  }, [smsModal])
 
   return (
     <React.Fragment>
