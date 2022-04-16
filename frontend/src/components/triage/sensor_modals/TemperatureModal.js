@@ -18,13 +18,16 @@ import {
   MDBCol,
   MDBContainer
 } from 'mdb-react-ui-kit';
-import axios from 'axios'
+import axios from 'axios';
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTemperatureModal, formData, setFormData }) => {
   const fetchTemperatureData = async () => {
     try {
       console.log("Fetching temperature...");
       setMeasure("loading");
+      await delay(10000);
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}`);
       if (response.status == 200) {
         const temperature_data = response.data["variables"]["tempAvg"];
