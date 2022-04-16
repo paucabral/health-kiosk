@@ -6,7 +6,7 @@ import numpy as np
 ser = serial.Serial(
     # port='/dev/ttyS0',
     port='/dev/ttyAMA1',
-    baudrate=9600,
+    baudrate = 9600,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS,
@@ -24,119 +24,92 @@ got_lat_val = 0.0
 
 
 def movave(values, window):
-    weights = np.repeat(1.0, window) / window
+    weights = np.repeat(1.0, window)/window
     sma = np.convolve(values, weights, 'valid')
     return sma
 
-
 def compute_rawGPS(raw_val, direction):
-    # Separate lat and long. Note: 2 digits to left of decimal point is min, rest is degree
-    # Converted to string, to separate degree and minutes
-    str_int = str(int((raw_val // 1)))
-    str_flt = float((raw_val % 1))  # String as is
-    # Left hand side of decimal
-    deg = float(str_int[:-2])  # Degree is extracted, will be used as is
+    #Separate lat and long. Note: 2 digits to left of decimal point is min, rest is degree
+    str_int = str(int((raw_val//1)))    #Converted to string, to separate degree and minutes
+    str_flt = float((raw_val%1))        #String as is
+                                        #Left hand side of decimal
+    deg = float(str_int[:-2])           #Degree is extracted, will be used as is
     min = float(str_int[-2:])
+                 
+    flt_val = float(str_flt)                        #Right hand side of decimal
+    full_minutes = min+flt_val                      #Combined
+    
+    coord_min = full_minutes/60.0                   #Take coordinate minute
 
-    flt_val = float(str_flt)  # Right hand side of decimal
-    full_minutes = min + flt_val  # Combined
+    coordinate_val = float(str(deg+coord_min)[:10]) #To shorten decimal places (string)
 
-    coord_min = full_minutes / 60.0  # Take coordinate minute
-
-    # To shorten decimal places (string)
-    coordinate_val = float(str(deg + coord_min)[:10])
-
-    if direction == "N" or direction == "E":  # Condition to determine whether coord is + or -
+    if direction == "N" or direction == "E":        #Condition to determine whether coord is + or -
         signed_coord = coordinate_val
     else:
-        signed_coord = float(("-" + str(coordinate_val)))
-
-    if direction == "W" or direction == "E":  # Just for print, can be removed
+        signed_coord = float(("-"+str(coordinate_val)))
+        
+    if direction == "W" or direction == "E":        #Just for print, can be removed
         latlong = "Long: "
     else:
         latlong = "Lat: "
 
-    print(signed_coord)
+    # print(signed_coord)
     return signed_coord
 
 
-def computedGPS():
-    final_return = {}
-    for i in range(10):
-        ave_lat = 0.0
-        ave_lng = 0.0
-        gpscnt = 0                  # variable for iteration
 
-        latraw_val = 0.0            # initialize coord values and directions
-        latdirection = ""
-        longraw_val = 0.0
-        longdirection = ""
+def get_coords():
+    coordinate_payload = {
+        "lat": None,
+        "lng": None    
+    }
+    gpscnt = 0                  # variable for iteration
+    gpsarr = []                  # array to hold streams in b format   
+        
+    latraw_val = 0.0            # initialize coord values and directions
+    latdirection = ""
+    longraw_val = 0.0
+    longdirection = ""
 
-        gpsarr = []                  # array to hold streams in b format
-        # gpslines = ser.readline()      # read from the port
-        # strgpslines = str(gpslines).split(',')  # split by ,
-        # gpsarr.append(strgpslines)
+    while len(gpsarr) < 1:          # initial check if something is read
+        gpslines=ser.readline()      # read from the port
+        strgpslines = str(gpslines).split(',')  # split by ,
+        gpsarr.append(strgpslines)      
 
-        while len(gpsarr) < 1:          # initial check if something is read
-            gpslines = ser.readline()      # read from the port
-            strgpslines = str(gpslines).split(',')  # split by ,
-            gpsarr.append(strgpslines)
+    else:                        # else proceed to check GPGLL
+        if (gpsarr[0][0]) == "b'$GPGLL":
+            latraw_check = str(gpsarr[0][1]) # Checked initially, the firstmost value of needed
+            if (latraw_check != ''):
+                latraw_val = float(gpsarr[0][1])       # GPGLL pattern is $GPGLL, lat, lat_dir, lng, lng_dir
+                latdirection = str(gpsarr[0][2])
+                longraw_val = float(gpsarr[0][3])
+                longdirection = str(gpsarr[0][4])
 
-        else:                        # else proceed to check GPGLL
-            if (gpsarr[0][0]) == "b'$GPGLL":
-                print("FOUND GPGLL!")
+                lat = compute_rawGPS(latraw_val, latdirection)      # subject to computation
+                lng = compute_rawGPS(longraw_val, longdirection)      
 
-                # Checked initially, the firstmost value of needed
-                latraw_check = str(gpsarr[0][1])
-                if (latraw_check != ''):
-                    # GPGLL pattern is $GPGLL, lat, lat_dir, lng, lng_dir
-                    latraw_val = float(gpsarr[0][1])
-                    latdirection = str(gpsarr[0][2])
-                    longraw_val = float(gpsarr[0][3])
-                    longdirection = str(gpsarr[0][4])
+                coordinate_payload["lat"] = lat          # save as is
+                coordinate_payload["lng"] = lng
+            
+    return coordinate_payload
 
-                    # subject to computation
-                    lat = compute_rawGPS(latraw_val, latdirection)
-                    lng = compute_rawGPS(longraw_val, longdirection)
+    gpscnt+=1
+    if gpscnt==8:
+        gpscnt = 0
 
-                    # DSP for lat and long
-                    index_length = 5
-                    if (len(lat_sma_gps) < index_length):                  # DSP for Lat
-                        lat_sma_gps.append(lat)
-                    else:
-                        got_lat_val = movave(lat_sma_gps, index_length)
-                        lat_sma_gps.pop(0)
-                        lat_sma_gps.append(lat)
-                        # print("COMPUTED LAT: ",got_lat_val[0])
-                        ave_lat = float("{:.10f}".format(got_lat_val[0]))
+def location():
+    coords_list = []
 
-                    if (len(lng_sma_gps) < index_length):                   # DSP for Lng
-                        lng_sma_gps.append(lng)
-                    else:
-                        got_lng_val = movave(lng_sma_gps, index_length)
-                        lng_sma_gps.pop(0)
-                        lng_sma_gps.append(lng)
-                        # print("COMPUTED lng: ",got_lng_val[0])
-                        ave_lng = float("{:.10f}".format(got_lng_val[0]))
-
-                        # lat_save = ave_lat                                      # save values in case
-                        # lng_save = ave_lng
-                    coord_pairs = {"lat": ave_lat,
-                                   "lng": ave_lng}          # save as is
-
-                    # print(coord_pairs)
-                else:
-                    coord_pairs = {"lat": lat_save, "lng": lng_save}
-                    print("Position untracked yet! But saved was: ", coord_pairs)
-
-                print(coord_pairs)
-                final_return = coord_pairs
-
-        gpscnt += 1
-        if gpscnt == 8:
-            gpscnt = 0
-        # time.sleep(1.5)
-    return final_return
-
-# while 1:
-#     computedGPS()
+    while len(coords_list) < 10:
+        current_coords = get_coords()
+        if(current_coords != None and current_coords["lat"] !=0 and current_coords["lat"] !=None and current_coords["lng"] !=0 and current_coords["lng"] !=None):
+            print(current_coords)
+            coords_list.append(current_coords)
+    else:
+        lat = movave([coord['lat'] for coord in coords_list], len(coords_list))
+        lng = movave([coord['lng'] for coord in coords_list], len(coords_list))
+        final_coords = {
+            'lat': lat[0],
+            'lng': lng[0]
+        }
+        return final_coords
