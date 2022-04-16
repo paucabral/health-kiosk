@@ -14,6 +14,7 @@ import {
   MDBContainer,
   MDBIcon
 } from 'mdb-react-ui-kit';
+import axios from 'axios';
 
 const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal }) => {
   const [smsStatus, setSmsStatus] = useState("SENDING");
@@ -38,7 +39,7 @@ const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal 
     }
   }
 
-  sendSms
+  sendSms();
 
   return (
     <React.Fragment>
