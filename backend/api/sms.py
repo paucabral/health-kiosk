@@ -76,4 +76,5 @@ def sendSms(resultForm):
     for i in range(10):
         rcv = port.read(10)
         print(rcv)
-        return 200
+
+    return 200
