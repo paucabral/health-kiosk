@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   MDBBtn,
   MDBModal,
@@ -14,9 +14,36 @@ import {
   MDBContainer,
   MDBIcon
 } from 'mdb-react-ui-kit';
+import axios from 'axios';
 
 const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal }) => {
   const [smsStatus, setSmsStatus] = useState("SENDING");
+
+  const sendSms = async () => {
+    setSmsStatus("SENDING")
+    try {
+      const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/sms/`
+      const json = JSON.stringify(message)
+      const response = await axios.post(url, json, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.status == 200) {
+        console.log(response.data);
+        setSmsStatus("SUCCESS")
+      }
+    } catch (error) {
+      console.log(JSON.stringify(error));
+      setSmsStatus("ERROR")
+    }
+  }
+
+  useEffect(() => {
+    if (smsModal === true) {
+      sendSms()
+    }
+  }, [smsModal])
 
   return (
     <React.Fragment>

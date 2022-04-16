@@ -23,6 +23,36 @@ const Results = () => {
     setChecked(checkbox.checked);
   }
 
+  const message = {
+    first_name: location.state.first_name,
+    last_name: location.state.last_name,
+    sex: location.state.sex,
+    birth_date: location.state.birth_date,
+    contact_no: location.state.contact_no,
+    symptoms: location.state.symptoms,
+    differentials: Object.keys(location.state.predictions),
+    temperature: {
+      value: location.state.temperature,
+      status: "STATUS"
+    },
+    pulse_rate: {
+      value: location.state.pulse_rate,
+      status: "STATUS",
+    },
+    systolic_bp: {
+      value: location.state.systolic_bp,
+      status: "STATUS",
+    },
+    diastolic_bp: {
+      value: location.state.diastolic_bp,
+      status: "STATUS",
+    },
+    o2_saturation: {
+      value: location.state.o2_saturation,
+      status: "STATUS",
+    },
+  }
+
   return (
     <React.Fragment>
       <MDBContainer className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -143,7 +173,7 @@ const Results = () => {
           </div>
         </MDBBtn>
       </div>
-      <SMSStatus contact_no={location.state.contact_no} message={"hello world"} smsModal={smsModal} setSmsModal={setSmsModal} toggleSmsModal={toggleSmsModal} />
+      <SMSStatus contact_no={location.state.contact_no} message={message} smsModal={smsModal} setSmsModal={setSmsModal} toggleSmsModal={toggleSmsModal} />
       <div id="overlay"></div>
     </React.Fragment>
   )

@@ -9,6 +9,7 @@ import requests
 import json
 from django.conf import settings
 from api.predictions import getPredictions
+from api.sms import sendSms
 from api.gpshandler import location
 
 # Create your views here.
@@ -40,8 +41,20 @@ def apiNearestHospitals(request):
 
 @api_view(['GET'])
 def apiGpsCoordinates(request):
+    # Dummy Location
+    # coordinates = {
+    #     "lat": 14.6507,
+    #     "lng": 121.1029
+    # }
     coordinates = location()
     return Response(coordinates)
+
+
+@api_view(['POST'])
+def apiSms(request):
+    data = dict(request.data)
+    response_code = sendSms(data)
+    return Response(data, response_code)
 
 
 @api_view(['POST'])
