@@ -18,13 +18,16 @@ import {
   MDBRow,
   MDBCol
 } from 'mdb-react-ui-kit';
-import axios from 'axios'
+import axios from 'axios';
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) => {
   const fetchO2Data = async () => {
     try {
       console.log("Fetching o2...");
       setMeasure("loading");
+      await delay(60000);
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}`);
       if (response.status == 200) {
         console.log(response.data[0]);
