@@ -23,8 +23,6 @@ def sendSms(resultForm):
     contact_no = contact_no.replace('-', '')
     contact_no = contact_no.replace(' ', '')
 
-    print(resultForm)
-
     # Message content
     msg = '''
     HIGH GROUNDS HEALTH KIOSK PATIENT ASSESSMENT
