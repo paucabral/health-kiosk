@@ -30,7 +30,7 @@ const Results = () => {
     birth_date: location.state.birth_date,
     contact_no: location.state.contact_no,
     symptoms: location.state.symptoms,
-    differentials: Object.keys(location.state.predictions),
+    differentials: location.state.predictions ? Object.keys(location.state.predictions) : null,
     temperature: {
       value: location.state.temperature,
       status: "STATUS"
