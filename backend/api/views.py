@@ -9,6 +9,7 @@ import requests
 import json
 from django.conf import settings
 from api.predictions import getPredictions
+from api.sms import sendSms
 # from api.gpshandler import computedGPS
 
 # Create your views here.
@@ -51,8 +52,8 @@ def apiGpsCoordinates(request):
 @api_view(['POST'])
 def apiSms(request):
     data = dict(request.data)
-    print(data)
-    return Response(data, 200)
+    response_code = sendSms(data)
+    return Response(data, response_code)
 
 
 @api_view(['POST'])

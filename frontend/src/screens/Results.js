@@ -26,10 +26,11 @@ const Results = () => {
   const message = {
     first_name: location.state.first_name,
     last_name: location.state.last_name,
+    sex: location.state.sex,
     birth_date: location.state.birth_date,
     contact_no: location.state.contact_no,
     symptoms: location.state.symptoms,
-    differentials: location.state.differentials,
+    differentials: Object.keys(location.state.predictions),
     temperature: {
       value: location.state.temperature,
       status: "STATUS"
