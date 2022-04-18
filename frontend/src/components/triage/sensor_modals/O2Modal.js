@@ -19,6 +19,10 @@ import {
   MDBCol
 } from 'mdb-react-ui-kit';
 import axios from 'axios';
+import InstructionStep from './InstructionStep';
+import o2_step_0 from '../../../assets/image/o2/0.png';
+import o2_step_1 from '../../../assets/image/o2/1.png';
+import o2_step_2 from '../../../assets/image/o2/2.png';
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -58,14 +62,12 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 {
                   measure === "to_measure" || measure === "loading" ?
-                    <div>
-                      <p>Please follow these steps to measure your oxygen saturation.</p>
-                      <ol>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
-                        <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
-                      </ol>
-                    </div>
+                    <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                      <p style={{ fontWeight: 'bold' }}>Please follow these steps to measure your oxygen saturation properly:</p>
+                      <InstructionStep img={o2_step_0} instruction={<span><b>Step 1: </b>Locate the <span className='text-success' style={{ fontWeight: 'bold' }}>oxygen saturation sensor</span> at the middle section of the kiosk.</span>} />
+                      <InstructionStep img={o2_step_1} instruction={<span><b>Step 2: </b>You should be able to locate the device at the right side of the middle section. It looks similar to the image shown above.</span>} />
+                      <InstructionStep img={o2_step_2} instruction={<span><b>Step 3: </b>Place one of your index fingers in a relaxed state at the top of the small black rectangular area, then select the <span className='text-success'>Start Measurement</span> button. The measurement will last for about <span>10 seconds</span>.</span>} />
+                    </MDBContainer>
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBCard shadow='0' border='success' background='white'>
