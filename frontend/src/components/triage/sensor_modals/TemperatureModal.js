@@ -19,6 +19,11 @@ import {
   MDBContainer
 } from 'mdb-react-ui-kit';
 import axios from 'axios';
+import InstructionStep from './InstructionStep';
+import temp_step_0 from '../../../assets/image/temp/0.png';
+import temp_step_1 from '../../../assets/image/temp/1.png';
+import temp_step_2 from '../../../assets/image/temp/2.png';
+
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -55,14 +60,12 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 {
                   measure === "to_measure" || measure === "loading" ?
-                    <div>
-                      <p>Please follow these steps to measure your body temperature.</p>
-                      <ol>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
-                        <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
-                      </ol>
-                    </div>
+                    <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                      <p style={{ fontWeight: 'bold' }}>Please follow these steps to measure your body temperature properly:</p>
+                      <InstructionStep img={temp_step_0} instruction={<span><b>Step 1: </b>Locate the <span className='text-warning' style={{ fontWeight: 'bold' }}>temperature sensor</span> at the middle section of the kiosk.</span>} />
+                      <InstructionStep img={temp_step_1} instruction={<span><b>Step 2: </b>You should be able to locate the device at the left side of the middle section. It looks similar to the image shown above.</span>} />
+                      <InstructionStep img={temp_step_2} instruction={<span><b>Step 3: </b>Place one of your index fingers in a relaxed state at the top of the circular opening, then select the <span className='text-warning'>Start Measurement</span> button. The measurement will last for about <span style={{ fontWeight: 'bold' }}>10 seconds</span>.</span>} />
+                    </MDBContainer>
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBCard shadow='0' border='warning' background='white'>
