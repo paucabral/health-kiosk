@@ -60,14 +60,6 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
               <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
                 {
                   measure === "to_measure" || measure === "loading" ?
-                    // <div>
-                    //   <p>Please follow these steps to measure your body temperature.</p>
-                    //   <ol>
-                    //     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    //     <li>Aliquam interdum risus sit amet urna lacinia, sit amet efficitur augue bibendum.</li>
-                    //     <li>Phasellus non ex condimentum, accumsan justo quis, molestie neque.</li>
-                    //   </ol>
-                    // </div>
                     <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
                       <p style={{ fontWeight: 'bold' }}>Please follow these steps to measure your body temperature properly:</p>
                       <InstructionStep img={temp_step_0} instruction={<span><b>Step 1: </b>Locate the <span className='text-warning' style={{ fontWeight: 'bold' }}>temperature sensor</span> at the middle section of the kiosk.</span>} />
