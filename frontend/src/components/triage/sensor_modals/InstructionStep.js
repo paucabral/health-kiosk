@@ -5,13 +5,13 @@ const InstructionStep = ({ img, instruction }) => {
   return (
     <React.Fragment>
       <MDBContainer className='my-2 mx-4' style={{ width: "17em" }}>
-        <MDBRow>
+        <MDBRow className='mb-2'>
           <img src={img} />
         </MDBRow>
         <MDBRow className='mb-2'>
-          <span style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'justify' }}>
             {instruction}
-          </span>
+          </div>
         </MDBRow>
       </MDBContainer>
     </React.Fragment>
