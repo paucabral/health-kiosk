@@ -34,7 +34,7 @@ const Triage = () => {
       return <PersonalInformationInput formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else if (page === 1) {
-      return <SensorData formData={formData} setFormData={setFormData} />;
+      return <SensorData formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else if (page === 2) {
       return <Symptoms formData={formData} setFormData={setFormData} />;
@@ -79,7 +79,7 @@ const Triage = () => {
       <MDBContainer className='align-items-center justify-content-center mt-5'>
         {PageCard()}
         <MDBProgress height='10' className='rounded mt-3'>
-          <MDBProgressBar width={progress} valuemin={0} valuemax={100} />
+          <MDBProgressBar bgColor='primary' width={progress} valuemin={0} valuemax={100} />
         </MDBProgress>
       </MDBContainer>
     </React.Fragment>
