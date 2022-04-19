@@ -51,7 +51,9 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
             </select>
           </MDBCol>
           <MDBCol>
-            <MDBInput required value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='md' label='Contact No. *&nbsp;' type='tel' icon="phone" />
+            <MDBInput required pattern='[0-9]*' value={formData.contact_no} onChange={(event) => {
+              setFormData({ ...formData, contact_no: event.target.value.replace(/[^0-9]+/g, '') })
+            }} id='contact_no' size='md' label='Contact No. *&nbsp;' type='tel' icon="phone" />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
