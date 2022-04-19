@@ -20,7 +20,7 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
         <MDBModalDialog centered size='xl'>
           <MDBModalContent style={{ height: '80vh' }}>
             <MDBModalHeader>
-              <MDBModalTitle>{entry}</MDBModalTitle>
+              <MDBModalTitle className='text-uppercase'>{entry}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDiseaseModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody className='my-2' style={{ textAlign: "left", overflowY: 'auto', height: '100vh' }}>
