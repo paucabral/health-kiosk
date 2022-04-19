@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow } from 'mdb-react-ui-kit';
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import MomentUtils from '@date-io/moment';
@@ -13,7 +13,15 @@ const defaultMaterialTheme = createTheme({
   }
 });
 
-const PersonalInformationInput = ({ formData, setFormData }) => {
+const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
+  useEffect(() => {
+    if (formData.first_name === "" | formData.last_name === "" | formData.birth_date === null | formData.sex === "" | formData.contact_no === "") {
+      setBtnDisable(true)
+    }
+    else {
+      setBtnDisable(false)
+    }
+  }, [formData])
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Personal Information</MDBCardTitle>

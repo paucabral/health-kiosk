@@ -31,7 +31,7 @@ const Triage = () => {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <PersonalInformationInput formData={formData} setFormData={setFormData} />;
+      return <PersonalInformationInput formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else if (page === 1) {
       return <SensorData formData={formData} setFormData={setFormData} />;
