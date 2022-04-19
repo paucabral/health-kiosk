@@ -23,6 +23,8 @@ const Triage = () => {
     }
   )
 
+  const [btnDisable, setBtnDisable] = useState(false);
+
   const [page, setPage] = useState(0);
   const [progress, setProgress] = useState(0);
   const FormTitles = ['Personal Information', 'Vital Signs', 'Symptoms', 'Next']
@@ -65,7 +67,7 @@ const Triage = () => {
             <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page === 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>Prev</MDBBtn>
           </MDBCol>
           <MDBCol>
-            <MDBBtn id='next' color='primary' className='w-75' disabled={page === FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
+            <MDBBtn id='next' color='primary' className='w-75' disabled={page === FormTitles.length - 1 || btnDisable} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
           </MDBCol>
         </MDBRow>
       </React.Fragment>;

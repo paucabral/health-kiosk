@@ -17,7 +17,11 @@ const Symptoms = ({ formData, setFormData }) => {
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Symptoms</MDBCardTitle>
-      <p>Find and select your symptoms (if you experience any).</p>
+      <p>
+        Find and select your symptoms (if you experience any).
+        <br />
+        <span style={{ fontSize: '0.75em', color: 'gray', fontStyle: 'italic' }}>*NOTE: Differential diagnosis will not be available if no symptoms are selected.*</span>
+      </p>
       <form className='form' style={{ marginBottom: '5em' }}>
         <Typeahead
           id="symptoms-selection"
