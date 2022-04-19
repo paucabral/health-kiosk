@@ -1,0 +1,525 @@
+disease,code,description,source_name,source_link,root_url
+hypertensive disease,C0020538,The presence of chronic increased pressure in the systemic arterial system. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020538
+diabetes,C0011847,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011847
+depression mental,C0011570,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011570
+depressive disorder,C0011581,"Frequent feelings of being down, miserable, and/or hopeless; difficulty recovering from such moods; pessimism about the future; pervasive shame; feeling of inferior self-worth; thoughts of suicide and suicidal behavior. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011581
+coronary arteriosclerosis,C0010054,"Reduction of the diameter of the coronary arteries as the result of an accumulation of atheromatous plaques within the walls of the coronary arteries, which increases the risk of myocardial ischemia. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0010054
+coronary heart disease,C0010068,An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels. [from MeSH],MeSH,http://www.nlm.nih.gov/pubs/factsheets/mesh.html,https://www.ncbi.nlm.nih.gov/medgen/?term=C0010068
+pneumonia,C0032285,Inflammation of any part of the lung parenchyma. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0032285
+failure heart congestive,C0018802,The presence of an abnormality of cardiac function that is responsible for the failure of the heart to pump blood at a rate that is commensurate with the needs of the tissues or a state in which abnormally elevated filling pressures are required for the heart to do so. Heart failure is frequently related to a defect in myocardial contraction. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0018802
+accident cerebrovascular,C0038454,Sudden impairment of blood flow to a part of the brain due to occlusion or rupture of an artery to the brain. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0038454
+asthma,C0004096,"Asthma is characterized by increased responsiveness of the tracheobronchial tree to multiple stimuli, leading to narrowing of the air passages with resultant dyspnea, cough, and wheezing. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0004096
+myocardial infarction,C0027051,"Necrosis of the myocardium caused by an obstruction of the blood supply to the heart and often associated with chest pain, shortness of breath, palpitations, and anxiety as well as characteristic EKG findings and elevation of serum markers including creatine kinase-MB fraction and troponin. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0027051
+hypercholesterolemia,C0020443,An increased concentration of cholesterol in the blood. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020443
+infection,C0021311,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0021311
+infection urinary tract,C0042029,"A bacterial infectious process affecting any part of the urinary tract, most commonly the bladder and the urethra. Symptoms include urinary urgency and frequency, burning sensation during urination, lower abdominal discomfort, and cloudy urine. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0042029
+anemia,C0002871,A reduction in erythrocytes volume or hemoglobin concentration. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0002871
+chronic obstructive airway disease,C0024117,"Chronic obstructive pulmonary disease (COPD) is a common, complex disorder associated with substantial morbidity and mortality. COPD is defined by irreversible airflow obstruction due to chronic bronchitis, emphysema, and/or small airways disease. Airflow obstruction is typically determined by reductions in quantitative spirometric indices, including forced expiratory volume at 1 second (FEV1) and the ratio of FEV1 to forced vital capacity (FVC) (Silverman et al., 2002; Celedon et al., 2004). [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0024117
+dementia,C0497327,"A loss of global cognitive ability of sufficient amount to interfere with normal social or occupational function. Dementia represents a loss of previously present cognitive abilities, generally in adults, and can affect memory, thinking, language, judgment, and behavior. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0497327
+insufficiency renal,C1565489,"A reduction in the level of performance of the kidneys in areas of function comprising the concentration of urine, removal of wastes, the maintenance of electrolyte balance, homeostasis of blood pressure, and calcium metabolism. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C1565489
+confusion,C0009676,"Lack of clarity and coherence of thought, perception, understanding, or action. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0009676
+degenerative polyarthritis,C0029408,"Osteoarthritis (OA) is a degenerative disease of the joints characterized by degradation of the hyaline articular cartilage and remodeling of the subchondral bone with sclerosis (Meulenbelt et al., 2006). Clinical problems include pain and joint stiffness often leading to significant disability and joint replacement. Osteoarthritis exhibits a clear predilection for specific joints; it appears most commonly in the hip and knee joints and lumbar and cervical spine, as well as in the distal interphalangeal and the first carpometacarpal (base of thumb) and proximal interphalangeal joints of the hand; however, patients with osteoarthritis may have 1, a few, or all of these sites affected (Stefansson et al., 2003). According to a conservative estimate, greater than 70% of the population of the United States at age 65 years is affected by the disease, reflecting its age dependence. Genetic Heterogeneity of Susceptibility to Osteoarthritis Susceptibility to osteoarthritis has been associated with variation in other genes: OS2 (140600) with variation in the MATN3 gene (602109) on chromosome 2p24; OS3 (607850) with variation in the ASPN gene (608135) on chromosome 9q22; and OS5 (612400) with variation in the GDF5 gene (601146) on chromosome 20q11. Other susceptibility loci for osteoarthritis have been mapped to chromosomes 2q33 (OS4; 610839) and 3p24 (OS6; 612401). [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0029408
+hypothyroidism,C0020676,Deficiency of thyroid hormone. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020676
+anxiety state,C0700613,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0700613
+malignant neoplasms,C0006826,"A tumor composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006826
+primary malignant neoplasm,C1306459,A malignant tumor at the original site of growth. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C1306459
+acquired immuno-deficiency syndrome,C0001175,"A syndrome resulting from the acquired deficiency of cellular immunity caused by the human immunodeficiency virus (HIV). It is characterized by the reduction of the Helper T-lymphocytes in the peripheral blood and the lymph nodes. Symptoms include generalized lymphadenopathy, fever, weight loss, and chronic diarrhea. Patients with AIDS are especially susceptible to opportunistic infections (usually pneumocystis carinii pneumonia, cytomegalovirus (CMV) infections, tuberculosis, candida infections, and cryptococcosis), and the development of malignant neoplasms (usually non-Hodgkin lymphoma and Kaposi sarcoma). The human immunodeficiency virus is transmitted through sexual contact, sharing of contaminated needles, or transfusion of contaminated blood. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0001175
+HIV,C0019682,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019682
+hiv infections,C0019693,An infection caused by the human immunodeficiency virus. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019693
+cellulitis,C0007642,A bacterial infection and inflammation of the skin und subcutaneous tissues. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0007642
+gastroesophageal reflux disease,C0017168,"Gastroesophageal reflux (GER) is characterized by the retrograde movement of stomach contents into the esophagus. In its most severe form, GER results in extensive tissue damage caused by acid reflux. In adolescents and adults, and even infrequently in children, chronic GER is associated with the risk of developing Barrett metaplasia (614266), a premalignant lesion of the esophageal mucosa (Hu et al., 2000). In turn, Barrett metaplasia is correlated with the development of adenocarcinoma of the esophagus (see 614266), estimated as the fifth most prevalent neoplasia in the Western world (Lagergren et al., 1999). [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0017168
+septicemia,C0036690,Systemic inflammatory response to infection. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0036690
+systemic infection,C0243026,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0243026
+sepsis (invertebrate),C1090821,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C1090821
+deep vein thrombosis,C0149871,"Formation of a blot clot in a deep vein. The clot often blocks blood flow, causing swelling and pain. The deep veins of the leg are most often affected. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0149871
+dehydration,C0011175,"A condition resulting from the excessive loss of water from the body. It is usually caused by severe diarrhea, vomiting or diaphoresis. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011175
+neoplasm,C0027651,An organ or organ-system abnormality that consists of uncontrolled autonomous cell-proliferation which can occur in any part of the body as a benign or malignant neoplasm (tumour). [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0027651
+embolism pulmonary,C0034065,"An embolus (that is, an abnormal particle circulating in the blood) located in the pulmonary artery and thereby blocking blood circulation to the lung. Usually the embolus is a blood clot that has developed in an extremity (for instance, a deep venous thrombosis), detached, and traveled through the circulation before becoming trapped in the pulmonary artery. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0034065
+epilepsy,C0014544,A disorder characterized by recurrent seizures. [from SNOMEDCT_US],SNOMEDCT_US,http://www.nlm.nih.gov/research/umls/Snomed/us_edition.html,https://www.ncbi.nlm.nih.gov/medgen/?term=C0014544
+cardiomyopathy,C0878544,"A myocardial disorder in which the heart muscle is structurally and functionally abnormal, in the absence of coronary artery disease, hypertension, valvular disease and congenital heart disease sufficient to cause the observed myocardial abnormality. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0878544
+chronic kidney failure,C0022661,Impairment of the renal function due to chronic kidney damage. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0022661
+carcinoma,C0007097,"A malignant tumor arising from epithelial cells. Carcinomas that arise from glandular epithelium are called adenocarcinomas, those that arise from squamous epithelium are called squamous cell carcinomas, and those that arise from transitional epithelium are called transitional cell carcinomas (NCI Thesaurus). [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0007097
+hepatitis C,C0019196,A viral infection caused by the hepatitis C virus. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019196
+peripheral vascular disease,C0085096,This concept is primitive because within clinical practice it is used in different contexts to refer to both arteries and veins of the periphery or exclusively of peripheral arteries and sometimes to describe just occlusive disease of the peripheral arteries. More detailed unambiguous concepts are available for these more specific interpretations. [from SNOMEDCT_US],SNOMEDCT_US,http://www.nlm.nih.gov/research/umls/Snomed/us_edition.html,https://www.ncbi.nlm.nih.gov/medgen/?term=C0085096
+psychotic disorder,C0033975,A condition characterized by changes of personality and thought patterns often accompanied by hallucinations and delusional beliefs. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0033975
+hyperlipidemia,C0020473,An elevated lipid concentration in the blood. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020473
+bipolar disorder,C0005586,"A disorder of the brain that causes unusual shifts in mood, energy, activity levels and the ability to carry out day-to-day tasks. Often these moods range and shift from periods of elation and energized behavior to those of hopelessness and depression. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0005586
+obesity,C0028754,Accumulation of substantial excess body fat. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0028754
+ischemia,C0022116,"Lack of blood supply to an area of the body, resulting in impairment of tissue oxygenation. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0022116
+cirrhosis,C1623038,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C1623038
+exanthema,C0015230,A red eruption of the skin. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0015230
+benign prostatic hypertrophy,C0005001,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0005001
+kidney failure acute,C0022660,"Sudden and sustained deterioration of the kidney function characterized by decreased glomerular filtration rate, increased serum creatinine or oliguria. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0022660
+mitral valve insufficiency,C0026266,An abnormality of the mitral valve characterized by insufficiency or incompetence of the mitral valve resulting in retrograde leaking of blood through the mitral valve upon ventricular contraction. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0026266
+arthritis,C0003864,Inflammation of a joint. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0003864
+bronchitis,C0006277,Inflammation of the large airways in the lung including any part of the bronchi from the primary bronchi to the tertiary bronchi. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006277
+hemiparesis,C0018989,"Loss of strength in the arm, leg, and sometimes face on one side of the body. Hemiplegia refers to a complete loss of strength, whereas hemiparesis refers to an incomplete loss of strength. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0018989
+osteoporosis,C0029456,"Osteoporosis is a systemic skeletal disease characterized by low bone density and microarchitectural deterioration of bone tissue with a consequent increase in bone fragility. According to the WHO criteria, osteoporosis is defined as a BMD that lies 2.5 standard deviations or more below the average value for young healthy adults (a T-score below -2.5 SD). [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0029456
+transient ischemic attack,C0007787,"A brief attack (from a few minutes to an hour) of cerebral dysfunction of vascular origin, with no persistent neurological deficit. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0007787
+adenocarcinoma,C0001418,"A common cancer characterized by the presence of malignant glandular cells. Morphologically, adenocarcinomas are classified according to the growth pattern (e.g., papillary, alveolar) or according to the secreting product (e.g., mucinous, serous). Representative examples of adenocarcinoma are ductal and lobular breast carcinoma, lung adenocarcinoma, renal cell carcinoma, hepatocellular carcinoma (hepatoma), colon adenocarcinoma, and prostate adenocarcinoma. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0001418
+paranoia,C1456784,A persecutory delusion of supposed hostility of others. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C1456784
+pancreatitis,C0030305,The presence of inflammation in the pancreas. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0030305
+incontinence,C0021167,Involuntary passage of stool or urine from the body. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0021167
+paroxysmal dyspnea,C0013405,A sudden attack of dyspnea that occurs while the affected person is at rest. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0013405
+hernia,C0019270,The protrusion of part of an organ or fibroadipose tissue through an abnormal opening. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019270
+malignant neoplasm of prostate,C0376358,A cancer of the prostate. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0376358
+carcinoma prostate,C0600139,"One of the most common malignant tumors afflicting men. The majority of carcinomas arise in the peripheral zone and a minority occur in the central or the transitional zone of the prostate gland. Grossly, prostatic carcinomas appear as ill-defined yellow areas of discoloration in the prostate gland lobes. Adenocarcinomas represent the overwhelming majority of prostatic carcinomas. Prostatic-specific antigen (PSA) serum test is widely used as a screening test for the early detection of prostatic carcinoma. Treatment options include radical prostatectomy, radiation therapy, androgen ablation and cryotherapy. Watchful waiting or surveillance alone is an option for older patients with low-grade or low-stage disease. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0600139
+edema pulmonary,C0034063,Fluid accumulation in the lungs. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0034063
+lymphatic diseases,C0024228,Diseases of LYMPH; LYMPH NODES; or LYMPHATIC VESSELS. [from MeSH],MeSH,http://www.nlm.nih.gov/pubs/factsheets/mesh.html,https://www.ncbi.nlm.nih.gov/medgen/?term=C0024228
+stenosis aortic valve,C0003507,The presence of a stenosis (narrowing) of the aortic valve. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0003507
+malignant neoplasm of breast,C0006142,"Breast cancer is a disease in which certain cells in the breast become abnormal and multiply uncontrollably to form a tumor. Although breast cancer is much more common in women, this form of cancer can also develop in men.  In both women and men, the most common form of breast cancer begins in cells lining the milk ducts (ductal cancer). In women, cancer can also develop in the glands that produce milk (lobular cancer). Most men have little or no lobular tissue, so lobular cancer in men is very rare. \n\nIn its early stages, breast cancer usually does not cause pain and may exhibit no noticeable symptoms. As the cancer progresses, signs and symptoms can include a lump or thickening in or near the breast; a change in the size or shape of the breast; nipple discharge, tenderness, or retraction (turning inward); and skin irritation, dimpling, redness, or scaliness. However, these changes can occur as part of many different conditions. Having one or more of these symptoms does not mean that a person definitely has breast cancer.\n\nIn some cases, cancerous cells can invade surrounding breast tissue. In these cases, the condition is known as invasive breast cancer. Sometimes, tumors spread to other parts of the body. If breast cancer spreads, cancerous cells most often appear in the bones, liver, lungs, or brain. Tumors that begin at one site and then spread to other areas of the body are called metastatic cancers.\n\nA small percentage of all breast cancers cluster in families. These cancers are described as hereditary and are associated with inherited gene mutations. Hereditary breast cancers tend to develop earlier in life than noninherited (sporadic) cases, and new (primary) tumors are more likely to develop in both breasts. [from MedlinePlus Genetics]",MedlinePlus Genetics,https://medlineplus.gov/genetics/,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006142
+carcinoma breast,C0678222,The presence of a carcinoma of the breast. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0678222
+schizophrenia,C0036341,"Schizophrenia is highly heritable, as shown by family, twin, and adoption studies. For example, for identical twins, if one twin develops schizophrenia, the other twin has about a 50% chance of also developing the disease. The risk of the general population developing the schizophrenia is about 0.3-0.7% worldwide. The search for “schizophrenia genes” has been elusive. Initial linkage studies looked at parts of the genome associated with schizophrenia, and many candidate genes were identified, including APOE, COMT, DAO, DRD1, DRD2, DRD4, DTNBP1, GABRB2, GRIN2B, HP, IL1B, MTHFR, PLXNA2, SLC6A4, TP53, and TPH1. However, some of these have later been questioned. Microdeletions and microduplications have been found to be three times more common in individuals with schizophrenia, compared to controls. Because these deletions and duplications are in genes that are overexpressed in pathways related to brain development, it is possible that the inheritance of multiple rare variants may contribute to the development of schizophrenia. Several genetic disorders feature schizophrenia as a clinical feature. The 22q11.2 Deletion Syndrome comprises many different syndromes, of which one of the most serious is DiGeorge syndrome. Children born with DiGeorge syndrome typically have heart defects, cleft palate, learning difficulties, and immune deficiency. Schizophrenia is a late manifestation, affecting around 30% of individuals. Microdeletions and duplications in chromosome 1, 2, 3, 7, 15 and 16 have also been associated with schizophrenia. In 2014, a genome-wide association study looked at the genomes of over 35,000 patients and 110,00 controls. The study identified 108 SNPs that were associated with schizophrenia, 83 of which had not been previously reported. As expected, many of these loci occurred in genes that are expressed in the brain. For example, the SNPs included a gene that encodes the dopamine D2 receptor, DRD2 (the target of antipsychotic drugs), and many genes involved in glutamine neurotransmitter pathways and synaptic plasticity (e.g., GRM3, GRIN2A, SRR, GRIA1). More surprisingly, however, associations were also enriched among genes expressed in tissues with important immune functions. In 2016, a study based on nearly 65,000 people investigated the association between schizophrenia and variation in the Major Histocompatibility Complex (MHC) locus—a region on chromosome 6 that is important for immune function. The study focused on the C4 gene (complement component 4) that exists as two distinct genes: C4A and C4B, which encode particularly structurally diverse alleles. The study found that the alleles which promoted greater expression of C4A in the brain were associated with a greater risk of schizophrenia. By using mice models, the study showed that C4 is involved in the elimination of synapses during brain maturation. In humans, “synaptic pruning” is most active during late adolescence, which coincides with the typical onset of symptoms of schizophrenia. It is therefore possible that the inheritance of specific C4A alleles could lead to “run away” synaptic pruning, increasing the risk of schizophrenia. Further research may even determine C4 as a potential therapeutic target. [from Medical Genetics Summaries]",Medical Genetics Summaries,https://www.ncbi.nlm.nih.gov/books/NBK61999,https://www.ncbi.nlm.nih.gov/medgen/?term=C0036341
+diverticulitis,C0012813,"An infection that develops in the diverticula of the intestinal tract. Signs and symptoms include abdominal pain, fever, and leukocytosis. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0012813
+overload fluid,C0546817,"An increase in the amount of intravascular fluid, particularly in the volume of the circulating blood. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0546817
+ulcer peptic,C0030920,An ulcer of the gastrointestinal tract. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0030920
+osteomyelitis,C0029443,Osteomyelitis is an inflammatory process accompanied by bone destruction and caused by an infecting microorganism. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0029443
+gastritis,C0017152,The presence of inflammation of the gastric mucous membrane. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0017152
+bacteremia,C0004610,Presence of viable bacteria in the blood. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0004610
+failure kidney,C0035078,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0035078
+sickle cell anemia,C0002895,"Excerpted from the GeneReview: Sickle Cell DiseaseSickle cell disease (SCD) is characterized by intermittent vaso-occlusive events and chronic hemolytic anemia. Vaso-occlusive events result in tissue ischemia leading to acute and chronic pain as well as organ damage that can affect any organ system, including the bones, spleen, liver, brain, lungs, kidneys, and joints. Dactylitis (pain and/or swelling of the hands or feet) is often the earliest manifestation of SCD. In children, the spleen can become engorged with blood cells in a ""splenic sequestration."" The spleen is particularly vulnerable to infarction and the majority of individuals with SCD who are not on hydroxyurea or transfusion therapy become functionally asplenic in early childhood, increasing their risk for certain types of bacterial infections. Acute chest syndrome is a major cause of mortality in SCD. Chronic hemolysis can result in varying degrees of anemia, jaundice, cholelithiasis, and delayed growth and sexual maturation. Individuals with the highest rates of hemolysis are predisposed to pulmonary artery hypertension, priapism, and leg ulcers but may be relatively protected from vaso-occlusive pain. [from GeneReviews]Full text of GeneReview (by section):Summary  |  GeneReview Scope  |  Diagnosis  |  Clinical Characteristics  |  Genetically Related (Allelic) Disorders  |  Differential Diagnosis  |  Management  |  Genetic Counseling  |  Resources  |  Molecular Genetics  |  Chapter Notes  |  ReferencesAuthors:
+ MA Bender   view full author information",Sickle Cell Disease,/books/NBK1377,https://www.ncbi.nlm.nih.gov/medgen/?term=C0002895
+failure heart,C0018801,"Inability of the heart to pump blood at an adequate rate to meet tissue metabolic requirements. Clinical symptoms of heart failure include: unusual dyspnea on light exertion, recurrent dyspnea occurring in the supine position, fluid retention or rales, jugular venous distension, pulmonary edema on physical exam, or pulmonary edema on chest x-ray presumed to be cardiac dysfunction. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0018801
+upper respiratory infection,C0041912,"An infectious process affecting the upper respiratory tract (nose, paranasal sinuses, pharynx, larynx, or trachea). Symptoms include congestion, sneezing, coughing, fever, and sore throat. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0041912
+hepatitis,C0019158,Inflammation of the liver. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019158
+hypertension pulmonary,C0020542,Increased pressure within the pulmonary circulation due to lung or heart disorder. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020542
+deglutition disorder,C0011168,Difficulty in swallowing. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011168
+gout,C0018099,"Recurrent attacks of acute inflammatory arthritis of a joint or set of joints caused by elevated levels of uric acid in the blood which crystallize and are deposited in joints, tendons, and surrounding tissues. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0018099
+thrombocytopaenia,C0040034,A reduction in the number of circulating thrombocytes. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0040034
+hypoglycemia,C0020615,A decreased concentration of glucose in the blood. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020615
+pneumonia aspiration,C0032290,"Pneumonia due to the aspiration (breathing in) of food, liquid, or gastric contents into the upper respiratory tract. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0032290
+colitis,C0009319,"Colitis refers to an inflammation of the colon and is often used to describe an inflammation of the large intestine (colon, cecum and rectum). Colitides may be acute and self-limited or chronic, and broadly fit into the category of digestive diseases. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0009319
+diverticulosis,C1510475,"A finding indicating the presence of multiple pouches, usually in the colonic or gastric wall. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C1510475
+suicide attempt,C0038663,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0038663
+Pneumocystis carinii pneumonia,C0032305,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0032305
+hepatitis B,C0019163,A viral infection caused by the hepatitis B virus. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019163
+parkinson disease,C0030567,"Parkinson disease was first described by James Parkinson in 1817. It is the second most common neurodegenerative disorder after Alzheimer disease (AD; 104300), affecting approximately 1% of the population over age 50 (Polymeropoulos et al., 1996). Reviews Warner and Schapira (2003) reviewed the genetic and environmental causes of Parkinson disease. Feany (2004) reviewed the genetics of Parkinson disease and provided a speculative model of interactions among proteins implicated in PD. Lees et al. (2009) provided a review of Parkinson disease, with emphasis on diagnosis, neuropathology, and treatment. Genetic Heterogeneity of Parkinson Disease Several loci for autosomal dominant Parkinson disease have been identified, including PARK1 (168601) and PARK4, caused by mutation in or triplication of the alpha-synuclein gene (SNCA; 163890), respectively, on 4q22; PARK5 (191342), caused by mutation in the UCHL1 gene on 4p13; PARK8 (607060), caused by mutation in the LRRK2 gene (609007) on 12q12; PARK11 (607688), caused by mutation in the GIGYF2 gene (612003) on 2q37; PARK13 (610297), caused by mutation in the HTRA2 gene (606441) on 2p13; PARK17 (614203), caused by mutation in the VPS35 gene (601501) on 16q11; PARK18 (614251), caused by mutation in the EIF4G1 gene (600495) on 3q27; PARK22 (616710), caused by mutation in the CHCHD2 gene (616244) on chromosome 7p11.2; and PARK24 (619491), caused by mutation in the PSAP gene (176801) on chromosome 10q22. Several loci for autosomal recessive early-onset Parkinson disease have been identified: PARK2 (600116), caused by mutation in the gene encoding parkin (PARK2; 602544) on 6q26; PARK6 (605909), caused by mutation in the PINK1 gene (608309) on 1p36; PARK7 (606324), caused by mutation in the DJ1 gene (PARK7; 602533) on 1p36; PARK14 (612953), caused by mutation in the PLA2G6 gene (603604) on 22q13; PARK15 (260300), caused by mutation in the FBXO7 gene (605648) on 22q12-q13; PARK19A (615528) and PARK19B (see 615528), caused by mutation in the DNAJC6 gene (608375) on 1p32; PARK20 (615530), caused by mutation in the SYNJ1 gene (604297) on 21q22; and PARK23 (616840), caused by mutation in the VPS13C gene (608879) on chromosome 15q22. PARK3 (602404) has been mapped to chromosome 2p13; PARK10 (606852) has been mapped to chromosome 1p34-p32; PARK16 (613164) has been mapped to chromosome 1q32. See also PARK21 (616361). A locus on the X chromosome has been identified (PARK12; 300557). There is also evidence that mitochondrial mutations may cause or contribute to Parkinson disease (see 556500). Susceptibility to the development of the more common late-onset form of Parkinson disease has been associated with polymorphisms or mutations in several genes, including GBA (606463), MAPT (157140), MC1R (155555), ADH1C (103730), and genes at the HLA locus (see, e.g., HLA-DRA, 142860). Each of these risk factors independently may have a modest effect on disease development, but together may have a substantial cumulative effect (Hamza et al., 2010). Susceptibility to PD may also be conferred by expanded trinucleotide repeats in several genes causing other neurologic disorders usually characterized by spinocerebellar ataxia (SCA), including the ATXN2 (601517), ATXN3 (607047), TBP (600075), and ATXN8OS (603680) genes. [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0030567
+lymphoma,C0024299,A cancer originating in lymphocytes and presenting as a solid tumor of lymhpoid cells. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0024299
+hyperglycemia,C0020456,An increased concentration of glucose in the blood. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020456
+encephalopathy,C0085584,"Encephalopathy is a term that means brain disease, damage, or malfunction. In general, encephalopathy is manifested by an altered mental state. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0085584
+tricuspid valve insufficiency,C0040961,"Failure of the tricuspid valve to close sufficiently upon contraction of the right ventricle, causing blood to regurgitate (flow backward) into the right atrium. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0040961
+Alzheimer's disease,C0002395,"Alzheimer disease is the most common form of progressive dementia in the elderly. It is a neurodegenerative disorder characterized by the neuropathologic findings of intracellular neurofibrillary tangles (NFT) and extracellular amyloid plaques that accumulate in vulnerable brain regions (Sennvik et al., 2000). Terry and Davies (1980) pointed out that the 'presenile' form, with onset before age 65, is identical to the most common form of late-onset or 'senile' dementia, and suggested the term 'senile dementia of the Alzheimer type' (SDAT). Haines (1991) reviewed the genetics of AD. Selkoe (1996) reviewed the pathophysiology, chromosomal loci, and pathogenetic mechanisms of Alzheimer disease. Theuns and Van Broeckhoven (2000) reviewed the transcriptional regulation of the genes involved in Alzheimer disease. Genetic Heterogeneity of Alzheimer Disease Alzheimer disease is a genetically heterogeneous disorder. See also AD2 (104310), associated with the APOE*4 allele (107741) on chromosome 19; AD3 (607822), caused by mutation in the presenilin-1 gene (PSEN1; 104311) on 14q; and AD4 (606889), caused by mutation in the PSEN2 gene (600759) on 1q31. There is evidence for additional AD loci on other chromosomes; see AD5 (602096) on 12p11; AD6 (605526) on 10q24; AD7 (606187) on 10p13; AD8 (607116) on 20p; AD9 (608907), associated with variation in the ABCA7 gene (605414) on 19p13; AD10 (609636) on 7q36; AD11 (609790) on 9q22; AD12 (611073) on 8p12-q22; AD13 (611152) on 1q21; AD14 (611154) on 1q25; AD15 (604154) on 3q22-q24; AD16 (300756) on Xq21.3; AD17 (615080) on 6p21.2; and AD18 (615590), associated with variation in the ADAM10 gene (602192) on 15q21. Evidence also suggests that mitochondrial DNA polymorphisms may be risk factors in Alzheimer disease (502500). Finally, there have been associations between AD and various polymorphisms in other genes, including alpha-2-macroglobulin (A2M; 103950.0005), low density lipoprotein-related protein-1 (LRP1; 107770), the transferrin gene (TF; 190000), the hemochromatosis gene (HFE; 613609), the NOS3 gene (163729), the vascular endothelial growth factor gene (VEGF; 192240), the ABCA2 gene (600047), and the TNF gene (191160) (see MOLECULAR GENETICS). [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0002395
+candidiasis,C0006840,Infection with the organism Candida. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006840
+oral candidiasis,C0006849,Infection of the mucosal lining of the mouth with the fungus Candida albicans. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006849
+neuropathy,C0442874,"A disorder affecting the cranial nerves or the peripheral nervous system. It manifests with pain, tingling, numbness, and muscle weakness. It may be the result of physical injury, toxic substances, viral diseases, diabetes, renal failure, cancer, and drugs. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0442874
+kidney disease,C0022658,A nonspecific term referring to disease or damage of the kidneys. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0022658
+fibroid tumor,C0023267,"A well-circumscribed benign smooth muscle neoplasm characterized by the presence of spindle cells with cigar-shaped nuclei, interlacing fascicles, and a whorled pattern. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0023267
+glaucoma,C0017601,Glaucoma refers loss of retinal ganglion cells in a characteristic pattern of optic neuropathy usually associated with increased intraocular pressure. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0017601
+neoplasm metastasis,C0027627,The spread or migration of cancer cells from one part of the body (the organ in which it first appeared) to another. The secondary tumor contains cells that are like those in the original (primary) tumor. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0027627
+malignant tumor of colon,C0007102,"A primary or metastatic malignant neoplasm that affects the colon. Representative examples include carcinoma, lymphoma, and sarcoma. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0007102
+carcinoma colon,C0699790,"Excerpted from the GeneReview: Lynch SyndromeLynch syndrome is characterized by an increased risk for colorectal cancer (CRC) and cancers of the endometrium, ovary, stomach, small bowel, urinary tract, biliary tract, brain (usually glioblastoma), skin (sebaceous adenomas, sebaceous carcinomas, and keratoacanthomas), pancreas, and prostate. Cancer risks and age of onset vary depending on the associated gene. Several other cancer types have been reported to occur in individuals with Lynch syndrome (e.g., breast, sarcomas, adrenocortical carcinoma). However, the data are not sufficient to demonstrate that the risk of developing these cancers is increased in individuals with Lynch syndrome. [from GeneReviews]Full text of GeneReview (by section):Summary  |  Diagnosis  |  Clinical Characteristics  |  Genetically Related (Allelic) Disorders  |  Differential Diagnosis  |  Management  |  Genetic Counseling  |  Resources  |  Molecular Genetics  |  Chapter Notes  |  ReferencesAuthors:
+ Gregory Idos  |   Laura Valle   view full author information",Lynch Syndrome,/books/NBK1211,https://www.ncbi.nlm.nih.gov/medgen/?term=C0699790
+ketoacidosis diabetic,C0011880,A type of diabetic metabolic abnormality with an accumulation of ketone bodies. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011880
+tonic-clonic epilepsy,C0014549,A generalized tonic-clonic seizure. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0014549
+tonic-clonic seizures,C0494475,"A bilateral tonic-clonic seizure is a seizure defined by a tonic (bilateral increased tone, lasting seconds to minutes) and then a clonic (bilateral sustained rhythmic jerking) phase. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0494475
+malignant neoplasms,C0006826,"A tumor composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006826
+respiratory failure,C1145670,A severe form of respiratory insufficiency characterized by inadequate gas exchange such that the levels of oxygen or carbon dioxide cannot be maintained within normal limits. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C1145670
+melanoma,C0025202,"The presence of a melanoma, a malignant cancer originating from pigment producing melanocytes. Melanoma can originate from the skin or the pigmented layers of the eye (the uvea). [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0025202
+gastroenteritis,C0017160,"An inflammatory disorder that affects the upper and lower gastrointestinal tract. Most commonly, this is attributed to viruses; however bacteria, parasites or adverse reactions can also be the culprit. Symptoms include acute diarrhea and vomiting. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0017160
+malignant neoplasm of lung,C0242379,A primary or metastatic malignant neoplasm involving the lung. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0242379
+carcinoma of lung,C0684249,"Lung cancer is the leading cause of cancer deaths in the U.S. and worldwide. The 2 major forms of lung cancer are nonsmall cell lung cancer and small cell lung cancer (see 182280), which account for 85% and 15% of all lung cancers, respectively. Nonsmall cell lung cancer can be divided into 3 major histologic subtypes: squamous cell carcinoma, adenocarcinoma, and large cell lung cancer. Cigarette smoking causes all types of lung cancer, but it is most strongly linked with small cell lung cancer and squamous cell carcinoma. Adenocarcinoma is the most common type in patients who have never smoked. Nonsmall cell lung cancer is often diagnosed at an advanced stage and has a poor prognosis (summary by Herbst et al., 2008). [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0684249
+manic disorder,C0024713,The manic phase of bipolar disorder. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0024713
+personality disorder,C0031212,An abnormality of mental functioning affecting the personality and behavioural tendencies of an individual and characterized by a rigid and unhealthy pattern of thinking and behavior. The definition of a personal disorder implies that the abnormality is not the result of damage or insult to the brain or from another psychiatric disorder. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0031212
+primary carcinoma of the liver cells,C0019204,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019204
+emphysema pulmonary,C0034067,"A subcategory of chronic obstructive pulmonary disease (COPD). It occurs in people who smoke and suffer from chronic bronchitis. It is characterized by inflation of the alveoli, alveolar wall damage, and reduction in the number of alveoli, resulting in difficulty breathing. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0034067
+hemorrhoids,C0019112,"Enlarged, bulging blood vessels in and around the anus often associated with rectal bleeding, itching, and pain. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019112
+spasm bronchial,C0006266,"A spasm (sudden, involuntary constriction) of the bronchioles. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0006266
+aphasia,C0003537,An acquired language impairment of some or all of the abilities to produce or comprehend speech and to read or write. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0003537
+obesity morbid,C0028756,"An excess of body weight, normally defined as an individual with a body mass index greater than 35 or a body weight greater than one hundred percent of ideal body weight. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0028756
+pyelonephritis,C0034186,"An inflammation of the kidney involving the parenchyma of kidney, the renal pelvis and the kidney calices. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0034186
+endocarditis,C0014118,"An inflammation of the endocardium, the inner layer of the heart, which usually involves the heart valves. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0014118
+effusion pericardial,C0031039,Accumulation of fluid within the pericardium. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0031039
+pericardial effusion body substance,C1253937,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C1253937
+chronic alcoholic intoxication,C0001973,"Alcohol use disorder is a diagnosis made when an individual has severe problems related to drinking alcohol. Alcohol use disorder can cause major health, social, and economic problems, and can endanger affected individuals and others through behaviors prompted by impaired decision-making and lowered inhibitions, such as aggression, unprotected sex, or driving while intoxicated.\n\nAlcohol use disorder is a broad diagnosis that encompasses several commonly used terms describing problems with drinking. It includes alcoholism, also called alcohol addiction, which is a long-lasting (chronic) condition characterized by a powerful, compulsive urge to drink alcohol and the inability to stop drinking after starting. In addition to alcoholism, alcohol use disorder includes alcohol abuse, which involves problem drinking without addiction.\n\nHabitual excessive use of alcohol changes the chemistry of the brain and leads to tolerance, which means that over time the amount of alcohol ingested needs to be increased to achieve the same effect. Long-term excessive use of alcohol may also produce dependence, which means that when people stop drinking, they have physical and psychological symptoms of withdrawal, such as sleep problems, irritability, jumpiness, shakiness, restlessness, headache, nausea, sweating, anxiety, and depression. In severe cases, agitation, fever, seizures, and hallucinations can occur; this pattern of severe withdrawal symptoms is called delirium tremens.\n\nThe heavy drinking that often occurs in alcohol use disorder, and can also occur in short-term episodes called binge drinking, can lead to a life-threatening overdose known as alcohol poisoning. Alcohol poisoning occurs when a large quantity of alcohol consumed over a short time causes problems with breathing, heart rate, body temperature, and the gag reflex. Signs and symptoms can include vomiting, choking, confusion, slow or irregular breathing, pale or blue-tinged skin, seizures, a low body temperature, a toxic buildup of substances called ketones in the blood (alcoholic ketoacidosis), and passing out (unconsciousness). Coma, brain damage, and death can occur if alcohol poisoning is not treated immediately.\n\nChronic heavy alcohol use can also cause long-term problems affecting many organs and systems of the body. These health problems include irreversible liver disease (cirrhosis), inflammation of the pancreas (pancreatitis), brain dysfunction (encephalopathy), nerve damage (neuropathy), high blood pressure (hypertension), stroke, weakening of the heart muscle (cardiomyopathy), irregular heartbeats (arrhythmia), and immune system problems. Long-term overuse of alcohol also increases the risk of certain cancers, including cancers of the mouth, throat, esophagus, liver, and breast. Alcohol use in pregnant women can cause birth defects and fetal alcohol syndrome, which can lead to lifelong physical and behavioral problems in the affected child. [from MedlinePlus Genetics]",MedlinePlus Genetics,https://medlineplus.gov/genetics/,https://www.ncbi.nlm.nih.gov/medgen/?term=C0001973
+pneumothorax,C0032326,Accumulation of air in the pleural cavity leading to a partially or completely collapsed lung. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0032326
+delirium,C0011206,A state of sudden and severe confusion. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011206
+neutropenia,C0027947,A decrease in the number of NEUTROPHILS found in the blood. [from MeSH],MeSH,http://www.nlm.nih.gov/pubs/factsheets/mesh.html,https://www.ncbi.nlm.nih.gov/medgen/?term=C0027947
+hyperbilirubinemia,C0020433,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0020433
+influenza,C0021400,"An acute viral infection of the respiratory tract, occurring in isolated cases, in epidemics, or in pandemics; it is caused by serologically different strains of viruses (influenzaviruses) designated A, B, and C, has a 3-day incubation period, and usually lasts for 3 to 10 days. It is marked by inflammation of the nasal mucosa, pharynx, and conjunctiva; headache; myalgia; often fever, chills, and prostration; and occasionally involvement of the myocardium or central nervous system. [from NCI]",NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0021400
+dependence,C0439857,The psychological or physiological need to take a substance in order to experience its effects or to avoid the effects of its absence. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0439857
+thrombus,C0087086,"Etiology
+Systemic Immune-Inflammation Index: A Novel Predictor of Coronary Thrombus Burden in Patients with Non-ST Acute Coronary Syndrome.
+Özkan U,
+Gürdoğan M,
+Öztürk C,
+Demir M,
+Akkuş ÖF,
+Yılmaz E,
+Altay S
+Medicina (Kaunas)
+2022 Jan 18;58(2)
+doi: 10.3390/medicina58020143.
+PMID: 35208466Free PMC Article
+
+Step-by-step and orderly lowering of the height of inferior vena cava tumor thrombus is the key to robot-assisted thrombectomy for Mayo III/IV tumor thrombus.
+Zhao GD,
+Zhang XP,
+Hu MG,
+Huang QB,
+Xu S,
+Wang BJ,
+Ma X,
+Zhang X,
+Zou WB,
+Zhang X,
+Zhao ZM,
+Tan XL,
+Chou S,
+Wang G,
+Liu R
+BMC Cancer
+2022 Feb 7;22(1):151.
+doi: 10.1186/s12885-022-09235-7.
+PMID: 35130848Free PMC Article
+
+Continuum modeling of thrombus formation and growth under different shear rates.
+Rezaeimoghaddam M,
+van de Vosse FN
+J Biomech
+2022 Feb;132:110915.
+Epub 2022 Jan 4
+doi: 10.1016/j.jbiomech.2021.110915.
+PMID: 35032838
+
+A New Score for Determining Thrombus Burden in STEMI Patients: The MAPH Score.
+Abacioglu OO,
+Yildirim A,
+Karadeniz M,
+Abacioglu S,
+Koyunsever NY,
+Dindas F,
+Dogdus M,
+Kaplangoray M
+Clin Appl Thromb Hemost
+2022 Jan-Dec;28:10760296211073767.
+doi: 10.1177/10760296211073767.
+PMID: 35018837Free PMC Article
+
+Renal cell carcinoma with tumor thrombus growing against the direction of venous return: an indicator of complicated surgery and poor prognosis.
+Liu Z,
+Li Y,
+Zhao X,
+Ge L,
+Zhu G,
+Hong P,
+Tang S,
+Zhang S,
+Tian X,
+Wang S,
+Liu C,
+Zhang H,
+Ma L
+BMC Surg
+2021 Dec 28;21(1):443.
+doi: 10.1186/s12893-021-01448-0.
+PMID: 34963464Free PMC Article
+See all (12007)
+Diagnosis
+Systemic Immune-Inflammation Index: A Novel Predictor of Coronary Thrombus Burden in Patients with Non-ST Acute Coronary Syndrome.
+Özkan U,
+Gürdoğan M,
+Öztürk C,
+Demir M,
+Akkuş ÖF,
+Yılmaz E,
+Altay S
+Medicina (Kaunas)
+2022 Jan 18;58(2)
+doi: 10.3390/medicina58020143.
+PMID: 35208466Free PMC Article
+
+A New Score for Determining Thrombus Burden in STEMI Patients: The MAPH Score.
+Abacioglu OO,
+Yildirim A,
+Karadeniz M,
+Abacioglu S,
+Koyunsever NY,
+Dindas F,
+Dogdus M,
+Kaplangoray M
+Clin Appl Thromb Hemost
+2022 Jan-Dec;28:10760296211073767.
+doi: 10.1177/10760296211073767.
+PMID: 35018837Free PMC Article
+
+Role of anticoagulation in the management of tumor thrombus: A 10-year single-center experience.
+Agarwal S,
+Mullikin D,
+Scheurer ME,
+Smith V,
+Naik-Mathuria B,
+Guillerman RP,
+Foster JH,
+Diaz R,
+Sartain SE
+Pediatr Blood Cancer
+2021 Sep;68(9):e29173.
+Epub 2021 Jun 1
+doi: 10.1002/pbc.29173.
+PMID: 34061441
+
+Novel application of indocyanine green fluorescence imaging for real-time detection of thrombus in a membrane oxygenator.
+Sakurai H,
+Fujiwara T,
+Ohuchi K,
+Hijikata W,
+Inoue Y,
+Seki H,
+Tahara T,
+Yokota S,
+Ogata A,
+Mizuno T,
+Arai H
+Artif Organs
+2021 Oct;45(10):1173-1182.
+Epub 2021 Jun 12
+doi: 10.1111/aor.13999.
+PMID: 34037247
+
+Polarimetric Signatures of Coronary Thrombus in Patients With Acute Coronary Syndrome.
+van Zandvoort LJC,
+Otsuka K,
+Villiger M,
+Neleman T,
+Dijkstra J,
+Zijlstra F,
+van Mieghem NM,
+Bouma BE,
+Daemen J
+Circ J
+2021 Sep 24;85(10):1806-1813.
+Epub 2021 Apr 7
+doi: 10.1253/circj.CJ-20-0862.
+PMID: 33828020
+See all (10017)
+Therapy
+Thrombus-targeted nanoparticles for thrombin-triggered thrombolysis and local inflammatory microenvironment regulation.
+Zhang H,
+Qu H,
+He Q,
+Gao L,
+Zhang H,
+Wang Y,
+Zhang Z,
+Hou L
+J Control Release
+2021 Nov 10;339:195-207.
+Epub 2021 Jun 29
+doi: 10.1016/j.jconrel.2021.06.043.
+PMID: 34214595
+
+Role of anticoagulation in the management of tumor thrombus: A 10-year single-center experience.
+Agarwal S,
+Mullikin D,
+Scheurer ME,
+Smith V,
+Naik-Mathuria B,
+Guillerman RP,
+Foster JH,
+Diaz R,
+Sartain SE
+Pediatr Blood Cancer
+2021 Sep;68(9):e29173.
+Epub 2021 Jun 1
+doi: 10.1002/pbc.29173.
+PMID: 34061441
+
+Novel application of indocyanine green fluorescence imaging for real-time detection of thrombus in a membrane oxygenator.
+Sakurai H,
+Fujiwara T,
+Ohuchi K,
+Hijikata W,
+Inoue Y,
+Seki H,
+Tahara T,
+Yokota S,
+Ogata A,
+Mizuno T,
+Arai H
+Artif Organs
+2021 Oct;45(10):1173-1182.
+Epub 2021 Jun 12
+doi: 10.1111/aor.13999.
+PMID: 34037247
+
+Direct oral anticoagulants <i>vs.</i> vitamin K antagonists for left ventricular thrombus: a systematic review and meta-analysis.
+Trongtorsak A,
+Thangjui S,
+Kewcharoen J,
+Polpichai N,
+Yodsuwan R,
+Kittipibul V,
+Friedman HJ,
+Estrada AQ
+Acta Cardiol
+2021 Nov;76(9):933-942.
+Epub 2021 Jan 4
+doi: 10.1080/00015385.2020.1858538.
+PMID: 33393861
+
+The use of novel oral anticoagulants compared to vitamin K antagonists (warfarin) in patients with left ventricular thrombus after acute myocardial infarction.
+Jones DA,
+Wright P,
+Alizadeh MA,
+Fhadil S,
+Rathod KS,
+Guttmann O,
+Knight C,
+Timmis A,
+Baumbach A,
+Wragg A,
+Mathur A,
+Antoniou S
+Eur Heart J Cardiovasc Pharmacother
+2021 Sep 21;7(5):398-404.
+doi: 10.1093/ehjcvp/pvaa096.
+PMID: 32730627
+See all (10895)
+Prognosis
+Systemic Immune-Inflammation Index: A Novel Predictor of Coronary Thrombus Burden in Patients with Non-ST Acute Coronary Syndrome.
+Özkan U,
+Gürdoğan M,
+Öztürk C,
+Demir M,
+Akkuş ÖF,
+Yılmaz E,
+Altay S
+Medicina (Kaunas)
+2022 Jan 18;58(2)
+doi: 10.3390/medicina58020143.
+PMID: 35208466Free PMC Article
+
+Continuum modeling of thrombus formation and growth under different shear rates.
+Rezaeimoghaddam M,
+van de Vosse FN
+J Biomech
+2022 Feb;132:110915.
+Epub 2022 Jan 4
+doi: 10.1016/j.jbiomech.2021.110915.
+PMID: 35032838
+
+A New Score for Determining Thrombus Burden in STEMI Patients: The MAPH Score.
+Abacioglu OO,
+Yildirim A,
+Karadeniz M,
+Abacioglu S,
+Koyunsever NY,
+Dindas F,
+Dogdus M,
+Kaplangoray M
+Clin Appl Thromb Hemost
+2022 Jan-Dec;28:10760296211073767.
+doi: 10.1177/10760296211073767.
+PMID: 35018837Free PMC Article
+
+Renal cell carcinoma with tumor thrombus growing against the direction of venous return: an indicator of complicated surgery and poor prognosis.
+Liu Z,
+Li Y,
+Zhao X,
+Ge L,
+Zhu G,
+Hong P,
+Tang S,
+Zhang S,
+Tian X,
+Wang S,
+Liu C,
+Zhang H,
+Ma L
+BMC Surg
+2021 Dec 28;21(1):443.
+doi: 10.1186/s12893-021-01448-0.
+PMID: 34963464Free PMC Article
+
+Prevalence of left atrial appendage thrombus in patients with acute ischaemic stroke and sinus rhythm: a cross-sectional study.
+Nguyen HT,
+Nguyen HVB,
+Nguyen HQ,
+Le HQ
+BMJ Open
+2021 Dec 17;11(12):e051563.
+doi: 10.1136/bmjopen-2021-051563.
+PMID: 34921077Free PMC Article
+See all (7357)
+Clinical prediction guides
+Decoding the multicellular ecosystem of vena caval tumor thrombus in clear cell renal cell carcinoma by single-cell RNA sequencing.
+Shi Y,
+Zhang Q,
+Bi H,
+Lu M,
+Tan Y,
+Zou D,
+Ge L,
+Chen Z,
+Liu C,
+Ci W,
+Ma L
+Genome Biol
+2022 Mar 31;23(1):87.
+doi: 10.1186/s13059-022-02651-9.
+PMID: 35361264Free PMC Article
+
+Systemic Immune-Inflammation Index: A Novel Predictor of Coronary Thrombus Burden in Patients with Non-ST Acute Coronary Syndrome.
+Özkan U,
+Gürdoğan M,
+Öztürk C,
+Demir M,
+Akkuş ÖF,
+Yılmaz E,
+Altay S
+Medicina (Kaunas)
+2022 Jan 18;58(2)
+doi: 10.3390/medicina58020143.
+PMID: 35208466Free PMC Article
+
+Continuum modeling of thrombus formation and growth under different shear rates.
+Rezaeimoghaddam M,
+van de Vosse FN
+J Biomech
+2022 Feb;132:110915.
+Epub 2022 Jan 4
+doi: 10.1016/j.jbiomech.2021.110915.
+PMID: 35032838
+
+A New Score for Determining Thrombus Burden in STEMI Patients: The MAPH Score.
+Abacioglu OO,
+Yildirim A,
+Karadeniz M,
+Abacioglu S,
+Koyunsever NY,
+Dindas F,
+Dogdus M,
+Kaplangoray M
+Clin Appl Thromb Hemost
+2022 Jan-Dec;28:10760296211073767.
+doi: 10.1177/10760296211073767.
+PMID: 35018837Free PMC Article
+
+Role of Tyrosine Kinase Syk in Thrombus Stabilisation at High Shear.
+Perrella G,
+Montague SJ,
+Brown HC,
+Garcia Quintanilla L,
+Slater A,
+Stegner D,
+Thomas M,
+Heemskerk JWM,
+Watson SP
+Int J Mol Sci
+2022 Jan 1;23(1)
+doi: 10.3390/ijms23010493.
+PMID: 35008919Free PMC Article
+See all (7177)
+",Systemic Immune-Inflammation Index: A Novel Predictor of Coronary Thrombus Burden in Patients with Non-ST Acute Coronary Syndrome.,/pubmed/35208466,https://www.ncbi.nlm.nih.gov/medgen/?term=C0087086
+cholecystitis,C0008325,The presence of inflammatory changes in the gallbladder. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0008325
+hernia hiatal,C0019291,,,,https://www.ncbi.nlm.nih.gov/medgen/?term=C0019291
+migraine disorders,C0149931,"Migraine is the most common type of chronic, episodic headache, as summarized by Featherstone (1985). One locus for migraine with or without aura (MGR1) has been identified on chromosome 4q24. Other loci for migraine have been identified on 6p21.1-p12.2 (MGR3; 607498), 14q21.2-q22.3 (MGR4; 607501), 19p13 (MGR5; 607508), 1q31 (MGR6; 607516), 15q11-q13 (MGR7; 609179), 5q21 (with or without aura, MGR8, 609570; with aura, MGR9, 609670), 17p13 (MGR10; 610208), 18q12 (MGR11; 610209), 10q22-q23 (MGR12; 611706), and the X chromosome (MGR2; 300125). Mutation in the KCNK18 gene (613655) on chromosome 10q25 causes migraine with aura (MGR13; 613656). A subtype of autosomal dominant migraine with aura (MA), familial hemiplegic migraine (FHM; see 141500), is caused by mutation in the CACNA1A gene (601011) on chromosome 19p13 (FHM1; 141500), by mutation in the ATP1A2 gene (182340) on chromosome 1q21 (FHM2; 602481), or by mutation in the SCN1A gene (182389) on chromosome 2q24 (FHM3; 609634). Another locus for FHM has been mapped to chromosome 1q31 (FHM4; see 607516). There is evidence that a polymorphism in the estrogen receptor gene (ESR1; 133430.0005) and a polymorphism in the TNF gene (191160.0004) may confer susceptibility to migraine. A polymorphism in the endothelin receptor type A gene (EDNRA; 131243.0001) may confer resistance to migraine. [from OMIM]",OMIM,http://www.omim.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0149931
+pancytopenia,C0030312,"An abnormal reduction in numbers of all blood cell types (red blood cells, white blood cells, and platelets). [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0030312
+cholelithiasis,C0008350,"Hard, pebble-like deposits that form within the gallbladder. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0008350
+biliary calculus,C0242216,"Solid crystalline precipitates in the biliary tract, usually formed in the gallbladder, resulting in the condition of cholelithiasis. Gallstones, derived from the bile, consist mainly of calcium, cholesterol, or bilirubin. [from MONDO]",MONDO,https://monarchinitiative.org/,https://www.ncbi.nlm.nih.gov/medgen/?term=C0242216
+tachycardia sinus,C0039239,Heart rate of greater than 100 beats per minute. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0039239
+ileus,C1258215,Acute obstruction of the intestines preventing passage of the contents of the intestines. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C1258215
+adhesion,C0001511,A fibrous band of tissue that connects normally separate body regions. [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0001511
+delusion,C0011253,A false belief that is held despite evidence to the contrary. [from HPO],HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011253
+affect labile,C0233472,Emotional instability characterized by rapid and dramatic mood swings. (ACC-AHA) [from NCI],NCI,http://ncit.nci.nih.gov,https://www.ncbi.nlm.nih.gov/medgen/?term=C0233472
+decubitus ulcer,C0011127,"A type of ulcer that is caused when an area of skin is subject to pressure over a prolonged period of time, ranging in range in severity from patches of discolored skin to open wounds that expose the underlying bone or muscle. The most common sites are the sacrum, coccyx, heels and the hips. [from HPO]",HPO,http://www.human-phenotype-ontology.org,https://www.ncbi.nlm.nih.gov/medgen/?term=C0011127

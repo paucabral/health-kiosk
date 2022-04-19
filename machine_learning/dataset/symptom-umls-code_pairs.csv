@@ -1,0 +1,1908 @@
+umls,symptom
+C0008031,pain chest
+C0392680,shortness of breath
+C0012833,dizziness
+C0004093,asthenia
+C0085639,fall
+C0039070,syncope
+C0042571,vertigo
+C0038990,sweat
+C0700590,sweating increased
+C0030252,palpitation
+C0027497,nausea
+C0002962,angina pectoris
+C0438716,pressure chest
+C0032617,polyuria
+C0085602,polydypsia
+C0392680,shortness of breath
+C0008031,pain chest
+C0004093,asthenia
+C0027497,nausea
+C0085619,orthopnea
+C0034642,rale
+C0038990,sweat
+C0700590,sweating increased
+C0241526,unresponsiveness
+C0856054,mental status changes
+C0042571,vertigo
+C0042963,vomiting
+C0553668,labored breathing
+C0424000,feeling suicidal
+C0438696,suicidal
+C0233762,hallucinations auditory
+C0150041,feeling hopeless
+C0424109,weepiness
+C0917801,sleeplessness
+C0424230,motor retardation
+C0022107,irritable mood
+C0312422,blackout
+C0344315,mood depressed
+C0233763,hallucinations visual
+C0233481,worry
+C0085631,agitation
+C0040822,tremor
+C0728899,intoxication
+C0424068,verbal auditory hallucinations
+C0455769,energy increased
+C1299586,difficulty
+C0028084,nightmare
+C0235198,unable to concentrate
+C0237154,homelessness
+C0008031,pain chest
+C0002962,angina pectoris
+C0392680,shortness of breath
+C0086439,hypokinesia
+C0038990,sweat
+C0700590,sweating increased
+C0438716,pressure chest
+C0231807,dyspnea on exertion
+C0085619,orthopnea
+C0232292,chest tightness
+C0010200,cough
+C0015967,fever
+C0029053,decreased translucency
+C0392680,shortness of breath
+C0034642,rale
+C0239134,productive cough
+C0008033,pleuritic pain
+C0457096,yellow sputum
+C0238844,breath sounds decreased
+C0085593,chill
+C0035508,rhonchus
+C0457097,green sputum
+C0850149,non-productive cough
+C0043144,wheezing
+C0019079,haemoptysis
+C0476273,distress respiratory
+C0231835,tachypnea
+C0231218,malaise
+C0028081,night sweat
+C0392680,shortness of breath
+C0085619,orthopnea
+C0240100,jugular venous distention
+C0034642,rale
+C0013404,dyspnea
+C0010200,cough
+C0043144,wheezing
+C0013362,dysarthria
+C0004093,asthenia
+C0234518,speech slurred
+C0427055,facial paresis
+C0018991,hemiplegia
+C0241526,unresponsiveness
+C0036572,seizure
+C0028643,numbness
+C0043144,wheezing
+C0010200,cough
+C0392680,shortness of breath
+C0232292,chest tightness
+C0850149,non-productive cough
+C0008033,pleuritic pain
+C0239134,productive cough
+C0436331,symptom aggravating factors
+C0476273,distress respiratory
+C0008031,pain chest
+C0520886,st segment elevation
+C0038990,sweat
+C0700590,sweating increased
+C0392680,shortness of breath
+C0520887,st segment depression
+C0086439,hypokinesia
+C0002962,angina pectoris
+C0438716,pressure chest
+C0520888,t wave inverted
+C0085619,orthopnea
+C0034642,rale
+C0232292,chest tightness
+C1305739,presence of q wave
+C0030252,palpitation
+C0013404,dyspnea
+C0235710,chest discomfort
+C0428977,bradycardia
+C0039070,syncope
+C0030193,pain
+C0008031,pain chest
+C0038990,sweat
+C0700590,sweating increased
+C0337672,nonsmoker
+C0438716,pressure chest
+C0039070,syncope
+C0028643,numbness
+C0235710,chest discomfort
+C0392680,shortness of breath
+C0520887,st segment depression
+C0233481,worry
+C0520888,t wave inverted
+C0428977,bradycardia
+C0013404,dyspnea
+C0015967,fever
+C0041834,erythema
+C0029053,decreased translucency
+C0019214,hepatosplenomegaly
+C0085593,chill
+C0033774,pruritus
+C0011991,diarrhea
+C0549483,abscess bacterial
+C0038999,swelling
+C0030193,pain
+C0277797,apyrexial
+C0010200,cough
+C0015967,fever
+C0013428,dysuria
+C0018965,hematuria
+C0235634,renal angle tenderness
+C0023380,lethargy
+C0004093,asthenia
+C0020625,hyponatremia
+C0578150,hemodynamically stable
+C0476273,distress respiratory
+C0241705,difficulty passing urine
+C0856054,mental status changes
+C0239110,consciousness clear
+C0085593,chill
+C0744492,guaiac positive
+C0746619,monoclonal
+C0013491,ecchymosis
+C1269955,tumor cell invasion
+C0019080,haemorrhage
+C0030232,pallor
+C0004093,asthenia
+C0015672,fatigue
+C0744740,heme positive
+C0004604,pain back
+C0149746,orthostasis
+C0020625,hyponatremia
+C0012833,dizziness
+C0392680,shortness of breath
+C0030193,pain
+C0035508,rhonchus
+C0003862,arthralgia
+C0038999,swelling
+C1096646,transaminitis
+C0392680,shortness of breath
+C0043144,wheezing
+C0010200,cough
+C0013404,dyspnea
+C0476273,distress respiratory
+C0241235,sputum purulent
+C0700292,hypoxemia
+C0020440,hypercapnia
+C0376405,patient non compliance
+C0232292,chest tightness
+C0015967,fever
+C0085639,fall
+C0241526,unresponsiveness
+C0023380,lethargy
+C0085631,agitation
+C0013491,ecchymosis
+C0039070,syncope
+C0034642,rale
+C0041657,unconscious state
+C0010200,cough
+C0425251,bedridden
+C0741453,bedridden
+C0030193,pain
+C0427055,facial paresis
+C0232498,abdominal tenderness
+C0035508,rhonchus
+C1273573,unsteady gait
+C0233762,hallucinations auditory
+C0392680,shortness of breath
+C0020461,hyperkalemia
+C0085619,orthopnea
+C0034642,rale
+C0085606,urgency of micturition
+C0003962,ascites
+C0744492,guaiac positive
+C0004093,asthenia
+C0277797,apyrexial
+C0856054,mental status changes
+C0013404,dyspnea
+C1299586,difficulty
+C0011991,diarrhea
+C0020649,hypotension
+C0238844,breath sounds decreased
+C0038999,swelling
+C0086439,hypokinesia
+C0036572,seizure
+C0014394,enuresis
+C0023380,lethargy
+C0234518,speech slurred
+C0085639,fall
+C0239110,consciousness clear
+C0856054,mental status changes
+C0232766,asterixis
+C0041657,unconscious state
+C0085631,agitation
+C0231530,muscle twitch
+C0004093,asthenia
+C0234450,sleepy
+C0012833,dizziness
+C0018681,headache
+C0013362,dysarthria
+C0220870,lightheadedness
+C0040822,tremor
+C0020625,hyponatremia
+C0241526,unresponsiveness
+C0030193,pain
+C0149696,food intolerance
+C0239832,numbness of hand
+C0858924,general discomfort
+C0013144,drowsiness
+C0004093,asthenia
+C0337672,nonsmoker
+C0850149,non-productive cough
+C0085602,polydypsia
+C0427008,stiffness
+C1273573,unsteady gait
+C0392680,shortness of breath
+C0242453,prostatism
+C0013144,drowsiness
+C0234450,sleepy
+C0020625,hyponatremia
+C0085639,fall
+C1273573,unsteady gait
+C0032617,polyuria
+C0020649,hypotension
+C1299586,difficulty
+C0039070,syncope
+C0028084,nightmare
+C0234518,speech slurred
+C0043094,weight gain
+C0004093,asthenia
+C0015672,fatigue
+C0557875,tired
+C0085631,agitation
+C0856054,mental status changes
+C0424230,motor retardation
+C0042963,vomiting
+C0028643,numbness
+C0577559,mass of body structure
+C0233481,worry
+C0424000,feeling suicidal
+C0438696,suicidal
+C0917801,sleeplessness
+C0150041,feeling hopeless
+C0022107,irritable mood
+C0040822,tremor
+C0312422,blackout
+C0424109,weepiness
+C0557075,has religious belief
+C0027769,nervousness
+C0233763,hallucinations visual
+C0016579,formication
+C1299586,difficulty
+C0008031,pain chest
+C0376405,patient non compliance
+C0085631,agitation
+C0030252,palpitation
+C0233762,hallucinations auditory
+C0344315,mood depressed
+C0600142,hot flush
+C0030193,pain
+C0239110,consciousness clear
+C0028084,nightmare
+C0030193,pain
+C0577559,mass of body structure
+C0221198,lesion
+C0332601,cushingoid facies
+C0878661,cushingoid habitus
+C0743482,emphysematous change
+C0043096,decreased body weight
+C0003962,ascites
+C0019825,hoarseness
+C0205400,thicken
+C0018965,hematuria
+C0015967,fever
+C0028081,night sweat
+C0233308,spontaneous rupture of membranes
+C0010200,cough
+C0032739,
+C0043096,decreased body weight
+C0085593,chill
+C0011991,diarrhea
+C0008033,pleuritic pain
+C0376405,patient non compliance
+C0231835,tachypnea
+C0239134,productive cough
+C0026827,muscle hypotonia
+C0241938,hypotonic
+C0424000,feeling suicidal
+C0041834,erythema
+C0030193,pain
+C0038999,swelling
+C0332575,redness
+C0015967,fever
+C0549483,abscess bacterial
+C0376405,patient non compliance
+C0020580,hypesthesia
+C0034880,hyperacusis
+C0033774,pruritus
+C0008031,pain chest
+C1384489,scratch marks
+C0085593,chill
+C0234233,sore to touch
+C0030193,pain
+C0008031,pain chest
+C0085624,burning sensation
+C0020625,hyponatremia
+C0239233,satiety early
+C1444773,throbbing sensation quality
+C0232292,chest tightness
+C0234215,sensory discomfort
+C1305739,presence of q wave
+C0027497,nausea
+C0858924,general discomfort
+C0009806,constipation
+C0030252,palpitation
+C0000737,pain abdominal
+C0018834,heartburn
+C0038990,sweat
+C0700590,sweating increased
+C0004093,asthenia
+C0015967,fever
+C0476273,distress respiratory
+C0020649,hypotension
+C0231835,tachypnea
+C0085593,chill
+C0023380,lethargy
+C0428977,bradycardia
+C0006157,breech presentation
+C0010520,cyanosis
+C0233308,spontaneous rupture of membranes
+C0019080,haemorrhage
+C0241526,unresponsiveness
+C0034642,rale
+C0277797,apyrexial
+C0038999,swelling
+C0030193,pain
+C0013491,ecchymosis
+C0392680,shortness of breath
+C0023222,pain in lower limb
+C0018800,cardiomegaly
+C0034642,rale
+C0041834,erythema
+C0020649,hypotension
+C0009024,clonus
+C0850149,non-productive cough
+C0332575,redness
+C0015967,fever
+C0011991,diarrhea
+C0042963,vomiting
+C0020649,hypotension
+C0027497,nausea
+C0220870,lightheadedness
+C0857256,unwell
+C0856054,mental status changes
+C0003123,anorexia
+C0004093,asthenia
+C0234215,sensory discomfort
+C0039070,syncope
+C0023380,lethargy
+C0012833,dizziness
+C0039070,syncope
+C0312422,blackout
+C0424533,history of - blackout
+C0577559,mass of body structure
+C0221198,lesion
+C0008031,pain chest
+C0018965,hematuria
+C1269955,tumor cell invasion
+C0030193,pain
+C0003126,anosmia
+C0205400,thicken
+C1513183,metastatic lesion
+C0149696,food intolerance
+C0043096,decreased body weight
+C0028081,night sweat
+C0271202,hemianopsia homonymous
+C0239233,satiety early
+C0000737,pain abdominal
+C0018681,headache
+C0392680,shortness of breath
+C0700292,hypoxemia
+C0231835,tachypnea
+C0744727,hematocrit decreased
+C0008031,pain chest
+C0013404,dyspnea
+C0008033,pleuritic pain
+C0151315,neck stiffness
+C0457096,yellow sputum
+C0239134,productive cough
+C0008767,cicatrisation
+C0241526,unresponsiveness
+C0476273,distress respiratory
+C0043144,wheezing
+C0277797,apyrexial
+C0850149,non-productive cough
+C0036572,seizure
+C0347938,hypometabolism
+C0236018,aura
+C0231530,muscle twitch
+C0013144,drowsiness
+C0040822,tremor
+C0241526,unresponsiveness
+C0018991,hemiplegia
+C0027066,myoclonus
+C0232517,gurgle
+C0234450,sleepy
+C0023380,lethargy
+C0558195,wheelchair bound
+C0392680,shortness of breath
+C0085619,orthopnea
+C0086439,hypokinesia
+C0240100,jugular venous distention
+C0030252,palpitation
+C0008031,pain chest
+C0039070,syncope
+C0457096,yellow sputum
+C0034642,rale
+C0013404,dyspnea
+C0231807,dyspnea on exertion
+C0238705,left atrial hypertrophy
+C0015672,fatigue
+C0043094,weight gain
+C0376405,patient non compliance
+C0042963,vomiting
+C0085619,orthopnea
+C0020461,hyperkalemia
+C0028961,oliguria
+C0240100,jugular venous distention
+C0027497,nausea
+C0392680,shortness of breath
+C0856054,mental status changes
+C0011991,diarrhea
+C0004093,asthenia
+C0232292,chest tightness
+C0231218,malaise
+C0085593,chill
+C0034642,rale
+C0015967,fever
+C0008033,pleuritic pain
+C0277797,apyrexial
+C0744492,guaiac positive
+C0038999,swelling
+C0007398,catatonia
+C0241526,unresponsiveness
+C0457096,yellow sputum
+C0577559,mass of body structure
+C0030193,pain
+C0221198,lesion
+C1269955,tumor cell invasion
+C0205400,thicken
+C0043096,decreased body weight
+C0019825,hoarseness
+C0858924,general discomfort
+C1513183,metastatic lesion
+C0850149,non-productive cough
+C0009806,constipation
+C0847488,unhappy
+C0030554,paresthesia
+C0232995,gravida 0
+C0011991,diarrhea
+C0234233,sore to touch
+C0018834,heartburn
+C0027497,nausea
+C0034079,lung nodule
+C0003962,ascites
+C0000731,distended abdomen
+C0424000,feeling suicidal
+C0010200,cough
+C0234238,ache
+C0558143,macerated skin
+C0581912,heavy feeling
+C0233762,hallucinations auditory
+C0085593,chill
+C0232766,asterixis
+C0376405,patient non compliance
+C0392680,shortness of breath
+C0234253,rest pain
+C0002962,angina pectoris
+C0241526,unresponsiveness
+C0020461,hyperkalemia
+C0232201,sinus rhythm
+C0553668,labored breathing
+C0013404,dyspnea
+C0234233,sore to touch
+C0003123,anorexia
+C0234450,sleepy
+C0438696,suicidal
+C0233762,hallucinations auditory
+C0424000,feeling suicidal
+C0233763,hallucinations visual
+C0424230,motor retardation
+C0312422,blackout
+C0424068,verbal auditory hallucinations
+C0150041,feeling hopeless
+C0022107,irritable mood
+C0085631,agitation
+C0040822,tremor
+C0007398,catatonia
+C0424109,weepiness
+C0237154,homelessness
+C0917801,sleeplessness
+C0424092,withdraw
+C0455769,energy increased
+C0728899,intoxication
+C0233481,worry
+C0424295,behavior hyperactive
+C0376405,patient non compliance
+C0344315,mood depressed
+C0558261,terrify
+C0028084,nightmare
+C0239110,consciousness clear
+C0008031,pain chest
+C0002962,angina pectoris
+C0030252,palpitation
+C1305739,presence of q wave
+C0085635,photopsia
+C0038990,sweat
+C0700590,sweating increased
+C0235710,chest discomfort
+C0392680,shortness of breath
+C0392701,giddy mood
+C0086439,hypokinesia
+C0018991,hemiplegia
+C0012833,dizziness
+C0424000,feeling suicidal
+C0455769,energy increased
+C0438696,suicidal
+C0022107,irritable mood
+C0085631,agitation
+C0557075,has religious belief
+C0578859,disturbed family
+C0233762,hallucinations auditory
+C0424068,verbal auditory hallucinations
+C0424109,weepiness
+C0424295,behavior hyperactive
+C0007398,catatonia
+C0150041,feeling hopeless
+C0233481,worry
+C0917801,sleeplessness
+C0917799,hypersomnia
+C1299586,difficulty
+C0233763,hallucinations visual
+C0020458,hyperhidrosis disorder
+C0026961,mydriasis
+C0234133,extrapyramidal sign
+C0240233,loose associations
+C0728899,intoxication
+C0424230,motor retardation
+C0237154,homelessness
+C0312422,blackout
+C0040822,tremor
+C0392674,exhaustion
+C0030193,pain
+C0007398,catatonia
+C0037384,snore
+C0008031,pain chest
+C0429091,r wave feature
+C0557075,has religious belief
+C0392680,shortness of breath
+C0015672,fatigue
+C0557875,tired
+C0497406,overweight
+C0232257,systolic murmur
+C0344315,mood depressed
+C0013491,ecchymosis
+C0013144,drowsiness
+C0234450,sleepy
+C0008031,pain chest
+C0002962,angina pectoris
+C0438716,pressure chest
+C0235710,chest discomfort
+C0392680,shortness of breath
+C0013404,dyspnea
+C0232201,sinus rhythm
+C0428977,bradycardia
+C0038990,sweat
+C0700590,sweating increased
+C0034642,rale
+C0231221,asymptomatic
+C0003123,anorexia
+C0003962,ascites
+C0085639,fall
+C0038002,splenomegaly
+C0033774,pruritus
+C0000737,pain abdominal
+C1269955,tumor cell invasion
+C0000731,distended abdomen
+C0221198,lesion
+C0578150,hemodynamically stable
+C0744492,guaiac positive
+C0234233,sore to touch
+C0151706,bleeding of vagina
+C0015967,fever
+C0033774,pruritus
+C0332573,macule
+C0221198,lesion
+C0332575,redness
+C0018681,headache
+C0277797,apyrexial
+C0003862,arthralgia
+C0038999,swelling
+C0041834,erythema
+C0085636,photophobia
+C0085593,chill
+C1384489,scratch marks
+C0030193,pain
+C0221150,painful swallowing
+C0856054,mental status changes
+C0006625,cachexia
+C0312422,blackout
+C0149746,orthostasis
+C0085619,orthopnea
+C0028081,night sweat
+C0476273,distress respiratory
+C0003123,anorexia
+C0013362,dysarthria
+C0020461,hyperkalemia
+C0020649,hypotension
+C0020598,hypocalcemia result
+C0028961,oliguria
+C0578150,hemodynamically stable
+C0004093,asthenia
+C0020672,"hypothermia, natural"
+C0011991,diarrhea
+C0019080,haemorrhage
+C0241526,unresponsiveness
+C0392680,shortness of breath
+C0231807,dyspnea on exertion
+C0231221,asymptomatic
+C0086439,hypokinesia
+C0013404,dyspnea
+C0039070,syncope
+C0205400,thicken
+C0238705,left atrial hypertrophy
+C0030252,palpitation
+C0015672,fatigue
+C0042963,vomiting
+C0030193,pain
+C0018800,cardiomegaly
+C0235710,chest discomfort
+C0030193,pain
+C0578150,hemodynamically stable
+C0917801,sleeplessness
+C0004093,asthenia
+C0039070,syncope
+C0038999,swelling
+C0741302,atypia
+C0427108,general unsteadiness
+C0392680,shortness of breath
+C0000731,distended abdomen
+C0010200,cough
+C0043144,wheezing
+C0392680,shortness of breath
+C0232292,chest tightness
+C0015967,fever
+C0242429,throat sore
+C0239134,productive cough
+C0019214,hepatosplenomegaly
+C0028081,night sweat
+C0019079,haemoptysis
+C0553668,labored breathing
+C1260880,snuffle
+C0239133,hacking cough
+C0013404,dyspnea
+C0085593,chill
+C0038450,stridor
+C0043096,decreased body weight
+C0013362,dysarthria
+C0030552,paresis
+C0004093,asthenia
+C0221470,aphagia
+C0036572,seizure
+C0234518,speech slurred
+C0751495,focal seizures
+C0018991,hemiplegia
+C0423571,abnormal sensation
+C0241526,unresponsiveness
+C0085628,stupor
+C0013144,drowsiness
+C0234450,sleepy
+C0231890,fremitus
+C0271276,Stahli's line
+C0677500,stinging sensation
+C0522224,paralyse
+C0009024,clonus
+C0427055,facial paresis
+C0242453,prostatism
+C0085639,fall
+C0019572,hirsutism
+C0558361,sniffle
+C0000731,distended abdomen
+C0042571,vertigo
+C0239832,numbness of hand
+C0233565,bradykinesia
+C0030193,pain
+C0039070,syncope
+C0848168,out of breath
+C0277797,apyrexial
+C0150045,urge incontinence
+C0220870,lightheadedness
+C0234518,speech slurred
+C0013362,dysarthria
+C0427055,facial paresis
+C0004093,asthenia
+C0151315,neck stiffness
+C0042571,vertigo
+C0028643,numbness
+C0220870,lightheadedness
+C0234133,extrapyramidal sign
+C0271276,Stahli's line
+C0344232,vision blurred
+C0018681,headache
+C0848277,room spinning
+C0039070,syncope
+C1299586,difficulty
+C0423982,rambling speech
+C0233844,clumsiness
+C0577559,mass of body structure
+C0221198,lesion
+C0043096,decreased body weight
+C0009806,constipation
+C0231890,fremitus
+C0278014,decreased stool caliber
+C0239233,satiety early
+C0018932,hematochezia
+C0231872,egophony
+C0030193,pain
+C0008767,cicatrisation
+C0241158,scar tissue
+C0000737,pain abdominal
+C0233762,hallucinations auditory
+C0233763,hallucinations visual
+C0085631,agitation
+C0022107,irritable mood
+C0424068,verbal auditory hallucinations
+C0424000,feeling suicidal
+C0438696,suicidal
+C0558261,terrify
+C0233647,neologism
+C0237154,homelessness
+C0455769,energy increased
+C0344315,mood depressed
+C0231187,decompensation
+C0008767,cicatrisation
+C0241158,scar tissue
+C0312422,blackout
+C0240233,loose associations
+C0042963,vomiting
+C0000737,pain abdominal
+C0027497,nausea
+C0030193,pain
+C0011991,diarrhea
+C0241252,stool color yellow
+C0424790,rigor - temperature-associated observation
+C0277797,apyrexial
+C0234233,sore to touch
+C0221166,paraparesis
+C0036572,seizure
+C0004093,asthenia
+C0150045,urge incontinence
+C0041657,unconscious state
+C0236018,aura
+C0554980,moody
+C0877040,fear of falling
+C0040822,tremor
+C0037763,spasm
+C0847488,unhappy
+C0039070,syncope
+C0085639,fall
+C0427008,stiffness
+C0241526,unresponsiveness
+C0085619,orthopnea
+C0392680,shortness of breath
+C0231807,dyspnea on exertion
+C0240100,jugular venous distention
+C0034642,rale
+C0008031,pain chest
+C0030252,palpitation
+C0038990,sweat
+C0700590,sweating increased
+C0043094,weight gain
+C0010200,cough
+C0013404,dyspnea
+C0000737,pain abdominal
+C0030193,pain
+C0020578,hyperventilation
+C0278141,excruciating pain
+C0016927,gag
+C0027497,nausea
+C0872410,posturing
+C0018991,hemiplegia
+C0234233,sore to touch
+C0019080,haemorrhage
+C0277797,apyrexial
+C0149696,food intolerance
+C0277899,pulse absent
+C0004093,asthenia
+C0577559,mass of body structure
+C0205400,thicken
+C0018965,hematuria
+C0392699,dysesthesia
+C0004093,asthenia
+C0521516,polymyalgia
+C0848621,passed stones
+C0008033,pleuritic pain
+C0744492,guaiac positive
+C0034642,rale
+C0238844,breath sounds decreased
+C0150045,urge incontinence
+C0013428,dysuria
+C0011991,diarrhea
+C0042571,vertigo
+C0151878,qt interval prolonged
+C0004134,ataxia
+C0030552,paresis
+C0271202,hemianopsia homonymous
+C1269955,tumor cell invasion
+C0578150,hemodynamically stable
+C0577559,mass of body structure
+C0035508,rhonchus
+C0149746,orthostasis
+C0043096,decreased body weight
+C0085606,urgency of micturition
+C0392680,shortness of breath
+C0034642,rale
+C0231835,tachypnea
+C0085619,orthopnea
+C0018862,Heberden's node
+C0240100,jugular venous distention
+C0013404,dyspnea
+C0038990,sweat
+C0700590,sweating increased
+C0376405,patient non compliance
+C0235710,chest discomfort
+C0020461,hyperkalemia
+C0232201,sinus rhythm
+C0008031,pain chest
+C0020649,hypotension
+C0043144,wheezing
+C0030193,pain
+C0577559,mass of body structure
+C0028081,night sweat
+C0038002,splenomegaly
+C0221198,lesion
+C0085593,chill
+C0043096,decreased body weight
+C0038999,swelling
+C0015967,fever
+C0034880,hyperacusis
+C0231890,fremitus
+C0850149,non-productive cough
+C0231872,egophony
+C0332575,redness
+C0019209,hepatomegaly
+C0015672,fatigue
+C0231807,dyspnea on exertion
+C0039070,syncope
+C0235710,chest discomfort
+C0232257,systolic murmur
+C0036396,sciatica
+C0002962,angina pectoris
+C0008031,pain chest
+C0577979,frothy sputum
+C0428977,bradycardia
+C0392680,shortness of breath
+C0030193,pain
+C0024103,mass in breast
+C0577559,mass of body structure
+C0030554,paresthesia
+C0277845,retropulsion
+C0041834,erythema
+C1299586,difficulty
+C0221198,lesion
+C0239301,estrogen use
+C0085624,burning sensation
+C0013404,dyspnea
+C0038999,swelling
+C0016579,formication
+C0233762,hallucinations auditory
+C0751229,hypersomnolence
+C0022107,irritable mood
+C0424068,verbal auditory hallucinations
+C0376405,patient non compliance
+C0085631,agitation
+C0438696,suicidal
+C0233481,worry
+C0233763,hallucinations visual
+C0041667,underweight
+C1319518,underweight
+C0237154,homelessness
+C0000737,pain abdominal
+C0549483,abscess bacterial
+C0541911,dullness
+C0857199,red blotches
+C0011991,diarrhea
+C0234233,sore to touch
+C0013428,dysuria
+C0030193,pain
+C0042963,vomiting
+C0232201,sinus rhythm
+C0232488,colic abdominal
+C0277797,apyrexial
+C0232498,abdominal tenderness
+C0015967,fever
+C1273573,unsteady gait
+C0205400,thicken
+C0085606,urgency of micturition
+C0003123,anorexia
+C0746619,monoclonal
+C0009806,constipation
+C0034642,rale
+C0240100,jugular venous distention
+C0020461,hyperkalemia
+C0085619,orthopnea
+C0392680,shortness of breath
+C0013144,drowsiness
+C0234450,sleepy
+C0043094,weight gain
+C0020621,hypokalemia
+C0020649,hypotension
+C0038999,swelling
+C0000731,distended abdomen
+C0000737,pain abdominal
+C0221166,paraparesis
+C0027497,nausea
+C0042963,vomiting
+C0521516,polymyalgia
+C0848168,out of breath
+C0008031,pain chest
+C0018991,hemiplegia
+C0232517,gurgle
+C0020175,hunger
+C0277797,apyrexial
+C0027769,nervousness
+C0030193,pain
+C0332575,redness
+C0240813,prostate tender
+C0015967,fever
+C0241705,difficulty passing urine
+C0234233,sore to touch
+C0038999,swelling
+C0277797,apyrexial
+C0041834,erythema
+C0549483,abscess bacterial
+C0016512,pain foot
+C0152032,urinary hesitation
+C0744740,heme positive
+C0000737,pain abdominal
+C0042963,vomiting
+C0281825,disequilibrium
+C0027497,nausea
+C0728899,intoxication
+C0019080,haemorrhage
+C0744492,guaiac positive
+C0030193,pain
+C0043096,decreased body weight
+C0234233,sore to touch
+C0012833,dizziness
+C0015967,fever
+C0085593,chill
+C0016382,flushing
+C0241526,unresponsiveness
+C0085632,indifferent mood
+C1313921,urinoma
+C0042963,vomiting
+C0000731,distended abdomen
+C0239981,hypoalbuminemia
+C0241157,pustule
+C0242453,prostatism
+C0011991,diarrhea
+C0232498,abdominal tenderness
+C0008033,pleuritic pain
+C0029053,decreased translucency
+C0030232,pallor
+C0085619,orthopnea
+C0028961,oliguria
+C0232854,slowing of urinary stream
+C0277794,extreme exhaustion
+C0241526,unresponsiveness
+C0020649,hypotension
+C0014394,enuresis
+C0392680,shortness of breath
+C0019080,haemorrhage
+C0242453,prostatism
+C0442739,no status change
+C0425251,bedridden
+C0741453,bedridden
+C0015672,fatigue
+C1135120,breakthrough pain
+C0004604,pain back
+C0030193,pain
+C0392680,shortness of breath
+C1260880,snuffle
+C0008031,pain chest
+C0000737,pain abdominal
+C0019214,hepatosplenomegaly
+C0457097,green sputum
+C0277797,apyrexial
+C0018681,headache
+C0085619,orthopnea
+C0015672,fatigue
+C0231807,dyspnea on exertion
+C0013404,dyspnea
+C0392680,shortness of breath
+C0232258,pansystolic murmur
+C0240100,jugular venous distention
+C0694547,systolic ejection murmur
+C0020649,hypotension
+C0002962,angina pectoris
+C0086439,hypokinesia
+C0010200,cough
+C0242429,throat sore
+C0043144,wheezing
+C0392680,shortness of breath
+C0553668,labored breathing
+C0015967,fever
+C0848340,stuffy nose
+C0850149,non-productive cough
+C1260880,snuffle
+C0085632,indifferent mood
+C0231872,egophony
+C0234866,barking cough
+C0521516,polymyalgia
+C0008033,pleuritic pain
+C0028081,night sweat
+C0013404,dyspnea
+C0239134,productive cough
+C0029053,decreased translucency
+C0035508,rhonchus
+C0425488,rapid shallow breathing
+C0277797,apyrexial
+C0237304,noisy respiration
+C0264273,nasal discharge present
+C0743482,emphysematous change
+C0871754,frail
+C1511606,cystic lesion
+C0436331,symptom aggravating factors
+C0578150,hemodynamically stable
+C0003962,ascites
+C0233308,spontaneous rupture of membranes
+C0231835,tachypnea
+C0000737,pain abdominal
+C0033774,pruritus
+C0003123,anorexia
+C1096646,transaminitis
+C0221151,projectile vomiting
+C0085593,chill
+C0476273,distress respiratory
+C0015967,fever
+C0042963,vomiting
+C0392680,shortness of breath
+C0271276,Stahli's line
+C0581911,heavy legs
+C0238844,breath sounds decreased
+C0151315,neck stiffness
+C0231807,dyspnea on exertion
+C0010520,cyanosis
+C0020649,hypotension
+C0238705,left atrial hypertrophy
+C0030554,paresthesia
+C0231690,titubation
+C0013362,dysarthria
+C0221150,painful swallowing
+C0019825,hoarseness
+C0038450,stridor
+C0037763,spasm
+C0004093,asthenia
+C0234979,dysdiadochokinesia
+C0004134,ataxia
+C1321756,achalasia
+C0043096,decreased body weight
+C0427008,stiffness
+C0221198,lesion
+C0748706,side pain
+C0600142,hot flush
+C0030193,pain
+C0332575,redness
+C0038999,swelling
+C0041834,erythema
+C0743482,emphysematous change
+C0234233,sore to touch
+C0086439,hypokinesia
+C0003962,ascites
+C0376405,patient non compliance
+C0013491,ecchymosis
+C0085702,monocytosis
+C0032781,posterior rhinorrhea
+C0019080,haemorrhage
+C0231835,tachypnea
+C0015967,fever
+C0033774,pruritus
+C0020649,hypotension
+C0015672,fatigue
+C0241526,unresponsiveness
+C0020672,"hypothermia, natural"
+C0542044,incoherent
+C0151878,qt interval prolonged
+C0311395,lameness
+C1456822,claudication
+C0041657,unconscious state
+C0392162,clammy skin
+C0032617,polyuria
+C0476273,distress respiratory
+C0020649,hypotension
+C0264576,mediastinal shift
+C0015967,fever
+C0009024,clonus
+C0856054,mental status changes
+C0029053,decreased translucency
+C0241526,unresponsiveness
+C0277794,extreme exhaustion
+C0085628,stupor
+C0036572,seizure
+C1096646,transaminitis
+C0018991,hemiplegia
+C0010200,cough
+C0232517,gurgle
+C0030193,pain
+C0011991,diarrhea
+C0000737,pain abdominal
+C0015967,fever
+C0205400,thicken
+C0457097,green sputum
+C0042963,vomiting
+C0027498,nausea and vomiting
+C0541798,awakening early
+C0030193,pain
+C0027497,nausea
+C0085593,chill
+C0232726,tenesmus
+C0150045,urge incontinence
+C0000737,pain abdominal
+C0578150,hemodynamically stable
+C1167754,fecaluria
+C0009806,constipation
+C0549483,abscess bacterial
+C0744740,heme positive
+C0220870,lightheadedness
+C0011991,diarrhea
+C0019080,haemorrhage
+C0030193,pain
+C0221151,projectile vomiting
+C0232894,pneumatouria
+C1511606,cystic lesion
+C0003123,anorexia
+C0027497,nausea
+C0424000,feeling suicidal
+C0150041,feeling hopeless
+C0233762,hallucinations auditory
+C0917801,sleeplessness
+C0438696,suicidal
+C0424230,motor retardation
+C0424109,weepiness
+C0235198,unable to concentrate
+C0234544,todd paralysis
+C0233481,worry
+C0015672,fatigue
+C0040822,tremor
+C0740880,alcoholic withdrawal symptoms
+C0085631,agitation
+C0241526,unresponsiveness
+C0312422,blackout
+C0424092,withdraw
+C1299586,difficulty
+C0022107,irritable mood
+C0234215,sensory discomfort
+C0013144,drowsiness
+C0016579,formication
+C0041657,unconscious state
+C0015967,fever
+C0010200,cough
+C0457096,yellow sputum
+C0006625,cachexia
+C0085593,chill
+C0043096,decreased body weight
+C0239134,productive cough
+C0231528,myalgia
+C0011991,diarrhea
+C0151315,neck stiffness
+C0239133,hacking cough
+C1384606,dyspareunia
+C0020621,hypokalemia
+C0231807,dyspnea on exertion
+C0149758,poor dentition
+C1096646,transaminitis
+C0850149,non-productive cough
+C0018681,headache
+C0857516,floppy
+C0233308,spontaneous rupture of membranes
+C0233467,inappropriate affect
+C0231835,tachypnea
+C0457096,yellow sputum
+C0221151,projectile vomiting
+C0576456,poor feeding
+C0000737,pain abdominal
+C0232498,abdominal tenderness
+C0558195,wheelchair bound
+C0859032,moan
+C1321756,achalasia
+C0085639,fall
+C0427008,stiffness
+C0424092,withdraw
+C0085631,agitation
+C0018991,hemiplegia
+C1299586,difficulty
+C0241526,unresponsiveness
+C0039070,syncope
+C0427055,facial paresis
+C0149746,orthostasis
+C0233481,worry
+C0013144,drowsiness
+C0234450,sleepy
+C0018965,hematuria
+C0040822,tremor
+C0028081,night sweat
+C0577559,mass of body structure
+C0221198,lesion
+C0015967,fever
+C0221232,welt
+C1096646,transaminitis
+C0043096,decreased body weight
+C0004134,ataxia
+C0040264,tinnitus
+C0020303,hydropneumothorax
+C0429562,superimposition
+C0019079,haemoptysis
+C0015672,fatigue
+C0557875,tired
+C0085602,polydypsia
+C0241705,difficulty passing urine
+C0234233,sore to touch
+C0033774,pruritus
+C0235129,feeling strange
+C0241157,pustule
+C0332601,cushingoid facies
+C0878661,cushingoid habitus
+C0043096,decreased body weight
+C0344315,mood depressed
+C0239301,estrogen use
+C0043144,wheezing
+C0003962,ascites
+C0036572,seizure
+C0242143,uncoordination
+C0232766,asterixis
+C0019080,haemorrhage
+C0013144,drowsiness
+C0234450,sleepy
+C0424530,absences finding
+C0872410,posturing
+C0236018,aura
+C0270844,tonic seizures
+C0742985,debilitation
+C0239110,consciousness clear
+C0241526,unresponsiveness
+C0205400,thicken
+C0086439,hypokinesia
+C0392680,shortness of breath
+C0030193,pain
+C0042963,vomiting
+C0027497,nausea
+C0428977,bradycardia
+C0000737,pain abdominal
+C0015967,fever
+C0008767,cicatrisation
+C0264576,mediastinal shift
+C0338656,impaired cognition
+C0013132,drool
+C0085631,agitation
+C0028084,nightmare
+C0035508,rhonchus
+C0239110,consciousness clear
+C0235231,pin-point pupils
+C0425251,bedridden
+C0741453,bedridden
+C0871754,frail
+C0234379,tremor resting
+C0020461,hyperkalemia
+C0427055,facial paresis
+C0541992,groggy
+C0231530,muscle twitch
+C0558195,wheelchair bound
+C0040822,tremor
+C0010200,cough
+C0015967,fever
+C0011991,diarrhea
+C0242429,throat sore
+C0043096,decreased body weight
+C0085593,chill
+C0018681,headache
+C0232498,abdominal tenderness
+C0376405,patient non compliance
+C0085636,photophobia
+C0028081,night sweat
+C0221150,painful swallowing
+C0149758,poor dentition
+C1096646,transaminitis
+C0850149,non-productive cough
+C0559546,adverse reaction
+C0879626,adverse effect
+C1291077,abdominal bloating
+C0004093,asthenia
+C0028643,numbness
+C0027498,nausea and vomiting
+C0541798,awakening early
+C0020303,hydropneumothorax
+C0429562,superimposition
+C0231230,fatigability
+C0232726,tenesmus
+C0030193,pain
+C0232854,slowing of urinary stream
+C0392680,shortness of breath
+C0020461,hyperkalemia
+C0008031,pain chest
+C0015967,fever
+C0232995,gravida 0
+C0151706,bleeding of vagina
+C0233071,para 2
+C0019080,haemorrhage
+C0156543,abortion
+C0232943,intermenstrual heavy bleeding
+C0026827,muscle hypotonia
+C0241938,hypotonic
+C0232997,previous pregnancies 2
+C0392680,shortness of breath
+C0015967,fever
+C0018834,heartburn
+C0860096,primigravida
+C0702118,abnormally hard consistency
+C1405524,proteinemia
+C0085639,fall
+C0000731,distended abdomen
+C1273573,unsteady gait
+C0030554,paresthesia
+C0020625,hyponatremia
+C0085631,agitation
+C0041657,unconscious state
+C0085624,burning sensation
+C0221198,lesion
+C0577559,mass of body structure
+C0205400,thicken
+C1269955,tumor cell invasion
+C1513183,metastatic lesion
+C0007859,pain neck
+C0034079,lung nodule
+C0030193,pain
+C0000737,pain abdominal
+C0149696,food intolerance
+C0577559,mass of body structure
+C0741302,atypia
+C0221198,lesion
+C0242453,prostatism
+C0009806,constipation
+C0858924,general discomfort
+C0011991,diarrhea
+C0000737,pain abdominal
+C0152032,urinary hesitation
+C0857087,dizzy spells
+C0278146,shooting pain
+C0428977,bradycardia
+C0042963,vomiting
+C0694547,systolic ejection murmur
+C0027497,nausea
+C0235250,hyperemesis
+C0085602,polydypsia
+C0032617,polyuria
+C0042963,vomiting
+C0027497,nausea
+C0000737,pain abdominal
+C0443260,milky
+C0235129,feeling strange
+C0232517,gurgle
+C0027769,nervousness
+C0232498,abdominal tenderness
+C0232605,regurgitates after swallowing
+C0344232,vision blurred
+C0152032,urinary hesitation
+C0011991,diarrhea
+C0036572,seizure
+C0236018,aura
+C0013144,drowsiness
+C0542073,lip smacking
+C0027066,myoclonus
+C0040822,tremor
+C0751466,phonophobia
+C0522336,rolling of eyes
+C0234450,sleepy
+C0019572,hirsutism
+C0554980,moody
+C0231530,muscle twitch
+C0241526,unresponsiveness
+C0018681,headache
+C0002416,ambidexterity
+C0424530,absences finding
+C0037763,spasm
+C0043096,decreased body weight
+C1269955,tumor cell invasion
+C0232118,pulsus paradoxus
+C1291692,gravida 10
+C0577559,mass of body structure
+C0221198,lesion
+C0018834,heartburn
+C0028081,night sweat
+C0205400,thicken
+C0085593,chill
+C0029053,decreased translucency
+C0000737,pain abdominal
+C0541911,dullness
+C0149696,food intolerance
+C0476273,distress respiratory
+C0020649,hypotension
+C0018991,hemiplegia
+C0037384,snore
+C0241526,unresponsiveness
+C0239134,productive cough
+C0013404,dyspnea
+C0231835,tachypnea
+C0020461,hyperkalemia
+C0086439,hypokinesia
+C0232201,sinus rhythm
+C0427108,general unsteadiness
+C0006318,bruit
+C0239110,consciousness clear
+C0392680,shortness of breath
+C0221198,lesion
+C0332575,redness
+C0577559,mass of body structure
+C0221166,paraparesis
+C0015967,fever
+C0232995,gravida 0
+C0030193,pain
+C0033774,pruritus
+C0024103,mass in breast
+C0042963,vomiting
+C0011991,diarrhea
+C0000737,pain abdominal
+C0476287,breath-holding spell
+C0027497,nausea
+C0043096,decreased body weight
+C0234233,sore to touch
+C0240962,scleral icterus
+C0015967,fever
+C0231528,myalgia
+C0020625,hyponatremia
+C0232602,retch
+C0577559,mass of body structure
+C0043096,decreased body weight
+C0221198,lesion
+C0010200,cough
+C0034079,lung nodule
+C0392680,shortness of breath
+C0019079,haemoptysis
+C0742985,debilitation
+C0232517,gurgle
+C0234238,ache
+C0034642,rale
+C0028081,night sweat
+C0029053,decreased translucency
+C0004093,asthenia
+C1513183,metastatic lesion
+C0085631,agitation
+C0022107,irritable mood
+C0455769,energy increased
+C0438696,suicidal
+C0917799,hypersomnia
+C0424000,feeling suicidal
+C0948786,blanch
+C0233762,hallucinations auditory
+C0233763,hallucinations visual
+C0233492,elation
+C0424068,verbal auditory hallucinations
+C0150041,feeling hopeless
+C1299586,difficulty
+C0231187,decompensation
+C0558089,verbally abusive behavior
+C0438696,suicidal
+C0424000,feeling suicidal
+C0028084,nightmare
+C0150041,feeling hopeless
+C0558141,transsexual
+C0233762,hallucinations auditory
+C0022107,irritable mood
+C0917801,sleeplessness
+C0085631,agitation
+C0424109,weepiness
+C0344315,mood depressed
+C1384489,scratch marks
+C0027498,nausea and vomiting
+C0277794,extreme exhaustion
+C0748706,side pain
+C0233481,worry
+C0014394,enuresis
+C0237154,homelessness
+C0027769,nervousness
+C0003962,ascites
+C0033774,pruritus
+C0577559,mass of body structure
+C0038002,splenomegaly
+C0221198,lesion
+C0030552,paresis
+C1269955,tumor cell invasion
+C0848277,room spinning
+C0019080,haemorrhage
+C0205400,thicken
+C0085632,indifferent mood
+C0006625,cachexia
+C0020672,"hypothermia, natural"
+C0000737,pain abdominal
+C0019209,hepatomegaly
+C0744727,hematocrit decreased
+C0085628,stupor
+C0043096,decreased body weight
+C0392680,shortness of breath
+C0010200,cough
+C0474395,behavior showing increased motor activity
+C0241158,scar tissue
+C0231807,dyspnea on exertion
+C0520966,coordination abnormal
+C0231528,myalgia
+C0020440,hypercapnia
+C0392162,clammy skin
+C0557075,has religious belief
+C0848277,room spinning
+C0859032,moan
+C0028081,night sweat
+C0006625,cachexia
+C0436331,symptom aggravating factors
+C0013404,dyspnea
+C0034642,rale
+C0016382,flushing
+C0221150,painful swallowing
+C0003862,arthralgia
+C0008301,choke
+C0232726,tenesmus
+C0009806,constipation
+C0019080,haemorrhage
+C0232695,bowel sounds decreased
+C0278014,decreased stool caliber
+C0027498,nausea and vomiting
+C0020175,hunger
+C0011991,diarrhea
+C0012833,dizziness
+C0020625,hyponatremia
+C0009024,clonus
+C0030193,pain
+C1321756,achalasia
+C0085624,burning sensation
+C0744492,guaiac positive
+C0239832,numbness of hand
+C0043144,wheezing
+C0010200,cough
+C0392680,shortness of breath
+C0241158,scar tissue
+C0277797,apyrexial
+C0262581,no known drug allergies
+C0030193,pain
+C0239134,productive cough
+C0242429,throat sore
+C0013404,dyspnea
+C0232292,chest tightness
+C0700292,hypoxemia
+C0231835,tachypnea
+C0234215,sensory discomfort
+C0015967,fever
+C0042963,vomiting
+C0035508,rhonchus
+C0018991,hemiplegia
+C0231890,fremitus
+C0009024,clonus
+C0231872,egophony
+C0427055,facial paresis
+C0221470,aphagia
+C0231530,muscle twitch
+C0522224,paralyse
+C0024031,low back pain
+C0277823,charleyhorse
+C0848168,out of breath
+C0205254,sedentary
+C0002962,angina pectoris
+C0010200,cough
+C0847488,unhappy
+C0553668,labored breathing
+C0020672,"hypothermia, natural"
+C0013404,dyspnea
+C0744727,hematocrit decreased
+C0043144,wheezing
+C0700292,hypoxemia
+C0235634,renal angle tenderness
+C0424749,feels hot/feverish
+C0015967,fever
+C0030193,pain
+C0085606,urgency of micturition
+C0018965,hematuria
+C0042963,vomiting
+C0085593,chill
+C0011991,diarrhea
+C0027497,nausea
+C0000737,pain abdominal
+C0231528,myalgia
+C0015967,fever
+C0085593,chill
+C0008033,pleuritic pain
+C0205400,thicken
+C0231528,myalgia
+C0277797,apyrexial
+C0028081,night sweat
+C1517205,flare
+C0392680,shortness of breath
+C0085619,orthopnea
+C0549483,abscess bacterial
+C0020649,hypotension
+C0010200,cough
+C1513183,metastatic lesion
+C0238844,breath sounds decreased
+C0043096,decreased body weight
+C0232118,pulsus paradoxus
+C0086439,hypokinesia
+C0232267,pericardial friction rub
+C0013404,dyspnea
+C0392680,shortness of breath
+C0578150,hemodynamically stable
+C0018800,cardiomegaly
+C0020649,hypotension
+C0241235,sputum purulent
+C0427055,facial paresis
+C0030193,pain
+C0028961,oliguria
+C0312422,blackout
+C0728899,intoxication
+C0040822,tremor
+C0233762,hallucinations auditory
+C0438696,suicidal
+C0424337,hoard
+C0022107,irritable mood
+C0150041,feeling hopeless
+C0424000,feeling suicidal
+C0233647,neologism
+C0036572,seizure
+C0237154,homelessness
+C0917801,sleeplessness
+C0041657,unconscious state
+C0030318,panic
+C0238844,breath sounds decreased
+C0392680,shortness of breath
+C0013404,dyspnea
+C0425560,cardiovascular finding
+C1320716,cardiovascular event
+C0019079,haemoptysis
+C0010200,cough
+C0020440,hypercapnia
+C0037580,soft tissue swelling
+C0242453,prostatism
+C0085631,agitation
+C1273573,unsteady gait
+C0424092,withdraw
+C0020625,hyponatremia
+C0558089,verbally abusive behavior
+C0424000,feeling suicidal
+C0241526,unresponsiveness
+C0233481,worry
+C0013144,drowsiness
+C0234450,sleepy
+C0233762,hallucinations auditory
+C0438696,suicidal
+C0015967,fever
+C0011991,diarrhea
+C1096646,transaminitis
+C0038002,splenomegaly
+C0028081,night sweat
+C0277797,apyrexial
+C0221198,lesion
+C1260880,snuffle
+C0085593,chill
+C0010200,cough
+C0746619,monoclonal
+C0020598,hypocalcemia result
+C0028961,oliguria
+C0427629,rhd positive
+C0476273,distress respiratory
+C0010520,cyanosis
+C0231835,tachypnea
+C0233070,para 1
+C0428977,bradycardia
+C0006157,breech presentation
+C0332601,cushingoid facies
+C0878661,cushingoid habitus
+C0010200,cough
+C0231528,myalgia
+C0242143,uncoordination
+C0015967,fever
+C0008033,pleuritic pain
+C1260880,snuffle
+C0242429,throat sore
+C0231218,malaise
+C0742985,debilitation
+C0436331,symptom aggravating factors
+C0085593,chill
+C0240962,scleral icterus
+C0277873,nasal flaring
+C0013428,dysuria
+C0542073,lip smacking
+C0018681,headache
+C0037383,sneeze
+C0037384,snore
+C0457097,green sputum
+C0392680,shortness of breath
+C0476273,distress respiratory
+C0312422,blackout
+C0277794,extreme exhaustion
+C0728899,intoxication
+C0040822,tremor
+C0085631,agitation
+C0438696,suicidal
+C0237154,homelessness
+C0242453,prostatism
+C0023380,lethargy
+C0036572,seizure
+C0231530,muscle twitch
+C0848340,stuffy nose
+C0150041,feeling hopeless
+C0581911,heavy legs
+C0034642,rale
+C0086439,hypokinesia
+C0003123,anorexia
+C0235396,hypertonicity
+C0392680,shortness of breath
+C0239981,hypoalbuminemia
+C0033774,pruritus
+C0234233,sore to touch
+C0578150,hemodynamically stable
+C0427055,facial paresis
+C0042963,vomiting
+C0241252,stool color yellow
+C0859032,moan
+C0027497,nausea
+C0000737,pain abdominal
+C0277977,Murphy's sign
+C0016204,flatulence
+C0232488,colic abdominal
+C0030193,pain
+C0003962,ascites
+C0011991,diarrhea
+C0151878,qt interval prolonged
+C0425560,cardiovascular finding
+C1320716,cardiovascular event
+C0541992,groggy
+C0232201,sinus rhythm
+C0425449,gasping for breath
+C0009806,constipation
+C0474505,feces in rectum
+C0702118,abnormally hard consistency
+C0000737,pain abdominal
+C0231230,fatigability
+C0240805,prodrome
+C0042963,vomiting
+C0027497,nausea
+C0231528,myalgia
+C0020625,hyponatremia
+C0234233,sore to touch
+C0858924,general discomfort
+C0231807,dyspnea on exertion
+C0232766,asterixis
+C0744492,guaiac positive
+C0239832,numbness of hand
+C0018681,headache
+C0085636,photophobia
+C0002416,ambidexterity
+C0042963,vomiting
+C0012833,dizziness
+C0028643,numbness
+C0027497,nausea
+C0015967,fever
+C0038002,splenomegaly
+C0020639,hypoproteinemia
+C0015672,fatigue
+C0019080,haemorrhage
+C0231230,fatigability
+C0332601,cushingoid facies
+C0878661,cushingoid habitus
+C0241252,stool color yellow
+C0232488,colic abdominal
+C0042963,vomiting
+C0027497,nausea
+C0000737,pain abdominal
+C0030193,pain
+C0332601,cushingoid facies
+C0878661,cushingoid habitus
+C0003962,ascites
+C0205400,thicken
+C0234233,sore to touch
+C0011991,diarrhea
+C0277797,apyrexial
+C0030252,palpitation
+C0238705,left atrial hypertrophy
+C0038990,sweat
+C0700590,sweating increased
+C0556346,alcohol binge episode
+C0438716,pressure chest
+C0241158,scar tissue
+C0425560,cardiovascular finding
+C1320716,cardiovascular event
+C0149746,orthostasis
+C0392680,shortness of breath
+C0520888,t wave inverted
+C0042963,vomiting
+C0000737,pain abdominal
+C0549483,abscess bacterial
+C0000727,abdomen acute
+C0740844,air fluid level
+C0425491,catching breath
+C0232498,abdominal tenderness
+C0027497,nausea
+C0234233,sore to touch
+C0016204,flatulence
+C0011991,diarrhea
+C0577559,mass of body structure
+C0277797,apyrexial
+C0009806,constipation
+C0205400,thicken
+C0232995,gravida 0
+C0000737,pain abdominal
+C0016204,flatulence
+C0030193,pain
+C0456091,large-for-dates fetus
+C0233070,para 1
+C0042963,vomiting
+C0034079,lung nodule
+C0006157,breech presentation
+C0392680,shortness of breath
+C0043096,decreased body weight
+C0231441,immobile
+C1273573,unsteady gait
+C0233763,hallucinations visual
+C0424000,feeling suicidal
+C0240233,loose associations
+C0392701,giddy mood
+C0150041,feeling hopeless
+C0085631,agitation
+C0233762,hallucinations auditory
+C0022107,irritable mood
+C0917801,sleeplessness
+C0233647,neologism
+C0455204,homicidal thoughts
+C0578859,disturbed family
+C0233481,worry
+C0231187,decompensation
+C0558089,verbally abusive behavior
+C0007398,catatonia
+C0438696,suicidal
+C0558261,terrify
+C0312422,blackout
+C0424109,weepiness
+C0338656,impaired cognition
+C0022107,irritable mood
+C0085631,agitation
+C0277794,extreme exhaustion
+C0917801,sleeplessness
+C0014394,enuresis
+C0376405,patient non compliance
+C0150041,feeling hopeless
+C0233763,hallucinations visual
+C0425251,bedridden
+C0741453,bedridden
+C0242453,prostatism
+C0232257,systolic murmur
+C0871754,frail
+C0015967,fever
