@@ -37,7 +37,7 @@ const Triage = () => {
       return <SensorData formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else if (page === 2) {
-      return <Symptoms formData={formData} setFormData={setFormData} />;
+      return <Symptoms formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else {
       return <Confirmation formData={formData} setFormData={setFormData} setProgress={setProgress} page={page} setPage={setPage} />;
