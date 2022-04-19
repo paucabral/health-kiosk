@@ -27,7 +27,7 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
     diagnosis = diseaseInfo[entry]['Diagnosis']
     causes = diseaseInfo[entry]['Causes']
     symptoms = diseaseInfo[entry]['Symptoms']
-    precautions = diseaseInfo[entry]['Precautions/Treatment']
+    precautions = diseaseInfo[entry]['Precaution']
     sources = diseaseInfo[entry]['Source']
   }
 
@@ -40,8 +40,8 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
               <MDBModalTitle className='text-uppercase'>{entry}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDiseaseModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody className='my-2' style={{ textAlign: "justify", overflowY: 'auto', height: '100vh' }}>
-              <MDBRow>
+            <MDBModalBody className='my-2 mr-3' style={{ textAlign: "justify", overflowY: 'auto', height: '100vh' }}>
+              <MDBRow className='px-3'>
                 <div>
                   <div className='mb-2'>
                     <h5>Overview</h5>
