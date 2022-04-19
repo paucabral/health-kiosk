@@ -21,6 +21,8 @@ def sendSms(resultForm):
 
     contact_no = contact_no.replace('0', '+63', 1)
     contact_no = contact_no.replace('-', '')
+    contact_no = contact_no.replace('(', '')
+    contact_no = contact_no.replace(')', '')
     contact_no = contact_no.replace(' ', '')
 
     # Message content
