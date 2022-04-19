@@ -199,7 +199,8 @@ class AdministratorDashboard(View):
         sensors_status = "ONLINE" if urllib.request.urlopen(
             settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
 
-        sms_status = "OFFLINE"  # TODO
+        sms_status = "ONLINE" if urllib.request.urlopen(
+            "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
 
         gps_status = "ONLINE" if urllib.request.urlopen(
             "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"

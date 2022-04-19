@@ -51,7 +51,7 @@ def apiGpsCoordinates(request):
     return Response(coordinates)
 
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def apiSms(request):
     data = dict(request.data)
     if config('ENVIRONMENT', default='production') == 'development':
