@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow } from 'mdb-react-ui-kit';
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import MomentUtils from '@date-io/moment';
@@ -13,7 +13,15 @@ const defaultMaterialTheme = createTheme({
   }
 });
 
-const PersonalInformationInput = ({ formData, setFormData }) => {
+const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
+  useEffect(() => {
+    if (formData.first_name === "" | formData.last_name === "" | formData.birth_date === null | formData.sex === "" | formData.contact_no === "") {
+      setBtnDisable(true)
+    }
+    else {
+      setBtnDisable(false)
+    }
+  }, [formData])
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Personal Information</MDBCardTitle>
@@ -21,10 +29,10 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
       <MDBCardBody>
         <MDBRow className='mb-4'>
           <MDBCol>
-            <MDBInput required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value.toUpperCase() })} id='first_name' size='md' label='First Name' type='text' icon="user" />
+            <MDBInput required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value.toUpperCase() })} id='first_name' size='md' label='First Name * ' type='text' icon="user" />
           </MDBCol>
           <MDBCol>
-            <MDBInput required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value.toUpperCase() })} id='last_name' size='md' label='Last Name' type='text' icon="user" />
+            <MDBInput required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value.toUpperCase() })} id='last_name' size='md' label='Last Name * ' type='text' icon="user" />
           </MDBCol>
         </MDBRow>
         <MDBRow className='mb-2'>
@@ -36,14 +44,16 @@ const PersonalInformationInput = ({ formData, setFormData }) => {
             </MuiPickersUtilsProvider>
           </MDBCol>
           <MDBCol className='col-2'>
-            <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label="Sex" value={formData.sex}>
-              <option disabled default value={""}>Sex</option>
+            <select className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label="Sex * " value={formData.sex}>
+              <option disabled default value={""}>Sex *</option>
               <option value={"MALE"}>MALE</option>
               <option value={"FEMALE"}>FEMALE</option>
             </select>
           </MDBCol>
           <MDBCol>
-            <MDBInput required value={formData.contact_no} onChange={(event) => setFormData({ ...formData, contact_no: event.target.value })} id='contact_no' size='md' label='Contact No.' type='tel' icon="phone" />
+            <MDBInput required pattern='[0-9]*' value={formData.contact_no} onChange={(event) => {
+              setFormData({ ...formData, contact_no: event.target.value.replace(/[^0-9]+/g, '') })
+            }} id='contact_no' size='md' label='Contact No. *&nbsp;' type='tel' icon="phone" />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>

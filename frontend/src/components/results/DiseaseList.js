@@ -11,7 +11,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
         const content = [key, value]
         disease_list.push(content)
       }
-      return disease_list;
+      return disease_list.slice(0, 5);
     }
     else {
       return null;

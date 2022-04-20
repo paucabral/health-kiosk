@@ -23,19 +23,21 @@ const Triage = () => {
     }
   )
 
+  const [btnDisable, setBtnDisable] = useState(false);
+
   const [page, setPage] = useState(0);
   const [progress, setProgress] = useState(0);
   const FormTitles = ['Personal Information', 'Vital Signs', 'Symptoms', 'Next']
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <PersonalInformationInput formData={formData} setFormData={setFormData} />;
+      return <PersonalInformationInput formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else if (page === 1) {
-      return <SensorData formData={formData} setFormData={setFormData} />;
+      return <SensorData formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else if (page === 2) {
-      return <Symptoms formData={formData} setFormData={setFormData} />;
+      return <Symptoms formData={formData} setFormData={setFormData} setBtnDisable={setBtnDisable} />;
     }
     else {
       return <Confirmation formData={formData} setFormData={setFormData} setProgress={setProgress} page={page} setPage={setPage} />;
@@ -65,7 +67,7 @@ const Triage = () => {
             <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page === 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>Prev</MDBBtn>
           </MDBCol>
           <MDBCol>
-            <MDBBtn id='next' color='primary' className='w-75' disabled={page === FormTitles.length - 1} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
+            <MDBBtn id='next' color='primary' className='w-75' disabled={page === FormTitles.length - 1 || btnDisable} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>Next</MDBBtn>
           </MDBCol>
         </MDBRow>
       </React.Fragment>;
@@ -77,7 +79,7 @@ const Triage = () => {
       <MDBContainer className='align-items-center justify-content-center mt-5'>
         {PageCard()}
         <MDBProgress height='10' className='rounded mt-3'>
-          <MDBProgressBar width={progress} valuemin={0} valuemax={100} />
+          <MDBProgressBar bgColor='primary' width={progress} valuemin={0} valuemax={100} />
         </MDBProgress>
       </MDBContainer>
     </React.Fragment>

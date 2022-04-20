@@ -199,9 +199,11 @@ class AdministratorDashboard(View):
         sensors_status = "ONLINE" if urllib.request.urlopen(
             settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
 
-        sms_status = "OFFLINE"  # TODO
+        sms_status = "ONLINE" if urllib.request.urlopen(
+            "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
 
-        gps_status = "OFFLINE"  # TODO
+        gps_status = "ONLINE" if urllib.request.urlopen(
+            "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
 
         gmaps_status = "ONLINE" if urllib.request.urlopen(
             "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=14.6492,121.116&type=hospital&rankby=distance&key={}".format(settings.GOOGLE_MAPS_API_KEY)).getcode() == 200 else "OFFLINE"

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MDBInput, MDBBtn, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import TemperatureModal from './sensor_modals/TemperatureModal';
 import PulseModal from './sensor_modals/PulseModal';
 import O2Modal from './sensor_modals/O2Modal';
 
-const SensorData = ({ formData, setFormData }) => {
+const SensorData = ({ formData, setFormData, setBtnDisable }) => {
 
   const [temperatureModal, setTemperatureModal] = useState(false);
   const toggleTemperatureModal = () => setTemperatureModal(!temperatureModal);
@@ -15,7 +15,14 @@ const SensorData = ({ formData, setFormData }) => {
   const [o2Modal, setO2Modal] = useState(false);
   const toggleO2Modal = () => setO2Modal(!o2Modal);
 
-  console.log(formData)
+  useEffect(() => {
+    if (formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === "") {
+      setBtnDisable(true)
+    }
+    else {
+      setBtnDisable(false)
+    }
+  }, [formData])
 
   return (
     <React.Fragment>
