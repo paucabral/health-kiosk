@@ -94,21 +94,31 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">LOCATION</h6>
           </div>
-          <div class="card-body">
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;GPS COORDINATES:
-                {{ gps_status }}</span>
-            </span>
-            <br />
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fab fa-google"></i>&nbsp;&nbsp;GOOGLE MAPS API:
-                {{ gmaps_status }}</span>
-            </span>
-            <br />
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fas fa-map"></i>&nbsp;&nbsp;MAPQUEST API:
-                {{ mapquest_status }}</span>
-            </span>
+          <div style="padding-left: 1em; padding-top: 0.925em; padding-bottom: 0.925em;">
+            <div class="row" style="font-weight: bold;">
+              <div class="col">
+                <span style="font-size: 0.9em;"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;GPS COORDINATES:</span>
+              </div>
+              <div class="col">
+                <span style="font-size: 0.9em;">{{ gps_status }}</span>
+              </div>
+            </div>
+            <div class="row" style="font-weight: bold;">
+              <div class="col">
+                <span style="font-size: 0.9em;"><i class="fab fa-google"></i>&nbsp;&nbsp;GOOGLE MAPS API:</span>
+              </div>
+              <div class="col">
+                <span style="font-size: 0.9em;">{{ gmaps_status }}</span></span>
+              </div>
+            </div>
+            <div class="row" style="font-weight: bold;">
+              <div class="col">
+                <span style="font-size: 0.9em;"><i class="fas fa-map"></i>&nbsp;&nbsp;MAPQUEST API:</span>
+              </div>
+              <div class="col">
+                <span style="font-size: 0.9em;">{{ mapquest_status }}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
