@@ -14,4 +14,13 @@ A self-service health kiosk that performs differential diagnosis and provide rec
 - John Edward Sam T. Matienzo | BS Computer Engineering | Systems Administration  | qjestmatienzo@tip.edu.ph
 
 ## Running Development
-To run a development environment, create the respective `.env` files for both the backend and frontend applications. The respective `.env.sample` file for each can be used as a template for the environment variables needed inside each application. Afterwards, run the `run-dev.sh` script from a `bash` shell to automate the process of installing the dependencies and running the respective applications. The backend server is a *Django* web application which runs on port `8000` while the frontend server is a *React* web application that runs on port `3000`.
+To run a development environment, simply follow the following steps:
+1. Clone the repository on the intended local machine.
+    ```
+    $ git clone https://github.com/paucabral/health-kiosk.git
+    ```
+2. Create the respective `.env` files for both the backend and frontend applications. The respective `.env.sample` file for each can be used as a template for the environment variables needed inside each application.
+3. Afterwards, run the `run-dev.sh` script from a `bash` shell to automate the process of installing the dependencies and running the respective applications. The backend server is a *Django* web application which runs on port `8000` while the frontend server is a *React* web application that runs on port `3000`.
+    ```
+    $ bash run-dev.sh
+    ```
