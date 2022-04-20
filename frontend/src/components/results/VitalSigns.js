@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCard, MDBCardHeader, MDBCardBody, MDBCardText } from 'mdb-react-ui-kit';
+import VitalSignStatus from '../../handlers/VitalSignStatus';
 
 const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_saturation }) => {
   return (
@@ -19,7 +20,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                   <MDBCardText>
                     <MDBRow>
                       <MDBCol><strong>{temperature ? <span>{temperature} °C</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>STATUS</MDBCol>
+                      <MDBCol>{VitalSignStatus("TEMPERATURE", temperature)}</MDBCol>
                     </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
@@ -36,7 +37,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                   <MDBCardText>
                     <MDBRow>
                       <MDBCol><strong>{pulse_rate ? <span>{pulse_rate} bpm</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>STATUS</MDBCol>
+                      <MDBCol>{VitalSignStatus("PULSE_RATE", pulse_rate)}</MDBCol>
                     </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
@@ -53,7 +54,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                   <MDBCardText>
                     <MDBRow>
                       <MDBCol><strong>{systolic_bp ? <span>{systolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>STATUS</MDBCol>
+                      <MDBCol>{VitalSignStatus("SYSTOLIC_BP", systolic_bp)}</MDBCol>
                     </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
@@ -70,7 +71,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                   <MDBCardText>
                     <MDBRow>
                       <MDBCol><strong>{diastolic_bp ? <span>{diastolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>STATUS</MDBCol>
+                      <MDBCol>{VitalSignStatus("DIASTOLIC_BP", diastolic_bp)}</MDBCol>
                     </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
@@ -87,7 +88,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
                   <MDBCardText>
                     <MDBRow>
                       <MDBCol><strong>{o2_saturation ? <span> {o2_saturation} %</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>STATUS</MDBCol>
+                      <MDBCol>{VitalSignStatus("O2_SATURATION", o2_saturation)}</MDBCol>
                     </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>
