@@ -46,32 +46,15 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
           </MDBRow>
           <MDBRow className='p-0 m-0'>
             <MDBContainer style={{ marginBottom: '0.5em' }}>
-              <MDBCard shadow='0' border='primary' background='white'>
-                <MDBCardHeader className='text-white pt-2 pb-2' background='primary'>
-                  <strong><MDBIcon fas icon="tint" /> Systolic Blood Pressure</strong>
-                </MDBCardHeader>
-                <MDBCardBody className='text-primary pt-2 pb-2'>
-                  <MDBCardText>
-                    <MDBRow>
-                      <MDBCol><strong>{systolic_bp ? <span>{systolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>{VitalSignStatus("SYSTOLIC_BP", systolic_bp)}</MDBCol>
-                    </MDBRow>
-                  </MDBCardText>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBContainer>
-          </MDBRow>
-          <MDBRow className='p-0 m-0'>
-            <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='secondary' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='secondary'>
-                  <strong><MDBIcon fas icon="tint" /> Diastolic Blood Pressure</strong>
+                  <strong><MDBIcon fas icon="tint" /> Blood Pressure</strong>
                 </MDBCardHeader>
                 <MDBCardBody className='text-secondary pt-2 pb-2'>
                   <MDBCardText>
                     <MDBRow>
-                      <MDBCol><strong>{diastolic_bp ? <span>{diastolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
-                      <MDBCol>{VitalSignStatus("DIASTOLIC_BP", diastolic_bp)}</MDBCol>
+                      <MDBCol><strong>{systolic_bp && diastolic_bp ? <span>{systolic_bp} mmHg / {diastolic_bp} mmHg</span> : <span>NA</span>}</strong></MDBCol>
+                      <MDBCol>{VitalSignStatus("BLOOD_PRESSURE", systolic_bp, diastolic_bp)}</MDBCol>
                     </MDBRow>
                   </MDBCardText>
                 </MDBCardBody>

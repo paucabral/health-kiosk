@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const VitalSignStatus = (vitalSign, value) => {
+const VitalSignStatus = (vitalSign, value, value2) => {
   if (vitalSign == "TEMPERATURE") {
     if (value >= 35.0 && value <= 37.5) {
       return "NORMAL"
@@ -55,42 +55,26 @@ const VitalSignStatus = (vitalSign, value) => {
     }
   }
 
-  if (vitalSign == "SYSTOLIC_BP") {
-    if (value < 120) {
+  if (vitalSign == "BLOOD_PRESSURE") {
+    if ((value < 120) && (value2 < 80)) {
       return "NORMAL"
     }
-    else if (value >= 120 && value <= 129) {
+    else if ((value >= 120 && value <= 129) && (value2 < 80)) {
       return "ELEVATED"
     }
-    else if (value > 129 && value <= 139) {
+    else if ((value > 129 && value <= 139) || (value2 >= 80 && value2 <= 89)) {
       return "HIGH BLOOD PRESSURE (Hypertension) Stage 1"
     }
-    else if (value > 139 && value <= 180) {
+    else if ((value > 139 && value <= 180) || (value2 > 89 && value2 <= 120)) {
       return "HIGH BLOOD PRESSURE (Hypertension) Stage 2"
     }
-    else if (value > 180) {
+    else if ((value > 180) || (value > 120)) {
       return "HYPERTENSIVE CRISIS (Consult Immediately)"
     }
-  }
-
-  if (vitalSign == "DIASTOLIC_BP") {
-    if (value < 80) {
-      return "NORMAL"
-    }
-    else if (value < 80) {
-      return "ELEVATED"
-    }
-    else if (value >= 80 && value <= 89) {
-      return "HIGH BLOOD PRESSURE (Hypertension) Stage 1"
-    }
-    else if (value > 89 && value <= 120) {
-      return "HIGH BLOOD PRESSURE (Hypertension) Stage 2"
-    }
-    else if (value > 120) {
-      return "HYPERTENSIVE CRISIS (Consult Immediately)"
+    else {
+      return "NA"
     }
   }
-
   return "STATUS"
 }
 
