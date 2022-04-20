@@ -13,7 +13,7 @@ A self-service health kiosk that performs differential diagnosis and provide rec
 - Reinhold E. Lucana | BS Computer Engineering | Systems Administration  | qrelucana@tip.edu.ph
 - John Edward Sam T. Matienzo | BS Computer Engineering | Systems Administration  | qjestmatienzo@tip.edu.ph
 
-## Running Development
+## Creating a Development Environment
 To run a development environment, simply follow the following steps:
 1. Clone the repository on the intended local machine.
     ```
