@@ -130,6 +130,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Rest Framework
+if not DEBUG:
+    REST_FRAMEWORK = {
+        'DEFAULT_PERMISSION_CLASSES': [
+            'rest_framework.renderers.JSONRenderer',
+        ]
+    }
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
