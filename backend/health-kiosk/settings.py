@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'health-kiosk.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-if config('ENVIRONMENT', default='production') == 'development':
+if config('DB_ENVIRONMENT', default='production') == 'development':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
