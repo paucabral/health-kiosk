@@ -70,10 +70,17 @@ const char* password = "PLDTWIFI8g59t";
 #define LISTEN_PORT 80                  //incoming TCP connection port
 WiFiServer server(LISTEN_PORT);         //Create server instance
 
+
+IPAddress local_IP(192, 168, 1, 22);    // Static IP address
+IPAddress gateway(192, 168, 1, 1);      // Gateway IP
+IPAddress subnet(255, 255, 0, 0);
+
 void setup()
 {
   Serial.begin(115200);
-
+  if (!WiFi.config(local_IP, gateway, subnet)) {    // Configure static IP address
+    Serial.println("STA Failed to configure");
+  }
   WiFi.begin(ssid, password);                   //Connect to WiFi
   while (WiFi.status() != WL_CONNECTED){
     delay(500);
@@ -116,18 +123,15 @@ void setup()
   rest.set_name("vital_signs");
 
   digitalWrite(buttonD8, HIGH);
-  digitalWrite(buttonD7, HIGH);
+  digitalWrite(buttonD7, HIGH);  
+  virtualPowerSwitch();
+  pox.begin();
 }
 
 void loop()
 {
   pox.update();
   mainButtonState = digitalRead(buttonD6);
-  if (WiFi.status() != WL_CONNECTED){
-    Serial.println("Disconnected...");
-    ESP.reset();
-    Serial.print("Reconnected...");
-  }
  
   if (mainButtonState == HIGH){
     virtualPower = 1;
@@ -216,7 +220,7 @@ float smooth() {                          // Smoothing function
   total = total - readings[readIndex];    // Subtract last reading to not keep on adding
   cur_sample = mlx.readObjectTempC();     // Read the sensor
   if(isnan(cur_sample)){
-  Serial.print(F("CUR SAMPLE is NAN"));
+//  Serial.print(F("CUR SAMPLE is NAN"));
   readings[readIndex] = readings[readIndex-1]+1;
   }
   else{
@@ -296,25 +300,25 @@ void bpData() {
 void virtualPowerSwitch() {
   digitalWrite(buttonD7, HIGH);
   Serial.println("BUTTON D7: HIGH");
-  delay(500);
+  delay(100);
   digitalWrite(buttonD7, LOW);
   Serial.println("BUTTON D7: LOW");
-  delay(500);
+  delay(100);
   digitalWrite(buttonD7, HIGH);
   Serial.println("BUTTON D7: HIGH");
-  delay(500);
+  delay(100);
 }
 
 void virtualMemorySwitch() {
   for (int i = 0; i < 2; i++){
     digitalWrite(buttonD8, HIGH);
     Serial.println("BUTTON D8: HIGH");
-    delay(500);
+    delay(100);
     digitalWrite(buttonD8, LOW);
     Serial.println("BUTTON D8: LOW");
-    delay(500);
+    delay(100);
     digitalWrite(buttonD8, HIGH);
     Serial.println("BUTTON D8: HIGH");
-    delay(500);
+    delay(100);
   }
 }
