@@ -25,7 +25,7 @@ if [ -f .env ]; then
     # Load Environment Variables
     export $(cat .env | grep -v '#' | sed 's/\r$//' | awk '/=/ {print $1}' )
 fi
-npm install
+npm ci
 npm start &
 FRONTEND_JOB=$!
 echo "$FRONTEND_JOB"
