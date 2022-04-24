@@ -47,6 +47,14 @@ def sendSms(resultForm):
         disclaimer = "\nDISCLAIMER: The results of the differential diagnosis is NOT A FINAL DIAGNOSIS. Use this for reference only in checking your symptoms and finding a suitable doctor/hospital.\n\n"
         msg += disclaimer
 
+        symptoms_heading = "\nSymptoms:\n"
+        msg += symptoms_heading
+
+        for symptom in symptoms:
+            msg += "{}, ".format(symptom)
+
+        msg += "\n"
+
         heading = "\nDifferential Diagnosis:\n"
         msg += heading
 
