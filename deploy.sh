@@ -35,3 +35,10 @@ if [ -f .env ]; then
 fi
 npm run build
 serve -l 3000 -s build &
+
+# Application Display
+cd ..
+until curl -s http://localhost:3000 | grep "HEALTH KIOSK"; do
+    echo "Waiting for the application to deploy, retrying in 2 seconds..."
+    sleep 2;
+done
