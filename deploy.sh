@@ -23,7 +23,7 @@ python3 manage.py collectstatic --noinput
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py createsuperuserwithpassword --username $DEFAULT_ADMIN_USER --password $DEFAULT_ADMIN_PASSWORD --email $DEFAULT_ADMIN_EMAIL --preserve
-python manage.py runserver 0.0.0.0:8000 --insecure &
+python manage.py runserver 0.0.0.0:8000 &
 
 cd ..
 
