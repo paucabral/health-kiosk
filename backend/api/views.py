@@ -41,13 +41,19 @@ def apiNearestHospitals(request):
 @api_view(['GET'])
 def apiGpsCoordinates(request):
     if config('ENVIRONMENT', default='production') == 'development':
+        # dummy coordinates for development
         coordinates = {
             "lat": 14.6507,
             "lng": 121.1029
         }
     else:
-        from api.gpshandler import location
-        coordinates = location()
+        try:
+            from api.gpshandler import location
+            coordinates = location()
+        except:
+            data = {"message": "There was an error with the GPS module."}
+            response_code = 500
+            return Response(data, response_code)
     return Response(coordinates)
 
 
@@ -57,8 +63,12 @@ def apiSms(request):
     if config('ENVIRONMENT', default='production') == 'development':
         response_code = 200
     else:
-        from api.sms import sendSms
-        response_code = sendSms(data)
+        try:
+            from api.sms import sendSms
+            response_code = sendSms(data)
+        except:
+            data = {"message": "There was an error with the SMS module."}
+            response_code = 500
     return Response(data, response_code)
 
 
