@@ -206,17 +206,33 @@ class AdministratorDashboard(View):
         except:
             kiosk_status = "OFFLINE"
 
-        sms_status = "ONLINE" if urllib.request.urlopen(
-            "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+        sms_status = "OFFLINE"
+        try:
+            sms_status = "ONLINE" if urllib.request.urlopen(
+                "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+        except:
+            sms_status = "OFFLINE"
 
-        gps_status = "ONLINE" if urllib.request.urlopen(
-            "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+        gps_status = "OFFLINE"
+        try:
+            gps_status = "ONLINE" if urllib.request.urlopen(
+                "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+        except:
+            gps_status = "OFFLINE"
 
-        gmaps_status = "ONLINE" if urllib.request.urlopen(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=14.6492,121.116&type=hospital&rankby=distance&key={}".format(settings.GOOGLE_MAPS_API_KEY)).getcode() == 200 else "OFFLINE"
+        gmaps_status = "OFFLINE"
+        try:
+            gmaps_status = "ONLINE" if urllib.request.urlopen(
+                "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=14.6492,121.116&type=hospital&rankby=distance&key={}".format(settings.GOOGLE_MAPS_API_KEY)).getcode() == 200 else "OFFLINE"
+        except:
+            gmaps_status = "OFFLINE"
 
-        mapquest_status = "ONLINE" if urllib.request.urlopen(
-            "http://www.mapquestapi.com/geocoding/v1/reverse?key={}&location=14.6492,121.116".format(settings.MAPQUEST_API_KEY)).getcode() == 200 else "OFFLINE"
+        mapquest_status = "OFFLINE"
+        try:
+            mapquest_status = "ONLINE" if urllib.request.urlopen(
+                "http://www.mapquestapi.com/geocoding/v1/reverse?key={}&location=14.6492,121.116".format(settings.MAPQUEST_API_KEY)).getcode() == 200 else "OFFLINE"
+        except:
+            mapquest_status = "OFFLINE"
 
         return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
