@@ -1,3 +1,4 @@
+from urllib.error import URLError
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.views import View
@@ -197,7 +198,7 @@ class AdministratorDashboard(View):
         try:
             kiosk_status = "ONLINE" if urllib.request.urlopen(
                 settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
-        except:
+        except URLError:
             kiosk_status = "OFFLINE"
 
         sensors_status = "ONLINE" if urllib.request.urlopen(
