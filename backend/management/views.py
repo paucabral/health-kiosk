@@ -1,8 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.views import View
-from django.http import HttpResponse
-from .forms import CreateUserForm, ProfileForm, CreateSuperUserForm
+from .forms import ProfileForm, CreateSuperUserForm
 from api.models import *
 from .models import *
 from django.contrib import messages
