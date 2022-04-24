@@ -47,6 +47,9 @@ def sendSms(resultForm):
         heading = "\nDifferential Diagnosis:\n"
         msg += heading
 
+        disclaimer = "\nDisclaimer: The results of the differential diagnosis is NOT A FINAL DIAGNOSIS. Use this for reference only in checking your symptoms and finding a suitable doctor/hospital.\n"
+        msg += disclaimer
+
         for differential in differentials[:5]:
             msg += '- {}\n'.format(differential)
 
