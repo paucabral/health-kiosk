@@ -21,7 +21,7 @@ pip3 install -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py createsuperuserwithpassword --username $DEFAULT_ADMIN_USER --password $DEFAULT_ADMIN_PASSWORD --email $DEFAULT_ADMIN_EMAIL --preserve
-gunicorn heath-kiosk.wsgi
+gunicorn heath-kiosk.wsgi &
 
 cd ..
 
@@ -32,4 +32,4 @@ if [ -f .env ]; then
     export $(cat .env | grep -v '#' | sed 's/\r$//' | awk '/=/ {print $1}' )
 fi
 npm run build
-serve -l 3000 -s build
+serve -l 3000 -s build &
