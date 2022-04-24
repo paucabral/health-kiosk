@@ -8,3 +8,4 @@ sudo apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsql
 sudo npm install -g serve
 sudo python3 -m pip install --upgrade pip
 sudo pip3 install virtualenv
+sudo pg_ctlcluster 12 main start
