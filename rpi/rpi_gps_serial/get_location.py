@@ -53,31 +53,37 @@ def compute_rawGPS(raw_val, direction):
     else:
         latlong = "Lat: "
 
-    # print(signed_coord)
+    print(signed_coord)
     return signed_coord
 
-
-
-def get_coords():
+def computedGPS():
     coordinate_payload = {
         "lat": None,
         "lng": None    
     }
     gpscnt = 0                  # variable for iteration
-    gpsarr = []                  # array to hold streams in b format   
-        
+    strgpsarr = []              # array to hold all streams in string (for split function)
+
+    latGPRMC = []               # arrays for lat and long unused
+    longGPRMC = []
+    
     latraw_val = 0.0            # initialize coord values and directions
     latdirection = ""
     longraw_val = 0.0
     longdirection = ""
-
-    while len(gpsarr) < 1:          # initial check if something is read
-        gpslines=ser.readline()      # read from the port
-        strgpslines = str(gpslines).split(',')  # split by ,
-        gpsarr.append(strgpslines)      
+    
+    gpsarr = []                  # array to hold streams in b format   
+    gpslines=ser.readline()      # read from the port
+    strgpslines = str(gpslines).split(',')  # split by ,
+    gpsarr.append(strgpslines)     
+    print(gpslines)
+    if len(gpsarr) < 1:          # initial check if something is read
+        print("EMPTY")            
 
     else:                        # else proceed to check GPGLL
         if (gpsarr[0][0]) == "b'$GPGLL":
+            print("FOUND GPGLL!")
+
             latraw_check = str(gpsarr[0][1]) # Checked initially, the firstmost value of needed
             if (latraw_check != ''):
                 latraw_val = float(gpsarr[0][1])       # GPGLL pattern is $GPGLL, lat, lat_dir, lng, lng_dir
@@ -87,29 +93,17 @@ def get_coords():
 
                 lat = compute_rawGPS(latraw_val, latdirection)      # subject to computation
                 lng = compute_rawGPS(longraw_val, longdirection)      
-
                 coordinate_payload["lat"] = lat          # save as is
-                coordinate_payload["lng"] = lng
-            
-    return coordinate_payload
+                coordinate_payload["lng"] = lng      
+                exit(0)
+            else:
+                print("no value received...")
+                exit(1)
 
     gpscnt+=1
     if gpscnt==8:
         gpscnt = 0
+    # time.sleep(1.5)
 
-def location():
-    coords_list = []
-
-    while len(coords_list) < 10:
-        current_coords = get_coords()
-        if(current_coords != None and current_coords["lat"] !=0 and current_coords["lat"] !=None and current_coords["lng"] !=0 and current_coords["lng"] !=None):
-            print(current_coords)
-            coords_list.append(current_coords)
-    else:
-        lat = movave([coord['lat'] for coord in coords_list], len(coords_list))
-        lng = movave([coord['lng'] for coord in coords_list], len(coords_list))
-        final_coords = {
-            'lat': float("{:.7f}".format(lat[0])),
-            'lng': float("{:.7f}".format(lng[0]))
-        }
-        return final_coords
+while 1:
+    computedGPS()
