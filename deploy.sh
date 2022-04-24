@@ -12,17 +12,8 @@ export DB_ENVIRONMENT=production
 source venv/bin/activate
 sudo su postgres <<EOF
 psql -c "SELECT 'CREATE DATABASE $DB_NAME' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = '$DB_NAME')"
-psql -c "
-  do
-  $$
-  begin
-    if exists (select * from pg_user where rolname = '$DB_USER') then 
-      create role $DB_USER password '$DB_PASSWORD';
-    end if;
-  end
-  $$
-  ;
-"
+psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
+psql -c "ALTER USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
 psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
 echo "Postgres User '$DB_USER' and database '$DB_NAME' created."
 EOF
