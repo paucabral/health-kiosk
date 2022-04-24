@@ -59,17 +59,29 @@ def apiGpsCoordinates(request):
 
 @api_view(['GET', 'POST'])
 def apiSms(request):
-    data = dict(request.data)
-    if config('ENVIRONMENT', default='production') == 'development':
-        response_code = 200
-    else:
-        try:
-            from api.sms import sendSms
-            response_code = sendSms(data)
-        except:
-            data = {"message": "There was an error with the SMS module."}
-            response_code = 500
-    return Response(data, response_code)
+    if request.method == 'POST':
+        data = dict(request.data)
+        if config('ENVIRONMENT', default='production') == 'development':
+            response_code = 200
+        else:
+            try:
+                from api.sms import sendSms
+                response_code = sendSms(data)
+            except:
+                data = {"message": "There was an error with the SMS module."}
+                response_code = 500
+        return Response(data, response_code)
+    elif request.method == 'GET':
+        if config('ENVIRONMENT', default='production') == 'development':
+            response_code = 200
+        else:
+            try:
+                from api.sms import sendSms
+                response_code = 200
+            except:
+                data = {"message": "There was an error with the SMS module."}
+                response_code = 500
+        return Response(response_code)
 
 
 @api_view(['POST'])
