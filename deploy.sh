@@ -19,7 +19,7 @@ psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
 echo "Postgres User '$DB_USER' and database '$DB_NAME' created."
 EOF
 pip3 install -r requirements.txt
-python3 manage.py collectstatic
+python3 manage.py collectstatic --noinput
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py createsuperuserwithpassword --username $DEFAULT_ADMIN_USER --password $DEFAULT_ADMIN_PASSWORD --email $DEFAULT_ADMIN_EMAIL --preserve
