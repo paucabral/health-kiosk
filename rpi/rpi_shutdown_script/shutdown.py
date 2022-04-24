@@ -20,11 +20,14 @@ while True:
     buttonState1 = GPIO.input(15)
     print(buttonState1)
     while buttonState1 == 0:
-      print(buttonState1)
+      buttonState1 = GPIO.input(15)
       if buttonDelay == 5:
         subprocess.call("poweroff", shell=True, 
           stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      
       buttonDelay += 1
+      if buttonState1 == 1:
+        buttonDelay = 0
+        continue
       time.sleep(1)
     time.sleep(1)
-
