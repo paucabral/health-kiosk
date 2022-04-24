@@ -13,15 +13,18 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(15, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 oldButtonState1 = True
+buttonDelay = 0
 
 while True:
     #grab the current button state
     buttonState1 = GPIO.input(15)
+    print(buttonState1)
+    while buttonState1 == 0:
+      print(buttonState1)
+      if buttonDelay == 5:
+        subprocess.call("poweroff", shell=True, 
+          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      buttonDelay += 1
+      time.sleep(1)
+    time.sleep(1)
 
-    # check to see if button has been pushed
-    if buttonState1 != oldButtonState1 and buttonState1 == False:
-      subprocess.call("shutdown -h now", shell=True, 
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      oldButtonState1 = buttonState1
-
-    time.sleep(.1)
