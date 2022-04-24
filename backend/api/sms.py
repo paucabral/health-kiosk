@@ -35,7 +35,7 @@ def sendSms(resultForm):
     CONTACT: {}
 
     Vital Signs:
-    - Body Temperature: {} °C - {}
+    - Body Temperature: {} * C - {}
     - Pulse Rate: {} bpm - {}
     - Systolic Blood Pressure: {} mmHg - {}
     - Diastolic Blood Pressure: {} mmHg - {}
@@ -44,11 +44,11 @@ def sendSms(resultForm):
     '''.format(name, sex, birth_date, contact_no, temperature['value'], temperature['status'], pulse_rate['value'], pulse_rate['status'], systolic_bp['value'], systolic_bp['status'], diastolic_bp['value'], diastolic_bp['status'], o2_saturation['value'], o2_saturation['status'])
 
     if (differentials != None):
+        disclaimer = "\nDISCLAIMER: The results of the differential diagnosis is NOT A FINAL DIAGNOSIS. Use this for reference only in checking your symptoms and finding a suitable doctor/hospital.\n\n"
+        msg += disclaimer
+
         heading = "\nDifferential Diagnosis:\n"
         msg += heading
-
-        disclaimer = "\nDisclaimer: The results of the differential diagnosis is NOT A FINAL DIAGNOSIS. Use this for reference only in checking your symptoms and finding a suitable doctor/hospital.\n"
-        msg += disclaimer
 
         for differential in differentials[:5]:
             msg += '- {}\n'.format(differential)
