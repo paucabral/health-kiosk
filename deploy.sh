@@ -11,7 +11,7 @@ export DB_ENVIRONMENT=production
 [ ! -d "venv/" ] & python3 -m venv venv
 source venv/bin/activate
 sudo su postgres <<EOF
-psql -c "SELECT 'CREATE DATABASE $DB_NAME' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = '$DB_NAME')"
+createdb $DB_NAME
 psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
 psql -c "ALTER USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
 psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
