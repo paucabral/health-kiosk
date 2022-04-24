@@ -193,8 +193,12 @@ class AdministratorDashboard(View):
     def get(self, request, *args, **kwargs):
         patients = Patient.objects.all()
 
-        kiosk_status = "ONLINE" if urllib.request.urlopen(
-            settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+        kiosk_status = "OFFLINE"
+        try:
+            kiosk_status = "ONLINE" if urllib.request.urlopen(
+                settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+        except:
+            kiosk_status = "OFFLINE"
 
         sensors_status = "ONLINE" if urllib.request.urlopen(
             settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
