@@ -109,7 +109,7 @@ def location():
         lat = movave([coord['lat'] for coord in coords_list], len(coords_list))
         lng = movave([coord['lng'] for coord in coords_list], len(coords_list))
         final_coords = {
-            'lat': "{:.7f}".format(lat[0]),
-            'lng': "{:.7f}".format(lng[0])
+            'lat': float("{:.7f}".format(lat[0])),
+            'lng': float("{:.7f}".format(lng[0]))
         }
         return final_coords
