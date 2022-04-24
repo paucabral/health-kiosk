@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Deploying backend server..."
 cd backend/
 if [ -f .env ]; then
     # Load Environment Variables
@@ -23,6 +24,7 @@ gunicorn heath-kiosk.wsgi
 
 cd ..
 
+echo "Deploying frontend server..."
 cd frontend/
 if [ -f .env ]; then
     # Load Environment Variables
