@@ -11,7 +11,7 @@ export ENVIRONMENT=production
 export DB_ENVIRONMENT=production
 [ ! -d "venv/" ] & python3 -m venv venv
 source venv/bin/activate
-python3 manage.py runserver 0.0.0.0:80 &
+python3 manage.py runserver 0.0.0.0:8000 &
 
 cd ..
 
