@@ -59,11 +59,12 @@ To run the kiosk in production, simply follow the following steps:
     ```
     $ sudo bash install.sh
     ```
-2. Run the `build.sh` script to build the frontend and backend code.
+2. Create the respective `.env` files for both the backend and frontend applications. The respective `.env.sample` file for each can be used as a template for the environment variables needed inside each application.
+3. Run the `build.sh` script to build the frontend and backend code.
     ```
     $ bash build.sh
     ```
-3. Copy the `health-kiosk.desktop` file inside the autostart directory. This will run the server and launch the *Chromium* web browser in kiosk mode. 
+4. Copy the `health-kiosk.desktop` file inside the autostart directory. This will run the server and launch the *Chromium* web browser in kiosk mode. 
     ```
     $ sudo cp health-kiosk.desktop /etc/xdg/autostart/health-kiosk.desktop 
     ```
