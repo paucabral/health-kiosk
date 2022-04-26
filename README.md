@@ -4,7 +4,6 @@ A self-service health kiosk that performs differential diagnosis and provide rec
 <br/>
 <img src="assets/kiosk-preview.png"/>
 <br/>
-<br/>
 
 ## Features
 - :bar_chart: **Vital Signs** - Multiple sensors for measuring vital signs.
@@ -25,7 +24,7 @@ A self-service health kiosk that performs differential diagnosis and provide rec
 - display drivers (may vary)
 
 ### Schematics
-<img src="schematic.png"/>
+<img src="assets/schematic.png"/>
 
 ### Tested Environment
 The code was tested on the official **Raspberry Pi OS 32-bit (bullseye)**.
