@@ -17,6 +17,7 @@ def sendSms(resultForm):
     pulse_rate = resultForm['pulse_rate']
     systolic_bp = resultForm['systolic_bp']
     diastolic_bp = resultForm['diastolic_bp']
+    blood_pressure = resultForm['blood_pressure']
     o2_saturation = resultForm['o2_saturation']
 
     contact_no = contact_no.replace('0', '+63', 1)
@@ -35,15 +36,25 @@ def sendSms(resultForm):
     CONTACT: {}
 
     Vital Signs:
-    - Body Temperature: {} °C - {}
+    - Body Temperature: {} * C - {}
     - Pulse Rate: {} bpm - {}
-    - Systolic Blood Pressure: {} mmHg - {}
-    - Diastolic Blood Pressure: {} mmHg - {}
+    - Blood Pressure: {} - {}
     - Oxygen Saturation: {} % - {}
 
-    '''.format(name, sex, birth_date, contact_no, temperature['value'], temperature['status'], pulse_rate['value'], pulse_rate['status'], systolic_bp['value'], systolic_bp['status'], diastolic_bp['value'], diastolic_bp['status'], o2_saturation['value'], o2_saturation['status'])
+    '''.format(name, sex, birth_date, contact_no, temperature['value'], temperature['status'], pulse_rate['value'], pulse_rate['status'], blood_pressure['value'], blood_pressure['status'], o2_saturation['value'], o2_saturation['status'])
 
     if (differentials != None):
+        disclaimer = "\nDISCLAIMER: The results of the differential diagnosis is NOT A FINAL DIAGNOSIS. Use this for reference only in checking your symptoms and finding a suitable doctor/hospital.\n\n"
+        msg += disclaimer
+
+        symptoms_heading = "\nSymptoms:\n"
+        msg += symptoms_heading
+
+        for symptom in symptoms:
+            msg += "{}, ".format(symptom)
+
+        msg += "\n"
+
         heading = "\nDifferential Diagnosis:\n"
         msg += heading
 

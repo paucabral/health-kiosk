@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import DiseaseList from '../components/results/DiseaseList';
 import SMSStatus from '../components/results/results_modal/SMSStatus';
 import VitalSigns from '../components/results/VitalSigns';
+import VitalSignStatus from '../handlers/VitalSignStatus';
 import moment from 'moment';
 
 const Results = () => {
@@ -33,11 +34,11 @@ const Results = () => {
     differentials: location.state.predictions ? Object.keys(location.state.predictions) : null,
     temperature: {
       value: location.state.temperature,
-      status: "STATUS"
+      status: `${VitalSignStatus("TEMPERATURE", location.state.temperature)}`
     },
     pulse_rate: {
       value: location.state.pulse_rate,
-      status: "STATUS",
+      status: `${VitalSignStatus("PULSE_RATE", location.state.pulse_rate)}`,
     },
     systolic_bp: {
       value: location.state.systolic_bp,
@@ -47,9 +48,13 @@ const Results = () => {
       value: location.state.diastolic_bp,
       status: "STATUS",
     },
+    blood_pressure: {
+      value: `${location.state.systolic_bp} mmhg / ${location.state.diastolic_bp} mmhg`,
+      status: `${VitalSignStatus("BLOOD_PRESSURE", location.state.systolic_bp, location.state.diastolic_bp)}`
+    },
     o2_saturation: {
       value: location.state.o2_saturation,
-      status: "STATUS",
+      status: `${VitalSignStatus("O2_SATURATION", location.state.o2_saturation)}`,
     },
   }
 

@@ -1,0 +1,3 @@
+[Desktop Entry]
+Name=HealthKiosk
+Exec=/usr/bin/bash /home/pi/health-kiosk/start.sh

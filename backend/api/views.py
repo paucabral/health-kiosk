@@ -19,10 +19,12 @@ def apiOverview(request):
     api_urls = {
         'Add and Predict': 'api/differential-diagnosis/',
         'Lists': 'api/patient/list/',
-        'Detailed View': 'api/patient/details/<str:pk>/',
+        'Details': 'api/patient/details/<str:pk>/',
         'Update': 'api/patient/update/<str:pk>/',
         'Delete': 'api/patient/delete/<str:pk>/',
         'Google Places': 'api/nearest-hospitals/',
+        'Location': 'api/location',
+        'SMS': 'api/sms',
     }
 
     return Response(api_urls)
@@ -41,25 +43,49 @@ def apiNearestHospitals(request):
 @api_view(['GET'])
 def apiGpsCoordinates(request):
     if config('ENVIRONMENT', default='production') == 'development':
+        # dummy coordinates for development
         coordinates = {
             "lat": 14.6507,
             "lng": 121.1029
         }
     else:
-        from api.gpshandler import location
-        coordinates = location()
+        try:
+            from api.gpshandler import location
+            coordinates = location()
+        except:
+            data = {"message": "There was an error with the GPS module."}
+            response_code = 503
+            return Response(data, response_code)
     return Response(coordinates)
 
 
 @api_view(['GET', 'POST'])
 def apiSms(request):
-    data = dict(request.data)
-    if config('ENVIRONMENT', default='production') == 'development':
-        response_code = 200
-    else:
-        from api.sms import sendSms
-        response_code = sendSms(data)
-    return Response(data, response_code)
+    if request.method == 'POST':
+        data = dict(request.data)
+        if config('ENVIRONMENT', default='production') == 'development':
+            response_code = 200
+        else:
+            try:
+                from api.sms import sendSms
+                response_code = sendSms(data)
+            except:
+                data = {"message": "There was an error with the SMS module."}
+                response_code = 503
+        return Response(data, response_code)
+    elif request.method == 'GET':
+        data = {"message": "Initiating status..."}
+        if config('ENVIRONMENT', default='production') == 'development':
+            response_code = 200
+        else:
+            try:
+                from api.sms import sendSms
+                data = {"message": "There GPS module was instantiated successfully"}
+                response_code = 200
+            except:
+                data = {"message": "There was an error with the SMS module."}
+                response_code = 503
+        return Response(data, response_code)
 
 
 @api_view(['POST'])
