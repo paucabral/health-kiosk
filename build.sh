@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/pi/health-kiosk/ || cd ~/health-kiosk/
+
 echo "Building backend server..."
 cd backend/
 if [ -f .env ]; then

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/pi/health-kiosk/ || cd ~/health-kiosk/
 
 echo "Starting backend server..."
 cd backend/
