@@ -29,4 +29,4 @@ until curl -s http://localhost:3000 | grep "HEALTH KIOSK"; do
     echo "Waiting for the application to deploy, retrying in 2 seconds..."
     sleep 2;
 done
-chromium --kiosk http://localhost:3000
+chromium-browser --kiosk http://localhost:3000 || chromium --kiosk http://localhost:3000
