@@ -63,13 +63,7 @@ To run the kiosk in production, simply follow the following steps:
     ```
     $ bash build.sh
     ```
-3. Create a `.desktop` file inside the autostart directory. This will run the server and launch the *Chromium* web browser in kiosk mode. Simply follow the content below.
+3. Copy the `health-kiosk.desktop` file inside the autostart directory. This will run the server and launch the *Chromium* web browser in kiosk mode. 
     ```
-    $ sudo vim /etc/xdg/autostart/health-kiosk.desktop
+    $ sudo cp health-kiosk.desktop /etc/xdg/autostart/health-kiosk.desktop 
     ```
-    ```bash
-    [Desktop Entry]
-    Name=HealthKiosk
-    Exec=/usr/bin/bash /home/pi/health-kiosk/start.sh
-    ```
-
