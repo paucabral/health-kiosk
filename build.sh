@@ -26,7 +26,7 @@ python3 manage.py createsuperuserwithpassword --username $DEFAULT_ADMIN_USER --p
 
 cd ..
 
-echo "Deploying frontend server..."
+echo "Building frontend server..."
 cd frontend/
 if [ -f .env ]; then
     # Load Environment Variables
