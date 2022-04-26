@@ -23,7 +23,7 @@ python3 manage.py collectstatic --noinput
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py createsuperuserwithpassword --username $DEFAULT_ADMIN_USER --password $DEFAULT_ADMIN_PASSWORD --email $DEFAULT_ADMIN_EMAIL --preserve
-python3 manage.py runserver 0.0.0.0:8000 &
+python3 manage.py runserver 0.0.0.0:80 &
 
 cd ..
 
@@ -42,4 +42,4 @@ until curl -s http://localhost:3000 | grep "HEALTH KIOSK"; do
     echo "Waiting for the application to deploy, retrying in 2 seconds..."
     sleep 2;
 done
-chromium --kiosk http://localhost:3000
+chromium-browser --kiosk http://localhost:3000 || chromium --kiosk http://localhost:3000
