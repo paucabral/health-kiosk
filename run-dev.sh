@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Run Backend
+echo "Deploying backend server..."
 cd backend/
 if [ -f .env ]; then
     # Load Environment Variables
@@ -20,6 +21,7 @@ echo "$BACKEND_JOB"
 cd ..
 
 # Run Frontend
+echo "Deploying frontend server..."
 cd frontend/
 if [ -f .env ]; then
     # Load Environment Variables
