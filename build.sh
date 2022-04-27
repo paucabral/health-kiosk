@@ -14,17 +14,17 @@ export DB_ENVIRONMENT=production
 
 [ ! -d "venv/" ] & rm -r build
 
-sudo mkdir -p build/django/
-sudo mkdir -p build/site/
-sudo mkdir -p build/site/logs/
-sudo mkdir -p build/site/public/
+mkdir -p build/django/
+mkdir -p build/site/
+mkdir -p build/site/logs/
+mkdir -p build/site/public/
 
 cd build/
 [ ! -d "venv/" ] & python3 -m venv venv
 
 cd django/
 
-sudo cp -aR ../../../backend/* .
+cp -aR ../../../backend/* .
 
 sudo su postgres <<EOF
 createdb $DB_NAME
