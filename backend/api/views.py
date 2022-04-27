@@ -106,6 +106,7 @@ def apiDifferentialDiagnosis(request):
         if symptoms:
             result = getPredictions(symptoms)
             response['predictions'] = result
+            # print(response['predictions'])
         return Response(response)
 
 
