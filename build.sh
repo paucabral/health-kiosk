@@ -22,7 +22,7 @@ cd build/
 
 cd django/
 
-sudo cp -R ../../../backend/* .
+sudo cp -aR ../../../backend/* .
 
 sudo su postgres <<EOF
 createdb $DB_NAME
