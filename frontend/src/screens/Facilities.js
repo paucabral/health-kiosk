@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
@@ -16,6 +16,11 @@ const options = {
 }
 
 const Facilities = () => {
+  const loc = useLocation();
+  const keywords = loc.state ? loc.state.split(' ') : null
+  console.log("Keywords")
+  console.log(keywords)
+
   const [status, setStatus] = useState("SUCCESS");
   const [location, setLocation] = useState({});
   const dataLoaded = useRef(false);
@@ -74,11 +79,15 @@ const Facilities = () => {
 
   const [nearestHospitals, setNearestHospitals] = useState([]);
 
+  const placesUrl = keywords ?
+    `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}&keyword=${keywords.join('%20OR%20')}`
+    : `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+
   const fetchNearestHospitals = async () => {
     if (status === "SUCCESS") {
       try {
         console.log("Fetching nearest hospitals...");
-        const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+        const url = placesUrl
         console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
