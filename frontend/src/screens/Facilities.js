@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
@@ -15,7 +15,12 @@ const options = {
   styles: mapStyles
 }
 
-const Facilities = ({ keywords }) => {
+const Facilities = () => {
+  const loc = useLocation();
+  const keywords = loc.state ? loc.state.split(' ') : null
+  console.log("Keywords")
+  console.log(keywords)
+
   const [status, setStatus] = useState("SUCCESS");
   const [location, setLocation] = useState({});
   const dataLoaded = useRef(false);

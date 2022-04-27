@@ -13,6 +13,7 @@ import {
   MDBRow,
   MDBCol
 } from 'mdb-react-ui-kit';
+import { useNavigate } from 'react-router-dom';
 import diseaseInfo from '../../../data/disease-info';
 
 const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal }) => {
@@ -31,6 +32,8 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
     precautions = diseaseInfo[entry]['Precaution']
     sources = diseaseInfo[entry]['Source']
   }
+
+  let navigate = useNavigate();
 
   return (
     <React.Fragment>
@@ -83,19 +86,19 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
                 </div>
               </MDBRow>
             </MDBModalBody>
+            <div id="hospital-specific-btn" style={{ position: 'fixed', bottom: 75, right: 150, zIndex: '5000' }}>
+              <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => navigate('/nearest-facilities', { state: entry })}>
+                <div>
+                  <MDBRow>
+                    <MDBIcon size='2x' fas icon="hospital" />
+                  </MDBRow>
+                  <MDBRow className='m-2'>
+                    <span style={{ fontSize: '0.75em' }}>Find Nearby Facilities</span>
+                  </MDBRow>
+                </div>
+              </MDBBtn>
+            </div>
           </MDBModalContent>
-          <div id="hospital-specific-btn" style={{ position: 'fixed', bottom: 75, right: 150, zIndex: '1000' }}>
-            <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} >
-              <div>
-                <MDBRow>
-                  <MDBIcon size='2x' fas icon="hospital" />
-                </MDBRow>
-                <MDBRow className='m-2'>
-                  <span style={{ fontSize: '0.75em' }}>Find Nearby Facilities</span>
-                </MDBRow>
-              </div>
-            </MDBBtn>
-          </div>
         </MDBModalDialog>
       </MDBModal>
     </React.Fragment>
