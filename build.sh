@@ -12,7 +12,7 @@ export DEBUG=False
 export ENVIRONMENT=production
 export DB_ENVIRONMENT=production
 
-[ ! -d "venv/" ] & rm -r build
+[ ! -d "build/" ] & rm -r build
 
 mkdir -p build/django/
 mkdir -p build/site/
