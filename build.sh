@@ -24,6 +24,8 @@ cd django/
 
 cp -R ../../../backend/. .
 
+chmod 777 build/django/media/
+
 sudo su postgres <<EOF
 createdb $DB_NAME
 psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
