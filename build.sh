@@ -21,9 +21,9 @@ sudo mkdir -p build/site/public/static/
 cd build/
 [ ! -d "venv/" ] & python3 -m venv venv
 
-cd /health-kiosk/django/
+cd django/
 
-sudo cp -R /home/pi/health-kiosk/backend/* . || sudo cp -R ~/health-kiosk/backend/* .
+sudo cp -R ../../../backend/* .
 
 sudo su postgres <<EOF
 createdb $DB_NAME
