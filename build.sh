@@ -12,6 +12,8 @@ export DEBUG=False
 export ENVIRONMENT=production
 export DB_ENVIRONMENT=production
 
+[ ! -d "venv/" ] & rm -r build
+
 sudo mkdir -p build/django/
 sudo mkdir -p build/site/
 sudo mkdir -p build/site/logs/
