@@ -36,6 +36,13 @@ def apiNearestHospitals(request):
     lng = request.GET.get('lng')
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
         lat, lng, settings.GOOGLE_MAPS_API_KEY)
+    try:
+        keyword = request.GET.get('keyword').replace(" ", "%20")
+        url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&keyword={}&type=hospital&rankby=distance&key={}".format(
+            lat, lng, keyword, settings.GOOGLE_MAPS_API_KEY)
+    except:
+        url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
+            lat, lng, settings.GOOGLE_MAPS_API_KEY)
     query_result = requests.get(url)
     return Response(query_result.json())
 

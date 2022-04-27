@@ -15,7 +15,7 @@ const options = {
   styles: mapStyles
 }
 
-const Facilities = () => {
+const Facilities = ({ keywords }) => {
   const [status, setStatus] = useState("SUCCESS");
   const [location, setLocation] = useState({});
   const dataLoaded = useRef(false);
@@ -74,11 +74,15 @@ const Facilities = () => {
 
   const [nearestHospitals, setNearestHospitals] = useState([]);
 
+  const placesUrl = keywords ?
+    `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}&keyword=${keywords.join('%20OR%20')}`
+    : `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+
   const fetchNearestHospitals = async () => {
     if (status === "SUCCESS") {
       try {
         console.log("Fetching nearest hospitals...");
-        const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+        const url = placesUrl
         console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
