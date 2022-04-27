@@ -24,7 +24,7 @@ cd django/
 
 cp -R ../../../backend/. .
 
-chmod 777 build/django/media/
+chmod 777 media/
 
 sudo su postgres <<EOF
 createdb $DB_NAME
