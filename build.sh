@@ -16,7 +16,6 @@ sudo mkdir -p build/django/
 sudo mkdir -p build/site/
 sudo mkdir -p build/site/logs/
 sudo mkdir -p build/site/public/
-sudo mkdir -p build/site/public/static/
 
 cd build/
 [ ! -d "venv/" ] & python3 -m venv venv
