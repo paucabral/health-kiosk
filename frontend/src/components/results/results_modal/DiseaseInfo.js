@@ -7,6 +7,7 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBIcon,
   MDBModalFooter,
   MDBSpinner,
   MDBRow,
@@ -83,6 +84,18 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
               </MDBRow>
             </MDBModalBody>
           </MDBModalContent>
+          <div id="hospital-specific-btn" style={{ position: 'fixed', bottom: 75, right: 150, zIndex: '1000' }}>
+            <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} >
+              <div>
+                <MDBRow>
+                  <MDBIcon size='2x' fas icon="hospital" />
+                </MDBRow>
+                <MDBRow className='m-2'>
+                  <span style={{ fontSize: '0.75em' }}>Find Nearby Facilities</span>
+                </MDBRow>
+              </div>
+            </MDBBtn>
+          </div>
         </MDBModalDialog>
       </MDBModal>
     </React.Fragment>
