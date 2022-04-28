@@ -13,6 +13,7 @@ from django.contrib.auth.hashers import make_password
 from .decorators import *
 from django.conf import settings
 import urllib.request
+from decouple import config
 
 # Create your views here.
 
@@ -208,15 +209,23 @@ class AdministratorDashboard(View):
 
         sms_status = "OFFLINE"
         try:
-            sms_status = "ONLINE" if urllib.request.urlopen(
-                "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+            if config('ENVIRONMENT', default='production') == 'development':
+                sms_status = "ONLINE" if urllib.request.urlopen(
+                    "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+            else:
+                sms_status = "ONLINE" if urllib.request.urlopen(
+                    "http://127.0.0.1/api/sms/").getcode() == 200 else "OFFLINE"
         except:
             sms_status = "OFFLINE"
 
         gps_status = "OFFLINE"
         try:
-            gps_status = "ONLINE" if urllib.request.urlopen(
-                "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+            if config('ENVIRONMENT', default='production') == 'development':
+                gps_status = "ONLINE" if urllib.request.urlopen(
+                    "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+            else:
+                gps_status = "ONLINE" if urllib.request.urlopen(
+                    "http://127.0.0.1/api/location/").getcode() == 200 else "OFFLINE"
         except:
             gps_status = "OFFLINE"
 
