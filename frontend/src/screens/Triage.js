@@ -14,6 +14,7 @@ const Triage = () => {
       birth_date: null,
       sex: "",
       symptoms: [],
+      differentials: [],
       contact_no: "",
       temperature: "",
       pulse_rate: "",

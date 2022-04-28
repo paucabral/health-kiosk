@@ -5,12 +5,18 @@ import DiseaseList from '../components/results/DiseaseList';
 import SMSStatus from '../components/results/results_modal/SMSStatus';
 import VitalSigns from '../components/results/VitalSigns';
 import VitalSignStatus from '../handlers/VitalSignStatus';
+import Disclaimer from '../components/results/results_modal/Disclaimer';
 import moment from 'moment';
 
 const Results = () => {
   const location = useLocation();
 
   let navigate = useNavigate();
+
+  const [disclaimerModal, setDisclaimerModal] = useState(true);
+  const toggleDisclaimerModal = () => {
+    setDisclaimerModal(!disclaimerModal)
+  }
 
   const [smsModal, setSmsModal] = useState(false);
   const toggleSmsModal = () => {
@@ -180,6 +186,7 @@ const Results = () => {
       </div>
       <SMSStatus contact_no={location.state.contact_no} message={message} smsModal={smsModal} setSmsModal={setSmsModal} toggleSmsModal={toggleSmsModal} />
       <div id="overlay"></div>
+      <Disclaimer disclaimerModal={disclaimerModal} setDisclaimerModal={setDisclaimerModal} toggleDisclaimerModal={toggleDisclaimerModal} />
     </React.Fragment>
   )
 }

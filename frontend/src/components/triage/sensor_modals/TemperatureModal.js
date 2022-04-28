@@ -61,7 +61,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                 {
                   measure === "to_measure" || measure === "loading" ?
                     <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                      <p style={{ fontWeight: 'bold' }}>Please follow these steps to measure your body temperature properly:</p>
+                      <MDBContainer><p style={{ fontWeight: 'bold', textAlign: 'center' }}>Please follow these steps to measure your body temperature properly:</p></MDBContainer>
                       <InstructionStep img={temp_step_0} instruction={<span><b>Step 1: </b>Locate the <span className='text-warning' style={{ fontWeight: 'bold' }}>temperature sensor</span> at the middle section of the kiosk.</span>} />
                       <InstructionStep img={temp_step_1} instruction={<span><b>Step 2: </b>You should be able to locate the device at the left side of the middle section. It looks similar to the image shown above.</span>} />
                       <InstructionStep img={temp_step_2} instruction={<span><b>Step 3: </b>Place one of your index fingers in a relaxed state at the top of the circular opening, then select the <span className='text-warning'>Start Measurement</span> button. The measurement will last for about <span style={{ fontWeight: 'bold' }}>10 seconds</span>.</span>} />

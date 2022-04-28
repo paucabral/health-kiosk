@@ -67,7 +67,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                 {
                   measure === "to_measure" || measure === "loading" ?
                     <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                      <p style={{ fontWeight: 'bold' }}>Please follow these steps to measure your pulse rate and blood pressure properly:</p>
+                      <MDBContainer><p style={{ fontWeight: 'bold', textAlign: 'center' }}>Please follow these steps to measure your pulse rate and blood pressure properly:</p></MDBContainer>
                       <InstructionStep img={bp_step_0} instruction={<span><b>Step 1: </b>Locate the <span className='text-danger' style={{ fontWeight: 'bold' }}>pulse rate and blood pressure sensor</span> at the right section of the kiosk (the pulse rate and blood pressure sensor is a single device only).</span>} />
                       <InstructionStep img={bp_step_1} instruction={<span><b>Step 2: </b>You should be able to get a hold of the device. It looks similar to the image shown above.</span>} />
                       <InstructionStep img={bp_step_2} instruction={<span><b>Step 3: </b>Use the strap to place the sensor on your wrist. Make sure that the device is strapped on your wrist at a comfortable position (not too tight, nor loose).</span>} />
