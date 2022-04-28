@@ -14,10 +14,9 @@ export DB_ENVIRONMENT=production
 sudo systemctl start apache2
 
 # GPS LOCK UP -- Uncomment on production to set GPS before proceeding
-# until python3 rpi/rpi_gps_serial/get_location.py; do
-#     echo Getting location failed, retrying in 2 seconds...
-#     sleep 2;
-# done
+until python3 rpi/rpi_gps_serial/get_location.py; do
+    echo Getting location failed, retrying in 2 seconds...
+    sleep 2;
 
 cd ..
 

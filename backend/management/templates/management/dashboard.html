@@ -138,6 +138,9 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             SYMPTOMS
           </th>
           <th>
+            DIFFERENTIALS
+          </th>
+          <th>
             VITAL SIGNS
           </th>
           <th>
@@ -160,6 +163,20 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
                 {{ symptom }}
                 {% else %}
                 {{ symptom }}<span style="display: none;"> | </span>
+                {% endif %}
+
+              </li>
+              {% endfor %}
+            </ul>
+          </td>
+          <td style="font-size: 0.75em;">
+            <ul class="list-group">
+              {% for differential in patient.differentials %}
+              <li class="list-group-item">
+                {% if forloop.last %}
+                {{ differential }}
+                {% else %}
+                {{ differential }}<span style="display: none;"> | </span>
                 {% endif %}
 
               </li>

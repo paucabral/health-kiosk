@@ -63,7 +63,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                 {
                   measure === "to_measure" || measure === "loading" ?
                     <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                      <p style={{ fontWeight: 'bold' }}>Please follow these steps to measure your oxygen saturation properly:</p>
+                      <MDBContainer><p style={{ fontWeight: 'bold', textAlign: 'center' }}>Please follow these steps to measure your oxygen saturation properly:</p></MDBContainer>
                       <InstructionStep img={o2_step_0} instruction={<span><b>Step 1: </b>Locate the <span className='text-success' style={{ fontWeight: 'bold' }}>oxygen saturation sensor</span> at the middle section of the kiosk.</span>} />
                       <InstructionStep img={o2_step_1} instruction={<span><b>Step 2: </b>You should be able to locate the device at the right side of the middle section. It looks similar to the image shown above.</span>} />
                       <InstructionStep img={o2_step_2} instruction={<span><b>Step 3: </b>Place one of your index fingers in a relaxed state at the top of the small black rectangular area, then select the <span className='text-success'>Start Measurement</span> button. The measurement will last for about <span style={{ fontWeight: 'bold' }}>10 seconds</span>.</span>} />

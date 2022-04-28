@@ -57,8 +57,16 @@ const DiseaseList = ({ diseases, symptoms }) => {
                       <MDBCardText className='text-muted'><i>NO SYMPTOMS SELECTED </i></MDBCardText>
                   }
                 </MDBCol>
+                <MDBRow className='p-0 m-0'>
+                  {
+                    symptoms.length != 0 ?
+                      <span style={{ textAlign: 'center', fontSize: '0.7em' }}><i>Note: The results are NOT FINAL. Please consult a doctor for further checkup.</i></span>
+                      :
+                      <></>
+                  }
+                </MDBRow>
               </MDBRow>
-              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '40vh' }}>
+              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '38vh' }}>
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
@@ -93,7 +101,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                         </MDBCard>
                       )}
                     </MDBRow>
-                    : <MDBCardText className='text-muted'>Not Available</MDBCardText>
+                    : <MDBCardText className='text-muted'><i>NOT AVAILABLE</i></MDBCardText>
                 }
               </MDBContainer>
               <DiseaseInfo entry={diseaseEntry} diseaseModal={diseaseModal} setDiseaseModal={setDiseaseModal} toggleDiseaseModal={toggleDiseaseModal} />
