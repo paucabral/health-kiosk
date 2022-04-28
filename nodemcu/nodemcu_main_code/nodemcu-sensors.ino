@@ -1,4 +1,4 @@
-//***New code: Working Sensors and Automated BP (with millis) ***
+  //***New code: Working Sensors and Automated BP (with millis) ***
 //***Communicates with RPi through router (rpi as extender being developed)***
 #include "ESP8266WiFi.h"
 #include <aREST.h>
@@ -46,6 +46,8 @@ uint32_t bpToShutReport = 0;            // ^
 int virtualPower = 0;                   // Instantiate as LOW
 int virtualMemory = 0;                  // ^
 int mainButtonState = 0;                // ^
+int accessed_mem = 0;
+boolean read_success = false;
 
 const byte numChars = 38;               // Total characters that can be received through BP Serial
 char receivedChars[numChars];           // Read BP Serial
@@ -64,16 +66,16 @@ boolean newData = false;                // Check if new data comes from BP Seria
 //API Server configuration
 aREST rest = aREST();                   //Create aREST instance
 
-const char* ssid = "PLDTHOMEFIBR76798"; //Connect to local WiFi
-const char* password = "PLDTWIFI8g59t";
+const char* ssid = "pi"; //Connect to local WiFi
+const char* password = "raspberry";
 
 #define LISTEN_PORT 80                  //incoming TCP connection port
 WiFiServer server(LISTEN_PORT);         //Create server instance
 
 
-IPAddress local_IP(192, 168, 1, 22);    // Static IP address
-IPAddress gateway(192, 168, 1, 1);      // Gateway IP
-IPAddress subnet(255, 255, 0, 0);
+IPAddress local_IP(192, 168, 4, 254);    // Static IP address
+IPAddress gateway(192, 168, 4, 1);      // Gateway IP
+IPAddress subnet(255, 255, 255, 0);
 
 void setup()
 {
@@ -102,7 +104,6 @@ void setup()
     Serial.print(F("Initializing pulse oximeter..."));
     if (!pox.begin()) {
         Serial.println(F("FAILED"));
-        for(;;);
     } else {
         Serial.println(F("SUCCESS"));
     }
@@ -124,7 +125,7 @@ void setup()
 
   digitalWrite(buttonD8, HIGH);
   digitalWrite(buttonD7, HIGH);  
-  virtualPowerSwitch();
+//  virtualPowerSwitch();
   pox.begin();
 }
 
@@ -139,36 +140,16 @@ void loop()
 
   if (virtualPower == 1) {
     bpStartReport = millis();
-    bpToShutReport = millis();
+
     virtualPowerSwitch();
     virtualPower = 0;
-    virtualMemory = 1;
-  }
+    accessed_mem = 0;
 
-  if (virtualMemory == 1){
-    bpCurrentReport = millis();
-    if (bpCurrentReport - bpStartReport > bpREPORTING_PERIOD_MS){
-//      Serial.print(bpCurrentReport);
-//      Serial.print(" - ");
-//      Serial.print(bpStartReport);
-//      Serial.print(" = ");
-//      Serial.println(bpCurrentReport - bpStartReport);
-      virtualMemorySwitch();
-      bpStartReport = bpCurrentReport;
-      if (bpCurrentReport - bpToShutReport > bpSHUT_PERIOD_MS){
-        virtualPowerSwitch();
-        bpToShutReport = bpCurrentReport;
-//        mlx.begin();
-//        pox.begin();
-        virtualMemory = 0;
-      }
-    }
+//    virtualMemory = 1;
   }
    
   if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
-//      Serial.print("pO2:");
-//      Serial.println(pox.getSpO2());
-//      Serial.println("% \t");
+
       spo2 = pox.getSpO2();
       spo2comp = spo2;
       spo2aux = spo2comp;
@@ -181,22 +162,11 @@ void loop()
         }
       }
 
-        Serial.print(F("Monitored: "));
-        Serial.println(ESP.getFreeHeap(),DEC);
+//        Serial.print(F("Monitored: "));
+//        Serial.println(ESP.getFreeHeap(),DEC);
 
       tsLastReport = millis();
-//      Serial.print("\tObject = "); 
-//      Serial.print(mlx.readObjectTempC()); 
-//      Serial.print("*C\t");
-//      Serial.println("");
-//      mlxobj = mlx.readObjectTempC();
-//        cur_sample = mlx.readObjectTempC();
         tempAvg = smooth();
-//
-//        Serial.print(F("raw temp:\t\t")); 
-//        Serial.println(cur_sample);
-//        Serial.print(F("avg temp:\t"));
-//        Serial.println(tempAvg);
   }
 
   //BP
@@ -221,7 +191,7 @@ float smooth() {                          // Smoothing function
   cur_sample = mlx.readObjectTempC();     // Read the sensor
   if(isnan(cur_sample)){
 //  Serial.print(F("CUR SAMPLE is NAN"));
-  readings[readIndex] = readings[readIndex-1]+1;
+  readings[readIndex] = readings[readIndex-1];
   }
   else{
   readings[readIndex] = cur_sample;       // Append to array
@@ -246,7 +216,9 @@ void recvWithEndMarker() {
     
     while (Serial.available() > 0 && newData == false) {
         rc = Serial.read();
-
+        if (rc == ''){
+          rc = 'o';
+        }
         if (rc != endMarker) {
             receivedChars[ndx] = rc;
             ndx++;
@@ -259,7 +231,40 @@ void recvWithEndMarker() {
             ndx = 0;
             newData = true;
         }
-       if (ndx >= 37){
+        Serial.print(F("RECEIVED CHARS ARRAY::"));
+        Serial.print(receivedChars);
+        Serial.println(F(""));
+        String str_received = String(receivedChars);
+        str_received.trim();
+        Serial.print(F("LENGTH::"));
+        Serial.print(str_received.length());
+        Serial.println(F(""));
+        if (str_received == "end test" and accessed_mem == 0){
+          bpCurrentReport = millis();
+          if (bpCurrentReport - bpStartReport < 30000){
+            Serial.print(F("*********** NO READING MUST BE PERFORMED *************"));
+            read_success = false;
+            virtualPowerSwitch();
+          }
+          else{
+            delay(300);
+            read_success = true;
+            Serial.print(F("~~~~~ READING PRESENT ~~~~~~~"));
+            virtualMemorySwitch();
+            accessed_mem = 1;
+          }
+          Serial.print(F("********** DIFFERENCE REPORT: "));
+          bpStartReport = bpCurrentReport;
+        }
+        if (str_received == "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" or str_received == "8FLAG:" or str_received == "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"){
+          Serial.print(F(" REVERTING TO DEFAULT "));  
+          dataSYS = 0;
+          dataDIA = 0;
+          dataPR = 0;
+          virtualPowerSwitch();
+        }
+                
+       if (ndx == 35){
         for (int i = 0; i<sizeof(receivedChars); i++){
           bpChars[i] = receivedChars[i];
         }
@@ -271,24 +276,25 @@ void bpData() {
     if (newData == true) {
       
       strcpy(bpCharToken, bpChars);
-//      Serial.println(bpCharToken);
       char* piece = strtok(bpCharToken," ");
 
       rawSYS = piece;
       rawDIA = strtok(NULL," ");
       strtok(NULL," ");
       rawPR = strtok(NULL," ");
-      
+
+            
       dataSYS = strtol(rawSYS.c_str(), NULL, 16);
       dataDIA = strtol(rawDIA.c_str(), NULL, 16);
       dataPR= strtol(rawPR.c_str(), NULL, 16);
 
-//      Serial.print("dataSYS: ");
-//      Serial.println(dataSYS);
-//      Serial.print("dataDIA: ");
-//      Serial.println(dataDIA);    
-//      Serial.print("dataPR: ");
-//      Serial.println(dataPR);
+      if (read_success == false){
+        Serial.print(F(" REVERTING TO DEFAULT "));  
+        dataSYS = 0;
+        dataDIA = 0;
+        dataPR = 0;
+      }
+
 
       pox.begin();
       mlx.begin();

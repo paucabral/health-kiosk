@@ -99,13 +99,17 @@ def apiSms(request):
 def apiDifferentialDiagnosis(request):
     serializer = PatientSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
+        instance = serializer.save()
         data = serializer.validated_data
         symptoms = data['symptoms']
         response = data
         if symptoms:
             result = getPredictions(symptoms)
             response['predictions'] = result
+            predictions = list(
+                serializer.validated_data.get('predictions'))[:5]
+            instance.differentials = predictions
+            instance.save()
         return Response(response)
 
 
@@ -123,7 +127,7 @@ def apiPatientDetail(request, pk):
     return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(['PUT'])
 def apiPatientUpdate(request, pk):
     patient = Patient.objects.get(id=pk)
     serializer = PatientSerializer(instance=patient, data=request.data)
