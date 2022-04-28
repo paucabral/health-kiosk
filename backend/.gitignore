@@ -6,6 +6,7 @@
 /htmlcov/
 /coverage/
 /build/
+build/*
 /dist/
 /*.egg-info/
 /env/
