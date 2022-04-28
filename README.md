@@ -69,7 +69,7 @@ To run the kiosk in production, simply follow the following steps:
     ```
     $ sudo cp health-kiosk.desktop /etc/xdg/autostart/health-kiosk.desktop 
     ```
-6. For the shutdown button, add the `rpi/rpi_shutdown_script/shutdown.py` script in `/etc/rc.local` above `exit 0` line. Follow the **highlighted** line below. 
+6. For the shutdown button, add the `rpi/rpi_shutdown_script/shutdown.py` script in `/etc/rc.local` above `exit 0` line. Follow the ***highlighted*** line below. 
     <pre>
     <code>
     #!/bin/sh -e
@@ -90,7 +90,7 @@ To run the kiosk in production, simply follow the following steps:
     if [ "$_IP" ]; then
     printf "My IP address is %s\n" "$_IP"
     fi
-    <b>sudo python3 /home/pi/health-kiosk/rpi/rpi_shutdown_script/shutdown.py &</b>
+    <b><i>sudo python3 /home/pi/health-kiosk/rpi/rpi_shutdown_script/shutdown.py &</i></b>
     exit 0
     </code>
     </pre>
