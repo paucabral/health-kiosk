@@ -18,7 +18,6 @@ mkdir -p build/site/logs/
 mkdir -p build/site/public/
 
 cd build/
-[ ! -d "venv/" ] & python3 -m venv venv
 
 cd django/
 
@@ -34,6 +33,7 @@ psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
 echo "Postgres User '$DB_USER' and database '$DB_NAME' created."
 EOF
 
+[ ! -d "venv/" ] & python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 python3 manage.py collectstatic --noinput
