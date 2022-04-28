@@ -23,6 +23,7 @@ cd django/
 
 cp -R ../../../backend/. .
 
+mkdir -p media/
 chmod 777 media/
 
 sudo su postgres <<EOF
