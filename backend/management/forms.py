@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from pyrsistent import field
 from .models import *
+from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 
 
 class CreateUserForm(UserCreationForm):
@@ -71,7 +72,19 @@ class AppointmentForm(ModelForm):
     class Meta:
         model = Appointment
         fields = '__all__'
+        exclude = ['date_added']
+        widgets = {
+            'appointment_date': DateTimePickerInput()
+        }
 
     def __init__(self, *args, **kwargs):
         super(AppointmentForm, self).__init__(*args, **kwargs)
-        pass
+
+        self.fields['patient'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Patient'})
+        self.fields['assigned_personnel'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Assigned Personnel'})
+        self.fields['appointment_status'].widget.attrs.update(
+            {'class': 'form-control'})
+        self.fields['message'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Message'})

@@ -2,7 +2,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
-from .forms import ProfileForm, CreateSuperUserForm
+from .forms import AppointmentForm, ProfileForm, CreateSuperUserForm
 from api.models import *
 from .models import *
 from django.contrib import messages
@@ -279,9 +279,8 @@ class AddAppointment(View):
     def get(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
-        # form = AppointmentForm()
-        # return render(request, template_name='management/appointment-form.html', context={'form': form})
-        return HttpResponse("Event Form for patient {}".format(patient_id))
+        form = AppointmentForm()
+        return render(request, template_name='management/appointment-form.html', context={'form': form})
 
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())

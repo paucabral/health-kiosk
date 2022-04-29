@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     "django_createsuperuserwithpassword",
+    'bootstrap_datepicker_plus',
+    'ckeditor',
     'api',
     'management',
 ]
