@@ -81,7 +81,7 @@ class AppointmentForm(ModelForm):
         super(AppointmentForm, self).__init__(*args, **kwargs)
 
         self.fields['patient'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': 'Patient'})
+            {'class': 'form-control', 'placeholder': 'Patient', 'disabled': 'disabled'})
         self.fields['assigned_personnel'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Assigned Personnel'})
         self.fields['appointment_status'].widget.attrs.update(
