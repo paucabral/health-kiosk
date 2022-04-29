@@ -147,6 +147,13 @@ HEALTH KIOSK | {{ request.user.username }}'s Profile
 
                 <div class="row">
                   <div class="form-label-group">
+                    {{ form.contact_no }}
+                    <label for="id_contact_no">Contact Number</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-label-group">
                     <input type="text" name="username" value="{{ request.user.username }}" maxlength="200"
                       class="form-control" placeholder="username" required="" id="id_username">
                     <label for="id_username">Username</label>

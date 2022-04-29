@@ -39,6 +39,8 @@ class ProfileForm(ModelForm):
             {'class': 'form-control', 'placeholder': 'Affiliation'})
         self.fields['position'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Position'})
+        self.fields['contact_no'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Contact Number'})
 
 
 class CreateSuperUserForm(UserCreationForm):
