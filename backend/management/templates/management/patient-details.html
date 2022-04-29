@@ -97,30 +97,6 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           <h4>Medical Data</h4>
           <div class="row">
             <div class="col-md-6 py-2">
-              <h6 style="font-weight: 600;">Vital Signs</h6>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
-                </li>
-                <span style="display: none;"> | </span>
-                <li class="list-group-item">
-                  <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
-                </li>
-                <span style="display: none;"> | </span>
-                <li class="list-group-item">
-                  <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
-                </li>
-                <span style="display: none;"> | </span>
-                <li class="list-group-item">
-                  <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
-                </li>
-                <span style="display: none;"> | </span>
-                <li class="list-group-item">
-                  <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6 py-2">
               <h6 style="font-weight: 600;">Symptoms</h6>
               <div class="row px-3">
                 <ul class="list-group">
@@ -144,9 +120,15 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                   {% for differential in patient.differentials %}
                   <li class="list-group-item">
                     {% if forloop.last %}
-                    {{ differential }}
+                    <button class="btn btn-secondary" onClick="console.log(event.target.value)"
+                      value="{{ differential }}">
+                      {{ differential }}
+                    </button>
                     {% else %}
-                    {{ differential }}<span style="display: none;"> | </span>
+                    <button class="btn btn-secondary" onClick="console.log(event.target.value)"
+                      value="{{ differential }}">
+                      {{ differential }}
+                    </button><span style="display: none;"> | </span>
                     {% endif %}
                     {% empty %}
                     <i style="font-size: 0.9em;">Not available.</i>
@@ -154,6 +136,30 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                   {% endfor %}
                 </ul>
               </div>
+            </div>
+            <div class="col-md-6 py-2">
+              <h6 style="font-weight: 600;">Vital Signs</h6>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
+                </li>
+              </ul>
             </div>
           </div>
 
