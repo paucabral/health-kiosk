@@ -271,3 +271,30 @@ class PatientDetails(View):
         appointment_history = Appointment.objects.filter(patient=patient)
 
         return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history})
+
+
+class AddAppointment(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        # form = AppointmentForm()
+        # return render(request, template_name='management/appointment-form.html', context={'form': form})
+        return HttpResponse("Event Form for patient {}".format(patient_id))
+
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def post(self, request, *args, **kwargs):
+        # form = AppointmentForm(request.POST)
+        # if form.is_valid():
+        #     form.save()
+
+        #     messages.add_message(request,
+        #                          messages.SUCCESS,
+        #                          'The appointment was added successfully.')
+        #     return redirect('/management/events/list')
+        # else:
+        #     messages.error(request, 'The appointment was not added due to an error.')
+        #     return render(request, template_name='management/patient-form.html', context={'form': form})
+        pass
