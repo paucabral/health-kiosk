@@ -132,6 +132,13 @@ HEALTH KIOSK | {{ request.user.username }}'s Profile
 
                 <div class="row">
                   <div class="form-label-group">
+                    {{ form.position }}
+                    <label for="id_position">Position</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-label-group">
                     <input type="text" name="email" value="{{ request.user.email }}" maxlength="200"
                       class="form-control" placeholder="Email" required="" id="id_email">
                     <label for="id_email">Email</label>

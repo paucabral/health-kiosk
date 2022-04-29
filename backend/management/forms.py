@@ -37,6 +37,8 @@ class ProfileForm(ModelForm):
         super(ProfileForm, self).__init__(*args, **kwargs)
         self.fields['affiliation'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Affiliation'})
+        self.fields['position'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Position'})
 
 
 class CreateSuperUserForm(UserCreationForm):
