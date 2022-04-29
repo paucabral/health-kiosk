@@ -90,3 +90,15 @@ class AppointmentForm(ModelForm):
             {'class': 'form-control', 'placeholder': 'Message'})
         self.fields['appointment_date'].widget.attrs.update(
             {'required': 'required'})
+
+
+class NoteForm(ModelForm):
+    class Meta:
+        model = Note
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(NoteForm, self).__init__(*args, **kwargs)
+
+        self.fields['notes'].widget.attrs.update(
+            {'class': 'form-control django-ckeditor-widget', })

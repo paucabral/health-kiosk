@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from api.models import Patient
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -31,3 +32,8 @@ class Appointment(models.Model):
         max_length=200, null=True, choices=APPOINTMENT_STATUS)
     message = models.TextField(null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
+
+
+class Note(models.Model):
+    patient = models.ForeignKey(Patient, null=True, on_delete=models.CASCADE)
+    notes = RichTextField(blank=True, null=True)
