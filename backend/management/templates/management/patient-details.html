@@ -65,8 +65,8 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
 
           <hr class="my-4">
           <h4>Medical Data</h4>
-          <div>
-            <div class="col">
+          <div class="row">
+            <div class="col-md-6 py-2">
               <h6>Vital Signs</h6>
               <ul class="list-group">
                 <li class="list-group-item">
@@ -89,6 +89,24 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                   <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
                 </li>
               </ul>
+            </div>
+            <div class="col-md-6 py-2">
+              <h6>Symptoms</h6>
+              <div class="row px-3">
+                <ul class="list-group">
+                  {% for symptom in patient.symptoms %}
+                  <li class="list-group-item">
+                    {% if forloop.last %}
+                    {{ symptom }}
+                    {% else %}
+                    {{ symptom }}<span style="display: none;"> | </span>
+                    {% endif %}
+                    {% empty %}
+                    <i style="font-size: 0.9em;">No symptoms selected.</i>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
             </div>
           </div>
 
