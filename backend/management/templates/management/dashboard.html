@@ -137,15 +137,16 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           <th>
             SYMPTOMS
           </th>
-          <th>
+          <!-- <th>
             DIFFERENTIALS
-          </th>
+          </th> -->
           <th>
             VITAL SIGNS
           </th>
           <th>
             DATE ADDED
           </th>
+          <th></th>
           <th></th>
         </thead>
 
@@ -169,7 +170,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
               {% endfor %}
             </ul>
           </td>
-          <td style="font-size: 0.75em;">
+          <!-- <td style="font-size: 0.75em;">
             <ul class="list-group">
               {% for differential in patient.differentials %}
               <li class="list-group-item">
@@ -182,7 +183,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
               </li>
               {% endfor %}
             </ul>
-          </td>
+          </td> -->
           <td style="font-size: 0.75em;">
             <ul class="list-group">
               <li class="list-group-item">
@@ -207,6 +208,9 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             </ul>
           </td>
           <td>{{ patient.date_added }}</td>
+          <td>
+            <a class="btn btn-interact btn-primary" href="/management/patients/{{ patient.id }}/details">Details</a>
+          </td>
           <td>
             <form
               onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
