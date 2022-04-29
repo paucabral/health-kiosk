@@ -33,12 +33,12 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
         <h4>Profile information</h4>
         <div class="my-3">
           <div class="row">
-            <div class="col form-label-group">
+            <div class="col-md-6 form-label-group">
               <input type="text" name="first_name" value="{{ patient.first_name }}" maxlength="200" class="form-control"
                 placeholder="First Name" id="id_first_name" disabled>
               <label for="id_first_name">First Name</label>
             </div>
-            <div class="col form-label-group">
+            <div class="col-md-6 form-label-group">
               <input type="text" name="last_name" value="{{ patient.last_name }}" maxlength="200" class="form-control"
                 placeholder="Last Name" id="id_last_name" disabled>
               <label for="id_last_name">Last Name</label>
@@ -46,7 +46,17 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           </div>
 
           <div class="row">
-            <div class="form-label-group">
+            <div class="col-md-4 form-label-group">
+              <input type="text" name="sex" value="{{ patient.sex }}" maxlength="200" class="form-control"
+                placeholder="Sex" id="id_gender" disabled>
+              <label for="id_sex">Sex</label>
+            </div>
+            <div class="col-md-4 form-label-group">
+              <input type="text" name="birth_date" value="{{ patient.birth_date }}" maxlength="200" class="form-control"
+                placeholder="Birth Date" id="id_birth_date" disabled>
+              <label for="id_birth_date">Birth Date</label>
+            </div>
+            <div class="col-md-4 form-label-group">
               <input type="text" name="email" value="{{ patient.contact_no }}" maxlength="200" class="form-control"
                 placeholder="Contact Number" id="id_contact_no" disabled>
               <label for="id_contact_no">Contact Number</label>
