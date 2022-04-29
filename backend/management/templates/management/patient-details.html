@@ -107,6 +107,23 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                   {% endfor %}
                 </ul>
               </div>
+              <br />
+              <h6>Differential Diagnosis</h6>
+              <div class="row px-3">
+                <ul class="list-group">
+                  {% for differential in patient.differentials %}
+                  <li class="list-group-item">
+                    {% if forloop.last %}
+                    {{ differential }}
+                    {% else %}
+                    {{ differential }}<span style="display: none;"> | </span>
+                    {% endif %}
+                    {% empty %}
+                    <i style="font-size: 0.9em;">Not available.</i>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
             </div>
           </div>
 
