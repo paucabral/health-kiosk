@@ -1,0 +1,78 @@
+{% extends 'management/management-base.html' %}
+{% load static %}
+
+{% block title %}
+HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
+{% endblock %}
+
+{% block content %}
+
+<main class="container-fluid mx-2">
+  <div class="col-lg">
+    <div class="card card-signin my-3">
+      <div class="card-body">
+        <div class="position-relative">
+          <div class="position-absolute top-0 end-0">
+            <form
+              onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
+              method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
+              <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><input type="hidden"
+                name="q_id" />
+            </form>
+          </div>
+        </div>
+        <br>
+
+        <h3 class="text-center" style="font-weight: bold;">{{ patient.first_name }} {{ patient.last_name }}
+        </h3>
+        <p class="text-center" style="text-align: center; align-items: center; margin-top: -0.7em; font-size: small;">
+          {{ patient.contact_no }}
+        </p>
+
+        <hr class="my-4">
+        <h4>Profile information</h4>
+        <div class="my-3">
+          <div class="row">
+            <div class="col form-label-group">
+              <input type="text" name="first_name" value="{{ patient.first_name }}" maxlength="200" class="form-control"
+                placeholder="First Name" id="id_first_name" disabled>
+              <label for="id_first_name">First Name</label>
+            </div>
+            <div class="col form-label-group">
+              <input type="text" name="last_name" value="{{ patient.last_name }}" maxlength="200" class="form-control"
+                placeholder="Last Name" id="id_last_name" disabled>
+              <label for="id_last_name">Last Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-label-group">
+              <input type="text" name="email" value="{{ patient.contact_no }}" maxlength="200" class="form-control"
+                placeholder="Contact Number" id="id_contact_no" disabled>
+              <label for="id_contact_no">Contact Number</label>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row">
+            <h4>Appointment History</h4>
+            <div class="mx-1">
+              <ul>
+                {% for appointment in appointment_history %}
+                <li>{{ appointment.date_created }}</li>
+                {% empty %}
+                <span><i>No history of appointment.</i></span>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

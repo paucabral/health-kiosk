@@ -270,5 +270,4 @@ class PatientDetails(View):
 
         appointment_history = Appointment.objects.filter(patient=patient)
 
-        return HttpResponse(patient_id)
-        # return render(request, template_name='management/patient-details.html', context={patient: 'patient', appointment_history: 'appointment_history'})
+        return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history})
