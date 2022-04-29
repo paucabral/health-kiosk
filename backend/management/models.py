@@ -18,9 +18,10 @@ class Profile(models.Model):
 
 class Appointment(models.Model):
     APPOINTMENT_STATUS = (
+        ('PENDING', 'PENDING'),
         ('NOTIFIED', 'NOTIFIED'),
         ('COMPLETE', 'COMPLETE'),
-        ('PENDING', 'PENDING'),
+        ('DISCARDED', 'DISCARDED')
     )
     patient = models.ForeignKey(Patient, null=True, on_delete=models.CASCADE)
     assigned_personnel = models.ForeignKey(
