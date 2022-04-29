@@ -158,8 +158,17 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           </div>
 
           <hr class="my-4">
-          <h4>Notes</h4>
-          <div class="row">
+          <div class="row pb-2">
+            <div class="col-md-8">
+              <h4>Notes</h4>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-interact btn-warning text-white" style="float: right;"
+                href="/management/patients/{{ patient.id }}/notes/">
+                <i class="fa fa-sticky-note" aria-hidden="true"></i> Update Notes</a>
+            </div>
+          </div>
+          <div class="row m-0">
             <div class="container py-2" style="background-color: rgb(229, 236, 236);">
               {% if notes.notes %}
               {{ notes.notes|safe }}

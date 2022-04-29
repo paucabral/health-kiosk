@@ -298,17 +298,22 @@ class PatientNotes(View):
     def post(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
-        form = AppointmentForm(request.POST)
+        form = NoteForm(request.POST)
+        if Note.objects.filter(patient=patient):
+            notes = Note.objects.get(patient=patient)
+            form = NoteForm(request.POST, instance=notes)
+        else:
+            form = NoteForm(request.POST)
         form.patient = patient
         if form.is_valid():
             form.save()
             messages.add_message(request,
                                  messages.SUCCESS,
-                                 'The appointment was added successfully.')
+                                 'The notes for patient {} were updated successfully.'.format(patient_id))
             return redirect('/management/patients/{}/details'.format(patient_id))
         else:
             messages.error(
-                request, 'The appointment was not added due to an error.')
+                request, 'The notes were not added due to an error.')
             return render(request, template_name='management/notes-form.html', context={'form': form})
 
 
@@ -335,11 +340,11 @@ class AddAppointment(View):
             form.save()
             messages.add_message(request,
                                  messages.SUCCESS,
-                                 'The notes for patient {} were updated successfully.'.format(patient_id))
+                                 'The appointment for patient {} was updated successfully.'.format(patient_id))
             return redirect('/management/patients/{}/details'.format(patient_id))
         else:
             messages.error(
-                request, 'The notes were not added due to an error.')
+                request, 'The appointment was not added due to an error.')
             return render(request, template_name='management/appointment-form.html', context={'form': form})
 
 
