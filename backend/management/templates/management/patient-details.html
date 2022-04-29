@@ -199,8 +199,9 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                       </td>
                       <td>
                         <form
-                          onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
-                          method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
+                          onsubmit="return confirm('WARNING: All the appointment information will be deleted in the process. Are you sure you want to delete the appointment record: {{ appointment.id }}?');"
+                          method="POST" action="{% url 'delete-appointment-record' patient.id appointment.id  %}">
+                          {% csrf_token %}
                           <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
                             name="q_id" />
                         </form>

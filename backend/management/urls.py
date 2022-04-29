@@ -28,6 +28,8 @@ urlpatterns = [
          views.AddAppointment.as_view(), name='add-appointment'),
     path('management/patients/<int:patient_id>/appointment/<int:appointment_id>/update/',
          views.UpdateAppointment.as_view(), name='add-appointment'),
+    path('management/patients/<int:patient_id>/details/appointment/delete/<int:appointment_id>',
+         views.deleteAppointment, name='delete-appointment-record'),
     path('patient/records/delete/<int:patient_id>/',
          views.deletePatientRecord, name='delete-patient-record'),
 ]
