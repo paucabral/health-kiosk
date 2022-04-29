@@ -32,4 +32,6 @@ urlpatterns = [
          views.deleteAppointment, name='delete-appointment-record'),
     path('patient/records/delete/<int:patient_id>/',
          views.deletePatientRecord, name='delete-patient-record'),
+    path('management/patients/<int:patient_id>/notes/<int:notes_id>/',
+         views.PatientNotes.as_view(), name='patient-notes'),
 ]

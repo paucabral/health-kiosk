@@ -158,6 +158,25 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+# CKEditor config
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar_Full': [
+            ['Styles', 'Format', 'Bold', 'Italic', 'Underline',
+                'Strike', 'SpellChecker', 'Undo', 'Redo'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Flash', 'Table', 'HorizontalRule'],
+            ['TextColor', 'BGColor'],
+            ['Smiley', 'SpecialChar'], ['Source'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['NumberedList', 'BulletedList'],
+            ['Indent', 'Outdent'],
+        ],
+        'extraPlugins': 'justify,liststyle,indent',
+        'width': 'auto',
+    },
+}
+
 # Media
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'

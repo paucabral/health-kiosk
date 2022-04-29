@@ -100,5 +100,7 @@ class NoteForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(NoteForm, self).__init__(*args, **kwargs)
 
+        self.fields['patient'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Patient'})
         self.fields['notes'].widget.attrs.update(
             {'class': 'form-control django-ckeditor-widget', })

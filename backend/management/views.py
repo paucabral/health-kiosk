@@ -2,7 +2,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
-from .forms import AppointmentForm, ProfileForm, CreateSuperUserForm
+from .forms import AppointmentForm, NoteForm, ProfileForm, CreateSuperUserForm
 from api.models import *
 from .models import *
 from django.contrib import messages
@@ -264,6 +264,7 @@ def deletePatientRecord(request, patient_id):
 
 class PatientDetails(View):
     @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
     def get(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
@@ -276,6 +277,39 @@ class PatientDetails(View):
         appointment_history = Appointment.objects.filter(patient=patient)
 
         return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history, 'notes': notes})
+
+
+class PatientNotes(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = NoteForm()
+        if Note.objects.filter(patient=patient):
+            notes = Note.objects.get(patient=patient)
+            form = NoteForm(instance=notes)
+        else:
+            form = NoteForm(initial={'patient': patient})
+        return render(request, template_name='management/notes-form.html', context={'form': form})
+
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def post(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = AppointmentForm(request.POST)
+        form.patient = patient
+        if form.is_valid():
+            form.save()
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 'The appointment was added successfully.')
+            return redirect('/management/patients/{}/details'.format(patient_id))
+        else:
+            messages.error(
+                request, 'The appointment was not added due to an error.')
+            return render(request, template_name='management/notes-form.html', context={'form': form})
 
 
 class AddAppointment(View):
@@ -301,11 +335,11 @@ class AddAppointment(View):
             form.save()
             messages.add_message(request,
                                  messages.SUCCESS,
-                                 'The appointment was added successfully.')
+                                 'The notes for patient {} were updated successfully.'.format(patient_id))
             return redirect('/management/patients/{}/details'.format(patient_id))
         else:
             messages.error(
-                request, 'The appointment was not added due to an error.')
+                request, 'The notes were not added due to an error.')
             return render(request, template_name='management/appointment-form.html', context={'form': form})
 
 
