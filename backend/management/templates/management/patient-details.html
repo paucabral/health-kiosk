@@ -158,6 +158,14 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           </div>
 
           <hr class="my-4">
+          <h4>Notes</h4>
+          <div class="row">
+            <div class="container py-2" style="background-color: rgb(229, 236, 236);">
+              {{ notes.notes|safe }}
+            </div>
+          </div>
+
+          <hr class="my-4">
           <div class="row">
             <div class="row">
               <div class="col-md-8">

@@ -267,10 +267,11 @@ class PatientDetails(View):
     def get(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
+        notes = Note.objects.get(patient=patient)
 
         appointment_history = Appointment.objects.filter(patient=patient)
 
-        return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history})
+        return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history, 'notes': notes})
 
 
 class AddAppointment(View):
