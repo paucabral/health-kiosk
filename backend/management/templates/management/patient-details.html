@@ -67,7 +67,7 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           <h4>Medical Data</h4>
           <div class="row">
             <div class="col-md-6 py-2">
-              <h6>Vital Signs</h6>
+              <h6 style="font-weight: 600;">Vital Signs</h6>
               <ul class="list-group">
                 <li class="list-group-item">
                   <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
@@ -91,7 +91,7 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
               </ul>
             </div>
             <div class="col-md-6 py-2">
-              <h6>Symptoms</h6>
+              <h6 style="font-weight: 600;">Symptoms</h6>
               <div class="row px-3">
                 <ul class="list-group">
                   {% for symptom in patient.symptoms %}
@@ -108,7 +108,7 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                 </ul>
               </div>
               <br />
-              <h6>Differential Diagnosis</h6>
+              <h6 style="font-weight: 600;">Differential Diagnosis</h6>
               <div class="row px-3">
                 <ul class="list-group">
                   {% for differential in patient.differentials %}
