@@ -159,15 +159,58 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
 
           <hr class="my-4">
           <div class="row">
-            <h4>Appointment History</h4>
-            <div class="mx-1">
-              <ul>
-                {% for appointment in appointment_history %}
-                <li>{{ appointment.date_created }}</li>
-                {% empty %}
-                <span><i>No history of appointment.</i></span>
-                {% endfor %}
-              </ul>
+            <div class="row">
+              <div class="col-md-8">
+                <h4>Appointment History</h4>
+              </div>
+              <div class="col-md-4">
+                <a class="btn btn-interact btn-primary" style="float: right;"
+                  href="/management/patients/{{ patient.id }}/appointment/create">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i> Create Appointment</a>
+              </div>
+            </div>
+            <div class="mx-0">
+              <!-- records table -->
+              <div class="my-2">
+                <div>
+                  <table id="qlist" style="width: 100%;">
+                    <thead>
+                      <th>
+                        ID
+                      </th>
+                      <th>
+                        APPOINTMENT DATE
+                      </th>
+                      <th>
+                        STATUS
+                      </th>
+                      <th></th>
+                      <th></th>
+                    </thead>
+
+                    {% for appointment in appointment_history %}
+                    <tr>
+                      <td>{{ appointment.id }}</td>
+                      <td>{{ appointment.appointment_date }}</td>
+                      <td>{{ appointment.appointment_status }}</td>
+                      <td>
+                        <a class="btn btn-interact text-white btn-warning"
+                          href="/management/patients/{{ patient.id }}/appointment/update">Details</a>
+                      </td>
+                      <td>
+                        <form
+                          onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
+                          method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
+                          <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
+                            name="q_id" />
+                        </form>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+                </div>
+              </div>
+              <!-- end records table -->
             </div>
           </div>
 
@@ -177,5 +220,51 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
     </div>
   </div>
 </main>
+
+<script>
+  $(document).ready(function () {
+    $('#qlist').DataTable({
+      dom: 'Bfrltip',
+      buttons: [
+        {
+          extend: 'csv',
+          text: 'CSV',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'excel',
+          text: 'Excel',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'pdf',
+          text: 'PDF',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'print',
+          text: 'Print',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+      ],
+      "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
+      "pagingType": "full_numbers",
+      "pageLength": 10,
+      "scrollX": true
+    });
+  });
+</script>
 
 {% endblock %}
