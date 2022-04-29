@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from .forms import ProfileForm, CreateSuperUserForm
@@ -259,3 +260,15 @@ def deletePatientRecord(request, patient_id):
         return redirect('/management/dashboard')
 
     return redirect('/management/dashboard')
+
+
+class PatientDetails(View):
+    @method_decorator(login_required(login_url='/'))
+    def get(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+
+        appointment_history = Appointment.objects.filter(patient=patient)
+
+        return HttpResponse(patient_id)
+        # return render(request, template_name='management/patient-details.html', context={patient: 'patient', appointment_history: 'appointment_history'})
