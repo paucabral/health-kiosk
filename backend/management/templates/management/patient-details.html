@@ -159,12 +159,11 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
 
           <hr class="my-4">
           <div class="row pb-2">
-            <div class="col-md-8">
+            <div class="col-md-10">
               <h4>Notes</h4>
             </div>
-            <div class="col-md-4">
-              <a class="btn btn-interact btn-warning text-white" style="float: right;"
-                href="/management/patients/{{ patient.id }}/notes/">
+            <div class="col-md-2" style="text-align: center">
+              <a class="btn btn-interact btn-warning text-white" href="/management/patients/{{ patient.id }}/notes/">
                 <i class="fa fa-sticky-note" aria-hidden="true"></i> Update Notes</a>
             </div>
           </div>
@@ -179,14 +178,13 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           </div>
 
           <hr class="my-4">
-          <div class="row">
-            <div class="row">
-              <div class="col-md-8">
+          <div class="row m-0 p-0">
+            <div class="row m-0 p-0">
+              <div class="col-md-9">
                 <h4>Appointment History</h4>
               </div>
-              <div class="col-md-4">
-                <a class="btn btn-interact btn-primary" style="float: right;"
-                  href="/management/patients/{{ patient.id }}/appointment/create">
+              <div class="col-md-3" style="text-align: center;">
+                <a class="btn btn-interact btn-primary" href="/management/patients/{{ patient.id }}/appointment/create">
                   <i class="fa fa-plus-circle" aria-hidden="true"></i> Create Appointment</a>
               </div>
             </div>
