@@ -18,12 +18,16 @@ class Profile(models.Model):
 
 class Appointment(models.Model):
     APPOINTMENT_STATUS = (
+        ('NOTIFIED', 'NOTIFIED'),
         ('COMPLETE', 'COMPLETE'),
         ('PENDING', 'PENDING'),
     )
     patient = models.ForeignKey(Patient, null=True, on_delete=models.CASCADE)
+    assigned_personnel = models.ForeignKey(
+        Profile, null=True, on_delete=models.CASCADE)
     appointment_date = models.DateTimeField(
         auto_now_add=False, null=True, blank=True)
     appointment_status = models.CharField(
         max_length=200, null=True, choices=APPOINTMENT_STATUS)
+    message = models.TextField(null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)

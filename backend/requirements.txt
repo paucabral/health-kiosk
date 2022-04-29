@@ -15,6 +15,7 @@ numpy==1.22.3
 pandas==1.4.1
 Pillow==9.0.1
 psycopg2==2.9.3
+pyrsistent==0.18.1
 pyserial==3.5
 python-dateutil==2.8.2
 python-decouple==3.6

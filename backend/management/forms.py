@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from pyrsistent import field
 from .models import *
 
 
@@ -64,3 +65,13 @@ class CreateSuperUserForm(UserCreationForm):
             {'class': 'form-control', 'placeholder': 'Password'})
         self.fields['password2'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Confirm Password'})
+
+
+class AppointmentForm(ModelForm):
+    class Meta:
+        model = Appointment
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(AppointmentForm, self).__init__(*args, **kwargs)
+        pass
