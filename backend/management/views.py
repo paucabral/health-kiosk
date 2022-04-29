@@ -292,6 +292,7 @@ class AddAppointment(View):
         patient = Patient.objects.get(pk=patient_id)
         form = AppointmentForm(request.POST)
         form.patient = patient
+        form.appointment_status = "NOTIFIED"
         if form.is_valid():
             form.save()
             messages.add_message(request,
@@ -302,4 +303,32 @@ class AddAppointment(View):
             messages.error(
                 request, 'The appointment was not added due to an error.')
             return render(request, template_name='management/appointment-form.html', context={'form': form})
-        pass
+
+
+class UpdateAppointment(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        print("HIT")
+        appointment_id = self.kwargs['appointment_id']
+        appointment = Appointment.objects.get(pk=appointment_id)
+        form = AppointmentForm(instance=appointment)
+        return render(request, template_name='management/appointment-form.html', context={'form': form})
+
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def post(self, request, *args, **kwargs):
+        appointment_id = self.kwargs['appointment_id']
+        appointment = Appointment.objects.get(pk=appointment_id)
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            form.save()
+            patient_id = self.kwargs['patient_id']
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 'The appointment was updated successfully.')
+            return redirect('/management/patients/{}/details'.format(patient_id))
+        else:
+            messages.error(
+                request, 'The appointment was not added due to an error.')
+            return render(request, template_name='management/appointment-form.html', context={'form': form})

@@ -195,7 +195,7 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                       <td>{{ appointment.appointment_status }}</td>
                       <td>
                         <a class="btn btn-interact text-white btn-warning"
-                          href="/management/patients/{{ patient.id }}/appointment/update">Details</a>
+                          href="/management/patients/{{ patient.id }}/appointment/{{ appointment.id }}/update">Update</a>
                       </td>
                       <td>
                         <form

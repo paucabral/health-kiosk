@@ -24,8 +24,10 @@ urlpatterns = [
          views.AccountProfileAdmin.as_view(), name='admin-profile'),
     path('management/patients/<int:patient_id>/details/',
          views.PatientDetails.as_view(), name='patient-details'),
-    path('management/patients/<int:patient_id>/appointment/create',
+    path('management/patients/<int:patient_id>/appointment/create/',
          views.AddAppointment.as_view(), name='add-appointment'),
-    path('patient/records/delete/<int:patient_id>',
+    path('management/patients/<int:patient_id>/appointment/<int:appointment_id>/update/',
+         views.UpdateAppointment.as_view(), name='add-appointment'),
+    path('patient/records/delete/<int:patient_id>/',
          views.deletePatientRecord, name='delete-patient-record'),
 ]
