@@ -290,9 +290,6 @@ class AddAppointment(View):
     def post(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
-        copy = request.POST.copy()
-        copy['appointment_status'] = "NOTIFIED"
-        request.POST = copy
         form = AppointmentForm(request.POST)
         form.patient = patient
         if form.is_valid():
