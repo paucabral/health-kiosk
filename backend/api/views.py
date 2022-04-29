@@ -9,6 +9,7 @@ import requests
 import json
 from django.conf import settings
 from api.predictions import getPredictions
+from api.disease_info import getDiseaseInfo
 from decouple import config
 
 # Create your views here.
@@ -143,3 +144,9 @@ def apiPatientDelete(request, pk):
         response = {
             "response": "Record ID #{} successfully deleted".format(pk)}
         return Response(response)
+
+
+@api_view(['GET'])
+def apiDiseaseInfo(request):
+    data = getDiseaseInfo()
+    return Response(data)
