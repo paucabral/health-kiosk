@@ -19,7 +19,6 @@ class Profile(models.Model):
 class Appointment(models.Model):
     APPOINTMENT_STATUS = (
         ('PENDING', 'PENDING'),
-        ('NOTIFIED', 'NOTIFIED'),
         ('COMPLETE', 'COMPLETE'),
         ('DISCARDED', 'DISCARDED')
     )
