@@ -288,15 +288,18 @@ class AddAppointment(View):
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())
     def post(self, request, *args, **kwargs):
-        # form = AppointmentForm(request.POST)
-        # if form.is_valid():
-        #     form.save()
-
-        #     messages.add_message(request,
-        #                          messages.SUCCESS,
-        #                          'The appointment was added successfully.')
-        #     return redirect('/management/events/list')
-        # else:
-        #     messages.error(request, 'The appointment was not added due to an error.')
-        #     return render(request, template_name='management/patient-form.html', context={'form': form})
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = AppointmentForm(request.POST)
+        form.patient = patient
+        if form.is_valid():
+            form.save()
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 'The appointment was added successfully.')
+            return redirect('/management/patients/{}/details'.format(patient_id))
+        else:
+            messages.error(
+                request, 'The appointment was not added due to an error.')
+            return render(request, template_name='management/appointment-form.html', context={'form': form})
         pass
