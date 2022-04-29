@@ -30,7 +30,7 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
         </p>
 
         <hr class="my-4">
-        <h4>Profile information</h4>
+        <h4>Personal information</h4>
         <div class="my-3">
           <div class="row">
             <div class="col-md-6 form-label-group">
@@ -64,7 +64,35 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
           </div>
 
           <hr class="my-4">
+          <h4>Medical Data</h4>
+          <div>
+            <div class="col">
+              <h6>Vital Signs</h6>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
+                </li>
+              </ul>
+            </div>
+          </div>
 
+          <hr class="my-4">
           <div class="row">
             <h4>Appointment History</h4>
             <div class="mx-1">
