@@ -277,9 +277,12 @@ class AddAppointment(View):
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())
     def get(self, request, *args, **kwargs):
+        default_personnel_id = request.user.profile.id
+        default_personnel = Profile.objects.get(pk=default_personnel_id)
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
-        form = AppointmentForm()
+        form = AppointmentForm(
+            initial={'patient': patient, 'assigned_personnel': default_personnel, 'appointment_status': 'PENDING'})
         return render(request, template_name='management/appointment-form.html', context={'form': form})
 
     @method_decorator(login_required(login_url='/'))

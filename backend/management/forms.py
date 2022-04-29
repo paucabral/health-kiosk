@@ -88,3 +88,5 @@ class AppointmentForm(ModelForm):
             {'class': 'form-control'})
         self.fields['message'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Message'})
+        self.fields['appointment_date'].widget.attrs.update(
+            {'required': 'required'})
