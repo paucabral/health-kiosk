@@ -290,10 +290,11 @@ class AddAppointment(View):
     def post(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
+        copy = request.POST.copy()
+        copy['appointment_status'] = "NOTIFIED"
+        request.POST = copy
         form = AppointmentForm(request.POST)
         form.patient = patient
-        form.appointment_status = "NOTIFIED"
-        print(form.appointment_status)
         if form.is_valid():
             form.save()
             messages.add_message(request,
@@ -313,6 +314,7 @@ class UpdateAppointment(View):
         appointment_id = self.kwargs['appointment_id']
         appointment = Appointment.objects.get(pk=appointment_id)
         form = AppointmentForm(instance=appointment)
+        print(form)
         return render(request, template_name='management/appointment-form.html', context={'form': form})
 
     @method_decorator(login_required(login_url='/'))
