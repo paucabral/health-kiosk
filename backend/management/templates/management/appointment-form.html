@@ -74,7 +74,38 @@ HEALTH KIOSK | Appointment
 </style>
 
 <main class="">
+  <h1 class="text-center" style="font-weight: bold;">APPOINTMENT</h1>
+  <hr class="my-4 mx-4">
 
+  {% for message in messages %}
+  {% if form.errors %}
+  {% for field in form %}
+  {% for error in field.errors %}
+  <div class="alert alert-danger alert-dismissible"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    <strong>{{ error|escape }}</strong>
+    <button type="button" class="close btn btn-interact text-white" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </div>
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+  <p class="alert alert-danger alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{ message }}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% else %}
+  <p class="alert alert-success alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #27AE60; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{message}}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% endif %}
+  {% endfor %}
 
   <form method="POST">
     {% csrf_token %}
