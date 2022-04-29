@@ -267,7 +267,11 @@ class PatientDetails(View):
     def get(self, request, *args, **kwargs):
         patient_id = self.kwargs['patient_id']
         patient = Patient.objects.get(pk=patient_id)
-        notes = Note.objects.get(patient=patient)
+        notes = None
+        if Note.objects.filter(patient=patient):
+            notes = Note.objects.get(patient=patient)
+        else:
+            notes = None
 
         appointment_history = Appointment.objects.filter(patient=patient)
 
