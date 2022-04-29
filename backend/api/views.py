@@ -148,5 +148,6 @@ def apiPatientDelete(request, pk):
 
 @api_view(['GET'])
 def apiDiseaseInfo(request):
-    data = getDiseaseInfo()
+    disease_name = request.data.get("disease")
+    data = getDiseaseInfo(disease_name)
     return Response(data)
