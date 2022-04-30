@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import symptoms from '../../data/symptoms-list';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
-import '../../styles/styles.css'
+import '../../styles/styles.css';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
   const [multiSelections, setMultiSelections] = useState(formData.symptoms);
@@ -21,20 +22,41 @@ const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
     }
   }, [multiSelections]);
 
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
-      <MDBCardTitle style={{ fontWeight: "bold" }}>Symptoms</MDBCardTitle>
+      <MDBCardTitle style={{ fontWeight: "bold" }}>
+        {language === "PH" ?
+          "Mga Sintomas"
+          : "Symptoms"
+        }
+      </MDBCardTitle>
       <p>
-        Find and select your symptoms (if you experience any).
+        {language === "PH" ?
+          "Hanapin at piliin ang iyong mga sintomas (kung nakakaranas ka ng anuman)."
+          : "Find and select your symptoms (if you experience any)."
+        }
         <br />
         {multiSelections != null && multiSelections.length > 0 && multiSelections.length < 3 ? <span style={{ fontSize: '0.75em', color: 'gray', fontStyle: 'italic' }}>
-          Please select at least three (3) symptoms if you need to acquire differential diagnosis.
+          {language === "PH" ?
+            "Mangyaring pumili ng hindi bababa sa tatlong (3) sintomas kung kailangan mong kumuha ng differential diagnosis."
+            : "Please select at least three (3) symptoms if you need to acquire differential diagnosis."
+          }
         </span>
           : multiSelections.length === 0 ?
-            <span style={{ fontSize: '0.75em', color: 'gray', fontStyle: 'italic' }}>*NOTE: Differential diagnosis will not be available if no symptoms are selected.*</span>
+            <span style={{ fontSize: '0.75em', color: 'gray', fontStyle: 'italic' }}>
+              {language === "PH" ?
+                "* PAUNAWA : Hindi magiging available ang differential diagnosis kung walang mapipiling sintomas.*"
+                : "*NOTE: Differential diagnosis will not be available if no symptoms are selected.*"
+              }
+            </span>
             :
             <span style={{ fontSize: '0.75em', color: 'gray', fontStyle: 'italic' }}>
-              Please select at least three (3) symptoms if you need to acquire differential diagnosis.
+              {language === "PH" ?
+                "Mangyaring pumili ng hindi bababa sa tatlong (3) sintomas kung kailangan mong kumuha ng differential diagnosis."
+                : "Please select at least three (3) symptoms if you need to acquire differential diagnosis."
+              }
             </span>
         }
       </p>
