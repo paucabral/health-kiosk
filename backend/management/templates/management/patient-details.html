@@ -138,17 +138,47 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
               </div>
             </div>
 
-            {% for differential in patient.differentials %}
+            {% for differential,info in differential_info %}
             <!-- Modal -->
             <div class="modal fade" id="modal-{{ forloop.counter }}" tabindex="-1" role="dialog"
               aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">{{ differential }}</h5>
+                    <h4 class="modal-title" id="exampleModalLongTitle" style="text-transform: uppercase;">
+                      {{ differential }}
+                    </h4>
                   </div>
-                  <div class="modal-body">
-                    ...
+                  <div class="modal-body" style="text-align: justify;">
+                    <h5>Overview</h5>
+                    <p>{{ info.Overview }}</p>
+
+                    <h5>Diagnosis</h5>
+                    <p>{{ info.Diagnosis }}</p>
+
+                    <h5>Symptoms</h5>
+                    <ul>
+                      {% for symptom in info.Symptoms %}
+                      <li>{{ symptom }}</li>
+                      {% endfor %}
+                    </ul>
+
+                    <h5>Causes</h5>
+                    <p>{{ info.Causes }}</p>
+
+                    <h5>Precaution</h5>
+                    <ul>
+                      {% for precaution in info.Precaution %}
+                      <li>{{ precaution }}</li>
+                      {% endfor %}
+                    </ul>
+
+                    <h5>Source</h5>
+                    <ul>
+                      {% for source in info.Source %}
+                      <li><a href="{{ source }}" target="_blank">{{ source }}</a></li>
+                      {% endfor %}
+                    </ul>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

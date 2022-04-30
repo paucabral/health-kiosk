@@ -15,6 +15,7 @@ from .decorators import *
 from django.conf import settings
 import urllib.request
 from decouple import config
+from api.disease_info import getDiseaseInfo
 
 # Create your views here.
 
@@ -275,6 +276,14 @@ class PatientDetails(View):
             notes = None
 
         appointment_history = Appointment.objects.filter(patient=patient)
+
+        if patient.differentials:
+            disesase_info = []
+            for differential in patient.differentials:
+                entry = getDiseaseInfo(differential)
+                disesase_info.append(entry)
+            differential_info = zip(patient.differentials, disesase_info)
+            return render(request, template_name='management/patient-details.html', context={'patient': patient, 'differential_info': differential_info, 'appointment_history': appointment_history, 'notes': notes})
 
         return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history, 'notes': notes})
 
