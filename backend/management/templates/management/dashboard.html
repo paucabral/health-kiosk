@@ -144,7 +144,21 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             <td>{{ appointment.id }}</td>
             <td>{{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</td>
             <td>{{ appointment.appointment_date }}</td>
-            <td>{{ appointment.appointment_status }}</td>
+            <td class="text-center">
+              {% if appointment.appointment_status == "COMPLETE" %}
+              <button class="btn btn-success">
+                {{ appointment.appointment_status }}
+              </button>
+              {% elif appointment.appointment_status == "DISCARDED" %}
+              <button class="btn btn-danger">
+                {{ appointment.appointment_status }}
+              </button>
+              {% else %}
+              <button class="btn btn-primary">
+                {{ appointment.appointment_status }}
+              </button>
+              {% endif %}
+            </td>
             <td>
               <a class="btn btn-interact text-white btn-warning"
                 href="/management/patients/{{ appointment.patient.id }}/appointment/{{ appointment.id }}/update">Update</a>
