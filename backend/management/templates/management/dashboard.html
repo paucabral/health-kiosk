@@ -44,45 +44,42 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   <div class="container-fluid">
     <div class="row">
       <div class="col container-fluid">
-        <div
-          class="card text-white {%if kiosk_status == 'ONLINE' %} bg-success {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+        <div class="card text-white bg-success mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Completed</h6>
           </div>
           <div class="card-body d-flex">
             <i class="fa fa-check-circle fa-3x" aria-hidden="true"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
-              <span style="font-size: 0.6em;">{{ kiosk_status }}</span>
+              <span style="font-size: 0.6em;">{{ completed }}</span>
             </h5>
           </div>
         </div>
       </div>
 
       <div class="col container-fluid">
-        <div
-          class="card text-white {%if sensors_status == 'ONLINE' %} bg-primary {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+        <div class="card text-white bg-primary mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Pending</h6>
           </div>
           <div class="card-body d-flex">
             <i class="fas fa-clock fa-3x"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
-              <span style="font-size: 0.6em;">{{ sensors_status }}</span>
+              <span style="font-size: 0.6em;">{{ discarded }}</span>
             </h5>
           </div>
         </div>
       </div>
 
       <div class="col container-fluid">
-        <div
-          class="card text-white {%if sms_status == 'ONLINE' %} bg-danger {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+        <div class="card text-white bg-danger mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Discarded</h6>
           </div>
           <div class="card-body d-flex">
             <i class="fa fa-minus-circle fa-3x"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
-              <span style="font-size: 0.6em;">{{ sms_status }}</span>
+              <span style="font-size: 0.6em;">{{ pending }}</span>
             </h5>
           </div>
         </div>
