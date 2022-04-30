@@ -201,7 +201,7 @@ const Facilities = () => {
                     </MDBCol>
                     <MDBCol size='4' className='mx-0'>
                       <MDBBtn color='dark' className='py-1 px-3' onClick={() => navigate(-1)}>
-                        <span style={{ fontSize: '0.6em' }}><MDBIcon fas icon="arrow-left" /> Go Back</span>
+                        <span style={{ fontSize: '0.6em' }}><MDBIcon fas icon="arrow-left" /> {language === "PH" ? "Bumalik" : "Go back"}</span>
                       </MDBBtn>
                     </MDBCol>
                   </MDBRow>
@@ -249,7 +249,7 @@ const Facilities = () => {
                   nearestHospitals.length != 0 ?
                     <MDBRow className='px-2 m-1'>
                       <MDBRow className='px-1 py-0'>
-                        <strong style={{ textAlign: 'left', fontSize: '0.75em' }}>{language === "PH" ? "KALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
+                        <strong style={{ textAlign: 'left', fontSize: '0.75em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
                       </MDBRow>
                       <MDBRow id='hospital-list' className='px-1 m-0' style={{ height: '37vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '0.85em' }}>
                         {nearestHospitals?.map((item) => (
