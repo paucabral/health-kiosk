@@ -248,6 +248,15 @@ class AdministratorDashboard(View):
         return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
 
+class AdministratorPatients(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        patients = Patient.objects.all()
+
+        return render(request, template_name='management/patients.html', context={'patients': patients})
+
+
 class AdministratorToolsStatus(View):
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())
@@ -315,9 +324,9 @@ def deletePatientRecord(request, patient_id):
         messages.add_message(request,
                              messages.SUCCESS,
                              'Patient Record ID: #{} was deleted successfully.'.format(patient_id))
-        return redirect('/management/dashboard')
+        return redirect('/management/patients')
 
-    return redirect('/management/dashboard')
+    return redirect('/management/patients')
 
 
 class PatientDetails(View):
