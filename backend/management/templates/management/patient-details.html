@@ -1,0 +1,351 @@
+{% extends 'management/management-base.html' %}
+{% load static %}
+
+{% block title %}
+HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
+{% endblock %}
+
+{% block content %}
+
+<main class="container-fluid mx-2">
+  {% for message in messages %}
+  {% if form.errors %}
+  {% for field in form %}
+  {% for error in field.errors %}
+  <div class="alert alert-danger alert-dismissible"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    <strong>{{ error|escape }}</strong>
+    <button type="button" class="close btn btn-interact text-white" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </div>
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+  <p class="alert alert-danger alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #C0392B; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{ message }}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% else %}
+  <p class="alert alert-success alert-link alert-dismissible text-white"
+    style="z-index: 2; background-color: #27AE60; position: absolute; margin-left: 2em; right: 2em; top: 8em;">
+    {{message}}
+    <button type="button" class="close btn btn-interact" data-dismiss="alert"
+      style="position: absolute; top:0; right: -2.7em;"><i class="far fa-times-circle fa-1x text-white"></i></button>
+  </p>
+  {% endif %}
+  {% endfor %}
+
+  <div class="col-lg">
+    <div class="card card-signin my-3">
+      <div class="card-body">
+        <div class="position-relative">
+          <div class="position-absolute top-0 end-0">
+            <form
+              onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
+              method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
+              <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><input type="hidden"
+                name="q_id" />
+            </form>
+          </div>
+        </div>
+        <br>
+
+        <h3 class="text-center" style="font-weight: bold;">{{ patient.first_name }} {{ patient.last_name }}
+        </h3>
+        <p class="text-center" style="text-align: center; align-items: center; margin-top: -0.7em; font-size: small;">
+          {{ patient.contact_no }}
+        </p>
+
+        <hr class="my-4">
+        <h4>Personal information</h4>
+        <div class="my-3">
+          <div class="row">
+            <div class="col-md-6 form-label-group">
+              <input type="text" name="first_name" value="{{ patient.first_name }}" maxlength="200" class="form-control"
+                placeholder="First Name" id="id_first_name" disabled>
+              <label for="id_first_name">First Name</label>
+            </div>
+            <div class="col-md-6 form-label-group">
+              <input type="text" name="last_name" value="{{ patient.last_name }}" maxlength="200" class="form-control"
+                placeholder="Last Name" id="id_last_name" disabled>
+              <label for="id_last_name">Last Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 form-label-group">
+              <input type="text" name="sex" value="{{ patient.sex }}" maxlength="200" class="form-control"
+                placeholder="Sex" id="id_gender" disabled>
+              <label for="id_sex">Sex</label>
+            </div>
+            <div class="col-md-4 form-label-group">
+              <input type="text" name="birth_date" value="{{ patient.birth_date }}" maxlength="200" class="form-control"
+                placeholder="Birth Date" id="id_birth_date" disabled>
+              <label for="id_birth_date">Birth Date</label>
+            </div>
+            <div class="col-md-4 form-label-group">
+              <input type="text" name="email" value="{{ patient.contact_no }}" maxlength="200" class="form-control"
+                placeholder="Contact Number" id="id_contact_no" disabled>
+              <label for="id_contact_no">Contact Number</label>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <h4>Medical Data</h4>
+          <div class="row">
+            <div class="col-md-6 py-2">
+              <h6 style="font-weight: 600;">Symptoms</h6>
+              <div class="row px-3">
+                <ul class="list-group">
+                  {% for symptom in patient.symptoms %}
+                  <li class="list-group-item">
+                    {% if forloop.last %}
+                    {{ symptom }}
+                    {% else %}
+                    {{ symptom }}<span style="display: none;"> | </span>
+                    {% endif %}
+                    {% empty %}
+                    <i style="font-size: 0.9em;">No symptoms selected.</i>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <br />
+              <h6 style="font-weight: 600;">Differential Diagnosis</h6>
+              <div class="row px-3">
+                <ul class="list-group">
+                  {% for differential in patient.differentials %}
+                  <li class="list-group-item">
+                    {% if forloop.last %}
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-{{ forloop.counter }}"
+                      value="{{ differential }}">
+                      {{ differential }}
+                    </button>
+                    {% else %}
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-{{ forloop.counter }}"
+                      value="{{ differential }}">
+                      {{ differential }}
+                    </button><span style="display: none;"> | </span>
+                    {% endif %}
+                    {% empty %}
+                    <i style="font-size: 0.9em;">Not available.</i>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+            {% for differential,info in differential_info %}
+            <!-- Modal -->
+            <div class="modal fade" id="modal-{{ forloop.counter }}" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLongTitle" style="text-transform: uppercase;">
+                      {{ differential }}
+                    </h4>
+                  </div>
+                  <div class="modal-body" style="text-align: justify;">
+                    <h5>Overview</h5>
+                    <p>{{ info.Overview }}</p>
+
+                    <h5>Diagnosis</h5>
+                    <p>{{ info.Diagnosis }}</p>
+
+                    <h5>Symptoms</h5>
+                    <ul>
+                      {% for symptom in info.Symptoms %}
+                      <li>{{ symptom }}</li>
+                      {% endfor %}
+                    </ul>
+
+                    <h5>Causes</h5>
+                    <p>{{ info.Causes }}</p>
+
+                    <h5>Precaution</h5>
+                    <ul>
+                      {% for precaution in info.Precaution %}
+                      <li>{{ precaution }}</li>
+                      {% endfor %}
+                    </ul>
+
+                    <h5>Source</h5>
+                    <ul>
+                      {% for source in info.Source %}
+                      <li><a href="{{ source }}" target="_blank">{{ source }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <div></div>
+            {% endfor %}
+
+
+
+            <div class="col-md-6 py-2">
+              <h6 style="font-weight: 600;">Vital Signs</h6>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
+                </li>
+                <span style="display: none;"> | </span>
+                <li class="list-group-item">
+                  <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <div class="row pb-2">
+            <div class="col-md-10">
+              <h4>Notes</h4>
+            </div>
+            <div class="col-md-2" style="text-align: cente">
+              <a class="btn btn-interact btn-warning text-white" href="/management/patients/{{ patient.id }}/notes/">
+                <i class="fa fa-sticky-note" aria-hidden="true"></i> Update Notes</a>
+            </div>
+          </div>
+          <div class="row m-0">
+            <div class="container py-2" style="background-color: rgb(229, 236, 236); border-radius: 10px;">
+              {% if notes.notes %}
+              {{ notes.notes|safe }}
+              {% else %}
+              <i>Select the note icon to add notes.</i>
+              {% endif %}
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <div class="row m-0 p-0">
+            <div class="row m-0 p-0">
+              <div class="col-md-9">
+                <h4>Appointment History</h4>
+              </div>
+              <div class="col-md-3" style="text-align: center;">
+                <a class="btn btn-interact btn-primary" href="/management/patients/{{ patient.id }}/appointment/create">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i> Create Appointment</a>
+              </div>
+            </div>
+            <div class="mx-0">
+              <!-- records table -->
+              <div class="my-2">
+                <div>
+                  <table id="qlist" style="width: 100%;">
+                    <thead>
+                      <th>
+                        ID
+                      </th>
+                      <th>
+                        APPOINTMENT DATE
+                      </th>
+                      <th>
+                        STATUS
+                      </th>
+                      <th></th>
+                      <th></th>
+                    </thead>
+
+                    {% for appointment in appointment_history %}
+                    <tr>
+                      <td>{{ appointment.id }}</td>
+                      <td>{{ appointment.appointment_date }}</td>
+                      <td>{{ appointment.appointment_status }}</td>
+                      <td>
+                        <a class="btn btn-interact text-white btn-warning"
+                          href="/management/patients/{{ patient.id }}/appointment/{{ appointment.id }}/update">Update</a>
+                      </td>
+                      <td>
+                        <form
+                          onsubmit="return confirm('WARNING: All the appointment information will be deleted in the process. Are you sure you want to delete the appointment record: {{ appointment.id }}?');"
+                          method="POST" action="{% url 'delete-appointment-record' patient.id appointment.id  %}">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
+                            name="q_id" />
+                        </form>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+                </div>
+              </div>
+              <!-- end records table -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  $(document).ready(function () {
+    $('#qlist').DataTable({
+      dom: 'Bfrltip',
+      buttons: [
+        {
+          extend: 'csv',
+          text: 'CSV',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'excel',
+          text: 'Excel',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'pdf',
+          text: 'PDF',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'print',
+          text: 'Print',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+      ],
+      "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
+      "pagingType": "full_numbers",
+      "pageLength": 10,
+      "scrollX": true
+    });
+  });
+</script>
+
+{% endblock %}
