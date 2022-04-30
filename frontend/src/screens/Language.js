@@ -1,7 +1,15 @@
 import { MDBCol, MDBRow, MDBBtn, MDBIcon, MDBContainer } from 'mdb-react-ui-kit'
-import React from 'react'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Language = () => {
+  const { language, setLanguage } = useContext(LanguageContext);
+  const navigate = useNavigate();
+  const goToDisclaimer = () => {
+    navigate('/disclaimer');
+  }
+
   return (
     <React.Fragment>
       <MDBContainer>
@@ -9,7 +17,7 @@ const Language = () => {
         <MDBContainer>
           <MDBRow className='py-2 px-5 mx-5'>
             <MDBCol>
-              <MDBBtn color='primary' style={{ width: '300px', height: '320px', borderRadius: '10%' }}>
+              <MDBBtn color='primary' style={{ width: '300px', height: '320px', borderRadius: '10%' }} onClick={() => { setLanguage('EN'); goToDisclaimer(); }}>
                 <h3>
                   <MDBIcon fas icon="globe-asia" /> English
                 </h3>
@@ -20,7 +28,7 @@ const Language = () => {
               </MDBBtn>
             </MDBCol>
             <MDBCol>
-              <MDBBtn color='danger' style={{ width: '300px', height: '320px', borderRadius: '10%' }}>
+              <MDBBtn color='danger' style={{ width: '300px', height: '320px', borderRadius: '10%' }} onClick={() => { setLanguage('PH'); goToDisclaimer(); }}>
                 <h3>
                   <MDBIcon fas icon="globe-americas" /> Filipino
                 </h3>

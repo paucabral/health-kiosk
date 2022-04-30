@@ -1,11 +1,13 @@
 import { MDBBtn, MDBContainer } from 'mdb-react-ui-kit'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import TermsAndConditions from '../components/disclaimer/disclaimer_modal/TermsAndConditions';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Disclaimer = () => {
   const [disclaimerModal, setDisclaimerModal] = useState(false);
   const toggleDisclaimerModal = () => setDisclaimerModal(!disclaimerModal);
 
+  const { language, setLanguage } = useContext(LanguageContext);
   return (
     <React.Fragment>
       <MDBContainer>
