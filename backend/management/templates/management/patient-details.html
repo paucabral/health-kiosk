@@ -120,12 +120,12 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                   {% for differential in patient.differentials %}
                   <li class="list-group-item">
                     {% if forloop.last %}
-                    <button class="btn btn-secondary" onClick="console.log(event.target.value)"
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-{{ forloop.counter }}"
                       value="{{ differential }}">
                       {{ differential }}
                     </button>
                     {% else %}
-                    <button class="btn btn-secondary" onClick="console.log(event.target.value)"
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-{{ forloop.counter }}"
                       value="{{ differential }}">
                       {{ differential }}
                     </button><span style="display: none;"> | </span>
@@ -137,6 +137,31 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
                 </ul>
               </div>
             </div>
+
+            {% for differential in patient.differentials %}
+            <!-- Modal -->
+            <div class="modal fade" id="modal-{{ forloop.counter }}" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{ differential }}</h5>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <div></div>
+            {% endfor %}
+
+
+
             <div class="col-md-6 py-2">
               <h6 style="font-weight: 600;">Vital Signs</h6>
               <ul class="list-group">
