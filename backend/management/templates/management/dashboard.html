@@ -121,7 +121,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
     <!-- records table -->
     <div class="my-2">
       <div>
-        <table id="qlist" style="width: 100%;">
+        <table id="qlist" class="text-center" style="width: 100%;">
           <thead>
             <th>
               ID
@@ -144,7 +144,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             <td>{{ appointment.id }}</td>
             <td>{{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</td>
             <td>{{ appointment.appointment_date }}</td>
-            <td class="text-center">
+            <td>
               {% if appointment.appointment_status == "COMPLETE" %}
               <button class="btn btn-success">
                 {{ appointment.appointment_status }}
