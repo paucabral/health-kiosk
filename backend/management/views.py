@@ -193,7 +193,7 @@ class AdministratorDashboard(View):
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())
     def get(self, request, *args, **kwargs):
-        patients = Patient.objects.all()
+        appointments = Appointment.objects.all()
 
         kiosk_status = "OFFLINE"
         try:
@@ -245,7 +245,7 @@ class AdministratorDashboard(View):
         except:
             mapquest_status = "OFFLINE"
 
-        return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
+        return render(request, template_name='management/dashboard.html', context={'appointments': appointments, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
 
 class AdministratorPatients(View):

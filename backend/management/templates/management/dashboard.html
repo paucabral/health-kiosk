@@ -116,115 +116,55 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   </div>
   <!-- end transactions cards -->
 
-  <!-- records table -->
-  <div class="container-fluid my-2">
-    <h3 class="text-center my-3" style="font-weight: bold;">PATIENT RECORDS</h3>
-    <div>
-      <table id="qlist" style="width: 100%;">
-        <thead>
-          <th>
-            ID
-          </th>
-          <th>
-            NAME
-          </th>
-          <th>
-            BIRTHDAY
-          </th>
-          <th>
-            CONTACT
-          </th>
-          <th>
-            SYMPTOMS
-          </th>
-          <!-- <th>
-            DIFFERENTIALS
-          </th> -->
-          <th>
-            VITAL SIGNS
-          </th>
-          <th>
-            DATE ADDED
-          </th>
-          <th></th>
-          <th></th>
-        </thead>
+  <div class="container">
+    <h3 class="text-center my-3" style="font-weight: bold;">APPOINTMENTS</h3>
+    <!-- records table -->
+    <div class="my-2">
+      <div>
+        <table id="qlist" style="width: 100%;">
+          <thead>
+            <th>
+              ID
+            </th>
+            <th>
+              PATIENT
+            </th>
+            <th>
+              APPOINTMENT DATE
+            </th>
+            <th>
+              STATUS
+            </th>
+            <th></th>
+            <th></th>
+          </thead>
 
-        {% for patient in patients %}
-        <tr>
-          <td>{{ patient.id }}</td>
-          <td>{{ patient.first_name }} {{ patient.last_name }}</td>
-          <td>{{ patient.birth_date }}</td>
-          <td>{{ patient.contact_no }}</td>
-          <td style="font-size: 0.75em;">
-            <ul class="list-group">
-              {% for symptom in patient.symptoms %}
-              <li class="list-group-item">
-                {% if forloop.last %}
-                {{ symptom }}
-                {% else %}
-                {{ symptom }}<span style="display: none;"> | </span>
-                {% endif %}
-
-              </li>
-              {% endfor %}
-            </ul>
-          </td>
-          <!-- <td style="font-size: 0.75em;">
-            <ul class="list-group">
-              {% for differential in patient.differentials %}
-              <li class="list-group-item">
-                {% if forloop.last %}
-                {{ differential }}
-                {% else %}
-                {{ differential }}<span style="display: none;"> | </span>
-                {% endif %}
-
-              </li>
-              {% endfor %}
-            </ul>
-          </td> -->
-          <td style="font-size: 0.75em;">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
-              </li>
-            </ul>
-          </td>
-          <td>{{ patient.date_added }}</td>
-          <td>
-            <a class="btn btn-interact btn-primary" href="/management/patients/{{ patient.id }}/details">Details</a>
-          </td>
-          <td>
-            <form
-              onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
-              method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
-              <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
-                name="q_id" />
-            </form>
-          </td>
-        </tr>
-        {% endfor %}
-      </table>
+          {% for appointment in appointments %}
+          <tr>
+            <td>{{ appointment.id }}</td>
+            <td>{{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</td>
+            <td>{{ appointment.appointment_date }}</td>
+            <td>{{ appointment.appointment_status }}</td>
+            <td>
+              <a class="btn btn-interact text-white btn-warning"
+                href="/management/patients/{{ appointment.patient.id }}/appointment/{{ appointment.id }}/update">Update</a>
+            </td>
+            <td>
+              <form
+                onsubmit="return confirm('WARNING: All the appointment information will be deleted in the process. Are you sure you want to delete the appointment record: {{ appointment.id }}?');"
+                method="POST" action="{% url 'delete-appointment-record' appointment.patient.id appointment.id  %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
+                  name="q_id" />
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
     </div>
+    <!-- end records table -->
   </div>
-  <!-- end records table -->
 </main>
 
 <script>
