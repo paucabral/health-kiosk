@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCard, MDBCardHeader, MDBCardBody, MDBCardText } from 'mdb-react-ui-kit';
 import VitalSignStatus from '../../handlers/VitalSignStatus';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_saturation }) => {
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
       <MDBContainer className='p-0'>
@@ -14,7 +17,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='warning' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='warning'>
-                  <strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature</strong>
+                  <strong><MDBIcon fas icon="thermometer-quarter" /> {language === "PH" ? "Temperatura ng Katawan" : "Body Temperature"}</strong>
                 </MDBCardHeader>
                 <MDBCardBody className='text-warning pt-2 pb-2'>
                   <MDBCardText>
@@ -31,7 +34,7 @@ const VitalSigns = ({ temperature, pulse_rate, systolic_bp, diastolic_bp, o2_sat
             <MDBContainer style={{ marginBottom: '0.5em' }}>
               <MDBCard shadow='0' border='danger' background='white'>
                 <MDBCardHeader className='text-white pt-2 pb-2' background='danger'>
-                  <strong><MDBIcon fas icon="heartbeat" /> Pulse Rate</strong>
+                  <strong><MDBIcon fas icon="heartbeat" /> {language === "PH" ? "Bilis ng Pulso" : "Pulse Rate"}</strong>
                 </MDBCardHeader>
                 <MDBCardBody className='text-danger pt-2 pb-2'>
                   <MDBCardText>
