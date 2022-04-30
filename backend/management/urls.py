@@ -6,6 +6,8 @@ urlpatterns = [
     path('', views.Login.as_view(), name='login'),
     path('management/dashboard', views.AdministratorDashboard.as_view(),
          name='management-dashboard'),
+    path('management/status', views.AdministratorToolsStatus.as_view(),
+         name='management-status'),
     path('logout/', views.logoutUser, name='logout'),
     path('reset-password/', auth_views.PasswordResetView.as_view(
         template_name="management/reset-password.html"), name="reset_password"),

@@ -248,6 +248,63 @@ class AdministratorDashboard(View):
         return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
 
+class AdministratorToolsStatus(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        kiosk_status = "OFFLINE"
+        try:
+            kiosk_status = "ONLINE" if urllib.request.urlopen(
+                settings.KIOSK_ENDPOINT).getcode() == 200 else "OFFLINE"
+        except:
+            kiosk_status = "OFFLINE"
+
+        sensors_status = "OFFLINE"
+        try:
+            sensors_status = "ONLINE" if urllib.request.urlopen(
+                settings.SENSORS_ENDPOINT).getcode() == 200 else "OFFLINE"
+        except:
+            kiosk_status = "OFFLINE"
+
+        sms_status = "OFFLINE"
+        try:
+            if config('ENVIRONMENT', default='production') == 'development':
+                sms_status = "ONLINE" if urllib.request.urlopen(
+                    "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+            else:
+                sms_status = "ONLINE" if urllib.request.urlopen(
+                    "http://127.0.0.1/api/sms/").getcode() == 200 else "OFFLINE"
+        except:
+            sms_status = "OFFLINE"
+
+        gps_status = "OFFLINE"
+        try:
+            if config('ENVIRONMENT', default='production') == 'development':
+                gps_status = "ONLINE" if urllib.request.urlopen(
+                    "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+            else:
+                gps_status = "ONLINE" if urllib.request.urlopen(
+                    "http://127.0.0.1/api/location/").getcode() == 200 else "OFFLINE"
+        except:
+            gps_status = "OFFLINE"
+
+        gmaps_status = "OFFLINE"
+        try:
+            gmaps_status = "ONLINE" if urllib.request.urlopen(
+                "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=14.6492,121.116&type=hospital&rankby=distance&key={}".format(settings.GOOGLE_MAPS_API_KEY)).getcode() == 200 else "OFFLINE"
+        except:
+            gmaps_status = "OFFLINE"
+
+        mapquest_status = "OFFLINE"
+        try:
+            mapquest_status = "ONLINE" if urllib.request.urlopen(
+                "http://www.mapquestapi.com/geocoding/v1/reverse?key={}&location=14.6492,121.116".format(settings.MAPQUEST_API_KEY)).getcode() == 200 else "OFFLINE"
+        except:
+            mapquest_status = "OFFLINE"
+
+        return render(request, template_name='management/admin-tools.html', context={'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
+
+
 @login_required(login_url='/')
 @admin_only()
 def deletePatientRecord(request, patient_id):
