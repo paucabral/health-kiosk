@@ -69,7 +69,8 @@ const DiseaseList = ({ diseases, symptoms }) => {
                   }
                 </MDBRow>
               </MDBRow>
-              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '38vh' }}>
+              <div className='pr-4 pt-0 pl-3 pb-0' style={{ justifyContent: 'center', height: '37vh', width: '42.7%', backgroundColor: 'rgba(0,0,0,0.25)', borderRadius: '1em', backdropFilter: 'blur(4px)', position: 'fixed', zIndex: '2000' }}></div>
+              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '37vh' }}>
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
