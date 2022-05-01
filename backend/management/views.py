@@ -410,7 +410,6 @@ class UpdateAppointment(View):
         appointment_id = self.kwargs['appointment_id']
         appointment = Appointment.objects.get(pk=appointment_id)
         form = AppointmentForm(instance=appointment)
-        print(form)
         return render(request, template_name='management/appointment-form.html', context={'form': form})
 
     @method_decorator(login_required(login_url='/'))
