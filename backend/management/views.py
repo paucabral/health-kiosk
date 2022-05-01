@@ -384,7 +384,7 @@ class AddAppointment(View):
                     from api.sms import sendAppointmentNew
                     response_code = sendAppointmentNew(appointment=appointment)
                     messages.add_message(request,
-                                         messages.ERROR,
+                                         messages.SUCCESS,
                                          'The patient has been notified of the appointment through SMS.'.format(patient_id))
                 except:
                     data = {"message": "There was an error with the SMS module."}
@@ -439,7 +439,7 @@ class UpdateAppointment(View):
                     response_code = sendAppointmentUpdate(
                         appointment=appointment)
                     messages.add_message(request,
-                                         messages.ERROR,
+                                         messages.SUCCESS,
                                          'The patient has been notified of the appointment through SMS.'.format(patient_id))
                 except:
                     data = {"message": "There was an error with the SMS module."}
