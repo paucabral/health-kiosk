@@ -432,6 +432,7 @@ class UpdateAppointment(View):
                 "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no,
                 "additional_message": form.cleaned_data['message']
             }
+
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
                     from api.sms import sendAppointmentUpdate
