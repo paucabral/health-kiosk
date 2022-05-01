@@ -88,12 +88,12 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   </div>
   <!-- end transactions cards -->
 
-  <div class="container">
+  <div class="container-fluid">
     <h3 class="text-center my-3" style="font-weight: bold;">APPOINTMENTS</h3>
     <!-- records table -->
     <div class="my-2">
       <div>
-        <table id="qlist" class="text-center" style="width: 100%;">
+        <table id="qlist2" class="text-center" style="width: 100%;">
           <thead>
             <th>
               ID
@@ -114,21 +114,27 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           {% for appointment in appointments %}
           <tr>
             <td>{{ appointment.id }}</td>
-            <td>{{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</td>
+            <td>
+              <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'"
+                href="/management/patients/{{ appointment.patient.id }}/details/">
+                {{ appointment.patient.first_name }} {{ appointment.patient.last_name }}
+              </a>
+            </td>
             <td>{{ appointment.appointment_date }}</td>
             <td>
               {% if appointment.appointment_status == "COMPLETE" %}
-              <button class="btn btn-success">
+              <span class="badge rounded-pill bg-success">
                 {{ appointment.appointment_status }}
-              </button>
+              </span>
               {% elif appointment.appointment_status == "DISCARDED" %}
-              <button class="btn btn-danger">
+              <span class="badge rounded-pill bg-danger">
                 {{ appointment.appointment_status }}
-              </button>
+              </span>
               {% else %}
-              <button class="btn btn-primary">
+              <span class="badge rounded-pill bg-primary">
                 {{ appointment.appointment_status }}
-              </button>
+              </span>
               {% endif %}
             </td>
             <td>
@@ -140,6 +146,57 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
                 onsubmit="return confirm('WARNING: All the appointment information will be deleted in the process. Are you sure you want to delete the appointment record: {{ appointment.id }}?');"
                 method="POST" action="{% url 'delete-appointment-record' appointment.patient.id appointment.id  %}">
                 {% csrf_token %}
+                <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
+                  name="q_id" />
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    <!-- end records table -->
+  </div>
+
+  <div class="container-fluid">
+    <hr />
+    <h3 class="text-center my-3" style="font-weight: bold;">NEW PATIENTS</h3>
+    <p class="text-center">These patients have no appointment/s yet.</p>
+    <!-- records table -->
+    <div class="my-2">
+      <div>
+        <table id="qlist" class="text-center" style="width: 100%;">
+          <thead>
+            <th>
+              ID
+            </th>
+            <th>
+              PATIENT
+            </th>
+            <th>CONTACT</th>
+            <th>DATE ADDED</th>
+            <th></th>
+            <th></th>
+          </thead>
+
+          {% for patient in patients_no_appointment %}
+          <tr>
+            <td>{{ patient.id }}</td>
+            <td>
+              <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'" href="/management/patients/{{ patient.id }}/details/">
+                {{ patient.first_name }} {{ patient.last_name }}
+              </a>
+            </td>
+            <td>{{ patient.contact_no }}</td>
+            <td>{{ patient.date_added }}</td>
+            <td>
+              <a class="btn btn-interact btn-primary" href="/management/patients/{{ patient.id }}/details">Details</a>
+            </td>
+            <td>
+              <form
+                onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
+                method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
                 <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
                   name="q_id" />
               </form>
@@ -194,7 +251,55 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
       "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
       "pagingType": "full_numbers",
       "pageLength": 5,
-      "scrollX": true
+      "scrollX": true,
+      "order": [[0, "desc"]]
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#qlist2').DataTable({
+      dom: 'Bfrltip',
+      buttons: [
+        {
+          extend: 'csv',
+          text: 'CSV',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'excel',
+          text: 'Excel',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'pdf',
+          text: 'PDF',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'print',
+          text: 'Print',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+      ],
+      "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
+      "pagingType": "full_numbers",
+      "pageLength": 5,
+      "scrollX": true,
+      "order": [[0, "desc"]]
     });
   });
 </script>

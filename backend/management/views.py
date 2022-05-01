@@ -194,6 +194,8 @@ class AdministratorDashboard(View):
     @method_decorator(admin_only())
     def get(self, request, *args, **kwargs):
         appointments = Appointment.objects.all()
+        patients_no_appointment = Patient.objects.exclude(
+            appointment__in=appointments)
 
         completed = Appointment.objects.filter(
             appointment_status="COMPLETE").count()
@@ -202,7 +204,7 @@ class AdministratorDashboard(View):
         discarded = Appointment.objects.filter(
             appointment_status="DISCARDED").count()
 
-        return render(request, template_name='management/dashboard.html', context={'appointments': appointments, 'completed': completed, 'pending': pending, 'discarded': discarded})
+        return render(request, template_name='management/dashboard.html', context={'appointments': appointments, 'completed': completed, 'pending': pending, 'discarded': discarded, 'patients_no_appointment': patients_no_appointment})
 
 
 class AdministratorPatients(View):

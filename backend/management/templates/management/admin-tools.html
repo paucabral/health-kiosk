@@ -40,6 +40,8 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   {% endfor %}
   <!-- end Popup -->
 
+  <h3 class="text-center my-3" style="font-weight: bold;">SERVICES STATUS</h3>
+
   <!-- transactions cards -->
   <div class="container-fluid">
     <div class="row">
@@ -65,7 +67,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Sensors</h6>
           </div>
           <div class="card-body d-flex">
-            <i class="fas fa-cloud-download-alt fa-3x"></i>
+            <i class="fas fa-cog fa-3x"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
               <span style="font-size: 0.6em;">{{ sensors_status }}</span>
             </h5>
@@ -87,36 +89,60 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- end transactions cards -->
+
+  <!-- transactions cards -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col container-fluid">
+        <div
+          class="card text-white {%if kiosk_status == 'ONLINE' %} bg-warning {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          <div class="card-header">
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">GPS COORDINATES</h6>
+          </div>
+          <div class="card-body d-flex">
+            <i class="fas fa-map-marker-alt fa-3x" aria-hidden="true"></i>
+            <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
+              <span style="font-size: 0.6em;">{{ gps_status }}</span>
+            </h5>
+          </div>
+        </div>
+      </div>
 
       <div class="col container-fluid">
         <div
-          class="card text-white {%if gps_status == 'ONLINE' and gmaps_status == 'ONLINE' and mapquest_status == 'ONLINE' %} bg-warning {% else %} bg-dark {% endif %} mb-3 shadow-sm rounded">
+          class="card text-white {%if sensors_status == 'ONLINE' %} bg-info {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
-            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">LOCATION</h6>
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">GOOGLE MAPS API</h6>
           </div>
-          <div class="card-body" style="padding-bottom: 0.9em;">
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;GPS COORDINATES:
-                {{ gps_status }}</span>
-            </span>
-            <br />
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fab fa-google"></i>&nbsp;&nbsp;GOOGLE MAPS API:
-                {{ gmaps_status }}</span>
-            </span>
-            <br />
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fas fa-map"></i>&nbsp;&nbsp;MAPQUEST API:
-                {{ mapquest_status }}</span>
-            </span>
+          <div class="card-body d-flex">
+            <i class="fab fa-google fa-3x"></i>
+            <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
+              <span style="font-size: 0.6em;">{{ gmaps_status }}</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col container-fluid">
+        <div
+          class="card text-white {%if sms_status == 'ONLINE' %} bg-secondary {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          <div class="card-header">
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">MAPQUEST API</h6>
+          </div>
+          <div class="card-body d-flex">
+            <i class="fas fa-map fa-3x"></i>
+            <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
+              <span style="font-size: 0.6em;">{{ mapquest_status }}</span>
+            </h5>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- end transactions cards -->
-
-
 </main>
 
 {% endblock %}

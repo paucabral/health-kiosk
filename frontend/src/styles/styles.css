@@ -93,7 +93,7 @@
 }
 
 #arrow-btn {
-  z-index: 2000;
+  z-index: 4000;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -102,7 +102,7 @@
 }
 
 #hospital-btn {
-  z-index: 1200;
+  z-index: 3000;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -112,7 +112,7 @@
 }
 
 #text-btn {
-  z-index: 1200;
+  z-index: 3000;
   position: fixed;
   display: flex;
   justify-content: center;
