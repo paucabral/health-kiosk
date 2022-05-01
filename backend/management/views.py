@@ -376,12 +376,13 @@ class AddAppointment(View):
                 "appointment_status": form.cleaned_data['appointment_status'],
                 "appointment_date": form.cleaned_data['appointment_date'].strftime("%B %d, %Y @ %I:%M %p"),
                 "assigned_personnel": "{} {}".format(form.cleaned_data['assigned_personnel'].user.first_name, form.cleaned_data['assigned_personnel'].user.last_name),
-                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no
+                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no,
+                "additional_message": form.cleaned_data['message']
             }
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
-                    from api.sms import sendAppointment
-                    response_code = sendAppointment(appointment=appointment)
+                    from api.sms import sendAppointmentNew
+                    response_code = sendAppointmentNew(appointment=appointment)
                     messages.add_message(request,
                                          messages.ERROR,
                                          'The patient has been notified of the appointment through SMS.'.format(patient_id))
@@ -428,12 +429,14 @@ class UpdateAppointment(View):
                 "appointment_status": form.cleaned_data['appointment_status'],
                 "appointment_date": form.cleaned_data['appointment_date'].strftime("%B %d, %Y @ %I:%M %p"),
                 "assigned_personnel": "{} {}".format(form.cleaned_data['assigned_personnel'].user.first_name, form.cleaned_data['assigned_personnel'].user.last_name),
-                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no
+                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no,
+                "additional_message": form.cleaned_data['message']
             }
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
-                    from api.sms import sendAppointment
-                    response_code = sendAppointment(appointment=appointment)
+                    from api.sms import sendAppointmentUpdate
+                    response_code = sendAppointmentUpdate(
+                        appointment=appointment)
                     messages.add_message(request,
                                          messages.ERROR,
                                          'The patient has been notified of the appointment through SMS.'.format(patient_id))
