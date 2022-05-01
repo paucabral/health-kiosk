@@ -115,7 +115,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                           ))
                         }
                       </MDBContainer>
-                      : <MDBCardText className='text-muted'><i>NO SYMPTOMS SELECTED </i></MDBCardText>
+                      : <MDBCardText className='text-muted'><i>{language === "PH" ? "WALANG NAPILING SINTOMAS" : "NO SYMPTOMS SELECTED"} </i></MDBCardText>
                     }
                   </MDBCol>
                 </MDBRow>
