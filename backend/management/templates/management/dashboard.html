@@ -115,7 +115,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           <tr>
             <td>{{ appointment.id }}</td>
             <td>
-              <a style="color: black; text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
+              <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
                 onmouseout="this.style.textDecoration='none'"
                 href="/management/patients/{{ appointment.patient.id }}/details/">
                 {{ appointment.patient.first_name }} {{ appointment.patient.last_name }}
