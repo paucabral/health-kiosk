@@ -19,7 +19,7 @@ const About = () => {
               <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '3em' }}>Health Kiosk</h1>
             </MDBContainer>
             <MDBContainer style={{ width: '65vw' }}>
-              <p style={{ fontSize: '1.25em' }}>A self-service health kiosk that performs differential diagnosis and provide recommendations for the user, as well as locate the nearby health facilities.</p>
+              <p style={{ fontSize: '1.25em' }}>A self-service health kiosk that measures vital signs, performs differential diagnosis, as well as locate the nearby health facilities.</p>
             </MDBContainer>
             <MDBContainer className='mt-3 mb-0'>
               <a href='#features'>
