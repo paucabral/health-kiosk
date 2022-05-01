@@ -124,17 +124,17 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
             <td>{{ appointment.appointment_date }}</td>
             <td>
               {% if appointment.appointment_status == "COMPLETE" %}
-              <button class="btn btn-success">
+              <span class="badge rounded-pill bg-success">
                 {{ appointment.appointment_status }}
-              </button>
+              </span>
               {% elif appointment.appointment_status == "DISCARDED" %}
-              <button class="btn btn-danger">
+              <span class="badge rounded-pill bg-danger">
                 {{ appointment.appointment_status }}
-              </button>
+              </span>
               {% else %}
-              <button class="btn btn-primary">
+              <span class="badge rounded-pill bg-primary">
                 {{ appointment.appointment_status }}
-              </button>
+              </span>
               {% endif %}
             </td>
             <td>
