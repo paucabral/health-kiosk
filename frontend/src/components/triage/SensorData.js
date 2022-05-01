@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { MDBInput, MDBBtn, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import TemperatureModal from './sensor_modals/TemperatureModal';
 import PulseModal from './sensor_modals/PulseModal';
 import O2Modal from './sensor_modals/O2Modal';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const SensorData = ({ formData, setFormData, setBtnDisable }) => {
 
@@ -24,12 +25,20 @@ const SensorData = ({ formData, setFormData, setBtnDisable }) => {
     }
   }, [formData])
 
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold" }}>Vital Signs</MDBCardTitle>
-      <p>
-        Measure your vital signs by selecting the options below.
-      </p>
+      {language === "PH" ?
+        <p>
+          Sukatin ang iyong vital signs sa pamamagitan ng pagpili sa mga opsyon sa ibaba.
+        </p>
+        :
+        <p>
+          Measure your vital signs by selecting the options below.
+        </p>
+      }
       <MDBCardBody className='py-0'>
         <div>
           <MDBRow className='w-100'>
@@ -40,7 +49,15 @@ const SensorData = ({ formData, setFormData, setBtnDisable }) => {
                 </h4>
                 <span>°C</span>
                 <br />
-                <b>Temperature</b>
+                {language === "PH" ?
+                  <b>
+                    Temperatura
+                  </b>
+                  :
+                  <b>
+                    Temperature
+                  </b>
+                }
               </MDBBtn>
               <TemperatureModal temperatureModal={temperatureModal} formData={formData} setFormData={setFormData} setTemperatureModal={setTemperatureModal} toggleTemperatureModal={toggleTemperatureModal} />
             </MDBCol>
@@ -62,7 +79,15 @@ const SensorData = ({ formData, setFormData, setBtnDisable }) => {
                 </h4>
                 <span>bpm</span>
                 <br />
-                <b>Pulse Rate</b>
+                {language === "PH" ?
+                  <b>
+                    Pulso
+                  </b>
+                  :
+                  <b>
+                    Pulse Rate
+                  </b>
+                }
               </MDBBtn>
               <PulseModal pulseModal={pulseModal} formData={formData} setFormData={setFormData} setPulseModal={setPulseModal} togglePulseModal={togglePulseModal} />
             </MDBCol>
@@ -92,7 +117,13 @@ const SensorData = ({ formData, setFormData, setBtnDisable }) => {
         </div>
       </MDBCardBody>
       <div className='mt-2'>
-        <span className="text-muted" style={{ fontSize: '0.75em', width: '5em' }}><p>NOTE: Temperature and Oxygen Saturation have their own individual sensors, while the Pulse Rate and Systolic &amp; Diastolic Blood Pressure share the same sensor.</p></span>
+        <span className="text-muted" style={{ fontSize: '0.75em', width: '5em' }}>
+          {language === "PH" ?
+            <p>Ang Temperatura at Oxygen Saturation ay may mga indibidwal na sensor, habang ang Pulse Rate at Systolic &amp; Diastolic Blood Pressure ay may parehong sensor.</p>
+            :
+            <p>NOTE: Temperature and Oxygen Saturation have their own individual sensors, while the Pulse Rate and Systolic &amp; Diastolic Blood Pressure share the same sensor.</p>
+          }
+        </span>
       </div>
     </React.Fragment>
   )
