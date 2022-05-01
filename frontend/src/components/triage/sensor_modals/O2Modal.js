@@ -32,7 +32,6 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
     try {
       console.log("Fetching o2...");
       setMeasure("loading");
-      await delay(10000);
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/poxdata`);
       if (response.status == 200) {
         console.log(response.data[0]);
