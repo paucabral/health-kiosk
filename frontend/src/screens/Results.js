@@ -71,7 +71,7 @@ const Results = () => {
     <React.Fragment>
       <MDBContainer className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
         <MDBRow className='mb-2' style={{ textAlign: "center", display: 'flex', justifyContent: "center" }}>
-          <MDBCardTitle style={{ fontWeight: "bold" }}>{language === "PH" ? "Pagsusuri ng Pasyente" : "Patient Assessment"}</MDBCardTitle>
+          <MDBCardTitle style={{ fontWeight: "bold" }}>{language === "PH" ? "Pagsusuri sa Pasyente" : "Patient Assessment"}</MDBCardTitle>
         </MDBRow>
         <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
           <MDBRow>
