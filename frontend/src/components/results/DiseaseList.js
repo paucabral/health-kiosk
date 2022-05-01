@@ -63,13 +63,23 @@ const DiseaseList = ({ diseases, symptoms }) => {
                 <MDBRow className='p-0 m-0'>
                   {
                     symptoms.length != 0 ?
-                      <span style={{ textAlign: 'center', fontSize: '0.7em' }}><i>{language === "PH" ? "Tandaan: HINDI PINAL ang mga resulta. Mangyaring kumunsulta sa doktor para sa karagdagang pagsusuri." : "Note: The results are NOT FINAL. Please consult a doctor for further checkup."}</i></span>
+                      <span style={{ textAlign: 'center', fontSize: '0.7em' }}><i>{language === "PH" ? "Tandaan: HINDI PINAL ang mga resulta. Kumunsulta sa doktor para sa detalye." : "Note: The results are NOT FINAL. Please consult a doctor for further checkup."}</i></span>
                       :
                       <></>
                   }
                 </MDBRow>
               </MDBRow>
-              <div className='pr-4 pt-0 pl-3 pb-0' style={{ justifyContent: 'center', height: '37vh', width: '42.7%', backgroundColor: 'rgba(0,0,0,0.25)', borderRadius: '1em', backdropFilter: 'blur(4px)', position: 'fixed', zIndex: '2000' }}></div>
+              <div className='pr-4 pt-0 pl-4 pb-0' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '37vh', width: '42.7%', position: 'fixed', zIndex: '2001' }}>
+                <MDBRow>
+                  <h5 className='text-info'>
+                    {language === "PH" ? "Ang resulta para sa differential diagnosis ay naitala at susuriin ng isang doktor." : "The results for differential diagnosis have been recorded and will be evaluated by a doctor."}
+                  </h5>
+                  <b className='text-white'>
+                    {language === "PH" ? "Kailangan ng agarang konsultasyon? Hanapin ang pinakamalapit na pasilidad gamit ang opsyon sa ibaba." : "Need immediate consultation? Find the nearest facilities using the option below."}
+                  </b>
+                </MDBRow>
+              </div>
+              <div className='pr-4 pt-0 pl-3 pb-0' style={{ justifyContent: 'center', height: '37vh', width: '42.7%', backgroundColor: 'rgba(0,0,0,0.75)', borderRadius: '1em', backdropFilter: 'blur(4px)', position: 'fixed', zIndex: '2000' }}></div>
               <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '37vh' }}>
                 {
                   diseases_list ?
