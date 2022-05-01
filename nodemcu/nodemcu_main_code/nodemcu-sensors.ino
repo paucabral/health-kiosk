@@ -38,6 +38,9 @@ void onBeatDetected(){
 //*********MLX90614 variables**************
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 #define REPORTING_PERIOD_MS     1000  
+#define PREPARE_TEMP     2000
+uint32_t tempStartReport = 0; 
+uint32_t tempCurrentReport = 0;
 //float thermtemp;                       //Following three variables are for calibration, do keep as comment
 //float thermmax;   
 //float thermmin;
@@ -92,6 +95,8 @@ void setup(void) {
     Serial.print("Error connecting");
   }
   config_rest_server_routing();
+  http_rest_server.sendHeader("Access-Control-Allow-Origin", "*");
+  http_rest_server.enableCORS(true);
   http_rest_server.begin(); 
   Serial.println(F("HTTP REST Server Started"));
   WiFi.setAutoReconnect(true);
@@ -99,7 +104,7 @@ void setup(void) {
   pinMode(buttonD6, INPUT);
   pinMode(buttonD7, OUTPUT);
   pinMode(buttonD8, OUTPUT);
-
+ 
   //******* Start and configuration of MAX30102 *******
     Serial.print(F("Initializing pulse oximeter..."));
     if (!pox.begin()) {
@@ -115,26 +120,18 @@ void setup(void) {
     digitalWrite(buttonD7, HIGH);  
   //  virtualPowerSwitch();
     pox.begin();
+//    virtualPowerSwitch();
 }
 
 
 //*********Primary Loop Function**************
 void loop() {
   pox.update();
-  mainButtonState = digitalRead(buttonD6);
-  if (mainButtonState == HIGH){
-    virtualPower = 1;
-  }
-  if (virtualPower == 1) {
-    bpStartReport = millis();
-    virtualPowerSwitch();
-    virtualPower = 0;
-    accessed_mem = 0;
-  }
- 
-  //BP
   recvWithEndMarker();
   bpData();
+  if (mainButtonState == HIGH){
+    virtualPowerSwitch();
+  }
   http_rest_server.handleClient();
 }
 
@@ -187,7 +184,7 @@ void get_pox_data() {
   
   jsonObj["spo2"] = spo2;                                               // Add Data To Json Object to send data
   jsonObj.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  http_rest_server.enableCORS(true);
+
   http_rest_server.send(200, "application/json", JSONmessageBuffer);
   spo2 = 0;
 }
@@ -198,16 +195,24 @@ void get_temp_data() {
   StaticJsonBuffer<32> jsonBuffer;                    // Create JSON object of size 32 to send data
   JsonObject& jsonObj = jsonBuffer.createObject();
   char JSONmessageBuffer[32];
-
+  float rawTempAvg = 0.0;
+//  tempStartReport = millis();
+//  tempCurrentReport = millis();
+//  while (tempCurrentReport - tempStartReport < PREPARE_TEMP){
+//    tempCurrentReport = millis();
+//  }
+//  
   for (int i=0; i<500; i++){
-     tempAvg = smooth();
+    rawTempAvg = smooth();
   }
   Serial.print(F("Monitored: "));
   Serial.println(ESP.getFreeHeap(),DEC);
 
+  tempAvg = ((int)(rawTempAvg * 100 ))/ 100.0;
+   
   jsonObj["tempAvg"] = tempAvg;                                      // Add Data To Json Object to send data
   jsonObj.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  http_rest_server.enableCORS(true);
+
   http_rest_server.send(200, "application/json", JSONmessageBuffer);
 }
 
@@ -242,12 +247,38 @@ void get_bp_data() {
   JsonObject& jsonObj = jsonBuffer.createObject();
   char JSONmessageBuffer[64];
   // Add Data To Json Object to send data
+
+
+  virtualPower = 1;
+  while (dataSYS == 0){
+    mainButtonState = digitalRead(buttonD6);
+    if (mainButtonState == HIGH){
+      continue;
+    }
+    if (virtualPower == 1) {
+      bpStartReport = millis();
+      virtualPowerSwitch();
+      virtualPower = 0;
+      accessed_mem = 0;
+    }
+ 
+    //BP
+    recvWithEndMarker();
+    bpData();
+    if (dataSYS != 0){
+      continue;
+    }
+  }
+  
   jsonObj["sys"] = dataSYS;
   jsonObj["dia"] = dataDIA;
   jsonObj["pr"] = dataPR;
   jsonObj.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  http_rest_server.enableCORS(true);
+
   http_rest_server.send(200, "application/json", JSONmessageBuffer);
+  dataSYS = 0;
+  dataDIA = 0;
+  dataPR = 0;
 }
 
 
