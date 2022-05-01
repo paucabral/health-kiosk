@@ -370,9 +370,31 @@ class AddAppointment(View):
         form.patient = patient
         if form.is_valid():
             form.save()
+            appointment = {
+                "patient_name": "{} {}".format(form.cleaned_data['patient'].first_name, form.cleaned_data['patient'].last_name),
+                "patient_contact_no": "{}".format(form.cleaned_data['patient'].contact_no),
+                "appointment_status": form.cleaned_data['appointment_status'],
+                "appointment_date": form.cleaned_data['appointment_date'].strftime("%B %d, %Y @ %I:%M %p"),
+                "assigned_personnel": "{} {}".format(form.cleaned_data['assigned_personnel'].user.first_name, form.cleaned_data['assigned_personnel'].user.last_name),
+                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no
+            }
+            if config('ENVIRONMENT', default='production') == 'production':
+                try:
+                    from api.sms import sendAppointment
+                    response_code = sendAppointment(appointment=appointment)
+                    messages.add_message(request,
+                                         messages.ERROR,
+                                         'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                except:
+                    data = {"message": "There was an error with the SMS module."}
+                    response_code = 503
+                    messages.add_message(request,
+                                         messages.ERROR,
+                                         'The appointment for patient {} was added successfully but the patient has not been notified through SMS due to an error.'.format(patient_id))
+
             messages.add_message(request,
                                  messages.SUCCESS,
-                                 'The appointment for patient {} was updated successfully.'.format(patient_id))
+                                 'The appointment for patient {} was added successfully.'.format(patient_id))
             return redirect('/management/patients/{}/details'.format(patient_id))
         else:
             messages.error(
@@ -399,6 +421,29 @@ class UpdateAppointment(View):
         if form.is_valid():
             form.save()
             patient_id = self.kwargs['patient_id']
+
+            appointment = {
+                "patient_name": "{} {}".format(form.cleaned_data['patient'].first_name, form.cleaned_data['patient'].last_name),
+                "patient_contact_no": "{}".format(form.cleaned_data['patient'].contact_no),
+                "appointment_status": form.cleaned_data['appointment_status'],
+                "appointment_date": form.cleaned_data['appointment_date'].strftime("%B %d, %Y @ %I:%M %p"),
+                "assigned_personnel": "{} {}".format(form.cleaned_data['assigned_personnel'].user.first_name, form.cleaned_data['assigned_personnel'].user.last_name),
+                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no
+            }
+            if config('ENVIRONMENT', default='production') == 'production':
+                try:
+                    from api.sms import sendAppointment
+                    response_code = sendAppointment(appointment=appointment)
+                    messages.add_message(request,
+                                         messages.ERROR,
+                                         'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                except:
+                    data = {"message": "There was an error with the SMS module."}
+                    response_code = 503
+                    messages.add_message(request,
+                                         messages.ERROR,
+                                         'The appointment for patient {} was updated successfully but the patient has not been notified through SMS due to an error.'.format(patient_id))
+
             messages.add_message(request,
                                  messages.SUCCESS,
                                  'The appointment was updated successfully.')

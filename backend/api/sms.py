@@ -98,3 +98,49 @@ def sendSms(resultForm):
         print(rcv)
 
     return 200
+
+
+def sendAppointment(appointment):
+    patient_name = appointment['patient_name']
+    patient_contact_no = appointment['patient_contact_no']
+    appointment_status = appointment['appointment_status']
+    appointment_date = appointment['appointment_date']
+    assigned_personnel = appointment['assigned_personnel']
+    assigned_personnel_contact_no = appointment['assigned_personnel_contact_no']
+
+    msg = """"
+    """
+
+    print(msg)
+
+    port.write('AT'.encode())         # Enter AT Mode
+    port.write('\r\n'.encode())
+    time.sleep(1)
+
+    port.write('AT'.encode())         # Double this to confirm start
+    port.write('\r\n'.encode())
+    time.sleep(1)
+
+    port.write('ATE0'.encode())       # Disable the Echo
+    port.write('\r\n'.encode())
+    time.sleep(1)
+
+    port.write('AT+CMGF=1'.encode())  # Select Message format as Text mode
+    port.write('\r\n'.encode())
+    time.sleep(1)
+
+    # Send a message to Number
+    port.write('AT+CMGS="{}"'.format(patient_contact_no).encode())
+    port.write('\r\n'.encode())
+    time.sleep(1)
+
+    port.write(msg.encode())
+
+    port.write('\r\n'.encode())
+    print("NUMBER:", patient_contact_no)
+    port.write("\x1A".encode())  # Enable to send SMS
+    for i in range(10):
+        rcv = port.read(10)
+        print(rcv)
+
+    return 200
