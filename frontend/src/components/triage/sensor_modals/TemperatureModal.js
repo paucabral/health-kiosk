@@ -91,7 +91,7 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                 {
                   measure === "to_measure" ?
                     <MDBBtn color='warning' onClick={() => { fetchTemperatureData() }}>
-                      Start Measurement
+                      {language === "PH" ? "Simulan ang pagsusukat" : "Start Measurement"}
                     </MDBBtn>
                     : measure === "loading" ?
                       <MDBContainer style={{ display: 'flex', justifyContent: 'center' }}>
@@ -102,21 +102,21 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                       : measure === "done" ?
                         <div>
                           <MDBBtn color='primary' style={{ width: '15em' }} onClick={() => { fetchTemperatureData() }} className='mx-2'>
-                            Measure Again?
+                            {language === "PH" ? "Sukating Muli?" : "Measure Again?"}
                           </MDBBtn>
                           <MDBBtn color='warning' style={{ width: '15em' }} onClick={toggleTemperatureModal} className='mx-2'>
-                            Save
+                            {language === "PH" ? "I-Save" : "Save"}
                           </MDBBtn>
                         </div>
                         : <div style={{ textAlign: "center" }}>
                           <MDBRow>
-                            <h6>There was an error.</h6>
-                            <i>Please try again. If the issue persists, please reach the technician.</i>
+                            <h6>{language === "PH" ? "Mayroong error." : "There was an error."}</h6>
+                            <i>{language === "PH" ? "Subukang muli ang pagsusukat. Kung patuloy ang error, mangyaring tawagin ang technician." : "Please try again. If the issue persists, please reach the technician."}</i>
                           </MDBRow>
                           <MDBRow className='mt-3'>
                             <MDBContainer>
                               <MDBBtn color='warning' onClick={() => { fetchTemperatureData() }} className='mx-2'>
-                                Try Again
+                                {language === "PH" ? "Uliting Muli" : "Try Again"}
                               </MDBBtn>
                             </MDBContainer>
                           </MDBRow>
