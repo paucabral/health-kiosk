@@ -34,7 +34,6 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
     try {
       console.log("Fetching pulse...");
       setMeasure("loading");
-      await delay(60000);
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/bpdata`);
       if (response.status == 200) {
         console.log(response.data[0]);

@@ -33,7 +33,6 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
     try {
       console.log("Fetching temperature...");
       setMeasure("loading");
-      await delay(10000);
       const response = await axios.get(`${process.env.REACT_APP_SENSORS_ENDPOINT}/tempdata`);
       if (response.status == 200) {
         const temperature_data = response.data["tempAvg"];
