@@ -20,6 +20,7 @@ A self-service health kiosk that performs differential diagnosis and provide rec
 ## Environment
 ### Prerequisites
 - Raspberry Pi 4 (setup according to schematics found in `assets/schematic.png`)
+- NodeMCU (ESP8266)
 - Chromium web browser
 - display drivers (may vary)
 
@@ -55,7 +56,7 @@ To run a development environment, simply follow the following steps:
 
 ## Deployment in Production
 To run the kiosk in production, simply follow the following steps:
-1. Prepare the system packages by running the `install.sh` script with superuser privileges.
+1. Prepare the system packages by running the `install.sh` script with superuser privileges on the Raspberry Pi 4.
     ```
     $ sudo bash install.sh
     ```
