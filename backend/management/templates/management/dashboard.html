@@ -114,7 +114,13 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           {% for appointment in appointments %}
           <tr>
             <td>{{ appointment.id }}</td>
-            <td>{{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</td>
+            <td>
+              <a style="color: black; text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'"
+                href="/management/patients/{{ appointment.patient.id }}/details/">
+                {{ appointment.patient.first_name }} {{ appointment.patient.last_name }}
+              </a>
+            </td>
             <td>{{ appointment.appointment_date }}</td>
             <td>
               {% if appointment.appointment_status == "COMPLETE" %}
