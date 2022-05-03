@@ -29,9 +29,9 @@ const TermsAndConditions = ({ disclaimerModal, setDisclaimerModal, toggleDisclai
     <React.Fragment>
       <MDBModal id="" staticBackdrop scrollable='true' show={disclaimerModal} setShow={setDisclaimerModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
-          <MDBModalContent style={{ height: '70vh' }}>
+          <MDBModalContent style={{ height: '75vh', fontSize: '1.25em' }}>
             <MDBModalHeader>
-              <MDBModalTitle>
+              <MDBModalTitle style={{ fontSize: '1.3em' }}>
                 {
                   language === "PH" ?
                     "Tuntuinin at mga Kundisyon"
@@ -73,7 +73,7 @@ const TermsAndConditions = ({ disclaimerModal, setDisclaimerModal, toggleDisclai
             </MDBModalBody>
             <MDBModalFooter>
               <MDBCol className='p-0 m-0' style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <MDBBtn onClick={routeChange}>
+                <MDBBtn onClick={routeChange} style={{ fontSize: '0.9em' }}>
                   {language === "PH" ?
                     "SUMASANGAYON"
                     :
@@ -82,7 +82,7 @@ const TermsAndConditions = ({ disclaimerModal, setDisclaimerModal, toggleDisclai
                 </MDBBtn>
               </MDBCol>
               <MDBCol className='p-0 m-0' style={{ display: 'flex', justifyContent: 'flex-end', fontSize: '0.85em', fontWeight: 'bold' }}>
-                <MDBTabsLink style={{ textDecoration: 'underline' }} onClick={toggleDisclaimerModal}>
+                <MDBTabsLink style={{ textDecoration: 'underline', fontSize: '1.2em' }} onClick={toggleDisclaimerModal}>
                   {language === "PH" ?
                     "KANSELAHIN"
                     :
