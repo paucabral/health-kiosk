@@ -270,9 +270,7 @@ const Facilities = () => {
                   nearestHospitals.length != 0 ?
                     <MDBRow className='px-2 m-0'>
                       <MDBRow className='px-1 py-0' style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
-                        <MDBCol className='p-0' size='8'>
-                          <strong style={{ textAlign: 'left', fontSize: '1em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
-                        </MDBCol>
+                        <strong className='pl-3' style={{ textAlign: 'left', fontSize: '1em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
                       </MDBRow>
                       <MDBRow>
                         {keywords ? <MDBCol>
