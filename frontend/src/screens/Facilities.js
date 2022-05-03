@@ -84,6 +84,7 @@ const Facilities = () => {
   const [isKeyword, setIsKeyword] = useState(false);
 
   const fetchNearestHospitals = async () => {
+    console.log('hospitals hit')
     let placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
 
     if (isKeyword) {
@@ -180,12 +181,14 @@ const Facilities = () => {
   }
 
   const sortByList = () => {
-    setIsProminence(!isProminence);
+    const newValue = !isProminence
+    setIsProminence(newValue);
     fetchNearestHospitals();
   }
 
   const sortByKeyword = () => {
-    setIsKeyword(!isKeyword);
+    const newValue = !isKeyword
+    setIsKeyword(newValue);
     fetchNearestHospitals();
   }
 
@@ -275,7 +278,7 @@ const Facilities = () => {
                       <MDBRow>
                         {keywords ? <MDBCol>
                           <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword() }}>{isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
-                          <span style={{ fontSize: '0.65em' }}>{isKeyword ? "SPECIALIZED" : "RAW"}</span>
+                          <span style={{ fontSize: '0.65em' }}>{isKeyword ? "SPECIALIZED" : "GENERAL"}</span>
                         </MDBCol> : <></>}
                         <MDBCol>
                           <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList() }}>{isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
