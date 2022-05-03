@@ -13,4 +13,5 @@ urlpatterns = [
     path('patient/detail/<pk>/', views.apiPatientDetail, name="patient-detail"),
     path('patient/update/<pk>/', views.apiPatientUpdate, name="patient-update"),
     path('patient/delete/<pk>/', views.apiPatientDelete, name="patient-delete"),
+    path('disease-info/', views.apiDiseaseInfo, name="disease-info"),
 ]

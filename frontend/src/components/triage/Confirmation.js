@@ -9,11 +9,12 @@ import {
   MDBModalFooter,
   MDBSpinner,
 } from 'mdb-react-ui-kit';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../styles/styles.css';
 import moment from 'moment';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const Confirmation = ({ formData, setPage, setProgress }) => {
   const navigate = useNavigate();
@@ -46,11 +47,13 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
     }
   }
 
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
       <div style={{ height: '67vh' }}>
-        <MDBCardTitle style={{ fontWeight: "bold" }}>Confirm Entry</MDBCardTitle>
-        <p>Please ensure that all the information are correct before you proceed.</p>
+        <MDBCardTitle style={{ fontWeight: "bold" }}>{language === "PH" ? "Kumpirmahin ang Impormasyon" : "Confirm Entry"}</MDBCardTitle>
+        <p>{language === "PH" ? "Tiyakin na tama ang lahat ng impormasyon bago magpatuloy." : "Please ensure that all the information are correct before you proceed."}</p>
         <MDBCardBody>
           <div id="confirmation" style={{ overflowY: 'auto', height: '40vh', marginTop: '0em', marginBottom: '1em' }}>
             <div className='container'>
@@ -59,20 +62,20 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   <MDBCol>
                     <MDBRow>
                       <MDBCol size='4'>
-                        <strong>NAME:</strong>
+                        <strong>{language === "PH" ? "PANGALAN" : "NAME"}:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.first_name && formData.last_name ? <span>{formData.first_name} {formData.last_name}</span> : <i className='text-muted'>*MISSING</i>}
+                        {formData.first_name && formData.last_name ? <span>{formData.first_name} {formData.last_name}</span> : <i className='text-muted'>*{language === "PH" ? "NAWAWALA" : "MISSING"}</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
                   <MDBCol>
                     <MDBRow>
                       <MDBCol size='4'>
-                        <strong>SEX:</strong>
+                        <strong>{language === "PH" ? "KASARIAN" : "SEX"}:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.sex ? <span>{formData.sex}</span> : <i className='text-muted'>*MISSING</i>}
+                        {formData.sex ? <span>{formData.sex}</span> : <i className='text-muted'>*{language === "PH" ? "NAWAWALA" : "MISSING"}</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
@@ -81,7 +84,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   <MDBCol>
                     <MDBRow>
                       <MDBCol size='4'>
-                        <strong>BIRTHDAY:</strong>
+                        <strong>{language === "PH" ? "KAARAWAN" : "BIRTHDAY"}:</strong>
                       </MDBCol>
                       <MDBCol>
                         {formData.birth_date ? <span>{moment(formData.birth_date).format('MMMM DD, YYYY')}</span> : <i className='text-muted'>*MISSING</i>}
@@ -91,17 +94,17 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   <MDBCol>
                     <MDBRow>
                       <MDBCol size='4'>
-                        <strong>CONTACT:</strong>
+                        <strong>{language === "PH" ? "TELEPONO" : "CONTACT"}:</strong>
                       </MDBCol>
                       <MDBCol>
-                        {formData.contact_no ? <span>{formData.contact_no}</span> : <i className='text-muted'>*MISSING</i>}
+                        {formData.contact_no ? <span>{formData.contact_no}</span> : <i className='text-muted'>*{language === "PH" ? "NAWAWALA" : "MISSING"}</i>}
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
                 </MDBRow>
                 <MDBRow className='mt-3 mb-2'>
                   <MDBCol size='2'>
-                    <strong>SYMPTOMS:</strong>
+                    <strong>{language === "PH" ? "MGA SINTOMAS" : "SYMPTOMS"}:</strong>
                   </MDBCol>
                   <MDBCol style={{ textAlign: 'left' }}>
                     {formData.symptoms.length != 0 ?
@@ -112,7 +115,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                           ))
                         }
                       </MDBContainer>
-                      : <MDBCardText className='text-muted'><i>NO SYMPTOMS SELECTED </i></MDBCardText>
+                      : <MDBCardText className='text-muted'><i>{language === "PH" ? "WALANG NAPILING SINTOMAS" : "NO SYMPTOMS SELECTED"} </i></MDBCardText>
                     }
                   </MDBCol>
                 </MDBRow>
@@ -121,7 +124,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                 <MDBCol>
                   <MDBCard shadow='0' border='warning' background='white'>
                     <MDBCardHeader className='text-warning'>
-                      <strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature</strong>
+                      <strong><MDBIcon fas icon="thermometer-quarter" /> {language === "PH" ? "Temperatura" : "Body Temperature"}</strong>
                     </MDBCardHeader>
                     <MDBCardBody className='text-warning'>
                       <MDBCardText>
@@ -145,7 +148,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                 <MDBCol>
                   <MDBCard shadow='0' border='danger' background='white'>
                     <MDBCardHeader className='text-danger'>
-                      <strong><MDBIcon fas icon="heartbeat" /> Pulse Rate</strong>
+                      <strong><MDBIcon fas icon="heartbeat" /> {language === "PH" ? "Bilis ng Pulso" : "Pulse Rate"}</strong>
                     </MDBCardHeader>
                     <MDBCardBody className='text-danger'>
                       <MDBCardText>
@@ -186,12 +189,12 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
             <MDBRow className='w-100'>
               <MDBCol>
                 <MDBBtn onClick={() => { setPage(0); setProgress(0); }} className='w-75' color='warning'>
-                  Go Back
+                  {language === "PH" ? "Bumalik" : "Go back"}
                 </MDBBtn>
               </MDBCol>
               <MDBCol>
                 <MDBBtn color='success' disabled={checkEntry()} className='w-75' onClick={submitForm}>
-                  Submit
+                  {language === "PH" ? "Isumite" : "Submit"}
                 </MDBBtn>
               </MDBCol>
             </MDBRow>

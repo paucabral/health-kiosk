@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardSubTitle, MDBCardText, MDBIcon, MDBSpinner, MDBBtn } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { GoogleMap, DirectionsRenderer, DirectionsService, useLoadScript, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import '../styles/styles.css';
 import mapStyles from '../styles/mapStyles';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const googleMapsLibraries = ["places"]
 const mapContainerStyle = {
@@ -184,6 +185,8 @@ const Facilities = () => {
 
   const navigate = useNavigate();
 
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
       <div className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -194,11 +197,11 @@ const Facilities = () => {
                 <MDBCardHeader className='px-3 text-uppercase text-left' style={{ fontWeight: 'bold' }}>
                   <MDBRow>
                     <MDBCol>
-                      <MDBIcon fas icon="map-marker-alt" /> Current Location
+                      <MDBIcon fas icon="map-marker-alt" /> {language === "PH" ? "Iyong lokasyon" : "Current Location"}
                     </MDBCol>
                     <MDBCol size='4' className='mx-0'>
                       <MDBBtn color='dark' className='py-1 px-3' onClick={() => navigate(-1)}>
-                        <span style={{ fontSize: '0.6em' }}><MDBIcon fas icon="arrow-left" /> Go Back</span>
+                        <span style={{ fontSize: '0.6em' }}><MDBIcon fas icon="arrow-left" /> {language === "PH" ? "Bumalik" : "Go back"}</span>
                       </MDBBtn>
                     </MDBCol>
                   </MDBRow>
@@ -206,7 +209,7 @@ const Facilities = () => {
                 {
                   Object.keys(location).length === 0 ?
                     <MDBRow className='m-4'>
-                      <MDBCardTitle className='text-uppercase py-2'>Finding location...</MDBCardTitle>
+                      <MDBCardTitle className='text-uppercase py-2'>{language === "PH" ? "Hinahanap ang lokasyon..." : "Finding location..."}</MDBCardTitle>
                       <MDBContainer>
                         <MDBSpinner className='mx-2' color='info'>
                           <span className='visually-hidden'>Loading...</span>
@@ -226,10 +229,10 @@ const Facilities = () => {
                         <div style={{ lineHeight: '1' }}>
                           <MDBRow className='my-1'>
                             <MDBCol size='7'>
-                              <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>TRAVEL MODE:</span> {direction.travelMode}</span> <br />
+                              <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>{language === "PH" ? "PAGLALAKBAY" : "TRAVEL MODE"}:</span> {direction.travelMode}</span> <br />
                             </MDBCol>
                             <MDBCol>
-                              <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>DISTANCE:</span> {direction.distance}</span> <br />
+                              <span style={{ fontSize: '0.75em' }}><span style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>{language === "PH" ? "LAYO" : "DISTANCE"}:</span> {direction.distance}</span> <br />
                             </MDBCol>
                           </MDBRow>
                         </div>
@@ -246,7 +249,7 @@ const Facilities = () => {
                   nearestHospitals.length != 0 ?
                     <MDBRow className='px-2 m-1'>
                       <MDBRow className='px-1 py-0'>
-                        <strong style={{ textAlign: 'left', fontSize: '0.75em' }}>NEARBY FACILITIES:</strong>
+                        <strong style={{ textAlign: 'left', fontSize: '0.75em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
                       </MDBRow>
                       <MDBRow id='hospital-list' className='px-1 m-0' style={{ height: '37vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '0.85em' }}>
                         {nearestHospitals?.map((item) => (

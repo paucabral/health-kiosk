@@ -9,6 +9,7 @@ import requests
 import json
 from django.conf import settings
 from api.predictions import getPredictions
+from api.disease_info import getDiseaseInfo
 from decouple import config
 
 # Create your views here.
@@ -97,7 +98,19 @@ def apiSms(request):
 
 @api_view(['POST'])
 def apiDifferentialDiagnosis(request):
-    serializer = PatientSerializer(data=request.data)
+    first_name = request.data['first_name']
+    last_name = request.data['last_name']
+    sex = request.data['sex']
+    birth_date = request.data['birth_date']
+
+    if Patient.objects.filter(first_name=first_name, last_name=last_name, sex=sex, birth_date=birth_date):
+        patient = Patient.objects.get(
+            first_name=first_name, last_name=last_name, sex=sex, birth_date=birth_date)
+        serializer = PatientSerializer(instance=patient, data=request.data)
+
+    else:
+        serializer = PatientSerializer(data=request.data)
+
     if serializer.is_valid():
         instance = serializer.save()
         data = serializer.validated_data
@@ -143,3 +156,10 @@ def apiPatientDelete(request, pk):
         response = {
             "response": "Record ID #{} successfully deleted".format(pk)}
         return Response(response)
+
+
+@api_view(['GET'])
+def apiDiseaseInfo(request):
+    disease_name = request.data.get("disease")
+    data = getDiseaseInfo(disease_name)
+    return Response(data)
