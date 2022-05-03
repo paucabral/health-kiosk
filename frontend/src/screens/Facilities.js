@@ -71,17 +71,19 @@ const Facilities = () => {
 
   const [nearestHospitals, setNearestHospitals] = useState([]);
 
-  const [isProminence, setIsProminence] = useState(true);
-  const [isKeyword, setIsKeyword] = useState(false);
+  const [sortBools, setSortBools] = useState({
+    isProminence: true,
+    isKeyword: false,
+  })
 
   const fetchNearestHospitals = async () => {
     let placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
 
-    if (isKeyword) {
+    if (sortBools.isKeyword) {
       placesUrl = placesUrl + `&keyword=${keywords.join('%20OR%20')}`
     }
 
-    if (isProminence) {
+    if (sortBools.isProminence) {
       placesUrl = placesUrl + "&rankby=prominence"
     }
 
@@ -165,14 +167,14 @@ const Facilities = () => {
   }
 
   const sortByList = () => {
-    const newValue = !isProminence
-    setIsProminence(newValue);
+    const newValue = !sortBools.isProminence
+    setSortBools({ ...sortBools, isProminence: newValue })
     fetchNearestHospitals();
   }
 
   const sortByKeyword = () => {
-    const newValue = !isKeyword
-    setIsKeyword(newValue);
+    const newValue = !sortBools.isKeyword
+    setSortBools({ ...sortBools, isKeyword: newValue })
     fetchNearestHospitals();
   }
 
@@ -184,7 +186,7 @@ const Facilities = () => {
       fetchLocation();
       findFacilities();
     }
-  }, [location, targetLocation, direction, nearestHospitals, isProminence, isKeyword]);
+  }, [location, targetLocation, direction, nearestHospitals, sortBools]);
 
   const navigate = useNavigate();
 
@@ -261,12 +263,12 @@ const Facilities = () => {
                       </MDBRow>
                       <MDBRow>
                         {keywords ? <MDBCol>
-                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword() }}>{isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
-                          <span style={{ fontSize: '0.65em' }}>{isKeyword ? "SPECIALIZED" : "GENERAL"}</span>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword() }}>{sortBools.isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
+                          <span style={{ fontSize: '0.65em' }}>{sortBools.isKeyword ? "SPECIALIZED" : "GENERAL"}</span>
                         </MDBCol> : <></>}
                         <MDBCol>
-                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList() }}>{isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
-                          <span style={{ fontSize: '0.65em' }}>{isProminence ? "PROMINENCE" : "DISTANCE"}</span>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList() }}>{sortBools.isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
+                          <span style={{ fontSize: '0.65em' }}>{sortBools.isProminence ? "PROMINENCE" : "DISTANCE"}</span>
                         </MDBCol>
                       </MDBRow>
                       <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '28vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
