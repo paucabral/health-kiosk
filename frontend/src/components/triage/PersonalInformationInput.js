@@ -62,7 +62,7 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
             </MuiPickersUtilsProvider>
           </MDBCol>
           <MDBCol className='col-3'>
-            <select style={{ fontSize: '1.15em' }} className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label={language === "PH" ? 'Kasarian * ' : 'Sex * '} value={formData.sex}>
+            <select style={{ fontSize: '1.2em', paddingBottom: '3.5px' }} className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label={language === "PH" ? 'Kasarian * ' : 'Sex * '} value={formData.sex}>
               <option disabled default value={""}>{language === "PH" ? 'Kasarian *' : 'Sex *'}</option>
               <option value={"MALE"}>{language === "PH" ? 'LALAKI' : 'MALE'}</option>
               <option value={"FEMALE"}>{language === "PH" ? 'BABAE' : 'FEMALE'}</option>
