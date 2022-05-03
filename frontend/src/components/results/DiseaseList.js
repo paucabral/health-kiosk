@@ -40,12 +40,12 @@ const DiseaseList = ({ diseases, symptoms }) => {
       <MDBContainer className='p-0' style={{ justifyContent: 'center' }}>
         <MDBCard shadow='0' border='info' background='white'>
           <MDBCardHeader className='text-white' background='info'>
-            <strong>DIFFERENTIAL DIAGNOSIS</strong>
+            <strong style={{ fontSize: '1.2em' }}>DIFFERENTIAL DIAGNOSIS</strong>
           </MDBCardHeader>
           <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '53vh' }}>
             <MDBCardBody className='pt-2 pb-2'>
               <MDBRow className='mt-1 mb-1 pr-3 pb-3'>
-                <MDBCol size='4' className='px-3' style={{ textAlign: 'left' }}>
+                <MDBCol size='4' className='px-3' style={{ textAlign: 'left', fontSize: '1.15em' }}>
                   <strong>{language === "PH" ? "SINTOMAS" : "SYMPTOMS"}:</strong>
                 </MDBCol>
                 <MDBCol id="differential" className='p-0' style={{ textAlign: 'left', overflowX: 'auto', width: '10vw', whiteSpace: 'nowrap' }}>

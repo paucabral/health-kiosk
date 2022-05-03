@@ -71,17 +71,17 @@ const Results = () => {
 
   return (
     <React.Fragment>
-      <MDBContainer className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
+      <MDBContainer className='mt-4 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
         <MDBRow className='mb-2' style={{ textAlign: "center", display: 'flex', justifyContent: "center" }}>
-          <MDBCardTitle style={{ fontWeight: "bold" }}>{language === "PH" ? "Pagsusuri sa Pasyente" : "Patient Assessment"}</MDBCardTitle>
+          <MDBCardTitle style={{ fontWeight: "bold", fontSize: '1.5em' }}>{language === "PH" ? "Pagsusuri sa Pasyente" : "Patient Assessment"}</MDBCardTitle>
         </MDBRow>
         <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
           <MDBRow>
-            <MDBCard className='px-5 py-3' shadow='1-strong' id='differential' style={{ overflowY: 'auto', height: '14vh' }}>
+            <MDBCard className='px-5 py-2' shadow='1-strong' id='differential' style={{ overflowY: 'auto', height: '14vh', fontSize: "1.2em" }}>
               <MDBRow>
                 <MDBCol>
                   <MDBRow>
-                    <MDBCol size={language === "PH" ? "4" : "3"}>
+                    <MDBCol size={language === "PH" ? "4" : "4"}>
                       <strong>{language === "PH" ? "PANGALAN" : "NAME"}:</strong>
                     </MDBCol>
                     <MDBCol>
@@ -91,7 +91,7 @@ const Results = () => {
                 </MDBCol>
                 <MDBCol>
                   <MDBRow>
-                    <MDBCol size={language === "PH" ? "4" : "3"}>
+                    <MDBCol size={language === "PH" ? "4" : "4"}>
                       <strong>{language === "PH" ? "KASARIAN" : "SEX"}:</strong>
                     </MDBCol>
                     <MDBCol>
@@ -103,7 +103,7 @@ const Results = () => {
               <MDBRow>
                 <MDBCol>
                   <MDBRow>
-                    <MDBCol size={language === "PH" ? "4" : "3"}>
+                    <MDBCol size={language === "PH" ? "4" : "4"}>
                       <strong>{language === "PH" ? "KAARAWAN" : "BIRTHDAY"}:</strong>
                     </MDBCol>
                     <MDBCol>
@@ -113,7 +113,7 @@ const Results = () => {
                 </MDBCol>
                 <MDBCol>
                   <MDBRow>
-                    <MDBCol size={language === "PH" ? "4" : "3"}>
+                    <MDBCol size={language === "PH" ? "4" : "4"}>
                       <strong>{language === "PH" ? "TELEPONO" : "CONTACT"}:</strong>
                     </MDBCol>
                     <MDBCol>
