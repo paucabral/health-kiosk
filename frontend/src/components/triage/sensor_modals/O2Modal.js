@@ -73,12 +73,12 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBCard shadow='0' border='success' background='white'>
-                          <MDBCardHeader className='text-success'>
+                          <MDBCardHeader className='text-success' style={{ fontSize: '1.5em' }}>
                             <strong><MDBIcon fas icon="wind" /> O<sub>2</sub> Saturation</strong>
                           </MDBCardHeader>
                           <MDBCardBody className='text-success text-center'>
                             <MDBCardText>
-                              <h1>{formData.temperature ? <span>{formData.o2_saturation} %</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '3em' }}>{formData.temperature ? <span>{formData.o2_saturation} %</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>

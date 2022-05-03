@@ -79,34 +79,34 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
                         <MDBCard className='mx-3' shadow='0' border='danger' background='white'>
-                          <MDBCardHeader className='text-danger'>
+                          <MDBCardHeader className='text-danger' style={{ fontSize: '1.5em' }}>
                             <strong><MDBIcon fas icon="heartbeat" /> Pulse Rate</strong>
                           </MDBCardHeader>
                           <MDBCardBody className='text-danger'>
                             <MDBCardText>
-                              <h1>{formData.temperature ? <span>{formData.pulse_rate} bpm</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '2.5em' }}>{formData.temperature ? <span>{formData.pulse_rate} bpm</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
 
                         <MDBCard className='mx-3' shadow='0' border='primary' background='white'>
-                          <MDBCardHeader className='text-primary'>
+                          <MDBCardHeader className='text-primary' style={{ fontSize: '1.5em' }}>
                             <strong><MDBIcon fas icon="tint" /> Systolic BP</strong>
                           </MDBCardHeader>
                           <MDBCardBody className='text-primary'>
                             <MDBCardText>
-                              <h1>{formData.temperature ? <span>{formData.systolic_bp} mmHg</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '2.5em' }}>{formData.temperature ? <span>{formData.systolic_bp} mmHg</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
 
                         <MDBCard className='mx-3' shadow='0' border='secondary' background='white'>
-                          <MDBCardHeader className='text-secondary'>
+                          <MDBCardHeader className='text-secondary' style={{ fontSize: '1.5em' }}>
                             <strong><MDBIcon fas icon="tint" /> Diastolic BP</strong>
                           </MDBCardHeader>
                           <MDBCardBody className='text-secondary'>
                             <MDBCardText>
-                              <h1>{formData.temperature ? <span>{formData.diastolic_bp} mmHg</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '2.5em' }}>{formData.temperature ? <span>{formData.diastolic_bp} mmHg</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>

@@ -71,12 +71,12 @@ const TemperatureModal = ({ temperatureModal, setTemperatureModal, toggleTempera
                     : measure === "done" ?
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <MDBCard shadow='0' border='warning' background='white'>
-                          <MDBCardHeader className='text-warning'>
+                          <MDBCardHeader className='text-warning' style={{ fontSize: '1.5em' }}>
                             <strong><MDBIcon fas icon="thermometer-quarter" /> Body Temperature</strong>
                           </MDBCardHeader>
                           <MDBCardBody className='text-warning text-center'>
                             <MDBCardText>
-                              <h1>{formData.temperature ? <span>{formData.temperature}°C</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '3em' }}>{formData.temperature ? <span>{formData.temperature}°C</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
