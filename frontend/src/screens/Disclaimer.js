@@ -20,7 +20,7 @@ const Disclaimer = () => {
         </MDBContainer>
         {language === "PH" ?
           <div>
-            <p className='px-5' style={{ textAlign: 'center' }}><b>Paunawa: </b>Ang kiosk na ito ay idinisenyo upang tumulong sa paggawa ng desisyon ng pasyente <i>(18 taong gulang pataas)</i> at magbigay gabay sa kanila patungo sa mga tamang channel para sa karagdagang konsultasyon at pagsusuri. Ang mga resulta ay <b>HINDI PINAL</b> <b>AT HINDI RIN PANAPOS NA KONKLUSYON</b>, ngunit isang lamang gabay na maaaring gamitin ng doktor sa pagtingin ng posibleng sakit ng pasyente batay sa mga sintomas.</p>
+            <p className='px-5' style={{ textAlign: 'center' }}><b>Paunawa: </b>Ang kiosk na ito ay idinisenyo upang tumulong sa paggawa ng desisyon ng pasyente <i>(18 taong gulang pataas)</i> at magbigay gabay sa kanila patungo sa mga tamang channel para sa karagdagang konsultasyon at pagsusuri. Ang mga resulta ay <b>HINDI PINAL</b> <b>AT HINDI RIN PANAPOS NA KONKLUSYON</b>, ngunit isa lamang gabay na maaaring gamitin ng doktor sa pagtingin ng posibleng sakit ng pasyente batay sa mga sintomas.</p>
             <p style={{ color: 'gray', fontStyle: 'italic', fontSize: '0.85em' }}>*Mangyaring basahin ang mga tuntunin at kundisyon bago magpatuloy.*</p>
           </div>
           :
