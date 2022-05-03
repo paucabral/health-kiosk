@@ -92,7 +92,6 @@ const Facilities = () => {
 
     if (isProminence) {
       placesUrl = placesUrl + "&rankby=prominence"
-      console.log(placesUrl)
     }
 
     if (status === "SUCCESS") {
@@ -124,13 +123,6 @@ const Facilities = () => {
       await fetchNearestHospitals();
     }
   }
-
-  useEffect(() => {
-    if (location && !dataLoaded.current) {
-      fetchLocation();
-      findFacilities();
-    }
-  }, [location, nearestHospitals]);
 
   const [targetLocation, setTargetLocation] = useState({});
   const [direction, setDirection] = useState({
@@ -187,11 +179,25 @@ const Facilities = () => {
     e.target.classList.toggle('btn-success');
   }
 
+  const sortByList = () => {
+    setIsProminence(!isProminence);
+    fetchNearestHospitals();
+  }
+
+  const sortByKeyword = () => {
+    setIsKeyword(!isKeyword);
+    fetchNearestHospitals();
+  }
+
   useEffect(() => {
     // console.log(targetLocation);
     // console.log(direction);
     // console.log(travelMode);
-  }, [targetLocation, direction, nearestHospitals]);
+    if (location && !dataLoaded.current) {
+      fetchLocation();
+      findFacilities();
+    }
+  }, [location, targetLocation, direction, nearestHospitals, isProminence, isKeyword]);
 
   const navigate = useNavigate();
 
@@ -269,12 +275,16 @@ const Facilities = () => {
                         </MDBCol>
                       </MDBRow>
                       <MDBRow>
-                        <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
-                          {keywords ? <MDBCard color='secondary' className='py-2 px-3 mx-1' onClick={() => { setIsKeyword(!isKeyword); fetchNearestHospitals() }}>{isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard> : <></>}
-                          <MDBCard color='secondary' className='py-2 px-3 mx-1 btn' onClick={() => { setIsProminence(!isProminence); fetchNearestHospitals() }}>{isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
+                        {keywords ? <MDBCol>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword() }}>{isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
+                          <span style={{ fontSize: '0.65em' }}>{isKeyword ? "SPECIALIZED" : "RAW"}</span>
+                        </MDBCol> : <></>}
+                        <MDBCol>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList() }}>{isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
+                          <span style={{ fontSize: '0.65em' }}>{isProminence ? "PROMINENCE" : "DISTANCE"}</span>
                         </MDBCol>
                       </MDBRow>
-                      <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '32.5vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
+                      <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '28vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
                         {nearestHospitals?.map((item) => (
                           <MDBCard className='btn-light' style={{ paddingLeft: '1.2em', paddingRight: '1.2em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                             <MDBRow style={{ pointerEvents: 'none' }}>
