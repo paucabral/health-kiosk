@@ -61,15 +61,15 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
         <MDBModalDialog centered size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Pulse and Blood Pressure Sensor</MDBModalTitle>
+              <MDBModalTitle style={{ fontSize: '1.5em' }}>Pulse and Blood Pressure Sensor</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={togglePulseModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
-              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '50vh' }}>
+              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '60vh' }}>
                 {
                   measure === "to_measure" || measure === "loading" ?
                     <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                      <MDBContainer><p style={{ fontWeight: 'bold', textAlign: 'center' }}>{language === "PH" ? "Mangyaring sundin ang mga hakbang na ito upang sukatin nang maayos ang iyong pulso at presyon ng dugo" : "Please follow these steps to measure your pulse rate and blood pressure properly"}:</p></MDBContainer>
+                      <MDBContainer><p style={{ fontWeight: 'bold', textAlign: 'center', fontSize: '1.2em' }}>{language === "PH" ? "Mangyaring sundin ang mga hakbang na ito upang sukatin nang maayos ang iyong pulso at presyon ng dugo" : "Please follow these steps to measure your pulse rate and blood pressure properly"}:</p></MDBContainer>
                       <InstructionStep img={bp_step_0} instruction={language === "PH" ? <span><b>Hakbang 1: </b>Hanapin ang <span className='text-danger' style={{ fontWeight: 'bold' }}>pulse rate at blood pressure sensor</span> sa kanang bahagi ng kiosk (ang pulse rate at blood pressure sensor ay iisang aparato lamang).</span> : <span><b>Step 1: </b>Locate the <span className='text-danger' style={{ fontWeight: 'bold' }}>pulse rate and blood pressure sensor</span> at the right section of the kiosk (the pulse rate and blood pressure sensor is a single device only).</span>} />
                       <InstructionStep img={bp_step_1} instruction={language === "PH" ? <span><b>Hakbang 2: </b>Hawakan at ilabas ang aparato mula sa lalagyan. Kamukha ito ng larawang ipinakita sa itaas.</span> : <span><b>Step 2: </b>You should be able to get a hold of the device. It looks similar to the image shown above.</span>} />
                       <InstructionStep img={bp_step_2} instruction={language === "PH" ? <span><b>Hakbang 3: </b>Gamitin ang strap upang ilagay ang sensor sa iyong pulso. Siguraduhin na ang aparato ay nakatali sa iyong pulso sa isang komportableng posisyon (hindi masyadong masikip, o maluwag).</span> : <span><b>Step 3: </b>Use the strap to place the sensor on your wrist. Make sure that the device is strapped on your wrist at a comfortable position (not too tight, nor loose).</span>} />
@@ -119,7 +119,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
               <div className='d-flex align-items-center justify-content-center'>
                 {
                   measure === "to_measure" ?
-                    <MDBBtn color='danger' onClick={() => { fetchPulseData() }}>
+                    <MDBBtn color='danger' style={{ fontSize: '1.2em' }} onClick={() => { fetchPulseData() }}>
                       {language === "PH" ? "Simulan ang pagsusukat" : "Start Measurement"}
                     </MDBBtn>
                     : measure === "loading" ?
@@ -130,10 +130,10 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                       </MDBContainer>
                       : measure === "done" ?
                         <div>
-                          <MDBBtn color='primary' style={{ width: '15em' }} onClick={() => { fetchPulseData() }} className='mx-2'>
+                          <MDBBtn color='primary' style={{ width: '15em', fontSize: '1.2em' }} onClick={() => { fetchPulseData() }} className='mx-2'>
                             {language === "PH" ? "Sukating Muli?" : "Measure Again?"}
                           </MDBBtn>
-                          <MDBBtn color='danger' style={{ width: '15em' }} onClick={togglePulseModal} className='mx-2'>
+                          <MDBBtn color='danger' style={{ width: '15em', fontSize: '1.2em' }} onClick={togglePulseModal} className='mx-2'>
                             {language === "PH" ? "I-Save" : "Save"}
                           </MDBBtn>
                         </div>
@@ -144,7 +144,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                           </MDBRow>
                           <MDBRow className='mt-3'>
                             <MDBContainer>
-                              <MDBBtn color='danger' onClick={() => { fetchPulseData() }} className='mx-2'>
+                              <MDBBtn color='danger' onClick={() => { fetchPulseData() }} style={{ fontSize: '1.2em' }} className='mx-2'>
                                 {language === "PH" ? "Uliting Muli" : "Try Again"}
                               </MDBBtn>
                             </MDBContainer>
