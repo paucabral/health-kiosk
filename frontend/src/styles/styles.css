@@ -16,6 +16,23 @@
   margin-top: 5px !important;
 }
 
+.rbt-input-wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.rbt-token {
+  font-size: 1.25em;
+}
+
+.rbt-input-main {
+  font-size: 1.25em;
+}
+
+#symptoms-selection {
+  font-size: 1.25em !important;
+}
+
 .sensor-btn {
   height: 12em;
   width: 12em;
