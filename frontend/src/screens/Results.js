@@ -150,7 +150,7 @@ const Results = () => {
               <MDBIcon size='2x' fas icon={checked ? "sort-down" : "sort-up"} />
             </MDBRow>
             <MDBRow className='m-2'>
-              <span style={{ fontSize: '0.75em' }}>{language === "PH" ? "PUMILI" : "SELECT"}</span>
+              <span style={{ fontSize: '1.2em' }}>{language === "PH" ? "PUMILI" : "SELECT"}</span>
             </MDBRow>
             <MDBRow className='m-2'>
             </MDBRow>
@@ -166,25 +166,25 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="hospital-btn" className='icons-btn'>
-        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => navigate('/nearest-facilities', { state: entry })}>
+        <MDBBtn color='danger' className='px-0' rounded style={{ height: '130px', width: '130px', lineHeight: '1' }} onClick={() => navigate('/nearest-facilities', { state: entry })}>
           <div>
             <MDBRow>
-              <MDBIcon size='2x' fas icon="hospital" />
+              <MDBIcon size='3x' fas icon="hospital" />
             </MDBRow>
             <MDBRow className='m-2'>
-              <span style={{ fontSize: '0.75em' }}>{language === "PH" ? "Pinaka-malapit na mga pasilidad" : "Find Nearby Facilities"}</span>
+              <span style={{ fontSize: '1.2em' }}>{language === "PH" ? "Pinaka-malapit na mga pasilidad" : "Find Nearby Facilities"}</span>
             </MDBRow>
           </div>
         </MDBBtn>
       </div>
       <div id="text-btn" className='icons-btn'>
-        <MDBBtn color='primary' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => { toggleSmsModal(); handleFeature(); }}>
+        <MDBBtn color='primary' className='px-0' rounded style={{ height: '130px', width: '130px', lineHeight: '1' }} onClick={() => { toggleSmsModal(); handleFeature(); }}>
           <div>
             <MDBRow>
-              <MDBIcon size='2x' fas icon="comment" />
+              <MDBIcon size='3x' fas icon="comment" />
             </MDBRow>
             <MDBRow className='m-2'>
-              <span style={{ fontSize: '0.75em' }}>{language === "PH" ? "Ipadala ang resulta via SMS" : "Send Results via SMS"}</span>
+              <span style={{ fontSize: '1.2em' }}>{language === "PH" ? "Ipadala ang resulta via SMS" : "Send Results via SMS"}</span>
             </MDBRow>
           </div>
         </MDBBtn>

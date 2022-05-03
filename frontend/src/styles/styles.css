@@ -154,12 +154,12 @@
 
 #arrow-toggler:checked~#text-btn {
   bottom: 7.5%;
-  right: 38%;
+  right: 35%;
 }
 
 #arrow-toggler:checked~#hospital-btn {
   bottom: 7.5%;
-  left: 38%;
+  left: 35%;
 }
 
 nav-items:hover {
