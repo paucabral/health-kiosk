@@ -28,7 +28,7 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
 
   return (
     <React.Fragment>
-      <MDBCardTitle style={{ fontWeight: "bold" }}>
+      <MDBCardTitle className='mb-0' style={{ fontWeight: "bold", fontSize: '1.75em' }}>
         {language === "PH" ?
           "Personal na Impormasyon"
           :
@@ -36,11 +36,11 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
         }
       </MDBCardTitle>
       {language === "PH" ?
-        <p>
+        <p className='mb-0' style={{ fontSize: '1.25em' }} >
           Mangyaring punan ang iyong personal na impormasyon.
         </p>
         :
-        <p>
+        <p className='mb-0' style={{ fontSize: '1.25em' }} >
           Please fill up your personal information.
         </p>
       }
