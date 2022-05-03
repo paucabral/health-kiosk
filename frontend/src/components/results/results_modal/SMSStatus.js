@@ -57,7 +57,7 @@ const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal 
               <MDBModalTitle style={{ fontSize: '1.2em' }}>{language === "PH" ? "Ipadala ang Resulta Gamit ang SMS" : "Send Results Through SMS"}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleSmsModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody className='my-2' style={{ height: '80vh' }}>
+            <MDBModalBody className='my-2' style={{ height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <MDBContainer>
                 {
                   smsStatus === "SENDING" ?

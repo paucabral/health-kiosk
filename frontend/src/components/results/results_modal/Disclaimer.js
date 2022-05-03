@@ -30,7 +30,7 @@ const Disclaimer = ({ disclaimerModal, setDisclaimerModal, toggleDisclaimerModal
               <MDBModalTitle style={{ fontSize: '1.2em' }}>{language === "PH" ? "Paunawa" : "Disclaimer"}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDisclaimerModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody className='my-2' style={{ height: '80vh' }}>
+            <MDBModalBody className='my-2' style={{ height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <MDBContainer>
                 <div>
                   <h3>{language === "PH" ? "Ang resulta na mula sa kiosk na ito ay HINDI PINAL" : "The results presented in this kiosk is NOT FINAL."}</h3>
