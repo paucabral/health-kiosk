@@ -193,7 +193,7 @@ const Facilities = () => {
         <MDBRow>
           <MDBCol md='4'>
             <MDBRow>
-              <MDBCard className='px-0 pt-0 pb-3'>
+              <MDBCard className='px-0 pt-0 pb-0'>
                 <MDBCardHeader className='px-3 text-uppercase text-left' style={{ fontWeight: 'bold' }}>
                   <MDBRow>
                     <MDBCol style={{ fontSize: '1.12em' }}>
