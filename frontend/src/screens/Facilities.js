@@ -19,8 +19,6 @@ const options = {
 const Facilities = () => {
   const loc = useLocation();
   const keywords = loc.state ? loc.state.split(' ') : null
-  console.log("Keywords")
-  console.log(keywords)
 
   const [status, setStatus] = useState("SUCCESS");
   const [location, setLocation] = useState({});
@@ -28,14 +26,11 @@ const Facilities = () => {
 
   const fetchLocation = async () => {
     try {
-      console.log("Fetching location...");
       const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/location`
-      console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
         const location_data = response.data;
         setLocation(location_data)
-        console.log(location)
         setStatus("SUCCESS")
         dataLoaded.current = true;
       }
@@ -60,15 +55,11 @@ const Facilities = () => {
   const fetchReverseGeocode = async () => {
     if (status === "SUCCESS") {
       try {
-        console.log("Fetching geocode...");
-        console.log(location)
         const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.lng}`
-        console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
           const reverse_geocode_data = response.data["results"][0]["locations"][0];
           setReverseGeocode(reverse_geocode_data)
-          console.log(reverse_geocode_data)
           setStatus("SUCCESS")
         }
       } catch (error) {
@@ -96,14 +87,11 @@ const Facilities = () => {
 
     if (status === "SUCCESS") {
       try {
-        console.log("Fetching nearest hospitals...");
         const url = placesUrl
-        console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
           const nearest_hospitals = response.data["results"];
           setNearestHospitals(nearest_hospitals)
-          console.log(nearest_hospitals)
           setStatus("SUCCESS")
         }
         else {
@@ -136,9 +124,7 @@ const Facilities = () => {
   const directionsCallback = (response) => {
     if (response !== null) {
       if (response.status === 'OK') {
-        console.log(`Distance: ${response[0]}`);
         const distance = response['routes'][0]['legs'][0]['distance']['text'];
-        console.log(distance)
         setDirection({ ...direction, distance: distance, response: response })
       } else {
         console.log('response: ', response)
@@ -165,7 +151,6 @@ const Facilities = () => {
     };
     setTargetLocation(target_location);
     setDirection({ ...direction, origin: location, destination: targetLocation });
-    console.log(direction);
   }
 
   const handleBtnClick = (e) => {
