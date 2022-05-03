@@ -125,7 +125,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: -17%;
+  bottom: -20%;
   left: 45%;
   transition: ease 0.5s;
 }
@@ -135,7 +135,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: -17%;
+  bottom: -20%;
   right: 45%;
   transition: ease 0.5s;
 }
