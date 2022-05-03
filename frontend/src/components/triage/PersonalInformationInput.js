@@ -7,6 +7,9 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles'
 import { LanguageContext } from '../../contexts/LanguageContext';
 
 const defaultMaterialTheme = createTheme({
+  typography: {
+    fontSize: 18,
+  },
   palette: {
     primary: {
       main: '#1266F1',
