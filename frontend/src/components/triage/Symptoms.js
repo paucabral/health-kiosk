@@ -26,13 +26,13 @@ const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
 
   return (
     <React.Fragment>
-      <MDBCardTitle style={{ fontWeight: "bold" }}>
+      <MDBCardTitle style={{ fontWeight: "bold", fontSize: '1.75em' }}>
         {language === "PH" ?
           "Mga Sintomas"
           : "Symptoms"
         }
       </MDBCardTitle>
-      <p>
+      <p style={{ fontSize: '1.25em' }}>
         {language === "PH" ?
           "Hanapin at piliin ang iyong mga sintomas (kung nakakaranas ka ng anuman)."
           : "Find and select your symptoms (if you experience any)."
@@ -66,7 +66,7 @@ const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
           multiple
           onChange={setMultiSelections}
           options={options}
-          placeholder="Select your symptoms..."
+          placeholder={language === "PH" ? "Pillin ang iyong mga sintomas..." : "Select your symptoms..."}
           selected={multiSelections}
         />
       </form>

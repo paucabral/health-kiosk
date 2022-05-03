@@ -52,12 +52,12 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
   return (
     <React.Fragment>
       <div style={{ height: '67vh' }}>
-        <MDBCardTitle style={{ fontWeight: "bold" }}>{language === "PH" ? "Kumpirmahin ang Impormasyon" : "Confirm Entry"}</MDBCardTitle>
-        <p>{language === "PH" ? "Tiyakin na tama ang lahat ng impormasyon bago magpatuloy." : "Please ensure that all the information are correct before you proceed."}</p>
+        <MDBCardTitle style={{ fontWeight: "bold", fontSize: '1.75em' }}>{language === "PH" ? "Kumpirmahin ang Impormasyon" : "Confirm Entry"}</MDBCardTitle>
+        <p className='mb-0' style={{ fontSize: '1.25em' }}>{language === "PH" ? "Tiyakin na tama ang lahat ng impormasyon bago magpatuloy." : "Please ensure that all the information are correct before you proceed."}</p>
         <MDBCardBody>
           <div id="confirmation" style={{ overflowY: 'auto', height: '40vh', marginTop: '0em', marginBottom: '1em' }}>
             <div className='container'>
-              <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center" }}>
+              <MDBRow className='mb-3' style={{ textAlign: "left", display: 'flex', justifyContent: "center", fontSize: '1.2em' }}>
                 <MDBRow>
                   <MDBCol>
                     <MDBRow>
@@ -120,8 +120,8 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                   </MDBCol>
                 </MDBRow>
               </MDBRow>
-              <MDBRow className='mb-4' style={{ textAlign: "center" }}>
-                <MDBCol>
+              <MDBRow className='mb-4' style={{ textAlign: "center", fontSize: '1.23em' }}>
+                <MDBCol className='mx-0 px-2'>
                   <MDBCard shadow='0' border='warning' background='white'>
                     <MDBCardHeader className='text-warning'>
                       <strong><MDBIcon fas icon="thermometer-quarter" /> {language === "PH" ? "Temperatura" : "Body Temperature"}</strong>
@@ -133,7 +133,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
-                <MDBCol>
+                <MDBCol className='mx-0 px-2'>
                   <MDBCard shadow='0' border='success' background='white'>
                     <MDBCardHeader className='text-success'>
                       <strong><MDBIcon fas icon="wind" /> O<sub>2</sub> Saturation</strong>
@@ -145,7 +145,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
-                <MDBCol>
+                <MDBCol className='mx-0 px-2'>
                   <MDBCard shadow='0' border='danger' background='white'>
                     <MDBCardHeader className='text-danger'>
                       <strong><MDBIcon fas icon="heartbeat" /> {language === "PH" ? "Bilis ng Pulso" : "Pulse Rate"}</strong>
@@ -157,7 +157,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
-                <MDBCol>
+                <MDBCol className='mx-0 px-2'>
                   <MDBCard shadow='0' border='primary' background='white'>
                     <MDBCardHeader className='text-primary'>
                       <strong><MDBIcon fas icon="tint" /> Systolic BP</strong>
@@ -169,7 +169,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
-                <MDBCol>
+                <MDBCol className='mx-0 px-2'>
                   <MDBCard shadow='0' border='secondary' background='white'>
                     <MDBCardHeader className='text-secondary'>
                       <strong><MDBIcon fas icon="tint" /> Diastolic BP</strong>
@@ -188,12 +188,12 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
           <MDBContainer>
             <MDBRow className='w-100'>
               <MDBCol>
-                <MDBBtn onClick={() => { setPage(0); setProgress(0); }} className='w-75' color='warning'>
+                <MDBBtn onClick={() => { setPage(0); setProgress(0); }} style={{ fontSize: '1em' }} className='w-75' color='warning'>
                   {language === "PH" ? "Bumalik" : "Go back"}
                 </MDBBtn>
               </MDBCol>
               <MDBCol>
-                <MDBBtn color='success' disabled={checkEntry()} className='w-75' onClick={submitForm}>
+                <MDBBtn color='success' disabled={checkEntry()} style={{ fontSize: '1em' }} className='w-75' onClick={submitForm}>
                   {language === "PH" ? "Isumite" : "Submit"}
                 </MDBBtn>
               </MDBCol>

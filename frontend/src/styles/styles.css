@@ -7,11 +7,30 @@
 }
 
 .MuiInputBase-root {
-  height: 40px !important;
+  height: 42px !important;
+  border-radius: 5px !important;
+  font-size: 1.2em !important;
 }
 
 .MuiOutlinedInput-notchedOutline {
   margin-top: 5px !important;
+}
+
+.rbt-input-wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.rbt-token {
+  font-size: 1.25em;
+}
+
+.rbt-input-main {
+  font-size: 1.25em;
+}
+
+#symptoms-selection {
+  font-size: 1.25em !important;
 }
 
 .sensor-btn {
@@ -106,7 +125,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: -17%;
+  bottom: -20%;
   left: 45%;
   transition: ease 0.5s;
 }
@@ -116,7 +135,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: -17%;
+  bottom: -20%;
   right: 45%;
   transition: ease 0.5s;
 }
@@ -135,12 +154,12 @@
 
 #arrow-toggler:checked~#text-btn {
   bottom: 7.5%;
-  right: 38%;
+  right: 35%;
 }
 
 #arrow-toggler:checked~#hospital-btn {
   bottom: 7.5%;
-  left: 38%;
+  left: 35%;
 }
 
 nav-items:hover {
@@ -170,4 +189,10 @@ nav-items::selection {
   /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer;
   /* Add a pointer on hover */
+}
+
+@media (min-width: 1366px) and (max-width: 2560px) {
+  #arrow-btn {
+    bottom: -9%
+  }
 }

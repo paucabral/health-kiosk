@@ -4,12 +4,12 @@ import React from 'react'
 const InstructionStep = ({ img, instruction }) => {
   return (
     <React.Fragment>
-      <MDBContainer className='my-2 mx-4' style={{ width: "17em" }}>
+      <MDBContainer className='my-2 mx-1' style={{ width: "21.75em" }}>
         <MDBRow className='mb-2'>
           <img src={img} />
         </MDBRow>
         <MDBRow className='mb-2'>
-          <div style={{ textAlign: 'justify' }}>
+          <div style={{ textAlign: 'justify', fontSize: '1.25em' }}>
             {instruction}
           </div>
         </MDBRow>

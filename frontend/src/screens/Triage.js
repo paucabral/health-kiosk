@@ -68,10 +68,10 @@ const Triage = () => {
       return <React.Fragment>
         <MDBRow className='mb-5 w-100' >
           <MDBCol>
-            <MDBBtn outline id='prev' color='primary' className='w-75' disabled={page === 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>{language === "PH" ? "Nakaraan" : "Prev"}</MDBBtn>
+            <MDBBtn outline id='prev' color='primary' className='w-75' style={{ fontSize: '1em' }} disabled={page === 0} onClick={() => { setPage((currPage) => currPage - 1); setProgress((progress) => progress - 25); }}>{language === "PH" ? "Nakaraan" : "Prev"}</MDBBtn>
           </MDBCol>
           <MDBCol>
-            <MDBBtn id='next' color='primary' className='w-75' disabled={page === FormTitles.length - 1 || btnDisable} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>{language === "PH" ? "Kasunod" : "Next"}</MDBBtn>
+            <MDBBtn id='next' color='primary' className='w-75' style={{ fontSize: '1em' }} disabled={page === FormTitles.length - 1 || btnDisable} onClick={() => { setPage((currPage) => currPage + 1); setProgress((progress) => progress + 25); }}>{language === "PH" ? "Kasunod" : "Next"}</MDBBtn>
           </MDBCol>
         </MDBRow>
       </React.Fragment>;
