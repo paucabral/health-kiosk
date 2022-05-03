@@ -47,10 +47,10 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
       <MDBCardBody>
         <MDBRow className='mb-4' style={{ fontSize: '1em' }}>
           <MDBCol>
-            <MDBInput style={{ fontSize: '1.2em' }} required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value.toUpperCase() })} id='first_name' size='lg' label={language === "PH" ? 'Pangalan * ' : 'First Name * '} type='text' icon="user" />
+            <MDBInput style={{ fontSize: '1.2em' }} required value={formData.first_name} onChange={(event) => setFormData({ ...formData, first_name: event.target.value.toUpperCase() })} id='first_name' size='md' label={language === "PH" ? 'Pangalan * ' : 'First Name * '} type='text' icon="user" />
           </MDBCol>
           <MDBCol>
-            <MDBInput style={{ fontSize: '1.2em' }} required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value.toUpperCase() })} id='last_name' size='lg' label={language === "PH" ? 'Apelyido * ' : 'Last Name * '} type='text' icon="user" />
+            <MDBInput style={{ fontSize: '1.2em' }} required value={formData.last_name} onChange={(event) => setFormData({ ...formData, last_name: event.target.value.toUpperCase() })} id='last_name' size='md' label={language === "PH" ? 'Apelyido * ' : 'Last Name * '} type='text' icon="user" />
           </MDBCol>
         </MDBRow>
         <MDBRow className='mb-2'>
@@ -62,7 +62,7 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
             </MuiPickersUtilsProvider>
           </MDBCol>
           <MDBCol className='col-3'>
-            <select style={{ fontSize: '1.2em' }} className='form-select form-select-lg' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label={language === "PH" ? 'Kasarian * ' : 'Sex * '} value={formData.sex}>
+            <select style={{ fontSize: '1.15em' }} className='form-select' required onChange={(event) => setFormData({ ...formData, sex: event.target.value.toUpperCase() })} id="sex" label={language === "PH" ? 'Kasarian * ' : 'Sex * '} value={formData.sex}>
               <option disabled default value={""}>{language === "PH" ? 'Kasarian *' : 'Sex *'}</option>
               <option value={"MALE"}>{language === "PH" ? 'LALAKI' : 'MALE'}</option>
               <option value={"FEMALE"}>{language === "PH" ? 'BABAE' : 'FEMALE'}</option>
@@ -71,7 +71,7 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
           <MDBCol>
             <MDBInput style={{ fontSize: '1.2em' }} required pattern='[0-9]*' value={formData.contact_no} onChange={(event) => {
               setFormData({ ...formData, contact_no: event.target.value.replace(/[^0-9]+/g, '') })
-            }} id='contact_no' size='lg' label={language === "PH" ? 'Numero ng Telepono * ' : 'Contact No. * '} type='tel' icon="phone" />
+            }} id='contact_no' size='md' label={language === "PH" ? 'Numero ng Telepono * ' : 'Contact No. * '} type='tel' icon="phone" />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
