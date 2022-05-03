@@ -117,7 +117,7 @@ const SensorData = ({ formData, setFormData, setBtnDisable }) => {
         </div>
       </MDBCardBody>
       <div className='mt-2'>
-        <span className="text-muted" style={{ fontSize: '0.75em', width: '5em' }}>
+        <span className="text-muted" style={{ fontSize: '1em', width: '5em' }}>
           {language === "PH" ?
             <p>Ang Temperatura at Oxygen Saturation ay may mga indibidwal na sensor, habang ang Pulse Rate at Systolic &amp; Diastolic Blood Pressure ay may parehong sensor.</p>
             :
