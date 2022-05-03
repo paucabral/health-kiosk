@@ -84,7 +84,6 @@ const Facilities = () => {
   const [isKeyword, setIsKeyword] = useState(false);
 
   const fetchNearestHospitals = async () => {
-    console.log('hospitals hit')
     let placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
 
     if (isKeyword) {
