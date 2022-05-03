@@ -67,6 +67,8 @@ const Results = () => {
 
   const { language, setLanguage } = useContext(LanguageContext);
 
+  const entry = location.state.predictions ? Object.keys(location.state.predictions).slice(0, 5).join(' ') : null
+
   return (
     <React.Fragment>
       <MDBContainer className='mt-3 mx-4' style={{ width: '100%', marginBottom: '-2.3em' }}>
@@ -164,7 +166,7 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="hospital-btn" className='icons-btn'>
-        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => navigate('/nearest-facilities')}>
+        <MDBBtn color='danger' className='px-0' rounded style={{ height: '97px', width: '97px', lineHeight: '1' }} onClick={() => navigate('/nearest-facilities', { state: entry })}>
           <div>
             <MDBRow>
               <MDBIcon size='2x' fas icon="hospital" />
