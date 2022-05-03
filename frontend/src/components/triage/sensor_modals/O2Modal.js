@@ -61,7 +61,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
               <MDBBtn className='btn-close' color='none' onClick={toggleO2Modal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{ textAlign: "left" }} className="mb-2">
-              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '60vh' }}>
+              <div className='mt-2 mb-3' style={{ textAlign: "left", overflowY: 'auto', height: '57vh' }}>
                 {
                   measure === "to_measure" || measure === "loading" ?
                     <MDBContainer style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -84,7 +84,10 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                         </MDBCard>
                       </div>
                       : <div style={{ textAlign: "center" }}>
-                        <></>
+                        <div style={{ fontSize: '1.3em' }}>
+                          <h3>{language === "PH" ? "Mayroong error." : "There was an error."}</h3>
+                          <i>{language === "PH" ? "Subukang muli ang pagsusukat. Kung patuloy ang error, mangyaring tawagin ang technician." : "Please try again. If the issue persists, please reach the technician."}</i>
+                        </div>
                       </div>
                 }
               </div>
@@ -110,10 +113,6 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                           </MDBBtn>
                         </div>
                         : <div style={{ textAlign: "center" }}>
-                          <MDBRow>
-                            <h6>{language === "PH" ? "Mayroong error." : "There was an error."}</h6>
-                            <i>{language === "PH" ? "Subukang muli ang pagsusukat. Kung patuloy ang error, mangyaring tawagin ang technician." : "Please try again. If the issue persists, please reach the technician."}</i>
-                          </MDBRow>
                           <MDBRow className='mt-3'>
                             <MDBContainer>
                               <MDBBtn color='success' onClick={() => { fetchO2Data() }} style={{ fontSize: '1.2em' }} className='mx-2'>
