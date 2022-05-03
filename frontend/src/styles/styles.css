@@ -190,3 +190,9 @@ nav-items::selection {
   cursor: pointer;
   /* Add a pointer on hover */
 }
+
+@media (min-width: 1366px) and (max-width: 2560px) {
+  #arrow-btn {
+    bottom: -9%
+  }
+}
