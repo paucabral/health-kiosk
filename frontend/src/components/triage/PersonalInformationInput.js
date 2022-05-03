@@ -57,7 +57,7 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
           <MDBCol className='col-3'>
             <MuiPickersUtilsProvider utils={MomentUtils}>
               <ThemeProvider theme={defaultMaterialTheme}>
-                <DatePicker size='small' openTo='year' views={['year', 'month', 'date']} variant='dialog' inputVariant="outlined" minDate={moment().subtract(500, "years")} maxDate={moment().subtract(18, "years")} required format="MMM DD, YYYY" label={language === "PH" ? 'Kaarawan' : 'Birthday'} value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} allowKeyboardControl={false} />
+                <DatePicker size='small' openTo='year' views={['year', 'month', 'date']} variant='dialog' inputVariant="outlined" minDate={moment().subtract(130, "years")} maxDate={moment().subtract(18, "years")} required format="MMM DD, YYYY" label={language === "PH" ? 'Kaarawan' : 'Birthday'} value={formData.birth_date} onChange={(event) => setFormData({ ...formData, birth_date: moment(event._d).format('YYYY-MM-DD') })} allowKeyboardControl={false} />
               </ThemeProvider>
             </MuiPickersUtilsProvider>
           </MDBCol>
