@@ -37,7 +37,7 @@ const Disclaimer = ({ disclaimerModal, setDisclaimerModal, toggleDisclaimerModal
                   <MDBContainer>
                     <MDBIcon size='5x' color='warning' fas icon="exclamation-circle" />
                   </MDBContainer>
-                  <p className="text-muted pt-3" style={{ fontSize: '0.75em' }}><i>{language === "PH" ? "Mangyaring kumunsulta sa doktor para sa karagdagang pagsusuri. Maaaring gamitin ang mga features ng kiosk upang mahanap ang mga malalapit na pasilidad." : "Please consult an doctor for further checkup. You may use the kiosk's features to locate nearby facilities."}</i></p>
+                  <p className="text-muted pt-3" style={{ fontSize: '1em' }}><i>{language === "PH" ? "Mangyaring kumunsulta sa doktor para sa karagdagang pagsusuri. Maaaring gamitin ang mga features ng kiosk upang mahanap ang mga malalapit na pasilidad." : "Please consult an doctor for further checkup. You may use the kiosk's features to locate nearby facilities."}</i></p>
                 </div>
               </MDBContainer>
             </MDBModalBody>
