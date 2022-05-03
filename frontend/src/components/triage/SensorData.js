@@ -31,11 +31,11 @@ const SensorData = ({ formData, setFormData, setBtnDisable }) => {
     <React.Fragment>
       <MDBCardTitle style={{ fontWeight: "bold", fontSize: '1.75em' }}>Vital Signs</MDBCardTitle>
       {language === "PH" ?
-        <p className='mb-0' style={{ fontSize: '1.25em' }} >
+        <p className='mb-2' style={{ fontSize: '1.25em' }} >
           Sukatin ang iyong vital signs sa pamamagitan ng pagpili sa mga opsyon sa ibaba.
         </p>
         :
-        <p className='mb-0' style={{ fontSize: '1.25em' }} >
+        <p className='mb-2' style={{ fontSize: '1.25em' }} >
           Measure your vital signs by selecting the options below.
         </p>
       }
