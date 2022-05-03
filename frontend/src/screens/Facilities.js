@@ -80,11 +80,21 @@ const Facilities = () => {
 
   const [nearestHospitals, setNearestHospitals] = useState([]);
 
-  const placesUrl = keywords ?
-    `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}&keyword=${keywords.join('%20OR%20')}`
-    : `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+  const [isProminence, setIsProminence] = useState(true);
+  const [isKeyword, setIsKeyword] = useState(false);
 
   const fetchNearestHospitals = async () => {
+    let placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+
+    if (isKeyword) {
+      placesUrl = placesUrl + `&keyword=${keywords.join('%20OR%20')}`
+    }
+
+    if (isProminence) {
+      placesUrl = placesUrl + "&rankby=prominence"
+      console.log(placesUrl)
+    }
+
     if (status === "SUCCESS") {
       try {
         console.log("Fetching nearest hospitals...");
@@ -120,7 +130,7 @@ const Facilities = () => {
       fetchLocation();
       findFacilities();
     }
-  }, [location]);
+  }, [location, nearestHospitals]);
 
   const [targetLocation, setTargetLocation] = useState({});
   const [direction, setDirection] = useState({
@@ -181,7 +191,7 @@ const Facilities = () => {
     // console.log(targetLocation);
     // console.log(direction);
     // console.log(travelMode);
-  }, [targetLocation, direction]);
+  }, [targetLocation, direction, nearestHospitals]);
 
   const navigate = useNavigate();
 
@@ -252,11 +262,19 @@ const Facilities = () => {
                 }
                 {
                   nearestHospitals.length != 0 ?
-                    <MDBRow className='px-2 m-1'>
-                      <MDBRow className='px-1 py-0'>
-                        <strong style={{ textAlign: 'left', fontSize: '1em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
+                    <MDBRow className='px-2 m-0'>
+                      <MDBRow className='px-1 py-0' style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+                        <MDBCol className='p-0' size='8'>
+                          <strong style={{ textAlign: 'left', fontSize: '1em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
+                        </MDBCol>
                       </MDBRow>
-                      <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '37vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
+                      <MDBRow>
+                        <MDBCol style={{ display: 'flex', flexFlow: 'wrap', }}>
+                          {keywords ? <MDBCard color='secondary' className='py-2 px-3 mx-1' onClick={() => { setIsKeyword(!isKeyword); fetchNearestHospitals() }}>{isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard> : <></>}
+                          <MDBCard color='secondary' className='py-2 px-3 mx-1 btn' onClick={() => { setIsProminence(!isProminence); fetchNearestHospitals() }}>{isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
+                        </MDBCol>
+                      </MDBRow>
+                      <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '32.5vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
                         {nearestHospitals?.map((item) => (
                           <MDBCard className='btn-light' style={{ paddingLeft: '1.2em', paddingRight: '1.2em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                             <MDBRow style={{ pointerEvents: 'none' }}>
