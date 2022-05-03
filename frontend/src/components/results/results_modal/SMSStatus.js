@@ -52,9 +52,9 @@ const SMSStatus = ({ contact_no, message, smsModal, setSmsModal, toggleSmsModal 
     <React.Fragment>
       <MDBModal id="disease-modal" staticBackdrop show={smsModal} setShow={setSmsModal} tabIndex='-1'>
         <MDBModalDialog centered size='lg'>
-          <MDBModalContent style={{ height: '50vh' }}>
+          <MDBModalContent style={{ height: '50vh', fontSize: '1.3em' }}>
             <MDBModalHeader>
-              <MDBModalTitle>{language === "PH" ? "Ipadala ang Resulta Gamit ang SMS" : "Send Results Through SMS"}</MDBModalTitle>
+              <MDBModalTitle style={{ fontSize: '1.2em' }}>{language === "PH" ? "Ipadala ang Resulta Gamit ang SMS" : "Send Results Through SMS"}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleSmsModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody className='my-2' style={{ height: '80vh' }}>

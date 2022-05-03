@@ -25,9 +25,9 @@ const Disclaimer = ({ disclaimerModal, setDisclaimerModal, toggleDisclaimerModal
     <React.Fragment>
       <MDBModal id="disease-modal" staticBackdrop show={disclaimerModal} setShow={setDisclaimerModal} tabIndex='-1'>
         <MDBModalDialog centered size='lg'>
-          <MDBModalContent style={{ height: '50vh' }}>
+          <MDBModalContent style={{ height: '50vh', fontSize: '1.3em' }}>
             <MDBModalHeader>
-              <MDBModalTitle>{language === "PH" ? "Paunawa" : "Disclaimer"}</MDBModalTitle>
+              <MDBModalTitle style={{ fontSize: '1.2em' }}>{language === "PH" ? "Paunawa" : "Disclaimer"}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDisclaimerModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody className='my-2' style={{ height: '80vh' }}>
