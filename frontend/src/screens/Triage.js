@@ -80,7 +80,7 @@ const Triage = () => {
 
   return (
     <React.Fragment>
-      <MDBContainer className='align-items-center justify-content-center mt-5'>
+      <MDBContainer className='align-items-center justify-content-center mt-0'>
         {PageCard()}
         <MDBProgress height='10' className='rounded mt-3'>
           <MDBProgressBar bgColor='primary' width={progress} valuemin={0} valuemax={100} />
