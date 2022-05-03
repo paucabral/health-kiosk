@@ -30,7 +30,10 @@ int spo2 = 0;
 int spo2comp;
 int spo2aux;
 int maxNoRead = 0;
+int pox_samples = 0;
+bool pulse_detected = false;
 void onBeatDetected(){
+    pulse_detected = true;
     Serial.println(F("Pulse!"));
 }
 
@@ -38,6 +41,10 @@ void onBeatDetected(){
 //*********MLX90614 variables**************
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 #define REPORTING_PERIOD_MS     1000  
+#define PREPARE_TEMP     2000
+uint32_t tempStartReport = 0; 
+uint32_t tempCurrentReport = 0;
+uint32_t tempSampleReport = 0;
 //float thermtemp;                       //Following three variables are for calibration, do keep as comment
 //float thermmax;   
 //float thermmin;
@@ -58,12 +65,12 @@ uint32_t tsLastReport = 0;
 #define bpSHUT_PERIOD_MS 10000          // Time to shutdown BP
 uint32_t bpStartReport = 0;             // millis comparison
 uint32_t bpCurrentReport = 0;           // ^
-uint32_t bpToShutReport = 0;            // ^
+uint32_t bpAutoTimeStart = 0;           // ^
+uint32_t bpAutoTimeCurrent = 0;           // ^
 int virtualPower = 0;                   // Instantiate as LOW
 int virtualMemory = 0;                  // ^
 int mainButtonState = 0;                // ^
 int accessed_mem = 0;
-boolean read_success = false;
 
 const byte numChars = 38;               // Total characters that can be received through BP Serial
 char receivedChars[numChars];           // Read BP Serial
@@ -78,7 +85,8 @@ int dataDIA;
 int dataPR;
 
 boolean newData = false;                // Check if new data comes from BP Serial
-
+boolean recvBPValues = false;
+boolean read_success = true;
 
 //*********Primary Setup Function**************
 void setup(void) {
@@ -92,6 +100,8 @@ void setup(void) {
     Serial.print("Error connecting");
   }
   config_rest_server_routing();
+  http_rest_server.sendHeader("Access-Control-Allow-Origin", "*");
+  http_rest_server.enableCORS(true);
   http_rest_server.begin(); 
   Serial.println(F("HTTP REST Server Started"));
   WiFi.setAutoReconnect(true);
@@ -121,16 +131,16 @@ void setup(void) {
 //*********Primary Loop Function**************
 void loop() {
   pox.update();
-  mainButtonState = digitalRead(buttonD6);
-  if (mainButtonState == HIGH){
-    virtualPower = 1;
-  }
-  if (virtualPower == 1) {
-    bpStartReport = millis();
-    virtualPowerSwitch();
-    virtualPower = 0;
-    accessed_mem = 0;
-  }
+//  mainButtonState = digitalRead(buttonD6);
+//  if (mainButtonState == HIGH){
+//    virtualPower = 1;
+//  }
+//  if (virtualPower == 1) {
+//    bpStartReport = millis();
+//    virtualPowerSwitch();
+//    virtualPower = 0;
+//    accessed_mem = 0;
+//  }
  
   //BP
   recvWithEndMarker();
@@ -162,9 +172,9 @@ void get_pox_data() {
   StaticJsonBuffer<32> jsonBuffer;                    // Create JSON object of size 32 to send data
   JsonObject& jsonObj = jsonBuffer.createObject();
   char JSONmessageBuffer[32];
-
-  
-  while (spo2 == 0){
+  pulse_detected = false;
+  pox_samples = 0;
+  while (1){
     pox.update();
     if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
         spo2 = pox.getSpO2();
@@ -179,15 +189,29 @@ void get_pox_data() {
           }
         }
         Serial.print(F("Reading O2..."));
-        tsLastReport = millis();
-    } 
+          tsLastReport = millis();
+//        if (onBeatDetected){
+//          Serial.print("sample added");
+//          pox_samples += 1;
+//        }
+//        if (pox_samples == 10){
+//          break; 
+//        }
+        if (pulse_detected == true){
+          pox_samples += 1;
+        }
+        if (pox_samples == 10){
+          break; 
+        }
+        Serial.println(pox_samples);
+      }
   }
   Serial.print(F("Monitored: "));
   Serial.println(ESP.getFreeHeap(),DEC);
   
   jsonObj["spo2"] = spo2;                                               // Add Data To Json Object to send data
   jsonObj.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  http_rest_server.enableCORS(true);
+
   http_rest_server.send(200, "application/json", JSONmessageBuffer);
   spo2 = 0;
 }
@@ -198,16 +222,28 @@ void get_temp_data() {
   StaticJsonBuffer<32> jsonBuffer;                    // Create JSON object of size 32 to send data
   JsonObject& jsonObj = jsonBuffer.createObject();
   char JSONmessageBuffer[32];
-
-  for (int i=0; i<500; i++){
-     tempAvg = smooth();
+  float rawTempAvg = 0.0;
+  tempStartReport = millis();
+  tempCurrentReport = millis();
+  tempSampleReport = millis();
+  while (tempCurrentReport - tempStartReport < PREPARE_TEMP){
+    if (tempCurrentReport - tempSampleReport >= 10){
+    tempAvg = smooth();
+    Serial.print("Measure");
+    tempSampleReport = tempCurrentReport;
+    }
+    tempCurrentReport = millis();
+    Serial.print(tempCurrentReport - tempSampleReport);
   }
+
   Serial.print(F("Monitored: "));
   Serial.println(ESP.getFreeHeap(),DEC);
 
+  tempAvg = ((int)(tempAvg * 100 ))/ 100.0;
+   
   jsonObj["tempAvg"] = tempAvg;                                      // Add Data To Json Object to send data
   jsonObj.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  http_rest_server.enableCORS(true);
+
   http_rest_server.send(200, "application/json", JSONmessageBuffer);
 }
 
@@ -241,12 +277,41 @@ void get_bp_data() {
   StaticJsonBuffer<64> jsonBuffer;                    // Create JSON object of size 64 to send data
   JsonObject& jsonObj = jsonBuffer.createObject();
   char JSONmessageBuffer[64];
+  
   // Add Data To Json Object to send data
+  bpAutoTimeStart = millis();
+  bpAutoTimeCurrent = millis();
+  virtualPower = 1;
+  while (dataSYS == 0){
+//    mainButtonState = digitalRead(buttonD6);
+//    if (mainButtonState == HIGH){
+//      continue;
+//    }
+    if (virtualPower == 1) {
+      bpStartReport = millis();
+      virtualPowerSwitch();
+      virtualPower = 0;
+      accessed_mem = 0;
+    }
+ 
+    //BP
+    recvWithEndMarker();
+    bpData();
+    if (dataSYS == 0 and ((bpAutoTimeCurrent - bpAutoTimeStart) >= 50000) ){
+//      virtualPowerSwitch();
+      Serial.print("HANDLED");
+      break;
+    }
+    Serial.print("SYS: ");
+    Serial.print(dataSYS);
+    Serial.print("   ");
+    Serial.println(bpAutoTimeCurrent - bpAutoTimeStart);
+    bpAutoTimeCurrent = millis();
+  }
   jsonObj["sys"] = dataSYS;
   jsonObj["dia"] = dataDIA;
   jsonObj["pr"] = dataPR;
   jsonObj.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  http_rest_server.enableCORS(true);
   http_rest_server.send(200, "application/json", JSONmessageBuffer);
 }
 
@@ -309,6 +374,7 @@ void recvWithEndMarker() {
 //            Serial.print(F("~~~~~ READING PRESENT ~~~~~~~"));
             virtualMemorySwitch();
             accessed_mem = 1;
+
           }
           Serial.print(F("********** DIFFERENCE REPORT: "));
 //          Serial.print(bpCurrentReport);
@@ -357,6 +423,14 @@ void bpData() {
         dataSYS = 0;
         dataDIA = 0;
         dataPR = 0;
+        recvBPValues = true;
+        read_success = true;
+      }
+      else if (dataPR > 0){
+        recvBPValues = true;
+      }
+      else {
+        Serial.print(F("Error"));
       }
       pox.begin();
       mlx.begin();
