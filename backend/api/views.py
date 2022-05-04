@@ -35,15 +35,23 @@ def apiOverview(request):
 def apiNearestHospitals(request):
     lat = request.GET.get('lat')
     lng = request.GET.get('lng')
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&key={}".format(
         lat, lng, settings.GOOGLE_MAPS_API_KEY)
     try:
         keyword = request.GET.get('keyword').replace(" ", "%20")
-        url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&keyword={}&type=hospital&rankby=distance&key={}".format(
-            lat, lng, keyword, settings.GOOGLE_MAPS_API_KEY)
+        url += "&keyword={}".format(keyword)
     except:
-        url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
-            lat, lng, settings.GOOGLE_MAPS_API_KEY)
+        url = url
+    try:
+        rankby = request.GET.get('rankby')
+        if rankby:
+            url += "&rankby={}".format(rankby)
+        if rankby == 'prominence':
+            url += "&radius=50000"
+        else:
+            url += "&rankby=distance"
+    except:
+        url += "&rankby=distance"
     query_result = requests.get(url)
     return Response(query_result.json())
 

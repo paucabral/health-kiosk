@@ -19,8 +19,6 @@ const options = {
 const Facilities = () => {
   const loc = useLocation();
   const keywords = loc.state ? loc.state.split(' ') : null
-  console.log("Keywords")
-  console.log(keywords)
 
   const [status, setStatus] = useState("SUCCESS");
   const [location, setLocation] = useState({});
@@ -28,14 +26,11 @@ const Facilities = () => {
 
   const fetchLocation = async () => {
     try {
-      console.log("Fetching location...");
       const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/location`
-      console.log(url)
       const response = await axios.get(url);
       if (response.status == 200) {
         const location_data = response.data;
         setLocation(location_data)
-        console.log(location)
         setStatus("SUCCESS")
         dataLoaded.current = true;
       }
@@ -60,15 +55,11 @@ const Facilities = () => {
   const fetchReverseGeocode = async () => {
     if (status === "SUCCESS") {
       try {
-        console.log("Fetching geocode...");
-        console.log(location)
         const url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${process.env.REACT_APP_MAPQUEST_API_KEY}&location=${location.lat},${location.lng}`
-        console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
           const reverse_geocode_data = response.data["results"][0]["locations"][0];
           setReverseGeocode(reverse_geocode_data)
-          console.log(reverse_geocode_data)
           setStatus("SUCCESS")
         }
       } catch (error) {
@@ -80,21 +71,29 @@ const Facilities = () => {
 
   const [nearestHospitals, setNearestHospitals] = useState([]);
 
-  const placesUrl = keywords ?
-    `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}&keyword=${keywords.join('%20OR%20')}`
-    : `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+  const [sortBools, setSortBools] = useState({
+    isProminence: true,
+    isKeyword: false,
+  })
 
   const fetchNearestHospitals = async () => {
+    let placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+
+    if (sortBools.isKeyword) {
+      placesUrl = placesUrl + `&keyword=${keywords.join('%20OR%20')}`
+    }
+
+    if (sortBools.isProminence) {
+      placesUrl = placesUrl + "&rankby=prominence"
+    }
+
     if (status === "SUCCESS") {
       try {
-        console.log("Fetching nearest hospitals...");
         const url = placesUrl
-        console.log(url)
         const response = await axios.get(url);
         if (response.status == 200) {
           const nearest_hospitals = response.data["results"];
           setNearestHospitals(nearest_hospitals)
-          console.log(nearest_hospitals)
           setStatus("SUCCESS")
         }
         else {
@@ -115,13 +114,6 @@ const Facilities = () => {
     }
   }
 
-  useEffect(() => {
-    if (location && !dataLoaded.current) {
-      fetchLocation();
-      findFacilities();
-    }
-  }, [location]);
-
   const [targetLocation, setTargetLocation] = useState({});
   const [direction, setDirection] = useState({
     response: null,
@@ -134,9 +126,7 @@ const Facilities = () => {
   const directionsCallback = (response) => {
     if (response !== null) {
       if (response.status === 'OK') {
-        console.log(`Distance: ${response[0]}`);
         const distance = response['routes'][0]['legs'][0]['distance']['text'];
-        console.log(distance)
         setDirection({ ...direction, distance: distance, response: response })
       } else {
         console.log('response: ', response)
@@ -163,7 +153,6 @@ const Facilities = () => {
     };
     setTargetLocation(target_location);
     setDirection({ ...direction, origin: location, destination: targetLocation });
-    console.log(direction);
   }
 
   const handleBtnClick = (e) => {
@@ -177,11 +166,27 @@ const Facilities = () => {
     e.target.classList.toggle('btn-success');
   }
 
+  const sortByList = () => {
+    const newValue = !sortBools.isProminence
+    setSortBools({ ...sortBools, isProminence: newValue })
+    fetchNearestHospitals();
+  }
+
+  const sortByKeyword = () => {
+    const newValue = !sortBools.isKeyword
+    setSortBools({ ...sortBools, isKeyword: newValue })
+    fetchNearestHospitals();
+  }
+
   useEffect(() => {
     // console.log(targetLocation);
     // console.log(direction);
     // console.log(travelMode);
-  }, [targetLocation, direction]);
+    if (location && !dataLoaded.current) {
+      fetchLocation();
+      findFacilities();
+    }
+  }, [location, targetLocation, direction, nearestHospitals, sortBools]);
 
   const navigate = useNavigate();
 
@@ -252,11 +257,21 @@ const Facilities = () => {
                 }
                 {
                   nearestHospitals.length != 0 ?
-                    <MDBRow className='px-2 m-1'>
-                      <MDBRow className='px-1 py-0'>
-                        <strong style={{ textAlign: 'left', fontSize: '1em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
+                    <MDBRow className='px-2 m-0'>
+                      <MDBRow className='px-1 py-0' style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+                        <strong className='pl-3' style={{ textAlign: 'left', fontSize: '1em' }}>{language === "PH" ? "MALAPIT NA MGA PASILIDAD" : "NEARBY FACILITIES"}:</strong>
                       </MDBRow>
-                      <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '37vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
+                      <MDBRow>
+                        {keywords ? <MDBCol>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword() }}>{sortBools.isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
+                          <span style={{ fontSize: '0.65em' }}>{sortBools.isKeyword ? "SPECIALIZED" : "GENERAL"}</span>
+                        </MDBCol> : <></>}
+                        <MDBCol>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList() }}>{sortBools.isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
+                          <span style={{ fontSize: '0.65em' }}>{sortBools.isProminence ? "PROMINENCE" : "DISTANCE"}</span>
+                        </MDBCol>
+                      </MDBRow>
+                      <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '28vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
                         {nearestHospitals?.map((item) => (
                           <MDBCard className='btn-light' style={{ paddingLeft: '1.2em', paddingRight: '1.2em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
                             <MDBRow style={{ pointerEvents: 'none' }}>

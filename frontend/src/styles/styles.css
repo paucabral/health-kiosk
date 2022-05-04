@@ -191,6 +191,38 @@ nav-items::selection {
   /* Add a pointer on hover */
 }
 
+.gm-iv-short-address-description {
+  font-size: 1.5em !important;
+}
+
+.gm-iv-long-address-description {
+  font-size: 1.2em !important;
+}
+
+.gm-iv-address-link {
+  display: none;
+}
+
+.gmnoprint>div>div>span {
+  display: none;
+}
+
+.gmnoprint>div>a {
+  display: none;
+}
+
+.gm-style-cc>div>a {
+  display: none;
+}
+
+.gm-style>div>div>a>div {
+  display: none;
+}
+
+.gm-iv-marker>a>div {
+  display: none;
+}
+
 @media (min-width: 1366px) and (max-width: 2560px) {
   #arrow-btn {
     bottom: -9%
