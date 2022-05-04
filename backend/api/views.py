@@ -52,7 +52,7 @@ def apiNearestHospitals(request):
             url += "&rankby=distance"
     except:
         url += "&rankby=distance"
-    query_result = requests.get(url)
+    query_result = requests.get(url, timeout=1)
     return Response(query_result.json())
 
 
