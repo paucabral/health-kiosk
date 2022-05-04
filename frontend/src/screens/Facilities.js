@@ -70,6 +70,7 @@ const Facilities = () => {
   }
 
   const [nearestHospitals, setNearestHospitals] = useState([]);
+  const previousNearestHospitals = useRef([]);
 
   const [sortBools, setSortBools] = useState({
     isProminence: true,
@@ -77,7 +78,7 @@ const Facilities = () => {
   })
 
   const fetchNearestHospitals = async () => {
-    let placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
+    var placesUrl = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/nearest-hospitals?lat=${location.lat}&lng=${location.lng}`
 
     if (sortBools.isKeyword) {
       placesUrl = placesUrl + `&keyword=${keywords.join('%20OR%20')}`
@@ -93,12 +94,19 @@ const Facilities = () => {
         const response = await axios.get(url);
         if (response.status == 200) {
           const nearest_hospitals = response.data["results"];
-          setNearestHospitals(nearest_hospitals)
+          if (nearest_hospitals != nearestHospitals) {
+            setNearestHospitals(nearest_hospitals)
+            previousNearestHospitals.current = nearestHospitals
+          }
           setStatus("SUCCESS")
         }
         else {
           const nearest_hospitals = response.data["results"];
           console.log(JSON.stringify(nearest_hospitals))
+          if (nearest_hospitals != nearestHospitals) {
+            setNearestHospitals(nearest_hospitals)
+            previousNearestHospitals.current = nearestHospitals
+          }
         }
       } catch (error) {
         console.log(JSON.stringify(error));
@@ -169,13 +177,11 @@ const Facilities = () => {
   const sortByList = () => {
     const newValue = !sortBools.isProminence
     setSortBools({ ...sortBools, isProminence: newValue })
-    fetchNearestHospitals();
   }
 
   const sortByKeyword = () => {
     const newValue = !sortBools.isKeyword
     setSortBools({ ...sortBools, isKeyword: newValue })
-    fetchNearestHospitals();
   }
 
   useEffect(() => {
@@ -186,6 +192,9 @@ const Facilities = () => {
       fetchLocation();
       findFacilities();
     }
+
+    previousNearestHospitals.current = nearestHospitals
+    // fetchNearestHospitals();
   }, [location, targetLocation, direction, nearestHospitals, sortBools]);
 
   const navigate = useNavigate();
@@ -263,37 +272,66 @@ const Facilities = () => {
                       </MDBRow>
                       <MDBRow>
                         {keywords ? <MDBCol>
-                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword() }}>{sortBools.isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByKeyword(); fetchNearestHospitals(); }}>{sortBools.isKeyword ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="book" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="globe-europe" />}</MDBCard>
                           <span style={{ fontSize: '0.65em' }}>{sortBools.isKeyword ? "SPECIALIZED" : "GENERAL"}</span>
                         </MDBCol> : <></>}
                         <MDBCol>
-                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList() }}>{sortBools.isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
+                          <MDBCard className='py-2 px-3 mx-1' onClick={() => { sortByList(); fetchNearestHospitals(); }}>{sortBools.isProminence ? <MDBIcon onClick={(e) => e.preventDefault()} fas icon="star" /> : <MDBIcon onClick={(e) => e.preventDefault()} fas icon="location-arrow" />}</MDBCard>
                           <span style={{ fontSize: '0.65em' }}>{sortBools.isProminence ? "PROMINENCE" : "DISTANCE"}</span>
                         </MDBCol>
                       </MDBRow>
                       <MDBRow id='hospital-list' className='pl-0 pr-1 m-0' style={{ height: '28vh', overflowY: 'scroll', marginTop: '0.5em', fontSize: '1em' }}>
-                        {nearestHospitals?.map((item) => (
-                          <MDBCard className='btn-light' style={{ paddingLeft: '1.2em', paddingRight: '1.2em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
-                            <MDBRow style={{ pointerEvents: 'none' }}>
-                              <MDBCol className='text-left'>
-                                <MDBRow className='font-weight-bold text-uppercase'>
-                                  {item.name}
-                                </MDBRow>
-                                <MDBRow>
-                                  <span style={{ marginLeft: '-1em' }}>{item.rating ? <span className='text-warning'> <MDBIcon fas icon="star" /> {item.rating} stars</span> : ''} {item.user_ratings_total ? `(${item.user_ratings_total} users)` : ''}</span>
-                                </MDBRow>
-                                <MDBRow>
-                                  {item.vicinity}
-                                </MDBRow>
-                                <MDBRow style={{ fontSize: '0.8em' }}>
-                                  LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
-                                </MDBRow>
-                              </MDBCol>
-                            </MDBRow>
-                            {/* {item.business_status}: {item.opening_hours} <br /> */}
-                            {/* {item.formatted_phone_number} */}
-                          </MDBCard>
-                        ))}
+                        {
+                          previousNearestHospitals.current.length != 0 ?
+                            <div>
+                              {previousNearestHospitals.current?.map((item) => (
+                                <MDBCard className='btn-light' style={{ paddingLeft: '1.2em', paddingRight: '1.2em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                                  <MDBRow style={{ pointerEvents: 'none' }}>
+                                    <MDBCol className='text-left'>
+                                      <MDBRow className='font-weight-bold text-uppercase'>
+                                        {item.name}
+                                      </MDBRow>
+                                      <MDBRow>
+                                        <span style={{ marginLeft: '-1em' }}>{item.rating ? <span className='text-warning'> <MDBIcon fas icon="star" /> {item.rating} stars</span> : ''} {item.user_ratings_total ? `(${item.user_ratings_total} users)` : ''}</span>
+                                      </MDBRow>
+                                      <MDBRow>
+                                        {item.vicinity}
+                                      </MDBRow>
+                                      <MDBRow style={{ fontSize: '0.8em' }}>
+                                        LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
+                                      </MDBRow>
+                                    </MDBCol>
+                                  </MDBRow>
+                                  {/* {item.business_status}: {item.opening_hours} <br /> */}
+                                  {/* {item.formatted_phone_number} */}
+                                </MDBCard>
+                              ))}
+                            </div>
+                            : <div>
+                              {nearestHospitals?.map((item) => (
+                                <MDBCard className='btn-light' style={{ paddingLeft: '1.2em', paddingRight: '1.2em', paddingTop: '1em', paddingBottom: '1em', marginBottom: '0.3em', marginTop: '0.3em' }} key={item.name} onClick={handleCardClick} value={[item.geometry.location.lat, item.geometry.location.lng]}>
+                                  <MDBRow style={{ pointerEvents: 'none' }}>
+                                    <MDBCol className='text-left'>
+                                      <MDBRow className='font-weight-bold text-uppercase'>
+                                        {item.name}
+                                      </MDBRow>
+                                      <MDBRow>
+                                        <span style={{ marginLeft: '-1em' }}>{item.rating ? <span className='text-warning'> <MDBIcon fas icon="star" /> {item.rating} stars</span> : ''} {item.user_ratings_total ? `(${item.user_ratings_total} users)` : ''}</span>
+                                      </MDBRow>
+                                      <MDBRow>
+                                        {item.vicinity}
+                                      </MDBRow>
+                                      <MDBRow style={{ fontSize: '0.8em' }}>
+                                        LAT: {item.geometry.location.lat}°&nbsp;&nbsp;&nbsp;LNG: {item.geometry.location.lng}°
+                                      </MDBRow>
+                                    </MDBCol>
+                                  </MDBRow>
+                                  {/* {item.business_status}: {item.opening_hours} <br /> */}
+                                  {/* {item.formatted_phone_number} */}
+                                </MDBCard>
+                              ))}
+                            </div>
+                        }
                       </MDBRow>
                     </MDBRow>
                     :

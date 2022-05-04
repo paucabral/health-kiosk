@@ -61,8 +61,8 @@ def apiGpsCoordinates(request):
     if config('ENVIRONMENT', default='production') == 'development':
         # dummy coordinates for development
         coordinates = {
-            "lat": 14.6507,
-            "lng": 121.1029
+            "lat": 14.6262547,
+            "lng": 121.09972
         }
     else:
         try:
