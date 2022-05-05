@@ -34,7 +34,7 @@ const TermsAndConditions = ({ disclaimerModal, setDisclaimerModal, toggleDisclai
               <MDBModalTitle style={{ fontSize: '1.3em' }}>
                 {
                   language === "PH" ?
-                    "Tuntuinin at mga Kundisyon"
+                    "Tuntunin at mga Kundisyon"
                     :
                     "Terms & Conditions"
                 }
