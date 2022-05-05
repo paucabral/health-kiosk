@@ -214,14 +214,9 @@ const Facilities = () => {
                       <MDBIcon fas icon="map-marker-alt" /> {language === "PH" ? "Iyong lokasyon" : "Current Location"}
                     </MDBCol>
                     <MDBCol size='4' className='mx-0'>
-                      {
-                        keywords != null ?
-                          <MDBBtn color='dark' className='py-1 px-2' onClick={() => navigate(-1)}>
-                            <span style={{ fontSize: '1em' }}><MDBIcon fas icon="arrow-left" /> {language === "PH" ? "Bumalik" : "Go back"}</span>
-                          </MDBBtn>
-                          :
-                          <></>
-                      }
+                      <MDBBtn color='dark' className='py-1 px-2' onClick={() => navigate(-1)}>
+                        <span style={{ fontSize: '1em' }}><MDBIcon fas icon="arrow-left" /> {language === "PH" ? "Bumalik" : "Go back"}</span>
+                      </MDBBtn>
                     </MDBCol>
                   </MDBRow>
                 </MDBCardHeader>
