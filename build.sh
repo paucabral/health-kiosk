@@ -2,6 +2,10 @@
 
 cd /home/pi/health-kiosk/ || cd ~/health-kiosk/
 
+# Open Ports
+sudo chmod 666 /dev/ttyAMA1
+sudo chmod 666 /dev/ttyS0
+
 echo "Building backend server..."
 cd backend/
 if [ -f .env ]; then

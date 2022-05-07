@@ -1,6 +1,10 @@
 #!/bin/bash
 cd /home/pi/health-kiosk/ || cd ~/health-kiosk/
 
+# Open Ports
+sudo chmod 666 /dev/ttyAMA1
+sudo chmod 666 /dev/ttyS0
+
 echo "Starting backend server..."
 cd backend/
 if [ -f .env ]; then
@@ -13,12 +17,13 @@ export DB_ENVIRONMENT=production
 
 sudo systemctl start apache2
 
+cd ..
+
 # GPS LOCK UP -- Uncomment on production to set GPS before proceeding
 until python3 rpi/rpi_gps_serial/get_location.py; do
-    echo Getting location failed, retrying in 2 seconds...
+    echo "Getting location failed, retrying in 2 seconds..."
     sleep 2;
-
-cd ..
+done
 
 echo "Starting frontend server..."
 cd frontend/

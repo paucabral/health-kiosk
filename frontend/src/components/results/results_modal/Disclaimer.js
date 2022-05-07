@@ -25,19 +25,19 @@ const Disclaimer = ({ disclaimerModal, setDisclaimerModal, toggleDisclaimerModal
     <React.Fragment>
       <MDBModal id="disease-modal" staticBackdrop show={disclaimerModal} setShow={setDisclaimerModal} tabIndex='-1'>
         <MDBModalDialog centered size='lg'>
-          <MDBModalContent style={{ height: '50vh' }}>
+          <MDBModalContent style={{ height: '60vh', fontSize: '1.3em' }}>
             <MDBModalHeader>
-              <MDBModalTitle>{language === "PH" ? "Paunawa" : "Disclaimer"}</MDBModalTitle>
+              <MDBModalTitle style={{ fontSize: '1.2em' }}>{language === "PH" ? "Paunawa" : "Disclaimer"}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDisclaimerModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody className='my-2' style={{ height: '80vh' }}>
+            <MDBModalBody className='my-2' style={{ height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <MDBContainer>
                 <div>
                   <h3>{language === "PH" ? "Ang resulta na mula sa kiosk na ito ay HINDI PINAL" : "The results presented in this kiosk is NOT FINAL."}</h3>
                   <MDBContainer>
                     <MDBIcon size='5x' color='warning' fas icon="exclamation-circle" />
                   </MDBContainer>
-                  <p className="text-muted pt-3" style={{ fontSize: '0.75em' }}><i>{language === "PH" ? "Mangyaring kumunsulta sa doktor para sa karagdagang pagsusuri. Maaaring gamitin ang mga features ng kiosk upang mahanap ang mga malalapit na pasilidad." : "Please consult an doctor for further checkup. You may use the kiosk's features to locate nearby facilities."}</i></p>
+                  <p className="text-muted pt-3" style={{ fontSize: '1em' }}><i>{language === "PH" ? "Mangyaring kumunsulta sa doktor para sa karagdagang pagsusuri. Maaaring gamitin ang mga features ng kiosk upang mahanap ang mga malalapit na pasilidad." : "Please consult an doctor for further checkup. You may use the kiosk's features to locate nearby facilities."}</i></p>
                 </div>
               </MDBContainer>
             </MDBModalBody>

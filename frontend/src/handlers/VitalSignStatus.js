@@ -68,7 +68,7 @@ const VitalSignStatus = (vitalSign, value, value2) => {
     else if ((value > 139 && value <= 180) || (value2 > 89 && value2 <= 120)) {
       return "HIGH BLOOD PRESSURE (Hypertension) Stage 2"
     }
-    else if ((value > 180) || (value > 120)) {
+    else if ((value > 180) || (value2 > 120)) {
       return "HYPERTENSIVE CRISIS (Consult Immediately)"
     }
     else {

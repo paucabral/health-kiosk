@@ -196,23 +196,65 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
               <h6 style="font-weight: 600;">Vital Signs</h6>
               <ul class="list-group">
                 <li class="list-group-item">
-                  <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
+                  <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C - 
+                  {% if patient.temperature > 35.0 and patient.temperature < 37.5 %}
+                    NORMAL
+                  {% elif patient.temperature < 35.0 %}
+                    BELOW NORMAL
+                  {% elif patient.temperature > 37.5 and patient.temperature <= 40.0 %}
+                    ABOVE NORMAL (Fever)
+                  {% elif patient.temperature > 40.0 %}
+                    HIGH FEVER
+                  {% else %}
+                    NA
+                  {% endif %}
                 </li>
                 <span style="display: none;"> | </span>
                 <li class="list-group-item">
-                  <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
+                  <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm - 
+                  {% if patient.pulse_rate > 60.0 and patient.pulse_rate <= 100 %}
+                    NORMAL
+                  {% elif patient.pulse_rate < 60 %}
+                    BELOW NORMAL
+                  {% elif patient.pulse_rate > 100 %}
+                    ABOVE NORMAL
+                  {% else %}
+                    NA
+                  {% endif %}
                 </li>
                 <span style="display: none;"> | </span>
                 <li class="list-group-item">
-                  <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
+                  <i class="fas fa-tint"></i> <b>Blood Pressure:</b> {{ patient.systolic_bp }} mmHg / {{ patient.diastolic_bp }} mmHg - 
+                  {% if patient.systolic_bp < 120 and patient.diastolic_bp < 80 %}
+                    NORMAL
+                  {% elif patient.systolic_bp >= 120 and patient.systolic_bp <= 129 and patient.diastolic_bp < 80 %}
+                    ELEVATED
+                  {% elif patient.systolic_bp > 129 and patient.systolic_bp <= 139 or patient.diastolic_bp >= 80 and patient.diastolic_bp <= 89 %}
+                    HIGH BLOOD PRESSURE (Hypertension) Stage 1
+                  {% elif patient.systolic_bp > 139 and patient.systolic_bp <= 180 or patient.diastolic_bp > 89 and patient.diastolic_bp <= 120 %}
+                    HIGH BLOOD PRESSURE (Hypertension) Stage 2
+                  {% elif patient.systolic_bp > 180 or patient.diastolic_np > 120 %}
+                    HYPERTENSIVE CRISIS (Consult Immediately)
+                  {% else %}
+                    NA
+                  {% endif %}
                 </li>
                 <span style="display: none;"> | </span>
                 <li class="list-group-item">
-                  <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
-                </li>
-                <span style="display: none;"> | </span>
-                <li class="list-group-item">
-                  <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
+                  <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} % - 
+                  {% if patient.o2_saturation >= 95 and patient.o2_saturation <= 100 %}
+                    NORMAL
+                  {% elif patient.o2_saturation >= 91 and patient.o2_saturation < 95 %}
+                    BELOW NORMAL (Cause for concern)
+                  {% elif patient.pulse_rate >= 86 and patient.o2_saturation < 91 %}
+                    LOW BLOOD OXYGEN (Medical Emergency)
+                  {% elif patient.pulse_rate >= 80 and patient.o2_saturation < 86 %}
+                    LACK OF OXYGEN
+                  {% elif patient.pulse_rate >= 67 and patient.o2_saturation < 80 %}
+                    CRITICAL
+                  {% else %}
+                    NA
+                  {% endif %}
                 </li>
               </ul>
             </div>

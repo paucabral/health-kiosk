@@ -40,12 +40,12 @@ const DiseaseList = ({ diseases, symptoms }) => {
       <MDBContainer className='p-0' style={{ justifyContent: 'center' }}>
         <MDBCard shadow='0' border='info' background='white'>
           <MDBCardHeader className='text-white' background='info'>
-            <strong>DIFFERENTIAL DIAGNOSIS</strong>
+            <strong style={{ fontSize: '1.2em' }}>DIFFERENTIAL DIAGNOSIS</strong>
           </MDBCardHeader>
           <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '53vh' }}>
             <MDBCardBody className='pt-2 pb-2'>
               <MDBRow className='mt-1 mb-1 pr-3 pb-3'>
-                <MDBCol size='4' className='px-3' style={{ textAlign: 'left' }}>
+                <MDBCol size='4' className='px-3' style={{ textAlign: 'left', fontSize: '1.15em' }}>
                   <strong>{language === "PH" ? "SINTOMAS" : "SYMPTOMS"}:</strong>
                 </MDBCol>
                 <MDBCol id="differential" className='p-0' style={{ textAlign: 'left', overflowX: 'auto', width: '10vw', whiteSpace: 'nowrap' }}>
@@ -71,9 +71,12 @@ const DiseaseList = ({ diseases, symptoms }) => {
               </MDBRow>
               <div className='pr-4 pt-0 pl-4 pb-0' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '37vh', width: '42.7%', position: 'fixed', zIndex: '2001' }}>
                 <MDBRow>
-                  <h5 className='text-info'>
-                    {language === "PH" ? "Ang resulta para sa differential diagnosis ay naitala at susuriin ng isang doktor." : "The results for differential diagnosis have been recorded and will be evaluated by a doctor."}
-                  </h5>
+                  {
+                    diseases_list ? <h5 className='text-info'>
+                      {language === "PH" ? "Ang resulta para sa differential diagnosis ay naitala at susuriin ng isang doktor." : "The results for differential diagnosis have been recorded and will be evaluated by a doctor."}
+                    </h5>
+                      : <></>
+                  }
                   <b className='text-white'>
                     {language === "PH" ? "Kailangan ng agarang konsultasyon? Hanapin ang pinakamalapit na pasilidad gamit ang opsyon sa ibaba." : "Need immediate consultation? Find the nearest facilities using the option below."}
                   </b>
