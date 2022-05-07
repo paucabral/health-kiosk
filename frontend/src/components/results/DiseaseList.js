@@ -1,7 +1,8 @@
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBCardText, MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import diseaseSymptomsList from '../../data/disease-symptoms-list';
 import DiseaseInfo from './results_modal/DiseaseInfo';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const DiseaseList = ({ diseases, symptoms }) => {
   const renderDisease = () => {
@@ -32,18 +33,20 @@ const DiseaseList = ({ diseases, symptoms }) => {
     setDiseaseModal(!diseaseModal);
   }
 
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
       <MDBContainer className='p-0' style={{ justifyContent: 'center' }}>
         <MDBCard shadow='0' border='info' background='white'>
           <MDBCardHeader className='text-white' background='info'>
-            <strong>DIFFERENTIAL DIAGNOSIS</strong>
+            <strong style={{ fontSize: '1.2em' }}>DIFFERENTIAL DIAGNOSIS</strong>
           </MDBCardHeader>
           <MDBRow id="confirmation" style={{ overflowY: 'auto', height: '53vh' }}>
             <MDBCardBody className='pt-2 pb-2'>
               <MDBRow className='mt-1 mb-1 pr-3 pb-3'>
-                <MDBCol size='4' className='px-3' style={{ textAlign: 'left' }}>
-                  <strong>SYMPTOMS:</strong>
+                <MDBCol size='4' className='px-3' style={{ textAlign: 'left', fontSize: '1.15em' }}>
+                  <strong>{language === "PH" ? "SINTOMAS" : "SYMPTOMS"}:</strong>
                 </MDBCol>
                 <MDBCol id="differential" className='p-0' style={{ textAlign: 'left', overflowX: 'auto', width: '10vw', whiteSpace: 'nowrap' }}>
                   {
@@ -54,11 +57,33 @@ const DiseaseList = ({ diseases, symptoms }) => {
                         ))}
                       </MDBContainer>
                       :
-                      <MDBCardText className='text-muted'><i>NO SYMPTOMS SELECTED </i></MDBCardText>
+                      <MDBCardText className='text-muted'><i>{language === "PH" ? "WALANG NAPILING SINTOMAS" : "NO SYMPTOMS SELECTED"} </i></MDBCardText>
                   }
                 </MDBCol>
+                <MDBRow className='p-0 m-0'>
+                  {
+                    symptoms.length != 0 ?
+                      <span style={{ textAlign: 'center', fontSize: '0.7em' }}><i>{language === "PH" ? "Tandaan: HINDI PINAL ang mga resulta. Kumunsulta sa doktor para sa detalye." : "Note: The results are NOT FINAL. Please consult a doctor for further checkup."}</i></span>
+                      :
+                      <></>
+                  }
+                </MDBRow>
               </MDBRow>
-              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '40vh' }}>
+              <div className='pr-4 pt-0 pl-4 pb-0' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '37vh', width: '42.7%', position: 'fixed', zIndex: '2001' }}>
+                <MDBRow>
+                  {
+                    diseases_list ? <h5 className='text-info'>
+                      {language === "PH" ? "Ang resulta para sa differential diagnosis ay naitala at susuriin ng isang doktor." : "The results for differential diagnosis have been recorded and will be evaluated by a doctor."}
+                    </h5>
+                      : <></>
+                  }
+                  <b className='text-white'>
+                    {language === "PH" ? "Kailangan ng agarang konsultasyon? Hanapin ang pinakamalapit na pasilidad gamit ang opsyon sa ibaba." : "Need immediate consultation? Find the nearest facilities using the option below."}
+                  </b>
+                </MDBRow>
+              </div>
+              <div className='pr-4 pt-0 pl-3 pb-0' style={{ justifyContent: 'center', height: '37vh', width: '42.7%', backgroundColor: 'rgba(0,0,0,0.75)', borderRadius: '1em', backdropFilter: 'blur(4px)', position: 'fixed', zIndex: '2000' }}></div>
+              <MDBContainer className='pr-4 pt-0 pl-3 pb-0' id="differential" style={{ justifyContent: 'center', overflowY: 'auto', height: '37vh' }}>
                 {
                   diseases_list ?
                     <MDBRow style={{ justifyContent: 'center' }}>
@@ -93,7 +118,7 @@ const DiseaseList = ({ diseases, symptoms }) => {
                         </MDBCard>
                       )}
                     </MDBRow>
-                    : <MDBCardText className='text-muted'>Not Available</MDBCardText>
+                    : <MDBCardText className='text-muted'><i>{language === "PH" ? "HINDI AVAILABLE" : "NOT AVAILABLE"}</i></MDBCardText>
                 }
               </MDBContainer>
               <DiseaseInfo entry={diseaseEntry} diseaseModal={diseaseModal} setDiseaseModal={setDiseaseModal} toggleDiseaseModal={toggleDiseaseModal} />

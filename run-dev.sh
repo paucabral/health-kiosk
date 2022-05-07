@@ -7,6 +7,9 @@ if [ -f .env ]; then
     # Load Environment Variables
     export $(cat .env | grep -v '#' | sed 's/\r$//' | awk '/=/ {print $1}' )
 fi
+export DEBUG=True
+export ENVIRONMENT=development
+export DB_ENVIRONMENT=development
 [ ! -d "venv/" ] & python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -27,6 +30,7 @@ if [ -f .env ]; then
     # Load Environment Variables
     export $(cat .env | grep -v '#' | sed 's/\r$//' | awk '/=/ {print $1}' )
 fi
+export REACT_APP_BACKEND_ENDPOINT=http://localhost:8000
 npm install
 npm start &
 FRONTEND_JOB=$!

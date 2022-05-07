@@ -9,6 +9,7 @@ import requests
 import json
 from django.conf import settings
 from api.predictions import getPredictions
+from api.disease_info import getDiseaseInfo
 from decouple import config
 
 # Create your views here.
@@ -34,16 +35,24 @@ def apiOverview(request):
 def apiNearestHospitals(request):
     lat = request.GET.get('lat')
     lng = request.GET.get('lng')
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&key={}".format(
         lat, lng, settings.GOOGLE_MAPS_API_KEY)
     try:
         keyword = request.GET.get('keyword').replace(" ", "%20")
-        url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&keyword={}&type=hospital&rankby=distance&key={}".format(
-            lat, lng, keyword, settings.GOOGLE_MAPS_API_KEY)
+        url += "&keyword={}".format(keyword)
     except:
-        url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&type=hospital&rankby=distance&key={}".format(
-            lat, lng, settings.GOOGLE_MAPS_API_KEY)
-    query_result = requests.get(url)
+        url = url
+    try:
+        rankby = request.GET.get('rankby')
+        if rankby:
+            url += "&rankby={}".format(rankby)
+        if rankby == 'prominence':
+            url += "&radius=50000"
+        else:
+            url += "&rankby=distance"
+    except:
+        url += "&rankby=distance"
+    query_result = requests.get(url, timeout=1)
     return Response(query_result.json())
 
 
@@ -52,8 +61,8 @@ def apiGpsCoordinates(request):
     if config('ENVIRONMENT', default='production') == 'development':
         # dummy coordinates for development
         coordinates = {
-            "lat": 14.6507,
-            "lng": 121.1029
+            "lat": 14.6262547,
+            "lng": 121.09972
         }
     else:
         try:
@@ -97,15 +106,31 @@ def apiSms(request):
 
 @api_view(['POST'])
 def apiDifferentialDiagnosis(request):
-    serializer = PatientSerializer(data=request.data)
+    first_name = request.data['first_name']
+    last_name = request.data['last_name']
+    sex = request.data['sex']
+    birth_date = request.data['birth_date']
+
+    if Patient.objects.filter(first_name=first_name, last_name=last_name, sex=sex, birth_date=birth_date):
+        patient = Patient.objects.get(
+            first_name=first_name, last_name=last_name, sex=sex, birth_date=birth_date)
+        serializer = PatientSerializer(instance=patient, data=request.data)
+
+    else:
+        serializer = PatientSerializer(data=request.data)
+
     if serializer.is_valid():
-        serializer.save()
+        instance = serializer.save()
         data = serializer.validated_data
         symptoms = data['symptoms']
         response = data
         if symptoms:
             result = getPredictions(symptoms)
             response['predictions'] = result
+            predictions = list(
+                serializer.validated_data.get('predictions'))[:5]
+            instance.differentials = predictions
+            instance.save()
         return Response(response)
 
 
@@ -123,7 +148,7 @@ def apiPatientDetail(request, pk):
     return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(['PUT'])
 def apiPatientUpdate(request, pk):
     patient = Patient.objects.get(id=pk)
     serializer = PatientSerializer(instance=patient, data=request.data)
@@ -139,3 +164,10 @@ def apiPatientDelete(request, pk):
         response = {
             "response": "Record ID #{} successfully deleted".format(pk)}
         return Response(response)
+
+
+@api_view(['GET'])
+def apiDiseaseInfo(request):
+    disease_name = request.data.get("disease")
+    data = getDiseaseInfo(disease_name)
+    return Response(data)

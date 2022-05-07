@@ -1,7 +1,8 @@
 from django.conf import settings
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
-from .forms import ProfileForm, CreateSuperUserForm
+from .forms import AppointmentForm, NoteForm, ProfileForm, CreateSuperUserForm
 from api.models import *
 from .models import *
 from django.contrib import messages
@@ -13,6 +14,8 @@ from django.contrib.auth.hashers import make_password
 from .decorators import *
 from django.conf import settings
 import urllib.request
+from decouple import config
+from api.disease_info import getDiseaseInfo
 
 # Create your views here.
 
@@ -190,8 +193,33 @@ class AdministratorDashboard(View):
     @method_decorator(login_required(login_url='/'))
     @method_decorator(admin_only())
     def get(self, request, *args, **kwargs):
+        appointments = Appointment.objects.all()
+        patients_no_appointment = Patient.objects.exclude(
+            appointment__in=appointments)
+
+        completed = Appointment.objects.filter(
+            appointment_status="COMPLETE").count()
+        pending = Appointment.objects.filter(
+            appointment_status="PENDING").count()
+        discarded = Appointment.objects.filter(
+            appointment_status="DISCARDED").count()
+
+        return render(request, template_name='management/dashboard.html', context={'appointments': appointments, 'completed': completed, 'pending': pending, 'discarded': discarded, 'patients_no_appointment': patients_no_appointment})
+
+
+class AdministratorPatients(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
         patients = Patient.objects.all()
 
+        return render(request, template_name='management/patients.html', context={'patients': patients})
+
+
+class AdministratorToolsStatus(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
         kiosk_status = "OFFLINE"
         try:
             kiosk_status = "ONLINE" if urllib.request.urlopen(
@@ -208,15 +236,23 @@ class AdministratorDashboard(View):
 
         sms_status = "OFFLINE"
         try:
-            sms_status = "ONLINE" if urllib.request.urlopen(
-                "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+            if config('ENVIRONMENT', default='production') == 'development':
+                sms_status = "ONLINE" if urllib.request.urlopen(
+                    "http://localhost:8000/api/sms/").getcode() == 200 else "OFFLINE"
+            else:
+                sms_status = "ONLINE" if urllib.request.urlopen(
+                    "http://127.0.0.1/api/sms/").getcode() == 200 else "OFFLINE"
         except:
             sms_status = "OFFLINE"
 
         gps_status = "OFFLINE"
         try:
-            gps_status = "ONLINE" if urllib.request.urlopen(
-                "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+            if config('ENVIRONMENT', default='production') == 'development':
+                gps_status = "ONLINE" if urllib.request.urlopen(
+                    "http://localhost:8000/api/location/").getcode() == 200 else "OFFLINE"
+            else:
+                gps_status = "ONLINE" if urllib.request.urlopen(
+                    "http://127.0.0.1/api/location/").getcode() == 200 else "OFFLINE"
         except:
             gps_status = "OFFLINE"
 
@@ -234,7 +270,7 @@ class AdministratorDashboard(View):
         except:
             mapquest_status = "OFFLINE"
 
-        return render(request, template_name='management/dashboard.html', context={'patients': patients, 'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
+        return render(request, template_name='management/admin-tools.html', context={'kiosk_status': kiosk_status, 'sms_status': sms_status, 'gps_status': gps_status, 'sensors_status': sensors_status, 'gmaps_status': gmaps_status, 'mapquest_status': mapquest_status})
 
 
 @login_required(login_url='/')
@@ -247,6 +283,192 @@ def deletePatientRecord(request, patient_id):
         messages.add_message(request,
                              messages.SUCCESS,
                              'Patient Record ID: #{} was deleted successfully.'.format(patient_id))
-        return redirect('/management/dashboard')
+        return redirect('/management/patients')
 
-    return redirect('/management/dashboard')
+    return redirect('/management/patients')
+
+
+class PatientDetails(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        notes = None
+        if Note.objects.filter(patient=patient):
+            notes = Note.objects.get(patient=patient)
+        else:
+            notes = None
+
+        appointment_history = Appointment.objects.filter(patient=patient)
+
+        if patient.differentials:
+            disesase_info = []
+            for differential in patient.differentials:
+                entry = getDiseaseInfo(differential)
+                disesase_info.append(entry)
+            differential_info = zip(patient.differentials, disesase_info)
+            return render(request, template_name='management/patient-details.html', context={'patient': patient, 'differential_info': differential_info, 'appointment_history': appointment_history, 'notes': notes})
+
+        return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history, 'notes': notes})
+
+
+class PatientNotes(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = NoteForm()
+        if Note.objects.filter(patient=patient):
+            notes = Note.objects.get(patient=patient)
+            form = NoteForm(instance=notes)
+        else:
+            form = NoteForm(initial={'patient': patient})
+        return render(request, template_name='management/notes-form.html', context={'form': form})
+
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def post(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = NoteForm(request.POST)
+        if Note.objects.filter(patient=patient):
+            notes = Note.objects.get(patient=patient)
+            form = NoteForm(request.POST, instance=notes)
+        else:
+            form = NoteForm(request.POST)
+        form.patient = patient
+        if form.is_valid():
+            form.save()
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 'The notes for patient {} were updated successfully.'.format(patient_id))
+            return redirect('/management/patients/{}/details'.format(patient_id))
+        else:
+            messages.error(
+                request, 'The notes were not added due to an error.')
+            return render(request, template_name='management/notes-form.html', context={'form': form})
+
+
+class AddAppointment(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        default_personnel_id = request.user.profile.id
+        default_personnel = Profile.objects.get(pk=default_personnel_id)
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = AppointmentForm(
+            initial={'patient': patient, 'assigned_personnel': default_personnel, 'appointment_status': 'PENDING'})
+        return render(request, template_name='management/appointment-form.html', context={'form': form})
+
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def post(self, request, *args, **kwargs):
+        patient_id = self.kwargs['patient_id']
+        patient = Patient.objects.get(pk=patient_id)
+        form = AppointmentForm(request.POST)
+        form.patient = patient
+        if form.is_valid():
+            form.save()
+            appointment = {
+                "patient_name": "{} {}".format(form.cleaned_data['patient'].first_name, form.cleaned_data['patient'].last_name),
+                "patient_contact_no": "{}".format(form.cleaned_data['patient'].contact_no),
+                "appointment_status": form.cleaned_data['appointment_status'],
+                "appointment_date": form.cleaned_data['appointment_date'].strftime("%B %d, %Y @ %I:%M %p"),
+                "assigned_personnel": "{} {}".format(form.cleaned_data['assigned_personnel'].user.first_name, form.cleaned_data['assigned_personnel'].user.last_name),
+                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no,
+                "additional_message": form.cleaned_data['message']
+            }
+            if config('ENVIRONMENT', default='production') == 'production':
+                try:
+                    from api.sms import sendAppointmentNew
+                    response_code = sendAppointmentNew(appointment=appointment)
+                    messages.add_message(request,
+                                         messages.SUCCESS,
+                                         'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                except:
+                    data = {"message": "There was an error with the SMS module."}
+                    response_code = 503
+                    messages.add_message(request,
+                                         messages.ERROR,
+                                         'The appointment for patient {} was added successfully but the patient has not been notified through SMS due to an error.'.format(patient_id))
+
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 'The appointment for patient {} was added successfully.'.format(patient_id))
+            return redirect('/management/patients/{}/details'.format(patient_id))
+        else:
+            messages.error(
+                request, 'The appointment was not added due to an error.')
+            return render(request, template_name='management/appointment-form.html', context={'form': form})
+
+
+class UpdateAppointment(View):
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def get(self, request, *args, **kwargs):
+        appointment_id = self.kwargs['appointment_id']
+        appointment = Appointment.objects.get(pk=appointment_id)
+        form = AppointmentForm(instance=appointment)
+        return render(request, template_name='management/appointment-form.html', context={'form': form})
+
+    @method_decorator(login_required(login_url='/'))
+    @method_decorator(admin_only())
+    def post(self, request, *args, **kwargs):
+        appointment_id = self.kwargs['appointment_id']
+        appointment = Appointment.objects.get(pk=appointment_id)
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            form.save()
+            patient_id = self.kwargs['patient_id']
+
+            appointment = {
+                "patient_name": "{} {}".format(form.cleaned_data['patient'].first_name, form.cleaned_data['patient'].last_name),
+                "patient_contact_no": "{}".format(form.cleaned_data['patient'].contact_no),
+                "appointment_status": form.cleaned_data['appointment_status'],
+                "appointment_date": form.cleaned_data['appointment_date'].strftime("%B %d, %Y @ %I:%M %p"),
+                "assigned_personnel": "{} {}".format(form.cleaned_data['assigned_personnel'].user.first_name, form.cleaned_data['assigned_personnel'].user.last_name),
+                "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no,
+                "additional_message": form.cleaned_data['message']
+            }
+
+            if config('ENVIRONMENT', default='production') == 'production':
+                try:
+                    from api.sms import sendAppointmentUpdate
+                    response_code = sendAppointmentUpdate(
+                        appointment=appointment)
+                    messages.add_message(request,
+                                         messages.SUCCESS,
+                                         'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                except:
+                    data = {"message": "There was an error with the SMS module."}
+                    response_code = 503
+                    messages.add_message(request,
+                                         messages.ERROR,
+                                         'The appointment for patient {} was updated successfully but the patient has not been notified through SMS due to an error.'.format(patient_id))
+
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 'The appointment was updated successfully.')
+            return redirect('/management/patients/{}/details'.format(patient_id))
+        else:
+            messages.error(
+                request, 'The appointment was not added due to an error.')
+            return render(request, template_name='management/appointment-form.html', context={'form': form})
+
+
+@login_required(login_url='/')
+@admin_only()
+def deleteAppointment(request, patient_id, appointment_id):
+    if request.method == "POST":
+        appointment = Appointment.objects.filter(id=appointment_id)
+        appointment.delete()
+
+        messages.add_message(request,
+                             messages.SUCCESS,
+                             'The appointment was deleted successfully.')
+        return redirect('/management/patients/{}/details/'.format(patient_id))
+
+    return redirect('/management/patients/{}/details/'.format(patient_id))

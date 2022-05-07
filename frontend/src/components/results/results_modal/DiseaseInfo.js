@@ -39,9 +39,9 @@ const DiseaseInfo = ({ entry, diseaseModal, setDiseaseModal, toggleDiseaseModal 
     <React.Fragment>
       <MDBModal id="disease-modal" staticBackdrop scrollable='true' show={diseaseModal} setShow={setDiseaseModal} tabIndex='-1'>
         <MDBModalDialog centered size='xl'>
-          <MDBModalContent style={{ height: '80vh' }}>
+          <MDBModalContent style={{ height: '80vh', fontSize: '1.3em' }}>
             <MDBModalHeader>
-              <MDBModalTitle className='text-uppercase'>{entry}</MDBModalTitle>
+              <MDBModalTitle className='text-uppercase' style={{ fontSize: '1.2em' }}>{entry}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleDiseaseModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody className='my-2 mr-3' style={{ textAlign: "justify", overflowY: 'auto', height: '100vh' }}>

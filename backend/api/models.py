@@ -14,6 +14,7 @@ class Patient(models.Model):
     birth_date = models.DateField(null=True)
     sex = models.CharField(max_length=6, choices=SEX_CHOICES)
     symptoms = models.JSONField()
+    differentials = models.JSONField()
     contact_no = models.CharField(max_length=20)
     temperature = models.FloatField(null=True)
     pulse_rate = models.FloatField(null=True)

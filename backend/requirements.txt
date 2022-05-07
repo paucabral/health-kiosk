@@ -3,8 +3,11 @@ backports.zoneinfo==0.2.1
 certifi==2021.10.8
 charset-normalizer==2.0.12
 Django==4.0.3
+django-bootstrap-datepicker-plus==4.0.0
+django-ckeditor==6.4.0
 django-cors-headers==3.11.0
 django-createsuperuserwithpassword==2.0.0
+django-js-asset==2.0.0
 djangorestframework==3.13.1
 future==0.18.2
 gunicorn==20.1.0
@@ -14,6 +17,7 @@ numpy==1.22.3
 pandas==1.4.1
 Pillow==9.0.1
 psycopg2==2.9.3
+pyrsistent==0.18.1
 pyserial==3.5
 python-dateutil==2.8.2
 python-decouple==3.6

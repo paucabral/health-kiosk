@@ -44,71 +44,43 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   <div class="container-fluid">
     <div class="row">
       <div class="col container-fluid">
-        <div
-          class="card text-white {%if kiosk_status == 'ONLINE' %} bg-success {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+        <div class="card text-white bg-success mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
-            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Kiosk</h6>
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Completed</h6>
           </div>
           <div class="card-body d-flex">
-            <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-check-circle fa-3x" aria-hidden="true"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
-              <span style="font-size: 0.6em;">{{ kiosk_status }}</span>
+              <span style="font-size: 0.6em;">{{ completed }} <span style="font-size: 0.6em;">APPOINTMENTS</span></span>
             </h5>
           </div>
         </div>
       </div>
 
       <div class="col container-fluid">
-        <div
-          class="card text-white {%if sensors_status == 'ONLINE' %} bg-primary {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+        <div class="card text-white bg-primary mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
-            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Sensors</h6>
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Pending</h6>
           </div>
           <div class="card-body d-flex">
-            <i class="fas fa-cloud-download-alt fa-3x"></i>
+            <i class="fas fa-clock fa-3x"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
-              <span style="font-size: 0.6em;">{{ sensors_status }}</span>
+              <span style="font-size: 0.6em;">{{ pending }} <span style="font-size: 0.6em;">APPOINTMENTS</span></span>
             </h5>
           </div>
         </div>
       </div>
 
       <div class="col container-fluid">
-        <div
-          class="card text-white {%if sms_status == 'ONLINE' %} bg-danger {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+        <div class="card text-white bg-danger mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
-            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">SMS</h6>
+            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">Discarded</h6>
           </div>
           <div class="card-body d-flex">
-            <i class="fas fa-sms fa-3x"></i>
+            <i class="fa fa-minus-circle fa-3x"></i>
             <h5 class="card-title" style="font-size: 3rem; margin-left: 1rem; font-weight: bold;">
-              <span style="font-size: 0.6em;">{{ sms_status }}</span>
+              <span style="font-size: 0.6em;">{{ discarded }} <span style="font-size: 0.6em;">APPOINTMENTS</span></span>
             </h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col container-fluid">
-        <div
-          class="card text-white {%if gps_status == 'ONLINE' and gmaps_status == 'ONLINE' and mapquest_status == 'ONLINE' %} bg-warning {% else %} bg-dark {% endif %} mb-3 shadow-sm rounded">
-          <div class="card-header">
-            <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">LOCATION</h6>
-          </div>
-          <div class="card-body" style="padding-bottom: 0.9em;">
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;GPS COORDINATES:
-                {{ gps_status }}</span>
-            </span>
-            <br />
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fab fa-google"></i>&nbsp;&nbsp;GOOGLE MAPS API:
-                {{ gmaps_status }}</span>
-            </span>
-            <br />
-            <span class="card-title" style="font-weight: bold;">
-              <span style="font-size: 0.7em;"><i class="fas fa-map"></i>&nbsp;&nbsp;MAPQUEST API:
-                {{ mapquest_status }}</span>
-            </span>
           </div>
         </div>
       </div>
@@ -116,94 +88,126 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
   </div>
   <!-- end transactions cards -->
 
-  <!-- records table -->
-  <div class="container-fluid my-2">
-    <h3 class="text-center my-3" style="font-weight: bold;">PATIENT RECORDS</h3>
-    <div>
-      <table id="qlist" style="width: 100%;">
-        <thead>
-          <th>
-            ID
-          </th>
-          <th>
-            NAME
-          </th>
-          <th>
-            BIRTHDAY
-          </th>
-          <th>
-            CONTACT
-          </th>
-          <th>
-            SYMPTOMS
-          </th>
-          <th>
-            VITAL SIGNS
-          </th>
-          <th>
-            DATE ADDED
-          </th>
-          <th></th>
-        </thead>
+  <div class="container-fluid">
+    <h3 class="text-center my-3" style="font-weight: bold;">APPOINTMENTS</h3>
+    <!-- records table -->
+    <div class="my-2">
+      <div>
+        <table id="qlist2" class="text-center" style="width: 100%;">
+          <thead>
+            <th>
+              ID
+            </th>
+            <th>
+              PATIENT
+            </th>
+            <th>
+              APPOINTMENT DATE
+            </th>
+            <th>
+              STATUS
+            </th>
+            <th></th>
+            <th></th>
+          </thead>
 
-        {% for patient in patients %}
-        <tr>
-          <td>{{ patient.id }}</td>
-          <td>{{ patient.first_name }} {{ patient.last_name }}</td>
-          <td>{{ patient.birth_date }}</td>
-          <td>{{ patient.contact_no }}</td>
-          <td style="font-size: 0.75em;">
-            <ul class="list-group">
-              {% for symptom in patient.symptoms %}
-              <li class="list-group-item">
-                {% if forloop.last %}
-                {{ symptom }}
-                {% else %}
-                {{ symptom }}<span style="display: none;"> | </span>
-                {% endif %}
-
-              </li>
-              {% endfor %}
-            </ul>
-          </td>
-          <td style="font-size: 0.75em;">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <i class="fas fa-thermometer-quarter"></i> <b>Temperature:</b> {{ patient.temperature }} °C
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-heartbeat"></i> <b>Pulse Rate:</b> {{ patient.pulse_rate }} bpm
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-tint"></i> <b>Systolic BP:</b> {{ patient.systolic_bp }} mmHg
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-tint"></i> <b>Diastolic BP:</b> {{ patient.diastolic_bp }} mmHg
-              </li>
-              <span style="display: none;"> | </span>
-              <li class="list-group-item">
-                <i class="fas fa-wind"></i> <b>O<sub>2</sub> Saturation:</b> {{ patient.o2_saturation }} %
-              </li>
-            </ul>
-          </td>
-          <td>{{ patient.date_added }}</td>
-          <td>
-            <form
-              onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
-              method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
-              <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
-                name="q_id" />
-            </form>
-          </td>
-        </tr>
-        {% endfor %}
-      </table>
+          {% for appointment in appointments %}
+          <tr>
+            <td>{{ appointment.id }}</td>
+            <td>
+              <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'"
+                href="/management/patients/{{ appointment.patient.id }}/details/">
+                {{ appointment.patient.first_name }} {{ appointment.patient.last_name }}
+              </a>
+            </td>
+            <td>{{ appointment.appointment_date }}</td>
+            <td>
+              {% if appointment.appointment_status == "COMPLETE" %}
+              <span class="badge rounded-pill bg-success">
+                {{ appointment.appointment_status }}
+              </span>
+              {% elif appointment.appointment_status == "DISCARDED" %}
+              <span class="badge rounded-pill bg-danger">
+                {{ appointment.appointment_status }}
+              </span>
+              {% else %}
+              <span class="badge rounded-pill bg-primary">
+                {{ appointment.appointment_status }}
+              </span>
+              {% endif %}
+            </td>
+            <td>
+              <a class="btn btn-interact text-white btn-warning"
+                href="/management/patients/{{ appointment.patient.id }}/appointment/{{ appointment.id }}/update">Update</a>
+            </td>
+            <td>
+              <form
+                onsubmit="return confirm('WARNING: All the appointment information will be deleted in the process. Are you sure you want to delete the appointment record: {{ appointment.id }}?');"
+                method="POST" action="{% url 'delete-appointment-record' appointment.patient.id appointment.id  %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
+                  name="q_id" />
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
     </div>
+    <!-- end records table -->
   </div>
-  <!-- end records table -->
+
+  <div class="container-fluid">
+    <hr />
+    <h3 class="text-center my-3" style="font-weight: bold;">NEW PATIENTS</h3>
+    <p class="text-center">These patients have no appointment/s yet.</p>
+    <!-- records table -->
+    <div class="my-2">
+      <div>
+        <table id="qlist" class="text-center" style="width: 100%;">
+          <thead>
+            <th>
+              ID
+            </th>
+            <th>
+              PATIENT
+            </th>
+            <th>CONTACT</th>
+            <th>DATE ADDED</th>
+            <th></th>
+            <th></th>
+          </thead>
+
+          {% for patient in patients_no_appointment %}
+          <tr>
+            <td>{{ patient.id }}</td>
+            <td>
+              <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'" href="/management/patients/{{ patient.id }}/details/">
+                {{ patient.first_name }} {{ patient.last_name }}
+              </a>
+            </td>
+            <td>{{ patient.contact_no }}</td>
+            <td>{{ patient.date_added }}</td>
+            <td>
+              <a class="btn btn-interact btn-primary" href="/management/patients/{{ patient.id }}/details">Details</a>
+            </td>
+            <td>
+              <form
+                onsubmit="return confirm('WARNING: All the patient information will be deleted in the process. Are you sure you want to delete the patient record: {{ patient.id }}?');"
+                method="POST" action="{% url 'delete-patient-record' patient.id  %}">{% csrf_token %}
+                <button type="submit" class="btn btn-interact btn-danger">Delete</button><input type="hidden"
+                  name="q_id" />
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    <!-- end records table -->
+  </div>
 </main>
 
 <script>
@@ -216,7 +220,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           text: 'CSV',
           className: 'btn btn-default',
           exportOptions: {
-            columns: 'th:not(:nth-last-child(-n + 1))'
+            columns: 'th:not(:nth-last-child(-n + 2))'
           }
         },
         {
@@ -224,7 +228,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           text: 'Excel',
           className: 'btn btn-default',
           exportOptions: {
-            columns: 'th:not(:nth-last-child(-n + 1))'
+            columns: 'th:not(:nth-last-child(-n + 2))'
           }
         },
         {
@@ -232,7 +236,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           text: 'PDF',
           className: 'btn btn-default',
           exportOptions: {
-            columns: 'th:not(:nth-last-child(-n + 1))'
+            columns: 'th:not(:nth-last-child(-n + 2))'
           }
         },
         {
@@ -240,14 +244,62 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
           text: 'Print',
           className: 'btn btn-default',
           exportOptions: {
-            columns: 'th:not(:nth-last-child(-n + 1))'
+            columns: 'th:not(:nth-last-child(-n + 2))'
           }
         },
       ],
       "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
       "pagingType": "full_numbers",
-      "pageLength": 10,
-      "scrollX": true
+      "pageLength": 5,
+      "scrollX": true,
+      "order": [[0, "desc"]]
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#qlist2').DataTable({
+      dom: 'Bfrltip',
+      buttons: [
+        {
+          extend: 'csv',
+          text: 'CSV',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'excel',
+          text: 'Excel',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'pdf',
+          text: 'PDF',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+        {
+          extend: 'print',
+          text: 'Print',
+          className: 'btn btn-default',
+          exportOptions: {
+            columns: 'th:not(:nth-last-child(-n + 2))'
+          }
+        },
+      ],
+      "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
+      "pagingType": "full_numbers",
+      "pageLength": 5,
+      "scrollX": true,
+      "order": [[0, "desc"]]
     });
   });
 </script>
