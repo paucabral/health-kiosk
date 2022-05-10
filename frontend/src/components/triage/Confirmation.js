@@ -127,7 +127,7 @@ const Confirmation = ({ formData, setFormData, setPage, setProgress }) => {
                       <MDBContainer>
                         {
                           formData.symptoms?.map((symptom) => (
-                            <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom.symptom}</MDBBtn>
+                            <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{language === "PH" ? symptom.ph : symptom.en}</MDBBtn>
                           ))
                         }
                       </MDBContainer>
