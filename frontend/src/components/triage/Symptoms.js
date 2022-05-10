@@ -69,6 +69,7 @@ const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
           placeholder={language === "PH" ? "Pillin ang iyong mga sintomas..." : "Select your symptoms..."}
           emptyLabel={language === "PH" ? "Walang nakitang tugma." : "No matches found."}
           selected={multiSelections}
+          labelKey={option => `${option}: ${language === "PH" ? "deskripsyon" : "description"}`}
         />
       </form>
     </React.Fragment>
