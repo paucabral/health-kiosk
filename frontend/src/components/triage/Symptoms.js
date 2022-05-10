@@ -4,8 +4,7 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import '../../styles/styles.css';
 import { LanguageContext } from '../../contexts/LanguageContext';
-// import symptoms from '../../data/symptoms-list.js';
-import symptoms from '../../data/symptoms-list-revised-sample';
+import symptoms from '../../data/symptoms-list-revised';
 
 const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
   const [multiSelections, setMultiSelections] = useState(formData.symptoms);

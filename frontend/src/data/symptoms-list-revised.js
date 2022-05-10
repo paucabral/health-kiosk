@@ -89,9 +89,9 @@ export default [{
 {
   'symptom': 'absences finding',
   'en': 'absences finding',
-  'ph': 'Paroxysmal attacks of impaired consciousness',
-  'en_desc': 'Mga paroxysmal na pag-atake ng may kapansanan sa kamalayan',
-  'ph_desc': nan,
+  'ph': 'absences finding',
+  'en_desc': 'Paroxysmal attacks of impaired consciousness',
+  'ph_desc': 'Mga paroxysmal na pag-atake ng may kapansanan sa kamalayan',
   'source': "['https://medical-dictionary.thefreedictionary.com/absences']"
 },
 {
