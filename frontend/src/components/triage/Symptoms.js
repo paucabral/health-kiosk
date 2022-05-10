@@ -67,6 +67,7 @@ const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
           multiple
           onChange={setMultiSelections}
           options={options}
+          filterBy={language === "PH" ? ['symptom', 'ph', 'ph_desc'] : ['symptom', 'en', 'en_desc']}
           placeholder={language === "PH" ? "Pillin ang iyong mga sintomas..." : "Select your symptoms..."}
           emptyLabel={language === "PH" ? "Walang nakitang tugma." : "No matches found."}
           selected={multiSelections}
