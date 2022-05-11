@@ -444,7 +444,7 @@ export default [{
   'ph': 'hinahabol ang hininga',
   'en_desc': 'Dyspnea, also called shortness of breath, is a tight feeling in your chest where you may not be able to take a deep breath.',
   'ph_desc': 'Ang dyspnea, tinatawag ding shortness of breath, ay isang masikip na pakiramdam sa iyong dibdib kung saan maaaring hindi ka makahinga ng malalim.',
-  'source': "['https://my.clevelandclinic.org/health/symptoms/16942-shortness-of-breath-dyspnea#:~:text=It%20can%20be%20a%20sign,like%20asthma%2C%20allergies%20or%20anxiety.']"
+  'source': "['https://my.clevelandclinic.org/health/symptoms/16942-shortness-of-breath-dyspnea#:~:text=It%20can%20be%20a%20sign,like%20asthma%2C%20allergies%20or%20anxiety']"
 },
 {
   'symptom': 'charleyhorse',
@@ -924,7 +924,7 @@ export default [{
   'ph': 'pagkapagod',
   'en_desc': 'Fatigue is a feeling of constant tiredness or weakness and can be physical, mental or a combination of both.',
   'ph_desc': 'Ang pagkapagod ay isang pakiramdam ng patuloy na pagkapagod o panghihina at maaaring pisikal, mental o kumbinasyon ng dalawa.',
-  'source': "[https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/fatigue'']"
+  'source': "['https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/fatigue']"
 },
 {
   'symptom': 'fear of falling',
