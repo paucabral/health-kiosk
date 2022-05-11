@@ -9,14 +9,14 @@ import {
   MDBModalFooter,
   MDBSpinner,
 } from 'mdb-react-ui-kit';
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../styles/styles.css';
 import moment from 'moment';
 import { LanguageContext } from '../../contexts/LanguageContext';
 
-const Confirmation = ({ formData, setPage, setProgress }) => {
+const Confirmation = ({ formData, setFormData, setPage, setProgress }) => {
   const navigate = useNavigate();
 
   const [loadingModal, setLoadingModal] = useState(false);
@@ -31,8 +31,25 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
   const submitForm = async () => {
     toggleLoadingModal();
     try {
+      var symptoms = []
+      for (let symptom of formData.symptoms) {
+        symptoms.push(symptom.symptom)
+      }
       const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/differential-diagnosis/`
-      const json = JSON.stringify(formData)
+      const json = JSON.stringify({
+        "first_name": formData.first_name,
+        "last_name": formData.last_name,
+        "birth_date": formData.birth_date,
+        "sex": formData.sex,
+        "symptoms": symptoms,
+        "differentials": [],
+        "contact_no": formData.contact_no,
+        "temperature": formData.temperature,
+        "pulse_rate": formData.pulse_rate,
+        "systolic_bp": formData.systolic_bp,
+        "diastolic_bp": formData.diastolic_bp,
+        "o2_saturation": formData.o2_saturation
+      })
       const response = await axios.post(url, json, {
         headers: {
           'Content-Type': 'application/json'
@@ -48,7 +65,6 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
   }
 
   const { language, setLanguage } = useContext(LanguageContext);
-
   return (
     <React.Fragment>
       <div style={{ height: '67vh' }}>
@@ -111,7 +127,7 @@ const Confirmation = ({ formData, setPage, setProgress }) => {
                       <MDBContainer>
                         {
                           formData.symptoms?.map((symptom) => (
-                            <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{symptom}</MDBBtn>
+                            <MDBBtn pill color='dark' className='shadow-0' key={symptom} style={{ display: 'inline', marginLeft: '0.3em', marginRight: '0.3em', marginBottom: '0.5em', borderRadius: '20px' }} disabled>{language === "PH" ? symptom.ph : symptom.en}</MDBBtn>
                           ))
                         }
                       </MDBContainer>
