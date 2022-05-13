@@ -43,7 +43,7 @@ const Confirmation = ({ formData, setFormData, setPage, setProgress }) => {
         "sex": formData.sex,
         "symptoms": symptoms,
         "differentials": [],
-        "contact_no": formData.contact_no,
+        "contact_no": formData.contact_no != "" ? formData.contact_no : "NA",
         "temperature": formData.temperature,
         "pulse_rate": formData.pulse_rate,
         "systolic_bp": formData.systolic_bp,
