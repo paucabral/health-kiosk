@@ -55,6 +55,10 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
 
   const { language, setLanguage } = useContext(LanguageContext);
 
+  useEffect(() => {
+
+  }, [formData])
+
   return (
     <React.Fragment>
       <MDBModal staticBackdrop show={pulseModal} setShow={setPulseModal} tabIndex='-1'>
@@ -84,7 +88,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                           </MDBCardHeader>
                           <MDBCardBody className='text-danger'>
                             <MDBCardText>
-                              <h1 style={{ fontSize: '2.5em' }}>{formData.temperature ? <span>{formData.pulse_rate} bpm</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '2.5em' }}>{formData.pulse_rate ? <span>{formData.pulse_rate} bpm</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
@@ -95,7 +99,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                           </MDBCardHeader>
                           <MDBCardBody className='text-primary'>
                             <MDBCardText>
-                              <h1 style={{ fontSize: '2.5em' }}>{formData.temperature ? <span>{formData.systolic_bp} mmHg</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '2.5em' }}>{formData.systolic_bp ? <span>{formData.systolic_bp} mmHg</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
@@ -106,7 +110,7 @@ const PulseModal = ({ pulseModal, setPulseModal, togglePulseModal, formData, set
                           </MDBCardHeader>
                           <MDBCardBody className='text-secondary'>
                             <MDBCardText>
-                              <h1 style={{ fontSize: '2.5em' }}>{formData.temperature ? <span>{formData.diastolic_bp} mmHg</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '2.5em' }}>{formData.diastolic_bp ? <span>{formData.diastolic_bp} mmHg</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
