@@ -2722,8 +2722,8 @@ export default [{
   'symptom': 'snuffle',
   'en': 'snuffle',
   'ph': 'snuffle',
-  'en_desc': 'A respiratory disorder in animals marked especially by catarrhal inflammation and sniffling.',
-  'ph_desc': 'Isang respiratory disorder sa mga hayop na minarkahan lalo na ng pamamaga ng catarrhal at sniffling.',
+  'en_desc': 'to breathe through an obstructed nose with a sniffing sound',
+  'ph_desc': 'paghinga nang may tunog ng pagsinghot dahil sa baradong ilong.',
   'source': "['https://www.merriam-webster.com/medical/snuffles#:~:text=Medical%20Definition%20of%20snuffles,b%20%3A%20bullnose']"
 },
 {
