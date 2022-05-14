@@ -1,5 +1,5 @@
 # HIGH GROUNDS HEALTH KIOSK
-A self-service health kiosk that measures vital signs, performs differential diagnosis and locate the nearby health facilities.
+A self-service health kiosk that measures vital signs, performs differential diagnosis, and locate the nearby health facilities.
 
 <br/>
 <img src="assets/kiosk-preview.png"/>
