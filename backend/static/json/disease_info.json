@@ -3176,7 +3176,7 @@
     ]
   },
   "influenza": {
-    "Overview": "Influenza is a viral infection that attacks your respiratory system — your nose, throat and lungs. Influenza is commonly called the flu, but it's not the same as stomach '\flu' viruses that cause diarrhea and vomiting.",
+    "Overview": "Influenza is a viral infection that attacks your respiratory system — your nose, throat and lungs. Influenza is commonly called the flu, but it's not the same as stomach 'flu' viruses that cause diarrhea and vomiting.",
     "Diagnosis": "Your doctor will conduct a physical exam, look for signs and symptoms of influenza, and possibly order a test that detects influenza viruses. In some cases, your doctor may suggest that you be tested for influenza. He or she may use various tests to diagnose influenza. Polymerase chain reaction (PCR) testing is becoming more common in many hospitals and labs. This test may be done while you're in your doctor's office or in the hospital. PCR testing is more sensitive than other tests and may be able to identify the influenza strain. It's possible to have a test to diagnose both influenza and COVID-19. You may have both COVID-19 and influenza at the same time.During times when influenza is widespread, you may not need to be tested for influenza. Your doctor may diagnose you based on your signs and symptoms.",
     "Symptoms": [
       "fever",
@@ -3518,6 +3518,29 @@
     ],
     "Source": [
       "https://www.mayoclinic.org/diseases-conditions/bed-sores/diagnosis-treatment/drc-20355899"
+    ]
+  },
+  "upper respiratory infection": {
+    "Overview": "A respiratory tract infection affects the respiratory system, the part of your body responsible for breathing. These infections can affect your sinuses, throat, lungs or airways.",
+    "Diagnosis": "Your healthcare provider may diagnose the infection based on a physical exam and your symptoms. They’ll look in your nose, ears and throat and listen to your chest to examine your breathing. You often don’t need other tests.",
+    "Symptoms": [
+      "cough",
+      "fever",
+      "hoarse voice",
+      "fatigue",
+      "red eyes",
+      "runny nose",
+      "sore throat",
+      "swollen nymph nodes"
+    ],
+    "Causes": "You get an upper respiratory infection when a virus (or bacteria) enters your respiratory system. For example, you might touch an infected surface or shake hands with a person who’s sick. You then touch your mouth, nose or eyes. The germs from your hands enter and infect your body.",
+    "Precaution": [
+      "rest",
+      "drinking fluids",
+      "over-the-counter pain relievers"
+    ],
+    "Source": [
+      "https://my.clevelandclinic.org/health/articles/4022-upper-respiratory-infection#:~:text=An%20upper%20respiratory%20infection%20affects,%2Dthe%2Dcounter%20pain%20relievers."
     ]
   }
 }

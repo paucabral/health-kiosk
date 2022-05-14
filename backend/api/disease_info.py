@@ -6,9 +6,20 @@ DISEASE_INFO = "{}/json/disease_info.json".format(
 
 
 def getDiseaseInfo(disease_name):
-    with open(DISEASE_INFO, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+    try:
+        with open(DISEASE_INFO, 'r', encoding='utf-8') as f:
+            data = json.load(f)
 
-    output = data[disease_name]
+            output = data[disease_name]
 
-    return output
+            return output
+    except:
+        output = {
+            "Overview": "",
+            "Diagnosis": "",
+            "Symptoms": [],
+            "Causes": "",
+            "Precaution": [],
+            "Source": []
+        }
+        return output

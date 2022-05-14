@@ -19,7 +19,7 @@ const defaultMaterialTheme = createTheme({
 
 const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
   useEffect(() => {
-    if (formData.first_name === "" | formData.last_name === "" | formData.birth_date === null | formData.sex === "" | formData.contact_no === "") {
+    if (formData.first_name === "" | formData.last_name === "" | formData.birth_date === null | formData.sex === "") {
       setBtnDisable(true)
     }
     else {
@@ -74,7 +74,7 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
           <MDBCol>
             <MDBInput style={{ fontSize: '1.2em' }} required pattern='[0-9]*' value={formData.contact_no} onChange={(event) => {
               setFormData({ ...formData, contact_no: event.target.value.replace(/[^0-9]+/g, '') })
-            }} id='contact_no' size='md' label={language === "PH" ? 'Numero ng Telepono * ' : 'Contact No. * '} type='tel' icon="phone" />
+            }} id='contact_no' size='md' label={language === "PH" ? 'Numero ng Telepono ' : 'Contact No. '} type='tel' icon="phone" />
           </MDBCol>
         </MDBRow>
       </MDBCardBody>

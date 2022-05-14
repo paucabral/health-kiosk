@@ -78,7 +78,7 @@ const O2Modal = ({ o2Modal, setO2Modal, toggleO2Modal, formData, setFormData }) 
                           </MDBCardHeader>
                           <MDBCardBody className='text-success text-center'>
                             <MDBCardText>
-                              <h1 style={{ fontSize: '3em' }}>{formData.temperature ? <span>{formData.o2_saturation} %</span> : <span>NA</span>}</h1>
+                              <h1 style={{ fontSize: '3em' }}>{formData.o2_saturation ? <span>{formData.o2_saturation} %</span> : <span>NA</span>}</h1>
                             </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
