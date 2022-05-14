@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import { Typeahead } from 'react-bootstrap-typeahead';
-import symptoms from '../../data/symptoms-list';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import '../../styles/styles.css';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import symptoms from '../../data/symptoms-list-revised';
 
 const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
   const [multiSelections, setMultiSelections] = useState(formData.symptoms);
@@ -66,8 +66,19 @@ const Symptoms = ({ formData, setFormData, setBtnDisable }) => {
           multiple
           onChange={setMultiSelections}
           options={options}
+          filterBy={language === "PH" ? ['symptom', 'ph', 'ph_desc'] : ['symptom', 'en', 'en_desc']}
           placeholder={language === "PH" ? "Pillin ang iyong mga sintomas..." : "Select your symptoms..."}
+          emptyLabel={language === "PH" ? "Walang nakitang tugma." : "No matches found."}
           selected={multiSelections}
+          labelKey={(option) => language === "PH" ? option.ph : option.en}
+          renderMenuItemChildren={(option) => (
+            <div>
+              {language === "PH" ? option.ph : option.en}
+              <div>
+                <small>{language === "PH" ? option.ph_desc : option.en_desc}</small>
+              </div>
+            </div>
+          )}
         />
       </form>
     </React.Fragment>

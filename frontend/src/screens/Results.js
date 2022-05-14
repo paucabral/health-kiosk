@@ -178,16 +178,21 @@ const Results = () => {
         </MDBBtn>
       </div>
       <div id="text-btn" className='icons-btn'>
-        <MDBBtn color='primary' className='px-0' rounded style={{ height: '130px', width: '130px', lineHeight: '1' }} onClick={() => { toggleSmsModal(); handleFeature(); }}>
-          <div>
-            <MDBRow>
-              <MDBIcon size='3x' fas icon="comment" />
-            </MDBRow>
-            <MDBRow className='m-2'>
-              <span style={{ fontSize: '1.2em' }}>{language === "PH" ? "Ipadala ang resulta via SMS" : "Send Results via SMS"}</span>
-            </MDBRow>
-          </div>
-        </MDBBtn>
+        {
+          location.state.contact_no != "NA" ?
+            <MDBBtn color='primary' className='px-0' rounded style={{ height: '130px', width: '130px', lineHeight: '1' }} onClick={() => { toggleSmsModal(); handleFeature(); }}>
+              <div>
+                <MDBRow>
+                  <MDBIcon size='3x' fas icon="comment" />
+                </MDBRow>
+                <MDBRow className='m-2'>
+                  <span style={{ fontSize: '1.2em' }}>{language === "PH" ? "Ipadala ang resulta via SMS" : "Send Results via SMS"}</span>
+                </MDBRow>
+              </div>
+            </MDBBtn>
+            :
+            <></>
+        }
       </div>
       <SMSStatus contact_no={location.state.contact_no} message={message} smsModal={smsModal} setSmsModal={setSmsModal} toggleSmsModal={toggleSmsModal} />
       <div id="overlay"></div>
