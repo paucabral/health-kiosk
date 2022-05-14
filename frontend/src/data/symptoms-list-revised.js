@@ -2,8 +2,8 @@ export default [{
   'symptom': "Heberden's node",
   'en': "Heberden's node",
   'ph': "Heberden's node",
-  'en_desc': 'Heberden\’s nodes are small, pea-sized bony growths that occur on the joint closest to the tip of the finger, also called the distal interphalangeal joint.',
-  'ph_desc': "Ang Heberden's node ay maliliit, kasing laki ng gisantes na paglaki ng buto na nangyayari sa magkasanib na pinakamalapit sa dulo ng daliri, na tinatawag ding distal interphalangeal joint.",
+  'en_desc': 'Heberden’s nodes are small, pea-sized bony growths that occur on the joint closest to the tip of the finger, also called the distal interphalangeal joint.',
+  'ph_desc': "Ang Heberden's node ay maliliit, tumubong ng buto na nangyayari sa kasukasuan na pinakamalapit sa dulo ng daliri, na tinatawag ding distal interphalangeal joint.",
   'source': "['https://my.clevelandclinic.org/health/symptoms/21829-heberdens-nodes#:~:text=Heberden's%20nodes%20are%20small%20bony,limited%20motion%20in%20your%20hands.']"
 },
 {
@@ -11,7 +11,7 @@ export default [{
   'en': "Murphy's sign",
   'ph': "Murphy's sign",
   'en_desc': 'Murphy\’s sign is elicited in patients with acute cholecystitis by asking the patient to take in and hold a deep breath while palpating the right subcostal area. ',
-  'ph_desc': "Ang Murphy's sign ay nakuha sa mga pasyente na may talamak na cholecystitis sa pamamagitan ng pagtatanong sa pasyente na huminga at huminga nang malalim habang pinapapalpa ang kanang bahagi ng subcostal.",
+  'ph_desc': "Ang Murphy's sign ay nakuha sa mga pasyente na may matinding cholecystitis sa pamamagitan ng pagtatanong sa pasyente na huminga at huminga nang malalim habang pinapapalpa ang kanang bahagi ng subcostal.",
   'source': "['https://litfl.com/murphys-sign/#:~:text=Murphy's%20sign%20is%20elicited%20in,hand%2C%20Murphy's%20sign%20is%20positive.']"
 },
 {
@@ -63,14 +63,6 @@ export default [{
   'source': "['https://www.medicalnewstoday.com/articles/326205']"
 },
 {
-  'symptom': 'abnormally hard consistency',
-  'en': 'abnormally hard consistency',
-  'ph': 'abnormally hard consistency',
-  'en_desc': 'Hard stool, which is often difficult or painful to pass, is a common symptom of constipation.',
-  'ph_desc': 'Ang matigas na dumi, na kadalasang mahirap o masakit na dumaan, ay karaniwang sintomas ng paninigas ng dumi.',
-  'source': "['https://www.medicalnewstoday.com/articles/326205']"
-},
-{
   'symptom': 'abortion',
   'en': 'abortion',
   'ph': 'pagpapalaglag',
@@ -106,8 +98,8 @@ export default [{
   'symptom': 'ache',
   'en': 'ache',
   'ph': 'pananakit o sakit',
-  'en_desc': 'to suffer a usually dull persistent pain',
-  'ph_desc': 'upang magdusa ng isang karaniwang mapurol na patuloy na sakit',
+  'en_desc': 'To suffer a usually dull persistent pain',
+  'ph_desc': 'Makaranas ng patuloy na sakit sa isa or maraming parte ng katawan.',
   'source': "['https://www.merriam-webster.com/dictionary/ache']"
 },
 {
@@ -139,7 +131,7 @@ export default [{
   'en': 'air fluid level',
   'ph': 'antas ng likido sa hangin',
   'en_desc': 'When obstruction occurs, both fluid and gas collect in the intestine. They produce a characteristic pattern called "air-fluid levels".',
-  'ph_desc': 'Kapag naganap ang sagabal, ang likido at gas ay nakolekta sa bituka. Gumagawa sila ng isang katangiang pattern na tinatawag na "air-fluid levels".',
+  'ph_desc': 'Kapag naganap ang pagsagabal, ang likido at gas ay naiipon sa bituka. Gumagawa sila ng isang katangiang pattern na tinatawag na "air-fluid levels".',
   'source': "['https://medlineplus.gov/ency/imagepages/3069.htm#:~:text=When%20obstruction%20occurs%2C%20both%20fluid,%22air%2Dfluid%22%20interface.']"
 },
 {
@@ -147,7 +139,7 @@ export default [{
   'en': 'alcohol binge episode',
   'ph': 'episode ng binge sa alak',
   'en_desc': 'Binge drinking is defined as consuming 5 or more drinks on an occasion for men or 4 or more drinks on an occasion for women.',
-  'ph_desc': 'Ang binge drinking ay tinukoy bilang pag-inom ng 5 o higit pang inumin sa isang okasyon para sa mga lalaki o 4 o higit pang inumin sa isang okasyon para sa mga babae.',
+  'ph_desc': 'Ang binge drinking ay tinutukoy bilang pag-inom ng 5 o higit pang inumin sa isang okasyon para sa mga lalaki o 4 o higit pang inumin sa isang okasyon para sa mga babae.',
   'source': "['https://www.cdc.gov/alcohol/fact-sheets/binge-drinking.htm#:~:text=Binge%20drinking%20is%20defined%20as,a%20severe%20alcohol%20use%20disorder.&text=However%2C%20binge%20drinking%20is%20a,serious%20injuries%20and%20multiple%20diseases.']"
 },
 {
@@ -155,7 +147,7 @@ export default [{
   'en': 'alcoholic withdrawal symptoms',
   'ph': 'mga sintomas ng pag-alis ng alkohol',
   'en_desc': 'If you drink alcohol heavily for weeks, months, or years, you may have both mental and physical problems when you stop or seriously cut back on how much you drink.',
-  'ph_desc': 'Kung malakas kang umiinom ng alak sa loob ng mga linggo, buwan, o taon, maaari kang magkaroon ng parehong mental at pisikal na mga problema kapag huminto ka o seryosong binawasan ang dami ng iniinom mo.',
+  'ph_desc': 'Kung malakas kang umiinom ng alak sa loob ng isang linggo, buwan, o taon, maaari kang magkaroon ng parehong mental at pisikal na mga problema kapag huminto ka o seryosong binawasan ang dami ng iniinom mo.',
   'source': "['https://www.webmd.com/mental-health/addiction/alcohol-withdrawal-symptoms-treatments#1']"
 },
 {
@@ -175,27 +167,19 @@ export default [{
   'source': "['https://www.radiologyinfo.org/en/info/anginapectoris#:~:text=Angina%20pectoris%20or%20angina%20is,increased%20risk%20for%20heart%20attack.']"
 },
 {
-  'symptom': 'angina pectoris',
-  'en': 'angina pectoris',
-  'ph': 'angina pectoris',
-  'en_desc': 'Angina pectoris or angina is temporary chest pain or discomfort as a result of decreased blood flow to the heart muscle.',
-  'ph_desc': 'Ang angina pectoris o angina ay pansamantalang pananakit ng dibdib o kakulangan sa ginhawa bilang resulta ng pagbaba ng daloy ng dugo sa kalamnan ng puso.',
-  'source': "['https://www.radiologyinfo.org/en/info/anginapectoris#:~:text=Angina%20pectoris%20or%20angina%20is,increased%20risk%20for%20heart%20attack.']"
-},
-{
   'symptom': 'anorexia',
   'en': 'anorexia',
   'ph': 'anorexia',
-  'en_desc': 'Anorexia (an-o-REK-see-uh) nervosa — often simply called anorexia — is an eating disorder characterized by an abnormally low body weight, an intense fear of gaining weight and a distorted perception of weight. ',
-  'ph_desc': 'Ang anorexia (an-o-REK-see-uh) nervosa — kadalasang simpleng tinatawag na anorexia — ay isang karamdaman sa pagkain na nailalarawan sa pamamagitan ng abnormal na mababang timbang ng katawan, matinding takot na tumaba at isang pangit na pang-unawa sa timbang.',
+  'en_desc': 'Anorexia is an eating disorder characterized by an abnormally low body weight, an intense fear of gaining weight and a distorted perception of weight.',
+  'ph_desc': 'Ang anorexia ay isang karamdaman sa pagkain na nailalarawan sa pamamagitan ng abnormal na mababang timbang ng katawan, matinding takot na tumaba at isang pangit na pang-unawa sa timbang.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/anorexia-nervosa/symptoms-causes/syc-20353591']"
 },
 {
   'symptom': 'anosmia',
   'en': 'anosmia',
   'ph': 'anosmia',
-  'en_desc': 'Anosmia is the partial or full loss of smell. Anosmia can be a temporary or permanent condition. ',
-  'ph_desc': 'Ang anosmia ay ang bahagyang o ganap na pagkawala ng amoy. Ang anosmia ay maaaring pansamantala o permanenteng kondisyon.',
+  'en_desc': 'Anosmia is the partial or full loss of smell.',
+  'ph_desc': 'Ang anosmia ay ang bahagya o ganap na pagkawala ng amoy.',
   'source': "['https://www.yalemedicine.org/conditions/smell-and-taste-disorders#:~:text=Anosmia%20is%20the%20partial%20or,a%20sinus%20infection%2C%20for%20example.']"
 },
 {
@@ -210,24 +194,24 @@ export default [{
   'symptom': 'apyrexial',
   'en': 'apyrexial',
   'ph': 'apyrexial',
-  'en_desc': 'absence or intermission of fever',
-  'ph_desc': 'kawalan o paghinto ng lagnat',
+  'en_desc': 'Absence of fever',
+  'ph_desc': 'Pagkawala ng lagnat',
   'source': "['https://www.merriam-webster.com/medical/apyrexia#:~:text=Medical%20Definition%20of%20apyrexia,absence%20or%20intermission%20of%20fever']"
 },
 {
   'symptom': 'arthralgia',
   'en': 'arthralgia',
   'ph': 'arthralgia',
-  'en_desc': 'Arthralgia describes joint stiffness. ',
-  'ph_desc': 'Inilalarawan ng Arthralgia ang paninigas ng magkasanib na bahagi.',
+  'en_desc': 'Arthralgia describes joint stiffness.',
+  'ph_desc': 'Inilalarawan ng Arthralgia ang paninigas ng kasukasuan.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/arthralgia#:~:text=What%20is%20arthralgia%3F,including%20rheumatic%20fever%20and%20chickenpox.']"
 },
 {
   'symptom': 'ascites',
   'en': 'ascites',
   'ph': 'ascites',
-  'en_desc': 'Ascites is a condition in which fluid collects in spaces within your abdomen. If severe, ascites may be painful.',
-  'ph_desc': 'Ang ascites ay isang kondisyon kung saan naipon ang likido sa mga puwang sa loob ng iyong tiyan. Kung malala, ang ascites ay maaaring masakit.',
+  'en_desc': 'Ascites is a condition in which fluid collects in spaces within your abdomen.',
+  'ph_desc': 'Ang ascites ay isang kondisyon kung saan naipon ang likido sa mga puwang sa loob ng iyong tiyan.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/ascites#:~:text=Ascites%20is%20a%20condition%20in,chest%20and%20surround%20your%20lungs.']"
 },
 {
@@ -259,15 +243,15 @@ export default [{
   'en': 'ataxia',
   'ph': 'ataxia',
   'en_desc': 'Ataxia is typically defined as the presence of abnormal, uncoordinated movements.',
-  'ph_desc': 'Ang ataxia ay karaniwang tinutukoy bilang ang pagkakaroon ng abnormal, uncoordinated na mga paggalaw.',
+  'ph_desc': 'Ang ataxia ay karaniwang tinutukoy bilang pagkakaroon ng abnormal o uncoordinated na mga paggalaw.',
   'source': "['https://www.hopkinsmedicine.org/neurology_neurosurgery/centers_clinics/ataxia/conditions/#:~:text=Ataxia%20is%20typically%20defined%20as,to%20be%20'not%20ordered'.']"
 },
 {
   'symptom': 'atypia',
   'en': 'atypia',
   'ph': 'atypia',
-  'en_desc': 'State of being not typical or normal. In medicine, atypia is an abnormality in cells in tissue.',
-  'ph_desc': 'Ang estado ng pagiging hindi tipikal o normal. Sa medisina, ang atypia ay isang abnormalidad sa mga selula sa tissue.',
+  'en_desc': 'In medicine, atypia is an abnormality in cells in tissue.',
+  'ph_desc': 'Sa medisina, ang atypia ay isang abnormalidad sa mga selula sa tissue.',
   'source': "['https://www.cancer.gov/publications/dictionaries/cancer-terms/def/atypia']"
 },
 {
@@ -282,8 +266,8 @@ export default [{
   'symptom': 'awakening early',
   'en': 'awakening early',
   'ph': 'paggising ng maaga',
-  'en_desc': 'This form of sleep disturbance is upsetting and can cause exhaustion. Luckily, there are several treatment options and lifestyle changes that can help you get a full night\’s sleep again.',
-  'ph_desc': 'Ang ganitong uri ng pagkagambala sa pagtulog ay nakakainis at maaaring magdulot ng pagkahapo. Sa kabutihang palad, mayroong ilang mga opsyon sa paggamot at mga pagbabago sa pamumuhay na makakatulong sa iyong makatulog muli ng buong gabi.',
+  'en_desc': 'This form of sleep disturbance is upsetting and can cause exhaustion.',
+  'ph_desc': 'Ang ganitong uri ng pagkagambala sa pagtulog ay nakakainis at maaaring magdulot ng pagkahapo. ',
   'source': "['https://www.healthline.com/health/waking-up-too-early']"
 },
 {
@@ -298,8 +282,8 @@ export default [{
   'symptom': 'bedridden',
   'en': 'bedridden',
   'ph': 'nakaratay',
-  'en_desc': 'confined (as by illness) to bed',
-  'ph_desc': 'nakakulong (bilang may sakit) sa kama',
+  'en_desc': 'Confined to a bed',
+  'ph_desc': 'Nakaratay sa kama',
   'source': "['https://www.merriam-webster.com/dictionary/bedridden']"
 },
 {
@@ -330,64 +314,56 @@ export default [{
   'symptom': 'blanch',
   'en': 'blanch',
   'ph': 'blanch',
-  'en_desc': 'In the French language, “blanc” translates to “white.” Blanching of the skin occurs when the skin becomes white or pale in appearance.',
-  'ph_desc': 'Sa wikang Pranses, ang "blanc" ay isinalin sa "puti." Ang pamumula ng balat ay nangyayari kapag ang balat ay nagiging puti o maputla ang hitsura.',
+  'en_desc': 'Blanching of the skin occurs when the skin becomes white or pale in appearance.',
+  'ph_desc': 'Ang pamumula ng balat ay nangyayari kapag ang balat ay nagiging puti o maputla ang hitsura.',
   'source': "['https://www.healthline.com/health/blanching-of-skin#:~:text=Overview,describe%20findings%20on%20the%20skin.']"
 },
 {
   'symptom': 'bleeding of vagina',
   'en': 'bleeding of vagina',
   'ph': 'pagdurugo ng ari',
-  'en_desc': 'Vaginal bleeding can be a symptom of menstruation or other common disorders including, polymenorrhea (menstrual cycle of fewer than 21 days), oligomenorrhea (menstrual cycle of more than 38 days), amenorrhea (no menstrual cycle for 90 days), and metrorrhagia (a period lasting more than seven days). ',
-  'ph_desc': 'Ang pagdurugo ng ari ng babae ay maaaring sintomas ng regla o iba pang karaniwang mga karamdaman kabilang ang, polymenorrhea (regla na mas mababa sa 21 araw), oligomenorrhea (regla na higit sa 38 araw), amenorrhea (walang menstrual cycle sa loob ng 90 araw), at metrorrhagia (isang panahon na tumatagal ng higit sa pitong araw).',
+  'en_desc': 'Vaginal bleeding can be a symptom of menstruation or other common disorders.',
+  'ph_desc': 'Ang pagdurugo ng ari ng babae ay maaaring sintomas ng regla o iba pang karaniwang mga karamdaman.',
   'source': "['https://my.clevelandclinic.org/health/symptoms/17899-vaginal-bleeding#:~:text=Vaginal%20bleeding%20can%20be%20a,lasting%20more%20than%20seven%20days).']"
 },
 {
   'symptom': 'bowel sounds decreased',
   'en': 'bowel sounds decreased',
   'ph': 'nabawasan ang mga tunog ng bituka',
-  'en_desc': 'The absence of bowel sounds is actually abnormal and is usually a sign that the intestines are inactive or underactive – a condition that needs to be seen by a doctor because it could be a medical emergency.',
-  'ph_desc': 'Ang kawalan ng pagdumi ay talagang abnormal at kadalasan ay isang senyales na ang mga bituka ay hindi aktibo o hindi aktibo - isang kondisyon na kailangang makita ng isang doktor dahil maaaring ito ay isang medikal na emergency.',
+  'en_desc': 'The absence of bowel sounds is abnormal and is usually a sign that the intestines are inactive or underactive.',
+  'ph_desc': 'Ang kawalan ng tunog sa pagdumi ay abnormal at kadalasan ay isang senyales na ang mga bituka ay hindi aktibo.',
   'source': "['https://www.verywellhealth.com/bowel-sounds-1942419']"
 },
 {
   'symptom': 'bradycardia',
   'en': 'bradycardia',
   'ph': 'bradycardia',
-  'en_desc': 'Bradycardia (brad-e-KAHR-dee-uh) is a slow heart rate. The hearts of adults at rest usually beat between 60 and 100 times a minute. If you have bradycardia, your heart beats fewer than 60 times a minute.',
-  'ph_desc': 'Ang Bradycardia (brad-e-KAHR-dee-uh) ay isang mabagal na tibok ng puso. Ang mga puso ng mga nasa hustong gulang sa pamamahinga ay karaniwang tumitibok sa pagitan ng 60 at 100 beses sa isang minuto. Kung mayroon kang bradycardia, ang iyong puso ay tumitibok ng mas kaunti sa 60 beses sa isang minuto.',
+  'en_desc': 'Bradycardia is a slow heart rate. ',
+  'ph_desc': 'Ang Bradycardia ay isang mabagal na tibok ng puso. ',
   'source': "['https://www.mayoclinic.org/diseases-conditions/bradycardia/symptoms-causes/syc-20355474#:~:text=Bradycardia%20(brad%2De%2DKAHR,than%2060%20times%20a%20minute.']"
 },
 {
   'symptom': 'bradykinesia',
   'en': 'bradykinesia',
   'ph': 'bradykinesia',
-  'en_desc': 'Bradykinesia means slowness of movement, and it is one of the cardinal symptoms of Parkinson\’s. ',
-  'ph_desc': "Ang ibig sabihin ng Bradykinesia ay pagbagal ng paggalaw, at isa ito sa mga pangunahing sintomas ng Parkinson's.",
+  'en_desc': 'Bradykinesia means slowness of movement.',
+  'ph_desc': "Ang ibig sabihin ng Bradykinesia ay pagbagal ng paggalaw.",
   'source': "['https://www.parkinson.org/Understanding-Parkinsons/Symptoms/Movement-Symptoms/Bradykinesia-Slowness-of-Movement#:~:text=Bradykinesia%20means%20slowness%20of%20movement,Parkinson's%20diagnosis%20to%20be%20considered.']"
 },
 {
   'symptom': 'breakthrough pain',
   'en': 'breakthrough pain',
   'ph': 'pambihirang sakit',
-  'en_desc': 'A sudden increase in pain that may occur in patients who already have chronic pain from cancer, arthritis, fibromyalgia, or other conditions. Breakthrough pain usually lasts for a short time. ',
-  'ph_desc': 'Isang biglaang pagtaas ng pananakit na maaaring mangyari sa mga pasyenteng mayroon nang talamak na pananakit mula sa cancer, arthritis, fibromyalgia, o iba pang mga kondisyon. Ang pananakit ng breakthrough ay karaniwang tumatagal ng maikling panahon.',
+  'en_desc': 'A sudden increase in pain that may occur in patients who already have chronic pain from cancer, arthritis, fibromyalgia, or other conditions.',
+  'ph_desc': 'Isang biglaang pagtaas ng pananakit na maaaring mangyari sa mga pasyenteng mayroon nang matinding pananakit mula sa cancer, arthritis, fibromyalgia, o iba pang mga kondisyon.',
   'source': "['https://www.cancer.gov/publications/dictionaries/cancer-terms/def/breakthrough-pain']"
 },
 {
   'symptom': 'breath sounds decreased',
   'en': 'breath sounds decreased',
   'ph': 'nabawasan ang mga tunog ng hininga',
-  'en_desc': 'Absent or decreased sounds can mean: Air or fluid in or around the lungs (such as pneumonia, heart failure, and pleural effusion) Increased thickness of the chest wall. Over-inflation of a part of the lungs (emphysema can cause this)',
-  'ph_desc': 'Ang mga tunog na wala o nababawasan ay maaaring mangahulugan ng: Hangin o likido sa loob o paligid ng mga baga (tulad ng pneumonia, pagpalya ng puso, at pleural effusion) Tumaas na kapal ng pader ng dibdib. Ang sobrang inflation ng isang bahagi ng baga (maaaring maging sanhi ito ng emphysema)',
-  'source': "['https://www.mountsinai.org/health-library/symptoms/breath-sounds#:~:text=Absent%20or%20decreased%20sounds%20can,lungs%20(emphysema%20can%20cause%20this)']"
-},
-{
-  'symptom': 'breath sounds decreased',
-  'en': 'breath sounds decreased',
-  'ph': 'nabawasan ang mga tunog ng hininga',
-  'en_desc': 'Absent or decreased sounds can mean: Air or fluid in or around the lungs (such as pneumonia, heart failure, and pleural effusion) Increased thickness of the chest wall. Over-inflation of a part of the lungs (emphysema can cause this)',
-  'ph_desc': 'Ang mga tunog na wala o nababawasan ay maaaring mangahulugan ng: Hangin o likido sa loob o paligid ng mga baga (tulad ng pneumonia, pagpalya ng puso, at pleural effusion) Tumaas na kapal ng pader ng dibdib. Ang sobrang inflation ng isang bahagi ng baga (maaaring maging sanhi ito ng emphysema)',
+  'en_desc': 'Absent or decreased sounds can mean: Air or fluid in or around the lungs and increased thickness of the chest wall.',
+  'ph_desc': 'Ang mga tunog na wala o nababawasan ay maaaring mangahulugan ng: Hangin o likido sa loob o paligid ng mga baga at pagkapal ng pader ng dibdib.',
   'source': "['https://www.mountsinai.org/health-library/symptoms/breath-sounds#:~:text=Absent%20or%20decreased%20sounds%20can,lungs%20(emphysema%20can%20cause%20this)']"
 },
 {
@@ -395,14 +371,14 @@ export default [{
   'en': 'breath-holding spell',
   'ph': 'breath-holding spell',
   'en_desc': 'A breath holding spell is when a child holds their breath, usually after being angry, frustrated, startled, or in pain.',
-  'ph_desc': 'Ang breath holding spell ay kapag ang isang bata ay nagpipigil ng hininga, kadalasan pagkatapos magalit, bigo, nagulat, o sa sakit.',
+  'ph_desc': 'Ang breath holding spell ay kapag ang isang bata ay nagpipigil ng hininga, kadalasan pagkatapos magalit, mabigo, magulat, o masaktan.',
   'source': "['https://kidshealth.org/en/parents/spells.html#:~:text=A%20breath%20holding%20spell%20is,last%20less%20than%20a%20minute.']"
 },
 {
   'symptom': 'breech presentation',
   'en': 'breech presentation',
   'ph': 'breech presentation',
-  'en_desc': "A breech presentation occurs when the baby's buttocks or feet or both are in place to come out first during birth.",
+  'en_desc': "A breech presentation occurs when the baby buttocks or feet or both are in place to come out first during birth.",
   'ph_desc': 'Ang isang breech presentation ay nangyayari kapag ang puwit o paa ng sanggol o pareho ay nasa lugar upang unang lumabas sa panahon ng kapanganakan.',
   'source': "['https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/multimedia/fetal-positions/sls-20076615?s=4#:~:text=A%20breech%20presentation%20occurs%20when,at%20the%20end%20of%20pregnancy.']"
 },
@@ -418,16 +394,8 @@ export default [{
   'symptom': 'burning sensation',
   'en': 'burning sensation',
   'ph': 'nasusunog na sensasyon',
-  'en_desc': "A burning sensation is a type of pain that's distinct from dull, stabbing, or aching pain.",
-  'ph_desc': 'Ang nasusunog na pandamdam ay isang uri ng pananakit na naiiba sa mapurol, pananakit, o pananakit.',
-  'source': "['https://www.healthline.com/health/burning-sensation#:~:text=A%20burning%20sensation%20is%20a,some%20cases%20cause%20nerve%20damage.']"
-},
-{
-  'symptom': 'burning sensation',
-  'en': 'burning sensation',
-  'ph': 'nasusunog na sensasyon',
-  'en_desc': "A burning sensation is a type of pain that's distinct from dull, stabbing, or aching pain.",
-  'ph_desc': 'Ang nasusunog na pandamdam ay isang uri ng pananakit na naiiba sa mapurol, pananakit, o pananakit.',
+  'en_desc': "A burning sensation is a type of pain that is distinct from dull, stabbing, or aching pain.",
+  'ph_desc': 'Ang nasusunog na pandamdam ay isang uri ng pananakit na naiiba sa mahinang pananakit',
   'source': "['https://www.healthline.com/health/burning-sensation#:~:text=A%20burning%20sensation%20is%20a,some%20cases%20cause%20nerve%20damage.']"
 },
 {
@@ -442,8 +410,8 @@ export default [{
   'symptom': 'cardiomegaly',
   'en': 'cardiomegaly',
   'ph': 'cardiomegaly',
-  'en_desc': 'An enlarged heart (cardiomegaly) is not a disease, but rather a sign of another condition. The term "cardiomegaly" refers to an enlarged heart seen on any imaging test, including a chest X-ray. ',
-  'ph_desc': 'Ang pinalaki na puso (cardiomegaly) ay hindi isang sakit, ngunit isang tanda ng isa pang kondisyon. Ang terminong "cardiomegaly" ay tumutukoy sa isang pinalaki na puso na nakikita sa anumang pagsusuri sa imaging, kabilang ang isang chest X-ray.',
+  'en_desc': 'It refers to an enlarged heart seen on any imaging test, including a chest X-ray.',
+  'ph_desc': 'Ito ay tumutukoy sa isang pinalaki na puso na nakikita sa anumang pagsusuri sa imaging, kabilang ang isang chest X-ray.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/enlarged-heart/symptoms-causes/syc-20355436#:~:text=Enlarged%20heart%2C%20in%20heart%20failure,-As%20the%20heart&text=An%20enlarged%20heart%20(cardiomegaly)%20isn,that's%20causing%20the%20enlarged%20heart.']"
 },
 {
@@ -458,7 +426,7 @@ export default [{
   'symptom': 'cardiovascular event',
   'en': 'cardiovascular event',
   'ph': 'kaganapan sa cardiovascular',
-  'en_desc': 'Cardiovascular events refer to any incidents that may cause damage to the heart muscle. ',
+  'en_desc': 'Cardiovascular events refer to any incidents that may cause damage to the heart muscle.',
   'ph_desc': 'Ang mga kaganapan sa cardiovascular ay tumutukoy sa anumang mga insidente na maaaring magdulot ng pinsala sa kalamnan ng puso.',
   'source': "['https://chemocare.com/chemotherapy/side-effects/cardiovascular-events.aspx#:~:text=Cardiovascular%20events%20refer%20to%20any,to%20an%20injury%2C%20or%20infarction.']"
 },
@@ -466,56 +434,48 @@ export default [{
   'symptom': 'catatonia',
   'en': 'catatonia',
   'ph': 'catatonia',
-  'en_desc': 'Catatonia is a group of symptoms that usually involve a lack of movement and communication, and also can include agitation, confusion, and restlessness.',
-  'ph_desc': 'Ang Catatonia ay isang pangkat ng mga sintomas na kadalasang kinasasangkutan ng kakulangan sa paggalaw at komunikasyon, at maaari ding kabilangan ng pagkabalisa, pagkalito, at pagkabalisa.',
+  'en_desc': 'Catatonia is a group of symptoms that usually involve a lack of movement and communication.',
+  'ph_desc': 'Ang Catatonia ay isang pangkat ng mga sintomas na kadalasang kinasasangkutan ng kakulangan sa paggalaw at komunikasyon.',
   'source': "['https://www.webmd.com/schizophrenia/what-is-catatonia#:~:text=Catatonia%20is%20a%20group%20of,as%20a%20type%20of%20schizophrenia.']"
 },
 {
   'symptom': 'catching breath',
   'en': 'catching breath',
   'ph': 'hinahabol ang hininga',
-  'en_desc': 'Dyspnea, also called shortness of breath, is a tight feeling in your chest where you may not be able to take a deep breath. ',
+  'en_desc': 'Dyspnea, also called shortness of breath, is a tight feeling in your chest where you may not be able to take a deep breath.',
   'ph_desc': 'Ang dyspnea, tinatawag ding shortness of breath, ay isang masikip na pakiramdam sa iyong dibdib kung saan maaaring hindi ka makahinga ng malalim.',
-  'source': "['https://my.clevelandclinic.org/health/symptoms/16942-shortness-of-breath-dyspnea#:~:text=It%20can%20be%20a%20sign,like%20asthma%2C%20allergies%20or%20anxiety.']"
+  'source': "['https://my.clevelandclinic.org/health/symptoms/16942-shortness-of-breath-dyspnea#:~:text=It%20can%20be%20a%20sign,like%20asthma%2C%20allergies%20or%20anxiety']"
 },
 {
   'symptom': 'charleyhorse',
   'en': 'charleyhorse',
   'ph': 'pulikat',
-  'en_desc': 'A charley horse is the common name for a muscle spasm or cramp. Muscle spasms can occur in any muscle in the body, but often happen in the leg. When a muscle is in spasm, it contracts without your control and does not relax.',
-  'ph_desc': 'Ang pulikat ay ang karaniwang pangalan para sa kalamnan o cramp. Ang kalamnan spasms ay maaaring mangyari sa anumang kalamnan sa katawan, ngunit madalas na nangyayari sa binti. Kapag ang isang kalamnan ay nasa pulikat, ito ay kumukontra nang hindi mo kontrolado at hindi nakakarelaks.',
+  'en_desc': 'A charley horse is the common name for a muscle spasm or cramp.',
+  'ph_desc': 'Ang pulikat ay ang karaniwang pangalan para sa kalamnan o cramp.',
   'source': "['https://medlineplus.gov/ency/article/002066.htm#:~:text=A%20charley%20horse%20is%20the,control%20and%20does%20not%20relax.']"
 },
 {
   'symptom': 'chest tightness',
   'en': 'chest tightness',
   'ph': 'paninikip ng dibdib',
-  'en_desc': 'Chest pain is not something to ignore. But you should know that it has many possible causes. In many cases, it is related to the heart. ',
-  'ph_desc': 'Ang pananakit ng dibdib ay hindi dapat balewalain. Ngunit dapat mong malaman na ito ay may maraming posibleng dahilan. Sa maraming kaso, ito ay nauugnay sa puso.',
-  'source': "['https://www.webmd.com/pain-management/guide/whats-causing-my-chest-pain']"
+  'en_desc': 'A sudden feeling of pressure, squeezing, tightness, or crushing under your breastbone.',
+  'ph_desc': 'Isang biglaang pakiramdam ng presyon, pagpisil, paninikip, o pagdurog sa ilalim ng iyong dibdib',
+  'source': "['https://my.clevelandclinic.org/health/symptoms/21209-chest-pain']"
 },
 {
   'symptom': 'chest discomfort',
   'en': 'chest discomfort',
   'ph': 'kakulangan sa ginhawa sa dibdib',
-  'en_desc': 'Chest pain is not something to ignore. But you should know that it has many possible causes. In many cases, it is related to the heart. ',
-  'ph_desc': 'Ang pananakit ng dibdib ay hindi dapat balewalain. Ngunit dapat mong malaman na ito ay may maraming posibleng dahilan. Sa maraming kaso, ito ay nauugnay sa puso.',
+  'en_desc': 'Chest pain is pain in any area of your chest.',
+  'ph_desc': 'Ang pananakit ng dibdib ay pananakit sa alinmang bahagi ng iyong dibdib.',
   'source': "['https://www.webmd.com/pain-management/guide/whats-causing-my-chest-pain']"
-},
-{
-  'symptom': 'chest tightness',
-  'en': 'chest tightness',
-  'ph': 'paninikip ng dibdib',
-  'en_desc': 'If you feel like your chest is tightening, you may worry that you are having a heart attack. However, gastrointestinal, psychological, and pulmonary conditions can also cause a tight chest.',
-  'ph_desc': 'Kung pakiramdam mo ay sumikip ang iyong dibdib, maaari kang mag-alala na inaatake ka sa puso. Gayunpaman, ang gastrointestinal, psychological, at pulmonary na mga kondisyon ay maaari ding maging sanhi ng masikip na dibdib.',
-  'source': "['https://www.healthline.com/health/tight-chest']"
 },
 {
   'symptom': 'chill',
   'en': 'chill',
   'ph': 'panginginig',
-  'en_desc': 'Chills are your body\’s way of raising its core temperature. Cold temperatures, viruses, infections and other illnesses can bring on chills.',
-  'ph_desc': 'Ang panginginig ay ang paraan ng iyong katawan sa pagtaas ng pangunahing temperatura nito. Ang malamig na temperatura, mga virus, mga impeksyon at iba pang sakit ay maaaring magdulot ng panginginig.',
+  'en_desc': 'Chills are your body’s way of raising its core temperature. ',
+  'ph_desc': 'Ang panginginig ay ang paraan ng iyong katawan sa pagtaas ng pangunahing temperatura nito. ',
   'source': "[https://my.clevelandclinic.org/health/symptoms/21476-chills#:~:text=Chills%20are%20your%20body's%20way,and%20fever%20often%20go%20together.']"
 },
 {
@@ -530,8 +490,8 @@ export default [{
   'symptom': 'cicatrisation',
   'en': 'cicatrisation',
   'ph': 'cicatrisation',
-  'en_desc': 'Cicatrization, also called Scarification, type of body decoration involving the production of raised scars (keloids), usually in decorative patterns.',
-  'ph_desc': 'Cicatrization, tinatawag ding Scarification, uri ng palamuti sa katawan na kinasasangkutan ng paggawa ng mga nakataas na peklat (keloids), kadalasang nasa mga pattern ng dekorasyon.',
+  'en_desc': 'Cicatrization is a type of body decoration involving the production of raised scars, usually in decorative patterns.',
+  'ph_desc': 'Cicatrization ay isang uri ng palamuti sa katawan na kinasasangkutan ng paggawa ng mga nakataas na peklat, kadalasang nasa mga pattern ng dekorasyon.',
   'source': "['https://www.britannica.com/art/cicatrization']"
 },
 {
@@ -539,15 +499,15 @@ export default [{
   'en': 'clammy skin',
   'ph': 'nanlalamig na balat',
   'en_desc': 'Clammy skin simply refers to skin that is wet from sweating.',
-  'ph_desc': 'Ang malalamig na balat ay tumutukoy lamang sa balat na basa dahil sa pagpapawis.',
+  'ph_desc': 'Ang malamlam na balat ay tumutukoy lamang sa balat na basa dahil sa pagpapawis.',
   'source': "['https://www.nicklauschildrens.org/symptoms/clammy-skin#:~:text=Clammy%20skin%20simply%20refers%20to,sign%20of%20a%20medical%20problem.']"
 },
 {
   'symptom': 'claudication',
   'en': 'claudication',
   'ph': 'claudication',
-  'en_desc': 'Claudication is pain in your thigh, calf, or buttocks that happens when you walk. ',
-  'ph_desc': 'Ang claudication ay pananakit sa iyong hita, guya, o puwit na nangyayari kapag naglalakad ka.',
+  'en_desc': 'Claudication is pain in your thigh, calf, or buttocks that happens when you walk.',
+  'ph_desc': 'Ang claudication ay pananakit sa iyong hita, alak-alakan, o puwit na nangyayari kapag naglalakad ka.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/claudication#:~:text=Claudication%20is%20pain%20in%20your,blood%20flow%20to%20your%20legs.']"
 },
 {
@@ -555,7 +515,7 @@ export default [{
   'en': 'clonus',
   'ph': 'clonus',
   'en_desc': 'Clonus is involuntary and rhythmic muscle contractions caused by a permanent lesion in descending motor neurons.',
-  'ph_desc': 'Ang Clonus ay hindi sinasadya at maindayog na mga contraction ng kalamnan na sanhi ng isang permanenteng sugat sa pababang mga neuron ng motor.',
+  'ph_desc': 'Ang Clonus ay inboluntaryo at maindayog na mga contraction ng kalamnan na sanhi ng isang permanenteng sugat sa pagbaba ng mga neuron ng motor.',
   'source': "['https://pubmed.ncbi.nlm.nih.gov/25669332/#:~:text=Clonus%20is%20involuntary%20and%20rhythmic,wrist%2C%20jaw%2C%20biceps%20brachii.']"
 },
 {
@@ -570,16 +530,16 @@ export default [{
   'symptom': 'colic abdominal',
   'en': 'colic abdominal',
   'ph': 'colic ng tiyan',
-  'en_desc': 'A clinical syndrome with intermittent abdominal pain characterized by sudden onset and cessation.',
-  'ph_desc': 'Isang clinical syndrome na may paulit-ulit na pananakit ng tiyan na nailalarawan sa biglaang pagsisimula at pagtigil.',
+  'en_desc': 'A clinical syndrome with intermittent abdominal pain is characterized by sudden onset and cessation.',
+  'ph_desc': 'Isang clinical syndrome na may paulit-ulit na pananakit ng tiyan ay nailalarawan na biglaang pagsisimula at pagtigil.',
   'source': "['http://sideeffects.embl.de/se/C0232488/#:~:text=Definition%3A%20A%20clinical%20syndrome%20with,or%20of%20the%20URINARY%20TRACT.']"
 },
 {
   'symptom': 'consciousness clear',
   'en': 'consciousness clear',
   'ph': 'malinaw ang kamalayan',
-  'en_desc': 'A knowledge or belief that one has done nothing bad or wrong',
-  'ph_desc': 'Isang kaalaman o paniniwala na ang isang tao ay walang ginawang masama o mali',
+  'en_desc': 'Identifies a state in which a patient is awake, aware, alert, and responsive to stimuli.',
+  'ph_desc': 'Tinutukoy ang isang estado kung saan ang isang pasyente ay gising, mulat, alerto, at tumutugon sa mga stimuli.',
   'source': "['https://www.merriam-webster.com/dictionary/clear%20conscience#:~:text=Definition%20of%20clear%20conscience,him%20with%20a%20clear%20conscience.']"
 },
 {
@@ -594,23 +554,23 @@ export default [{
   'symptom': 'coordination abnormal',
   'en': 'coordination abnormal',
   'ph': 'abnormal na koordinasyon',
-  'en_desc': 'Uncoordinated movement is also known as lack of coordination, coordination impairment, or loss of coordination.',
-  'ph_desc': 'Ang uncoordinated na paggalaw ay kilala rin bilang kawalan ng koordinasyon, kapansanan sa koordinasyon, o pagkawala ng koordinasyon.',
+  'en_desc': 'Uncoordinated movement is also known as lack of coordination.',
+  'ph_desc': 'Ang uncoordinated na paggalaw ay kilala rin bilang kawalan ng koordinasyon.',
   'source': "['https://www.healthline.com/health/movement-uncoordinated#:~:text=Uncoordinated%20movement%20is%20also%20known,smooth%2C%20coordinated%2C%20and%20seamless.']"
 },
 {
   'symptom': 'cough',
   'en': 'cough',
   'ph': 'ubo',
-  'en_desc': "A cough is your body's way of responding when something irritates your throat or airways.",
-  'ph_desc': 'Ang ubo ay paraan ng pagtugon ng iyong katawan kapag may nakakairita sa iyong lalamunan o mga daanan ng hangin.',
+  'en_desc': "A cough is your body's way of responding when something irritates the throat or airways.",
+  'ph_desc': 'Ang ubo ay paraan ng pagtugon ng iyong katawan kapag may nakakairita sa lalamunan o daanan ng hangin.',
   'source': "['https://www.mayoclinic.org/symptoms/cough/basics/definition/sym-20050846#:~:text=A%20cough%20is%20your%20body's,cough%20is%20normal%20and%20healthy.']"
 },
 {
   'symptom': 'cushingoid facies',
   'en': 'cushingoid facies',
   'ph': 'cushingoid facies',
-  'en_desc': 'Moon facies occurs when extra fat builds up on the sides of the face.',
+  'en_desc': 'Cushingoid facies occurs when extra fat builds up on the sides of the face.',
   'ph_desc': 'Ang mga cushingoid facies ay nangyayari kapag naipon ang sobrang taba sa mga gilid ng mukha.',
   'source': "['https://www.webmd.com/a-to-z-guides/moon-facies#:~:text=Moon%20facies%20occurs%20when%20extra,of%20a%20hormone%20called%20cortisol.']"
 },
@@ -618,16 +578,16 @@ export default [{
   'symptom': 'cushingoid habitus',
   'en': 'cushingoid habitus',
   'ph': 'cushingoid habitus',
-  'en_desc': 'Cushing syndrome occurs when your body has too much of the hormone cortisol over time.',
-  'ph_desc': 'Ang Cushing syndrome ay nangyayari kapag ang iyong katawan ay may masyadong maraming hormone cortisol sa paglipas ng panahon.',
+  'en_desc': 'Cushing syndrome occurs when the body has too much of the hormone cortisol over time.',
+  'ph_desc': 'Ang Cushing syndrome ay nangyayari kapag ang katawan ay may masyadong maraming hormone cortisol sa paglipas ng panahon.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/cushing-syndrome/symptoms-causes/syc-20351310']"
 },
 {
   'symptom': 'cyanosis',
   'en': 'cyanosis',
   'ph': 'sianosis',
-  'en_desc': 'Cyanosis refers to a bluish-purple hue to the skin. It is most easily seen where the skin is thin, such as the lips, mouth, earlobes and fingernails.',
-  'ph_desc': 'Ang sianosis ay tumutukoy sa isang mala-bughaw-lilang kulay sa balat. Ito ay pinakamadaling makita kung saan ang balat ay manipis, tulad ng mga labi, bibig, earlobes at mga kuko.',
+  'en_desc': 'Cyanosis refers to a bluish-purple hue to the skin.',
+  'ph_desc': 'Ang sianosis ay tumutukoy sa isang mala-bughaw-lilang kulay sa balat. ',
   'source': "['https://www.cincinnatichildrens.org/health/c/cyanosis#:~:text=Cyanosis%20refers%20to%20a%20bluish,with%20the%20lungs%20or%20heart.']"
 },
 {
@@ -642,8 +602,8 @@ export default [{
   'symptom': 'debilitation',
   'en': 'debilitation',
   'ph': 'panghihina',
-  'en_desc': 'To impair the strength of or to enfeeble. A chronic progressive disease may debilitate a patient.',
-  'ph_desc': 'Upang pahinain ang lakas ng o upang mahina. Ang isang talamak na progresibong sakit ay maaaring makapagpahina sa isang pasyente.',
+  'en_desc': 'To impair the strength of or to enfeeble.',
+  'ph_desc': 'Upang pahinain ang lakas ng o upang mahina.',
   'source': "['https://www.medicinenet.com/debilitate/definition.htm#:~:text=Debilitate%3A%20To%20impair%20the%20strength,disease%20may%20debilitate%20a%20patient.']"
 },
 {
@@ -651,15 +611,15 @@ export default [{
   'en': 'decompensation',
   'ph': 'decompensation',
   'en_desc': 'Loss of physiological or psychological compensation.',
-  'ph_desc': 'Pagkawala ng pisyolohikal o sikolohikal na kabayaran.',
+  'ph_desc': 'Pagkawala ng pisyolohikal o sikolohikal na katumbas.',
   'source': "['https://www.merriam-webster.com/dictionary/decompensation']"
 },
 {
   'symptom': 'decreased translucency',
   'en': 'decreased translucency',
   'ph': 'nabawasan ang translucency',
-  'en_desc': 'Diminished translucency is a common, less recognized roentgenographic feature of tropical pulmonary eosinophilia (TPE) which was observed in 17 of our 25 (68 percent) patients.',
-  'ph_desc': 'Ang pinaliit na translucency ay isang pangkaraniwan, hindi gaanong kinikilalang roentgenographic na tampok ng tropical pulmonary eosinophilia (TPE) na naobserbahan sa 17 sa aming 25 (68 porsiyento) na mga pasyente.',
+  'en_desc': 'Diminished translucency is a common, less recognized roentgenographic feature of tropical pulmonary eosinophilia.',
+  'ph_desc': 'Ang pinaliit na translucency ay isang pangkaraniwan, hindi gaanong kinikilalang roentgenographic na tampok ng tropical pulmonary eosinophilia.',
   'source': "['https://journal.chestnet.org/article/S0012-3692(16)30758-9/fulltext#:~:text=Diminished%20translucency%20is%20a%20common,four%20weeks%20duration%20or%20less.']"
 },
 {
@@ -674,40 +634,32 @@ export default [{
   'symptom': 'decreased stool caliber',
   'en': 'decreased stool caliber',
   'ph': 'nabawasan ang kalibre ng dumi',
-  'en_desc': 'Narrow stools that occur infrequently probably are harmless. However in some cases, narrow stools — especially if pencil thin — may be a sign of narrowing or obstruction of the colon due to colon cancer.',
-  'ph_desc': 'Ang makitid na dumi na madalang na nangyayari ay malamang na hindi nakakapinsala. Gayunpaman sa ilang mga kaso, ang makitid na dumi - lalo na kung kasing nipis ng lapis - ay maaaring isang senyales ng pagkipot o pagbara ng colon dahil sa colon cancer.',
+  'en_desc': 'Narrow stools that occur infrequently probably are harmless. However in some cases, narrow stools  may be a sign of obstruction of the colon due to colon cancer.',
+  'ph_desc': 'Ang makitid na dumi na madalang na nangyayari ay malamang na hindi nakakapinsala. Gayunpaman sa ilang mga kaso, ang makitid na dumi ay maaaring isang senyales ng pagbara ng colon dahil sa colon cancer.',
   'source': "['https://www.mayoclinic.org/narrow-stools/expert-answers/faq-20057781#:~:text=Narrow%20stools%20that%20occur%20infrequently,colon%20due%20to%20colon%20cancer.']"
-},
-{
-  'symptom': 'decreased translucency',
-  'en': 'decreased translucency',
-  'ph': 'nabawasan ang translucency',
-  'en_desc': 'Diminished translucency is a common, less recognized roentgenographic feature of tropical pulmonary eosinophilia (TPE) which was observed in 17 of our 25 (68 percent) patients.',
-  'ph_desc': 'Ang pinaliit na translucency ay isang pangkaraniwan, hindi gaanong kinikilalang roentgenographic na tampok ng tropical pulmonary eosinophilia (TPE) na naobserbahan sa 17 sa aming 25 (68 porsiyento) na mga pasyente.',
-  'source': "['https://journal.chestnet.org/article/S0012-3692(16)30758-9/fulltext#:~:text=Diminished%20translucency%20is%20a%20common,four%20weeks%20duration%20or%20less.']"
 },
 {
   'symptom': 'diarrhea',
   'en': 'diarrhea',
   'ph': 'pagtatae',
-  'en_desc': 'Diarrhea — loose, watery and possibly more-frequent bowel movements — is a common problem.',
-  'ph_desc': 'Ang pagtatae - maluwag, matubig at posibleng mas madalas na pagdumi - ay isang karaniwang problema.',
+  'en_desc': 'Diarrhea is a loose, watery and possibly more-frequent bowel movements.',
+  'ph_desc': 'Ang pagtatae ay isang maluwag, matubig at posibleng mas madalas na pagdumi.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/diarrhea/symptoms-causes/syc-20352241#:~:text=Diarrhea%20%E2%80%94%20loose%2C%20watery%20and%20possibly,more%20than%20a%20few%20days.']"
 },
 {
   'symptom': 'difficulty',
   'en': 'difficulty',
   'ph': 'paghihirap',
-  'en_desc': 'The quality or state of being hard to do, deal with, or understand : the quality or state of being difficult.',
-  'ph_desc': 'Ang kalidad o estado ng pagiging mahirap gawin, harapin, o unawain : ang kalidad o estado ng pagiging mahirap.',
+  'en_desc': 'The quality or state of being hard to do, deal with, or understand.',
+  'ph_desc': 'Ang kalidad o estado ng pagiging mahirap gawin, harapin, o unawain.',
   'source': "['https://www.merriam-webster.com/dictionary/difficulty']"
 },
 {
   'symptom': 'difficulty passing urine',
   'en': 'difficulty passing urine',
   'ph': 'hirap umihi',
-  'en_desc': 'Difficulty passing urine is a common problem. It can be caused by conditions that affect the kidneys, bladder or prostate gland (in men).',
-  'ph_desc': 'Ang hirap sa pag-ihi ay karaniwang problema. Ito ay maaaring sanhi ng mga kondisyon na nakakaapekto sa mga bato, pantog o prostate gland (sa mga lalaki).',
+  'en_desc': 'It can be caused by conditions that affect the kidneys, bladder or prostate gland (in men).',
+  'ph_desc': 'Ito ay maaaring sanhi ng mga kondisyon na nakakaapekto sa mga bato, pantog o prostate gland (sa mga lalaki).',
   'source': "['https://www.health.harvard.edu/decision_guide/difficulty-passing-urine#:~:text=Difficulty%20passing%20urine%20is%20a,than%20one%20condition%20is%20present.']"
 },
 {
@@ -722,16 +674,8 @@ export default [{
   'symptom': 'distended abdomen',
   'en': 'distended abdomen',
   'ph': 'distended na tiyan',
-  'en_desc': 'A distended abdomen is abnormally swollen outward. You can see and measure the difference, and sometimes you can feel it.',
-  'ph_desc': 'Ang distended na tiyan ay abnormal na namamaga palabas. Maaari mong makita at masukat ang pagkakaiba, at kung minsan ay mararamdaman mo ito.',
-  'source': "['https://my.clevelandclinic.org/health/symptoms/21819-abdominal-distension-distended-abdomen#:~:text=A%20distended%20abdomen%20is%20abnormally,can%20be%20chronic%20or%20acute.']"
-},
-{
-  'symptom': 'distended abdomen',
-  'en': 'distended abdomen',
-  'ph': 'distended na tiyan',
-  'en_desc': 'A distended abdomen is abnormally swollen outward. You can see and measure the difference, and sometimes you can feel it.',
-  'ph_desc': 'Ang distended na tiyan ay abnormal na namamaga palabas. Maaari mong makita at masukat ang pagkakaiba, at kung minsan ay mararamdaman mo ito.',
+  'en_desc': 'A distended abdomen is abnormally swollen outward. ',
+  'ph_desc': 'Ang distended na tiyan ay abnormal na namamaga palabas.',
   'source': "['https://my.clevelandclinic.org/health/symptoms/21819-abdominal-distension-distended-abdomen#:~:text=A%20distended%20abdomen%20is%20abnormally,can%20be%20chronic%20or%20acute.']"
 },
 {
@@ -739,15 +683,7 @@ export default [{
   'en': 'distress respiratory',
   'ph': 'pagkabalisa sa paghinga',
   'en_desc': 'Acute respiratory distress syndrome (ARDS) occurs when fluid builds up in the tiny, elastic air sacs (alveoli) in your lungs.',
-  'ph_desc': 'Ang acute respiratory distress syndrome (ARDS) ay nangyayari kapag naipon ang likido sa maliliit, nababanat na air sac (alveoli) sa iyong mga baga.',
-  'source': "['https://www.mayoclinic.org/diseases-conditions/ards/symptoms-causes/syc-20355576']"
-},
-{
-  'symptom': 'distress respiratory',
-  'en': 'distress respiratory',
-  'ph': 'pagkabalisa sa paghinga',
-  'en_desc': 'Acute respiratory distress syndrome (ARDS) occurs when fluid builds up in the tiny, elastic air sacs (alveoli) in your lungs.',
-  'ph_desc': 'Ang acute respiratory distress syndrome (ARDS) ay nangyayari kapag naipon ang likido sa maliliit, nababanat na air sac (alveoli) sa iyong mga baga.',
+  'ph_desc': 'Ang acute respiratory distress syndrome (ARDS) ay nangyayari kapag naipon ang likido sa maliliit at nababanat na air sac (alveoli) sa iyong mga baga.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/ards/symptoms-causes/syc-20355576']"
 },
 {
@@ -762,7 +698,7 @@ export default [{
   'symptom': 'dizziness',
   'en': 'dizziness',
   'ph': 'pagkahilo',
-  'en_desc': 'Dizziness is a term used to describe a range of sensations, such as feeling faint, woozy, weak or unsteady. ',
+  'en_desc': 'Dizziness is a term used to describe a range of sensations, such as feeling faint, woozy, weak or unsteady.',
   'ph_desc': 'Ang pagkahilo ay isang terminong ginamit upang ilarawan ang isang hanay ng mga sensasyon, tulad ng pakiramdam nanghihina, nahihilo, mahina o hindi matatag.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/dizziness/symptoms-causes/syc-20371787#:~:text=Dizziness%20is%20a%20term%20used,reasons%20adults%20visit%20their%20doctors.']"
 },
@@ -786,8 +722,8 @@ export default [{
   'symptom': 'drowsiness',
   'en': 'drowsiness',
   'ph': 'antok',
-  'en_desc': 'Feeling abnormally sleepy or tired during the day is commonly known as drowsiness.',
-  'ph_desc': 'Ang pakiramdam ng abnormal na antok o pagod sa araw ay karaniwang kilala bilang antok.',
+  'en_desc': 'Feeling abnormally sleepy or tired during the day.',
+  'ph_desc': 'Ang pakiramdam ng abnormal na antok o pagod sa araw.',
   'source': "['https://www.healthline.com/health/drowsiness']"
 },
 {
@@ -802,7 +738,7 @@ export default [{
   'symptom': 'dysarthria',
   'en': 'dysarthria',
   'ph': 'dysarthria',
-  'en_desc': 'Dysarthria occurs when the muscles you use for speech are weak or you have difficulty controlling them. ',
+  'en_desc': 'Dysarthria occurs when the muscles you use for speech are weak or you have difficulty controlling them.',
   'ph_desc': 'Ang dysarthria ay nangyayari kapag ang mga kalamnan na ginagamit mo para sa pagsasalita ay mahina o nahihirapan kang kontrolin ang mga ito.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/dysarthria/symptoms-causes/syc-20371994#:~:text=Dysarthria%20occurs%20when%20the%20muscles,can%20be%20difficult%20to%20understand.']"
 },
@@ -810,32 +746,32 @@ export default [{
   'symptom': 'dysdiadochokinesia',
   'en': 'dysdiadochokinesia',
   'ph': 'dysdiadochokinesia',
-  'en_desc': 'Dysdiadochokinesia (DDK) is the medical term used to describe difficulty performing quick and alternating movements, usually by opposing muscle groups.',
-  'ph_desc': 'Ang dysdiadochokinesia (DDK) ay ang terminong medikal na ginagamit upang ilarawan ang kahirapan sa pagsasagawa ng mabilis at papalit-palit na paggalaw, kadalasan sa pamamagitan ng magkasalungat na mga grupo ng kalamnan.',
+  'en_desc': 'Dysdiadochokinesia (DDK) is the medical term used to describe difficulty performing quick and alternating movements.',
+  'ph_desc': 'Ang dysdiadochokinesia (DDK) ay ang terminong medikal na ginagamit upang ilarawan ang kahirapan sa pagsasagawa ng mabilis at papalit-palit na paggalaw.',
   'source': "['https://www.healthline.com/health/dysdiadochokinesia']"
 },
 {
   'symptom': 'dysesthesia',
   'en': 'dysesthesia',
   'ph': 'dysesthesia',
-  'en_desc': 'Dysesthesia means "abnormal sensation." It\'s usually a painful burning, prickling, or aching feeling.',
-  'ph_desc': 'Ang ibig sabihin ng dysesthesia ay "abnormal na sensasyon." Kadalasan ito ay isang masakit na pagkasunog, pagtusok, o pananakit na pakiramdam.',
+  'en_desc': 'Dysesthesia is usually a painful burning, prickling, or aching feeling.',
+  'ph_desc': 'Ang ibig sabihin ng dysesthesia ay isang masakit na pagkasunog, pagtusok, o pananakit na pakiramdam.',
   'source': "['https://www.webmd.com/multiple-sclerosis/dysesthesia-pain#:~:text=Dysesthesia%20means%20%22abnormal%20sensation.%22,that%20the%20%22MS%20hug.%22']"
 },
 {
   'symptom': 'dyspareunia',
   'en': 'dyspareunia',
   'ph': 'dyspareunia',
-  'en_desc': 'The medical term for painful intercourse is dyspareunia (dis-puh-ROO-nee-uh), defined as persistent or recurrent genital pain that occurs just before, during or after sex. ',
-  'ph_desc': 'Ang terminong medikal para sa masakit na pakikipagtalik ay dyspareunia (dis-puh-ROO-nee-uh), na tinukoy bilang paulit-ulit o paulit-ulit na pananakit ng ari na nangyayari bago, habang o pagkatapos ng pakikipagtalik.',
+  'en_desc': 'It is defined as persistent or recurrent genital pain that occurs just before, during or after sex.',
+  'ph_desc': 'Ito ang paulit-ulit na pananakit ng ari na nangyayari bago, habang o pagkatapos ng pakikipagtalik.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/painful-intercourse/symptoms-causes/syc-20375967#:~:text=The%20medical%20term%20for%20painful,or%20lessen%20this%20common%20problem.']"
 },
 {
   'symptom': 'dyspnea',
   'en': 'dyspnea',
   'ph': 'dyspnea',
-  'en_desc': 'Shortness of breath — known medically as dyspnea — is often described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.',
-  'ph_desc': 'Ang igsi sa paghinga — na kilala sa medikal bilang dyspnea — ay kadalasang inilalarawan bilang matinding paninikip sa dibdib, gutom sa hangin, hirap sa paghinga, paghinga o pakiramdam ng inis.',
+  'en_desc': 'It described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.',
+  'ph_desc': 'Ito ay kadalasang inilalarawan bilang matinding paninikip sa dibdib, malakas na pagnanais sa paghinga, hirap sa paghinga, paghinga o pakiramdam ng inis.',
   'source': "['https://www.mayoclinic.org/symptoms/shortness-of-breath/basics/definition/sym-20050890#:~:text=Shortness%20of%20breath%20%E2%80%94%20known%20medically,breath%20in%20a%20healthy%20person.']"
 },
 {
@@ -858,16 +794,16 @@ export default [{
   'symptom': 'dysuria',
   'en': 'dysuria',
   'ph': 'dysuria',
-  'en_desc': 'Painful urination (dysuria) is discomfort or burning with urination, usually felt in the tube that carries urine out of your bladder (urethra) or the area surrounding your genitals (perineum).',
-  'ph_desc': 'Ang masakit na pag-ihi (dysuria) ay hindi komportable o nasusunog sa pag-ihi, kadalasang nararamdaman sa tubo na naglalabas ng ihi mula sa iyong pantog (urethra) o sa lugar na nakapalibot sa iyong ari (perineum).',
+  'en_desc': 'Discomfort or burning with urination, usually felt in the tube that carries urine out of your bladder (urethra) or the area surrounding your genitals (perineum).',
+  'ph_desc': 'Hindi komportable o nasusunog sa pag-ihi, kadalasang nararamdaman sa tubo na naglalabas ng ihi mula sa iyong pantog (urethra) o sa lugar na nakapalibot sa iyong ari (perineum).',
   'source': "['https://www.mayoclinic.org/symptoms/painful-urination/basics/definition/sym-20050772#:~:text=Painful%20urination%20(dysuria)%20is%20discomfort,surrounding%20your%20genitals%20(perineum).']"
 },
 {
   'symptom': 'ecchymosis',
   'en': 'ecchymosis',
   'ph': 'ecchymosis',
-  'en_desc': 'A small bruise caused by blood leaking from broken blood vessels into the tissues of the skin or mucous membranes.',
-  'ph_desc': 'Isang maliit na pasa na dulot ng pagtagas ng dugo mula sa mga sirang daluyan ng dugo papunta sa mga tisyu ng balat o mucous membrane.',
+  'en_desc': 'A small bruise caused by blood leaking from broken blood vessels into the tissues of the skin.',
+  'ph_desc': 'Isang maliit na pasa na dulot ng pagtagas ng dugo mula sa mga sirang daluyan ng dugo papunta sa mga tisyu ng balat.',
   'source': "['https://www.cancer.gov/publications/dictionaries/cancer-terms/def/ecchymosis']"
 },
 {
@@ -882,8 +818,8 @@ export default [{
   'symptom': 'elation',
   'en': 'elation',
   'ph': 'kagalakan',
-  'en_desc': 'State of heightened joy, exaggerated optimism, and restless excitement. ',
-  'ph_desc': 'Estado ng mas mataas na kagalakan, labis na optimismo, at hindi mapakali na kaguluhan.',
+  'en_desc': 'State of heightened joy, exaggerated optimism, and restless excitement.',
+  'ph_desc': 'Estado ng mas mataas na kagalakan, labis na optimismo, at hindi mapakali na pananabik.',
   'source': "['https://dictionary.apa.org/elation']"
 },
 {
@@ -899,15 +835,7 @@ export default [{
   'en': 'energy increased',
   'ph': 'mataas na enerhiya',
   'en_desc': 'People who score high on Energy are energetic, animated and enthusiastic.',
-  'ph_desc': 'Ang mga taong may mataas na marka sa Enerhiya ay masigla, animated at masigasig.',
-  'source': "['https://www.t-three.com/thinking-space/blog/understanding-high-and-low-energy-personalities-in-the-workplace#:~:text=People%20who%20score%20high%20on,quieter%2C%20more%20reserved%20and%20private.']"
-},
-{
-  'symptom': 'energy increased',
-  'en': 'energy increased',
-  'ph': 'mataas na enerhiya',
-  'en_desc': 'People who score high on Energy are energetic, animated and enthusiastic.',
-  'ph_desc': 'Ang mga taong may mataas na marka sa Enerhiya ay masigla, animated at masigasig.',
+  'ph_desc': 'Ang mga taong may mataas na marka sa enerhiya ay masigla, animated at masigasig.',
   'source': "['https://www.t-three.com/thinking-space/blog/understanding-high-and-low-energy-personalities-in-the-workplace#:~:text=People%20who%20score%20high%20on,quieter%2C%20more%20reserved%20and%20private.']"
 },
 {
@@ -915,7 +843,7 @@ export default [{
   'en': 'enuresis',
   'ph': 'enuresis',
   'en_desc': 'Enuresis is defined as intermittent urinary incontinence during sleep in a child at least five years of age.',
-  'ph_desc': 'Ang enuresis ay tinukoy bilang paulit-ulit na kawalan ng pagpipigil sa ihi sa panahon ng pagtulog sa isang bata na hindi bababa sa limang taong gulang.',
+  'ph_desc': 'Ang enuresis ay tumutukoy sa paulit-ulit na kawalan ng pagpipigil sa ihi sa panahon ng pagtulog sa isang bata na hindi bababa sa limang taong gulang.',
   'source': "['https://www.webmd.com/mental-health/enuresis']"
 },
 {
@@ -954,32 +882,24 @@ export default [{
   'symptom': 'extrapyramidal sign',
   'en': 'extrapyramidal sign',
   'ph': 'extrapyramidal sign',
-  'en_desc': 'Extrapyramidal symptoms, also called drug-induced movement disorders, describe the side effects caused by certain antipsychotic and other drugs.',
-  'ph_desc': 'Ang mga extrapyramidal na sintomas, na tinatawag ding drug-induced movement disorders, ay naglalarawan ng mga side effect na dulot ng ilang antipsychotic at iba pang gamot.',
+  'en_desc': 'Extrapyramidal symptoms describes the side effects caused by certain antipsychotic and other drugs.',
+  'ph_desc': 'Ang mga extrapyramidal na sintomas ay naglalarawan ng mga side effect na dulot ng ilang antipsychotic at iba pang gamot.',
   'source': "['https://www.healthline.com/health/symptom/extrapyramidal-symptoms#:~:text=Extrapyramidal%20symptoms%2C%20also%20called%20drug,muscle%20contractions']"
 },
 {
   'symptom': 'extreme exhaustion',
   'en': 'extreme exhaustion',
   'ph': 'matinding pagod',
-  'en_desc': 'Fatigue is a lingering tiredness that is constant and limiting. With fatigue, you have unexplained, persistent, and relapsing exhaustion.',
-  'ph_desc': 'Ang pagkapagod ay isang matagal na pagkapagod na patuloy at limitado. Sa pagkapagod, mayroon kang hindi maipaliwanag, paulit-ulit, at paulit-ulit na pagkahapo.',
+  'en_desc': 'Fatigue is a lingering tiredness that is constant and limiting.',
+  'ph_desc': 'Ang pagkapagod ay isang matagal na pagkapagod na patuloy at limitado.',
   'source': "['https://www.webmd.com/balance/how-tired-is-too-tired']"
 },
 {
   'symptom': 'facial paresis',
   'en': 'facial paresis',
   'ph': 'paresis ng mukha',
-  'en_desc': 'Facial nerve palsy (also known as facial paresis) refers to the paralysis of muscles that are activated (innervated) by the facial nerve. ',
-  'ph_desc': 'Ang facial nerve palsy (kilala rin bilang facial paresis) ay tumutukoy sa paralisis ng mga kalamnan na pinapagana (innervated) ng facial nerve.',
-  'source': "['https://stiwell.medel.com/neurology/facial-nerve-palsy#:~:text=Facial%20nerve%20palsy%20(also%20known,the%20nose%2C%20and%20the%20mouth.']"
-},
-{
-  'symptom': 'facial paresis',
-  'en': 'facial paresis',
-  'ph': 'paresis ng mukha',
-  'en_desc': 'Facial nerve palsy (also known as facial paresis) refers to the paralysis of muscles that are activated (innervated) by the facial nerve. ',
-  'ph_desc': 'Ang facial nerve palsy (kilala rin bilang facial paresis) ay tumutukoy sa paralisis ng mga kalamnan na pinapagana (innervated) ng facial nerve.',
+  'en_desc': 'Facial nerve palsy refers to the paralysis of muscles that are activated (innervated) by the facial nerve.',
+  'ph_desc': 'Ang facial nerve palsy ay tumutukoy sa paralisis ng mga kalamnan na pinapagana (innervated) ng facial nerve.',
   'source': "['https://stiwell.medel.com/neurology/facial-nerve-palsy#:~:text=Facial%20nerve%20palsy%20(also%20known,the%20nose%2C%20and%20the%20mouth.']"
 },
 {
@@ -987,7 +907,7 @@ export default [{
   'en': 'fall',
   'ph': 'pagkahulog',
   'en_desc': 'A fall is an event that results in a person coming to rest inadvertently on the ground or floor or other lower level.',
-  'ph_desc': 'Ang pagkahulog ay isang kaganapan na nagreresulta sa isang tao na hindi sinasadyang magpahinga sa lupa o sahig o iba pang mas mababang antas.',
+  'ph_desc': 'Ang pagkahulog ay isang kaganapan na nagreresulta sa isang tao na hindi sinasadyang malaglag sa lupa o sahig o iba pang mas mababang antas.',
   'source': "['https://www.health.vic.gov.au/wellbeing-and-participation/definition-of-a-fall']"
 },
 {
@@ -1004,14 +924,14 @@ export default [{
   'ph': 'pagkapagod',
   'en_desc': 'Fatigue is a feeling of constant tiredness or weakness and can be physical, mental or a combination of both.',
   'ph_desc': 'Ang pagkapagod ay isang pakiramdam ng patuloy na pagkapagod o panghihina at maaaring pisikal, mental o kumbinasyon ng dalawa.',
-  'source': "[https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/fatigue'']"
+  'source': "['https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/fatigue']"
 },
 {
   'symptom': 'fear of falling',
   'en': 'fear of falling',
   'ph': 'takot mahulog',
-  'en_desc': "A fear of falling (FOF) or post-fall syndrome is a person's anxiety towards usual or normal walking or mobilising, with the perception that a fall will occur. ",
-  'ph_desc': 'Ang takot sa pagkahulog o post-fall syndrome ay ang pagkabalisa ng isang tao sa karaniwan o normal na paglalakad o pagpapakilos, na may pang-unawa na magkakaroon ng pagkahulog.',
+  'en_desc': "A fear of falling (FOF) or post-fall syndrome is a person's anxiety towards usual or normal walking or mobilising, with the perception that a fall will occur.",
+  'ph_desc': 'Ang takot sa pagkahulog o post-fall syndrome ay ang pagkabalisa ng isang tao sa karaniwan na paglalakad o pagpapakilos, na may pang-unawa na magkakaroon ng pagkahulog.',
   'source': "['https://www.physio-pedia.com/Fear_of_Falling']"
 },
 {
@@ -1026,49 +946,33 @@ export default [{
   'symptom': 'feces in rectum',
   'en': 'feces in rectum',
   'ph': 'dumi sa tumbong',
-  'en_desc': 'A fecal impaction is a large lump of dry, hard stool that stays stuck in the rectum. It is most often seen in people who are constipated for a long time.',
-  'ph_desc': 'Ang fecal impaction ay isang malaking bukol ng tuyo at matigas na dumi na nananatili sa tumbong. Ito ay madalas na makikita sa mga taong natitibi sa mahabang panahon.',
+  'en_desc': 'A fecal impaction is a large lump of dry, hard stool that stays stuck in the rectum. ',
+  'ph_desc': 'Ang fecal impaction ay isang malaking bukol ng tuyo at matigas na dumi na nananatili sa tumbong. ',
   'source': "['https://medlineplus.gov/ency/article/000230.htm#:~:text=A%20fecal%20impaction%20is%20a,constipated%20for%20a%20long%20time.']"
 },
 {
   'symptom': 'feeling hopeless',
   'en': 'feeling hopeless',
   'ph': 'pakiramdam na walang pag-asa',
-  'en_desc': 'Hopelessness is a feeling of despair or lack of hope that life can feel better than it does.',
-  'ph_desc': 'Ang kawalan ng pag-asa ay isang pakiramdam ng kawalan ng pag-asa o kawalan ng pag-asa na ang buhay ay maaaring maging mas mahusay kaysa sa nararamdaman nito.',
+  'en_desc': 'A feeling of despair or lack of hope that life can feel better than it does.',
+  'ph_desc': 'Kawalan ng pag-asa na ang buhay ay maaaring maging mas mahusay kaysa sa nararamdaman nito.',
   'source': "['https://jedfoundation.org/resource/tips-for-dealing-with-hopelessness/#:~:text=Hopelessness%20is%20a%20feeling%20of,can%20lead%20to%20suicidal%20thoughts.']"
 },
 {
   'symptom': 'feeling suicidal',
   'en': 'feeling suicidal',
   'ph': 'pakiramdam ng pagpapakamatay',
-  'en_desc': 'If you are thinking about suicide, your pain may seem overwhelming and permanent. But there are ways to cope with suicidal thoughts and feelings and overcome the pain.',
-  'ph_desc': 'Kung iniisip mo ang tungkol sa pagpapakamatay, ang iyong sakit ay maaaring mukhang napakalaki at permanente. Ngunit may mga paraan upang makayanan ang mga saloobin at damdamin ng pagpapakamatay at mapagtagumpayan ang sakit.',
+  'en_desc': 'Suicidal behavior is any action that could cause a person to die, such as taking a drug overdose or crashing a car on purpose.',
+  'ph_desc': 'Ang pag-uugali ng pagpapakamatay ay anumang aksyon na maaaring maging sanhi ng pagkamatay ng isang tao, tulad ng pag-inom ng labis na dosis ng droga o pag-crash ng kotse nang sinasadya.',
   'source': "['https://www.helpguide.org/articles/suicide-prevention/are-you-feeling-suicidal.htm']"
-},
-{
-  'symptom': 'feeling hopeless',
-  'en': 'feeling hopeless',
-  'ph': 'pakiramdam na walang pag-asa',
-  'en_desc': 'Hopelessness is a feeling of despair or lack of hope that life can feel better than it does.',
-  'ph_desc': 'Ang kawalan ng pag-asa ay isang pakiramdam ng kawalan ng pag-asa o kawalan ng pag-asa na ang buhay ay maaaring maging mas mahusay kaysa sa nararamdaman nito.',
-  'source': "['https://jedfoundation.org/resource/tips-for-dealing-with-hopelessness/#:~:text=Hopelessness%20is%20a%20feeling%20of,can%20lead%20to%20suicidal%20thoughts.']"
 },
 {
   'symptom': 'feeling strange',
   'en': 'feeling strange',
   'ph': 'kakaiba ang pakiramdam',
-  'en_desc': 'If you can not feel as well, especially with your hands or feet, it\’s known as impaired sensation.',
+  'en_desc': 'If you can not feel as well, especially with your hands or feet, it is known as impaired sensation.',
   'ph_desc': 'Kung hindi mo rin maramdaman, lalo na sa iyong mga kamay o paa, ito ay kilala bilang may kapansanan sa sensasyon.',
   'source': "[https://www.healthline.com/health/impaired-sensation']"
-},
-{
-  'symptom': 'feeling suicidal',
-  'en': 'feeling suicidal',
-  'ph': 'pakiramdam ng pagpapakamatay',
-  'en_desc': 'If you are thinking about suicide, your pain may seem overwhelming and permanent. But there are ways to cope with suicidal thoughts and feelings and overcome the pain.',
-  'ph_desc': 'Kung iniisip mo ang tungkol sa pagpapakamatay, ang iyong sakit ay maaaring mukhang napakalaki at permanente. Ngunit may mga paraan upang makayanan ang mga saloobin at damdamin ng pagpapakamatay at mapagtagumpayan ang sakit.',
-  'source': "['https://www.helpguide.org/articles/suicide-prevention/are-you-feeling-suicidal.htm']"
 },
 {
   'symptom': 'feels hot/feverish',
@@ -1090,8 +994,8 @@ export default [{
   'symptom': 'flare',
   'en': 'flare',
   'ph': 'flare',
-  'en_desc': "The definition of “flare” is a worsening of the disease process. If you have arthritis, you've probably experienced a flare at one time or another – your disease seems to be well under control for a while, then suddenly your joints become inflamed and painful.",
-  'ph_desc': 'Ang kahulugan ng "flare" ay isang paglala ng proseso ng sakit. Kung mayroon kang arthritis, malamang na nakaranas ka ng flare sa isang pagkakataon o iba pa - ang iyong sakit ay tila nakontrol nang ilang sandali, pagkatapos ay biglang namamaga at masakit ang iyong mga kasukasuan.',
+  'en_desc': "The definition of “flare” is a worsening of the disease process.",
+  'ph_desc': 'Ang kahulugan ng "flare" ay isang paglala ng proseso ng sakit. ',
   'source': "['https://www.arthritis.org/health-wellness/healthy-living/managing-pain/pain-relief-solutions/what-is-a-flare#:~:text=Answer%3A%20The%20definition%20of%20%E2%80%9Cflare,experience%20general%20malaise%20and%20fatigue.']"
 },
 {
@@ -1122,17 +1026,9 @@ export default [{
   'symptom': 'focal seizures',
   'en': 'focal seizures',
   'ph': 'focal seizures',
-  'en_desc': 'Focal seizures, or partial seizures, occur when there is a disruption of electrical impulses in one part of the brain.',
-  'ph_desc': 'Ang mga focal seizure, o partial seizures, ay nangyayari kapag may pagkagambala sa mga electrical impulses sa isang bahagi ng utak.',
+  'en_desc': 'Focal seizures occur when there is a disruption of electrical impulses in one part of the brain.',
+  'ph_desc': 'Ang mga focal seizure ay nangyayari kapag may pagkagambala sa mga electrical impulses sa isang bahagi ng utak.',
   'source': "['https://www.medicalnewstoday.com/articles/323642#:~:text=Focal%20seizures%2C%20or%20partial%20seizures,experiencing%20a%20complex%20focal%20seizure.']"
-},
-{
-  'symptom': 'food intolerance',
-  'en': 'food intolerance',
-  'ph': 'hindi pagpaparaan sa pagkain',
-  'en_desc': 'Food intolerance is a digestive system response rather than an immune system response.',
-  'ph_desc': 'Ang hindi pagpaparaan sa pagkain ay isang tugon ng digestive system sa halip na isang tugon ng immune system.',
-  'source': "['https://my.clevelandclinic.org/health/diseases/10009-food-problems-is-it-an-allergy-or-intolerance']"
 },
 {
   'symptom': 'food intolerance',
@@ -1171,7 +1067,7 @@ export default [{
   'en': 'frothy sputum',
   'ph': 'mabula na plema',
   'en_desc': 'Frothy sputum is mucus that is foamy and contains bubbles.',
-  'ph_desc': 'Ang mabula na plema ay mucus na mabula at naglalaman ng mga bula.',
+  'ph_desc': 'Ang mabula na plema ay mucus na mabula.',
   'source': "['https://www.medicalnewstoday.com/articles/318924#:~:text=Frothy%20sputum%20is%20mucus%20that,this%20is%20a%20new%20symptom.']"
 },
 {
@@ -1186,24 +1082,16 @@ export default [{
   'symptom': 'gasping for breath',
   'en': 'gasping for breath',
   'ph': 'hangos',
-  'en_desc': "The desperate gasping for air is usually a symptom of the heart no longer circulating oxygenated blood, or there's an interruption of lung activity that's reducing oxygen intake.",
-  'ph_desc': 'Ang desperado na paghinga para sa hangin ay karaniwang sintomas ng puso na hindi na nagpapalipat-lipat ng oxygenated na dugo, o may pagkagambala sa aktibidad ng baga na nagpapababa ng paggamit ng oxygen.',
+  'en_desc': "The desperate gasping for air is usually a symptom of the heart no longer circulating oxygenated blood..",
+  'ph_desc': 'Ang desperado na paghinga para sa hangin ay karaniwang sintomas ng puso na hindi na nagpapalipat-lipat ng oxygenated na dugo.',
   'source': "['https://www.healthline.com/health/agonal-breathing#:~:text=The%20desperate%20gasping%20for%20air,local%20emergency%20medical%20services%20immediately.']"
 },
 {
   'symptom': 'general discomfort',
   'en': 'general discomfort',
   'ph': 'pangkalahatang kakulangan sa ginhawa',
-  'en_desc': 'Malaise is a feeling of weakness, overall discomfort, illness, or simply not feeling well, you can often experience a general sense of discomfort and unease.',
-  'ph_desc': 'Ang malaise ay isang pakiramdam ng kahinaan, pangkalahatang kakulangan sa ginhawa, karamdaman, o simpleng hindi maganda ang pakiramdam, madalas kang makaranas ng pangkalahatang pakiramdam ng kakulangan sa ginhawa at pagkabalisa.',
-  'source': "['https://www.healthline.com/health/malaise']"
-},
-{
-  'symptom': 'general discomfort',
-  'en': 'general discomfort',
-  'ph': 'pangkalahatang kakulangan sa ginhawa',
-  'en_desc': 'Malaise is a feeling of weakness, overall discomfort, illness, or simply not feeling well, you can often experience a general sense of discomfort and unease.',
-  'ph_desc': 'Ang malaise ay isang pakiramdam ng kahinaan, pangkalahatang kakulangan sa ginhawa, karamdaman, o simpleng hindi maganda ang pakiramdam, madalas kang makaranas ng pangkalahatang pakiramdam ng kakulangan sa ginhawa at pagkabalisa.',
+  'en_desc': 'Malaise is a feeling of weakness, overall discomfort, illness, or simply not feeling well.',
+  'ph_desc': 'Ang malaise ay isang pakiramdam ng kahinaan, pangkalahatang kakulangan sa ginhawa, karamdaman, o simpleng hindi maganda ang pakiramdam.',
   'source': "['https://www.healthline.com/health/malaise']"
 },
 {
@@ -1242,16 +1130,16 @@ export default [{
   'symptom': 'green sputum',
   'en': 'green sputum',
   'ph': 'berdeng plema',
-  'en_desc': 'If you see green or yellow phlegm, it is usually a sign that your body is fighting an infection. The change occurs with the severity and length of the potential sickness.',
-  'ph_desc': 'Kung makakita ka ng berde o dilaw na plema, kadalasan ito ay senyales na ang iyong katawan ay lumalaban sa isang impeksiyon. Ang pagbabago ay nangyayari sa kalubhaan at haba ng potensyal na pagkakasakit.',
+  'en_desc': 'If you see green or yellow phlegm, it is usually a sign that your body is fighting an infection.',
+  'ph_desc': 'Kung makakita ka ng berde o dilaw na plema, kadalasan ito ay senyales na ang iyong katawan ay lumalaban sa isang impeksiyon.',
   'source': "['https://www.healthline.com/health/green-phlegm#green-or-yellow-phlegm']"
 },
 {
   'symptom': 'green sputum',
   'en': 'green sputum',
   'ph': 'berdeng plema',
-  'en_desc': 'If you see green or yellow phlegm, it is usually a sign that your body is fighting an infection. The change occurs with the severity and length of the potential sickness.',
-  'ph_desc': 'Kung makakita ka ng berde o dilaw na plema, kadalasan ito ay senyales na ang iyong katawan ay lumalaban sa isang impeksiyon. Ang pagbabago ay nangyayari sa kalubhaan at haba ng potensyal na pagkakasakit.',
+  'en_desc': 'If you see green or yellow phlegm, it is usually a sign that your body is fighting an infection.',
+  'ph_desc': 'Kung makakita ka ng berde o dilaw na plema, kadalasan ito ay senyales na ang iyong katawan ay lumalaban sa isang impeksiyon.',
   'source': "['https://www.healthline.com/health/green-phlegm#green-or-yellow-phlegm']"
 },
 {
@@ -1266,8 +1154,8 @@ export default [{
   'symptom': 'guaiac positive',
   'en': 'guaiac positive',
   'ph': 'guaiac positive',
-  'en_desc': 'The stool guaiac test looks for hidden (occult) blood in a stool sample. It can find blood even if you cannot see it yourself. It is the most common type of fecal occult blood test (FOBT).',
-  'ph_desc': 'Ang stool guaiac test ay naghahanap ng nakatagong (occult) na dugo sa isang sample ng dumi. Maaari itong makahanap ng dugo kahit na hindi mo ito nakikita sa iyong sarili. Ito ang pinakakaraniwang uri ng fecal occult blood test.',
+  'en_desc': 'The stool guaiac test looks for hidden (occult) blood in a stool sample. It can find blood even if you cannot see it yourself. ',
+  'ph_desc': 'Ang stool guaiac test ay naghahanap ng nakatagong (occult) na dugo sa isang sample ng dumi. Maaari itong makahanap ng dugo kahit na hindi mo ito nakikita sa iyong sarili. ',
   'source': "['https://medlineplus.gov/ency/article/003393.htm']"
 },
 {
@@ -1282,8 +1170,8 @@ export default [{
   'symptom': 'hacking cough',
   'en': 'hacking cough',
   'ph': 'hacking cough',
-  'en_desc': 'Whooping cough (pertussis) is a highly contagious respiratory tract infection. In many people, it\'s marked by a severe hacking cough followed by a high-pitched intake of breath that sounds like "whoop."',
-  'ph_desc': 'Ang whooping cough ay isang nakakahawa na impeksyon sa respiratory tract. Sa maraming tao, ito ay minarkahan ng isang matinding pag-hack na ubo na sinusundan ng isang malakas na paghinga na parang "whoop."',
+  'en_desc': 'Whooping cough (pertussis) is a highly contagious respiratory tract infection. ',
+  'ph_desc': 'Ang whooping cough ay isang nakakahawa na impeksyon sa respiratory tract.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/whooping-cough/symptoms-causes/syc-20378973#:~:text=Overview,that%20sounds%20like%20%22whoop.%22']"
 },
 {
@@ -1327,14 +1215,6 @@ export default [{
   'source': "['https://www.psychiatrictimes.com/view/auditory-hallucinations-psychiatric-illness']"
 },
 {
-  'symptom': 'hallucinations visual',
-  'en': 'hallucinations visual',
-  'ph': 'hallucinations visual',
-  'en_desc': 'Visual hallucinations involve seeing things that are not there. The hallucinations may be of objects, visual patterns, people, or lights.',
-  'ph_desc': 'Kasama sa visual hallucinations ang pagtingin sa mga bagay na wala doon. Ang mga guni-guni ay maaaring ng mga bagay, visual pattern, tao, o mga ilaw.',
-  'source': "['https://www.healthline.com/health/hallucinations']"
-},
-{
   'symptom': 'has religious belief',
   'en': 'has religious belief',
   'ph': 'may paniniwalang panrelihiyon',
@@ -1346,8 +1226,8 @@ export default [{
   'symptom': 'headache',
   'en': 'headache',
   'ph': 'sakit ng ulo',
-  'en_desc': 'Headaches are a very common condition that most people will experience many times during their lives.',
-  'ph_desc': 'Ang pananakit ng ulo ay isang pangkaraniwang kondisyon na mararanasan ng karamihan sa mga tao nang maraming beses sa kanilang buhay.',
+  'en_desc': 'Headache is pain in any region of the head.',
+  'ph_desc': 'Ang pananakit ng ulo ay pananakit sa alinmang rehiyon ng ulo.',
   'source': "['https://my.clevelandclinic.org/health/diseases/9639-headaches#:~:text=Headaches%20are%20a%20very%20common,medication%2C%20stress%20management%20and%20biofeedback.']"
 },
 {
@@ -1362,16 +1242,16 @@ export default [{
   'symptom': 'heavy feeling',
   'en': 'heavy feeling',
   'ph': 'mabigat na pakiramdam',
-  'en_desc': 'It may be difficult to pinpoint exactly why you may experience either that sudden feeling of heaviness in the body or a more ongoing heaviness. There could be an underlying condition related to your thyroid, insulin processing, or even your mental health.',
-  'ph_desc': 'Maaaring mahirap matukoy nang eksakto kung bakit maaari mong maranasan ang alinman sa biglaang pakiramdam ng bigat sa katawan o isang mas patuloy na pagbigat. Maaaring may pinagbabatayan na kondisyon na nauugnay sa iyong thyroid, pagpoproseso ng insulin, o maging sa iyong kalusugan ng isip.',
+  'en_desc': 'Sudden feeling of heaviness in the body or a more ongoing heaviness. There could be an underlying condition related to your thyroid, insulin processing, or even your mental health.',
+  'ph_desc': 'Biglaang pakiramdam ng bigat sa katawan o isang mas patuloy na pagbigat. Maaaring may pinagbabatayan na kondisyon na nauugnay sa iyong thyroid, pagpoproseso ng insulin, o maging sa iyong kalusugan ng isip.',
   'source': "['https://www.parsleyhealth.com/blog/what-i-do-when-im-feeling-heavy-tired-and-toxic/']"
 },
 {
   'symptom': 'heavy legs',
   'en': 'heavy legs',
   'ph': 'mabigat na binti',
-  'en_desc': 'Heavy legs are often described as legs that feel weighted, stiff, and tired — as if the legs are hard to lift and move forward. It might almost feel as if you\’re dragging around a 5-pound bag of flour.',
-  'ph_desc': 'Ang mabibigat na binti ay kadalasang inilalarawan bilang mga binti na nakakaramdam ng bigat, paninigas, at pagod — na parang ang mga binti ay mahirap iangat at sumulong. Maaari itong pakiramdam na parang hinihila mo ang isang 5-pound na bag ng harina.',
+  'en_desc': 'Heavy legs are often described as legs that feel weighted, stiff, and tired — as if the legs are hard to lift and move forward. ',
+  'ph_desc': 'Ang mabibigat na binti ay kadalasang inilalarawan bilang mga binti na nakakaramdam ng bigat, paninigas, at pagod — na parang ang mga binti ay mahirap iangat at sumulong. ',
   'source': "['https://www.healthline.com/health/heavy-legs#_noHeaderPrefixedContent']"
 },
 {
@@ -1394,8 +1274,8 @@ export default [{
   'symptom': 'hematuria',
   'en': 'hematuria',
   'ph': 'hematuria',
-  'en_desc': "Hematuria is the presence of blood in a person's urine. The two types of hematuria are. gross hematuria—when a person can see the blood in his or her urine. ",
-  'ph_desc': 'Ang hematuria ay ang pagkakaroon ng dugo sa ihi ng isang tao. Ang dalawang uri ng hematuria ay gross hematuria—kapag nakikita ng isang tao ang dugo sa kanyang ihi.',
+  'en_desc': "Hematuria is the presence of blood in a person's urine.",
+  'ph_desc': 'Ang hematuria ay ang pagkakaroon ng dugo sa ihi ng isang tao. ',
   'source': "['https://www.niddk.nih.gov/health-information/urologic-diseases/hematuria-blood-urine#:~:text=Hematuria%20is%20the%20presence%20of,is%20seen%20under%20a%20microscope']"
 },
 {
@@ -1418,24 +1298,24 @@ export default [{
   'symptom': 'hemiplegia',
   'en': 'hemiplegia',
   'ph': 'hemiplegia',
-  'en_desc': 'Hemiplegia, paralysis of the muscles of the lower face, arm, and leg on one side of the body',
-  'ph_desc': 'Hemiplegia, paralisis ng mga kalamnan ng ibabang mukha, braso, at binti sa isang bahagi ng katawan',
+  'en_desc': 'Hemiplegia, paralysis of the muscles of the lower face, arm, and leg on one side of the body.',
+  'ph_desc': 'Hemiplegia, paralisis ng mga kalamnan ng ibabang mukha, braso, at binti sa isang bahagi ng katawan.',
   'source': "['https://www.britannica.com/science/hemiplegia']"
 },
 {
   'symptom': 'hemodynamically stable',
   'en': 'hemodynamically stable',
   'ph': 'hemodynamically stable',
-  'en_desc': 'Haemodynamic stability is the term used to describe stable blood flow. When it is said that someone is hemodynamically stable, it means the blood pressure and heart rate of that person are stable.',
-  'ph_desc': 'Ang hemodynamic stability ay ang terminong ginamit upang ilarawan ang matatag na daloy ng dugo. Kapag sinabing hemodynamically stable ang isang tao, ibig sabihin ay stable na ang blood pressure at heart rate ng taong iyon.',
+  'en_desc': 'Haemodynamic stability is the term used to describe stable blood flow.',
+  'ph_desc': 'Ang hemodynamic stability ay ang terminong ginamit upang ilarawan ang matatag na daloy ng dugo.',
   'source': "['https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/what-is-hemodynamically-stable-here-is-all-you-need-to-know-about-this-medical-term/articleshow/77546552.cms#:~:text=Haemodynamic%20stability%20is%20the%20term,of%20that%20person%20are%20stable.']"
 },
 {
   'symptom': 'hepatomegaly',
   'en': 'hepatomegaly',
   'ph': 'hepatomegaly',
-  'en_desc': "An enlarged liver is one that's bigger than normal. The medical term is hepatomegaly (hep-uh-toe-MEG-uh-le). ",
-  'ph_desc': 'Ang pinalaki na atay ay isa na mas malaki kaysa karaniwan. Ang terminong medikal ay hepatomegaly (hep-uh-toe-MEG-uh-le).',
+  'en_desc': "An enlarged liver is one that's bigger than normal.",
+  'ph_desc': 'Ang pinalaki na atay ay isa na mas malaki kaysa karaniwan.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/enlarged-liver/symptoms-causes/syc-20372167#:~:text=An%20enlarged%20liver%20is%20one,congestive%20heart%20failure%20or%20cancer.']"
 },
 {
@@ -1450,7 +1330,7 @@ export default [{
   'symptom': 'hirsutism',
   'en': 'hirsutism',
   'ph': 'hirsutismo',
-  'en_desc': 'Hirsutism (HUR-soot-iz-um) is a condition in women that results in excessive growth of dark or coarse hair in a male-like pattern — face, chest and back.',
+  'en_desc': 'Hirsutism is a condition in women that results in excessive growth of dark or coarse hair in a male-like pattern — face, chest and back.',
   'ph_desc': 'Ang Hirsutism ay isang kondisyon sa mga kababaihan na nagreresulta sa labis na paglaki ng maitim o magaspang na buhok na parang lalaki — mukha, dibdib at likod.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/hirsutism/symptoms-causes/syc-20354935#:~:text=Hirsutism%20(HUR%2Dsoot%2Diz,(androgens)%2C%20primarily%20testosterone.']"
 },
@@ -1474,8 +1354,8 @@ export default [{
   'symptom': 'hoarseness',
   'en': 'hoarseness',
   'ph': 'pamamalat',
-  'en_desc': 'Hoarseness (dysphonia) is when your voice sounds raspy, strained or breathy. The volume (how loud or soft you speak) may be different and so may the pitch (how high or low your voice sounds).',
-  'ph_desc': 'Ang pamamaos (dysphonia) ay kapag ang iyong boses ay parang garal, pilit o humihinga. Ang lakas ng tunog (kung gaano kalakas o mahina ang iyong pagsasalita) ay maaaring mag-iba at gayundin ang pitch (kung gaano kataas o kababa ang tunog ng iyong boses).',
+  'en_desc': 'Hoarseness (dysphonia) is when your voice sounds raspy, strained or breathy. ',
+  'ph_desc': 'Ang pamamaos (dysphonia) ay kapag ang iyong boses ay parang garal, pilit o humihinga. ',
   'source': "['https://my.clevelandclinic.org/health/diseases/17105-hoarseness#:~:text=Hoarseness%20(dysphonia)%20is%20when%20your,away%20after%20a%20short%20time.']"
 },
 {
@@ -1490,16 +1370,16 @@ export default [{
   'symptom': 'homicidal thoughts',
   'en': 'homicidal thoughts',
   'ph': 'mga pag-iisip ng pagpatay',
-  'en_desc': 'Homicidal ideation, also known as homicidal thoughts, refers to thinking about, considering, or. planning a homicide.',
-  'ph_desc': 'Ang homicidal ideation, na kilala rin bilang homicidal thoughts, ay tumutukoy sa pag-iisip, pagsasaalang-alang, o. nagpaplano ng homicide.',
+  'en_desc': 'Homicidal ideation refers to thinking about, considering, or. planning a homicide.',
+  'ph_desc': 'Ang homicidal ideation ay tumutukoy sa pag-iisip, pagsasaalang-alang, o. nagpaplano ng homicide.',
   'source': "['https://health.mil/Reference-Center/Publications/2019/05/01/Suicidal-Ideation#:~:text=Homicidal%20ideation%2C%20also%20known%20as,in%20the%20United%20States.3']"
 },
 {
   'symptom': 'hot flush',
   'en': 'hot flush',
   'ph': 'hot flush',
-  'en_desc': "A hot flash is the sudden feeling of warmth in the upper body, which is usually most intense over the face, neck and chest. Your skin might redden, as if you're blushing. A hot flash can also cause sweating.",
-  'ph_desc': 'Ang hot flash ay ang biglaang pakiramdam ng init sa itaas na bahagi ng katawan, na kadalasang pinakamatindi sa mukha, leeg at dibdib. Baka mamula ang balat mo, para kang namumula. Ang isang mainit na flash ay maaari ding maging sanhi ng pagpapawis.',
+  'en_desc': "A hot flash is the sudden feeling of warmth in the upper body, which is usually most intense over the face, neck and chest.",
+  'ph_desc': 'Ang hot flash ay ang biglaang pakiramdam ng init sa itaas na bahagi ng katawan, na kadalasang pinakamatindi sa mukha, leeg at dibdib.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/hot-flashes/symptoms-causes/syc-20352790#:~:text=Overview,flash%20can%20also%20cause%20sweating.']"
 },
 {
@@ -1530,8 +1410,8 @@ export default [{
   'symptom': 'hypercapnia',
   'en': 'hypercapnia',
   'ph': 'hypercapnia',
-  'en_desc': 'Hypercapnia is a buildup of carbon dioxide in your bloodstream. It affects people who have chronic obstructive pulmonary disease (COPD).',
-  'ph_desc': 'Ang hypercapnia ay isang buildup ng carbon dioxide sa iyong bloodstream. Nakakaapekto ito sa mga taong may talamak na obstructive pulmonary disease (COPD).',
+  'en_desc': 'Hypercapnia is a buildup of carbon dioxide in your bloodstream. ',
+  'ph_desc': 'Ang hypercapnia ay isang buildup ng carbon dioxide sa iyong bloodstream. ',
   'source': "['https://www.webmd.com/lung/copd/hypercapnia-copd-related#:~:text=Hypercapnia%20is%20a%20buildup%20of,easily%20as%20other%20people%20do.']"
 },
 {
@@ -1546,16 +1426,16 @@ export default [{
   'symptom': 'hyperhidrosis disorder',
   'en': 'hyperhidrosis disorder',
   'ph': 'hyperhidrosis disorder',
-  'en_desc': "Hyperhidrosis (hi-pur-hi-DROE-sis) is abnormally excessive sweating that's not necessarily related to heat or exercise.",
-  'ph_desc': 'Ang hyperhidrosis (hi-pur-hi-DROE-sis) ay abnormal na labis na pagpapawis na hindi kinakailangang nauugnay sa init o ehersisyo.',
+  'en_desc': "Hyperhidrosis is abnormally excessive sweating that's not necessarily related to heat or exercise.",
+  'ph_desc': 'Ang hyperhidrosis ay abnormal na labis na pagpapawis na hindi kinakailangang nauugnay sa init o ehersisyo.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/hyperhidrosis/symptoms-causes/syc-20367152#:~:text=Hyperhidrosis%20(hi%2Dpur%2Dhi,cause%20social%20anxiety%20and%20embarrassment.']"
 },
 {
   'symptom': 'hyperkalemia',
   'en': 'hyperkalemia',
   'ph': 'hyperkalemia',
-  'en_desc': 'High potassium (called “hyperkalemia”) is a medical problem in which you have too much potassium in your blood. ',
-  'ph_desc': 'Ang mataas na potassium (tinatawag na "hyperkalemia") ay isang medikal na problema kung saan mayroon kang masyadong maraming potassium sa iyong dugo.',
+  'en_desc': 'Hyperkalemia is a medical problem in which you have too much potassium in your blood.',
+  'ph_desc': 'Ang hyperkalemia ay isang medikal na problema kung saan mayroon kang masyadong maraming potassium sa iyong dugo.',
   'source': "['https://www.kidney.org/atoz/content/what-hyperkalemia#:~:text=High%20potassium%20(called%20%E2%80%9Chyperkalemia%E2%80%9D,heart%2C%20work%20the%20right%20way.']"
 },
 {
@@ -1618,16 +1498,16 @@ export default [{
   'symptom': 'hypokalemia',
   'en': 'hypokalemia',
   'ph': 'hypokalemia',
-  'en_desc': 'Low potassium (hypokalemia) refers to a lower than normal potassium level in your bloodstream. ',
-  'ph_desc': 'Ang mababang potasa (hypokalemia) ay tumutukoy sa mas mababa sa normal na antas ng potasa sa iyong daluyan ng dugo.',
+  'en_desc': 'Refers to a lower than normal potassium level in your bloodstream. ',
+  'ph_desc': 'Tumutukoy sa mas mababa sa normal na antas ng potasa o potassium sa iyong daluyan ng dugo.',
   'source': "['https://www.mayoclinic.org/symptoms/low-potassium/basics/definition/sym-20050632#:~:text=Low%20potassium%20(hypokalemia)%20refers%20to,cells%2C%20particularly%20heart%20muscle%20cells.']"
 },
 {
   'symptom': 'hypokinesia',
   'en': 'hypokinesia',
   'ph': 'hypokinesia',
-  'en_desc': 'Hypokinesia (Greek “from below” + “movement”), also referred to as bradykinesia, is a state of the body in which insufficient motor activity is observed, which leads to a limitation of the pace and range of movements.',
-  'ph_desc': 'Hypokinesia na tinutukoy din bilang bradykinesia, ay isang estado ng katawan kung saan ang hindi sapat na aktibidad ng motor ay sinusunod, na humahantong sa isang limitasyon ng bilis at hanay ng mga paggalaw.',
+  'en_desc': 'Hypokinesia is a state of the body in which insufficient motor activity is observed, which leads to a limitation of the pace and range of movements.',
+  'ph_desc': 'Ang hypokinesia ay isang estado ng katawan kung saan ang hindi sapat na aktibidad ng motor ay sinusunod, na humahantong sa isang limitasyon ng bilis at hanay ng mga paggalaw.',
   'source': "['https://lonestarneurology.net/blog/what-is-hypokinesia/#:~:text=Hypokinesia%20(Greek%20%E2%80%9Cfrom%20below%E2%80%9D,pace%20and%20range%20of%20movements.']"
 },
 {
@@ -1650,8 +1530,8 @@ export default [{
   'symptom': 'hypoproteinemia',
   'en': 'hypoproteinemia',
   'ph': 'hypoproteinemia',
-  'en_desc': 'Hypoproteinemia is lower-than-normal levels of protein in the body. Protein is an essential nutrient found in almost every part of your body — including your bones, muscles, skin, hair, and nails.',
-  'ph_desc': 'Ang hypoproteinemia ay mas mababa kaysa sa normal na antas ng protina sa katawan. Ang protina ay isang mahalagang nutrient na matatagpuan sa halos bawat bahagi ng iyong katawan — kabilang ang iyong mga buto, kalamnan, balat, buhok, at mga kuko.',
+  'en_desc': 'Hypoproteinemia is lower-than-normal levels of protein in the body.',
+  'ph_desc': 'Ang hypoproteinemia ay mas mababa kaysa sa normal na antas ng protina sa katawan.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/hyponatremia/symptoms-causes/syc-20373711#:~:text=In%20hyponatremia%2C%20one%20or%20more,from%20mild%20to%20life%2Dthreatening.']"
 },
 {
@@ -1690,8 +1570,8 @@ export default [{
   'symptom': 'immobile',
   'en': 'immobile',
   'ph': 'hindi kumikibo',
-  'en_desc': 'Immobility refers to the state in which an individual has a limitation in independent, purposeful physical movement of the body or of one or more lower extremities.',
-  'ph_desc': "Ang kawalang-kilos ay tumutukoy sa estado kung saan ang isang indibidwal ay may limitasyon sa independyente, may layuning pisikal na paggalaw ng katawan o ng isa o higit pang mas mababang mga paa't kamay.",
+  'en_desc': 'Immobility refers to the state in which an individual has a limitation in independent, purposeful physical movement of the body.',
+  'ph_desc': "Ang kawalang-kilos ay tumutukoy sa estado kung saan ang isang indibidwal ay may limitasyon sa independyente, may layuning pisikal na paggalaw ng katawan.",
   'source': "['https://accessmedicine.mhmedical.com/content.aspx?bookid=678&sectionid=44833888#:~:text=Immobility%20refers%20to%20the%20state,one%20or%20more%20lower%20extremities.']"
 },
 {
@@ -1706,8 +1586,8 @@ export default [{
   'symptom': 'inappropriate affect',
   'en': 'inappropriate affect',
   'ph': 'hindi naaangkop na epekto',
-  'en_desc': 'As noted, inappropriate affect involves the display of reactions that do not match the situation that you are in or possibly even your internal state.',
-  'ph_desc': 'Gaya ng nabanggit, ang hindi naaangkop na epekto ay nagsasangkot ng pagpapakita ng mga reaksyon na hindi tumutugma sa sitwasyon kung nasaan ka o posibleng maging ang iyong panloob na estado.',
+  'en_desc': 'Inappropriate affect involves the display of reactions that do not match the situation that you are in or possibly even your internal state.',
+  'ph_desc': 'Ang hindi naaangkop na epekto ay nagsasangkot ng pagpapakita ng mga reaksyon na hindi tumutugma sa sitwasyon kung nasaan ka o posibleng maging ang iyong panloob na estado.',
   'source': "['https://www.verywellmind.com/understanding-inappropriate-affect-4767992#:~:text=As%20noted%2C%20inappropriate%20affect%20involves,umbrella%20term%20%22inappropriate%20affect.%22']"
 },
 {
@@ -1722,8 +1602,8 @@ export default [{
   'symptom': 'indifferent mood',
   'en': 'indifferent mood',
   'ph': 'walang malasakit na kalooban',
-  'en_desc': 'Apathy describes an absence of feeling or emotion. This indifference can affect your motivation and leave you feeling detached from the world.',
-  'ph_desc': 'Ang kawalang-interes ay naglalarawan ng kawalan ng pakiramdam o emosyon. Ang kawalang-interes na ito ay maaaring makaapekto sa iyong pagganyak at mag-iwan sa iyong pakiramdam na hiwalay sa mundo.',
+  'en_desc': 'Apathy describes an absence of feeling or emotion.',
+  'ph_desc': 'Ang kawalang-interes ay naglalarawan ng kawalan ng pakiramdam o emosyon.',
   'source': "['https://www.healthline.com/health/apathy']"
 },
 {
@@ -1738,8 +1618,8 @@ export default [{
   'symptom': 'intoxication',
   'en': 'intoxication',
   'ph': 'pagkalasing',
-  'en_desc': 'the condition of having physical or mental control markedly diminished by the effects of alcohol or drugs',
-  'ph_desc': 'ang kondisyon ng pagkakaroon ng pisikal o mental na kontrol ay kapansin-pansing nababawasan ng mga epekto ng alkohol o droga',
+  'en_desc': 'The condition of having physical or mental control markedly diminished by the effects of alcohol or drugs.',
+  'ph_desc': 'Ang kondisyon ng pagkakaroon ng pisikal o mental na kontrol ay kapansin-pansing nababawasan ng mga epekto ng alkohol o droga.',
   'source': "['https://www.merriam-webster.com/dictionary/intoxication']"
 },
 {
@@ -1749,22 +1629,6 @@ export default [{
   'en_desc': 'Irritability involves feelings of anger or frustration that often arise over even the smallest of things.',
   'ph_desc': 'Ang pagkamayamutin ay nagsasangkot ng mga damdamin ng galit o pagkabigo na kadalasang nangyayari kahit sa pinakamaliit na bagay.',
   'source': "['https://www.verywellmind.com/irritability-definition-symptoms-traits-causes-treatment-5088062#:~:text=Coping-,What%20Is%20Irritability%3F,indicator%20of%20an%20underlying%20condition.']"
-},
-{
-  'symptom': 'irritable mood',
-  'en': 'irritable mood',
-  'ph': 'pagkayamot',
-  'en_desc': 'Irritability involves feelings of anger or frustration that often arise over even the smallest of things.',
-  'ph_desc': 'Ang pagkamayamutin ay nagsasangkot ng mga damdamin ng galit o pagkabigo na kadalasang nangyayari kahit sa pinakamaliit na bagay.',
-  'source': "['https://www.verywellmind.com/irritability-definition-symptoms-traits-causes-treatment-5088062#:~:text=Coping-,What%20Is%20Irritability%3F,indicator%20of%20an%20underlying%20condition.']"
-},
-{
-  'symptom': 'jugular venous distention',
-  'en': 'jugular venous distention',
-  'ph': 'jugular venous distention',
-  'en_desc': 'Jugular vein distention (JVD) occurs when the pressure inside the vena cava, a large vein that carries deoxygenated blood back to the heart, causes a bulging neck vein.',
-  'ph_desc': 'Ang jugular vein distention (JVD) ay nangyayari kapag ang presyon sa loob ng vena cava, isang malaking ugat na nagdadala ng deoxygenated na dugo pabalik sa puso, ay nagdudulot ng nakaumbok na ugat sa leeg.',
-  'source': "['https://www.verywellhealth.com/jvd-causes-5185667#:~:text=Jugular%20vein%20distention%20(JVD)%20occurs,both%20sides%20of%20your%20neck.']"
 },
 {
   'symptom': 'jugular venous distention',
@@ -1803,7 +1667,7 @@ export default [{
   'en': 'left atrial hypertrophy',
   'ph': 'left atrial hypertrophy',
   'en_desc': 'Left atrial enlargement (LAE) is the hallmark of the structural remodeling process, which occurs in response to chronic pressure and volume overload.',
-  'ph_desc': 'Ang kaliwang atrial enlargement (LAE) ay ang tanda ng proseso ng structural remodeling, na nangyayari bilang tugon sa talamak na pressure at labis na karga ng volume.',
+  'ph_desc': 'Ang kaliwang atrial enlargement (LAE) ay ang tanda ng proseso ng structural remodeling, na nangyayari bilang tugon sa matinding pressure at labis na karga ng volume.',
   'source': "['https://www.ncbi.nlm.nih.gov/books/NBK553096/#:~:text=%5B1%5D%20Left%20atrial%20enlargement%20(,valvular%20disease%2C%20and%20systemic%20hypertension.']"
 },
 {
@@ -1826,17 +1690,17 @@ export default [{
   'symptom': 'lightheadedness',
   'en': 'lightheadedness',
   'ph': 'pagkahilo',
-  'en_desc': 'Lightheadedness is when you feel like you might faint. Your body could feel heavy, you might feel nauseous and unsteady, and you may sweat.',
-  'ph_desc': 'Ang pagkahilo ay kapag pakiramdam mo ay mahihimatay ka. Ang iyong katawan ay maaaring mabigat, maaari kang makaramdam ng pagduduwal at hindi matatag, at maaari kang pawisan.',
+  'en_desc': 'Lightheadedness is when you feel like you might faint.',
+  'ph_desc': 'Ang pagkahilo ay kapag pakiramdam mo ay mahihimatay ka.',
   'source': "['https://www.healthdirect.gov.au/lightheadedness#:~:text=Lightheadedness%20is%20when%20you%20feel,of%20blood%20in%20the%20brain.']"
 },
 {
   'symptom': 'lip smacking',
   'en': 'lip smacking',
   'ph': 'lip smacking',
-  'en_desc': "Highly pleasing or appealing to the sense of taste or smell : delicious a lip-smacking recipe lip-smacking aromas But take away the excused absences and all the food they can eat and the students still wouldn't trade their experiences.",
-  'ph_desc': 'Lubos na kasiya-siya o kaakit-akit sa panlasa o amoy : masarap isang lip-smacking recipe lip-smacking aromas. Ngunit alisin ang mga excused absences at lahat ng pagkain na maaari nilang kainin at hindi pa rin ipinagpalit ng mga estudyante ang kanilang mga karanasan.',
-  'source': "['https://www.merriam-webster.com/dictionary/lip-smacking#:~:text=Definition%20of%20lip%2Dsmacking,wouldn't%20trade%20their%20experiences.']"
+  'en_desc': "Open and close your mouth noisily, especially before or after eating.",
+  'ph_desc': 'Pabukas at pagsara ng iyong bibig nang maingay, lalo na bago o pagkatapos kumain.',
+  'source': "['https://www.collinsdictionary.com/us/dictionary/english/smack-ones-lips']"
 },
 {
   'symptom': 'loose associations',
@@ -1858,24 +1722,24 @@ export default [{
   'symptom': 'lung nodule',
   'en': 'lung nodule',
   'ph': 'bukol sa baga',
-  'en_desc': 'A lung nodule is a small growth in the lung. Benign nodules are noncancerous and do not spread to other parts of the body. ',
-  'ph_desc': 'Ang lung nodule ay isang maliit na paglaki sa baga. Ang mga benign nodules ay hindi cancerous at hindi kumakalat sa ibang bahagi ng katawan.',
+  'en_desc': 'A lung nodule is a small growth in the lung.',
+  'ph_desc': 'Ang lung nodule ay isang maliit na paglaki sa baga.',
   'source': "['https://www.medicalnewstoday.com/articles/317531#:~:text=A%20lung%20nodule%20is%20a,50%25%20of%20chest%20CT%20scans.']"
 },
 {
   'symptom': 'macerated skin',
   'en': 'macerated skin',
   'ph': 'macerated na balat',
-  'en_desc': 'Maceration occurs when skin is in contact with moisture for too long. Macerated skin looks lighter in color and wrinkly. It may feel soft, wet, or soggy to the touch.',
-  'ph_desc': 'Nangyayari ang Maceration kapag masyadong matagal ang balat sa moisture. Ang macerated na balat ay mukhang mas magaan ang kulay at kulubot. Maaaring malambot, basa, o basa sa pagpindot.',
+  'en_desc': 'Maceration occurs when skin is in contact with moisture for too long.',
+  'ph_desc': 'Nangyayari ang Maceration kapag masyadong matagal ang balat sa moisture. ',
   'source': "['https://www.healthline.com/health/macerated-skin#:~:text=What%20is%20macerated%20skin%3F,associated%20with%20improper%20wound%20care.']"
 },
 {
   'symptom': 'macule',
   'en': 'macule',
   'ph': 'macule',
-  'en_desc': 'A macule is a flat, distinct, discolored area of skin. It usually does not include a change in skin texture or thickness.',
-  'ph_desc': 'Ang macule ay isang patag, kakaiba, kupas na bahagi ng balat. Karaniwang hindi kasama dito ang pagbabago sa texture o kapal ng balat.',
+  'en_desc': 'A macule is a flat, distinct, discolored area of skin.',
+  'ph_desc': 'Ang macule ay isang patag, kakaiba, kupas na bahagi ng balat.',
   'source': "['https://medlineplus.gov/ency/article/003229.htm#:~:text=A%20macule%20is%20a%20flat,in%20skin%20texture%20or%20thickness.']"
 },
 {
@@ -1890,15 +1754,15 @@ export default [{
   'symptom': 'mass in breast',
   'en': 'mass in breast',
   'ph': 'masa sa dibdib',
-  'en_desc': 'The most common cause of a breast mass is fibrocystic or normal tissue. The next most common causes are cysts and fibroadenomas.',
-  'ph_desc': 'Ang pinakakaraniwang sanhi ng mass ng dibdib ay fibrocystic o normal na tissue. Ang susunod na pinakakaraniwang sanhi ay mga cyst at fibroadenoma.',
+  'en_desc': 'The most common cause of a breast mass is fibrocystic or normal tissue.',
+  'ph_desc': 'Ang pinakakaraniwang sanhi ng mass ng dibdib ay fibrocystic o normal na tissue.',
   'source': "['https://www.boulderbreastcenter.com/expertise/breast-lumps/#:~:text=Approximately%2090%25%20of%20palpable%20breast,a%20breast%20mass%20is%20identified.']"
 },
 {
   'symptom': 'mass of body structure',
   'en': 'mass of body structure',
   'ph': 'masa ng istraktura ng katawan',
-  'en_desc': '\u200cBody composition is a term used often by doctors and health professionals. It refers to the percentage of fat, bone, and muscle in your body.',
+  'en_desc': 'Body composition is a term used often by doctors and health professionals. It refers to the percentage of fat, bone, and muscle in your body.',
   'ph_desc': 'Ang komposisyon ng katawan ay isang terminong madalas ginagamit ng mga doktor at propesyonal sa kalusugan. Ito ay tumutukoy sa porsyento ng taba, buto, at kalamnan sa iyong katawan.',
   'source': "['https://www.webmd.com/fitness-exercise/what-is-body-composition']"
 },
@@ -1914,24 +1778,16 @@ export default [{
   'symptom': 'mental status changes',
   'en': 'mental status changes',
   'ph': 'pagbabago ng katayuan sa pag-iisip',
-  'en_desc': 'Changes in mental status can be described as delirium (acute change in arousal and content), depression (chronic change in arousal), dementia (chronic change in arousal and content), and coma (dysfunction of arousal and content).',
-  'ph_desc': 'Ang mga pagbabago sa katayuan sa pag-iisip ay maaaring ilarawan bilang delirium (talamak na pagbabago sa pagpukaw at nilalaman), depresyon (talamak na pagbabago sa pagpukaw), dementia (talamak na pagbabago sa pagpukaw at nilalaman), at pagkawala ng malay (disfunction ng arousal at nilalaman) .',
-  'source': "['https://pubmed.ncbi.nlm.nih.gov/28723002/#:~:text=Changes%20in%20mental%20status%20can,dysfunction%20of%20arousal%20and%20content)%20.']"
-},
-{
-  'symptom': 'mental status changes',
-  'en': 'mental status changes',
-  'ph': 'pagbabago ng katayuan sa pag-iisip',
-  'en_desc': 'Changes in mental status can be described as delirium (acute change in arousal and content), depression (chronic change in arousal), dementia (chronic change in arousal and content), and coma (dysfunction of arousal and content).',
-  'ph_desc': 'Ang mga pagbabago sa katayuan sa pag-iisip ay maaaring ilarawan bilang delirium (talamak na pagbabago sa pagpukaw at nilalaman), depresyon (talamak na pagbabago sa pagpukaw), dementia (talamak na pagbabago sa pagpukaw at nilalaman), at pagkawala ng malay (disfunction ng arousal at nilalaman) .',
+  'en_desc': 'Changes in mental status can be described as delirium, depression, dementia, and coma.',
+  'ph_desc': 'Ang mga pagbabago sa katayuan sa pag-iisip ay maaaring ilarawan bilang delirium, depresyon, dementia , at pagkawala ng malay.',
   'source': "['https://pubmed.ncbi.nlm.nih.gov/28723002/#:~:text=Changes%20in%20mental%20status%20can,dysfunction%20of%20arousal%20and%20content)%20.']"
 },
 {
   'symptom': 'metastatic lesion',
   'en': 'metastatic lesion',
   'ph': 'metastatic lesion',
-  'en_desc': 'Metastasis means that cancer spreads to a different body part from where it started. When this happens, doctors say the cancer has “metastasized.”',
-  'ph_desc': 'Ang ibig sabihin ng metastasis ay kumakalat ang kanser sa ibang bahagi ng katawan kung saan ito nagsimula. Kapag nangyari ito, sinasabi ng mga doktor na ang kanser ay "nag-metastasize."',
+  'en_desc': 'Metastasis means that cancer spreads to a different body part from where it started.',
+  'ph_desc': 'Ang ibig sabihin ng metastasis ay kumakalat ang kanser sa ibang bahagi ng katawan kung saan ito nagsimula.',
   'source': "['https://www.cancer.net/navigating-cancer-care/cancer-basics/what-metastasis#:~:text=Metastasis%20means%20that%20cancer%20spreads,terms%20can%20have%20different%20meanings.']"
 },
 {
@@ -1946,8 +1802,8 @@ export default [{
   'symptom': 'moan',
   'en': 'moan',
   'ph': 'halinghing',
-  'en_desc': 'A low, sustained, mournful cry, usually indicative of sorrow or pain',
-  'ph_desc': 'Isang mahina, matagal, malungkot na sigaw, kadalasang nagpapahiwatig ng kalungkutan o sakit',
+  'en_desc': 'A low, sustained, mournful cry, usually indicative of sorrow or pain.',
+  'ph_desc': 'Isang mahina, matagal, malungkot na sigaw, kadalasang nagpapahiwatig ng kalungkutan o sakit.',
   'source': "['https://www.thefreedictionary.com/moan#:~:text=a.,b.']"
 },
 {
@@ -1962,8 +1818,8 @@ export default [{
   'symptom': 'monocytosis',
   'en': 'monocytosis',
   'ph': 'monocytosis',
-  'en_desc': 'If you have monocytosis, it means you have an abnormally high number of infection-fighting monocytes. ',
-  'ph_desc': 'Kung mayroon kang monocytosis, nangangahulugan ito na mayroon kang abnormal na mataas na bilang ng mga monocyte na lumalaban sa impeksyon.',
+  'en_desc': 'It means you have an abnormally high number of infection-fighting monocytes. ',
+  'ph_desc': 'Nangangahulugan ito na mayroon kang abnormal na mataas na bilang ng mga monocyte na lumalaban sa impeksyon.',
   'source': "['https://my.clevelandclinic.org/health/diseases/22726-monocytosis#:~:text=If%20you%20have%20monocytosis%2C%20it,have%20a%20serious%20medical%20condition.']"
 },
 {
@@ -1971,47 +1827,31 @@ export default [{
   'en': 'mood depressed',
   'ph': 'nalulumbay ang kalooban',
   'en_desc': 'Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest and can interfere with your daily functioning.',
-  'ph_desc': 'Ang depresyon ay isang mood disorder na nagdudulot ng patuloy na pakiramdam ng kalungkutan at pagkawala ng interes at maaaring makagambala sa iyong pang-araw-araw na paggana.',
-  'source': "['https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007']"
-},
-{
-  'symptom': 'mood depressed',
-  'en': 'mood depressed',
-  'ph': 'nalulumbay ang kalooban',
-  'en_desc': 'Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest and can interfere with your daily functioning.',
-  'ph_desc': 'Ang depresyon ay isang mood disorder na nagdudulot ng patuloy na pakiramdam ng kalungkutan at pagkawala ng interes at maaaring makagambala sa iyong pang-araw-araw na paggana.',
+  'ph_desc': 'Ang depresyon ay isang mood disorder na nagdudulot ng patuloy na pakiramdam ng kalungkutan at pagkawala ng interes.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007']"
 },
 {
   'symptom': 'moody',
   'en': 'moody',
   'ph': 'moody',
-  'en_desc': 'Expressive of a mood',
-  'ph_desc': 'Nagpapahayag ng isang kalooban',
+  'en_desc': 'Expressive of a mood.',
+  'ph_desc': 'Nagpapahayag ng isang kalooban.',
   'source': "['https://www.merriam-webster.com/dictionary/moody']"
 },
 {
   'symptom': 'motor retardation',
   'en': 'motor retardation',
   'ph': 'motor retardation',
-  'en_desc': 'Psychomotor retardation is one of the main features of major depressive disorder (MDD) or, more simply, depression. ',
-  'ph_desc': 'Ang psychomotor retardation ay isa sa mga pangunahing katangian ng major depressive disorder (MDD) o, mas simple, depression.',
-  'source': "['https://www.webmd.com/depression/what-to-know-about-psychomotor-retardation#:~:text=Psychomotor%20retardation%20is%20one%20of,thinking%20or%20slow%20body%20movements.']"
-},
-{
-  'symptom': 'motor retardation',
-  'en': 'motor retardation',
-  'ph': 'motor retardation',
-  'en_desc': 'Psychomotor retardation is one of the main features of major depressive disorder (MDD) or, more simply, depression. ',
-  'ph_desc': 'Ang psychomotor retardation ay isa sa mga pangunahing katangian ng major depressive disorder (MDD) o, mas simple, depression.',
+  'en_desc': 'Psychomotor retardation is one of the main features of major depressive disorder (MDD).',
+  'ph_desc': 'Ang psychomotor retardation ay isa sa mga pangunahing katangian ng major depressive disorder (MDD).',
   'source': "['https://www.webmd.com/depression/what-to-know-about-psychomotor-retardation#:~:text=Psychomotor%20retardation%20is%20one%20of,thinking%20or%20slow%20body%20movements.']"
 },
 {
   'symptom': 'muscle hypotonia',
   'en': 'muscle hypotonia',
   'ph': 'muscle hypotonia',
-  'en_desc': " Hypotonia is poor muscle tone. People diagnosed with hypotonia don't show resistance when joints in their body move. ",
-  'ph_desc': 'Ang hypotonia ay mahinang tono ng kalamnan. Ang mga taong na-diagnose na may hypotonia ay hindi nagpapakita ng pagtutol kapag gumagalaw ang mga kasukasuan sa kanilang katawan.',
+  'en_desc': "Hypotonia is poor muscle tone.",
+  'ph_desc': 'Ang hypotonia ay hindi magandang tono ng kalamnan.',
   'source': "['https://my.clevelandclinic.org/health/diseases/22223-hypotonia-in-babies#:~:text=What%20is%20hypotonia%3F,your%20muscles%20have%20at%20rest.']"
 },
 {
@@ -2026,8 +1866,8 @@ export default [{
   'symptom': 'myalgia',
   'en': 'myalgia',
   'ph': 'myalgia',
-  'en_desc': 'Myalgia describes muscle aches and pain, which can involve ligaments, tendons and fascia, the soft tissues that connect muscles, bones and organs.',
-  'ph_desc': 'Inilalarawan ng Myalgia ang pananakit at pananakit ng kalamnan, na maaaring may kasamang ligaments, tendons at fascia, ang malambot na mga tisyu na nag-uugnay sa mga kalamnan, buto at organo.',
+  'en_desc': 'Myalgia describes muscle aches and pain.',
+  'ph_desc': 'Inilalarawan ng Myalgia ang pananakit at pananakit ng kalamnan.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/myalgia']"
 },
 {
@@ -2042,16 +1882,16 @@ export default [{
   'symptom': 'myoclonus',
   'en': 'myoclonus',
   'ph': 'myoclonus',
-  'en_desc': 'Myoclonus refers to a quick, involuntary muscle jerk. Hiccups are a form of myoclonus, as are the sudden jerks, or "sleep starts," you may feel just before falling asleep.',
-  'ph_desc': 'Ang Myoclonus ay tumutukoy sa isang mabilis, hindi sinasadyang pag-igting ng kalamnan. Ang mga hiccup ay isang anyo ng myoclonus, gayundin ang mga biglaang pag-igik, o "pagsisimula ng pagtulog," na maaari mong maramdaman bago ka makatulog.',
+  'en_desc': 'Myoclonus refers to a quick, involuntary muscle jerk.',
+  'ph_desc': 'Ang Myoclonus ay tumutukoy sa isang mabilis, hindi sinasadyang pag-igting ng kalamnan.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/myoclonus/symptoms-causes/syc-20350459#:~:text=Myoclonus%20refers%20to%20a%20quick,feel%20just%20before%20falling%20asleep.']"
 },
 {
   'symptom': 'nasal discharge present',
   'en': 'nasal discharge present',
   'ph': 'nasal discharge present',
-  'en_desc': "When mucus comes out of your nose, it's called nasal discharge. It can also be called post-nasal drip or rhinorrhea.",
-  'ph_desc': 'Kapag lumabas ang mucus sa iyong ilong, ito ay tinatawag na nasal discharge. Maaari din itong tawaging post-nasal drip o rhinorrhea.',
+  'en_desc': "When mucus comes out of your nose, it's called nasal discharge.",
+  'ph_desc': 'Kapag lumabas ang mucus sa iyong ilong, ito ay tinatawag na nasal discharge.',
   'source': "['https://www.healthline.com/health/nasal-discharge#:~:text=When%20mucus%20comes%20out%20of,that%20might%20require%20medical%20attention.']"
 },
 {
@@ -2066,8 +1906,8 @@ export default [{
   'symptom': 'nausea',
   'en': 'nausea',
   'ph': 'pagduduwal',
-  'en_desc': "Nausea is a symptom everyone dreads. You\’ve almost certainly experienced that queasy feeling at one time or another — perhaps while reading a book in a moving vehicle, or maybe after eating something that didn't agree with you.",
-  'ph_desc': 'Ang pagduduwal ay isang sintomas na kinatatakutan ng lahat. Halos tiyak na naranasan mo na ang nakakaawang pakiramdam sa isang pagkakataon o iba pa — marahil habang nagbabasa ng libro sa isang gumagalaw na sasakyan, o marahil pagkatapos kumain ng isang bagay na hindi sumasang-ayon sa iyo.',
+  'en_desc': "Experiencing a queasy feeling at one time or another.",
+  'ph_desc': 'Nakakahilong pakiramdam sa isang pagkakataon o iba pa.',
   'source': "['https://www.everydayhealth.com/nausea/guide/']"
 },
 {
@@ -2106,16 +1946,8 @@ export default [{
   'symptom': 'night sweat',
   'en': 'night sweat',
   'ph': 'pawis sa gabi',
-  'en_desc': 'Night sweats are repeated episodes of very heavy sweating during sleep, heavy enough to soak your nightclothes or bedding. ',
-  'ph_desc': 'Ang mga pagpapawis sa gabi ay mga paulit-ulit na yugto ng napakabigat na pagpapawis habang natutulog, sapat na mabigat upang ibabad ang iyong mga damit na pantulog o kama',
-  'source': "['https://www.mayoclinic.org/symptoms/night-sweats/basics/definition/sym-20050768#:~:text=Night%20sweats%20are%20repeated%20episodes,your%20bedroom%20is%20too%20warm.']"
-},
-{
-  'symptom': 'night sweat',
-  'en': 'night sweat',
-  'ph': 'pawis sa gabi',
-  'en_desc': 'Night sweats are repeated episodes of very heavy sweating during sleep, heavy enough to soak your nightclothes or bedding. ',
-  'ph_desc': 'Ang mga pagpapawis sa gabi ay mga paulit-ulit na yugto ng napakabigat na pagpapawis habang natutulog, sapat na mabigat upang ibabad ang iyong mga damit na pantulog o kama',
+  'en_desc': 'Night sweats are repeated episodes of very heavy sweating during sleep, heavy enough to soak your nightclothes or bedding.',
+  'ph_desc': 'Ang mga pagpapawis sa gabi ay mga paulit-ulit na yugto ng napakabigat na pagpapawis habang natutulog, sapat na mabigat upang ibabad ang iyong mga damit na pantulog o kama.',
   'source': "['https://www.mayoclinic.org/symptoms/night-sweats/basics/definition/sym-20050768#:~:text=Night%20sweats%20are%20repeated%20episodes,your%20bedroom%20is%20too%20warm.']"
 },
 {
@@ -2154,24 +1986,16 @@ export default [{
   'symptom': 'non-productive cough',
   'en': 'non-productive cough',
   'ph': 'hindi produktibong ubo',
-  'en_desc': 'A non-productive cough is what it sounds like, dry without any mucus or phlegm. It may cause a slight tickle in the back of your throat and produce a dry, hollow sound.',
-  'ph_desc': 'Ang isang hindi produktibong ubo ay kung ano ang tunog, tuyo na walang anumang uhog o plema. Maaari itong magdulot ng bahagyang kiliti sa likod ng iyong lalamunan at makagawa ng tuyo at guwang na tunog.',
-  'source': "['https://physiciansallianceofconnecticut.com/blog/6-types-of-cough-and-what-they-mean/#:~:text=A%20non%2Dproductive%20cough%20is,produce%20a%20dry%2C%20hollow%20sound.']"
-},
-{
-  'symptom': 'non-productive cough',
-  'en': 'non-productive cough',
-  'ph': 'hindi produktibong ubo',
-  'en_desc': 'A non-productive cough is what it sounds like, dry without any mucus or phlegm. It may cause a slight tickle in the back of your throat and produce a dry, hollow sound.',
-  'ph_desc': 'Ang isang hindi produktibong ubo ay kung ano ang tunog, tuyo na walang anumang uhog o plema. Maaari itong magdulot ng bahagyang kiliti sa likod ng iyong lalamunan at makagawa ng tuyo at guwang na tunog.',
+  'en_desc': 'A non-productive cough is what it sounds like, dry without any mucus or phlegm.',
+  'ph_desc': 'Ang isang hindi produktibong ubo ay kung ano ang tunog, tuyo na walang anumang uhog o plema.',
   'source': "['https://physiciansallianceofconnecticut.com/blog/6-types-of-cough-and-what-they-mean/#:~:text=A%20non%2Dproductive%20cough%20is,produce%20a%20dry%2C%20hollow%20sound.']"
 },
 {
   'symptom': 'nonsmoker',
   'en': 'nonsmoker',
   'ph': 'hindi naninigarilyo',
-  'en_desc': 'A person who does not smoke tobacco',
-  'ph_desc': 'Isang taong hindi naninigarilyo ng tabako',
+  'en_desc': 'A person who does not smoke tobacco.',
+  'ph_desc': 'Isang taong hindi naninigarilyo ng tabako.',
   'source': "['https://www.merriam-webster.com/dictionary/nonsmoker']"
 },
 {
@@ -2191,19 +2015,11 @@ export default [{
   'source': "['https://www.mayoclinic.org/symptoms/numbness-in-hands/basics/causes/sym-20050842#:~:text=Hand%20numbness%20can%20be%20caused,occur%20first%20in%20your%20feet.']"
 },
 {
-  'symptom': 'numbness of hand',
-  'en': 'numbness of hand',
-  'ph': 'pamamanhid ng kamay',
-  'en_desc': 'Hand numbness can be caused by damage, irritation, or compression of one of the nerves or a branch of one of the nerves in your arm and wrist.',
-  'ph_desc': 'Ang pamamanhid ng kamay ay maaaring sanhi ng pinsala, pangangati, o pag-compress ng isa sa mga ugat o sanga ng isa sa mga ugat sa iyong braso at pulso.',
-  'source': "['https://www.mayoclinic.org/symptoms/numbness-in-hands/basics/causes/sym-20050842#:~:text=Hand%20numbness%20can%20be%20caused,occur%20first%20in%20your%20feet.']"
-},
-{
   'symptom': 'oliguria',
   'en': 'oliguria',
   'ph': 'oliguria',
-  'en_desc': "Oliguria is the medical term for low urine output. If you have a blockage, your kidneys are producing urine but you aren't able to excrete it.",
-  'ph_desc': 'Ang Oliguria ay ang terminong medikal para sa mababang output ng ihi. Kung ikaw ay may bara, ang iyong mga bato ay gumagawa ng ihi ngunit hindi mo ito mailalabas.',
+  'en_desc': "Oliguria is the medical term for low urine output.",
+  'ph_desc': 'Ang Oliguria ay ang terminong medikal para sa mababang output ng ihi.',
   'source': "['https://my.clevelandclinic.org/health/diseases/22271-oliguria#:~:text=Oliguria%20is%20the%20medical%20term,causing%20the%20low%20urine%20output.']"
 },
 {
@@ -2226,16 +2042,8 @@ export default [{
   'symptom': 'out of breath',
   'en': 'out of breath',
   'ph': 'kapos sa paghinga',
-  'en_desc': 'Shortness of breath — known medically as dyspnea — is often described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.',
-  'ph_desc': 'Ang igsi sa paghinga — na kilala sa medikal bilang dyspnea — ay kadalasang inilalarawan bilang matinding paninikip sa dibdib, gutom sa hangin, hirap sa paghinga, paghinga o pakiramdam ng inis.',
-  'source': "['https://www.mayoclinic.org/symptoms/shortness-of-breath/basics/definition/sym-20050890#:~:text=Shortness%20of%20breath%20%E2%80%94%20known%20medically,breath%20in%20a%20healthy%20person.']"
-},
-{
-  'symptom': 'out of breath',
-  'en': 'out of breath',
-  'ph': 'kapos sa paghinga',
-  'en_desc': 'Shortness of breath — known medically as dyspnea — is often described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.',
-  'ph_desc': 'Ang igsi sa paghinga — na kilala sa medikal bilang dyspnea — ay kadalasang inilalarawan bilang matinding paninikip sa dibdib, gutom sa hangin, hirap sa paghinga, paghinga o pakiramdam ng inis.',
+  'en_desc': 'Shortness of breath is often described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.',
+  'ph_desc': 'Ang igsi sa paghinga ay kadalasang inilalarawan bilang matinding paninikip sa dibdib, malakas na pagnanais na huminga, hirap sa paghinga, paghinga o pakiramdam ng inis.',
   'source': "['https://www.mayoclinic.org/symptoms/shortness-of-breath/basics/definition/sym-20050890#:~:text=Shortness%20of%20breath%20%E2%80%94%20known%20medically,breath%20in%20a%20healthy%20person.']"
 },
 {
@@ -2258,15 +2066,15 @@ export default [{
   'symptom': 'pain chest',
   'en': 'pain chest',
   'ph': 'sakit sa dibdib',
-  'en_desc': "Chest pain is not something to ignore. But you should know that it has many possible causes. In many cases, it's related to the heart.",
-  'ph_desc': 'Ang pananakit ng dibdib ay hindi dapat balewalain. Ngunit dapat mong malaman na ito ay may maraming posibleng dahilan. Sa maraming pagkakataon, ito ay nauugnay sa puso.',
+  'en_desc': "Chest pain is pain in any area of your chest.",
+  'ph_desc': 'Ang pananakit ng dibdib ay pananakit sa alinmang bahagi ng iyong dibdib.',
   'source': "['https://www.webmd.com/pain-management/guide/whats-causing-my-chest-pain']"
 },
 {
   'symptom': 'pain abdominal',
   'en': 'pain abdominal',
   'ph': 'sakit ng tiyan',
-  'en_desc': 'Abdominal pain is frequently caused by a problem in the digestive tract (the gut). ',
+  'en_desc': 'Abdominal pain is frequently caused by a problem in the digestive tract (the gut).',
   'ph_desc': 'Ang pananakit ng tiyan ay kadalasang sanhi ng problema sa digestive tract (ang bituka).',
   'source': "['https://www.healthdirect.gov.au/abdominal-pain#:~:text=Abdominal%20pain%20is%20frequently%20caused,may%20give%20rise%20to%20pain.']"
 },
@@ -2277,14 +2085,6 @@ export default [{
   'en_desc': 'Back pain often develops without a cause that your doctor can identify with a test or an imaging study. ',
   'ph_desc': 'Ang pananakit ng likod ay kadalasang nagkakaroon ng walang dahilan na matutukoy ng iyong doktor sa pamamagitan ng pagsusuri o pag-aaral ng imaging.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/back-pain/symptoms-causes/syc-20369906#:~:text=Back%20pain%20often%20develops%20without,back%20muscles%20and%20spinal%20ligaments.']"
-},
-{
-  'symptom': 'pain chest',
-  'en': 'pain chest',
-  'ph': 'sakit sa dibdib',
-  'en_desc': "Chest pain is not something to ignore. But you should know that it has many possible causes. In many cases, it's related to the heart.",
-  'ph_desc': 'Ang pananakit ng dibdib ay hindi dapat balewalain. Ngunit dapat mong malaman na ito ay may maraming posibleng dahilan. Sa maraming pagkakataon, ito ay nauugnay sa puso.',
-  'source': "['https://www.webmd.com/pain-management/guide/whats-causing-my-chest-pain']"
 },
 {
   'symptom': 'pain foot',
@@ -2338,8 +2138,8 @@ export default [{
   'symptom': 'panic',
   'en': 'panic',
   'ph': 'panic',
-  'en_desc': 'Relating to, or resembling the mental or emotional state believed induced by the god Pan',
-  'ph_desc': 'Nauugnay sa, o kahawig ng mental o emosyonal na estado na pinaniniwalaan na dulot ng diyos na si Pan',
+  'en_desc': 'Sudden extreme anxiety or fear that may cause irrational thoughts or actions.',
+  'ph_desc': 'Biglaang matinding pagkabalisa o takot na maaaring magdulot ng hindi makatwiran na mga pag-iisip o pagkilos.',
   'source': "['https://www.merriam-webster.com/dictionary/panic#:~:text=Pan%20Panic%20rites-,panic,widespread%20panic%20in%20the%20streets']"
 },
 {
@@ -2370,16 +2170,16 @@ export default [{
   'symptom': 'paralyse',
   'en': 'paralyse',
   'ph': 'paralisado',
-  'en_desc': "Paralysis occurs when you're unable to make voluntary muscle movements. A nervous system problem causes paralysis. ",
-  'ph_desc': 'Nangyayari ang paralisis kapag hindi mo magawa ang boluntaryong paggalaw ng kalamnan. Ang problema sa nervous system ay nagdudulot ng paralisis.',
+  'en_desc': "Paralysis occurs when you're unable to make voluntary muscle movements.",
+  'ph_desc': 'Nangyayari ang paralisis kapag hindi mo magawa ang boluntaryong paggalaw ng kalamnan.',
   'source': "['https://my.clevelandclinic.org/health/diseases/15345-paralysis']"
 },
 {
   'symptom': 'paraparesis',
   'en': 'paraparesis',
   'ph': 'paraparesis',
-  'en_desc': "Paraparesis occurs when you're partially unable to move your legs. The condition can also refer to weakness in your hips and legs. ",
-  'ph_desc': 'Ang paraparesis ay nangyayari kapag bahagyang hindi mo maigalaw ang iyong mga binti. Ang kondisyon ay maaari ding tumukoy sa kahinaan sa iyong mga balakang at binti.',
+  'en_desc': "Paraparesis occurs when you're partially unable to move your legs.",
+  'ph_desc': 'Ang paraparesis ay nangyayari kapag bahagyang hindi mo maigalaw ang iyong mga binti.',
   'source': "['https://www.healthline.com/health/paraparesis#:~:text=Paraparesis%20occurs%20when%20you're,injury']"
 },
 {
@@ -2402,8 +2202,8 @@ export default [{
   'symptom': 'passed stones',
   'en': 'passed stones',
   'ph': 'pumasa sa mga bato',
-  'en_desc': 'Kidney stones are hard pebble-like objects that can form inside your kidneys. They\’re made of minerals and salts.',
-  'ph_desc': 'Ang mga bato sa bato ay mga matigas na bagay na parang pebble na maaaring mabuo sa loob ng iyong mga bato. Ang mga ito ay gawa sa mga mineral at asin.',
+  'en_desc': 'Kidney stones are hard pebble-like objects that can form inside your kidneys.',
+  'ph_desc': 'Ang mga bato sa bato ay mga matigas na bagay na parang pebble na maaaring mabuo sa loob ng iyong mga bato.',
   'source': "['https://www.webmd.com/kidney-stones/understanding-kidney-stones-basics']"
 },
 {
@@ -2419,7 +2219,7 @@ export default [{
   'en': 'pericardial friction rub',
   'ph': 'pericardial friction rub',
   'en_desc': 'A pericardial rub is highly specific for acute pericarditis. It is generally heard over the left sternal border, it is often louder at inspiration but sometimes can be better heard on forced expiration while the patient bends forward. ',
-  'ph_desc': 'Ang isang pericardial rub ay lubos na tiyak para sa talamak na pericarditis. Ito ay karaniwang naririnig sa ibabaw ng kaliwang sternal na hangganan, madalas itong mas malakas sa inspirasyon ngunit kung minsan ay mas maririnig sa sapilitang pag-expire habang ang pasyente ay yumuyuko.',
+  'ph_desc': 'Ang isang pericardial rub ay lubos na tiyak para sa matinding pericarditis. Ito ay karaniwang naririnig sa ibabaw ng kaliwang sternal na hangganan, madalas itong mas malakas sa inspirasyon ngunit kung minsan ay mas maririnig sa sapilitang pag-expire habang ang pasyente ay yumuyuko.',
   'source': "['https://www.ncbi.nlm.nih.gov/books/NBK542284/']"
 },
 {
@@ -2434,48 +2234,40 @@ export default [{
   'symptom': 'photophobia',
   'en': 'photophobia',
   'ph': 'photophobia',
-  'en_desc': 'Photophobia is eye discomfort in bright light. The cornea allows light to enter the eye. ',
-  'ph_desc': 'Ang photophobia ay hindi komportable sa mata sa maliwanag na liwanag. Ang kornea ay nagpapahintulot sa liwanag na makapasok sa mata.',
+  'en_desc': 'Photophobia is eye discomfort in bright light.',
+  'ph_desc': 'Ang photophobia ay hindi komportable sa mata sa maliwanag na liwanag.',
   'source': "['https://www.mountsinai.org/health-library/symptoms/photophobia#:~:text=Photophobia%20is%20eye%20discomfort%20in,through%20to%20change%20pupil%20size.']"
 },
 {
   'symptom': 'photopsia',
   'en': 'photopsia',
   'ph': 'photopsia',
-  'en_desc': "Photopsias are sometimes referred to as eye floaters or flashes. They're luminous objects which appear in the vision of either one or both eyes.",
-  'ph_desc': 'Ang photopsia ay minsang tinutukoy bilang eye floaters o flashes. Ang mga ito ay mga makinang na bagay na lumilitaw sa paningin ng alinman sa isa o parehong mga mata.',
+  'en_desc': "Photopsias are sometimes referred to as eye floaters or flashes.",
+  'ph_desc': 'Ang photopsia ay minsang tinutukoy bilang eye floaters o flashes.',
   'source': "['https://www.healthline.com/health/photopsia#:~:text=Photopsias%20are%20sometimes%20referred%20to,or%20they%20can%20be%20permanent.']"
 },
 {
   'symptom': 'pin-point pupils',
   'en': 'pin-point pupils',
   'ph': 'pin-point pupils',
-  'en_desc': 'Pupils that are abnormally small under normal lighting conditions are called pinpoint pupils. Another word for it is myosis, or miosis. ',
-  'ph_desc': 'Ang mga pupils na abnormal na maliit sa ilalim ng normal na kondisyon ng pag-iilaw ay tinatawag na pinpoint pupils. Ang isa pang salita para dito ay myosis, o miosis.',
+  'en_desc': 'Pupils that are abnormally small under normal lighting conditions are called pinpoint pupils.',
+  'ph_desc': 'Ang mga pupils na abnormal na maliit sa ilalim ng normal na kondisyon ng pag-iilaw ay tinatawag na pinpoint pupils.',
   'source': "['https://www.healthline.com/health/pinpoint-pupils#:~:text=What%20are%20pinpoint%20pupils%3F,how%20much%20light%20gets%20in.']"
 },
 {
   'symptom': 'pleuritic pain',
   'en': 'pleuritic pain',
   'ph': 'sakit ng pleuritic',
-  'en_desc': 'Pleurisy (PLOOR-ih-see) is a condition in which the pleura — two large, thin layers of tissue that separate your lungs from your chest wall — becomes inflamed. Also called pleuritis, pleurisy causes sharp chest pain (pleuritic pain) that worsens during breathing.',
-  'ph_desc': 'Ang Pleurisy (PLOOR-ih-see) ay isang kondisyon kung saan ang pleura — dalawang malalaki at manipis na patong ng tissue na naghihiwalay sa iyong mga baga mula sa iyong dibdib sa dingding — ay nagiging inflamed. Tinatawag ding pleuritis, ang pleurisy ay nagdudulot ng matinding pananakit ng dibdib (pleuritic pain) na lumalala habang humihinga.',
-  'source': "['https://www.mayoclinic.org/diseases-conditions/pleurisy/symptoms-causes/syc-20351863#:~:text=Pleurisy%20(PLOOR%2Dih%2Dsee,pain)%20that%20worsens%20during%20breathing.']"
-},
-{
-  'symptom': 'pleuritic pain',
-  'en': 'pleuritic pain',
-  'ph': 'sakit ng pleuritic',
-  'en_desc': 'Pleurisy (PLOOR-ih-see) is a condition in which the pleura — two large, thin layers of tissue that separate your lungs from your chest wall — becomes inflamed. Also called pleuritis, pleurisy causes sharp chest pain (pleuritic pain) that worsens during breathing.',
-  'ph_desc': 'Ang Pleurisy (PLOOR-ih-see) ay isang kondisyon kung saan ang pleura — dalawang malalaki at manipis na patong ng tissue na naghihiwalay sa iyong mga baga mula sa iyong dibdib sa dingding — ay nagiging inflamed. Tinatawag ding pleuritis, ang pleurisy ay nagdudulot ng matinding pananakit ng dibdib (pleuritic pain) na lumalala habang humihinga.',
+  'en_desc': 'Pleurisy is a condition in which the pleura — two large, thin layers of tissue that separate your lungs from your chest wall — becomes inflamed.',
+  'ph_desc': 'Ang Pleurisy ay isang kondisyon kung saan ang pleura — dalawang malalaki at manipis na patong ng tissue na naghihiwalay sa iyong mga baga mula sa iyong dibdib sa dingding — ay nagiging inflamed.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/pleurisy/symptoms-causes/syc-20351863#:~:text=Pleurisy%20(PLOOR%2Dih%2Dsee,pain)%20that%20worsens%20during%20breathing.']"
 },
 {
   'symptom': 'pneumatouria',
   'en': 'pneumatouria',
   'ph': 'pneumatouria',
-  'en_desc': "Pneumaturia is a word to describe air bubbles that pass in your urine. Pneumaturia alone isn't a diagnosis, but it can be a symptom of certain health conditions.",
-  'ph_desc': 'Ang pneumaturia ay isang salita upang ilarawan ang mga bula ng hangin na dumadaan sa iyong ihi. Ang pneumaturia lamang ay hindi isang diagnosis, ngunit maaari itong maging sintomas ng ilang partikular na kondisyon sa kalusugan.',
+  'en_desc': "Pneumaturia is a word to describe air bubbles that pass in your urine.",
+  'ph_desc': 'Ang pneumaturia ay isang salita upang ilarawan ang mga bula ng hangin na dumadaan sa iyong ihi.',
   'source': "['https://www.healthline.com/health/pneumaturia#:~:text=Pneumaturia%20is%20a%20word%20to,)%20that%20don't%20belong.']"
 },
 {
@@ -2551,14 +2343,6 @@ export default [{
   'source': "['https://www.mayoclinic.org/diseases-conditions/chest-pain/symptoms-causes/syc-20370838#:~:text=In%20general%2C%20chest%20discomfort%20related,and%20one%20or%20both%20arms']"
 },
 {
-  'symptom': 'pressure chest',
-  'en': 'pressure chest',
-  'ph': 'presyon ng dibdib',
-  'en_desc': 'In general, chest discomfort related to a heart attack or another heart problem may be described by or associated with one or more of the following: Pressure, fullness, burning or tightness in your chest.',
-  'ph_desc': 'Sa pangkalahatan, ang discomfort sa dibdib na nauugnay sa isang atake sa puso o isa pang problema sa puso ay maaaring inilarawan ng o nauugnay sa isa o higit pa sa mga sumusunod: Presyon, pagkapuno, pagkasunog o paninikip sa iyong dibdib.',
-  'source': "['https://www.mayoclinic.org/diseases-conditions/chest-pain/symptoms-causes/syc-20370838#:~:text=In%20general%2C%20chest%20discomfort%20related,and%20one%20or%20both%20arms']"
-},
-{
   'symptom': 'previous pregnancies 2',
   'en': 'previous pregnancies 2',
   'ph': 'nakaraang pagbubuntis',
@@ -2581,14 +2365,6 @@ export default [{
   'en_desc': 'Prodrome is a medical term for early signs or symptoms of an illness or health problem that appear before the major signs or symptoms start.',
   'ph_desc': 'Ang Prodrome ay isang medikal na termino para sa mga maagang palatandaan o sintomas ng isang sakit o problema sa kalusugan na lumalabas bago magsimula ang mga pangunahing palatandaan o sintomas.',
   'source': "['https://www.heretohelp.bc.ca/q-and-a/what-is-a-prodrome']"
-},
-{
-  'symptom': 'productive cough',
-  'en': 'productive cough',
-  'ph': 'produktibong ubo',
-  'en_desc': 'A wet cough, also known as a productive cough, is any cough that produces mucus (phlegm).',
-  'ph_desc': 'Ang basang ubo, na kilala rin bilang isang produktibong ubo, ay anumang ubo na gumagawa ng mucus (plema).',
-  'source': "['https://www.healthline.com/health/wet-cough#:~:text=A%20wet%20cough%2C%20also%20known,producing%20more%20mucus%20than%20normal.']"
 },
 {
   'symptom': 'productive cough',
@@ -2634,8 +2410,8 @@ export default [{
   'symptom': 'pruritus',
   'en': 'pruritus',
   'ph': 'pangangati',
-  'en_desc': 'Itchy skin is an uncomfortable, irritating sensation that makes you want to scratch. Also known as pruritus (proo-RIE-tus), itchy skin is often caused by dry skin.',
-  'ph_desc': 'Ang makating balat ay isang hindi komportable, nakakainis na sensasyon na gusto mong kumamot. Kilala rin bilang pruritus (proo-RIE-tus), ang pangangati ng balat ay kadalasang sanhi ng tuyong balat.',
+  'en_desc': 'Itchy skin is an uncomfortable, irritating sensation that makes you want to scratch.',
+  'ph_desc': 'Ang makating balat ay isang hindi komportable, nakakainis na sensasyon na gusto mong kumamot.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/itchy-skin/symptoms-causes/syc-20355006#:~:text=Itchy%20skin%20is%20an%20uncomfortable,to%20become%20drier%20with%20age.']"
 },
 {
@@ -2682,8 +2458,8 @@ export default [{
   'symptom': 'rale',
   'en': 'rale',
   'ph': 'rale',
-  'en_desc': 'An abnormal lung sound that can be heard through a stethoscope. Rales may be sibilant (whistling), dry (crackling), or wet (sloshy), depending on the amount and density of fluid refluxing back and forth in the air passages.',
-  'ph_desc': 'Isang abnormal na tunog ng baga na maririnig sa pamamagitan ng stethoscope. Ang mga rales ay maaaring sibilant (sipol), tuyo (crackling), o basa (sloshy), depende sa dami at densidad ng fluid na dumadaloy pabalik-balik sa mga daanan ng hangin.',
+  'en_desc': 'An abnormal lung sound that can be heard through a stethoscope.',
+  'ph_desc': 'Isang abnormal na tunog ng baga na maririnig sa pamamagitan ng stethoscope.',
   'source': "['https://www.medicinenet.com/rale/definition.htm#:~:text=Rale%3A%20An%20abnormal%20lung%20sound,forth%20in%20the%20air%20passages.]"
 },
 {
@@ -2691,23 +2467,23 @@ export default [{
   'en': 'rambling speech',
   'ph': 'gumagapang na pananalita',
   'en_desc': 'Neurology Fragmented non-goal directed speech most often caused by acute organic brain disease.',
-  'ph_desc': 'Neurology fragmented non-goal directed speech na kadalasang sanhi ng talamak na organic na sakit sa utak.',
+  'ph_desc': 'Neurology fragmented non-goal directed speech na kadalasang sanhi ng matinding organic na sakit sa utak.',
   'source': "['https://medical-dictionary.thefreedictionary.com/rambling']"
 },
 {
   'symptom': 'rapid shallow breathing',
   'en': 'rapid shallow breathing',
   'ph': 'mabilis na mababaw na paghinga',
-  'en_desc': 'The term hyperventilation is usually used if you are taking rapid, deep breaths. This can be due to lung disease or because of anxiety or panic.',
-  'ph_desc': 'Ang terminong hyperventilation ay kadalasang ginagamit kung ikaw ay humihinga ng mabilis at malalim. Ito ay maaaring dahil sa sakit sa baga o dahil sa pagkabalisa o gulat.',
+  'en_desc': 'The term hyperventilation is usually used if you are taking rapid, deep breaths.',
+  'ph_desc': 'Ang terminong hyperventilation ay kadalasang ginagamit kung ikaw ay humihinga ng mabilis at malalim.',
   'source': "['https://medlineplus.gov/ency/article/007198.htm']"
 },
 {
   'symptom': 'red blotches',
   'en': 'red blotches',
   'ph': 'mga pulang tuldok',
-  'en_desc': 'Psoriasis is a chronic condition that causes red, scaly patches to appear on the skin. One form of psoriasis, guttate psoriasis, is characterized by small reddish or pinkish spots that may also have a scaly quality.',
-  'ph_desc': 'Ang psoriasis ay isang talamak na kondisyon na nagiging sanhi ng paglitaw ng mga pula at scaly patch sa balat. Ang isang anyo ng psoriasis, guttate psoriasis, ay nailalarawan sa pamamagitan ng maliliit na mapula-pula o pinkish na mga spot na maaaring mayroon ding scaly na kalidad.',
+  'en_desc': 'Psoriasis is a chronic condition that causes red, scaly patches to appear on the skin.',
+  'ph_desc': 'Ang psoriasis ay isang matinding kondisyon na nagiging sanhi ng paglitaw ng mga pula at scaly patch sa balat.',
   'source': "['https://www.healthline.com/health/skin/red-spots-on-skin#:~:text=Psoriasis%20is%20a%20chronic%20condition,on%20the%20trunk%20and%20limbs.']"
 },
 {
@@ -2730,8 +2506,8 @@ export default [{
   'symptom': 'renal angle tenderness',
   'en': 'renal angle tenderness',
   'ph': 'renal angle tenderness',
-  'en_desc': 'The kidneys are a likely cause of CVA pain because of their location. Kidney pain may be on one or both sides. ',
-  'ph_desc': 'Ang mga bato ay malamang na sanhi ng sakit ng CVA dahil sa kanilang lokasyon. Ang pananakit ng bato ay maaaring nasa isa o magkabilang panig.',
+  'en_desc': 'The kidneys are a likely cause of CVA pain because of their location.',
+  'ph_desc': 'Ang mga bato ay malamang na sanhi ng sakit ng CVA dahil sa kanilang lokasyon.',
   'source': "['https://www.healthline.com/health/costovertebral-angle']"
 },
 {
@@ -2746,8 +2522,8 @@ export default [{
   'symptom': 'retch',
   'en': 'retch',
   'ph': 'retch',
-  'en_desc': 'To make an effort to vomit',
-  'ph_desc': 'Ginagawang effort para sumuka',
+  'en_desc': 'To make an effort to vomit.',
+  'ph_desc': 'Akyson para piliting sumuka.',
   'source': "['https://www.merriam-webster.com/dictionary/retch']"
 },
 {
@@ -2755,7 +2531,7 @@ export default [{
   'en': 'retropulsion',
   'ph': 'retropulsion',
   'en_desc': "Retropulsion in Parkinson's disease is the force that contributes to loss of balance in a backwards or posterior direction.",
-  'ph_desc': "Ang retropulsion sa Parkinson's disease ay ang puwersa na nag-aambag sa pagkawala ng balanse sa pabalik o posterior na direksyon.",
+  'ph_desc': "AAng retropulsion sa Parkinson's disease ay ang puwersa na nag-aambag sa pagkawala ng balanse sa pabalik o posterior na direksyon.",
   'source': "['https://movementdisorders.ufhealth.org/2013/09/05/physical-therapy-tips-to-manage-retropulsion/#:~:text=Author,associated%20loss%20of%20postural%20reflexes.']"
 },
 {
@@ -2778,8 +2554,8 @@ export default [{
   'symptom': 'rigor - temperature-associated observation',
   'en': 'rigor - temperature-associated observation',
   'ph': 'mahigpit - pagmamasid na nauugnay sa temperatura',
-  'en_desc': 'Severe chills accompanied by vigorous shaking',
-  'ph_desc': 'Matinding panginginig na sinamahan ng malakas na pagyanig',
+  'en_desc': 'Severe chills accompanied by vigorous shaking.',
+  'ph_desc': 'Matinding panginginig na sinamahan ng malakas na pagyanig.',
   'source': "['https://www.semanticscholar.org/topic/Rigor-Temperature-associated-observation/39409']"
 },
 {
@@ -2818,8 +2594,8 @@ export default [{
   'symptom': 'sciatica',
   'en': 'sciatica',
   'ph': 'sciatica',
-  'en_desc': 'Pain that radiates from your lower (lumbar) spine to your buttock and down the back of your leg',
-  'ph_desc': 'Sakit na nagmumula sa iyong mas mababang (lumbar) gulugod hanggang sa iyong puwitan at pababa sa likod ng iyong binti',
+  'en_desc': 'Pain that radiates from your lower (lumbar) spine to your buttock and down the back of your leg.',
+  'ph_desc': 'Sakit na nagmumula sa iyong mas mababang (lumbar) gulugod hanggang sa iyong puwitan at pababa sa likod ng iyong binti.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/sciatica/symptoms-causes/syc-20377435']"
 },
 {
@@ -2842,16 +2618,16 @@ export default [{
   'symptom': 'sedentary',
   'en': 'sedentary',
   'ph': 'laging nakaupo',
-  'en_desc': 'A sedentary or inactive lifestyle. You have probably heard of all of these phrases, and they mean the same thing: a lifestyle with a lot of sitting and lying down, with very little to no exercise.',
-  'ph_desc': 'Isang laging nakaupo o hindi aktibong pamumuhay. Marahil ay narinig mo na ang lahat ng mga pariralang ito, at pareho ang ibig sabihin ng mga ito: isang pamumuhay na maraming nakaupo at nakahiga, na may napakakaunting o walang ehersisyo.',
+  'en_desc': 'A sedentary or inactive lifestyle. ',
+  'ph_desc': 'Isang hindi aktibong pamumuhay.',
   'source': "['https://medlineplus.gov/healthrisksofaninactivelifestyle.html']"
 },
 {
   'symptom': 'seizure',
   'en': 'seizure',
   'ph': 'seizure',
-  'en_desc': 'A seizure is a sudden, uncontrolled electrical disturbance in the brain. It can cause changes in your behavior, movements or feelings, and in levels of consciousness.',
-  'ph_desc': 'Ang seizure ay isang biglaang, hindi nakokontrol na electrical disturbance sa utak. Maaari itong magdulot ng mga pagbabago sa iyong pag-uugali, galaw o damdamin, at sa mga antas ng kamalayan.',
+  'en_desc': 'A seizure is a sudden, uncontrolled electrical disturbance in the brain.',
+  'ph_desc': 'Ang seizure ay isang biglaang, hindi nakokontrol na electrical disturbance sa utak.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/seizure/symptoms-causes/syc-20365711']"
 },
 {
@@ -2879,19 +2655,11 @@ export default [{
   'source': "['https://www.mayoclinic.org/symptoms/shortness-of-breath/basics/definition/sym-20050890']"
 },
 {
-  'symptom': 'shortness of breath',
-  'en': 'shortness of breath',
-  'ph': 'kinakapos na paghinga',
-  'en_desc': 'Intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.',
-  'ph_desc': 'Matinding paninikip sa dibdib, malakas na pagnanais na huminga, hirap sa paghinga, paghinga o pakiramdam ng pagkasakal.',
-  'source': "['https://www.mayoclinic.org/symptoms/shortness-of-breath/basics/definition/sym-20050890']"
-},
-{
   'symptom': 'side pain',
   'en': 'side pain',
   'ph': 'sakit sa tagiliran',
-  'en_desc': 'Flank pain is pain on the side of the torso, just below the ribs. Sometimes, the pain may extend to the low back. ',
-  'ph_desc': 'Ang pananakit ng flank ay pananakit sa gilid ng katawan, sa ibaba lamang ng tadyang. Minsan, ang sakit ay maaaring umabot sa mababang likod.',
+  'en_desc': 'Flank pain is pain on the side of the torso, just below the ribs.',
+  'ph_desc': 'Ang pananakit ng flank ay pananakit sa gilid ng katawan, sa ibaba lamang ng tadyang.',
   'source': "['https://www.medicalnewstoday.com/articles/324592#:~:text=Flank%20pain%20is%20pain%20on,or%20pancreatitis%2C%20are%20very%20serious.']"
 },
 {
@@ -2922,15 +2690,15 @@ export default [{
   'symptom': 'slowing of urinary stream',
   'en': 'slowing of urinary stream',
   'ph': 'pagbagal ng daloy ng ihi',
-  'en_desc': 'Difficulty starting or maintaining a urine stream',
-  'ph_desc': 'Kahirapan sa pagsisimula o pagpapanatili ng daloy ng ihi',
+  'en_desc': 'Difficulty starting or maintaining a urine stream.',
+  'ph_desc': 'Kahirapan sa pagsisimula o pagpapanatili ng daloy ng ihi.',
   'source': "['https://medlineplus.gov/ency/article/003143.htm']"
 },
 {
   'symptom': 'sneeze',
   'en': 'sneeze',
   'ph': 'pagbahing',
-  'en_desc': 'Suudden, forceful, uncontrolled burst of air through the nose and mouth.',
+  'en_desc': 'Sudden, forceful, uncontrolled burst of air through the nose and mouth.',
   'ph_desc': 'Biglaang, malakas, walang kontrol na pagsabog ng hangin sa ilong at bibig.',
   'source': "['https://medlineplus.gov/ency/article/003060.htm']"
 },
@@ -2938,8 +2706,8 @@ export default [{
   'symptom': 'sniffle',
   'en': 'sniffle',
   'ph': 'pagsinghot',
-  'en_desc': 'Repeatedly take air into your nose in short breaths that are loud enough to be heard',
-  'ph_desc': 'Paulit-ulit na pagsinghot ng hangin sa iyong ilong sa maikling paghinga na sapat na malakas para marinig',
+  'en_desc': 'Repeatedly take air into your nose in short breaths that are loud enough to be heard.',
+  'ph_desc': 'Paulit-ulit na pagsinghot ng hangin sa iyong ilong sa maikling paghinga na sapat na malakas para marinig.',
   'source': "['https://www.britannica.com/dictionary/sniffle']"
 },
 {
@@ -2954,16 +2722,16 @@ export default [{
   'symptom': 'snuffle',
   'en': 'snuffle',
   'ph': 'snuffle',
-  'en_desc': 'A respiratory disorder in animals marked especially by catarrhal inflammation and sniffling',
-  'ph_desc': 'Isang respiratory disorder sa mga hayop na minarkahan lalo na ng pamamaga ng catarrhal at sniffling',
+  'en_desc': 'to breathe through an obstructed nose with a sniffing sound',
+  'ph_desc': 'paghinga nang may tunog ng pagsinghot dahil sa baradong ilong.',
   'source': "['https://www.merriam-webster.com/medical/snuffles#:~:text=Medical%20Definition%20of%20snuffles,b%20%3A%20bullnose']"
 },
 {
   'symptom': 'soft tissue swelling',
   'en': 'soft tissue swelling',
   'ph': 'pamamaga ng malambot na tissue',
-  'en_desc': 'Many activities can lead to soft-tissue damage of muscles, ligaments, and tendons. The result can be pain, swelling, bruising, and damage.',
-  'ph_desc': 'Maraming aktibidad ang maaaring humantong sa pagkasira ng malambot na tissue ng mga kalamnan, ligament, at tendon. Ang resulta ay maaaring sakit, pamamaga, pasa, at pinsala.',
+  'en_desc': 'Many activities can lead to soft-tissue damage of muscles, ligaments, and tendons.',
+  'ph_desc': 'Maraming aktibidad ang maaaring humantong sa pagkasira ng malambot na tissue ng mga kalamnan, ligament, at tendon.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/softtissue-injuries']"
 },
 {
@@ -2978,17 +2746,9 @@ export default [{
   'symptom': 'spasm',
   'en': 'spasm',
   'ph': 'pulikat',
-  'en_desc': 'Muscle spasms (muscle cramps) are painful contractions and tightening of your muscles. They\’re common, involuntary and unpredictable.',
-  'ph_desc': 'Ang muscle spasms (muscle cramps) ay masakit na contraction at paninikip ng iyong mga kalamnan. Ang mga ito ay karaniwan, hindi sinasadya at hindi mahuhulaan.',
+  'en_desc': 'Muscle spasms (muscle cramps) are painful contractions and tightening of your muscles.',
+  'ph_desc': 'Ang muscle spasms (muscle cramps) ay masakit na contraction at paninikip ng iyong mga kalamnan.',
   'source': "['https://my.clevelandclinic.org/health/diseases/15466-muscle-spasms']"
-},
-{
-  'symptom': 'speech slurred',
-  'en': 'speech slurred',
-  'ph': 'mahina ang pagsasalita',
-  'en_desc': 'Slurred speech or speech disorders are a symptom characterized by the poor pronunciation of words, mumbling, or a change in speed or rhythm during a conversation.',
-  'ph_desc': 'Ang malabo na pagsasalita o mga karamdaman sa pagsasalita ay isang sintomas na nailalarawan sa mahinang pagbigkas ng mga salita, pag-ungol, o pagbabago sa bilis o ritmo habang nag-uusap.',
-  'source': "['https://www.medicoverhospitals.in/symptoms/slurred-speech#:~:text=Consult%20Now-,What%20is%20a%20slurred%20speech%3F,or%20follow%20a%20single%20incident.']"
 },
 {
   'symptom': 'speech slurred',
@@ -3010,8 +2770,8 @@ export default [{
   'symptom': 'spontaneous rupture of membranes',
   'en': 'spontaneous rupture of membranes',
   'ph': 'kusang pagkalagot ng mga lamad',
-  'en_desc': 'When a hole or tear forms in the sac, it\'s called a rupture of the membranes. Most women describe this by saying their "water broke." Your membranes can break by themselves. This is called a spontaneous rupture of the membranes.',
-  'ph_desc': 'Kapag may nabuong butas o punit sa sac, tinatawag itong rupture of the membranes. Inilarawan ito ng karamihan sa mga kababaihan sa pamamagitan ng pagsasabi ng kanilang "nabasag ang tubig." Ang iyong mga lamad ay maaaring masira nang mag-isa. Ito ay tinatawag na spontaneous rupture ng mga lamad.',
+  'en_desc': 'When a hole or tear forms in the sac, it is called a rupture of the membranes.',
+  'ph_desc': 'Kapag may nabuong butas o punit sa sac, tinatawag itong rupture of the membranes.',
   'source': "['https://myhealth.alberta.ca/Health/Pages/conditions.aspx?hwid=hw195832#:~:text=When%20a%20hole%20or%20tear,after%20active%20labour%20has%20started.']"
 },
 {
@@ -3042,8 +2802,8 @@ export default [{
   'symptom': 'stiffness',
   'en': 'stiffness',
   'ph': 'paninigas',
-  'en_desc': 'Joint stiffness is the feeling that the motion of a joint is limited or difficult. The feeling is not caused by weakness or reluctance to move the joint due to pain.',
-  'ph_desc': 'Ang joint stiffness ay ang pakiramdam na limitado o mahirap ang galaw ng isang joint. Ang pakiramdam ay hindi sanhi ng panghihina o pag-aatubili na ilipat ang kasukasuan dahil sa sakit.',
+  'en_desc': 'Joint stiffness is the feeling that the motion of a joint is limited or difficult.',
+  'ph_desc': 'Ang joint stiffness ay ang pakiramdam na limitado o mahirap ang galaw ng isang joint.',
   'source': "['https://www.msdmanuals.com/home/bone,-joint,-and-muscle-disorders/symptoms-of-musculoskeletal-disorders/joint-stiffness#:~:text=Joint%20stiffness%20is%20the%20feeling,this%20movement%20can%20require%20force.']"
 },
 {
@@ -3074,8 +2834,8 @@ export default [{
   'symptom': 'stuffy nose',
   'en': 'stuffy nose',
   'ph': 'baradong ilong',
-  'en_desc': 'A stuffy or congested nose occurs when the tissues lining it become swollen. The swelling is due to inflamed blood vessels. ',
-  'ph_desc': 'Ang baradong ilong o masikip na ilong ay nangyayari kapag namamaga ang mga tissue na nasa gilid nito. Ang pamamaga ay dahil sa inflamed blood vessels.',
+  'en_desc': 'A stuffy or congested nose occurs when the tissues lining it become swollen.',
+  'ph_desc': 'Ang baradong ilong o masikip na ilong ay nangyayari kapag namamaga ang mga tissue na nasa gilid nito.',
   'source': "['https://www.mountsinai.org/health-library/symptoms/stuffy-or-runny-nose-adult#:~:text=A%20stuffy%20or%20congested%20nose,a%20cough%20or%20sore%20throat.']"
 },
 {
@@ -3106,16 +2866,8 @@ export default [{
   'symptom': 'sweat',
   'en': 'sweat',
   'ph': 'pagpapawis',
-  'en_desc': "Hyperhidrosis (hi-pur-hi-DROE-sis) is abnormally excessive sweating that's not necessarily related to heat or exercise.",
-  'ph_desc': 'Ang hyperhidrosis (hi-pur-hi-DROE-sis) ay abnormal na labis na pagpapawis na hindi kinakailangang nauugnay sa init o ehersisyo.',
-  'source': "['https://www.mayoclinic.org/diseases-conditions/hyperhidrosis/symptoms-causes/syc-20367152']"
-},
-{
-  'symptom': 'sweating increased',
-  'en': 'sweating increased',
-  'ph': 'nadagdagan ang pagpapawis',
-  'en_desc': 'Excessive sweating, or hyperhidrosis, can be a warning sign of thyroid problems, diabetes or infection.',
-  'ph_desc': 'Ang labis na pagpapawis, o hyperhidrosis, ay maaaring isang babalang senyales ng mga problema sa thyroid, diabetes o impeksiyon.',
+  'en_desc': "Hyperhidrosis is abnormally excessive sweating that's not necessarily related to heat or exercise.",
+  'ph_desc': 'Ang hyperhidrosis ay abnormal na labis na pagpapawis na hindi kinakailangang nauugnay sa init o ehersisyo.',
   'source': "['https://www.mayoclinic.org/diseases-conditions/hyperhidrosis/symptoms-causes/syc-20367152']"
 },
 {
@@ -3130,17 +2882,9 @@ export default [{
   'symptom': 'swelling',
   'en': 'swelling',
   'ph': 'pamamaga',
-  'en_desc': 'Swelling is the enlargement of organs, skin, or other body parts. It is caused by a buildup of fluid in the tissues.',
-  'ph_desc': 'Ang pamamaga ay ang paglaki ng mga organo, balat, o iba pang bahagi ng katawan. Ito ay sanhi ng pagtitipon ng likido sa mga tisyu.',
+  'en_desc': 'Swelling is the enlargement of organs, skin, or other body parts.',
+  'ph_desc': 'Ang pamamaga ay ang paglaki ng mga organo, balat, o iba pang bahagi ng katawan.',
   'source': "['https://medlineplus.gov/ency/article/003103.htm#:~:text=Swelling%20is%20the%20enlargement%20of,of%20the%20body%20(localized).']"
-},
-{
-  'symptom': 'symptom aggravating factors',
-  'en': 'symptom aggravating factors',
-  'ph': 'sintomas na nagpapalala ng mga kadahilanan',
-  'en_desc': 'Something that makes a condition worse. For example, tobacco smoke is an aggravating factor for asthma.',
-  'ph_desc': 'Isang bagay na nagpapalala ng kondisyon. Halimbawa, ang usok ng tabako ay isang nagpapalubha na kadahilanan para sa hika.',
-  'source': "['https://www.cancer.gov/publications/dictionaries/cancer-terms/def/aggravating-factor']"
 },
 {
   'symptom': 'symptom aggravating factors',
@@ -3154,24 +2898,24 @@ export default [{
   'symptom': 'syncope',
   'en': 'syncope',
   'ph': 'syncope',
-  'en_desc': 'Syncope (SINK-a-pee) is another word for fainting or passing out. Someone is considered to have syncope if they become unconscious and go limp, then soon recover.',
-  'ph_desc': 'Ang Syncope (SINK-a-pee) ay isa pang salita para sa pagkahimatay o pagkahimatay. Ang isang tao ay itinuturing na may syncope kung sila ay nawalan ng malay at malata, pagkatapos ay gumaling.',
+  'en_desc': 'Syncope is another word for fainting or passing out.',
+  'ph_desc': 'Ang Syncope ay isa pang salita para sa pagkahimatay.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/syncope-fainting#:~:text=Syncope%20(SINK%2Da%2Dpee,a%20sign%20of%20serious%20illness.']"
 },
 {
   'symptom': 'systolic ejection murmur',
   'en': 'systolic ejection murmur',
   'ph': 'systolic ejection murmur',
-  'en_desc': 'Systolic ejection murmurs (SEM, crescendo-decrescendo) result from turbulent blood flow due to obstruction (actual or relative) across the semilunar valves, outflow tracts or arteries.',
-  'ph_desc': 'Systolic ejection murmurs (SEM, crescendo-decrescendo) ay nagreresulta mula sa magulong daloy ng dugo dahil sa obstruction (aktwal o kamag-anak) sa mga semilunar valve, outflow tract o arteries.',
+  'en_desc': 'Systolic ejection murmurs result from turbulent blood flow due to obstruction  across the semilunar valves, outflow tracts or arteries.',
+  'ph_desc': 'Systolic ejection murmurs ay nagreresulta mula sa magulong daloy ng dugo dahil sa obstruction  sa mga semilunar valve, outflow tract o arteries.',
   'source': "['https://www.utmb.edu/pedi_ed/CoreV2/Cardiology/cardiologyV2/cardiologyV24.html#:~:text=a)%20Systolic%20ejection%20murmurs%20(SEM,shortly%20after%20S1%20(pulse).']"
 },
 {
   'symptom': 'systolic murmur',
   'en': 'systolic murmur',
   'ph': 'systolic murmur',
-  'en_desc': 'Systolic murmur - occurs during a heart muscle contraction. Systolic murmurs are divided into ejection murmurs (due to blood flow through a narrowed vessel or irregular valve) and regurgitant murmurs.',
-  'ph_desc': 'Systolic murmur - nangyayari sa panahon ng pag-urong ng kalamnan sa puso. Ang mga systolic murmur ay nahahati sa ejection murmurs (dahil sa daloy ng dugo sa isang makitid na daluyan o irregular valve) at regurgitant murmurs.',
+  'en_desc': 'Occurs during a heart muscle contraction. Systolic murmurs are divided into ejection murmurs (due to blood flow through a narrowed vessel or irregular valve) and regurgitant murmurs.',
+  'ph_desc': 'Nangyayari sa panahon ng pag-urong ng kalamnan sa puso. Ang mga systolic murmur ay nahahati sa ejection murmurs (dahil sa daloy ng dugo sa isang makitid na daluyan o irregular valve) at regurgitant murmurs.',
   'source': "['https://stanfordhealthcare.org/medical-conditions/blood-heart-circulation/heart-murmurs/types.html#:~:text=Systolic%20murmur%20%2D%20occurs%20during%20a,heart%20muscle%20relaxation%20between%20beats.']"
 },
 {
@@ -3186,8 +2930,8 @@ export default [{
   'symptom': 'tachypnea',
   'en': 'tachypnea',
   'ph': 'tachypnea',
-  'en_desc': 'Tachypnea is a condition that refers to rapid breathing. The normal breathing rate for an average adult is 12 to 20 breaths per minute.',
-  'ph_desc': 'Ang tachypnea ay isang kondisyon na tumutukoy sa mabilis na paghinga. Ang normal na bilis ng paghinga para sa isang karaniwang nasa hustong gulang ay 12 hanggang 20 na paghinga bawat minuto.',
+  'en_desc': 'Tachypnea is a condition that refers to rapid breathing.',
+  'ph_desc': 'Ang tachypnea ay isang kondisyon na tumutukoy sa mabilis na paghinga.',
   'source': "['https://www.ncbi.nlm.nih.gov/books/NBK541062/']"
 },
 {
@@ -3202,16 +2946,16 @@ export default [{
   'symptom': 'terrify',
   'en': 'terrify',
   'ph': 'takutin',
-  'en_desc': 'To drive or impel by menacing',
-  'ph_desc': 'Magpilit sa pamamagitan ng pagbabanta',
+  'en_desc': 'To drive or impel by menacing.',
+  'ph_desc': 'Magpilit sa pamamagitan ng pagbabanta.',
   'source': "['https://www.merriam-webster.com/dictionary/terrify']"
 },
 {
   'symptom': 'thicken',
   'en': 'thicken',
   'ph': 'kumapal',
-  'en_desc': 'To become dense',
-  'ph_desc': 'Para maging siksik',
+  'en_desc': 'To become dense.',
+  'ph_desc': 'Para maging siksik.',
   'source': "['https://www.merriam-webster.com/dictionary/thicken']"
 },
 {
@@ -3242,8 +2986,8 @@ export default [{
   'symptom': 'tired',
   'en': 'tired',
   'ph': 'pagod',
-  'en_desc': 'Fatigue is a term used to describe an overall feeling of tiredness or lack of energy. It isn\’t the same as simply feeling drowsy or sleepy. ',
-  'ph_desc': 'Ang pagkapagod ay isang terminong ginamit upang ilarawan ang isang pangkalahatang pakiramdam ng pagkapagod o kakulangan ng enerhiya. Hindi ito katulad ng simpleng pakiramdam na inaantok o inaantok.',
+  'en_desc': 'Fatigue is a term used to describe an overall feeling of tiredness or lack of energy.',
+  'ph_desc': 'Ang pagkapagod ay isang terminong ginamit upang ilarawan ang isang pangkalahatang pakiramdam ng pagkapagod o kakulangan ng enerhiya.',
   'source': "['https://www.healthline.com/health/fatigue']"
 },
 {
@@ -3251,7 +2995,7 @@ export default [{
   'en': 'titubation',
   'ph': 'titubation',
   'en_desc': 'Titubation is a type of involuntary tremor that occurs in the head, neck, and trunk area.',
-  'ph_desc': 'Ang titubation ay isang uri ng involuntary tremor na nangyayari sa ulo, leeg, at lugar ng puno ng kahoy.',
+  'ph_desc': 'Ang titubation ay isang uri ng involuntary tremor na nangyayari sa ulo, leeg, at sa bandang trunk ng katawan.',
   'source': "['https://www.healthline.com/health/titubation']"
 },
 {
@@ -3267,15 +3011,15 @@ export default [{
   'en': 'tonic seizures',
   'ph': 'tonic seizures',
   'en_desc': 'A tonic seizure causes a sudden stiffness or tension in the muscles of the arms, legs or trunk.',
-  'ph_desc': 'Ang isang tonic seizure ay nagdudulot ng biglaang paninigas o tensyon sa mga kalamnan ng mga braso, binti o puno ng kahoy.',
+  'ph_desc': 'Ang isang tonic seizure ay nagdudulot ng biglaang paninigas o tensyon sa mga kalamnan ng mga braso, binti o trunk ng katawan.',
   'source': "['https://www.hopkinsmedicine.org/health/conditions-and-diseases/epilepsy/tonic-and-clonic-seizures#:~:text=A%20tonic%20seizure%20causes%20a,may%20feel%20tired%20or%20confused.']"
 },
 {
   'symptom': 'transaminitis',
   'en': 'transaminitis',
   'ph': 'transaminitis',
-  'en_desc': 'Transaminitis, or hypertransaminasemia, refers to unusually high levels of a family of enzymes called transaminases.',
-  'ph_desc': 'Ang transaminitis, o hypertransaminasemia, ay tumutukoy sa hindi pangkaraniwang mataas na antas ng isang pamilya ng mga enzyme na tinatawag na transaminases.',
+  'en_desc': 'Refers to unusually high levels of a family of enzymes called transaminases.',
+  'ph_desc': 'Tumutukoy sa hindi pangkaraniwang mataas na antas ng isang pamilya ng mga enzyme na tinatawag na transaminases.',
   'source': "['https://www.medicalnewstoday.com/articles/321975#:~:text=Transaminitis%2C%20or%20hypertransaminasemia%2C%20refers%20to,causing%20inflammation%20in%20the%20liver.']"
 },
 {
@@ -3290,8 +3034,8 @@ export default [{
   'symptom': 'tremor',
   'en': 'tremor',
   'ph': 'panginginig',
-  'en_desc': 'A tremor is a rhythmic shaking movement in one or more parts of your body. It is involuntary, meaning that you cannot control it. ',
-  'ph_desc': 'Ang panginginig ay isang maindayog na paggalaw sa isa o higit pang bahagi ng iyong katawan. Ito ay hindi sinasadya, ibig sabihin ay hindi mo ito makokontrol.',
+  'en_desc': 'A tremor is a rhythmic shaking movement in one or more parts of your body.',
+  'ph_desc': 'Ang panginginig ay isang maindayog na paggalaw sa isa o higit pang bahagi ng iyong katawan.',
   'source': "['https://medlineplus.gov/tremor.html#:~:text=A%20tremor%20is%20a%20rhythmic,cords%2C%20trunk%2C%20and%20legs.']"
 },
 {
@@ -3319,35 +3063,19 @@ export default [{
   'source': "['https://www.healthline.com/health/unable-to-concentrate#:~:text=Being%20unable%20to%20concentrate%20can%20be%20the%20result%20of%20a,chronic%20fatigue%20syndrome']"
 },
 {
-  'symptom': 'unable to concentrate',
-  'en': 'unable to concentrate',
-  'ph': 'hindi makapagconcentrate',
-  'en_desc': 'Being unable to concentrate can be the result of a chronic condition, including: alcohol use disorder.',
-  'ph_desc': 'Ang hindi makapag-concentrate ay maaaring resulta ng isang malalang kondisyon, kabilang ang: karamdaman sa paggamit ng alak.',
-  'source': "['https://www.healthline.com/health/unable-to-concentrate#:~:text=Being%20unable%20to%20concentrate%20can%20be%20the%20result%20of%20a,chronic%20fatigue%20syndrome']"
-},
-{
   'symptom': 'unconscious state',
   'en': 'unconscious state',
   'ph': 'walang malay na estado',
-  'en_desc': 'Unconsciousness is when a person is unable to respond to people and activities. Doctors often call this a coma or being in a comatose state. ',
-  'ph_desc': 'Ang kawalan ng malay ay kapag ang isang tao ay hindi makatugon sa mga tao at mga gawain. Madalas itong tinatawag ng mga doktor na coma o nasa isang comatose state.',
-  'source': "['https://medlineplus.gov/ency/article/000022.htm#:~:text=Unconsciousness%20is%20when%20a%20person,status%20or%20changed%20mental%20status.']"
-},
-{
-  'symptom': 'unconscious state',
-  'en': 'unconscious state',
-  'ph': 'walang malay na estado',
-  'en_desc': 'Unconsciousness is when a person is unable to respond to people and activities. Doctors often call this a coma or being in a comatose state. ',
-  'ph_desc': 'Ang kawalan ng malay ay kapag ang isang tao ay hindi makatugon sa mga tao at mga gawain. Madalas itong tinatawag ng mga doktor na coma o nasa isang comatose state.',
+  'en_desc': 'Unconsciousness is when a person is unable to respond to people and activities.',
+  'ph_desc': 'Ang kawalan ng malay ay kapag ang isang tao ay hindi makatugon sa mga tao at mga gawain.',
   'source': "['https://medlineplus.gov/ency/article/000022.htm#:~:text=Unconsciousness%20is%20when%20a%20person,status%20or%20changed%20mental%20status.']"
 },
 {
   'symptom': 'uncoordination',
   'en': 'uncoordination',
   'ph': 'uncoordination',
-  'en_desc': 'Lacking coordination',
-  'ph_desc': 'Kulang sa koordinasyon',
+  'en_desc': 'Lacking coordination.',
+  'ph_desc': 'Kulang sa koordinasyon.',
   'source': "['https://www.merriam-webster.com/dictionary/uncoordinated#:~:text=Definition%20of%20uncoordinated,Peter%20Cohen']"
 },
 {
@@ -3362,8 +3090,8 @@ export default [{
   'symptom': 'unhappy',
   'en': 'unhappy',
   'ph': 'hindi masaya',
-  'en_desc': 'Not cheerful or glad',
-  'ph_desc': 'Hindi masaya o magalak',
+  'en_desc': 'Not cheerful or glad.',
+  'ph_desc': 'Hindi masaya o magalak.',
   'source': "['https://www.merriam-webster.com/dictionary/unhappy']"
 },
 {
@@ -3383,35 +3111,19 @@ export default [{
   'source': "['https://www.medicinenet.com/unsteady_gait/symptoms.htm#:~:text=An%20unsteady%20gait%20is%20an,the%20movements%20necessary%20for%20walking.']"
 },
 {
-  'symptom': 'unsteady gait',
-  'en': 'unsteady gait',
-  'ph': 'hindi tuwid na paglalakad',
-  'en_desc': 'An unsteady gait is an abnormality in walking that can be caused by diseases of or damage to the legs and feet (including the bones, joints, blood vessels, muscles, and other soft tissues) or to the nervous system that controls the movements necessary for walking.',
-  'ph_desc': 'Ang hindi matatag na lakad ay isang abnormalidad sa paglalakad na maaaring sanhi ng mga sakit o pinsala sa mga binti at paa (kabilang ang mga buto, kasukasuan, daluyan ng dugo, kalamnan, at iba pang malambot na tisyu) o sa nervous system na kumokontrol sa mga paggalaw na kinakailangan para sa naglalakad.',
-  'source': "['https://www.medicinenet.com/unsteady_gait/symptoms.htm#:~:text=An%20unsteady%20gait%20is%20an,the%20movements%20necessary%20for%20walking.']"
-},
-{
   'symptom': 'unwell',
   'en': 'unwell',
   'ph': 'masama ang pakiramdam',
-  'en_desc': 'Not well or not in good health',
-  'ph_desc': 'Hindi maayos o hindi maganda ang kalusugan',
+  'en_desc': 'Not well or not in good health.',
+  'ph_desc': 'Hindi maayos o hindi maganda ang kalusugan.',
   'source': "['https://www.medicinenet.com/unwell/definition.htm#:~:text=Unwell%3A%20Not%20well%20or%20not,Ailing%2C%20sick%2C%20or%20indisposed.']"
 },
 {
   'symptom': 'urge incontinence',
   'en': 'urge incontinence',
   'ph': 'hinihimok ang kawalan ng pagpipigil',
-  'en_desc': "Urge incontinence occurs when you have a sudden urge to urinate. In urge incontinence, the urinary bladder contracts when it shouldn't, causing some urine to leak through the sphincter muscles holding the bladder closed.",
-  'ph_desc': 'Ang urge incontinence ay nangyayari kapag mayroon kang biglaang pagnanais na umihi. Sa pag-uudyok sa kawalan ng pagpipigil, ang pantog ng ihi ay kumukontra kung hindi ito nararapat, na nagiging sanhi ng pagtagas ng ilang ihi sa mga kalamnan ng sphincter na nakasara ang pantog.',
-  'source': "['https://www.healthline.com/health/urge-incontinence#:~:text=Urge%20incontinence%20occurs%20when%20you,overactive%20bladder%20(OAB)']"
-},
-{
-  'symptom': 'urge incontinence',
-  'en': 'urge incontinence',
-  'ph': 'hinihimok ang kawalan ng pagpipigil',
-  'en_desc': "Urge incontinence occurs when you have a sudden urge to urinate. In urge incontinence, the urinary bladder contracts when it shouldn't, causing some urine to leak through the sphincter muscles holding the bladder closed.",
-  'ph_desc': 'Ang urge incontinence ay nangyayari kapag mayroon kang biglaang pagnanais na umihi. Sa pag-uudyok sa kawalan ng pagpipigil, ang pantog ng ihi ay kumukontra kung hindi ito nararapat, na nagiging sanhi ng pagtagas ng ilang ihi sa mga kalamnan ng sphincter na nakasara ang pantog.',
+  'en_desc': "Urge incontinence occurs when you have a sudden urge to urinate.",
+  'ph_desc': 'Ang urge incontinence ay nangyayari kapag mayroon kang biglaang pagnanais na umihi.',
   'source': "['https://www.healthline.com/health/urge-incontinence#:~:text=Urge%20incontinence%20occurs%20when%20you,overactive%20bladder%20(OAB)']"
 },
 {
@@ -3442,16 +3154,8 @@ export default [{
   'symptom': 'verbal auditory hallucinations',
   'en': 'verbal auditory hallucinations',
   'ph': 'verbal auditory hallucinations',
-  'en_desc': 'Auditory verbal hallucinations (AVHs) are the phenomenon of hearing voices in the absence of any speaker, and are experienced by around 60–80% of people diagnosed with schizophrenia',
-  'ph_desc': 'Ang auditory verbal hallucinations (AVHs) ay ang hindi pangkaraniwang bagay ng pandinig ng mga boses sa kawalan ng sinumang nagsasalita, at nararanasan ng humigit-kumulang 60–80% ng mga taong na-diagnose na may schizophrenia',
-  'source': "['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3870271/#:~:text=Auditory%20verbal%20hallucinations%20(AVHs)%20are%20the%20phenomenon%20of%20hearing%20voices,et%20al.%2C%201986).']"
-},
-{
-  'symptom': 'verbal auditory hallucinations',
-  'en': 'verbal auditory hallucinations',
-  'ph': 'verbal auditory hallucinations',
-  'en_desc': 'Auditory verbal hallucinations (AVHs) are the phenomenon of hearing voices in the absence of any speaker, and are experienced by around 60–80% of people diagnosed with schizophrenia',
-  'ph_desc': 'Ang auditory verbal hallucinations (AVHs) ay ang hindi pangkaraniwang bagay ng pandinig ng mga boses sa kawalan ng sinumang nagsasalita, at nararanasan ng humigit-kumulang 60–80% ng mga taong na-diagnose na may schizophrenia',
+  'en_desc': 'Auditory verbal hallucinations (AVHs) are the phenomenon of hearing voices in the absence of any speaker, and are experienced by around 60–80% of people diagnosed with schizophrenia.',
+  'ph_desc': 'Ang auditory verbal hallucinations (AVHs) ay ang hindi pangkaraniwang bagay ng pandinig ng mga boses sa kawalan ng sinumang nagsasalita, at nararanasan ng humigit-kumulang 60–80% ng mga taong na-diagnose na may schizophrenia.',
   'source': "['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3870271/#:~:text=Auditory%20verbal%20hallucinations%20(AVHs)%20are%20the%20phenomenon%20of%20hearing%20voices,et%20al.%2C%201986).']"
 },
 {
@@ -3466,8 +3170,8 @@ export default [{
   'symptom': 'vertigo',
   'en': 'vertigo',
   'ph': 'vertigo',
-  'en_desc': 'Vertigo is a symptom, rather than a condition itself. It is the sensation that you, or the environment around you, is moving or spinning. ',
-  'ph_desc': 'Ang Vertigo ay isang sintomas, sa halip na isang kundisyon mismo. Ito ay ang sensasyon na ikaw, o ang kapaligiran sa paligid mo, ay gumagalaw o umiikot.',
+  'en_desc': 'It is the sensation that you, or the environment around you, is moving or spinning.',
+  'ph_desc': 'Ito ay ang sensasyon na ikaw, o ang kapaligiran sa paligid mo, ay gumagalaw o umiikot.',
   'source': "['https://www.nhsinform.scot/illnesses-and-conditions/ears-nose-and-throat/vertigo#:~:text=Vertigo%20is%20a%20symptom%2C%20rather,balance%20and%20do%20everyday%20tasks.']"
 },
 {
@@ -3482,24 +3186,24 @@ export default [{
   'symptom': 'vomiting',
   'en': 'vomiting',
   'ph': 'pagsusuka',
-  'en_desc': 'Vomiting is rarely painful, but never pleasant. Vomiting, also known scientifically as “emesis” and colloquially as throwing up, retching, heaving, hurling, puking, tossing, or being sick, is the forcible voluntary or involuntary emptying of stomach contents through the mouth or, less often, the nose',
-  'ph_desc': 'Ang pagsusuka ay bihirang masakit, ngunit hindi kailanman kaaya-aya. Ang pagsusuka, na kilala rin sa siyentipiko bilang "emesis" at kolokyal bilang pagsusuka, pag-uutal, paghikab, paghagis, pagsusuka, paghuhugas, o pagkakasakit, ay ang puwersahang boluntaryo o hindi sinasadyang pag-alis ng laman ng tiyan sa pamamagitan ng bibig o, mas madalas, sa ilong.',
+  'en_desc': 'Vomiting, also known scientifically as “emesis” and colloquially as throwing up, retching, heaving, hurling, puking, tossing, or being sick, is the forcible voluntary or involuntary emptying of stomach contents through the mouth or, less often, the nose.',
+  'ph_desc': 'Ang pagsusuka, na kilala rin sa siyentipiko bilang "emesis" at kolokyal bilang pagsusuka, pag-uutal, paghikab, paghagis, pagsusuka, paghuhugas, o pagkakasakit, ay ang puwersahang boluntaryo o hindi sinasadyang pag-alis ng laman ng tiyan sa pamamagitan ng bibig o, mas madalas, sa ilong.',
   'source': "['https://www.everydayhealth.com/vomiting/guide/']"
 },
 {
   'symptom': 'weepiness',
   'en': 'weepiness',
   'ph': 'pag-iyak',
-  'en_desc': 'Type of sadness or unhappiness',
-  'ph_desc': 'Uri ng kalungkutan o kalungkutan',
+  'en_desc': 'Type of sadness or unhappiness.',
+  'ph_desc': 'Uri ng kalungkutan.',
   'source': "['https://www.vocabulary.com/dictionary/weepiness#:~:text=Definitions%20of%20weepiness,a%20state%20of%20well%2Dbeing']"
 },
 {
   'symptom': 'weight gain',
   'en': 'weight gain',
   'ph': 'Dagdag timbang',
-  'en_desc': "If you started taking in more calories than usual or cutting back on exercise, you wouldn't be surprised if the numbers on the scale crept higher.",
-  'ph_desc': 'Kung nagsimula kang kumuha ng mas maraming calorie kaysa karaniwan o bawasan ang ehersisyo, hindi ka magugulat kung ang mga numero sa sukat ay gumapang nang mas mataas.',
+  'en_desc': "An increase in body weight. This can be either an increase in muscle mass, fat deposits, or excess fluids such as water.",
+  'ph_desc': 'Pagtaas sa timbang ng katawan. Ito ay maaaring alinman sa isang pagtaas sa mass ng kalamnan, mga deposito ng taba, o labis na likido tulad ng tubig.',
   'source': "['https://www.webmd.com/diet/ss/slideshow-weight-gain-shockers']"
 },
 {
@@ -3507,7 +3211,7 @@ export default [{
   'en': 'welt',
   'ph': 'welt',
   'en_desc': 'A red bump, ridge or swelling of unbroken skin raised by a stinging blow or by an allergic reaction to foods, drugs or insect bites, as in hives (urticaria).',
-  'ph_desc': 'Isang pulang bukol, tagaytay o pamamaga ng hindi nabasag na balat na itinaas ng isang nakakatusok na suntok o ng isang reaksiyong alerdyi sa mga pagkain, gamot o kagat ng insekto, tulad ng sa mga pantal (urticaria).',
+  'ph_desc': 'Ppulang bukol, pamamaga ng hindi nasirang balat na itinaas ng isang malakas na pagtama o ng isang reaksiyong alerdyi sa mga pagkain, gamot o kagat ng insekto, tulad ng sa mga pantal (urticaria).',
   'source': "['https://www.medicinenet.com/welt/definition.htm']"
 },
 {
@@ -3515,7 +3219,7 @@ export default [{
   'en': 'wheelchair bound',
   'ph': 'nakatali sa wheelchair',
   'en_desc': 'The terms “confined to a wheelchair” and “wheelchair bound” are judgements by people without disabilities about how it would be to live life in a wheelchair.',
-  'ph_desc': 'Ang mga terminong "nakakulong sa wheelchair" at "wheelchair bound" ay mga paghatol ng mga taong walang kapansanan tungkol sa kung paano mamuhay sa isang wheelchair.',
+  'ph_desc': 'Ang mga terminong "nakaratay sa wheelchair" at "wheelchair bound" ay mga paghatol ng mga taong walang kapansanan tungkol sa kung paano mamuhay sa isang wheelchair.',
   'source': "['https://canbc.org/blog/proper-terminology-dont-use-confined-to-or-wheelchair-bound/']"
 },
 {
@@ -3530,8 +3234,8 @@ export default [{
   'symptom': 'withdraw',
   'en': 'withdraw',
   'ph': 'pagbabawi',
-  'en_desc': 'Medical Withdrawals may be granted to students who experience a serious or unexpected physical or behavioral health condition',
-  'ph_desc': 'Maaaring ibigay ang mga Medical Withdrawal sa mga mag-aaral na nakakaranas ng malubhang o hindi inaasahang pisikal o kondisyong pangkalusugan sa pag-uugali',
+  'en_desc': 'Medical Withdrawals may be granted to students who experience a serious or unexpected physical or behavioral health condition.',
+  'ph_desc': 'Maaaring ibigay ang mga Medical Withdrawal sa mga mag-aaral na nakakaranas ng malubhang o hindi inaasahang pisikal o kondisyong pangkalusugan sa pag-uugali.',
   'source': "['https://registrar.wisc.edu/medical-withdrawal/']"
 },
 {
@@ -3541,14 +3245,6 @@ export default [{
   'en_desc': 'Health anxiety is an obsessive and irrational worry about having a serious medical condition.',
   'ph_desc': 'Ang pagkabalisa sa kalusugan ay isang obsessive at hindi makatwiran na pag-aalala tungkol sa pagkakaroon ng malubhang kondisyong medikal.',
   'source': "['https://www.healthline.com/health/health-anxiety']"
-},
-{
-  'symptom': 'yellow sputum',
-  'en': 'yellow sputum',
-  'ph': 'dilaw na plema',
-  'en_desc': "If you see green or yellow phlegm, it's usually a sign that your body is fighting an infection. The color comes from white blood cells.",
-  'ph_desc': 'Kung makakita ka ng berde o dilaw na plema, kadalasan ito ay senyales na ang iyong katawan ay lumalaban sa impeksyon. Ang kulay ay mula sa mga puting selula ng dugo.',
-  'source': "['https://www.healthline.com/health/green-phlegm']"
 },
 {
   'symptom': 'yellow sputum',

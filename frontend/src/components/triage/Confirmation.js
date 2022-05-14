@@ -25,7 +25,7 @@ const Confirmation = ({ formData, setFormData, setPage, setProgress }) => {
   }
 
   const checkEntry = () => {
-    return formData.first_name === "" | formData.last_name === "" | formData.birth_date === null | formData.sex === "" | formData.contact_no === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
+    return formData.first_name === "" | formData.last_name === "" | formData.birth_date === null | formData.sex === "" | formData.temperature === "" | formData.pulse_rate === "" | formData.systolic_bp === "" | formData.diastolic_bp === "" | formData.o2_saturation === ""
   }
 
   const submitForm = async () => {
@@ -43,7 +43,7 @@ const Confirmation = ({ formData, setFormData, setPage, setProgress }) => {
         "sex": formData.sex,
         "symptoms": symptoms,
         "differentials": [],
-        "contact_no": formData.contact_no,
+        "contact_no": formData.contact_no != "" ? formData.contact_no : "NA",
         "temperature": formData.temperature,
         "pulse_rate": formData.pulse_rate,
         "systolic_bp": formData.systolic_bp,

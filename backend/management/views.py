@@ -383,11 +383,17 @@ class AddAppointment(View):
             }
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
-                    from api.sms import sendAppointmentNew
-                    response_code = sendAppointmentNew(appointment=appointment)
-                    messages.add_message(request,
-                                         messages.SUCCESS,
-                                         'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                    if appointment['patient_contact_no'] != "NA":
+                        from api.sms import sendAppointmentNew
+                        response_code = sendAppointmentNew(
+                            appointment=appointment)
+                        messages.add_message(request,
+                                             messages.SUCCESS,
+                                             'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                    else:
+                        messages.add_message(request,
+                                             messages.SUCCESS,
+                                             'The patient has not been notified through SMS due to lack of valid contact number.'.format(patient_id))
                 except:
                     data = {"message": "There was an error with the SMS module."}
                     response_code = 503
@@ -436,12 +442,17 @@ class UpdateAppointment(View):
 
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
-                    from api.sms import sendAppointmentUpdate
-                    response_code = sendAppointmentUpdate(
-                        appointment=appointment)
-                    messages.add_message(request,
-                                         messages.SUCCESS,
-                                         'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                    if appointment['patient_contact_no'] != "NA":
+                        from api.sms import sendAppointmentNew
+                        response_code = sendAppointmentNew(
+                            appointment=appointment)
+                        messages.add_message(request,
+                                             messages.SUCCESS,
+                                             'The patient has been notified of the appointment through SMS.'.format(patient_id))
+                    else:
+                        messages.add_message(request,
+                                             messages.SUCCESS,
+                                             'The patient has not been notified through SMS due to lack of valid contact number.'.format(patient_id))
                 except:
                     data = {"message": "There was an error with the SMS module."}
                     response_code = 503
