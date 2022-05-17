@@ -118,6 +118,11 @@ const Results = () => {
                     </MDBCol>
                     <MDBCol>
                       {location.state.contact_no ? <span>{location.state.contact_no}</span> : <i className='text-muted'>*MISSING</i>}
+                      {
+                        location.state.contact_no === "NA" || location.state.contact_no.length != 11 || !(location.state.contact_no.startsWith("09")) ?
+                          <MDBContainer className='m-0 p-0' style={{ fontSize: '0.6em', fontStyle: 'italic' }}>{language === "PH" ? "Hindi makatatanggap ng SMS." : "Not eligible to receive SMS."}</MDBContainer>
+                          : <></>
+                      }
                     </MDBCol>
                   </MDBRow>
                 </MDBCol>
@@ -179,7 +184,7 @@ const Results = () => {
       </div>
       <div id="text-btn" className='icons-btn'>
         {
-          location.state.contact_no != "NA" ?
+          location.state.contact_no != "NA" && location.state.contact_no.length === 11 && location.state.contact_no.startsWith("09") ?
             <MDBBtn color='primary' className='px-0' rounded style={{ height: '130px', width: '130px', lineHeight: '1' }} onClick={() => { toggleSmsModal(); handleFeature(); }}>
               <div>
                 <MDBRow>
