@@ -302,15 +302,19 @@ class PatientDetails(View):
 
         appointment_history = Appointment.objects.filter(patient=patient)
 
+        contact_status = "(Not eligible for text notifications.)"
+        if patient.contact_no != "NA" and (patient.contact_no).startswith('09') and len(patient.contact_no) == 11:
+            contact_status = ""
+
         if patient.differentials:
             disesase_info = []
             for differential in patient.differentials:
                 entry = getDiseaseInfo(differential)
                 disesase_info.append(entry)
             differential_info = zip(patient.differentials, disesase_info)
-            return render(request, template_name='management/patient-details.html', context={'patient': patient, 'differential_info': differential_info, 'appointment_history': appointment_history, 'notes': notes})
+            return render(request, template_name='management/patient-details.html', context={'patient': patient, 'contact_status': contact_status, 'differential_info': differential_info, 'appointment_history': appointment_history, 'notes': notes})
 
-        return render(request, template_name='management/patient-details.html', context={'patient': patient, 'appointment_history': appointment_history, 'notes': notes})
+        return render(request, template_name='management/patient-details.html', context={'patient': patient, 'contact_status': contact_status, 'appointment_history': appointment_history, 'notes': notes})
 
 
 class PatientNotes(View):
