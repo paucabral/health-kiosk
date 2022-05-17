@@ -120,7 +120,7 @@ const Results = () => {
                       {location.state.contact_no ? <span>{location.state.contact_no}</span> : <i className='text-muted'>*MISSING</i>}
                       {
                         location.state.contact_no === "NA" || location.state.contact_no.length != 11 || !(location.state.contact_no.startsWith("09")) ?
-                          <MDBContainer className='m-0 p-0' style={{ fontSize: '0.6em', fontStyle: 'italic' }}>{language === "PH" ? "Hindi makatatanggap ng SMS." : "Not eligible to receive SMS."}</MDBContainer>
+                          <MDBContainer className='m-0 p-0' style={{ fontSize: '0.6em', fontStyle: 'italic' }}>* {language === "PH" ? "Hindi makatatanggap ng SMS." : "Not eligible to receive SMS."}</MDBContainer>
                           : <></>
                       }
                     </MDBCol>
