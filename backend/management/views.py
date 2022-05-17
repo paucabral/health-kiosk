@@ -383,7 +383,7 @@ class AddAppointment(View):
             }
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
-                    if appointment['patient_contact_no'] != "NA":
+                    if appointment['patient_contact_no'] != "NA" and (appointment['patient_contact_no']).startswith('09') and len(appointment['patient_contact_no']) == 11:
                         from api.sms import sendAppointmentNew
                         response_code = sendAppointmentNew(
                             appointment=appointment)
@@ -439,10 +439,9 @@ class UpdateAppointment(View):
                 "assigned_personnel_contact_no": form.cleaned_data['assigned_personnel'].contact_no,
                 "additional_message": form.cleaned_data['message']
             }
-
             if config('ENVIRONMENT', default='production') == 'production':
                 try:
-                    if appointment['patient_contact_no'] != "NA":
+                    if appointment['patient_contact_no'] != "NA" and (appointment['patient_contact_no']).startswith('09') and len(appointment['patient_contact_no']) == 11:
                         from api.sms import sendAppointmentNew
                         response_code = sendAppointmentNew(
                             appointment=appointment)
