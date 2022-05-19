@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow } from 'mdb-react-ui-kit';
+import { MDBInput, MDBCardBody, MDBCardTitle, MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import MomentUtils from '@date-io/moment';
 import moment from 'moment';
@@ -75,6 +75,13 @@ const PersonalInformationInput = ({ formData, setFormData, setBtnDisable }) => {
             <MDBInput style={{ fontSize: '1.2em' }} required pattern='[0-9]*' value={formData.contact_no} onChange={(event) => {
               setFormData({ ...formData, contact_no: event.target.value.replace(/[^0-9]+/g, '') })
             }} id='contact_no' size='md' label={language === "PH" ? 'Numero ng Telepono ' : 'Contact No. '} type='tel' icon="phone" />
+            {
+              formData.contact_no.length != 0 && formData.contact_no.length != 11 ?
+                <MDBContainer style={{ fontSize: '0.85em', fontStyle: 'italic' }}>* {language === "PH" ? "Ang numero na iyong ibinigay ay hindi pang-mobile. Hindi ka makatatanggap ng SMS gamit ang numerong ito." : "The number you have entered is not a mobile number. You may not receive SMS from this number."}</MDBContainer>
+                : formData.contact_no.length === 11 && !(formData.contact_no.startsWith("09")) ?
+                  <MDBContainer style={{ fontSize: '0.85em', fontStyle: 'italic' }} >* {language === "PH" ? "Ang numero ng telepono ay dapat nagsisimula sa '09'." : "Mobile number must start with a '09' prefix."} </MDBContainer>
+                  : <></>
+            }
           </MDBCol>
         </MDBRow>
       </MDBCardBody>
