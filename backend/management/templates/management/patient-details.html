@@ -89,7 +89,10 @@ HEALTH KIOSK | {{ patient.first_name }} {{ patient.last_name }}'s Profile
             <div class="col-md-4 form-label-group">
               <input type="text" name="email" value="{{ patient.contact_no }}" maxlength="200" class="form-control"
                 placeholder="Contact Number" id="id_contact_no" disabled>
-              <label for="id_contact_no">Contact Number</label>
+              <label for="id_contact_no">
+                Contact Number
+              </label>
+              <span style="font-size: 0.75em; color: gray">{{ contact_status }}</span>
             </div>
           </div>
 

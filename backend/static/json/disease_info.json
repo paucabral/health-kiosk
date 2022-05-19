@@ -1945,7 +1945,7 @@
       "https://www.mayoclinic.org/diseases-conditions/hepatitis-a/diagnosis-treatment/drc-20367055"
     ]
   },
-  "hypertension pulmonarydeglutition disorder": {
+  "hypertension pulmonary": {
     "Overview": "Pulmonary hypertension is a type of high blood pressure that affects the arteries in the lungs and the right side of the heart. In one form of pulmonary hypertension, called pulmonary arterial hypertension (PAH), blood vessels in the lungs are narrowed, blocked or destroyed. The damage slows blood flow through the lungs, and blood pressure in the lung arteries rises. The heart must work harder to pump blood through the lungs. The extra effort eventually causes the heart muscle to become weak and fail.",
     "Diagnosis": "Pulmonary hypertension is hard to diagnose early because it's not often detected during a routine physical exam. Even when pulmonary hypertension is more advanced, its signs and symptoms are similar to those of other heart and lung conditions. To diagnose pulmonary hypertension, a health care provider will perform a physical exam and review your symptoms. You'll likely be asked questions about your medical and family history.",
     "Symptoms": [
@@ -1973,6 +1973,29 @@
     ],
     "Source": [
       "https://www.mayoclinic.org/diseases-conditions/pulmonary-hypertension/diagnosis-treatment/drc-20350702"
+    ]
+  },
+  "deglutition disorder": {
+    "Overview": "Dysphagia is difficulty swallowing — taking more time and effort to move food or liquid from your mouth to your stomach. Dysphagia can be painful. In some cases, swallowing is impossible.",
+    "Diagnosis": "Your health care provider will likely ask you for a description and history of your swallowing difficulties, perform a physical examination, and use various tests to find the cause of your swallowing problem.",
+    "Symptoms": [
+      "pain while swallowing",
+      "inability to swallow",
+      "drooling",
+      "hoarseness",
+      "regurgitation",
+      "frequent heartburn",
+      "weight loss",
+      "coughing or gagging when swallowing"
+    ],
+    "Causes": "Swallowing is complex, involving many muscles and nerves. Any condition that weakens or damages the muscles and nerves used for swallowing or leads to a narrowing of the back of the throat or esophagus can cause dysphagia.",
+    "Precaution": [
+      "changing your eating habits",
+      "trying foods with different textures to see if some cause you more trouble",
+      "limiting alcohol and caffeine"
+    ],
+    "Source": [
+      "https://www.mayoclinic.org/diseases-conditions/dysphagia/symptoms-causes/syc-20372028"
     ]
   },
   "gout": {
