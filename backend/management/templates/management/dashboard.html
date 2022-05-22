@@ -168,9 +168,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
         <table id="qlist" class="text-center" style="width: 100%;">
           <thead>
             <th>
-              ID
-            </th>
-            <th>
               PATIENT
             </th>
             <th>CONTACT</th>
@@ -181,7 +178,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
 
           {% for patient in patients_no_appointment %}
           <tr>
-            <td>{{ patient.id }}</td>
             <td>
               <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
                 onmouseout="this.style.textDecoration='none'" href="/management/patients/{{ patient.id }}/details/">
@@ -252,7 +248,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
       "pagingType": "full_numbers",
       "pageLength": 5,
       "scrollX": true,
-      "order": [[0, "desc"]]
+      "order": [[2, "desc"]]
     });
   });
 </script>
