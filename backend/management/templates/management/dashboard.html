@@ -96,9 +96,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
         <table id="qlist2" class="text-center" style="width: 100%;">
           <thead>
             <th>
-              ID
-            </th>
-            <th>
               PATIENT
             </th>
             <th>
@@ -113,7 +110,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
 
           {% for appointment in appointments %}
           <tr>
-            <td>{{ appointment.id }}</td>
             <td>
               <a style="text-decoration: none;" onMouseOver="this.style.textDecoration='underline'"
                 onmouseout="this.style.textDecoration='none'"
