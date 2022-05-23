@@ -105,7 +105,10 @@ const Facilities = () => {
           setStatus("SUCCESS")
         }
         else {
-          const nearest_hospitals = response.data["results"];
+          let nearest_hospitals = response.data["results"];
+          nearest_hospitals = nearest_hospitals.filter(function (obj) {
+            return obj.name.toLowerCase().indexOf("veterinary") === -1
+          })
           console.log(JSON.stringify(nearest_hospitals))
           if (nearest_hospitals != nearestHospitals) {
             setNearestHospitals(nearest_hospitals)
