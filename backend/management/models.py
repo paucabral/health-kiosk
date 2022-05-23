@@ -33,6 +33,9 @@ class Appointment(models.Model):
     message = models.TextField(null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 
+    class Meta:
+        ordering = ['-appointment_date']
+
 
 class Note(models.Model):
     patient = models.ForeignKey(Patient, null=True, on_delete=models.CASCADE)
