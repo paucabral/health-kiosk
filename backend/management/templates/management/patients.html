@@ -47,9 +47,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
       <table id="qlist" style="width: 100%;">
         <thead>
           <th>
-            ID
-          </th>
-          <th>
             NAME
           </th>
           <th>
@@ -76,7 +73,6 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
 
         {% for patient in patients %}
         <tr>
-          <td>{{ patient.id }}</td>
           <td>{{ patient.first_name }} {{ patient.last_name }}</td>
           <td>{{ patient.birth_date }}</td>
           <td>{{ patient.contact_no }}</td>
@@ -193,7 +189,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
       "pagingType": "full_numbers",
       "pageLength": 10,
       "scrollX": true,
-      "order": [[0, "desc"]]
+      "order": []
     });
   });
 </script>

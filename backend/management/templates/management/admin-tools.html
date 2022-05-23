@@ -98,7 +98,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
     <div class="row">
       <div class="col container-fluid">
         <div
-          class="card text-white {%if kiosk_status == 'ONLINE' %} bg-warning {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          class="card text-white {%if gps_status == 'ONLINE' %} bg-warning {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">GPS COORDINATES</h6>
           </div>
@@ -113,7 +113,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
 
       <div class="col container-fluid">
         <div
-          class="card text-white {%if sensors_status == 'ONLINE' %} bg-info {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          class="card text-white {%if gmaps_status == 'ONLINE' %} bg-info {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">GOOGLE MAPS API</h6>
           </div>
@@ -128,7 +128,7 @@ HEALTH KIOSK | ADMIN: {{ request.user.username }}
 
       <div class="col container-fluid">
         <div
-          class="card text-white {%if sms_status == 'ONLINE' %} bg-secondary {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
+          class="card text-white {%if mapquest_status == 'ONLINE' %} bg-secondary {% else %} bg-dark {% endif %} mb-3 pb-1 shadow-sm rounded">
           <div class="card-header">
             <h6 class="card-title" style="font-weight: bold; text-transform: uppercase;">MAPQUEST API</h6>
           </div>

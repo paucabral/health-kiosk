@@ -143,8 +143,8 @@ void loop() {
 //  }
  
   //BP
-  recvWithEndMarker();
-  bpData();
+//  recvWithEndMarker();
+//  bpData();
   http_rest_server.handleClient();
 }
 
@@ -277,16 +277,10 @@ void get_bp_data() {
   StaticJsonBuffer<64> jsonBuffer;                    // Create JSON object of size 64 to send data
   JsonObject& jsonObj = jsonBuffer.createObject();
   char JSONmessageBuffer[64];
-  
+  recvBPValues = false;
   // Add Data To Json Object to send data
-  bpAutoTimeStart = millis();
-  bpAutoTimeCurrent = millis();
   virtualPower = 1;
-  while (dataSYS == 0){
-//    mainButtonState = digitalRead(buttonD6);
-//    if (mainButtonState == HIGH){
-//      continue;
-//    }
+  while (1){
     if (virtualPower == 1) {
       bpStartReport = millis();
       virtualPowerSwitch();
@@ -297,16 +291,11 @@ void get_bp_data() {
     //BP
     recvWithEndMarker();
     bpData();
-    if (dataSYS == 0 and ((bpAutoTimeCurrent - bpAutoTimeStart) >= 50000) ){
+    if (recvBPValues == true){
 //      virtualPowerSwitch();
-      Serial.print("HANDLED");
+      Serial.print("Received Values");
       break;
     }
-    Serial.print("SYS: ");
-    Serial.print(dataSYS);
-    Serial.print("   ");
-    Serial.println(bpAutoTimeCurrent - bpAutoTimeStart);
-    bpAutoTimeCurrent = millis();
   }
   jsonObj["sys"] = dataSYS;
   jsonObj["dia"] = dataDIA;
@@ -374,7 +363,8 @@ void recvWithEndMarker() {
 //            Serial.print(F("~~~~~ READING PRESENT ~~~~~~~"));
             virtualMemorySwitch();
             accessed_mem = 1;
-
+            delay(10);
+            virtualPowerSwitch();
           }
           Serial.print(F("********** DIFFERENCE REPORT: "));
 //          Serial.print(bpCurrentReport);
@@ -414,9 +404,7 @@ void bpData() {
       strtok(NULL," ");
       rawPR = strtok(NULL," ");
             
-      dataSYS = strtol(rawSYS.c_str(), NULL, 16);
-      dataDIA = strtol(rawDIA.c_str(), NULL, 16);
-      dataPR= strtol(rawPR.c_str(), NULL, 16);
+
 
       if (read_success == false){
 //        Serial.print(F(" REVERTING TO DEFAULT "));  
@@ -424,9 +412,11 @@ void bpData() {
         dataDIA = 0;
         dataPR = 0;
         recvBPValues = true;
-        read_success = true;
       }
-      else if (dataPR > 0){
+      else if (read_success == true){
+        dataSYS = strtol(rawSYS.c_str(), NULL, 16);
+        dataDIA = strtol(rawDIA.c_str(), NULL, 16);
+        dataPR= strtol(rawPR.c_str(), NULL, 16);
         recvBPValues = true;
       }
       else {
