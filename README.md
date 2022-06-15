@@ -77,10 +77,10 @@ To run the kiosk in production, simply follow the following steps:
     ```
 5. Move the generated certificate and private key to the corresponding SSL directories.
     ```
-    $ sudo mv private.key /etc/ssl/private/
+    $ sudo mv private.key /etc/ssl/private/private.key
     ```
     ```
-    $ sudo mv certificate.crt /etc/ssl/certs/
+    $ sudo mv certificate.crt /etc/ssl/certs/certificate.crt
     ```
 4. Run the `build.sh` script to build the frontend and backend code.
     ```
