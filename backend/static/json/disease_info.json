@@ -3565,5 +3565,114 @@
     "Source": [
       "https://my.clevelandclinic.org/health/articles/4022-upper-respiratory-infection#:~:text=An%20upper%20respiratory%20infection%20affects,%2Dthe%2Dcounter%20pain%20relievers."
     ]
+  },
+  "polyneuropathy": {
+    "Overview": "Polyneuropathy is when multiple peripheral nerves become damaged, which is also commonly called peripheral neuropathy. Polyneuropathy affects several nerves in different parts of the body at the same time. In cases of mononeuropathy, just one nerve is affected. Polyneuropathy can affect nerves responsible for feeling (sensory neuropathy), movement (motor neuropathy), or both (sensorimotor neuropathy).",
+    "Diagnosis": "Diagnosis is based upon medical history, a physical exam, and neurological evaluation. Depending on the symptoms, tests may be ordered. The doctor will take a detailed review of all symptoms, lifestyle factors, and family history. There may be some simple tests to check reflexes, muscle strength, sensitivity to temperature and other sensations, coordination, and posture.",
+    "Symptoms": [
+      "tingling",
+      "numbness",
+      "pins and needles",
+      "difficulty using the arms, legs, hands, or feet",
+      "increased pain",
+      "sleep problems due to night-time pain",
+      "inability to feel pain",
+      "extreme sensitivity to touch",
+      "inability to sense temperature changes",
+      "lack of coordination",
+      "increased episodes of falling",
+      "changes to the skin, hair, or nails",
+      "foot and leg ulcers",
+      "skin and nail infections",
+      "muscle weakness",
+      "muscle twitching"
+    ],
+    "Causes": "A variety of medical conditions and other factors can cause polyneuropathy, including: diabetes: this can be a significant risk factor, especially if blood glucose levels are poorly controlled; alcohol abuse: lcohol can damage nerve tissue, and alcohol abuse is often associated with nutritional deficiencies that contribute to neuropathy; poor nutrition: eficiencies of vitamins B-1, B-6, B-12, and E may lead to polyneuropathy, as these are vital for nerve health; physical trauma or injury: repetitive motion such as typing, accidents, or other injuries can damage peripheral nerves; and more.",
+    "Precaution": [
+      "avoiding alcohol",
+      "avoiding exposure to toxins including cigarette smoke",
+      "limiting factors that contribute to physical trauma or injury such as repetitive actions and restrictive positions",
+      "getting enough sleep and physical activity to support immune function",
+      "eating a balanced diet rich in vitamins and minerals",
+      "considering vitamin B-12 supplements if a vegan or vegetarian"
+    ],
+    "Source": [
+      "https://www.medicalnewstoday.com/articles/317212#Causes-and-risk-factors"
+    ]
+  },
+  "refractive error": {
+    "Overview": "Refractive errors are related to the focusing ability of your eyes.",
+    "Diagnosis": "Refractive errors are simple to diagnose. An optometrist or ophthalmologist usually asks the patient to read a special chart (Snellen chart) that has large letters at the top and smaller letters below. If the patient can see all the letters clearly, he/she have 6/6 vision.",
+    "Symptoms": [
+      "blurry vision",
+      "tiredness",
+      "headaches",
+      "reduced concentration"
+    ],
+    "Causes": "Refractive errors usually occur when the eye cannot focus images clearly on the back of the eye (retina). These types of eye conditions usually develop in childhood, but they can affect people of all ages.",
+    "Precaution": [
+      "wearing glasses - a simple and safe way to correct your vision",
+      "wearing contact lenses - these are worn directly on the eye",
+      "having laser surgery - using a laser beam to change the shape of your cornea",
+      "having intraocular lens surgery - your lens is replaced with a small plastic lens (intraocular lens)."
+    ],
+    "Source": [
+      "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/refractive-errors-in-eyes"
+    ]
+  },
+  "acute nasopharyngitis": {
+    "Overview": "Nasopharyngitis is another name for the common cold. It is a mild infection of the nose and throat that can produce symptoms such as a runny nose, sneezing, and coughing.",
+    "Diagnosis": "Healthcare professionals do not need special tests to diagnose a cold. People are very familiar with the symptoms, and therefore they generally do not contact a doctor for treatment. On the occasions that they do, however, a doctor has only to look inside their throat and ask about their symptoms to know whether they have a cold. When doctors suspect someone has the flu or a more serious condition, they may order a nose or throat swab to help reach a diagnosis.",
+    "Symptoms": [
+      "sneezing",
+      "runny or stuffy nose",
+      "sore throat",
+      "coughing",
+      "mild fever",
+      "headache",
+      "weakness",
+      "joint pain"
+    ],
+    "Causes": "",
+    "Precaution": [
+      "washing the hands frequently with soap and water for 20 seconds",
+      "staying away from others who got sick",
+      "avoiding touching the mouth, eyes, and nose with unwashed hands",
+      "staying at home after getting sick",
+      "moving away from people before coughing or sneezing",
+      "avoiding close contact with others, such as hugging or shaking hands",
+      "sneezing or coughing into a tissue and then throwing it away",
+      "washing the hands after sneezing or coughing"
+    ],
+    "Source": [
+      "https://www.medicalnewstoday.com/articles/nasopharyngitis#diagnosis"
+    ]
+  },
+  "pulmonary tuberculosis": {
+    "Overview": "Tuberculosis is a bacterial infection that can pass through the air between people. When it affects the lungs, the medical name for this is pulmonary tuberculosis. It can cause chest pain, severe coughing, and a range of other symptoms.",
+    "Diagnosis": "TB is curable, but it can be life-threatening if a person does not receive the right treatment. Also, latent TB can progress to active TB if a person does not receive preventive treatment. A doctor can determine whether a person is infected with TB bacteria using a skin or blood test. The blood test involves taking a small sample of blood and analyzing it for an immune system response to the TB bacteria. If a person tests positive for the bacteria, the doctor may also order a chest X-ray or sputum test to determine whether the infection has progressed to active disease.",
+    "Symptoms": [
+      "a bad cough that lasts for at least 3 weeks",
+      "chest pain",
+      "coughing up blood or phlegm from the lungs",
+      "breathlessness",
+      "weight loss",
+      "a loss of appetite",
+      "nausea and vomiting",
+      "low energy or fatigue",
+      "fever and chills",
+      "night sweats"
+    ],
+    "Causes": "TB is an infection caused by a type of bacteria called Mycobacterium tuberculosis (M. tuberculosis). About one-third of the world population is infected with this type of bacteria. However, only around 10-20 percent of people with this infection develop active TB.",
+    "Precaution": [
+      "provide education on preventing TB like cough etiquette.",
+      "avoid extended close contact with someone who has TB.",
+      "air out rooms regularly.",
+      "cover your face with a mask that is approved for protection against TB."
+    ],
+    "Source": [
+      "https://www.medicalnewstoday.com/articles/325526",
+      "https://www.healthline.com/health/pulmonary-tuberculosis#prevention"
+    ]
   }
 }
