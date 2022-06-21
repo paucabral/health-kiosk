@@ -47,6 +47,8 @@ python3 manage.py migrate
 python3 manage.py createsuperuserwithpassword --username $DEFAULT_ADMIN_USER --password $DEFAULT_ADMIN_PASSWORD --email $DEFAULT_ADMIN_EMAIL --preserve
 
 sudo cp apache.conf /etc/apache2/sites-available/000-default.conf
+sudo a2enmod ssl
+sudo apache2ctl configtest
 sudo systemctl restart apache2
 sudo systemctl enable apache2
 
