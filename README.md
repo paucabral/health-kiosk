@@ -62,6 +62,26 @@ To run the kiosk in production, simply follow the following steps:
     ```
 2. Upload the code located at `nodemcu/nodemcu-sensors.ino` to the NodeMCU (ESP8266).
 3. Create the respective `.env` files for both the backend and frontend applications. The respective `.env.sample` file for each can be used as a template for the environment variables needed inside each application.
+4. Generate a self-signed SSL certificate using the command below. Fill out the necessary details as well or leave them at default **except** the `Common Name` field.
+    ```
+    $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate.crt
+    ```
+    ```
+    Country Name (2 letter code) [AU]: PH
+    State or Province Name (full name) [Some-State]: Metro Manila
+    Locality Name (eg, city) []: Marikina
+    Organization Name (eg, company) [Internet Widgits Pty Ltd]: High Grounds
+    Organizational Unit Name (eg, section) []:
+    Common Name (e.g. server FQDN or YOUR name) []: raspberrypi.local
+    Email Address []:
+    ```
+5. Move the generated certificate and private key to the corresponding SSL directories.
+    ```
+    $ sudo mv private.key /etc/ssl/private/private.key
+    ```
+    ```
+    $ sudo mv certificate.crt /etc/ssl/certs/certificate.crt
+    ```
 4. Run the `build.sh` script to build the frontend and backend code.
     ```
     $ bash build.sh
