@@ -182,6 +182,8 @@ infection urinary tract,fever,597.0
 infection urinary tract,dysuria,597.0
 infection urinary tract,hematuria,597.0
 infection urinary tract,renal angle tenderness,597.0
+infection urinary tract,chill,597.0
+infection urinary tract,low back pain,597.0
 infection urinary tract,lethargy,597.0
 infection urinary tract,asthenia,597.0
 infection urinary tract,hyponatremia,597.0
@@ -323,9 +325,12 @@ anxiety state,nervousness,390.0
 anxiety state,hallucinations visual,390.0
 anxiety state,formication,390.0
 anxiety state,difficulty,390.0
+anxiety state,exhaustion,390.0
 anxiety state,pain chest,390.0
 anxiety state,patient non compliance,390.0
 anxiety state,agitation,390.0
+anxiety state,sweat,390.0
+anxiety state,sweating increased,390.0
 anxiety state,palpitation,390.0
 anxiety state,hallucinations auditory,390.0
 anxiety state,mood depressed,390.0
@@ -709,9 +714,12 @@ bipolar disorder,exhaustion,241.0
 obesity,pain,228.0
 obesity,catatonia,228.0
 obesity,snore,228.0
+obesity,weight gain,228.0
+obesity,pain neck,228.0
 obesity,pain chest,228.0
 obesity,r wave feature,228.0
 obesity,has religious belief,228.0
+obesity,palpitation,228.0
 obesity,shortness of breath,228.0
 obesity,fatigue,228.0
 obesity,tired,228.0
@@ -788,7 +796,7 @@ mitral valve insufficiency,dyspnea,186.0
 mitral valve insufficiency,syncope,186.0
 mitral valve insufficiency,thicken,186.0
 mitral valve insufficiency,left atrial hypertrophy,186.0
-mitral valve insufficiency,palpitation,186.0
+mitral valve insufficiency,left atrial hypertrophy,186.0
 mitral valve insufficiency,fatigue,186.0
 mitral valve insufficiency,vomiting,186.0
 mitral valve insufficiency,pain,186.0
@@ -2018,6 +2026,9 @@ hernia hiatal,headache,61.0
 hernia hiatal,photophobia,61.0
 migraine disorders,ambidexterity,61.0
 migraine disorders,vomiting,61.0
+migraine disorders,headache,61.0
+migraine disorders,exhaustion,61.0
+migraine disorders,fatigue,61.0
 migraine disorders,dizziness,61.0
 migraine disorders,numbness,61.0
 migraine disorders,nausea,61.0
@@ -2129,3 +2140,31 @@ affect labile,prostatism,45.0
 decubitus ulcer,systolic murmur,42.0
 decubitus ulcer,frail,42.0
 decubitus ulcer,fever,42.0
+polyneuropathy,abnormal sensation,42.0
+polyneuropathy,numbness,42.0
+polyneuropathy,pain,42.0
+polyneuropathy,uncoordination,42.0
+polyneuropathy,asthenia,42.0
+polyneuropathy,muscle twitch,42.0
+polyneuropathy,general unsteadiness,42.0
+refractive error,vision blurred,42.0
+refractive error,fatigue,42.0
+refractive error,tired,42.0
+refractive error,headache,42.0
+refractive error,unable to concentrate,42.0
+acute nasopharyngitis,sneeze,42.0
+acute nasopharyngitis,throat sore,42.0
+acute nasopharyngitis,cough,42.0
+acute nasopharyngitis,snuffle,42.0
+acute nasopharyngitis,stuffy nose,42.0
+acute nasopharyngitis,headache,42.0
+pulmonary tuberculosis,cough,42.0
+pulmonary tuberculosis,barking cough,42.0
+pulmonary tuberculosis,pain chest,42.0
+pulmonary tuberculosis,shortness of breath,42.0
+pulmonary tuberculosis,decreased body weight,42.0
+pulmonary tuberculosis,nausea,42.0
+pulmonary tuberculosis,vomiting,42.0
+pulmonary tuberculosis,fatigue,42.0
+pulmonary tuberculosis,chill,42.0
+pulmonary tuberculosis,night sweat,42.0
