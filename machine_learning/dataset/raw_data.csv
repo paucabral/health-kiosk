@@ -146,6 +146,8 @@ UMLS:C0042029_infection  urinary tract,597,UMLS:C0015967_fever
 ,,UMLS:C0013428_dysuria
 ,,UMLS:C0018965_hematuria
 ,,UMLS:C0235634_renal angle tenderness
+,,UMLS:C0085593_chill
+,,UMLS:C0024031_low back pain
 ,,UMLS:C0023380_lethargy
 ,,UMLS:C0004093_asthenia
 ,,UMLS:C0020625_hyponatremia
@@ -284,9 +286,11 @@ UMLS:C0700613_anxiety  state,390,UMLS:C0233481_worry
 ,,UMLS:C0233763_hallucinations visual
 ,,UMLS:C0016579_formication
 ,,UMLS:C1299586_difficulty
+,,UMLS:C0392674_exhaustion
 ,,UMLS:C0008031_pain chest
 ,,UMLS:C0376405_patient non compliance
 ,,UMLS:C0085631_agitation
+,,UMLS:C0038990_sweat^UMLS:C0700590_sweating increased
 ,,UMLS:C0030252_palpitation
 ,,UMLS:C0233762_hallucinations auditory
 ,,UMLS:C0344315_mood depressed
@@ -581,9 +585,12 @@ UMLS:C0005586_bipolar  disorder,241,UMLS:C0424000_feeling suicidal
 UMLS:C0028754_obesity,228,UMLS:C0030193_pain
 ,,UMLS:C0007398_catatonia
 ,,UMLS:C0037384_snore
+,,UMLS:C0043094_weight gain
+,,UMLS:C0007859_pain neck
 ,,UMLS:C0008031_pain chest
 ,,UMLS:C0429091_r wave feature
 ,,UMLS:C0557075_has religious belief
+,,UMLS:C0030252_palpitation
 ,,UMLS:C0392680_shortness of breath
 ,,UMLS:C0015672_fatigue^UMLS:C0557875_tired
 ,,UMLS:C0497406_overweight
@@ -657,7 +664,7 @@ UMLS:C0026266_mitral  valve insufficiency,186,UMLS:C0392680_shortness of breath
 ,,UMLS:C0039070_syncope
 ,,UMLS:C0205400_thicken
 ,,UMLS:C0238705_left atrial hypertrophy
-,,UMLS:C0030252_palpitation
+,,
 ,,UMLS:C0015672_fatigue
 ,,UMLS:C0042963_vomiting
 ,,UMLS:C0030193_pain
@@ -1771,6 +1778,9 @@ UMLS:C0019291_hernia  hiatal,61,UMLS:C0000737_pain abdominal
 ,,UMLS:C0085636_photophobia
 UMLS:C0149931_migraine  disorders,61,UMLS:C0002416_ambidexterity
 ,,UMLS:C0042963_vomiting
+,,UMLS:C0018681_headache
+,,UMLS:C0392674_exhaustion
+,,UMLS:C0015672_fatigue
 ,,UMLS:C0012833_dizziness
 ,,UMLS:C0028643_numbness
 ,,UMLS:C0027497_nausea
@@ -1865,3 +1875,30 @@ UMLS:C0233472_affect  labile,45,UMLS:C0277794_extreme exhaustion
 UMLS:C0011127_decubitus  ulcer,42,UMLS:C0232257_systolic murmur
 ,,UMLS:C0871754_frail
 ,,UMLS:C0015967_fever
+UMLS:C0152025_polyneuropathy,42,UMLS:C0423571_abnormal sensation
+,,UMLS:C0028643_numbness
+,,UMLS:C0030193_pain
+,,UMLS:C0242143_uncoordination
+,,UMLS:C0004093_asthenia
+,,UMLS:C0231530_muscle twitch
+,,UMLS:C0427108_general unsteadiness
+UMLS:C0034951_refractive error,42,UMLS:C0344232_vision blurred
+,,UMLS:C0015672_fatigue^UMLS:C0557875_tired
+,,UMLS:C0018681_headache
+,,UMLS:C0235198_unable to concentrate
+UMLS:C0009443_acute nasopharyngitis,42,UMLS:C0037383_sneeze
+,,UMLS:C0242429_throat sore
+,,UMLS:C0010200_cough
+,,UMLS:C1260880_snuffle
+,,UMLS:C0848340_stuffy nose
+,,UMLS:C0018681_headache
+UMLS:C0041327_pulmonary tuberculosis,42,UMLS:C0010200_cough
+,,UMLS:C0234866_barking cough
+,,UMLS:C0008031_pain chest
+,,UMLS:C0392680_shortness  of breath
+,,UMLS:C0043096_decreased body weight
+,,UMLS:C0027497_nausea
+,,UMLS:C0042963_vomiting
+,,UMLS:C0015672_fatigue
+,,UMLS:C0085593_chill
+,,UMLS:C0028081_night sweat
