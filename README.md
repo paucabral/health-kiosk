@@ -7,7 +7,7 @@ A self-service health kiosk that measures vital signs, performs differential dia
 
 ## Features
 - :bar_chart: **Vital Signs** - Multiple sensors for measuring vital signs.
-- :page_with_curl: **Differential Diagnosis** - Multiple sensors for measuring vital signs.
+- :page_with_curl: **Differential Diagnosis** - Analysis of potential disease/s based on symptoms.
 - :beetle: **Disease Information** - Shows disease information including the precautions to take.
 - :hospital: **Nearby Facilities** - Locates the nearest facilities where the kiosk is deployed.
 
